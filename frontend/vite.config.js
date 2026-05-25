@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
-export default defineConfig({
+// In production (GitHub Pages) the app lives at /Study-Portal/.
+// In development it lives at /, so localhost:5173/ works normally.
+export default defineConfig(({ mode }) => ({
   plugins: [react()],
-  base: '/Study-Portal/',
-})
+  base: mode === 'production' ? '/Study-Portal/' : '/',
+}))
