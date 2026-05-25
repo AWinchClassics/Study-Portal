@@ -12,6 +12,7 @@ function App() {
       const { data } = await supabase
         .from('chunks')
         .select('*')
+
       setChunks(data)
     }
 
