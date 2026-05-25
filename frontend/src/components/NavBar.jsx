@@ -12,11 +12,16 @@ export default function NavBar() {
           <span className="navbar-logo-text">Study Portal</span>
         </Link>
 
-        {!isHome && (
-          <Link to="/" className="navbar-home-link">
-            ← All Courses
+        <div className="navbar-right">
+          {!isHome && (
+            <Link to="/" className="navbar-home-link">
+              ← All Courses
+            </Link>
+          )}
+          <Link to="/teacher" className="navbar-teacher-link">
+            Teacher ↗
           </Link>
-        )}
+        </div>
       </div>
     </header>
   )
