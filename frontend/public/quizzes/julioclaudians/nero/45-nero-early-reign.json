@@ -1,0 +1,257 @@
+{
+  "id": "45-nero-early-reign",
+  "title": "45. Nero’s Early Reign",
+  "description": "An overview of Nero’s accession and early policies, assessing governance, advisers, finance, and administration in the opening years of his reign.",
+  "questions": [
+    {
+      "question": "In which year did Nero become emperor?",
+      "options": [
+        "53 CE",
+        "55 CE",
+        "52 CE",
+        "54 CE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who was primarily responsible for securing Nero’s accession?",
+      "options": [
+        "Burrus",
+        "The Senate",
+        "Agrippina",
+        "Seneca"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened to Claudius’ natural children after his death?",
+      "options": [
+        "They were executed",
+        "They fled Rome",
+        "They were exiled",
+        "They were detained in the palace"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who hailed Nero as emperor?",
+      "options": [
+        "The Praetorian Guard",
+        "The legions",
+        "The Senate",
+        "The people of Rome"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who escorted Nero during his accession?",
+      "options": [
+        "Faenius Rufus",
+        "Agrippina",
+        "Seneca",
+        "Burrus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How much money did Nero promise each Praetorian Guard?",
+      "options": [
+        "20,000 sestertii",
+        "10,000 sestertii",
+        "15,000 sestertii",
+        "5,000 sestertii"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened to Claudius’ will?",
+      "options": [
+        "It was read publicly",
+        "It was suppressed",
+        "It was ignored",
+        "It was destroyed by the Senate"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why was Claudius’ will likely suppressed?",
+      "options": [
+        "It declared Britannicus emperor",
+        "It named Agrippina emperor",
+        "It criticised the Senate",
+        "It disinherited Nero"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "In which year was Britannicus poisoned?",
+      "options": [
+        "56 CE",
+        "55 CE",
+        "57 CE",
+        "54 CE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who were the key positive influences on Nero early in his reign?",
+      "options": [
+        "Agrippina and Seneca",
+        "Burrus and Seneca",
+        "Agrippina and Burrus",
+        "Seneca and Faenius Rufus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "To whom did Burrus and Seneca owe their rise?",
+      "options": [
+        "The Senate",
+        "The army",
+        "Claudius",
+        "Agrippina"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What trend marked Agrippina’s influence during Nero’s reign?",
+      "options": [
+        "It remained constant",
+        "It ended immediately",
+        "It increased steadily",
+        "It gradually declined"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "In which year did Burrus die?",
+      "options": [
+        "63 CE",
+        "61 CE",
+        "60 CE",
+        "62 CE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What effect did Burrus’ death have on Nero’s rule?",
+      "options": [
+        "No change",
+        "Improved governance",
+        "Increased tyranny",
+        "Immediate abdication"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who ensured sufficient grain supply during Nero’s early reign?",
+      "options": [
+        "Agrippina",
+        "Seneca",
+        "Burrus",
+        "Faenius Rufus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What major infrastructure projects were continued or completed?",
+      "options": [
+        "New roads only",
+        "Only temples",
+        "Claudius’ aqueducts and the harbour at Ostia",
+        "Military forts"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How much money did Nero distribute to the people on two occasions?",
+      "options": [
+        "500 sestertii",
+        "400 sestertii",
+        "200 sestertii",
+        "300 sestertii"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Nero deal with the bankrupt treasury?",
+      "options": [
+        "Raised taxes",
+        "Borrowed money",
+        "Ignored it",
+        "Used his own funds"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How much of his own money did Nero contribute to the treasury?",
+      "options": [
+        "40 million sestertii",
+        "60 million sestertii",
+        "20 million sestertii",
+        "10 million sestertii"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was Nero’s approach to justice and law early in his reign?",
+      "options": [
+        "Carefully supervised",
+        "Neglectful",
+        "Harshly punitive",
+        "Delegated entirely"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Nero attempt to prevent depopulation?",
+      "options": [
+        "Military settlement",
+        "Tax incentives",
+        "Founding colonies",
+        "Land confiscation"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What policy affected provincial governors?",
+      "options": [
+        "Greater autonomy",
+        "Stricter charges for extortion",
+        "Reduced oversight",
+        "Freedom to organise games"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was banned for provincial governors?",
+      "options": [
+        "Tax collection",
+        "Military recruitment",
+        "Religious ceremonies",
+        "Organising gladiatorial games"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which group’s activities were further curtailed?",
+      "options": [
+        "Senators",
+        "Publicani",
+        "Freedmen",
+        "Equites"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which cities received aid after an earthquake in 63 CE?",
+      "options": [
+        "Campanian cities",
+        "Gallic cities",
+        "Sicilian cities",
+        "Spanish cities"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

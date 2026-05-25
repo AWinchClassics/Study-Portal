@@ -1,0 +1,227 @@
+{
+  "id": "42-claudius-and-the-people-of-rome",
+  "title": "42. Claudius and the People of Rome",
+  "description": "Claudius’ relationship with the plebs, equites, and Senate, balancing popularity, respect for institutions, and tensions caused by imperial administration.",
+  "questions": [
+    {
+      "question": "With which group did Claudius likely have his strongest relationship?",
+      "options": [
+        "Provincial elites",
+        "The plebs",
+        "The army",
+        "The Senate"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which measures particularly pleased the plebs under Claudius?",
+      "options": [
+        "Tax cuts and citizenship",
+        "Securing grain and water supplies",
+        "Religious reforms",
+        "Military victories"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does Suetonius say about public reaction to rumours of Claudius’ death?",
+      "options": [
+        "Rioting",
+        "Celebration",
+        "General dismay",
+        "Indifference"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which source highlights Claudius’ concern for an orderly city?",
+      "options": [
+        "Suetonius",
+        "Josephus",
+        "Tacitus",
+        "Cassius Dio"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Claudius entertain the plebs?",
+      "options": [
+        "Religious festivals only",
+        "Tax remissions",
+        "Lavish public entertainments",
+        "Military parades only"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What privilege did Claudius grant to the equites?",
+      "options": [
+        "Senatorial admission",
+        "Control of provinces",
+        "Right of access to the imperial presence",
+        "Judicial immunity"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How were equites identified with imperial favour?",
+      "options": [
+        "Titles",
+        "Golden rings with the princeps’ image",
+        "Public seating",
+        "Special clothing"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How many equites does Suetonius say Claudius executed?",
+      "options": [
+        "30",
+        "300",
+        "100",
+        "600"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Claudius deal with unworthy equites?",
+      "options": [
+        "Immediate execution",
+        "Exile",
+        "Public humiliation",
+        "Allowed resignation to save face"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was Claudius’ general approach toward the Senate?",
+      "options": [
+        "Complete indifference",
+        "Military dominance",
+        "Respect and cooperation",
+        "Open hostility"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Claudius encourage senatorial prestige?",
+      "options": [
+        "Reducing membership",
+        "Removing elections",
+        "Encouraging serious debate",
+        "Limiting debate"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What action did Claudius take regarding senatorial membership?",
+      "options": [
+        "Revised lists and expelled unworthy members",
+        "Ended resignations",
+        "Recognised only Italians",
+        "Abolished patricians"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which new group was admitted to the Senate under Claudius?",
+      "options": [
+        "Gauls",
+        "Africans",
+        "Spaniards",
+        "Greeks"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which provinces did Claudius return to senatorial control?",
+      "options": [
+        "Lycia and Thrace",
+        "Gaul and Britain",
+        "Syria and Judea",
+        "Achaea and Macedonia"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which right did Claudius restore to the Senate?",
+      "options": [
+        "Election of magistrates",
+        "Censorship",
+        "Military command",
+        "Judicial authority over provinces"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What monetary right was recognised for the Senate?",
+      "options": [
+        "Minting copper coinage",
+        "Control of taxes",
+        "Minting silver",
+        "Minting gold"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which action caused senatorial resentment despite Claudius’ respect?",
+      "options": [
+        "Admission of Gauls",
+        "Return of provinces",
+        "Public entertainments",
+        "Use of imperial freedmen"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why did the use of freedmen upset the Senate?",
+      "options": [
+        "They encroached on senatorial privilege",
+        "They were too numerous",
+        "They were ineffective",
+        "They were foreigners"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What financial change angered the Senate in 53 CE?",
+      "options": [
+        "Transfer of financial jurisdiction to procurators",
+        "Higher taxes",
+        "Loss of provincial control",
+        "Census reforms"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Claudius’ legal activity affect the Senate?",
+      "options": [
+        "Encroached on its traditional roles",
+        "Ended its power",
+        "Had no effect",
+        "Strengthened its authority"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Despite dissatisfaction, what did the Senate still do?",
+      "options": [
+        "Called for abdication",
+        "Voted honours for freedmen",
+        "Rebelled",
+        "Refused cooperation"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the PPT suggest about opposition to Claudius?",
+      "options": [
+        "There is limited evidence of opposition",
+        "It was widespread",
+        "It was violent",
+        "It was organised"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

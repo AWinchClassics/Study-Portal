@@ -1,0 +1,257 @@
+{
+  "id": "41-the-war-in-the-aegean-411-407-bce",
+  "title": "41. The War in the Aegean, 411–407 BCE",
+  "description": "A renewed naval struggle centred on the Hellespont, marked by dramatic Athenian recoveries and decisive Persian backing for Sparta.",
+  "questions": [
+    {
+      "question": "Why was control of the Hellespont vital to Athens?",
+      "options": [
+        "It housed the main fleet",
+        "It protected Attica",
+        "It safeguarded grain supply routes",
+        "It secured access to Sicily"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which Persian satrap supported Spartan operations in the Hellespont?",
+      "options": [
+        "Artaxerxes",
+        "Pharnabazus",
+        "Cyrus",
+        "Tissaphernes"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which Spartan admiral moved operations to the Hellespont in 411 BCE?",
+      "options": [
+        "Callicratidas",
+        "Mindarus",
+        "Agis",
+        "Lysander"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the first major sea battle between Athens and Sparta in this phase?",
+      "options": [
+        "Battle of Abydos",
+        "Battle of Notium",
+        "Battle of Cynossema",
+        "Battle of Cyzicus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the outcome of the Battle of Cynossema (411 BCE)?",
+      "options": [
+        "Athenian victory",
+        "Spartan victory",
+        "Persian intervention",
+        "Indecisive result"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which battle followed soon after Cynossema with another Athenian success?",
+      "options": [
+        "Abydos",
+        "Ephesus",
+        "Notium",
+        "Chios"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What strategy did Mindarus hope would weaken Athens?",
+      "options": [
+        "Naval blockade",
+        "War of attrition targeting supplies",
+        "Direct assault on Athens",
+        "Invasion of Attica"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which Athenian commanders forced Mindarus into battle at Cyzicus?",
+      "options": [
+        "Pericles, Phormio, Eurymedon",
+        "Alcibiades, Thrasybulus, Theramenes",
+        "Thrasybulus, Cleophon, Antiphon",
+        "Nicias, Demosthenes, Cleon"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happened to Mindarus at the Battle of Cyzicus (410 BCE)?",
+      "options": [
+        "He retreated",
+        "He defected",
+        "He was captured",
+        "He was killed"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was the result of the Battle of Cyzicus?",
+      "options": [
+        "Destruction of the Spartan fleet",
+        "Spartan victory",
+        "Persian takeover",
+        "Draw"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Sparta respond after the defeat at Cyzicus?",
+      "options": [
+        "Invaded Attica",
+        "Offered peace to Athens",
+        "Attacked Sicily",
+        "Withdrew from the war"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who led opposition to peace in Athens?",
+      "options": [
+        "Cleophon",
+        "Nicias",
+        "Theramenes",
+        "Alcibiades"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why did Athenians reject the peace offer?",
+      "options": [
+        "Overconfidence after victories",
+        "Desire for revenge",
+        "Pressure from allies",
+        "Fear of Persia"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who offered to rebuild the Spartan fleet after Cyzicus?",
+      "options": [
+        "Artaxerxes",
+        "Pharnabazus",
+        "Cyrus",
+        "Tissaphernes"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What caused a pause in hostilities after 410 BCE?",
+      "options": [
+        "Winter storms",
+        "Fleet rebuilding funded by Persia",
+        "Plague",
+        "Political unrest in Athens"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which Persian figure arrived in 407 BCE to take control of policy?",
+      "options": [
+        "Cyrus",
+        "Darius",
+        "Tissaphernes",
+        "Xerxes"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who was appointed Spartan admiral alongside Cyrus?",
+      "options": [
+        "Mindarus",
+        "Agis",
+        "Callicratidas",
+        "Lysander"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Lysander attempt to weaken Athens’ navy?",
+      "options": [
+        "Invading Euboea",
+        "Destroying ships directly",
+        "Blockading Piraeus",
+        "Raising pay to attract Athenian rowers"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Where did Alcibiades position his fleet in 406 BCE?",
+      "options": [
+        "Notium",
+        "Samos",
+        "Chios",
+        "Ephesus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What mistake led to Athenian defeat at Notium?",
+      "options": [
+        "Lack of ships",
+        "Persian intervention",
+        "Poor weather",
+        "Disobedience of Antiochus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What happened to Antiochus after the Battle of Notium?",
+      "options": [
+        "He escaped",
+        "He was killed",
+        "He defected",
+        "He was captured"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did the Athenian Assembly react to the defeat at Notium?",
+      "options": [
+        "They ignored the loss",
+        "They supported Alcibiades",
+        "They removed Alcibiades from command",
+        "They sued for peace"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened to Alcibiades after Notium?",
+      "options": [
+        "He was executed",
+        "He was exiled",
+        "He joined Sparta",
+        "He was imprisoned"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why were Athenians anxious about Alcibiades’ power in 408 BCE?",
+      "options": [
+        "He opposed democracy",
+        "Fear he might become a dictator",
+        "He had too many allies",
+        "He controlled Persia"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the key turning point highlighted in this phase of the war?",
+      "options": [
+        "Athenian naval superiority",
+        "End of democracy",
+        "Peace of Nicias",
+        "Persian financial support for Sparta"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

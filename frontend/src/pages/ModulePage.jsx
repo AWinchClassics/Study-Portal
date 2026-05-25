@@ -7,16 +7,16 @@ export default function ModulePage() {
   const { courseId } = useParams()
   const [course, setCourse] = useState(null)
   const [modules, setModules] = useState([])
+  const [unitCounts, setUnitCounts] = useState({})
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const navigate = useNavigate()
 
   useEffect(() => {
     async function fetchData() {
-      // Fetch the parent course so we can show it in the breadcrumb
       const { data: courseData, error: courseError } = await supabase
         .from('courses')
-        .select('id, title')
+        .select('id, title, description')
         .eq('id', courseId)
         .single()
 
@@ -28,7 +28,6 @@ export default function ModulePage() {
 
       setCourse(courseData)
 
-      // Fetch modules for this course, ordered by their position
       const { data: modulesData, error: modulesError } = await supabase
         .from('modules')
         .select('*')
@@ -37,8 +36,26 @@ export default function ModulePage() {
 
       if (modulesError) {
         setError(modulesError.message)
-      } else {
-        setModules(modulesData)
+        setLoading(false)
+        return
+      }
+
+      setModules(modulesData)
+
+      // Fetch unit counts per module for the card metadata
+      if (modulesData.length > 0) {
+        const { data: countData } = await supabase
+          .from('units')
+          .select('module_id')
+          .in('module_id', modulesData.map(m => m.id))
+
+        if (countData) {
+          const counts = {}
+          countData.forEach(row => {
+            counts[row.module_id] = (counts[row.module_id] || 0) + 1
+          })
+          setUnitCounts(counts)
+        }
       }
 
       setLoading(false)
@@ -47,8 +64,8 @@ export default function ModulePage() {
     fetchData()
   }, [courseId])
 
-  if (loading) return <p className="page-status">Loading modules…</p>
-  if (error)   return <p className="page-status page-error">Error: {error}</p>
+  if (loading) return <div className="page"><div className="loading-pulse">Loading modules…</div></div>
+  if (error)   return <div className="page"><p className="page-error">Error: {error}</p></div>
 
   return (
     <div className="page">
@@ -59,22 +76,47 @@ export default function ModulePage() {
         ]}
       />
 
-      <h1>{course?.title}</h1>
+      <div className="page-header">
+        <div>
+          <div className="page-level-label">Course</div>
+          <h1>{course?.title}</h1>
+          {course?.description && (
+            <p className="page-subtitle">{course.description}</p>
+          )}
+        </div>
+        <div className="page-header-meta">
+          <span className="meta-badge">{modules.length} {modules.length === 1 ? 'module' : 'modules'}</span>
+        </div>
+      </div>
 
       {modules.length === 0 ? (
-        <p className="page-status">No modules found for this course.</p>
+        <div className="empty-state">
+          <div className="empty-state-icon">📂</div>
+          <p>No modules have been added to this course yet.</p>
+        </div>
       ) : (
-        <ul className="card-list">
-          {modules.map(mod => (
-            <li key={mod.id}>
-              <button
-                className="card"
-                onClick={() => navigate(`/units/${mod.id}`)}
-              >
-                <span className="card-title">{mod.title}</span>
-              </button>
-            </li>
-          ))}
+        <ul className="card-grid">
+          {modules.map((mod, index) => {
+            const unitCount = unitCounts[mod.id] ?? 0
+            return (
+              <li key={mod.id}>
+                <button
+                  className="hierarchy-card module-card"
+                  style={{ '--card-index': index }}
+                  onClick={() => navigate(`/units/${mod.id}`)}
+                >
+                  <div className="card-level-tag">Module</div>
+                  <h2 className="card-title">{mod.title}</h2>
+                  <div className="card-footer">
+                    <span className="card-count">
+                      {unitCount} {unitCount === 1 ? 'unit' : 'units'}
+                    </span>
+                    <span className="card-arrow">→</span>
+                  </div>
+                </button>
+              </li>
+            )
+          })}
         </ul>
       )}
     </div>

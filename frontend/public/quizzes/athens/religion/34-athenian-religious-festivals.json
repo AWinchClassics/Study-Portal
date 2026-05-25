@@ -1,0 +1,247 @@
+{
+  "id": "34-athenian-religious-festivals",
+  "title": "34. Athenian Religious Festivals",
+  "description": "The scale, organisation, rituals, and social significance of religious festivals in classical Athens.",
+  "questions": [
+    {
+      "question": "According to Thucydides, what benefit did festivals provide Athenians?",
+      "options": [
+        "Economic growth",
+        "Rest and respite from daily life",
+        "Military training",
+        "Political unity"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What complaint does the Old Oligarch make about festivals?",
+      "options": [
+        "They benefited only elites",
+        "They disrupted work due to their frequency",
+        "They were impious",
+        "They lacked organisation"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Approximately how many festival days per year may Athens have had?",
+      "options": [
+        "90",
+        "60",
+        "30",
+        "120"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why did festivals particularly benefit poorer citizens?",
+      "options": [
+        "They shared in sacrifices",
+        "They received payments",
+        "They gained political power",
+        "They avoided military service"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which of the following could be part of a festival?",
+      "options": [
+        "Only sacrifices",
+        "A wide variety of rituals and activities",
+        "Only processions",
+        "Only dramatic performances"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which magistrate could be involved in religious festivals?",
+      "options": [
+        "Taxiarch",
+        "Strategos",
+        "Trierarch",
+        "Archon Basileus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was the core religious purpose of the City Dionysia?",
+      "options": [
+        "Honouring Athena",
+        "Entertainment through drama",
+        "Honouring Dionysus",
+        "Celebration of democracy"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What object was carried into the theatre during the City Dionysia?",
+      "options": [
+        "A golden mask",
+        "A phial",
+        "A wooden statue of Dionysus Eleuthereus",
+        "A sacred torch"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What animal was sacrificed to purify the Theatre of Dionysus?",
+      "options": [
+        "Goat",
+        "Sheep",
+        "Pig",
+        "Bull"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What symbol was carried to represent Dionysus?",
+      "options": [
+        "Torches",
+        "Wreaths",
+        "Olive branches",
+        "Phalloi"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which festival involved the ceremonial opening of wine jars (pithoi)?",
+      "options": [
+        "City Dionysia",
+        "Anthesteria",
+        "Thesmophoria",
+        "Lenaia"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What unusual ritual involved the wife of the Archon Basileus?",
+      "options": [
+        "Leading a procession",
+        "Judging competitions",
+        "A ceremonial marriage to Dionysus",
+        "Performing sacrifices"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which festival was held in local communities across Attica?",
+      "options": [
+        "Lenaia",
+        "Rural Dionysia",
+        "City Dionysia",
+        "Anthesteria"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who was permitted to participate in the Thesmophoria?",
+      "options": [
+        "All citizens",
+        "Wives of citizens only",
+        "Priests and magistrates",
+        "Women only"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why were men excluded from the Thesmophoria?",
+      "options": [
+        "It was a mystery cult",
+        "It was secret to elites",
+        "It was considered unlawful for men to witness the rites",
+        "It was held at night"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the focus of the Thesmophoria?",
+      "options": [
+        "Agricultural fertility",
+        "Military success",
+        "Initiation rites",
+        "Political unity"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What were pigs sacrificed into during the Thesmophoria?",
+      "options": [
+        "Altars",
+        "Megara pits",
+        "Temples",
+        "The sea"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What type of cult were the Eleusinian Mysteries?",
+      "options": [
+        "Olympian cult",
+        "State cult",
+        "Hero cult",
+        "Mystery cult"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who could be initiated into the Eleusinian Mysteries?",
+      "options": [
+        "Athenians only",
+        "Citizens only",
+        "Priests only",
+        "Greek speakers without serious crimes"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What punishment existed for revealing the Mysteries?",
+      "options": [
+        "Exile",
+        "Capital punishment",
+        "Loss of citizenship",
+        "Fine"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which figures were honoured in the Eleusinian Mysteries?",
+      "options": [
+        "Zeus and Hera",
+        "Athena and Poseidon",
+        "Demeter and Persephone",
+        "Apollo and Artemis"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Where did initiations take place?",
+      "options": [
+        "The Telesterion at Eleusis",
+        "The Pnyx",
+        "The Agora",
+        "The Acropolis"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What were the three components of the rites?",
+      "options": [
+        "Prayer, song, dance",
+        "Sacrifice, feast, procession",
+        "Purification, oath, sacrifice",
+        "Dromena, Deiknumena, Legomena"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which aspect best explains why festivals were socially significant?",
+      "options": [
+        "They replaced politics",
+        "They reduced warfare",
+        "They limited elite power",
+        "They reinforced communal identity and religious duty"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

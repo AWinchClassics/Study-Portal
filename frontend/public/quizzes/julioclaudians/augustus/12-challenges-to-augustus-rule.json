@@ -1,0 +1,177 @@
+{
+  "id": "12-challenges-to-augustus-rule",
+  "title": "12. Challenges to Augustus’ Rule",
+  "description": "Conspiracies, opposition, and challenges faced by Augustus, and how ancient sources interpret these threats.",
+  "questions": [
+    {
+      "question": "Which two figures were most closely associated with the conspiracy against Augustus around 23 BCE?",
+      "options": [
+        "Lepidus and Rufus",
+        "Caepio and Murena",
+        "Cinna and Paulus",
+        "Marcellus and Primus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which ancient author first mentions the conspiracy of Caepio and Murena?",
+      "options": [
+        "Tacitus",
+        "Seneca",
+        "Suetonius",
+        "Livy"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why do modern historians debate whether the Caepio–Murena conspiracy actually occurred?",
+      "options": [
+        "There are no surviving ancient sources",
+        "Augustus destroyed the evidence",
+        "It may have been used as a pretext to remove opposition",
+        "The conspirators confessed under torture"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who provided Augustus with information about the alleged conspiracy?",
+      "options": [
+        "Tiberius",
+        "Maecenas",
+        "Castricius",
+        "Livia"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who presided over the court that tried Caepio and Murena?",
+      "options": [
+        "Augustus",
+        "The Senate",
+        "Tiberius",
+        "Maecenas"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the outcome of the trial of Caepio and Murena?",
+      "options": [
+        "Acquittal",
+        "Exile",
+        "Execution",
+        "Imprisonment"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What personal connection may have linked Murena to Maecenas?",
+      "options": [
+        "Murena was his brother",
+        "Murena was married to his daughter",
+        "Murena was the brother of Maecenas’ wife",
+        "Murena was his political rival"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why may Murena already have been viewed unfavourably by Augustus?",
+      "options": [
+        "He opposed moral legislation",
+        "He had previously crossed Augustus",
+        "He supported Lepidus",
+        "He refused a provincial command"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In the trial of Primus, what defence did Murena initially present?",
+      "options": [
+        "That Primus acted independently",
+        "That the Senate approved the action",
+        "That Augustus gave the orders",
+        "That Tiberius authorised it"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Whom did Murena later claim had actually issued the orders to Primus?",
+      "options": [
+        "Augustus",
+        "Tiberius",
+        "Marcellus",
+        "Agrippa"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was Murena’s testimony about Marcellus potentially damaging to Augustus?",
+      "options": [
+        "It showed military incompetence",
+        "It exposed corruption in the Senate",
+        "It suggested the succession was being concealed",
+        "It implicated Livia"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Augustus behave during the trial of Primus?",
+      "options": [
+        "He remained absent",
+        "He appeared without being summoned",
+        "He acted as judge",
+        "He delegated authority to Agrippa"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What justification did Augustus give for appearing at the trial uninvited?",
+      "options": [
+        "It was required by law",
+        "He was defending a relative",
+        "It was in the public interest",
+        "He was summoned privately"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the verdict in the trial of Primus?",
+      "options": [
+        "Acquitted",
+        "Exiled",
+        "Fined",
+        "Found guilty"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which later conspirator was linked to the final use of the senatus consultum ultimum?",
+      "options": [
+        "Lepidus",
+        "Cinna",
+        "Egnatius Rufus",
+        "Epicadus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Augustus respond to the conspiracy of Cinna in 16 BCE, according to Seneca?",
+      "options": [
+        "He ordered execution",
+        "He exiled the conspirators",
+        "He responded with clemency",
+        "He ignored the plot"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What general warning does Tacitus give about accounts of conspiracies against Augustus?",
+      "options": [
+        "They exaggerate Augustus’ cruelty",
+        "They are unreliable due to flattery",
+        "They were written by enemies",
+        "They ignore the role of the Senate"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

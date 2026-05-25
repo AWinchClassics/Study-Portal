@@ -1,0 +1,257 @@
+{
+  "id": "15-the-third-servile-war",
+  "title": "15. The Third Servile War",
+  "description": "An examination of Spartacus’ slave revolt, Rome’s military response, and the political consequences for Crassus and Pompey.",
+  "questions": [
+    {
+      "question": "In which years did the Third Servile War take place?",
+      "options": [
+        "73–71 BCE",
+        "74–71 BCE",
+        "75–72 BCE",
+        "72–70 BCE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who led the slave rebellion during the Third Servile War?",
+      "options": [
+        "Crixus",
+        "Oenomaus",
+        "Castus",
+        "Spartacus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was Spartacus’ background?",
+      "options": [
+        "An Italian farmer",
+        "A Thracian gladiator",
+        "A Greek mercenary",
+        "A Roman citizen"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where did the initial slave uprising begin?",
+      "options": [
+        "Capua",
+        "Sicily",
+        "Rome",
+        "Brundisium"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What early advantage did the rebels gain?",
+      "options": [
+        "Captured Roman standards",
+        "Allied cities",
+        "Seized weapons",
+        "Naval support"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Rome initially respond to the revolt?",
+      "options": [
+        "Sent praetors only",
+        "Negotiated peace",
+        "Sent the consuls",
+        "Ignored it"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What happened to the consuls sent against Spartacus?",
+      "options": [
+        "They deserted",
+        "They were defeated",
+        "They defeated him",
+        "They were recalled"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who was appointed to take command against Spartacus in 72 BCE?",
+      "options": [
+        "Crassus",
+        "Metellus",
+        "Lucullus",
+        "Pompey"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What office did Crassus hold when given command?",
+      "options": [
+        "Praetor",
+        "Proconsul",
+        "Dictator",
+        "Consul"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which earlier conflict had Crassus distinguished himself in?",
+      "options": [
+        "Sulla’s Civil War",
+        "Gallic War",
+        "Social War",
+        "Jugurthine War"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Crassus view the threat posed by Spartacus?",
+      "options": [
+        "Exaggerated",
+        "Temporary",
+        "Minor",
+        "Serious"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why did Crassus request Pompey and Lucullus to return?",
+      "options": [
+        "Shortage of troops",
+        "Seriousness of the threat",
+        "Political rivalry",
+        "Fear of defeat"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did Crassus later regret recalling Pompey?",
+      "options": [
+        "The Senate intervened",
+        "Lucullus delayed",
+        "Pompey gained credit",
+        "Pompey refused to help"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Crassus attempt to end the war quickly?",
+      "options": [
+        "Senatorial appeal",
+        "Withdrawal",
+        "Negotiations",
+        "Harsh discipline and rapid campaigning"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How many rebels were crucified after defeat?",
+      "options": [
+        "6,000",
+        "4,000",
+        "5,000",
+        "3,000"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Where were the crucifixions carried out?",
+      "options": [
+        "Via Appia",
+        "Via Latina",
+        "Via Flaminia",
+        "Via Sacra"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What role did Pompey play at the end of the war?",
+      "options": [
+        "Prevented rebels escaping north",
+        "Captured Spartacus",
+        "Led main battle",
+        "Negotiated surrender"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How many rebels did Pompey reportedly kill?",
+      "options": [
+        "5,000",
+        "1,000",
+        "3,000",
+        "10,000"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What claim did Pompey make to the Senate?",
+      "options": [
+        "He ended the war",
+        "He captured Crassus",
+        "He defeated Spartacus",
+        "He spared the rebels"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which ancient author records Pompey’s claim?",
+      "options": [
+        "Tacitus",
+        "Appian",
+        "Plutarch",
+        "Livy"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the outcome for Spartacus?",
+      "options": [
+        "Executed in Rome",
+        "Captured alive",
+        "Escaped",
+        "Killed in battle"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was the political consequence for Crassus?",
+      "options": [
+        "Triumph denied",
+        "Exile",
+        "Loss of prestige",
+        "Shared credit for victory"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What broader issue did the Third Servile War expose?",
+      "options": [
+        "Dependence on slave labour",
+        "Judicial corruption",
+        "Weak Senate",
+        "Provincial unrest"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which later political partnership was influenced by this rivalry?",
+      "options": [
+        "Optimates alliance",
+        "Marian faction",
+        "Second Triumvirate",
+        "First Triumvirate"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What best characterises the end of the Third Servile War?",
+      "options": [
+        "Extreme repression",
+        "Reconciliation",
+        "Legal reform",
+        "Negotiated settlement"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

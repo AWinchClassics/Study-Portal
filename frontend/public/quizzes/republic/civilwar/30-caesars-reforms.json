@@ -1,0 +1,257 @@
+{
+  "id": "30-caesars-reforms",
+  "title": "30. Caesar’s Reforms",
+  "description": "An overview of Julius Caesar’s political, social, and economic reforms and their role in stabilising and centralising Roman government.",
+  "questions": [
+    {
+      "question": "What was the main aim of Caesar’s colonisation policy?",
+      "options": [
+        "Reward senators",
+        "Expand slavery",
+        "Control Italy",
+        "Resettle the urban poor and veterans"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which cities were refounded as colonies under Caesar?",
+      "options": [
+        "Alexandria and Antioch",
+        "Carthage and Corinth",
+        "Rome and Capua",
+        "Athens and Sparta"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Approximately how many people were resettled through colonisation?",
+      "options": [
+        "60,000",
+        "80,000",
+        "40,000",
+        "20,000"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What status did Caesar’s colonies usually have?",
+      "options": [
+        "Roman or Latin",
+        "Allied",
+        "Peregrine",
+        "Provincial"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which provinces received a fixed land tax?",
+      "options": [
+        "Gaul and Spain",
+        "Britain and Gaul",
+        "Asia and Syria",
+        "Sicily and Africa"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why did Caesar introduce fixed land taxes?",
+      "options": [
+        "Reduce corruption by middlemen",
+        "Punish elites",
+        "Reward allies",
+        "Increase revenue"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Caesar reform provincial governance?",
+      "options": [
+        "Abolished governors",
+        "Limited tenure of governors",
+        "Elected governors locally",
+        "Made provinces independent"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which groups were enrolled into the Senate?",
+      "options": [
+        "Slaves",
+        "Provincials such as Gauls and Spaniards",
+        "Italians only",
+        "Freedmen"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which region was granted the Roman franchise?",
+      "options": [
+        "Cisalpine Gaul",
+        "Illyricum",
+        "Transpadane Gaul",
+        "Narbonensis"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who else received Roman citizenship under Caesar?",
+      "options": [
+        "All provincials",
+        "Doctors and teachers in Rome",
+        "All soldiers",
+        "Senators’ families"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which Italian reform created a uniform system of local government?",
+      "options": [
+        "Lex Cornelia",
+        "Lex Julia Municipalis",
+        "Lex Gabinia",
+        "Lex Hortensia"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How were Italian towns governed under this law?",
+      "options": [
+        "By magistrates",
+        "By kings",
+        "By assemblies only",
+        "By governors"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Caesar replenish the treasury?",
+      "options": [
+        "Loans from senators",
+        "Foreign tribute",
+        "Increased taxes",
+        "Penalties on rebels and benevolences"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What change did Caesar make to the size of the Senate?",
+      "options": [
+        "Reduced to 600",
+        "Increased to 800",
+        "Increased to 900",
+        "Left unchanged"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How many quaestors were there after Caesar’s reform?",
+      "options": [
+        "50",
+        "20",
+        "30",
+        "40"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What happened to the corn dole under Caesar?",
+      "options": [
+        "Abolished",
+        "Privatised",
+        "Reduced",
+        "Expanded"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What labour requirement was imposed on large estates?",
+      "options": [
+        "Half veterans",
+        "At least one-third free men",
+        "All slaves",
+        "No foreigners"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How were juries reformed?",
+      "options": [
+        "Popular juries",
+        "Senators only",
+        "50/50 senators and equites",
+        "Equites only"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened to the tribuni aerarii?",
+      "options": [
+        "Removed from juries",
+        "Given veto",
+        "Made senators",
+        "Promoted"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Caesar reform army pay?",
+      "options": [
+        "Raised it from 120 to 250 denarii",
+        "Abolished pay",
+        "Doubled it",
+        "Paid in land"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which major public building did Caesar begin?",
+      "options": [
+        "Temple of Jupiter",
+        "Pantheon",
+        "Julian Forum",
+        "Forum of Augustus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which social organisations were largely suppressed?",
+      "options": [
+        "Trade unions",
+        "Guilds",
+        "Collegia and clubs",
+        "Temples"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What calendar reform did Caesar introduce?",
+      "options": [
+        "Lunar calendar",
+        "Consular calendar",
+        "Greek calendar",
+        "Julian calendar"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which source provides evidence for Caesar’s reforms?",
+      "options": [
+        "Tacitus",
+        "Suetonius and Plutarch",
+        "Livy",
+        "Appian only"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Overall, Caesar’s reforms aimed primarily to:",
+      "options": [
+        "Restore the Republic",
+        "Stabilise and centralise Rome",
+        "Strengthen the Senate",
+        "Expand democracy"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "id": "10-the-battle-of-plataea",
+  "title": "10. The Battle of Plataea",
+  "description": "The final land battle of the Persian Wars and its significance for Greek unity and victory over Persia.",
+  "questions": [
+    {
+      "question": "In which year was the Battle of Plataea fought?",
+      "options": [
+        "478 BCE",
+        "479 BCE",
+        "477 BCE",
+        "480 BCE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who commanded the Persian forces at Plataea?",
+      "options": [
+        "Datis",
+        "Xerxes",
+        "Artabazus",
+        "Mardonius"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which Greek commander led the Spartans at Plataea?",
+      "options": [
+        "Eurybiades",
+        "Pausanias",
+        "Leonidas",
+        "Cleomenes"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What offer did the Persians make to Athens before Plataea?",
+      "options": [
+        "End of tribute",
+        "Return of Athens and extra territory",
+        "Alliance with Sparta",
+        "Naval supremacy"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who delivered the Persian offer to the Athenians?",
+      "options": [
+        "Alexander of Macedon",
+        "Mardonius",
+        "Artaphernes",
+        "Demaratus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Athens respond to the Persian offer?",
+      "options": [
+        "Asked Sparta to decide",
+        "Remained loyal to Greece",
+        "Delayed response",
+        "Accepted it"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where were the Peloponnesians initially building defences instead of aiding Athens?",
+      "options": [
+        "Thermopylae",
+        "Salamis",
+        "The Isthmus of Corinth",
+        "Plataea"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why did Mardonius retreat from Athens to Boeotia?",
+      "options": [
+        "Winter conditions",
+        "Greek naval attack",
+        "Fear of Spartan advance",
+        "Shortage of supplies"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which terrain did the Persians favour for battle?",
+      "options": [
+        "Mountain slopes",
+        "Coastal marsh",
+        "Woodland",
+        "Open plain"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Where did the Greeks initially camp?",
+      "options": [
+        "On the plain",
+        "Inside Plataea",
+        "On the slopes of Mount Cithaeron",
+        "Near the Persian camp"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What tactic did the Persians use repeatedly against the Greeks?",
+      "options": [
+        "Naval landings",
+        "Cavalry harassment",
+        "Siege engines",
+        "Night attacks"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did the Greeks move to the Asopus ridge?",
+      "options": [
+        "To retreat toward Athens",
+        "To attack the Persians",
+        "To defend the city of Plataea",
+        "For better food and water access"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What Persian action worsened Greek supply problems?",
+      "options": [
+        "Capturing Plataea",
+        "Fouling the spring",
+        "Blocking mountain passes",
+        "Burning crops"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What decision did both armies make before the main battle?",
+      "options": [
+        "Immediate attack",
+        "Withdrawal",
+        "Night-time movement",
+        "Peace negotiations"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which Greek troops first faced the Persian attack?",
+      "options": [
+        "Tegeans and Spartans",
+        "Corinthians",
+        "Megarians",
+        "Athenians"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who was killed during the Spartan charge?",
+      "options": [
+        "Alexander",
+        "Mardonius",
+        "Xerxes",
+        "Artabazus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What did the Persians do after Mardonius was killed?",
+      "options": [
+        "Surrendered",
+        "Fled to their camp",
+        "Held their ground",
+        "Advanced further"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happened to Artabazus?",
+      "options": [
+        "He was killed",
+        "He joined the Greeks",
+        "He fled with his troops",
+        "He surrendered"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened when the Greeks stormed the Persian camp?",
+      "options": [
+        "They withdrew",
+        "Negotiated peace",
+        "The camp held",
+        "Persians were slaughtered"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What did the Greeks do after the battle?",
+      "options": [
+        "Pursued Xerxes",
+        "Attacked Macedonia",
+        "Camped ten days and collected spoils",
+        "Returned home immediately"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What monument was dedicated at Delphi after the battle?",
+      "options": [
+        "Victory arch",
+        "Serpent Column",
+        "Temple of Apollo",
+        "Statue of Pausanias"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How were the Theban leaders treated after Plataea?",
+      "options": [
+        "Imprisoned",
+        "Put to death",
+        "Spared",
+        "Exiled"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How many Greek states are said to have fought at Plataea?",
+      "options": [
+        "18",
+        "12",
+        "31",
+        "23"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What does Herodotus suggest about leadership at Plataea?",
+      "options": [
+        "It was a soldier’s battle",
+        "Generals were decisive",
+        "Athenians led the victory",
+        "Pausanias dominated"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the wider significance of Plataea?",
+      "options": [
+        "Immediate end of Persian Wars",
+        "Collapse of Sparta",
+        "Greek unity and momentum",
+        "Athenian empire established"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "id": "05-the-patronage-system",
+  "title": "05. The Patronage System",
+  "description": "An explanation of Roman patron–client relationships, exploring their social, political, and cultural significance in Republican Rome.",
+  "questions": [
+    {
+      "question": "What term describes the Roman system of patron–client relationships?",
+      "options": [
+        "Beneficium",
+        "Amicitia",
+        "Clientela",
+        "Patronicium"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who was the patronus in Roman society?",
+      "options": [
+        "A legal official",
+        "A lower-status dependent",
+        "A wealthier and more powerful protector",
+        "A magistrate"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who was the cliens?",
+      "options": [
+        "A slave",
+        "A magistrate",
+        "A foreigner",
+        "A dependent individual of lower status"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Could a patron and client belong to the same social class?",
+      "options": [
+        "Yes, but with unequal power",
+        "Only equestrians",
+        "Only senators",
+        "Never"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which best describes patronage in Rome?",
+      "options": [
+        "A formal legal contract",
+        "A single one-way obligation",
+        "A religious duty",
+        "A reciprocal social relationship"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which relationship is an example of patronage beyond individuals?",
+      "options": [
+        "A master and slave",
+        "A general and his soldiers",
+        "Two senators",
+        "A husband and wife"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What obligation did patrons owe their clients?",
+      "options": [
+        "Daily labour",
+        "Military service",
+        "Tax collection",
+        "Legal and financial support"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How could patrons help clients politically?",
+      "options": [
+        "By voting for them secretly",
+        "By bribing officials",
+        "By supporting campaigns and offices",
+        "By appointing them magistrates"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What social ritual reinforced patron–client bonds daily?",
+      "options": [
+        "Salutatio",
+        "Lustrum",
+        "Comitia",
+        "Census"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "When did the salutatio usually take place?",
+      "options": [
+        "At midday",
+        "In the evening",
+        "Weekly",
+        "At dawn"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Where did patrons receive clients during the salutatio?",
+      "options": [
+        "Basilica",
+        "Atrium and tablinium",
+        "Forum",
+        "Curia"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What did clients typically do after the salutatio?",
+      "options": [
+        "Attend court",
+        "Accompany the patron to the forum",
+        "Join assemblies",
+        "Return home"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What obligation did clients owe patrons during elections?",
+      "options": [
+        "Remain neutral",
+        "Run for office",
+        "Vote against rivals",
+        "Provide political support"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What military obligation might a client have?",
+      "options": [
+        "Command legions",
+        "Serve as bodyguard",
+        "Finance campaigns",
+        "Ransom a captured patron"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Could a client have more than one patron?",
+      "options": [
+        "Yes",
+        "Only provincials",
+        "No",
+        "Only with permission"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Could a patron also be someone else’s client?",
+      "options": [
+        "Only freedmen",
+        "Only senators",
+        "Yes",
+        "Never"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which group often became clients after conquest?",
+      "options": [
+        "Italian elites only",
+        "Roman senators",
+        "Dependent kingdoms and communities",
+        "Foreign merchants"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did patronage benefit patrons politically?",
+      "options": [
+        "By guaranteeing office",
+        "By increasing prestige and influence",
+        "By controlling the Senate",
+        "By reducing taxes"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What role did patronage play in Roman elections?",
+      "options": [
+        "It replaced voting",
+        "None",
+        "It mobilised support networks",
+        "It abolished assemblies"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What term describes the client’s duty to attend the patron daily?",
+      "options": [
+        "Salutatio",
+        "Obsequium",
+        "Imperium",
+        "Clientela"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What type of support might a patron give for marriage?",
+      "options": [
+        "Providing dowries",
+        "Granting citizenship",
+        "Arranging alliances",
+        "Issuing decrees"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did patronage reinforce social hierarchy?",
+      "options": [
+        "By abolishing class differences",
+        "By promoting equality",
+        "By binding lower-status individuals to elites",
+        "By creating formal contracts"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened if patron–client obligations broke down?",
+      "options": [
+        "State punishment",
+        "Automatic legal penalties",
+        "Social dishonour and loss of support",
+        "Loss of citizenship"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was patronage important in Republican politics?",
+      "options": [
+        "It underpinned political loyalty and power",
+        "It replaced magistracies",
+        "It weakened elite control",
+        "It eliminated rivalry"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What best summarises Roman patronage?",
+      "options": [
+        "A religious hierarchy",
+        "A reciprocal system of power and obligation",
+        "A private friendship",
+        "A legal institution"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

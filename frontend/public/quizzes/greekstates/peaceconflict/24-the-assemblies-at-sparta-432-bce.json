@@ -1,0 +1,207 @@
+{
+  "id": "24-the-assemblies-at-sparta-432-bce",
+  "title": "24. The Assemblies at Sparta, c. 432 BCE",
+  "description": "The debates and decisions at Sparta that led to the breakdown of peace and the outbreak of the Peloponnesian War.",
+  "questions": [
+    {
+      "question": "Why was an assembly called at Sparta in c. 432 BCE?",
+      "options": [
+        "To elect new kings",
+        "To hear complaints against Athens",
+        "To plan an invasion of Persia",
+        "To renew the Delian League"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which allies came to complain about Athens?",
+      "options": [
+        "Argos, Thebes, Thessaly",
+        "Megara, Aegina, Corinth",
+        "Delphi, Olympia, Plataea",
+        "Corcyra, Potidaea, Lesbos"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What did many Spartans initially believe about Athens’ alliance with Corcyra?",
+      "options": [
+        "It was not illegal under the treaty",
+        "It was illegal",
+        "It justified immediate war",
+        "It broke the treaty"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which Spartan king argued against immediate war?",
+      "options": [
+        "Archidamus II",
+        "Cleomenes",
+        "Leonidas",
+        "Agesilaus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What argument did Archidamus II make?",
+      "options": [
+        "Athens was weak",
+        "War would be quick",
+        "Athens’ power made war dangerous",
+        "Sparta should ally with Persia"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What alternative did Archidamus suggest?",
+      "options": [
+        "Naval expansion",
+        "Negotiation and preparation",
+        "Immediate invasion",
+        "Abandoning allies"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which ephor urged Sparta to vote for war?",
+      "options": [
+        "Sthenelaidas",
+        "Pausanias",
+        "Cleon",
+        "Brasidas"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Sthenelaidas influence the decision?",
+      "options": [
+        "By quoting oracles",
+        "By demanding a clear vote",
+        "By threatening resignation",
+        "By bribing allies"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was Sparta’s official judgement?",
+      "options": [
+        "The treaty was not broken at all",
+        "Athens declared war",
+        "The treaty was broken in spirit",
+        "The treaty was legally broken"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which historian records the debates at Sparta?",
+      "options": [
+        "Xenophon",
+        "Thucydides",
+        "Herodotus",
+        "Plutarch"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What did the Corinthians accuse Athens of?",
+      "options": [
+        "Imperial aggression",
+        "Naval weakness",
+        "Religious crimes",
+        "Persian collaboration"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What threat did Corinth make to Sparta?",
+      "options": [
+        "To invade Attica",
+        "To support Athens",
+        "To seek another alliance",
+        "To leave Greece"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What did the Athenian envoys argue?",
+      "options": [
+        "That Persia was dangerous",
+        "That empire was justified",
+        "That Sparta was weak",
+        "That Athens was innocent"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What solution did the Athenians propose?",
+      "options": [
+        "Arbitration",
+        "Alliance with Persia",
+        "Immediate war",
+        "Division of Greece"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why did Sparta feel pressured to act?",
+      "options": [
+        "Fear of Persia",
+        "Loss of naval power",
+        "Need to maintain leadership of allies",
+        "Economic collapse"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What religious step did Sparta take before war?",
+      "options": [
+        "Consulted Delphi",
+        "Sacrificed to Zeus",
+        "Appealed to Olympia",
+        "Purified Athens"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What ultimatum did Sparta issue to Athens?",
+      "options": [
+        "Disband the Delian League",
+        "Return Potidaea",
+        "Exile Pericles",
+        "Pay compensation"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which demands did Athens refuse to accept?",
+      "options": [
+        "All Spartan demands",
+        "Repealing the Megarian Decree only",
+        "Ending tribute only",
+        "Religious purification"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What counter-proposal did Athens make?",
+      "options": [
+        "Immediate arbitration",
+        "War preparations",
+        "Repeal decree if Sparta changed policies",
+        "Alliance with Corinth"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What event finally marked the outbreak of war in 431 BCE?",
+      "options": [
+        "Spartan invasion of Attica",
+        "Siege of Potidaea",
+        "Athenian naval attack",
+        "Theban attack on Plataea"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

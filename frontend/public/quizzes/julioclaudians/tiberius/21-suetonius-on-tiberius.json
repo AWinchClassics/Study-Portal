@@ -1,0 +1,167 @@
+{
+  "id": "21-suetonius-on-tiberius",
+  "title": "21. Suetonius on Tiberius",
+  "description": "Suetonius’ portrayal of Tiberius, contrasting early restraint with later cruelty and moral degeneration.",
+  "questions": [
+    {
+      "question": "How does Suetonius initially portray Tiberius’ behaviour as emperor?",
+      "options": [
+        "Cruel and tyrannical",
+        "Respectful and restrained",
+        "Openly hostile to the Senate",
+        "Indifferent and lazy"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which sections of Suetonius’ Life of Tiberius describe this early phase positively?",
+      "options": [
+        "Chs. 15–20",
+        "Chs. 1–10",
+        "Chs. 60–62",
+        "Chs. 27; 29–30"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What event marked a turning point in Suetonius’ portrayal of Tiberius?",
+      "options": [
+        "Tiberius’ retirement to Capri",
+        "The fall of Sejanus",
+        "The death of Drusus in 23 CE",
+        "Germanicus’ death"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "After this turning point, which qualities does Suetonius criticise most strongly?",
+      "options": [
+        "Military incompetence",
+        "Religious impiety",
+        "Hypocrisy, cruelty, and perversity",
+        "Indecision and weakness"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which chapters contain Suetonius’ harshest criticism of Tiberius’ character?",
+      "options": [
+        "Chs. 43–45; 60–62",
+        "Chs. 70–75",
+        "Chs. 10–15",
+        "Chs. 27–30"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How does Suetonius explain Tiberius’ treatment of his family?",
+      "options": [
+        "As lacking warmth and affection",
+        "As controlled by the Senate",
+        "As politically cautious",
+        "As affectionate but distant"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which chapters discuss Tiberius’ attitude towards his family?",
+      "options": [
+        "Chs. 46–48",
+        "Chs. 52–53",
+        "Chs. 27–30",
+        "Chs. 12–14"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What financial criticism does Suetonius make of Tiberius?",
+      "options": [
+        "He spent recklessly",
+        "He raised taxes excessively",
+        "He confiscated land",
+        "He was stingy and tight‑fisted"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which chapters focus on Tiberius’ financial behaviour?",
+      "options": [
+        "Chs. 60–62",
+        "Chs. 43–45",
+        "Chs. 27–30",
+        "Chs. 46–48"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Where did Tiberius retreat later in his reign?",
+      "options": [
+        "Capua",
+        "Capri",
+        "Rome",
+        "Ravenna"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does Suetonius describe Tiberius’ behaviour while there?",
+      "options": [
+        "Ill and bedridden",
+        "Depraved and debauched",
+        "Philosophical and withdrawn",
+        "Politically active"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which chapter specifically links Capri with immoral behaviour?",
+      "options": [
+        "Ch. 52",
+        "Ch. 44",
+        "Ch. 60",
+        "Ch. 27"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What type of material does Suetonius commonly include in his biographies?",
+      "options": [
+        "Military reports",
+        "Strict political analysis",
+        "Scandal, gossip, and rumour",
+        "Official state records only"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How does this affect Suetonius’ reliability as a historical source?",
+      "options": [
+        "It shows clear moral judgement rather than neutrality",
+        "It aligns him with Tacitus",
+        "It proves his accuracy",
+        "It makes him completely unreliable"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Compared with Tacitus, Suetonius is more interested in:",
+      "options": [
+        "Foreign policy",
+        "Senatorial politics",
+        "Constitutional issues",
+        "Personal character and private life"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Overall, what image of Tiberius does Suetonius present by the end of the Life?",
+      "options": [
+        "A competent but harsh administrator",
+        "A misunderstood ruler",
+        "A corrupt and morally degenerate tyrant",
+        "A tragic victim of circumstance"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

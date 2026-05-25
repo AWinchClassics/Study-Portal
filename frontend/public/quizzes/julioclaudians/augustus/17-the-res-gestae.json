@@ -1,0 +1,157 @@
+{
+  "id": "17-the-res-gestae",
+  "title": "17. The Res Gestae",
+  "description": "The purpose, content, and historical value of Augustus’ Res Gestae as a self-presentation of his rule.",
+  "questions": [
+    {
+      "question": "What is the Res Gestae?",
+      "options": [
+        "A senatorial decree",
+        "A catalogue of Augustus’ achievements",
+        "A legal code",
+        "A military treaty"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "When was the Res Gestae set up?",
+      "options": [
+        "During Augustus’ consulship",
+        "At the start of the Principate",
+        "After Augustus’ death",
+        "During the civil wars"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What Roman tradition did the Res Gestae follow?",
+      "options": [
+        "Writing autobiographies",
+        "Listing achievements on tombstones",
+        "Public speeches in the Forum",
+        "Senate debates"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where were the original Res Gestae tablets displayed?",
+      "options": [
+        "The Senate House",
+        "The Forum of Augustus",
+        "Augustus’ Mausoleum",
+        "The Temple of Mars Ultor"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why do historians still have access to the Res Gestae text?",
+      "options": [
+        "The original bronze tablets survive",
+        "Copies were set up across the empire",
+        "It was copied by Tacitus",
+        "It was preserved in manuscripts"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the Res Gestae reveal about how Augustus wanted to be remembered?",
+      "options": [
+        "As a conqueror only",
+        "As a military dictator",
+        "As a restorer of the Republic",
+        "As a divine ruler"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was one intended purpose of the Res Gestae after Augustus’ death?",
+      "options": [
+        "To instruct the army",
+        "To guide Senate discussion",
+        "To justify new laws",
+        "To educate the plebs"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What feature of the Res Gestae is unusual compared to normal inscriptions?",
+      "options": [
+        "Its religious focus",
+        "Its short length",
+        "Its extreme length",
+        "Its use of poetry"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How does Augustus treat his family in the Res Gestae?",
+      "options": [
+        "He praises them extensively",
+        "He lists them as heirs",
+        "He largely omits them unless linked to honours",
+        "He criticises them"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why does Augustus emphasise the title Pater Patriae?",
+      "options": [
+        "To stress loyalty to his family",
+        "To highlight devotion to all of Rome",
+        "To claim divine status",
+        "To assert military authority"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How are Augustus’ enemies treated in the Res Gestae?",
+      "options": [
+        "They are condemned by name",
+        "They are praised",
+        "They are mentioned briefly",
+        "They are never named"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How are the provinces presented in the Res Gestae?",
+      "options": [
+        "As administrative challenges",
+        "As centres of reform",
+        "Mainly in the context of conquest",
+        "As equal partners to Rome"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What aspects of Augustus’ reign are largely omitted from the Res Gestae?",
+      "options": [
+        "Military victories",
+        "Administrative reforms and legislation",
+        "Public generosity",
+        "Honours received"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What claim does Augustus make about his political power?",
+      "options": [
+        "That he ruled as dictator",
+        "That he held supreme power over colleagues",
+        "That he had no more power than other magistrates",
+        "That he controlled the Senate"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why must historians treat the Res Gestae with caution?",
+      "options": [
+        "It was written by enemies",
+        "It exaggerates Augustus’ failures",
+        "It is a selective and self-promoting account",
+        "It contradicts all other sources"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

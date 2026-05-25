@@ -1,0 +1,257 @@
+{
+  "id": "04-social-structure",
+  "title": "04. Social Structure",
+  "description": "An overview of hierarchy and status in Roman society, examining citizenship, class divisions, slavery, and the factors that shaped social identity.",
+  "questions": [
+    {
+      "question": "What primarily determined status in Roman society?",
+      "options": [
+        "Military rank",
+        "Age only",
+        "Place of birth only",
+        "A combination of legal, social, and economic factors"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who were the cives Romani?",
+      "options": [
+        "Italian allies",
+        "All inhabitants of Rome",
+        "Members of the Senate only",
+        "Full Roman citizens"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What right distinguished cives Romani optimo iure from non optimo iure?",
+      "options": [
+        "Right to serve in the army",
+        "Right to migrate",
+        "Right to vote",
+        "Right to own property"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which rights did cives Romani non optimo iure possess?",
+      "options": [
+        "Voting and office-holding",
+        "Military command only",
+        "Property ownership and marriage",
+        "Legal immunity"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What did the Lex Julia of 90 BCE grant?",
+      "options": [
+        "Citizenship to all slaves",
+        "Property rights to provincials",
+        "Voting rights to women",
+        "Citizenship to Latins and socii"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who were the socii?",
+      "options": [
+        "Italian allies providing military service",
+        "Roman citizens",
+        "Foreign merchants",
+        "Provincial governors"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who were provinciales or peregrini?",
+      "options": [
+        "Freed slaves",
+        "People living in Roman provinces",
+        "Roman senators abroad",
+        "Italian citizens"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What legal system applied to peregrini?",
+      "options": [
+        "Ius civile",
+        "Ius honorarium",
+        "Lex Julia",
+        "Ius gentium"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "By when were all free inhabitants of the empire granted citizenship?",
+      "options": [
+        "44 BCE",
+        "27 BCE",
+        "90 BCE",
+        "212 CE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who were patricians?",
+      "options": [
+        "Former slaves",
+        "Provincial elites",
+        "Wealthy plebeians",
+        "Descendants of the first senators"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What best describes patrician influence by the late Republic?",
+      "options": [
+        "Eroded and reduced",
+        "Expanded significantly",
+        "At its peak",
+        "Completely eliminated"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who were plebeians?",
+      "options": [
+        "Only the urban poor",
+        "Non-citizens",
+        "Slaves",
+        "Everyone not patrician"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which prominent late Republican figures were plebeians?",
+      "options": [
+        "Antony and Octavian",
+        "Caesar and Cicero",
+        "Pompey and Crassus",
+        "Sulla and Marius"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What primarily defined the senatorial class?",
+      "options": [
+        "Wealth alone",
+        "Political office and Senate membership",
+        "Military service",
+        "Birth"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What restriction applied to senators?",
+      "options": [
+        "They could not marry",
+        "They could not vote",
+        "They were barred from trade and contracts",
+        "They could not own land"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who made up the plebs?",
+      "options": [
+        "Equestrians only",
+        "Everyone outside the senatorial class",
+        "Only rural workers",
+        "Only the poor"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What defined the equestrian order?",
+      "options": [
+        "Political office",
+        "Birth status",
+        "Military command",
+        "Property qualification"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What happened if an equestrian was elected to the Senate?",
+      "options": [
+        "He lost citizenship",
+        "He became senatorial",
+        "He remained equestrian",
+        "He became plebeian"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who were freedpeople (liberti)?",
+      "options": [
+        "Poor citizens",
+        "Foreigners",
+        "Provincials",
+        "Former slaves"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What limitation applied to freedpeople?",
+      "options": [
+        "They could not marry",
+        "They owed duties to former owners",
+        "They could not own property",
+        "They were not citizens"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How long did freedperson status last?",
+      "options": [
+        "For life",
+        "Until wealth increased",
+        "One generation",
+        "Two generations"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was Rome’s system of slavery?",
+      "options": [
+        "Debt bondage",
+        "Serfdom",
+        "Indentured labour",
+        "Chattel slavery"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How could slaves gain freedom?",
+      "options": [
+        "By military service",
+        "By manumission or purchase",
+        "By Senate decree",
+        "Escape only"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How was women’s status determined in Roman society?",
+      "options": [
+        "By wealth",
+        "Independently",
+        "By their husbands only",
+        "By fathers or husbands"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How was a child’s social status usually determined?",
+      "options": [
+        "By place of birth",
+        "By wealth",
+        "By the mother always",
+        "By the father if parents were citizens"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

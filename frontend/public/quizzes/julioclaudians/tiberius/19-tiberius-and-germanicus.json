@@ -1,0 +1,227 @@
+{
+  "id": "19-tiberius-and-germanicus",
+  "title": "19. Tiberius and Germanicus",
+  "description": "The relationship between Tiberius and Germanicus, exploring military command, political tension, and conflicting ancient interpretations.",
+  "questions": [
+    {
+      "question": "In what year did Augustus force Tiberius to adopt Germanicus?",
+      "options": [
+        "14 CE",
+        "12 CE",
+        "4 CE",
+        "9 CE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How was Germanicus related to Tiberius by birth?",
+      "options": [
+        "Brother",
+        "Son",
+        "Cousin",
+        "Nephew"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which historian provides the most detailed account of Germanicus?",
+      "options": [
+        "Tacitus",
+        "Cassius Dio",
+        "Velleius Paterculus",
+        "Suetonius"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do the sources generally portray Germanicus?",
+      "options": [
+        "As unpopular",
+        "As ineffective",
+        "As virtuous and popular",
+        "As overly cautious"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why did Germanicus campaign across the Rhine without permission?",
+      "options": [
+        "To restore discipline and honour his father",
+        "To undermine Tiberius",
+        "To provoke rebellion",
+        "To gain personal glory"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Between which years did Germanicus’ Rhine campaigns take place?",
+      "options": [
+        "14–16 CE",
+        "12–14 CE",
+        "13–15 CE",
+        "15–17 CE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What characterised the outcome of the German campaigns?",
+      "options": [
+        "Costly with limited success",
+        "Total withdrawal",
+        "Complete failure",
+        "Decisive victory"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why did Tiberius recall Germanicus from Germania?",
+      "options": [
+        "Pressure from the Senate",
+        "Fear of rebellion",
+        "Campaigns were costly and contradicted frontier policy",
+        "Jealousy alone"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which policy of Augustus did Tiberius wish to maintain?",
+      "options": [
+        "Naval dominance",
+        "Republican restoration",
+        "A strong Rhine frontier",
+        "Eastern expansion"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Where was Germanicus sent in 18 CE?",
+      "options": [
+        "Spain",
+        "Africa",
+        "The eastern provinces",
+        "Britain"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was Germanicus’ main task in the east?",
+      "options": [
+        "Conquer Parthia",
+        "Install a pro-Roman ruler in Armenia",
+        "Suppress revolt in Judaea",
+        "Reform taxation"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who was sent as governor of Syria alongside Germanicus?",
+      "options": [
+        "Plancina",
+        "Drusus",
+        "Gnaeus Calpurnius Piso",
+        "Sejanus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "According to Tacitus, why was Piso sent east?",
+      "options": [
+        "To replace Germanicus",
+        "To govern Judaea",
+        "To curb Germanicus’ ambitions",
+        "To assist Germanicus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which action most angered Tiberius during Germanicus’ eastern tour?",
+      "options": [
+        "Minting coins",
+        "Visiting Egypt without permission",
+        "Removing Piso",
+        "Releasing grain"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why was visiting Egypt without permission serious?",
+      "options": [
+        "It offended the Senate",
+        "It angered the army",
+        "It disrupted trade",
+        "Egypt was under direct imperial control"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What happened shortly after Piso left Syria?",
+      "options": [
+        "Tiberius arrived",
+        "Germanicus returned to Rome",
+        "A revolt broke out",
+        "Germanicus fell ill and died"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who did Germanicus believe was responsible for his death?",
+      "options": [
+        "Piso",
+        "Sejanus",
+        "Tiberius",
+        "Plancina"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Tiberius respond to Germanicus’ funeral?",
+      "options": [
+        "He ignored the event",
+        "He banned mourning",
+        "He limited honours and did not attend",
+        "He led the procession"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What charge was Piso acquitted of at his trial?",
+      "options": [
+        "Treason",
+        "Military failure",
+        "Corruption",
+        "Poisoning Germanicus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Piso’s trial ultimately end?",
+      "options": [
+        "Suicide before sentencing",
+        "Exile",
+        "Conviction and execution",
+        "Pardon by Tiberius"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How does Velleius Paterculus treat Germanicus’ death?",
+      "options": [
+        "In great detail",
+        "By glossing over it",
+        "By blaming Tiberius",
+        "By blaming Agrippina"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "According to Velleius, what was the true tragedy?",
+      "options": [
+        "The eastern campaigns",
+        "Germanicus’ death",
+        "Agrippina’s hostility to Tiberius",
+        "The Senate’s reaction"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

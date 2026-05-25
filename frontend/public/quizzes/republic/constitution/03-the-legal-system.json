@@ -1,0 +1,257 @@
+{
+  "id": "03-the-legal-system",
+  "title": "03. The Legal System",
+  "description": "An overview of criminal prosecution, courts, advocates, and inequality within the Roman legal system, illustrated through the trial of Sextus Roscius.",
+  "questions": [
+    {
+      "question": "How was Roman law primarily initiated in criminal cases?",
+      "options": [
+        "By the assemblies",
+        "By the Senate",
+        "By magistrates",
+        "As a private prosecution"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who was responsible for bringing a criminal case to court?",
+      "options": [
+        "The victim",
+        "The state",
+        "The praetor",
+        "The jury"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why were poorer Romans often disadvantaged in the legal system?",
+      "options": [
+        "They lacked legal rights",
+        "They struggled to obtain representation",
+        "They could not testify",
+        "They were excluded from courts"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How might wealthy Romans assist clients in legal cases?",
+      "options": [
+        "By acting as judges",
+        "By providing patronage and advocates",
+        "By writing laws",
+        "By bribing juries"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where were Roman trials usually conducted?",
+      "options": [
+        "Before the assemblies",
+        "Before the emperor",
+        "Before a magistrate",
+        "Before the Senate"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What role did advocates play in Roman trials?",
+      "options": [
+        "They selected juries",
+        "They delivered speeches on behalf of parties",
+        "They decided verdicts",
+        "They enforced sentences"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What characterised advocates’ speeches?",
+      "options": [
+        "Purely emotional appeals",
+        "Strictly factual arguments",
+        "Written testimony only",
+        "Legal arguments combined with rhetoric"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What reform did Sulla introduce to the Roman courts?",
+      "options": [
+        "Introduced popular courts",
+        "Created permanent standing courts",
+        "Abolished juries",
+        "Removed praetors from trials"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What were the quaestiones perpetuae?",
+      "options": [
+        "Provincial courts",
+        "Standing courts for specific crimes",
+        "Military tribunals",
+        "Temporary courts"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How many quaestiones perpetuae did Sulla establish?",
+      "options": [
+        "Ten",
+        "Six",
+        "Five",
+        "Seven"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who presided over each quaestio perpetua?",
+      "options": [
+        "Consul",
+        "Tribune",
+        "Praetor",
+        "Censor"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In what year did the trial of Sextus Roscius take place?",
+      "options": [
+        "70 BCE",
+        "82 BCE",
+        "80 BCE",
+        "88 BCE"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who defended Sextus Roscius?",
+      "options": [
+        "Cato",
+        "Crassus",
+        "Pompey",
+        "Cicero"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Of what crime was Sextus Roscius accused?",
+      "options": [
+        "Murder of his father",
+        "Theft",
+        "Treason",
+        "Bribery"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who did Cicero accuse of orchestrating the crime?",
+      "options": [
+        "Chrysogonus",
+        "Verres",
+        "Catiline",
+        "Sulla"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was Chrysogonus’ relationship to Sulla?",
+      "options": [
+        "General",
+        "Freedman",
+        "Political rival",
+        "Son-in-law"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happened to Roscius’ father’s property after his death?",
+      "options": [
+        "Added to proscription lists and auctioned",
+        "Inherited normally",
+        "Destroyed",
+        "Confiscated by Senate"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the verdict in the Roscius trial?",
+      "options": [
+        "Acquittal",
+        "Conviction",
+        "Exile",
+        "Execution"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What impact did the trial have on Cicero’s career?",
+      "options": [
+        "It ended it",
+        "It led to exile",
+        "It brought him fame",
+        "It damaged his reputation"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was Cicero’s defence risky?",
+      "options": [
+        "It opposed Pompey",
+        "It challenged the people",
+        "It criticised Sulla’s regime",
+        "It angered the Senate"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does the Roscius case illustrate about Roman justice?",
+      "options": [
+        "State prosecution",
+        "Equality before the law",
+        "Absence of corruption",
+        "Influence of patronage and rhetoric"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who were the quaestiones perpetuae designed to try?",
+      "options": [
+        "Religious crimes",
+        "Civil disputes",
+        "Military crimes",
+        "Specific criminal offences"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What broader role did trials play in Roman society?",
+      "options": [
+        "Restricted to plebeians",
+        "Irrelevant to politics",
+        "Means of political advancement",
+        "Purely legal"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who benefited most from the Roman legal system?",
+      "options": [
+        "The wealthy elite",
+        "The poor",
+        "Women",
+        "Foreigners"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What best summarises the Roman legal system?",
+      "options": [
+        "Private, rhetorical, and socially unequal",
+        "Centralised and bureaucratic",
+        "Militarised and harsh",
+        "State-driven and impartial"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

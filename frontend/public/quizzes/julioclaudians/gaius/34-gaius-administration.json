@@ -1,0 +1,227 @@
+{
+  "id": "34-gaius-administration",
+  "title": "34. Gaius’ Administration",
+  "description": "An assessment of Gaius’ administrative policies, including taxation, judicial reform, public works, and reactions to his governance.",
+  "questions": [
+    {
+      "question": "Which tax did Gaius remove early in his reign?",
+      "options": [
+        "An inheritance tax",
+        "A grain tax",
+        "A land tax",
+        "A 0.5% auction tax"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How was the removal of this tax commemorated?",
+      "options": [
+        "A quadrans coin depicting a pileus",
+        "A statue in the Forum",
+        "A senatorial decree",
+        "A public festival"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What did the pileus on the coin symbolise?",
+      "options": [
+        "Religious reform",
+        "Freedom, possibly exaggerated",
+        "Republican liberty",
+        "Military victory"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why is the coin’s denomination significant?",
+      "options": [
+        "It was designed to appeal to the masses",
+        "It appealed to the elite",
+        "It funded the army",
+        "It was rare"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How much money did Gaius squander in his first year?",
+      "options": [
+        "175 million denarii",
+        "1 billion denarii",
+        "575 million denarii",
+        "75 million denarii"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which source records this level of expenditure?",
+      "options": [
+        "Pliny the Elder",
+        "Tacitus",
+        "Suetonius",
+        "Cassius Dio"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What consequence followed Gaius’ spending?",
+      "options": [
+        "Senatorial approval",
+        "Reduced taxation",
+        "Introduction of severe taxation",
+        "Budget surplus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did the plebs react to new taxes?",
+      "options": [
+        "They rioted",
+        "They ignored them",
+        "They petitioned the Senate",
+        "They welcomed them"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which political restriction did Gaius lift?",
+      "options": [
+        "Restrictions on equites",
+        "Senatorial control of elections",
+        "Censorship on Augustan orators and historians",
+        "Provincial courts"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What administrative transparency measure did Gaius introduce?",
+      "options": [
+        "Publication of imperial budgets",
+        "Open Senate meetings",
+        "Public trials",
+        "Public voting records"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What change did Gaius make to magistrates’ authority?",
+      "options": [
+        "He gave them full authority in court cases",
+        "He transferred it to the Senate",
+        "He abolished it",
+        "He limited it"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was a fifth judicial division created?",
+      "options": [
+        "To weaken the Senate",
+        "To increase revenue",
+        "To control corruption",
+        "To spread the workload more evenly"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which source records these judicial reforms?",
+      "options": [
+        "Pliny the Elder",
+        "Cassius Dio",
+        "Tacitus",
+        "Suetonius"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which major public works project did Gaius begin?",
+      "options": [
+        "Anio Novus aqueduct",
+        "Colosseum",
+        "A new forum",
+        "Pantheon"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which source credits Gaius with starting aqueduct construction?",
+      "options": [
+        "Pliny the Elder",
+        "Cassius Dio",
+        "Suetonius",
+        "Tacitus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which project is often cited as self-indulgent?",
+      "options": [
+        "Road building",
+        "Bridge of boats at Baiae",
+        "Anio Novus",
+        "Harbour works"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What luxury structures did Gaius build on Lake Nemi?",
+      "options": [
+        "Villas",
+        "Bridges",
+        "Temples",
+        "Pleasure barges"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which source describes the bridge of boats at Baiae?",
+      "options": [
+        "Pliny the Elder",
+        "Tacitus",
+        "Suetonius",
+        "Cassius Dio"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What reform did Gaius make regarding the equites?",
+      "options": [
+        "He revised the list of equites",
+        "He excluded them from politics",
+        "He abolished the order",
+        "He reduced their privileges"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What electoral change did Gaius undo?",
+      "options": [
+        "Tiberius’ restrictions on assemblies",
+        "Magistrates’ appointments",
+        "Provincial voting",
+        "Senatorial elections"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Dio Cassius describe reaction to this change?",
+      "options": [
+        "Universal support",
+        "Popular approval",
+        "Indifference",
+        "Distress among sensible people"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What does the PPT suggest about Dio’s criticism?",
+      "options": [
+        "It reflects senatorial bias",
+        "It is unreliable altogether",
+        "It reflects plebeian opinion",
+        "It is objective"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

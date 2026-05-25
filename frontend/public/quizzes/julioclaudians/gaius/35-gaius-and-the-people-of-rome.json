@@ -1,0 +1,287 @@
+{
+  "id": "35-gaius-and-the-people-of-rome",
+  "title": "35. Gaius and the People of Rome",
+  "description": "Gaius’ relationship with the Senate and plebs, exploring fear, popularity, spectacle, and ancient portrayals of cruelty.",
+  "questions": [
+    {
+      "question": "What action did Gaius take after his illness to enforce senatorial oaths?",
+      "options": [
+        "He forced extreme punishments",
+        "He rewarded loyalty",
+        "He pardoned them",
+        "He ignored them"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How was one senator punished for his oath?",
+      "options": [
+        "Loss of property",
+        "Forced suicide",
+        "Imprisonment",
+        "Exile"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does Dio Cassius interpret the threat to make Incitatus consul?",
+      "options": [
+        "A joke",
+        "Evidence of madness",
+        "Contempt for the Senate",
+        "Religious symbolism"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What advice did Gaius claim Tiberius gave him?",
+      "options": [
+        "Rule with mercy",
+        "Respect the Senate",
+        "Follow Augustan precedent",
+        "Show no affection or mercy"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What legal mechanism was reintroduced under Gaius?",
+      "options": [
+        "Maiestas trials",
+        "Censorship",
+        "Extortion courts",
+        "Special commissions"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did the Senate respond to Gaius’ authority?",
+      "options": [
+        "They plotted rebellion",
+        "They resisted openly",
+        "They were cowed and compliant",
+        "They fled Rome"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which honours did the Senate grant Gaius?",
+      "options": [
+        "A dictatorship",
+        "Control of elections only",
+        "Sacrifices, statues, and triumphal honours",
+        "Censorship powers"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why might these honours be unsurprising according to the PPT?",
+      "options": [
+        "Because of tradition",
+        "Because of legal obligation",
+        "Because of popular pressure",
+        "Because of fear and alleged atrocities"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How are Suetonius’ accounts of atrocities characterised?",
+      "options": [
+        "Detailed and reliable",
+        "Vague and biased",
+        "Neutral",
+        "Supported by archaeology"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which other author gives a similar catalogue of cruelty?",
+      "options": [
+        "Seneca",
+        "Josephus",
+        "Cassius Dio",
+        "Tacitus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How were Gaius’ relations with the Senate described overall?",
+      "options": [
+        "Unpredictable and inconsistent",
+        "Entirely harmonious",
+        "Consistently hostile",
+        "Consistently cooperative"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What did Gaius initially do regarding the consulship?",
+      "options": [
+        "Seized it immediately",
+        "Refused to hold it at all",
+        "Shared it with Claudius",
+        "Delayed taking it until others’ terms ended"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What did the publication of accounts demonstrate?",
+      "options": [
+        "Desire for transparency and shared power",
+        "Senatorial dominance",
+        "Weakness",
+        "Financial crisis"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What attitude did Gaius show towards the Senate as an institution?",
+      "options": [
+        "Desire to abolish representation",
+        "Complete indifference",
+        "Belief it had little role",
+        "Respect for republican values"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What famous saying is attributed to Gaius?",
+      "options": [
+        "Let them hate me, so long as they fear me",
+        "I am the Senate",
+        "I found Rome brick",
+        "Order restores the state"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What ultimately ended Gaius’ rule?",
+      "options": [
+        "Popular revolt",
+        "Natural death",
+        "Military coup",
+        "Palace conspiracy"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Gaius react to demonstrations supporting the Senate?",
+      "options": [
+        "He expressed violent contempt",
+        "He praised them",
+        "He ignored them",
+        "He made concessions"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What threat did Gaius make against the people?",
+      "options": [
+        "One-neck execution",
+        "Mass exile",
+        "Military punishment",
+        "Starvation by siege"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Gaius punish the plebs practically?",
+      "options": [
+        "Closing granaries and theatres",
+        "Higher rents",
+        "Conscription",
+        "Military repression"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why did tax rises anger the people?",
+      "options": [
+        "They were unclear and led to fines",
+        "They were illegal",
+        "They were too high",
+        "They funded wars"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Gaius initially secure popularity with the plebs?",
+      "options": [
+        "Tax cuts only",
+        "Military success",
+        "Inherited family popularity",
+        "Religious reforms"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which measures helped Gaius court popular favour?",
+      "options": [
+        "Senatorial privileges",
+        "Military victories",
+        "Legal reforms",
+        "Lavish games and largesse"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which chariot team did Gaius support?",
+      "options": [
+        "Blues",
+        "Reds",
+        "Whites",
+        "Greens"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was restored to the assemblies?",
+      "options": [
+        "Military authority",
+        "Judicial power",
+        "Voting power",
+        "Censorship"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was this restoration limited in reality?",
+      "options": [
+        "The Senate intervened",
+        "Candidates were often unopposed",
+        "Gaius reversed it",
+        "The people refused to vote"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What behaviour was seen as beneath Roman dignity?",
+      "options": [
+        "Publishing accounts",
+        "Supporting games",
+        "Holding office",
+        "Associating with actors and performers"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Gaius behave at public games?",
+      "options": [
+        "He performed and socialised openly",
+        "He remained aloof",
+        "He banned performances",
+        "He observed silently"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which sources describe Gaius’ behaviour with performers?",
+      "options": [
+        "Josephus only",
+        "Dio Cassius and Suetonius",
+        "Seneca only",
+        "Tacitus only"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

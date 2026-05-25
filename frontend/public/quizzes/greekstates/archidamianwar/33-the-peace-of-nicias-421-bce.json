@@ -1,0 +1,257 @@
+{
+  "id": "33-the-peace-of-nicias-421-bce",
+  "title": "33. The Peace of Nicias, 421 BCE",
+  "description": "The treaty intended to end the Archidamian War, revealing exhaustion on both sides and the fragility of peace in classical Greece.",
+  "questions": [
+    {
+      "question": "In which year was the Peace of Nicias agreed?",
+      "options": [
+        "424 BCE",
+        "421 BCE",
+        "422 BCE",
+        "423 BCE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which two deaths removed major obstacles to peace?",
+      "options": [
+        "Nicias and Pleistoanax",
+        "Cleon and Brasidas",
+        "Demosthenes and Cleon",
+        "Pericles and Archidamus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which historian comments that the removal of Cleon and Brasidas enabled peace?",
+      "options": [
+        "Herodotus",
+        "Xenophon",
+        "Thucydides",
+        "Plutarch"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which defeats encouraged Athens to seek peace?",
+      "options": [
+        "Delium and Amphipolis",
+        "Pylos and Sphacteria",
+        "Potidaea and Mytilene",
+        "Corcyra and Plataea"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What fear particularly worried Athens in 421 BCE?",
+      "options": [
+        "Economic isolation",
+        "Naval collapse",
+        "Persian invasion",
+        "Further allied revolts"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why might Athenians have regretted rejecting peace after Pylos?",
+      "options": [
+        "They faced greater losses later",
+        "Sparta grew stronger",
+        "They lost allies",
+        "They lost Piraeus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why did Sparta wish to make peace?",
+      "options": [
+        "To expand empire",
+        "To gain Persian support",
+        "To attack Argos",
+        "To regain prisoners from Sphacteria"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What damaged Spartan confidence during the war?",
+      "options": [
+        "Economic collapse",
+        "Loss of allies",
+        "Loss of reputation and captured Spartiates",
+        "Naval defeat"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which Athenian policy particularly alarmed Sparta?",
+      "options": [
+        "Expansion in Sicily",
+        "Tribute reassessments",
+        "Epiteichismos at Pylos and Cythera",
+        "Naval raids"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which fear constantly troubled Sparta?",
+      "options": [
+        "Helot revolt",
+        "Persian invasion",
+        "Athenian democracy",
+        "Naval inferiority"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which rival power threatened Sparta as its truce was ending?",
+      "options": [
+        "Corinth",
+        "Megara",
+        "Argos",
+        "Thebes"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who was the main advocate of peace in Athens?",
+      "options": [
+        "Nicias",
+        "Demosthenes",
+        "Cleon",
+        "Pericles"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "According to Plutarch, what characterised Nicias’ approach?",
+      "options": [
+        "Radicalism",
+        "Aggression",
+        "Demagoguery",
+        "Conservatism"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Nicias build popular support in Athens?",
+      "options": [
+        "Lavish spending on religion and festivals",
+        "Military victories",
+        "Lowering taxes",
+        "Public speeches"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who negotiated peace for Sparta?",
+      "options": [
+        "Brasidas",
+        "Agesilaus",
+        "Pleistoanax",
+        "Archidamus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What personal motive may Pleistoanax have had for peace?",
+      "options": [
+        "Economic gain",
+        "Revenge",
+        "Restoring honour",
+        "Political rehabilitation"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How long was the Peace of Nicias intended to last?",
+      "options": [
+        "Forever",
+        "10 years",
+        "30 years",
+        "50 years"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What key right did the treaty guarantee to all Greeks?",
+      "options": [
+        "Naval protection",
+        "Freedom of speech",
+        "Access to Pan-Hellenic sanctuaries",
+        "Trade privileges"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was Sparta required to return?",
+      "options": [
+        "Cythera",
+        "Amphipolis only",
+        "Sphacteria prisoners",
+        "Cities in Thrace and Panactum"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What were Athens’ main obligations under the treaty?",
+      "options": [
+        "Return prisoners and Cythera",
+        "Dismantle Long Walls",
+        "Leave the Delian League",
+        "Pay compensation"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which allies refused to accept the peace?",
+      "options": [
+        "Argives and Spartans",
+        "Boeotians, Corinthians, Eleans, Megarians",
+        "Chians and Lesbians",
+        "Persians"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why was the peace unstable from the outset?",
+      "options": [
+        "It was only between Athens and Sparta",
+        "It excluded Persia",
+        "It ended too early",
+        "It favoured Athens"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What issue arose at Amphipolis after the treaty?",
+      "options": [
+        "Spartan occupation",
+        "Refusal to return to Athens",
+        "Athenian massacre",
+        "Immediate surrender"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Sparta respond to ongoing insecurity after the peace?",
+      "options": [
+        "Expansion in Sicily",
+        "Renewed war immediately",
+        "Defensive alliance with Athens",
+        "Alliance with Persia"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What is the overall historical significance of the Peace of Nicias?",
+      "options": [
+        "It permanently ended the war",
+        "It strengthened Spartan empire",
+        "It provided a temporary pause in fighting",
+        "It restored Periclean balance"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

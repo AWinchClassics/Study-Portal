@@ -1,0 +1,257 @@
+{
+  "id": "17-the-first-catilinarian-conspiracy",
+  "title": "17. The First Catilinarian Conspiracy",
+  "description": "An exploration of the alleged conspiracy of 65 BCE, its disputed evidence, and what it reveals about politics in the late Roman Republic.",
+  "questions": [
+    {
+      "question": "In which year were the consuls for 65 BCE elected?",
+      "options": [
+        "67 BCE",
+        "65 BCE",
+        "64 BCE",
+        "66 BCE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which two men were originally elected consuls for 65 BCE?",
+      "options": [
+        "Crassus and Caesar",
+        "Autronius and Sulla",
+        "Catiline and Piso",
+        "Torquatus and Cotta"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why were Autronius and Sulla removed from office?",
+      "options": [
+        "Electoral corruption",
+        "Violence",
+        "Debt",
+        "Treason"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which two men replaced Autronius and Sulla as consuls?",
+      "options": [
+        "Pompey and Crassus",
+        "Torquatus and Cotta",
+        "Crassus and Caesar",
+        "Catiline and Piso"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why was Catiline rejected as a candidate in the elections?",
+      "options": [
+        "Age restrictions",
+        "Ongoing trial",
+        "Foreign birth",
+        "Lack of support"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who formulated the original plot after the election scandal?",
+      "options": [
+        "Autronius and Piso",
+        "Catiline and Crassus",
+        "Sulla and Caesar",
+        "Torquatus and Cotta"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What role was Piso supposed to take under the original plan?",
+      "options": [
+        "Dictator",
+        "Governor in Spain",
+        "Consul",
+        "Military commander in Rome"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What change was made to the plot after rumours emerged?",
+      "options": [
+        "They sought senatorial approval",
+        "They delayed it",
+        "They abandoned it",
+        "They planned to massacre senators"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What ultimately happened to the plot?",
+      "options": [
+        "It failed",
+        "It succeeded",
+        "It was postponed",
+        "It led to civil war"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which speech of Cicero refers to the alleged plot?",
+      "options": [
+        "In Catilinam",
+        "Philippics",
+        "Pro Caelio",
+        "Pro Murena"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "In Pro Sulla, who does Cicero say plotted to become consuls?",
+      "options": [
+        "Catiline and Piso",
+        "Autronius and Catiline",
+        "Crassus and Caesar",
+        "Autronius and Sulla"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which historian describes a conspiracy involving Autronius, Catiline and Piso?",
+      "options": [
+        "Plutarch",
+        "Tacitus",
+        "Sallust",
+        "Livy"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What date does Sallust give for the planned takeover?",
+      "options": [
+        "15 March 65 BCE",
+        "5 December 63 BCE",
+        "1 January 63 BCE",
+        "1 January 65 BCE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which source suggests Crassus and Caesar were involved?",
+      "options": [
+        "Cassius Dio",
+        "Suetonius",
+        "Livy",
+        "Sallust"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "According to Livy, who was the target of the conspiracy?",
+      "options": [
+        "The tribunes",
+        "The Senate",
+        "The consuls",
+        "The army"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What immediate precaution did the Senate take after rumours of the plot?",
+      "options": [
+        "Arrested Catiline",
+        "Passed the SCU",
+        "Granted bodyguards to the consuls",
+        "Declared a dictatorship"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was no formal enquiry completed?",
+      "options": [
+        "Tribunician veto",
+        "Lack of evidence",
+        "Civil unrest",
+        "Consular opposition"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who defended Catiline during his trial?",
+      "options": [
+        "Torquatus",
+        "Crassus",
+        "Caesar",
+        "Cicero"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What did Torquatus claim about Catiline?",
+      "options": [
+        "He was guilty",
+        "He was unreliable",
+        "He was innocent",
+        "He was dangerous"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What did Cicero consider doing in relation to Catiline?",
+      "options": [
+        "Exiling him",
+        "Accusing him",
+        "Defending him",
+        "Ignoring him"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Cicero later treat this conspiracy?",
+      "options": [
+        "Denied it",
+        "Referred to it frequently",
+        "Blamed Caesar",
+        "Ignored it"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which later event influenced Cicero’s interpretation of this plot?",
+      "options": [
+        "Pompey’s consulship",
+        "Caesar’s consulship",
+        "Sulla’s dictatorship",
+        "The Second Catilinarian Conspiracy"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What is the main issue with the evidence for the conspiracy?",
+      "options": [
+        "It is contradictory",
+        "It is from archaeology",
+        "It is unanimous",
+        "It is too detailed"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do modern historians generally view the First Catilinarian Conspiracy?",
+      "options": [
+        "As proven fact",
+        "As a civil war",
+        "As exaggerated or uncertain",
+        "As irrelevant"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does this episode demonstrate about late Republican politics?",
+      "options": [
+        "Use of rumours and accusations",
+        "Stability",
+        "Strong senatorial control",
+        "Clarity of evidence"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

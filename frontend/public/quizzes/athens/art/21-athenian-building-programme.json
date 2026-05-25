@@ -1,0 +1,187 @@
+{
+  "id": "21-athenian-building-programme",
+  "title": "21. The Athenian Building Programme",
+  "description": "The motives, funding, criticisms, and significance of Athens’ fifth-century building programme under Pericles.",
+  "questions": [
+    {
+      "question": "Why did the Athenians initially refuse to rebuild the Acropolis after 480–479 BCE?",
+      "options": [
+        "They lacked funds",
+        "Pericles opposed rebuilding",
+        "They swore an oath not to rebuild",
+        "They feared Spartan attack"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "By what year had attitudes towards rebuilding Athens changed?",
+      "options": [
+        "440 BCE",
+        "449 BCE",
+        "430 BCE",
+        "460 BCE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which Athenian leader promoted the rebuilding programme?",
+      "options": [
+        "Pericles",
+        "Cleon",
+        "Cimon",
+        "Themistocles"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which source describes the funding and criticisms of the building programme?",
+      "options": [
+        "Herodotus",
+        "Aristotle",
+        "Xenophon",
+        "Plutarch"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "From where was much of the funding for the building programme drawn?",
+      "options": [
+        "War reparations from Persia",
+        "Private donations",
+        "Delian League tribute",
+        "Taxes on citizens"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What argument did Pericles use to justify using League funds?",
+      "options": [
+        "Athens protected the allies",
+        "Sparta demanded it",
+        "Allies approved the spending",
+        "Athens owned the money outright"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What criticism did opponents make about the use of League funds?",
+      "options": [
+        "It angered the gods",
+        "It weakened the navy",
+        "It amounted to tyranny",
+        "It caused inflation"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did critics metaphorically describe Athens’ beautification?",
+      "options": [
+        "As religious corruption",
+        "As military overreach",
+        "As a fortress city",
+        "As a vain woman adorning herself"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Pericles respond to accusations over funding?",
+      "options": [
+        "He blamed Pheidias",
+        "He proposed to fund it personally",
+        "He abandoned the programme",
+        "He reduced the scale"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did the Assembly still approve public funding?",
+      "options": [
+        "Sparta threatened war",
+        "Personal funding offended democracy",
+        "The allies demanded it",
+        "It was cheaper"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who headed the artistic side of the building programme?",
+      "options": [
+        "Callicrates",
+        "Mnesicles",
+        "Pheidias",
+        "Ictinus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What statue did Pheidias create for the Parthenon?",
+      "options": [
+        "Athena Promachos",
+        "Zeus Olympios",
+        "Athena Parthenos",
+        "Athena Nike"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What accusation was brought against Pheidias around 437 BCE?",
+      "options": [
+        "Bribery",
+        "Treason",
+        "Stealing gold",
+        "Impiety only"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What evidence suggests Pheidias later worked at Olympia?",
+      "options": [
+        "Coins",
+        "Literary accounts only",
+        "Inscriptions",
+        "Excavation of his workshop"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which materials highlight the expense of the programme?",
+      "options": [
+        "Limestone and clay",
+        "Marble, gold, and ivory",
+        "Bronze and wood",
+        "Iron and stone"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why would the buildings have contrasted with life in Attica?",
+      "options": [
+        "They were unpainted",
+        "Many lived in mud-brick huts",
+        "They used foreign styles",
+        "They were smaller"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What point does Thucydides make when comparing Athens and Sparta?",
+      "options": [
+        "Athens lacked military power",
+        "Athens’ power would be obvious from its ruins",
+        "Sparta was richer",
+        "Sparta had better temples"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was one key purpose of the building programme?",
+      "options": [
+        "Propaganda and prestige",
+        "Economic reform",
+        "Religious reform",
+        "Defensive fortification"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

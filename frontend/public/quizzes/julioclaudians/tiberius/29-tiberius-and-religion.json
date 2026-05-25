@@ -1,0 +1,187 @@
+{
+  "id": "29-tiberius-and-religion",
+  "title": "29. Tiberius and Religion",
+  "description": "Tiberius’ religious policy, examining imperial cult, divine honours, and the suppression of foreign practices.",
+  "questions": [
+    {
+      "question": "How did Tiberius generally respond to divine honours for himself?",
+      "options": [
+        "He actively encouraged them",
+        "He consistently refused them",
+        "He accepted them reluctantly",
+        "He demanded them"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which earlier rulers had been deified by the time Tiberius became emperor?",
+      "options": [
+        "Augustus only",
+        "Romulus and Augustus",
+        "Julius Caesar only",
+        "Julius Caesar and Augustus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why did cities compete to worship Tiberius?",
+      "options": [
+        "To demonstrate loyalty to the emperor",
+        "Fear of punishment",
+        "Senatorial pressure",
+        "Religious devotion"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What evidence suggests worship of Tiberius was tolerated in Rome?",
+      "options": [
+        "Coins depicting Tiberius as a god",
+        "The genius of Tiberius inscription",
+        "A temple to Tiberius",
+        "Senatorial decree"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which inscription asked permission to worship Tiberius and his family?",
+      "options": [
+        "Smyrna inscription",
+        "Rome inscription",
+        "Leptis Magna inscription",
+        "Gytheion inscription"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Tiberius respond to the request from Gytheion?",
+      "options": [
+        "He delayed the decision",
+        "He approved it",
+        "He ignored it",
+        "He firmly rejected it"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which cult did Tiberius actively promote?",
+      "options": [
+        "Imperial cult of himself",
+        "Worship of the deified Augustus",
+        "Cult of Roma",
+        "Worship of Julius Caesar"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What religious body did Tiberius create for Augustus’ worship?",
+      "options": [
+        "Arval Brethren",
+        "Pontifices",
+        "Sodales Augustales",
+        "Vestal Virgins"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Where was a temple dedicated to Roma and Augustus located?",
+      "options": [
+        "Leptis Magna",
+        "Gytheion",
+        "Smyrna",
+        "Rome"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What exception did Tiberius allow regarding worship of himself?",
+      "options": [
+        "Multiple provincial temples",
+        "A temple in Athens",
+        "One temple in Smyrna to himself and the genius of the Senate",
+        "A temple in Rome"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In which year was the Smyrna temple permitted?",
+      "options": [
+        "30 CE",
+        "18 CE",
+        "14 CE",
+        "26 CE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How does Tacitus interpret Tiberius’ refusal of divine honours?",
+      "options": [
+        "As humility",
+        "As religious piety",
+        "As an affront to the dignity of his position",
+        "As political weakness"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which ‘foreign’ religious practices did Tiberius suppress?",
+      "options": [
+        "Christianity",
+        "Mithraism",
+        "Druidism",
+        "Greek mystery cults"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Whose earlier policy did Tiberius follow in suppressing druidic practices?",
+      "options": [
+        "Claudius",
+        "Augustus",
+        "Caesar",
+        "Tiberius himself"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which religions were forbidden in Rome under Tiberius?",
+      "options": [
+        "Judaism only",
+        "All foreign cults",
+        "Judaism and Egyptian rites",
+        "Egyptian rites only"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does this suppression suggest about Tiberius’ religious policy?",
+      "options": [
+        "Religious conservatism",
+        "Religious indifference",
+        "Religious extremism",
+        "Religious innovation"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How does Suetonius characterise Tiberius’ attitude to religion overall?",
+      "options": [
+        "Fanatically religious",
+        "Reverent but cautious",
+        "Neglectful of the gods",
+        "Deeply pious"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which source states that Tiberius neglected religious matters?",
+      "options": [
+        "Pliny, Natural History 30.4",
+        "Dio Cassius",
+        "Tacitus, Annals 1.83",
+        "Suetonius, Tiberius 69"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

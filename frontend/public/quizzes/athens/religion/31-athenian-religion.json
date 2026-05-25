@@ -1,0 +1,207 @@
+{
+  "id": "31-athenian-religion",
+  "title": "31. Athenian Religion",
+  "description": "The beliefs, gods, rituals, and religious practices that shaped public and private life in classical Athens.",
+  "questions": [
+    {
+      "question": "What type of religious system did the Athenians practise?",
+      "options": [
+        "Dualistic",
+        "Atheistic",
+        "Polytheistic",
+        "Monotheistic"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What term is used for the major group of Greek gods such as Zeus and Athena?",
+      "options": [
+        "Titans",
+        "Olympians",
+        "Daemons",
+        "Chthonic gods"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What characteristic describes Greek gods as having human form and qualities?",
+      "options": [
+        "Anthropomorphism",
+        "Divine transcendence",
+        "Animism",
+        "Totemism"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which ancient thinker challenged the portrayal of gods as morally flawed?",
+      "options": [
+        "Homer",
+        "Hesiod",
+        "Herodotus",
+        "Plato"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What were chthonic gods primarily associated with?",
+      "options": [
+        "Mount Olympus",
+        "The sea",
+        "The sky",
+        "The earth and underworld"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which god was the most powerful chthonic deity?",
+      "options": [
+        "Poseidon",
+        "Hades",
+        "Zeus",
+        "Apollo"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What symbol was commonly associated with chthonic deities?",
+      "options": [
+        "Snake",
+        "Torch",
+        "Olive branch",
+        "Eagle"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did worship of chthonic gods differ from Olympian worship?",
+      "options": [
+        "It focused on athletic contests",
+        "It involved more celebration",
+        "It avoided sacrifice",
+        "It was more fearful and solemn"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "According to Isocrates, what was unusual about chthonic worship?",
+      "options": [
+        "It was secretive",
+        "It avoided temples",
+        "It was restricted to elites",
+        "It lacked sacrifices"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How were sacrifices to chthonic gods typically performed?",
+      "options": [
+        "Into pits in the earth",
+        "At sea",
+        "Inside temples",
+        "On altars above ground"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What usually happened to the sacrificial animal in Olympian worship?",
+      "options": [
+        "It was thrown into water",
+        "It was buried whole",
+        "It was shared in a feast",
+        "It was burned entirely"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was a libation?",
+      "options": [
+        "A sacred dance",
+        "A ritual meal",
+        "A poured liquid offering",
+        "A prayer hymn"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which festival honoured Athena and involved major processions?",
+      "options": [
+        "The Panathenaia",
+        "The City Dionysia",
+        "The Eleusinian Mysteries",
+        "The Lenaia"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which god was worshipped at Delphi?",
+      "options": [
+        "Zeus",
+        "Dionysus",
+        "Apollo",
+        "Athena"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the purpose of consulting an oracle?",
+      "options": [
+        "Divine guidance",
+        "Political debate",
+        "Entertainment",
+        "Legal judgement"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What characterised mystery cults?",
+      "options": [
+        "Military rituals",
+        "Public ceremonies",
+        "Secret initiation rites",
+        "State control"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which cult was centred on Demeter and Persephone?",
+      "options": [
+        "The Eleusinian Mysteries",
+        "The Cult of Hestia",
+        "The Cult of Dionysus",
+        "The Cult of Asclepius"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which healing god had a cult attended when people were ill?",
+      "options": [
+        "Hermes",
+        "Apollo",
+        "Asclepius",
+        "Ares"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "To which goddess was the household hearth dedicated?",
+      "options": [
+        "Artemis",
+        "Hera",
+        "Athena",
+        "Hestia"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was the purpose of herms?",
+      "options": [
+        "Temple decoration",
+        "Cult statues",
+        "Protective boundary markers",
+        "Grave markers"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "id": "39-land-reform",
+  "title": "39. Land Reform",
+  "description": "An examination of land reform in the late Roman Republic, focusing on the Gracchi, veteran settlement, and political conflict.",
+  "questions": [
+    {
+      "question": "Why did land reform become a major issue in the late Roman Republic?",
+      "options": [
+        "Population decline",
+        "Religious change",
+        "Growth of latifundia and land inequality",
+        "Foreign invasion"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What limit on ownership of ager publicus did Tiberius Gracchus reaffirm?",
+      "options": [
+        "500 iugera",
+        "600 iugera",
+        "400 iugera",
+        "300 iugera"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who was most threatened by the enforcement of this land limit?",
+      "options": [
+        "Latifundia owners",
+        "Veterans",
+        "Equestrians",
+        "Urban poor"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Tiberius Gracchus overcome a veto against his land reforms?",
+      "options": [
+        "By deposing his fellow tribune",
+        "By appealing to the Senate",
+        "By using force",
+        "By delaying the vote"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the ultimate fate of Tiberius Gracchus?",
+      "options": [
+        "Exile",
+        "Assassination",
+        "Trial",
+        "Political retirement"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why were land grants traditionally awarded to soldiers?",
+      "options": [
+        "Religious duty",
+        "Tax incentives",
+        "Punishment",
+        "Reward for service"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which leaders granted land to their veterans?",
+      "options": [
+        "Sulla, Pompey, Caesar, and Octavian",
+        "Pompey and Crassus",
+        "Only Caesar",
+        "Only Sulla"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why did veteran land redistribution often cause unrest?",
+      "options": [
+        "Lack of land",
+        "Cities opposed colonisation",
+        "Existing owners lost land",
+        "Veterans refused land"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who proposed a land bill in 63 BCE?",
+      "options": [
+        "Caesar",
+        "Pompey",
+        "Cicero",
+        "Rullus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was a key feature of Rullus’ proposal?",
+      "options": [
+        "Colonies overseas",
+        "A ten-man commission",
+        "Land seizure without payment",
+        "Distribution only to soldiers"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did Cicero oppose Rullus’ land bill?",
+      "options": [
+        "He favoured populares",
+        "To please optimate supporters",
+        "It harmed veterans",
+        "He opposed reform entirely"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did the Optimates react to Caesar’s conciliatory land bill?",
+      "options": [
+        "They amended it",
+        "They opposed it",
+        "They supported it",
+        "They ignored it"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How was Caesar’s first land bill eventually passed?",
+      "options": [
+        "By unanimous vote",
+        "By force",
+        "By referendum",
+        "By Senate decree"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which land did Caesar later target in a harsher reform?",
+      "options": [
+        "Ager publicus in Gaul",
+        "Urban land in Rome",
+        "Ager Campanus",
+        "Public land in Spain"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was the ager Campanus politically sensitive?",
+      "options": [
+        "It was sacred land",
+        "Many optimates owned land there",
+        "It was poor quality",
+        "It was foreign land"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "During his dictatorships, whom did Caesar resettle through colonisation?",
+      "options": [
+        "Only urban poor",
+        "Equestrians",
+        "Only veterans",
+        "Veterans and plebs urbana"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why did Octavian and Antony need land after Caesar’s death?",
+      "options": [
+        "To expand Rome",
+        "To reward senators",
+        "To placate veterans",
+        "To fund wars"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened in 42 BCE regarding land redistribution?",
+      "options": [
+        "New laws repealed",
+        "Land taken and protests sent to Rome",
+        "Peaceful reform",
+        "Reforms abandoned"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who protested against land confiscations in 42 BCE?",
+      "options": [
+        "Veterans",
+        "Senators",
+        "Dispossessed landowners",
+        "Provincials"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "After which conflict was further land redistributed?",
+      "options": [
+        "Perusine War",
+        "Battle of Philippi",
+        "Social War",
+        "Civil War of Caesar"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was land reform such a contentious issue?",
+      "options": [
+        "Lack of land",
+        "Religious objections",
+        "Economic inequality",
+        "Someone always lost land"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What social group benefited most consistently from land reform policies?",
+      "options": [
+        "Foreigners",
+        "Senators",
+        "Equestrians",
+        "Veterans"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

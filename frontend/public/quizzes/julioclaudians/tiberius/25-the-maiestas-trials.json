@@ -1,0 +1,257 @@
+{
+  "id": "25-the-maiestas-trials",
+  "title": "25. The Maiestas Trials",
+  "description": "An examination of the crime of maiestas under Tiberius, focusing on informers, legal abuse, and Tacitus’ interpretation of treason trials.",
+  "questions": [
+    {
+      "question": "What did the crime of maiestas originally refer to according to Cicero?",
+      "options": [
+        "Military failure",
+        "An attack on the dignity of the Roman people and their magistrates",
+        "Insulting the emperor personally",
+        "Religious impiety"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does Tacitus define maiestas?",
+      "options": [
+        "Military cowardice",
+        "Disobedience to the Senate",
+        "Private immorality",
+        "Official misconduct damaging the Roman state"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Augustus redefine maiestas?",
+      "options": [
+        "As conspiracy alone",
+        "As any offence against the Roman gods",
+        "As any insult or offence against the princeps",
+        "As treason against the Senate"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who were delatores?",
+      "options": [
+        "Praetorian officers",
+        "Provincial governors",
+        "Imperial judges",
+        "Private informers who brought accusations"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What incentive encouraged delatores to bring charges?",
+      "options": [
+        "Immunity from prosecution",
+        "Political office",
+        "A share of confiscated property",
+        "Public honour"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What proportion of confiscated property did informers receive?",
+      "options": [
+        "One tenth",
+        "All of it",
+        "One quarter",
+        "One half"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why did the system encourage abuse?",
+      "options": [
+        "Trials were secret",
+        "The laws were strictly defined",
+        "Judges were untrained",
+        "Informers could profit personally"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who used maiestas charges to enrich himself in 15 CE?",
+      "options": [
+        "Libo",
+        "Sejanus",
+        "Hispo",
+        "Piso"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Against whom did Hispo bring charges?",
+      "options": [
+        "Drusus",
+        "Marcellus, governor of Bithynia",
+        "Agrippa Postumus",
+        "Germanicus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why was Sabinus targeted?",
+      "options": [
+        "He plotted rebellion",
+        "He was a friend of Germanicus",
+        "He insulted Augustus",
+        "He opposed Tiberius publicly"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How was Sabinus trapped by his accusers?",
+      "options": [
+        "By being tricked into speaking freely",
+        "By bribed witnesses",
+        "Through forged letters",
+        "By military evidence"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What effect did such practices have on Roman society?",
+      "options": [
+        "Greater openness",
+        "An atmosphere of secrecy and fear",
+        "Political stability",
+        "Decline of the Senate"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was Falanius accused of?",
+      "options": [
+        "Allowing a comic actor to join the worship of Augustus",
+        "Plotting rebellion",
+        "Insulting Augustus",
+        "Adultery with a noblewoman"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was Libo Drusus charged with maiestas?",
+      "options": [
+        "Insulting Tiberius",
+        "Astrological speculation and alleged plotting",
+        "Financial corruption",
+        "Military disloyalty"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How were some maiestas charges linked to other crimes?",
+      "options": [
+        "Through military law",
+        "By coincidence only",
+        "By combining treason with offences like adultery",
+        "Through provincial revolts"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which charge against Piso was considered genuine?",
+      "options": [
+        "Financial extortion",
+        "Insulting Germanicus",
+        "Poisoning Germanicus",
+        "Trying to re-enter his province by force"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Tiberius initially respond to maiestas cases early in his reign?",
+      "options": [
+        "He delegated them to Sejanus",
+        "He ignored all cases",
+        "He encouraged prosecutions",
+        "He dismissed many as ridiculous"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How many executions did Tiberius personally order according to careful study?",
+      "options": [
+        "Twenty",
+        "Two",
+        "Four",
+        "Eight"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What happened to property if an accused committed suicide before verdict?",
+      "options": [
+        "The family kept it except the informer’s share",
+        "It was fully confiscated",
+        "It was destroyed",
+        "It went to the Senate"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which insults did Tiberius say should not be treated as treason?",
+      "options": [
+        "Against the gods",
+        "Against himself and his mother",
+        "Against Augustus",
+        "Against the Senate"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Sejanus’ influence affect the use of maiestas trials?",
+      "options": [
+        "They declined",
+        "They increased and were taken more seriously",
+        "They became less serious",
+        "They were abolished"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happened to prosecutions after Sejanus’ death?",
+      "options": [
+        "They were forgiven",
+        "They continued for about a year against his associates",
+        "They ended immediately",
+        "They intensified permanently"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does Tacitus exaggerate the impact of the maiestas trials?",
+      "options": [
+        "By denying executions",
+        "By blaming Augustus",
+        "By presenting them as widespread massacres",
+        "By inventing cases"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Approximately how many people were actually charged during Tiberius’ reign?",
+      "options": [
+        "About 20",
+        "About 52",
+        "About 80",
+        "About 40"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why was Tacitus particularly sensitive to maiestas trials?",
+      "options": [
+        "Family prosecution",
+        "Personal involvement",
+        "Military service",
+        "Experience of similar trials under Domitian"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

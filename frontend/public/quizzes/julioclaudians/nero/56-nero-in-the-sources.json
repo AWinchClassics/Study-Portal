@@ -1,0 +1,187 @@
+{
+  "id": "56-nero-in-the-sources",
+  "title": "56. Nero in the Sources",
+  "description": "An evaluation of how ancient historians portray Nero, assessing bias, perspective, and the contrast between early praise and later condemnation.",
+  "questions": [
+    {
+      "question": "How do most ancient sources portray Nero overall?",
+      "options": [
+        "Inconsistently",
+        "Positively",
+        "Negatively",
+        "Neutrally"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which period of Nero’s reign is treated most favourably?",
+      "options": [
+        "The final years",
+        "The middle years",
+        "The quinquennium aureum",
+        "After the Great Fire"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does the term quinquennium aureum refer to?",
+      "options": [
+        "Five years of peace under Galba",
+        "Five religious reforms",
+        "Five years of military success",
+        "Five golden years at the start of Nero’s reign"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which sources attribute Nero’s early success to Seneca and Burrus?",
+      "options": [
+        "Pliny and Dio",
+        "Tacitus and Suetonius",
+        "Seneca and Tacitus",
+        "Josephus and Pliny"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What act by Nero is described as laudable by Suetonius?",
+      "options": [
+        "Conquering Armenia",
+        "Executing conspirators",
+        "Deifying Claudius",
+        "Abolishing taxes"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "According to Tacitus, what happened once Seneca and Burrus were removed?",
+      "options": [
+        "The empire stabilised",
+        "The Senate regained power",
+        "Peace was restored",
+        "Nero’s rule declined"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why must historians treat the sources with caution?",
+      "options": [
+        "They are anonymous",
+        "They are biased and not objective",
+        "They are incomplete",
+        "They contradict archaeology"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which later emperor emphasised his connection to Nero?",
+      "options": [
+        "Otho",
+        "Vitellius",
+        "Galba",
+        "Vespasian"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does Dio Cassius record about Terentius Maximus?",
+      "options": [
+        "He assassinated Nero",
+        "He wrote a biography of Nero",
+        "He pretended to be Nero",
+        "He governed Syria"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which group does Nero appear to have been popular with for much of his reign?",
+      "options": [
+        "The equestrians",
+        "The Senate",
+        "The plebs",
+        "The army"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What cultural preference drew consistent criticism of Nero?",
+      "options": [
+        "Military discipline",
+        "Legal reform",
+        "Stoic philosophy",
+        "Greek culture and philhellenism"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which activities particularly angered conservative Romans?",
+      "options": [
+        "Judicial reforms",
+        "Performing in theatre and music",
+        "Tax reforms",
+        "Religious conservatism"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which historian viewed Nero’s behaviour as beneath Roman dignity?",
+      "options": [
+        "Suetonius",
+        "Pliny",
+        "Tacitus",
+        "Josephus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How do Tacitus and Dio describe Nero’s wider influence on society?",
+      "options": [
+        "Politically stabilising",
+        "Culturally neutral",
+        "Morally improving",
+        "Corrupting"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which forms of excess are highlighted by Suetonius and Dio?",
+      "options": [
+        "Social, religious, and sexual",
+        "Legal and administrative",
+        "Philosophical",
+        "Economic and military"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Nero view himself culturally?",
+      "options": [
+        "As militaristic",
+        "As uncultured",
+        "As a traditional Roman",
+        "As highly cultured"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What monument symbolised Nero’s self-image?",
+      "options": [
+        "The Colosseum",
+        "The Ara Pacis",
+        "The Pantheon",
+        "The Colossus of Nero"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What does Pliny claim Nero considered doing with the Colossus?",
+      "options": [
+        "Casting it in gold",
+        "Dedicating it to Jupiter",
+        "Moving it to Greece",
+        "Destroying it"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "id": "16-the-sophists-and-athenian-society",
+  "title": "16. The Sophists and Athenian Society",
+  "description": "Hostility, criticism, and influence of the Sophists within Athenian society and cultural life.",
+  "questions": [
+    {
+      "question": "Why are Plato and Xenophon hostile towards the Sophists?",
+      "options": [
+        "They wished to distinguish Socrates from them",
+        "They were excluded from Sophistic teaching",
+        "They supported tyranny",
+        "They rejected education"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What practice of the Sophists is most criticised by Plato?",
+      "options": [
+        "Teaching rhetoric",
+        "Teaching non-citizens",
+        "Charging fees for education",
+        "Travelling between poleis"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What bias may have influenced Plato’s portrayal of the Sophists?",
+      "options": [
+        "His exile from Athens",
+        "His military career",
+        "His aristocratic background",
+        "His support for empire"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In Plato’s Protagoras, how does Protagoras defend the Sophists?",
+      "options": [
+        "By claiming they are priests",
+        "By comparing them to politicians",
+        "By rejecting payment",
+        "By comparing them to prophets and teachers"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How does Xenophon describe the Sophists in Memorabilia?",
+      "options": [
+        "As corrupting democracy",
+        "As prostitutes selling wisdom",
+        "As immoral atheists",
+        "As harmless entertainers"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What event may have intensified hostility toward the Sophists?",
+      "options": [
+        "The Peloponnesian War",
+        "The Sicilian Expedition",
+        "The execution of Socrates",
+        "The Persian Wars"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which source records criticism of Pericles for associating with Sophists?",
+      "options": [
+        "Aristotle",
+        "Plutarch",
+        "Xenophon",
+        "Thucydides"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why is Plutarch’s account significant for assessing hostility to Sophists?",
+      "options": [
+        "It is hostile",
+        "It is contemporary",
+        "It predates Socrates’ execution",
+        "It supports Plato"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which genre provides the most vivid hostile portrayal of Sophists?",
+      "options": [
+        "Philosophy",
+        "Historiography",
+        "Comedy",
+        "Tragedy"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In Aristophanes’ Clouds, who is portrayed as the leader of the Thinkery?",
+      "options": [
+        "Protagoras",
+        "Hippias",
+        "Socrates",
+        "Gorgias"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why is Socrates’ portrayal in Clouds misleading?",
+      "options": [
+        "He supported tyranny",
+        "He taught rhetoric for money",
+        "He is an amalgam of different Sophists",
+        "He opposed democracy"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What is the purpose of the agon between Right and Wrong in Clouds?",
+      "options": [
+        "To praise democracy",
+        "To mock traditional religion",
+        "To show the superiority of rhetoric",
+        "To contrast traditional and deceptive argument"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What does Pheidippides’ success demonstrate in Clouds?",
+      "options": [
+        "Moral improvement",
+        "Political reform",
+        "Economic growth",
+        "The danger of persuasive but immoral rhetoric"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How does Aristophanes suggest the Sophists threaten social order?",
+      "options": [
+        "By rejecting the gods",
+        "By encouraging challenges to traditional authority",
+        "By opposing democracy",
+        "By promoting oligarchy"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which tragedian is most associated with Sophistic influence?",
+      "options": [
+        "Aeschylus",
+        "Sophocles",
+        "Euripides",
+        "Aristophanes"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What feature of Euripides’ plays suggests Sophistic influence?",
+      "options": [
+        "Military themes",
+        "Clever but morally dubious arguments",
+        "Religious devotion",
+        "Chorus dominance"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In Hippolytus, which Sophistic idea is most clearly displayed?",
+      "options": [
+        "Determinism",
+        "Relativism",
+        "Logical justification of immoral action",
+        "Atomism"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why is dramatic evidence problematic for historians?",
+      "options": [
+        "It is incomplete",
+        "It exaggerates for effect",
+        "It lacks named figures",
+        "It avoids politics"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What positive role did Sophists arguably play in Athens?",
+      "options": [
+        "Undermining democracy",
+        "Democratising access to education",
+        "Weakening rhetoric",
+        "Promoting tyranny"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Overall, what does the evidence suggest about the Sophists?",
+      "options": [
+        "They were universally despised",
+        "They were politically marginal",
+        "They were influential but controversial",
+        "They were state-sponsored"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "id": "24-clodius-early-career",
+  "title": "24. Clodius’ Early Career",
+  "description": "An overview of Publius Clodius Pulcher’s early life, scandals, political manoeuvring, and rise to the tribunate.",
+  "questions": [
+    {
+      "question": "In which year was Clodius born?",
+      "options": [
+        "93 BCE",
+        "90 BCE",
+        "95 BCE",
+        "88 BCE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What accusation did Clodius make against Catiline in 73 BCE?",
+      "options": [
+        "Treason",
+        "Conspiracy",
+        "Electoral corruption",
+        "Adultery with a Vestal Virgin"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was the consequence of this accusation?",
+      "options": [
+        "Catiline exiled",
+        "Elected tribune",
+        "Forced to leave Rome",
+        "Gained popularity"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "With whom did Clodius serve in the East in 67 BCE?",
+      "options": [
+        "Pompey",
+        "Caesar",
+        "Lucullus",
+        "Crassus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Clodius undermine Lucullus?",
+      "options": [
+        "Fomented soldier unrest",
+        "Refused orders",
+        "Political opposition",
+        "Military defeat"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Where did Clodius go after deserting Lucullus in 66 BCE?",
+      "options": [
+        "Rome",
+        "Gaul",
+        "Cilicia",
+        "Spain"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why did Clodius seek Lucullus’ protection on return to Rome?",
+      "options": [
+        "Political rivalry",
+        "Debt",
+        "Legal threat",
+        "Violence"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Where did Clodius go in 64 BCE?",
+      "options": [
+        "Spain",
+        "Africa",
+        "Gaul with Murena",
+        "Sicily"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Whom did Clodius support in the 63 BCE consular elections?",
+      "options": [
+        "Catiline",
+        "Antonius",
+        "Cicero",
+        "Murena"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which scandal implicated Clodius in 62 BCE?",
+      "options": [
+        "Maiestas",
+        "Catilinarian",
+        "Ambitus",
+        "Bona Dea"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What defined the Bona Dea rites?",
+      "options": [
+        "Female-only",
+        "Male-only",
+        "Games",
+        "Forum festival"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Where were the rites held in 62 BCE?",
+      "options": [
+        "Forum",
+        "Vesta",
+        "Pontifex Maximus’ house",
+        "Capitol"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Clodius enter the rites?",
+      "options": [
+        "Bribery",
+        "Permission",
+        "Guest",
+        "Disguised as a woman"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What rumour surrounded his presence?",
+      "options": [
+        "Politics",
+        "Spying",
+        "Affair with Caesar’s wife",
+        "Disruption"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why did Caesar divorce his wife?",
+      "options": [
+        "Adultery",
+        "Pressure",
+        "Jealousy",
+        "Above suspicion"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who testified against Clodius?",
+      "options": [
+        "Cicero",
+        "Caesar",
+        "Crassus",
+        "Cato"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was Clodius’ defence?",
+      "options": [
+        "Denial",
+        "Confession",
+        "Alibi",
+        "Blamed Lucullus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was Clodius acquitted?",
+      "options": [
+        "Veto",
+        "No witnesses",
+        "Bribery by Crassus",
+        "Popular support"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What effect did the trial have on Clodius’ career?",
+      "options": [
+        "Enhanced",
+        "Exile",
+        "Support",
+        "Ended cursus honorum rise"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which office did Clodius hold in 61/60 BCE?",
+      "options": [
+        "Quaestor in Sicily",
+        "Praetor",
+        "Aedile",
+        "Tribune"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was Clodius adopted in 59 BCE?",
+      "options": [
+        "Avoid trial",
+        "Marriage",
+        "Wealth",
+        "To run for tribune"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "For which year was Clodius elected tribune?",
+      "options": [
+        "57",
+        "59",
+        "60",
+        "58"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What change did Clodius make to the corn dole?",
+      "options": [
+        "Restricted",
+        "Free and expanded",
+        "Abolished",
+        "Privatised"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Clodius build political power?",
+      "options": [
+        "Collegia and gangs",
+        "Army",
+        "Alliances",
+        "Courts"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who formed Clodius’ core support base?",
+      "options": [
+        "Allies",
+        "Plebs urbana",
+        "Senators",
+        "Equites"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

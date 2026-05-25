@@ -1,0 +1,207 @@
+{
+  "id": "23-the-megarian-decree-432-bce",
+  "title": "23. The Megarian Decree, c. 432 BCE",
+  "description": "The Megarian Decree and its role in escalating tensions between Athens and Sparta before the Peloponnesian War.",
+  "questions": [
+    {
+      "question": "In approximately which year was the Megarian Decree issued?",
+      "options": [
+        "429 BCE",
+        "432 BCE",
+        "440 BCE",
+        "435 BCE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who was responsible for issuing the Megarian Decree?",
+      "options": [
+        "Pericles",
+        "Cimon",
+        "Cleon",
+        "Ephialtes"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What did the Megarian Decree prohibit?",
+      "options": [
+        "Megarian naval construction",
+        "Megarian tribute payments",
+        "Megarians using Athenian ports and markets",
+        "Megarian participation in the Delian League"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which Greek state was targeted by the decree?",
+      "options": [
+        "Aegina",
+        "Corinth",
+        "Argos",
+        "Megara"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What type of power did the decree most clearly demonstrate?",
+      "options": [
+        "Military power",
+        "Religious authority",
+        "Economic power",
+        "Naval dominance"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Did the decree technically break the Thirty Year Peace?",
+      "options": [
+        "No",
+        "Yes, implicitly",
+        "Only according to Sparta",
+        "Yes, explicitly"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How does Thucydides initially treat the Megarian Decree in his narrative?",
+      "options": [
+        "As a Persian plot",
+        "As unimportant",
+        "Only mentioning it briefly",
+        "As the main cause of war"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What later claim does Thucydides make about the decree?",
+      "options": [
+        "It had no effect",
+        "It angered Persia",
+        "Revoking it might have avoided war",
+        "It strengthened peace"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "According to Plutarch, what incident led to the decree?",
+      "options": [
+        "A Megarian invasion",
+        "Desecration of a temple in Athens",
+        "A trade dispute",
+        "The killing of an Athenian envoy"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What offence did Plutarch say the Megarians committed?",
+      "options": [
+        "Refusing tribute",
+        "Profaning sacred land",
+        "Breaking an alliance",
+        "Attacking Athenian allies"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why does Plutarch suggest Pericles refused to revoke the decree?",
+      "options": [
+        "Personal political pressure and scandals",
+        "Advice from the oracle",
+        "Fear of Sparta",
+        "Economic necessity"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which individuals’ trials does Plutarch link to Pericles’ actions?",
+      "options": [
+        "Cleon and Nicias",
+        "Ephialtes and Aristeides",
+        "Aspasia and Pheidias",
+        "Cimon and Themistocles"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which comic playwright mocked the causes of the war?",
+      "options": [
+        "Aristophanes",
+        "Sophocles",
+        "Menander",
+        "Euripides"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "In Aristophanes’ Acharnians, what is humorously blamed for the war?",
+      "options": [
+        "Naval rivalry",
+        "Religious disputes",
+        "Grain shortages",
+        "Theft of prostitutes"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What role does Aspasia play in Aristophanes’ account?",
+      "options": [
+        "Madame for Megarian prostitutes",
+        "Messenger",
+        "Politician",
+        "Priestess"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What alternative motive for the decree is suggested by historians?",
+      "options": [
+        "Desire to control Megara economically",
+        "Religious reform",
+        "Fear of Persia",
+        "Pressure from allies"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How might the decree have affected Megara if enforced long-term?",
+      "options": [
+        "Strengthened economy",
+        "Starved Megara into submission",
+        "Forced alliance with Athens",
+        "Encouraged rebellion"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which other state complained of mistreatment by Athens at this time?",
+      "options": [
+        "Aegina",
+        "Lesbos",
+        "Potidaea",
+        "Corcyra"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What other conflict increased tensions with Corinth around this period?",
+      "options": [
+        "Battle of Sybota",
+        "Egyptian campaign",
+        "Revolt of Samos",
+        "Conflict in the Ambracian Gulf"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What is the wider significance of the Megarian Decree?",
+      "options": [
+        "It symbolised Athenian imperial pressure",
+        "It strengthened the Thirty Year Peace",
+        "It directly triggered the Peloponnesian War",
+        "It ended Persian involvement"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

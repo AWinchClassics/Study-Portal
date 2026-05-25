@@ -1,0 +1,257 @@
+{
+  "id": "31-brasidas-in-thrace-424-bce",
+  "title": "31. Brasidas in Thrace, 424 BCE",
+  "description": "Brasidas’ northern campaign and its serious challenge to Athenian power in Thrace during the Peloponnesian War.",
+  "questions": [
+    {
+      "question": "In which year did Brasidas campaign in Thrace?",
+      "options": [
+        "425 BCE",
+        "423 BCE",
+        "421 BCE",
+        "424 BCE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What position did Brasidas hold?",
+      "options": [
+        "Macedonian king",
+        "Spartan general",
+        "Athenian general",
+        "Spartan admiral"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How many hoplites did Brasidas lead to Thrace?",
+      "options": [
+        "1,000",
+        "1,200",
+        "1,700",
+        "2,000"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How many of Brasidas’ troops were neodamodeis?",
+      "options": [
+        "500",
+        "300",
+        "700",
+        "1,000"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who were the neodamodeis?",
+      "options": [
+        "Freed helots",
+        "Mercenaries",
+        "Allied hoplites",
+        "Perioikoi"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why did Sparta wish to send helots away from the Peloponnese?",
+      "options": [
+        "To save money",
+        "To assist allies",
+        "Fear of revolt after Pylos",
+        "To strengthen the navy"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which Macedonian king was involved with Brasidas’ campaign?",
+      "options": [
+        "Alexander I",
+        "Philip II",
+        "Perdiccas",
+        "Amyntas"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Brasidas treat King Perdiccas’ interests?",
+      "options": [
+        "He fully supported him",
+        "He refused to be used as a pawn",
+        "He ignored him",
+        "He attacked him"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What method did Brasidas use to win over Acanthus?",
+      "options": [
+        "Bribery",
+        "Force",
+        "Religious appeal",
+        "Threatening diplomacy"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which city was Brasidas’ main objective in Thrace?",
+      "options": [
+        "Stagirus",
+        "Acanthus",
+        "Torone",
+        "Amphipolis"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Brasidas persuade Amphipolis to surrender?",
+      "options": [
+        "By siege",
+        "By force",
+        "By promising autonomy",
+        "By bribing leaders"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who attempted to reach Amphipolis to defend it?",
+      "options": [
+        "Nicias",
+        "Cleon",
+        "Thucydides",
+        "Demosthenes"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened to Thucydides after Amphipolis fell?",
+      "options": [
+        "He resigned",
+        "He was exiled",
+        "He was promoted",
+        "He was executed"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which other cities did Brasidas capture?",
+      "options": [
+        "Chios and Lesbos",
+        "Stagirus and Torone",
+        "Megara and Nisaea",
+        "Corcyra and Zacynthus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why was Brasidas’ treatment of cities appealing?",
+      "options": [
+        "He reduced tribute",
+        "He allowed autonomy",
+        "He removed garrisons",
+        "He abolished democracy"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did the fall of Amphipolis alarm Athens?",
+      "options": [
+        "It was religiously important",
+        "It was economically vital",
+        "It was near Sparta",
+        "It threatened food supply"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Athens respond to Brasidas’ successes?",
+      "options": [
+        "They reinforced many allied cities",
+        "They ignored them",
+        "They sued for peace",
+        "They recalled Cleon"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What did Brasidas request from Sparta after his successes?",
+      "options": [
+        "Peace negotiations",
+        "Reinforcements",
+        "Naval command",
+        "More hoplites"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What did Brasidas begin building when reinforcements were not sent?",
+      "options": [
+        "Walls",
+        "Forts",
+        "Triremes",
+        "Siege engines"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What wider strategic purpose did Sparta see in Brasidas’ campaign?",
+      "options": [
+        "Ending the war quickly",
+        "Opening a new theatre of war",
+        "Invading Persia",
+        "Protecting Corinth"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "According to Aristophanes, what was the situation among Athenian allies in the region?",
+      "options": [
+        "They were impoverished",
+        "They were ready to revolt",
+        "They were loyal",
+        "They were neutral"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does Brasidas’ campaign show about Spartan strategy?",
+      "options": [
+        "Purely defensive",
+        "Rigid and traditional",
+        "Naval-focused",
+        "More flexible and innovative"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which source records Brasidas’ diplomacy at Acanthus?",
+      "options": [
+        "Xenophon",
+        "Plutarch",
+        "Herodotus",
+        "Thucydides"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which source mentions Athenian allies’ readiness to revolt?",
+      "options": [
+        "Thucydides",
+        "Plutarch",
+        "Diodorus",
+        "Aristophanes"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What is the overall significance of Brasidas’ campaign in Thrace?",
+      "options": [
+        "It restored Spartan dominance everywhere",
+        "It ended Athenian empire",
+        "It seriously threatened Athenian control in the north",
+        "It led directly to peace"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

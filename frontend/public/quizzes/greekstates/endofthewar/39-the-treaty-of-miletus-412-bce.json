@@ -1,0 +1,257 @@
+{
+  "id": "39-the-treaty-of-miletus-412-bce",
+  "title": "39. The Treaty of Miletus, c. 412 BCE",
+  "description": "The first formal alliance between Sparta and Persia, marking the internationalisation of the Peloponnesian War and a reversal of earlier Greek victories.",
+  "questions": [
+    {
+      "question": "In which year was the Treaty of Miletus agreed?",
+      "options": [
+        "413 BCE",
+        "415 BCE",
+        "412 BCE",
+        "411 BCE"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which two Persian satraps were involved in negotiations with Sparta?",
+      "options": [
+        "Darius and Xerxes",
+        "Tissaphernes and Pharnabazus",
+        "Artaxerxes and Cyrus",
+        "Cambyses and Cyrus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which historian records the background to the treaty negotiations?",
+      "options": [
+        "Herodotus",
+        "Plutarch",
+        "Thucydides",
+        "Xenophon"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which Greek city was the first major ally to revolt from Athens in this phase?",
+      "options": [
+        "Samos",
+        "Euboea",
+        "Lesbos",
+        "Chios"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which individual accompanied the Peloponnesian fleet and encouraged revolts?",
+      "options": [
+        "Brasidas",
+        "Nicias",
+        "Alcibiades",
+        "Gylippus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the main strategic shift after the Treaty of Miletus?",
+      "options": [
+        "War fought largely at sea",
+        "Immediate peace talks",
+        "Focus on land warfare",
+        "War concentrated in Sicily"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What did the treaty grant to the Persian king?",
+      "options": [
+        "Spartan tribute",
+        "Ownership of former ancestral territories",
+        "Only military support",
+        "Control of mainland Greece"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happened to tribute previously paid to Athens?",
+      "options": [
+        "It was abolished",
+        "It went to the Persian king",
+        "It went to Sparta",
+        "It was shared equally"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the most controversial clause of the treaty?",
+      "options": [
+        "Surrender of Asiatic Greek cities",
+        "Mutual enemies clause",
+        "Naval cooperation clause",
+        "Joint warfare clause"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was this clause historically significant?",
+      "options": [
+        "It strengthened Athens",
+        "It reversed the achievements of the Persian Wars",
+        "It ended democracy",
+        "It protected neutral states"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How were revolts from Persia or Sparta to be treated?",
+      "options": [
+        "As mutual enemies",
+        "As allies",
+        "Negotiated",
+        "Ignored"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How many versions of the treaty existed?",
+      "options": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What problem existed with the first two drafts?",
+      "options": [
+        "They ignored Athens",
+        "They lacked signatures",
+        "They excluded Sparta",
+        "They overclaimed Persian ancestral lands"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What did the final version restrict Persian claims to?",
+      "options": [
+        "All Greek lands",
+        "Mainland Greece",
+        "Naval bases",
+        "Taxes of Asiatic Greeks only"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who was to finance the Peloponnesian fleet under the final agreement?",
+      "options": [
+        "Pharnabazus",
+        "Tissaphernes",
+        "Sparta",
+        "Athens"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What key military resource did Persian money provide?",
+      "options": [
+        "Hoplites",
+        "Rowers’ pay",
+        "Siege equipment",
+        "Ships"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What tactic did Tissaphernes use throughout this period?",
+      "options": [
+        "Full commitment to Sparta",
+        "Delaying payments to weaken both sides",
+        "Immediate naval engagement",
+        "Supporting Athens openly"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who influenced Tissaphernes’ policy of delay?",
+      "options": [
+        "Pharnabazus",
+        "Gylippus",
+        "Nicias",
+        "Alcibiades"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What happened to the Phoenician fleet promised by Persia?",
+      "options": [
+        "It defeated Athens",
+        "It was never fully deployed",
+        "It arrived immediately",
+        "It replaced Spartan ships"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where did Athens establish its main naval base in response?",
+      "options": [
+        "Piraeus",
+        "Lesbos",
+        "Chios",
+        "Samos"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What political change occurred in Samos?",
+      "options": [
+        "Spartan garrison placed",
+        "Tyranny installed",
+        "Persian control imposed",
+        "Democracy restored"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which territories did Athens manage to recover?",
+      "options": [
+        "All Ionian cities",
+        "Chios only",
+        "Ephesus and Miletus",
+        "Lesbos, Teos, Clazomenae"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was Athens unable to fully recapture?",
+      "options": [
+        "Clazomenae",
+        "Lesbos",
+        "Chios",
+        "Teos"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does the Treaty of Miletus illustrate about the war’s final phase?",
+      "options": [
+        "Shift to ideological conflict",
+        "Return to hoplite warfare",
+        "Decline of Persia",
+        "Internationalisation of the war"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What is the overall significance of the Treaty of Miletus?",
+      "options": [
+        "It reversed earlier Greek victories over Persia",
+        "It restored Greek unity",
+        "It secured Athenian empire",
+        "It ended the war"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "id": "06-ager-publicus",
+  "title": "06. Ager Publicus",
+  "description": "An examination of Roman public land, its acquisition through conquest, exploitation by elites, and its role in widening social and economic inequality.",
+  "questions": [
+    {
+      "question": "What does the term ager publicus refer to in Roman history?",
+      "options": [
+        "Land owned by temples",
+        "Public land owned by the Roman state",
+        "Land rented by tenants",
+        "Privately owned farmland"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How was ager publicus most commonly acquired by Rome?",
+      "options": [
+        "Conquest of enemies",
+        "Inheritance",
+        "Purchase from allies",
+        "Confiscation from citizens"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How could ager publicus be used by the Roman state?",
+      "options": [
+        "Only for senators",
+        "Only for temples",
+        "For colonies or distribution to individuals",
+        "Only for the army"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What term described a person who held ager publicus?",
+      "options": [
+        "Patronus",
+        "Dominus",
+        "Possessor",
+        "Colonus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What tendency developed once families acquired ager publicus?",
+      "options": [
+        "They divided it equally",
+        "They returned it regularly",
+        "They sold it back to the state",
+        "They tended to retain it permanently"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What law was passed in 367 BCE regarding ager publicus?",
+      "options": [
+        "A law redistributing land annually",
+        "A law banning private ownership",
+        "A law taxing land heavily",
+        "A law limiting land ownership"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was the maximum amount of ager publicus one person could legally hold?",
+      "options": [
+        "500 iugera",
+        "100 iugera",
+        "300 iugera",
+        "1,000 iugera"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Approximately how many acres did 500 iugera represent?",
+      "options": [
+        "250 acres",
+        "150 acres",
+        "500 acres",
+        "325 acres"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did wealthy Romans often ignore the legal limit in the late Republic?",
+      "options": [
+        "By leasing land temporarily",
+        "By seizing land by force",
+        "By bribing magistrates only",
+        "By buying land illegally from others"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What were the large estates accumulated by elites called?",
+      "options": [
+        "Villae",
+        "Fundus",
+        "Latifundia",
+        "Coloniae"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How were latifundia primarily worked?",
+      "options": [
+        "By citizens",
+        "By seasonal labour",
+        "By tenant farmers",
+        "By slaves"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why did latifundia focus on olives and grapes rather than grain?",
+      "options": [
+        "They were easier to grow",
+        "The soil was unsuitable",
+        "Grain was heavily taxed",
+        "Imported grain was cheaper"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What type of labour did olive and grape farming require?",
+      "options": [
+        "Skilled artisan labour",
+        "Minimal labour",
+        "Labour-intensive work",
+        "Military labour"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What effect did latifundia have on poorer farmers?",
+      "options": [
+        "They benefited from trade",
+        "They were priced out of farming",
+        "They joined the Senate",
+        "They became wealthier"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What demographic change resulted from the growth of latifundia?",
+      "options": [
+        "Increased rural population",
+        "Movement of poor farmers away from the land",
+        "Decline in slavery",
+        "Rural prosperity"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What broader social problem did ager publicus contribute to?",
+      "options": [
+        "Military weakness",
+        "Religious decline",
+        "Land inequality",
+        "Urban overcrowding"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who benefited most from the accumulation of ager publicus?",
+      "options": [
+        "The wealthy elite",
+        "Smallholders",
+        "The urban poor",
+        "Provincial governors"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What aspect of the ager publicus narrative has been questioned by historians?",
+      "options": [
+        "Its military role",
+        "Its existence",
+        "The legal limits",
+        "The extent of land crisis impact"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which historian is cited in the PPT regarding ager publicus?",
+      "options": [
+        "Livy",
+        "Polybius",
+        "Tacitus",
+        "Bradley"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What crops were commonly produced on latifundia?",
+      "options": [
+        "Barley and oats",
+        "Vegetables",
+        "Wheat only",
+        "Olives and grapes"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "id": "09-marius",
+  "title": "09. Marius",
+  "description": "A study of Gaius Marius, his military reforms, repeated consulships, and his long-term impact on the Roman Republic.",
+  "questions": [
+    {
+      "question": "In which years did Gaius Marius live?",
+      "options": [
+        "200–120 BCE",
+        "180–100 BCE",
+        "157–86 BCE",
+        "133–44 BCE"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was significant about Marius’ background?",
+      "options": [
+        "He was an equestrian",
+        "He was patrician",
+        "He was a novus homo",
+        "He was born in Rome"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In which year was Marius first elected consul?",
+      "options": [
+        "104 BCE",
+        "114 BCE",
+        "107 BCE",
+        "100 BCE"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How many times was Marius elected consul?",
+      "options": [
+        "Five",
+        "Seven",
+        "Eight",
+        "Six"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which war gave Marius his first major military command?",
+      "options": [
+        "Jugurthine War",
+        "Social War",
+        "Civil War",
+        "Gallic War"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Marius obtain command in the Jugurthine War?",
+      "options": [
+        "Law passed by the comitia plebis tributa",
+        "Popular vote of soldiers",
+        "Appointment by the Senate",
+        "Inheritance from Metellus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Whose command did Marius replace in the Jugurthine War?",
+      "options": [
+        "Sulla",
+        "Pompey",
+        "Crassus",
+        "Metellus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What major change did Marius make to army recruitment?",
+      "options": [
+        "Raised property requirements",
+        "Removed property qualifications",
+        "Introduced conscription",
+        "Limited service to citizens"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was one intended benefit of removing the property requirement?",
+      "options": [
+        "Limit military ambition",
+        "Reduce costs",
+        "Increase army size",
+        "Strengthen Senate control"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What reward was promised to soldiers after service?",
+      "options": [
+        "Citizenship",
+        "Money only",
+        "Land",
+        "Senatorial rank"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What unintended consequence resulted from Marian reforms?",
+      "options": [
+        "Loyalty to generals over the state",
+        "Decline in discipline",
+        "Weaker armies",
+        "End of conscription"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which threat led to Marius’ repeated consulships in the early 100s BCE?",
+      "options": [
+        "Civil war",
+        "Social War",
+        "Invasions by Germanic tribes",
+        "Slave revolts"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which political ally worked with Marius during his sixth consulship?",
+      "options": [
+        "Pompey",
+        "Sulla",
+        "Saturninus",
+        "Drusus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What policy did Saturninus promote to benefit Marius’ veterans?",
+      "options": [
+        "Land distribution",
+        "Citizenship grants",
+        "Debt cancellation",
+        "Tax exemptions"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Saturninus push through his legislation?",
+      "options": [
+        "Senatorial debate",
+        "Army intervention",
+        "Use of street gangs",
+        "Legal reform"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What decree was passed to deal with Saturninus’ violence?",
+      "options": [
+        "Lex Agraria",
+        "Lex Julia",
+        "Senatus consultum ultimum",
+        "Lex Hortensia"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened to Saturninus after his arrest?",
+      "options": [
+        "Exiled",
+        "Killed by a mob",
+        "Executed by court",
+        "Released"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What did Marius do shortly after the Saturninus affair?",
+      "options": [
+        "Ran for consul again",
+        "Joined the Senate",
+        "Retired from politics",
+        "Went into exile"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "With whom did Marius later come into conflict?",
+      "options": [
+        "Sulla",
+        "Crassus",
+        "Caesar",
+        "Pompey"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What role did Marius play in the Social War?",
+      "options": [
+        "Ally commander",
+        "Political mediator",
+        "Commander of Roman forces",
+        "No involvement"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How was Marius related to Julius Caesar?",
+      "options": [
+        "Grandfather",
+        "Uncle",
+        "Cousin",
+        "Father"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was Marius’ final consulship marked by?",
+      "options": [
+        "Civil war turmoil",
+        "Religious reform",
+        "Peace",
+        "Alliance with Sulla"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "In which year did Marius die?",
+      "options": [
+        "90 BCE",
+        "82 BCE",
+        "88 BCE",
+        "86 BCE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What long-term impact did Marius have on the Republic?",
+      "options": [
+        "Reduced military ambition",
+        "Strengthened senatorial rule",
+        "Professionalised the army",
+        "Ended elections"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why is Marius considered a turning point figure?",
+      "options": [
+        "He abolished slavery",
+        "He ended the Republic",
+        "He reformed law courts",
+        "He linked military power to personal ambition"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

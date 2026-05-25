@@ -1,0 +1,207 @@
+{
+  "id": "08-the-gracchi",
+  "title": "08. The Gracchi",
+  "description": "A study of Tiberius and Gaius Gracchus, their reforms, and the political violence their actions triggered in the late Roman Republic.",
+  "questions": [
+    {
+      "question": "Who were the Gracchi brothers the sons of?",
+      "options": [
+        "Lucius Cornelius Sulla",
+        "Scipio Africanus",
+        "Tiberius Sempronius Gracchus",
+        "Gaius Marius"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What political office did both Gracchi brothers hold?",
+      "options": [
+        "Praetor",
+        "Aedile",
+        "Consul",
+        "Tribune of the Plebs"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What major issue did the Gracchi attempt to address?",
+      "options": [
+        "Religious reform",
+        "Provincial corruption",
+        "Unequal distribution of ager publicus",
+        "Judicial bribery"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What law did Tiberius Gracchus propose in 133 BCE?",
+      "options": [
+        "Lex Agraria",
+        "Lex Hortensia",
+        "Lex Julia",
+        "Lex Sempronia"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What limit on ager publicus did the Lex Agraria reaffirm?",
+      "options": [
+        "500 iugera",
+        "300 iugera",
+        "1,000 iugera",
+        "400 iugera"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was land reform linked to army recruitment?",
+      "options": [
+        "Property ownership was required for service",
+        "Land funded the army",
+        "Soldiers needed wages",
+        "All soldiers were farmers"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Tiberius bypass the Senate to pass his law?",
+      "options": [
+        "By using the Comitia Plebes Tributa directly",
+        "By bribery",
+        "By appealing to allies",
+        "By military force"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What controversial action did Tiberius take against Octavius?",
+      "options": [
+        "Imprisonment",
+        "Deposition from office",
+        "Execution",
+        "Exile"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How was Tiberius Gracchus killed?",
+      "options": [
+        "Executed by a court",
+        "Beaten to death by senators",
+        "Poisoned",
+        "Killed in battle"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What accusation was made against Tiberius near the end of his career?",
+      "options": [
+        "Cowardice",
+        "Corruption",
+        "Trying to become king",
+        "Treason"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which reform did Gaius Gracchus introduce to help the urban poor?",
+      "options": [
+        "Land redistribution",
+        "Citizenship grants",
+        "Tax relief",
+        "State-subsidised grain supply"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What change did Gaius make to jury composition?",
+      "options": [
+        "Removed senators",
+        "Included plebeians",
+        "Included allies",
+        "Included equites"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What body passed the senatus consultum ultimum against Gaius?",
+      "options": [
+        "The People",
+        "The Army",
+        "The Courts",
+        "The Senate"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which tribune vetoed Gaius’ proposals on allies?",
+      "options": [
+        "Scipio Nasica",
+        "Catiline",
+        "Octavius",
+        "Livius Drusus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why were Gaius’ reforms unpopular with multiple groups?",
+      "options": [
+        "They were unclear",
+        "They were poorly enforced",
+        "They threatened existing privileges",
+        "They were too radical"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened after Gaius failed to be elected tribune for a third time?",
+      "options": [
+        "He was exiled",
+        "His laws were repealed immediately",
+        "He retired",
+        "Violence escalated"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Gaius Gracchus die?",
+      "options": [
+        "Killed by supporters",
+        "Suicide",
+        "Killed after Senate action",
+        "Natural causes"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What reform of Tiberius remained in force after his death?",
+      "options": [
+        "Citizenship law",
+        "Grain law",
+        "Lex Agraria",
+        "Jury reform"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What long-term impact did the death of Tiberius have on Roman politics?",
+      "options": [
+        "Military dictatorship",
+        "Normalisation of political violence",
+        "End of reform",
+        "Strengthening of the Senate"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What best summarises the significance of the Gracchi?",
+      "options": [
+        "They weakened the Republic accidentally",
+        "They solved Rome’s problems",
+        "They highlighted deep structural issues",
+        "They created the Empire"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "id": "18-tiberius-early-career",
+  "title": "18. Tiberius’ Early Career",
+  "description": "Tiberius’ accession and early challenges, focusing on succession, mutinies, and differing ancient interpretations.",
+  "questions": [
+    {
+      "question": "How is Tiberius initially described in relation to Augustus?",
+      "options": [
+        "As a loyal and efficient lieutenant",
+        "As a rival claimant",
+        "As a reluctant outsider",
+        "As an inexperienced novice"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was Tiberius not Augustus’ first choice as successor?",
+      "options": [
+        "He was too young",
+        "He lacked military experience",
+        "He refused adoption",
+        "Other potential heirs were alive"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which groups swore allegiance to Tiberius after Augustus’ death?",
+      "options": [
+        "Only the Senate",
+        "The Senate, army, and people",
+        "The consuls, Senate, knights, army, and people",
+        "The Senate and the army only"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which sources provide differing accounts of Tiberius’ accession?",
+      "options": [
+        "Tacitus and Suetonius",
+        "Livy and Cassius Dio",
+        "Virgil and Ovid",
+        "Velleius and Pliny"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How does Tacitus interpret Tiberius’ reluctance before the Senate?",
+      "options": [
+        "As respect for Augustus",
+        "As genuine fear",
+        "As hypocrisy testing senators’ attitudes",
+        "As illness"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What genuine concern may have caused Tiberius’ hesitation?",
+      "options": [
+        "Fear of Germanicus",
+        "Opposition from the army",
+        "No fixed rule for succession",
+        "Lack of popular support"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why might Tiberius have followed Augustus’ example in his behaviour?",
+      "options": [
+        "To appear chosen rather than seize power",
+        "To delay reforms",
+        "To please the army",
+        "To weaken the Senate"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How old was Tiberius when he became princeps?",
+      "options": [
+        "55",
+        "50",
+        "45",
+        "60"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What promise did Tiberius imply he might make in the future?",
+      "options": [
+        "To retire when older",
+        "To conquer Germania",
+        "To appoint Germanicus",
+        "To abolish the principate"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the first crime of Tiberius’ reign according to Tacitus?",
+      "options": [
+        "Execution of senators",
+        "Mutiny in Pannonia",
+        "Murder of Agrippa Postumus",
+        "Exile of Germanicus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who was Agrippa Postumus?",
+      "options": [
+        "Son of Tiberius",
+        "Adopted grandson of Augustus",
+        "Governor of Syria",
+        "Praetorian prefect"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why is responsibility for Agrippa Postumus’ murder unclear?",
+      "options": [
+        "Records were destroyed",
+        "The Senate ordered it",
+        "It occurred abroad",
+        "Sources disagree on who gave the order"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Where did one of the early mutinies take place?",
+      "options": [
+        "Spain",
+        "Britain",
+        "Africa",
+        "Pannonia"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What grievances did soldiers raise according to Tacitus?",
+      "options": [
+        "Citizenship rights",
+        "Lack of commanders",
+        "Land distribution",
+        "Pay, service length, and conditions"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who led the mutiny in Pannonia?",
+      "options": [
+        "Plancus",
+        "Germanicus",
+        "Percennius",
+        "Drusus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who was sent to deal with the Pannonian mutiny?",
+      "options": [
+        "Germanicus",
+        "Tiberius himself",
+        "Drusus",
+        "Sejanus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What event helped Drusus restore discipline?",
+      "options": [
+        "Execution of Germanicus",
+        "A speech by Tiberius",
+        "Arrival of reinforcements",
+        "A lunar eclipse"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why was the mutiny in Lower Germany more dangerous?",
+      "options": [
+        "Poor leadership",
+        "Foreign invasion",
+        "Harsh punishments",
+        "Greater numbers of troops"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Germanicus respond when offered imperial power by the troops?",
+      "options": [
+        "He accepted",
+        "He threatened suicide",
+        "He delayed",
+        "He consulted the Senate"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does Tacitus ultimately portray Germanicus’ handling of the mutiny?",
+      "options": [
+        "As treasonous",
+        "As entirely ineffective",
+        "As loyal but flawed",
+        "As flawless"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

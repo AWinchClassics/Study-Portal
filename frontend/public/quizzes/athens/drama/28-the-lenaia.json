@@ -1,0 +1,167 @@
+{
+  "id": "28-the-lenaia",
+  "title": "28. The Lenaia",
+  "description": "The character, dramatic competitions, and religious significance of the Lenaia festival in classical Athens.",
+  "questions": [
+    {
+      "question": "The Lenaia was a festival held in honour of which god?",
+      "options": [
+        "Apollo",
+        "Athena",
+        "Dionysus",
+        "Zeus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Compared with the City Dionysia, the Lenaia is best described as:",
+      "options": [
+        "Larger in scale",
+        "More politically important",
+        "Better documented",
+        "Less prestigious"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which type of drama was emphasised more strongly at the Lenaia?",
+      "options": [
+        "Comedy",
+        "Dithyramb",
+        "Satyr plays",
+        "Tragedy"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How were tragedies presented at the Lenaia?",
+      "options": [
+        "In trilogies with satyr plays",
+        "In pairs by playwrights",
+        "Not at all",
+        "Individually"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Is there evidence for satyr plays at the Lenaia?",
+      "options": [
+        "Yes, occasionally",
+        "They replaced tragedies",
+        "Yes, regularly",
+        "No clear evidence"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How many tragedians seem to have competed at the Lenaia?",
+      "options": [
+        "Four",
+        "Five",
+        "Two or three",
+        "One"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How many comedies were typically performed at the Lenaia?",
+      "options": [
+        "Ten",
+        "Only three",
+        "Between three and five",
+        "Always five"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "During Aristophanes’ career, how many comedies were performed at the Lenaia?",
+      "options": [
+        "One",
+        "Five",
+        "Three",
+        "Ten"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What impact did the Peloponnesian War have on the Lenaia?",
+      "options": [
+        "It cancelled the festival",
+        "It reduced comedy numbers",
+        "It added satyr plays",
+        "It increased the number of plays"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which group may have been allowed to act as choregoi at the Lenaia?",
+      "options": [
+        "Women",
+        "Foreign kings",
+        "Metics",
+        "Slaves"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does this suggest about the Lenaia’s status?",
+      "options": [
+        "It replaced the City Dionysia",
+        "It was more exclusive",
+        "It was less prestigious than the City Dionysia",
+        "It was restricted to citizens"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What religious elements did the Lenaia include?",
+      "options": [
+        "Procession and sacrifices",
+        "Athletic games",
+        "Oracle consultations",
+        "Only dramatic contests"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The name ‘Lenaia’ has traditionally been linked to which word?",
+      "options": [
+        "Lithos (stone)",
+        "Lenos (wine-press)",
+        "Laos (people)",
+        "Logos (speech)"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why is the link to lenos considered unlikely?",
+      "options": [
+        "The festival took place at the wrong time of year",
+        "It honoured Athena",
+        "No wine was produced in Athens",
+        "Wine was banned"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What alternative origin for the name Lenaia has been suggested?",
+      "options": [
+        "Leon (lion)",
+        "Lenaion (temple)",
+        "Lenai (maenads)",
+        "Lenos (vat)"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who were the lenai?",
+      "options": [
+        "Priestesses of Athena",
+        "Tragic playwrights",
+        "Comic actors",
+        "Worshippers of Dionysus"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

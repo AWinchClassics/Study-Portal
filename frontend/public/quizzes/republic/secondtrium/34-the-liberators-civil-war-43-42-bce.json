@@ -1,0 +1,257 @@
+{
+  "id": "34-the-liberators-civil-war-43-42-bce",
+  "title": "34. The Liberators’ Civil War, 43–42 BCE",
+  "description": "An account of the conflict between the Triumvirs and Caesar’s assassins, culminating in the defeat of Brutus and Cassius at Philippi.",
+  "questions": [
+    {
+      "question": "Who were known as the ‘Liberators’ after Caesar’s assassination?",
+      "options": [
+        "Pompey’s sons",
+        "Antony and Octavian",
+        "Cicero and Lepidus",
+        "Brutus and Cassius"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Where did Brutus and Cassius gather their forces after fleeing Rome?",
+      "options": [
+        "Italy",
+        "The East",
+        "Gaul",
+        "Africa"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Approximately how many legions did Brutus and Cassius command?",
+      "options": [
+        "10",
+        "19",
+        "15",
+        "28"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where did the Liberators confront Antony and Octavian?",
+      "options": [
+        "Athens",
+        "Rome",
+        "Philippi in Macedonia",
+        "Alexandria"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How many legions did Antony and Octavian have at Philippi?",
+      "options": [
+        "22",
+        "19",
+        "28",
+        "25"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In what year did the Battle of Philippi take place?",
+      "options": [
+        "40 BCE",
+        "42 BCE",
+        "43 BCE",
+        "41 BCE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How many major engagements were fought at Philippi?",
+      "options": [
+        "Two",
+        "Three",
+        "One",
+        "Four"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the outcome of the battles at Philippi?",
+      "options": [
+        "Negotiated peace",
+        "Triumvir defeat",
+        "Stalemate",
+        "Republican defeat"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What happened to Brutus after his defeat?",
+      "options": [
+        "Committed suicide",
+        "Executed",
+        "Captured",
+        "Exiled"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What happened to Cassius after the battle?",
+      "options": [
+        "Committed suicide",
+        "Captured",
+        "Executed",
+        "Fled east"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who took most of the credit for victory at Philippi?",
+      "options": [
+        "Octavian",
+        "Antony",
+        "Sextus Pompeius",
+        "Lepidus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did Octavian play a limited role at Philippi?",
+      "options": [
+        "He arrived late",
+        "Political caution",
+        "Lack of troops",
+        "He was ill"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What did the defeat of the Liberators represent?",
+      "options": [
+        "Restoration of peace",
+        "Beginning of Empire",
+        "End of the Triumvirate",
+        "End of the Republic’s cause"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What happened to surviving Republicans after Philippi?",
+      "options": [
+        "Returned to Rome",
+        "Joined Sextus Pompeius",
+        "Executed",
+        "Joined Antony"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Octavian portray the outcome of the war?",
+      "options": [
+        "As Republican victory",
+        "As avenging Caesar",
+        "As divine punishment",
+        "As a tragedy"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What agreement followed the defeat of Brutus and Cassius?",
+      "options": [
+        "Second Settlement",
+        "Treaty of Misenum",
+        "Renewed Triumviral settlement",
+        "Peace of Brundisium"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which territories were assigned to Antony after Philippi?",
+      "options": [
+        "Spain and Africa",
+        "Sicily",
+        "Italy",
+        "All Gaul except Cisalpine and the East"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What happened to Cisalpine Gaul after Philippi?",
+      "options": [
+        "Granted independence",
+        "Given to Octavian",
+        "Made part of Italy",
+        "Given to Antony"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which areas came under Octavian’s control?",
+      "options": [
+        "Asia and Syria",
+        "Gaul and Macedonia",
+        "Spain, Sardinia, and Africa",
+        "Italy only"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Against whom was Octavian expected to campaign next?",
+      "options": [
+        "Antony",
+        "Brutus’ supporters",
+        "Sextus Pompeius",
+        "Lepidus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who had seized control of Sicily?",
+      "options": [
+        "Lepidus",
+        "Antony",
+        "Sextus Pompeius",
+        "Octavian"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What role did Lepidus play after Philippi?",
+      "options": [
+        "Marginalised",
+        "Military leader",
+        "Executed",
+        "Dominant partner"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was Lepidus sidelined by the other Triumvirs?",
+      "options": [
+        "Suspected intrigue with Sextus Pompeius",
+        "Military failure",
+        "Illness",
+        "Popular opposition"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which province was later given to Lepidus?",
+      "options": [
+        "Spain",
+        "Gaul",
+        "Africa",
+        "Sicily"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Overall, the Liberators’ Civil War resulted in:",
+      "options": [
+        "Triumviral dominance",
+        "Republican restoration",
+        "Power-sharing compromise",
+        "Immediate monarchy"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

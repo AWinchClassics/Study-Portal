@@ -1,0 +1,247 @@
+{
+  "id": "24-challenges-to-tiberius",
+  "title": "24. Challenges to Tiberius",
+  "description": "The internal and external challenges faced by Tiberius, including Germanicus, Sejanus, army mutinies, and provincial revolts.",
+  "questions": [
+    {
+      "question": "Why was Germanicus considered a potential challenge to Tiberius?",
+      "options": [
+        "He openly opposed Tiberius",
+        "He held tribunician power",
+        "He controlled Rome",
+        "He was popular with the army and people"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Germanicus respond when offered imperial power by his troops?",
+      "options": [
+        "He consulted the Senate",
+        "He ignored the offer",
+        "He accepted",
+        "He showed loyalty and refused"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which action by Germanicus went against Augustus’ laid-down policy?",
+      "options": [
+        "Reforming taxation",
+        "Visiting Rome",
+        "Campaigning in Africa",
+        "Campaigns in Germany"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which action in the East suggested Germanicus may have overstepped his authority?",
+      "options": [
+        "Minting coins",
+        "Executing Piso",
+        "Visiting Egypt without permission",
+        "Raising legions"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was Germanicus’ entry into Egypt particularly serious?",
+      "options": [
+        "Egypt was under direct imperial control",
+        "It angered the Senate",
+        "It disrupted grain supply",
+        "It violated a treaty"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What economic action did Germanicus take in the East?",
+      "options": [
+        "Distributed land",
+        "Released grain to lower prices",
+        "Cancelled debts",
+        "Raised taxes"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How might Tiberius’ reaction to Germanicus’ death be interpreted?",
+      "options": [
+        "As grief only",
+        "As relief at the removal of a rival",
+        "As public outrage",
+        "As indifference"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How is Sejanus initially presented in relation to Tiberius?",
+      "options": [
+        "As a senator",
+        "As an open rival",
+        "As a provincial governor",
+        "As a loyal lieutenant"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What ambition did Sejanus eventually develop?",
+      "options": [
+        "To conquer Germania",
+        "To abolish the principate",
+        "To enter the succession",
+        "To join the Senate"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Sejanus gain control in Rome?",
+      "options": [
+        "By military conquest",
+        "By election as consul",
+        "By senatorial decree",
+        "By convincing Tiberius to retire"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why does Sejanus’ downfall suggest a change in his relationship with Tiberius?",
+      "options": [
+        "Germanicus returned",
+        "The Senate rebelled",
+        "He lost military support",
+        "Tiberius recognised him as a threat"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why were the early provincial mutinies a concern for Tiberius?",
+      "options": [
+        "They spread to Rome",
+        "They were led by senators",
+        "They showed potential instability",
+        "They opposed his rule directly"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What did the mutinies demonstrate about the army’s power?",
+      "options": [
+        "Its hostility to the Senate",
+        "Its ability to influence succession",
+        "Its loyalty to Augustus",
+        "Its weakness"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who helped Tiberius suppress the early mutinies?",
+      "options": [
+        "Germanicus and Drusus",
+        "Macro and Blaesus",
+        "Sejanus and Piso",
+        "Agrippina and Livia"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who was Libo?",
+      "options": [
+        "A praetorian prefect",
+        "A provincial governor",
+        "A Germanic leader",
+        "A senator accused of plotting"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Where did the revolt of Tacfarinas take place?",
+      "options": [
+        "Gaul",
+        "Africa",
+        "Illyricum",
+        "Germania"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How long did Tacfarinas’ revolt last?",
+      "options": [
+        "20–30 CE",
+        "15–24 CE",
+        "5–10 CE",
+        "10–15 CE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did Camillus initially struggle against Tacfarinas?",
+      "options": [
+        "Lack of troops",
+        "He was outnumbered",
+        "Senatorial interference",
+        "Poor leadership"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What tactic did Tacfarinas use after early defeats?",
+      "options": [
+        "Naval warfare",
+        "Diplomacy",
+        "Open pitched battles",
+        "Guerrilla warfare"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why was Tiberius angered by Tacfarinas’ peace offer?",
+      "options": [
+        "It involved money",
+        "It bypassed the Senate",
+        "It threatened Rome",
+        "It treated Tacfarinas like a head of state"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who was appointed to deal with Tacfarinas in 21 CE?",
+      "options": [
+        "Camillus",
+        "Blaesus",
+        "Dolabella",
+        "Apronius"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What special authority was Blaesus given?",
+      "options": [
+        "Tribunician power",
+        "Command of all legions",
+        "Right to negotiate treaties",
+        "Amnesty to rebels except Tacfarinas"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why did Tiberius believe the war was over in 22 CE?",
+      "options": [
+        "The rebels surrendered",
+        "Peace was agreed",
+        "Tacfarinas was killed",
+        "Tacfarinas’ brother was captured"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Tacfarinas ultimately die?",
+      "options": [
+        "Poisoned",
+        "Killed in battle",
+        "Committed suicide by impalement",
+        "Captured and executed"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

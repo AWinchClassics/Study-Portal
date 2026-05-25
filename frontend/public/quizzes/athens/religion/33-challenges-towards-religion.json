@@ -1,0 +1,207 @@
+{
+  "id": "33-challenges-towards-religion",
+  "title": "33. Challenges towards Religion",
+  "description": "Intellectual, philosophical, and dramatic challenges to traditional religious belief in classical Athens.",
+  "questions": [
+    {
+      "question": "Which group most strongly contributed to questioning traditional religion in Athens?",
+      "options": [
+        "The Assembly",
+        "The Areopagus",
+        "Priests",
+        "The Sophists"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Around what date did Anaxagoras arrive in Athens?",
+      "options": [
+        "460 BCE",
+        "470 BCE",
+        "480 BCE",
+        "450 BCE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which leading Athenian was reportedly influenced by Anaxagoras?",
+      "options": [
+        "Cleon",
+        "Pericles",
+        "Alcibiades",
+        "Nicias"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What did Anaxagoras claim the sun actually was?",
+      "options": [
+        "A god",
+        "A red-hot stone",
+        "A divine fire",
+        "A star created by Zeus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "According to Anaxagoras, what principle ordered the universe?",
+      "options": [
+        "Fate",
+        "Nous (intelligent mind)",
+        "Logos",
+        "Tyche"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which Sophist claimed uncertainty over the existence of the gods?",
+      "options": [
+        "Prodicus",
+        "Protagoras",
+        "Gorgias",
+        "Hippias"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where did Protagoras reportedly read his controversial thesis?",
+      "options": [
+        "In the Agora",
+        "In Euripides’ house",
+        "At the Pnyx",
+        "At Delphi"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which historian largely avoids reference to the gods?",
+      "options": [
+        "Herodotus",
+        "Thucydides",
+        "Plutarch",
+        "Xenophon"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which speech notably contains no reference to religion?",
+      "options": [
+        "The Sicilian Debate",
+        "Pericles’ Funeral Oration",
+        "The Melian Dialogue",
+        "The Mytilenean Debate"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does Thucydides explain the plague at Athens?",
+      "options": [
+        "As divine punishment",
+        "Through scientific causes",
+        "As fate",
+        "As Apollo’s will"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Whose religious reaction does Thucydides criticise during the Sicilian Expedition?",
+      "options": [
+        "Nicias",
+        "Alcibiades",
+        "Cleon",
+        "Pericles"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What omen delayed Nicias’ withdrawal from Sicily?",
+      "options": [
+        "An earthquake",
+        "A sacrifice failure",
+        "A lunar eclipse",
+        "A thunderstorm"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In Aristophanes’ Clouds, what natural phenomena replace Zeus?",
+      "options": [
+        "The Sun and Moon",
+        "The Winds",
+        "Fire and Air",
+        "The Clouds"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who is persuaded to abandon traditional gods in Clouds?",
+      "options": [
+        "Socrates",
+        "Strepsiades",
+        "Pheidippides",
+        "Cleon"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which tragedian raises questions about divine justice in Hippolytus?",
+      "options": [
+        "Aristophanes",
+        "Aeschylus",
+        "Euripides",
+        "Sophocles"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which goddess is angered by Hippolytus’ neglect?",
+      "options": [
+        "Athena",
+        "Artemis",
+        "Hera",
+        "Aphrodite"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why is Artemis unable to save Hippolytus?",
+      "options": [
+        "She chooses not to",
+        "She cannot interfere with another god",
+        "She lacks power",
+        "She arrives too late"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What criticism of the gods does Euripides encourage the audience to consider?",
+      "options": [
+        "Their absence",
+        "Their cruelty and rivalry",
+        "Their justice",
+        "Their generosity"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why is Hippolytus’ punishment problematic?",
+      "options": [
+        "It benefits Athens",
+        "It restores order",
+        "His suffering is disproportionate",
+        "He committed no crime"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Overall, what difficulty does Euripides highlight about divine will?",
+      "options": [
+        "It is benevolent",
+        "It is unknowable",
+        "It is always just",
+        "It is conflicting and dangerous"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

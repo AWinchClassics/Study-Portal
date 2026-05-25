@@ -1,0 +1,207 @@
+{
+  "id": "05-persian-preparations",
+  "title": "05. Persian Preparations",
+  "description": "The planning, leadership changes, and logistical preparations for the Second Persian invasion of Greece.",
+  "questions": [
+    {
+      "question": "In which years did Persian preparations for a renewed invasion of Greece take place?",
+      "options": [
+        "499–493 BCE",
+        "500–490 BCE",
+        "490–480 BCE",
+        "485–475 BCE"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What did Darius I do immediately after the Battle of Marathon?",
+      "options": [
+        "Negotiate peace",
+        "Begin preparations for a new invasion",
+        "Attack Sparta",
+        "Abandon plans to invade Greece"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which source records Darius’ preparations after Marathon?",
+      "options": [
+        "Thucydides",
+        "Plutarch",
+        "Herodotus",
+        "Xenophon"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What internal problem delayed Persian plans after Marathon?",
+      "options": [
+        "A revolt in Babylon",
+        "A revolt in Egypt",
+        "Civil war in Media",
+        "A rebellion in Lydia"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What succession issue arose within the Persian Empire?",
+      "options": [
+        "Conflict between Darius’ sons",
+        "Dispute over Darius’ legitimacy",
+        "Refusal of Persian nobles to accept Xerxes",
+        "Greek intervention"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who intervened to support Xerxes’ claim to the throne?",
+      "options": [
+        "Mardonius",
+        "Megabyzus",
+        "Artaphernes",
+        "Demaratus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Where did Darius die before launching the invasion?",
+      "options": [
+        "In Babylon",
+        "On campaign in Egypt",
+        "In Persia",
+        "At Susa"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who succeeded Darius as Persian king?",
+      "options": [
+        "Cambyses",
+        "Xerxes",
+        "Mardonius",
+        "Artaxerxes"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "According to Herodotus, how did Xerxes initially feel about invading Greece?",
+      "options": [
+        "Eager",
+        "Uncertain and hesitant",
+        "Furious",
+        "Indifferent"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What persuaded Xerxes to proceed with the invasion?",
+      "options": [
+        "Advice and persuasion",
+        "Athenian provocation",
+        "Religious command",
+        "Economic need"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which major engineering project was completed at Mount Athos?",
+      "options": [
+        "A bridge",
+        "A fortress",
+        "A road",
+        "A canal"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why was the canal at Mount Athos significant?",
+      "options": [
+        "To avoid shipwrecks",
+        "To shorten the journey",
+        "To supply Athens",
+        "To intimidate Greece"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which river was bridged by Persian engineers during preparations?",
+      "options": [
+        "Halys",
+        "Strymon",
+        "Euphrates",
+        "Danube"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What logistical measure supported the Persian army’s advance?",
+      "options": [
+        "Use of mercenaries",
+        "Allied Greek fleets",
+        "Supply depots across Thrace",
+        "Local foraging only"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What waterway did Xerxes bridge to move his army into Europe?",
+      "options": [
+        "Hellespont",
+        "Strymon",
+        "Bosporus",
+        "Aegean Sea"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What demands did Xerxes send to Greek city-states?",
+      "options": [
+        "Earth and water",
+        "Hostages",
+        "Ships",
+        "Tribute"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which Greek states did NOT receive these demands?",
+      "options": [
+        "Athens and Sparta",
+        "Aegina and Delphi",
+        "Corinth and Megara",
+        "Thebes and Argos"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why were Athens and Sparta excluded from the demands?",
+      "options": [
+        "They were allied with Persia",
+        "They had already submitted",
+        "They were too powerful",
+        "They had killed Persian messengers"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What does Herodotus emphasise about Persian preparations?",
+      "options": [
+        "They were vast and carefully planned",
+        "They were rushed",
+        "They were poorly organised",
+        "They relied on Greek support"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the overall aim of these preparations?",
+      "options": [
+        "To secure Thrace",
+        "To punish Athens only",
+        "To defend Persia",
+        "To conquer all of Greece"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

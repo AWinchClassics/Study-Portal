@@ -1,0 +1,257 @@
+{
+  "id": "44-the-reasons-for-athens-defeat",
+  "title": "44. The Reasons for Athens’ Defeat",
+  "description": "An analysis of why Athens ultimately lost the Peloponnesian War, focusing on leadership failures, imperial overreach, and foreign intervention.",
+  "questions": [
+    {
+      "question": "Which historian provides the most influential contemporary explanation for Athens’ defeat?",
+      "options": [
+        "Plutarch",
+        "Thucydides",
+        "Herodotus",
+        "Xenophon"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "According to Thucydides (2.65), what was Athens’ greatest early loss?",
+      "options": [
+        "The empire",
+        "Its allies",
+        "Pericles’ leadership",
+        "The fleet"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Athenian strategy change after Pericles’ death?",
+      "options": [
+        "It focused on defence only",
+        "It followed Pericles’ plan closely",
+        "It became inconsistent and aggressive",
+        "It became more cautious"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which policy did Cleon abandon?",
+      "options": [
+        "Imperial tribute",
+        "Naval expansion",
+        "Democracy",
+        "Pericles’ defensive strategy"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which action by Cleon demonstrated his aggressive approach?",
+      "options": [
+        "Acceptance of peace at Pylos",
+        "Withdrawal from Sicily",
+        "Refusal of peace after Pylos",
+        "Moderation in the Mytilene debate"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What role did Nicias play in Athens’ defeat?",
+      "options": [
+        "He stabilised democracy",
+        "He promoted expansion",
+        "He allied with Persia",
+        "He failed to counter radical leaders"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why was Nicias poorly suited to the Sicilian Expedition?",
+      "options": [
+        "Naval incompetence",
+        "Excessive caution and superstition",
+        "Disloyalty to Athens",
+        "Lack of experience"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which individual most clearly embodied ambition and self-interest after Pericles?",
+      "options": [
+        "Theramenes",
+        "Cleon",
+        "Alcibiades",
+        "Nicias"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which actions are associated with Alcibiades?",
+      "options": [
+        "Promoting moderation",
+        "Instigating the Sicilian Expedition and defecting to Sparta",
+        "Supporting Sparta throughout",
+        "Defending the Peace of Nicias"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Alcibiades contribute to Athens’ downfall after defecting?",
+      "options": [
+        "By negotiating peace",
+        "By rebuilding the Athenian fleet",
+        "By attacking Attica directly",
+        "By advising Sparta and encouraging Ionian revolts"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which radical democrat repeatedly blocked peace negotiations?",
+      "options": [
+        "Cleophon",
+        "Critias",
+        "Cleon",
+        "Theramenes"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What criticism does Thucydides make of the Athenian demos?",
+      "options": [
+        "Excessively loyal",
+        "Easily influenced and fickle",
+        "Too cautious",
+        "Politically inactive"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which decision best illustrates popular misjudgement?",
+      "options": [
+        "Supporting Pericles",
+        "Recalling Alcibiades early",
+        "Execution of the Arginusae generals",
+        "Accepting peace after Cyzicus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why did Athens refuse to withdraw from Sicily?",
+      "options": [
+        "Fear of Persia",
+        "Overconfidence and desire for profit",
+        "Lack of ships",
+        "Spartan pressure"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What internal conflict weakened Athens in 411 BCE?",
+      "options": [
+        "Plague",
+        "Persian invasion",
+        "Slave revolt",
+        "Oligarchic coup"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why was Athens’ empire inherently unstable?",
+      "options": [
+        "Too small",
+        "Poor leadership only",
+        "Lack of democracy",
+        "Constant fear of allied revolts"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which allies revolted during the later stages of the war?",
+      "options": [
+        "Corinth and Megara",
+        "Delphi and Olympia",
+        "Argos and Mantinea",
+        "Chios, Erythrae, Euboea"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What effect did revolts have on Athens?",
+      "options": [
+        "Loss of revenue and resources",
+        "Strengthened control",
+        "Immediate peace",
+        "Increased manpower"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which earlier disaster severely reduced manpower?",
+      "options": [
+        "The plague",
+        "Arginusae",
+        "Cyzicus",
+        "Aegospotami"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What long-term economic problem plagued Athens?",
+      "options": [
+        "Lack of allies",
+        "Lack of coinage",
+        "Loss of democracy",
+        "Cost of rebuilding fleets"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which Spartan advantage proved decisive late in the war?",
+      "options": [
+        "Superior hoplites only",
+        "Stable alliances and strong leadership",
+        "Numerical superiority",
+        "Religious unity"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which Spartan leaders are highlighted as particularly effective?",
+      "options": [
+        "Agis, Archidamus, Pausanias",
+        "Mindarus, Callicratidas, Agis",
+        "Leonidas, Cleomenes, Agesilaus",
+        "Brasidas, Gylippus, Lysander"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why was Persian involvement crucial?",
+      "options": [
+        "Provided ships directly",
+        "Provided land armies",
+        "Supplied hoplites",
+        "Provided gold to fund fleets"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which Persian figures supported Sparta financially?",
+      "options": [
+        "Cambyses and Cyrus",
+        "Tissaphernes and Pharnabazus",
+        "Artaxerxes and Cyrus",
+        "Darius and Xerxes"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What best summarises the reasons for Athens’ defeat?",
+      "options": [
+        "One decisive battle",
+        "Spartan luck",
+        "Weak navy",
+        "Combination of leadership failure, imperial overreach, and foreign intervention"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

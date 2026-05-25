@@ -1,0 +1,257 @@
+{
+  "id": "01-the-late-roman-republic",
+  "title": "01. The Late Roman Republic",
+  "description": "An overview of the political, military, and constitutional crises that transformed Rome from a Republic into an Empire.",
+  "questions": [
+    {
+      "question": "Which years traditionally mark the foundation of the Roman Republic?",
+      "options": [
+        "146 BCE",
+        "509 BCE",
+        "753 BCE",
+        "264 BCE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which event in 146 BCE demonstrated Rome’s dominance in the Mediterranean?",
+      "options": [
+        "Battle of Actium",
+        "Destruction of Corinth and Carthage",
+        "Fall of Syracuse",
+        "End of the Social War"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which action by Sulla in 88 BCE set a precedent for later civil wars?",
+      "options": [
+        "Marching on Rome",
+        "Becoming consul",
+        "Defeating Mithridates",
+        "Reforming the Senate"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who seized power in Rome while Sulla campaigned in the east?",
+      "options": [
+        "Lepidus and Sertorius",
+        "Caesar and Cicero",
+        "Cinna and Marius",
+        "Pompey and Crassus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What position did Sulla hold after returning to Rome?",
+      "options": [
+        "Tribune",
+        "Consul",
+        "Censor",
+        "Dictator"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which revolt threatened Roman authority between 73–71 BCE?",
+      "options": [
+        "Spartacus’ Revolt",
+        "Perusine War",
+        "Sertorius’ Revolt",
+        "Catilinarian Conspiracy"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who were consuls together in 70 BCE?",
+      "options": [
+        "Crassus and Cicero",
+        "Pompey and Caesar",
+        "Pompey and Crassus",
+        "Caesar and Bibulus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What did the Lex Gabinia grant Pompey?",
+      "options": [
+        "Command in Gaul",
+        "Control of Rome",
+        "Extraordinary command against pirates",
+        "Command against Mithridates"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which law extended Pompey’s eastern command?",
+      "options": [
+        "Lex Hortensia",
+        "Lex Manilia",
+        "Lex Agraria",
+        "Lex Claudia"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who was consul in 63 BCE?",
+      "options": [
+        "Crassus",
+        "Caesar",
+        "Cicero",
+        "Pompey"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What major conspiracy did Cicero suppress?",
+      "options": [
+        "Sertorius’ Revolt",
+        "Spartacus’ Revolt",
+        "Catilinarian Conspiracy",
+        "Bellum Siculum"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which informal alliance dominated Roman politics from 60 BCE?",
+      "options": [
+        "Second Triumvirate",
+        "Populares",
+        "First Triumvirate",
+        "Senatorial faction"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who were the members of the First Triumvirate?",
+      "options": [
+        "Caesar, Antony, Octavian",
+        "Crassus, Sulla, Pompey",
+        "Caesar, Pompey, Crassus",
+        "Pompey, Cicero, Cato"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What event in 49 BCE triggered Caesar’s Civil War?",
+      "options": [
+        "Pompey’s death",
+        "Battle of Pharsalus",
+        "Caesar’s dictatorship",
+        "Crossing the Rubicon"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What happened to Pompey in 48 BCE?",
+      "options": [
+        "He retired",
+        "He defeated Caesar",
+        "He was exiled",
+        "He was killed in Egypt"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What position did Caesar hold shortly before his assassination?",
+      "options": [
+        "Princeps",
+        "Tribune",
+        "Consul",
+        "Dictator for life"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "In which year was Julius Caesar assassinated?",
+      "options": [
+        "49 BCE",
+        "42 BCE",
+        "46 BCE",
+        "44 BCE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which alliance followed Caesar’s death?",
+      "options": [
+        "First Triumvirate",
+        "Populares Bloc",
+        "Senatorial Coalition",
+        "Second Triumvirate"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which conflict followed Caesar’s assassination?",
+      "options": [
+        "Perusine War",
+        "War against the Liberators",
+        "Sulla’s Civil War",
+        "Bellum Siculum"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which battle in 31 BCE marked the end of the Republic?",
+      "options": [
+        "Pharsalus",
+        "Actium",
+        "Philippi",
+        "Mutina"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who emerged victorious at Actium?",
+      "options": [
+        "Lepidus",
+        "Mark Antony",
+        "Octavian",
+        "Cleopatra"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which treaty stabilised the Second Triumvirate?",
+      "options": [
+        "Lex Manilia",
+        "Treaty of Brundisium",
+        "Treaty of Tarentum",
+        "Peace of Nicias"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which conflict eliminated Lepidus from power?",
+      "options": [
+        "Perusine War",
+        "Bellum Siculum",
+        "Caesar’s Civil War",
+        "War against the Liberators"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the significance of the Battle of Actium?",
+      "options": [
+        "Defeat of the Senate",
+        "End of civil wars",
+        "Restoration of democracy",
+        "Transition from Republic to Empire"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What best summarises the Late Roman Republic?",
+      "options": [
+        "A period of stability",
+        "Transition from Republic to Empire",
+        "Expansion of democracy",
+        "Decline of Roman power"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

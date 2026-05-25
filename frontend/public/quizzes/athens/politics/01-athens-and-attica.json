@@ -1,0 +1,157 @@
+{
+  "id": "01-athens-and-attica",
+  "title": "01. Athens and Attica",
+  "description": "The political and administrative organisation of Attica and its integration under Athenian control.",
+  "questions": [
+    {
+      "question": "What situation existed in Attica before the rise of the Peisistratid tyrants?",
+      "options": [
+        "Independent local communities with frequent conflict",
+        "Strong central control from Athens",
+        "Complete political unity",
+        "Direct rule by Sparta"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What factor contributed to the rise of tyranny in Athens?",
+      "options": [
+        "Religious division",
+        "Foreign invasion",
+        "Economic collapse",
+        "Conflict between independent local communities"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Approximately how large was Attica once it was brought under Athenian control?",
+      "options": [
+        "300 square miles",
+        "500 square miles",
+        "2,000 square miles",
+        "1,000 square miles"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which reformer reorganised the administration of Attica?",
+      "options": [
+        "Peisistratus",
+        "Solon",
+        "Cleisthenes",
+        "Pericles"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Into how many zones did Cleisthenes divide Attica?",
+      "options": [
+        "Three",
+        "Two",
+        "Four",
+        "Ten"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What were the three zones created by Cleisthenes?",
+      "options": [
+        "North, south, east",
+        "Sacred, civic, military",
+        "Urban, rural, frontier",
+        "City, coastal, inland"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How many trittyes existed in each zone of Attica?",
+      "options": [
+        "Ten",
+        "Five",
+        "Twelve",
+        "Twenty"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Approximately how many demoi were distributed among the trittyes?",
+      "options": [
+        "100",
+        "50",
+        "200",
+        "139"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How were the trittyes combined to form tribes?",
+      "options": [
+        "By wealth",
+        "By religious affiliation",
+        "By geographical proximity only",
+        "One from each zone"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was the political purpose of mixing trittyes from different zones?",
+      "options": [
+        "To simplify administration",
+        "To weaken the countryside",
+        "To increase taxation",
+        "To prevent domination by city-based interests"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "For which purposes were the tribes used?",
+      "options": [
+        "Judicial trials",
+        "Tax collection only",
+        "Religious festivals only",
+        "Voting, elections, and military organisation"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How was membership of a tribe determined?",
+      "options": [
+        "Election",
+        "Place of residence",
+        "Wealth",
+        "Hereditary membership"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Before 451 BC, who qualified as an Athenian citizen?",
+      "options": [
+        "Any property owner",
+        "Anyone born in Attica",
+        "Any free adult male",
+        "A free adult male with an Athenian father"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What additional requirement was introduced after 451 BC?",
+      "options": [
+        "Two Athenian parents",
+        "Military service",
+        "Approval of the Assembly",
+        "Property ownership"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Roughly what proportion of the population were citizens in the fifth century BC?",
+      "options": [
+        "10–20%",
+        "1–5%",
+        "5–10%",
+        "30–40%"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

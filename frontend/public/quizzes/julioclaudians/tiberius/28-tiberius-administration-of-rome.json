@@ -1,0 +1,207 @@
+{
+  "id": "28-tiberius-administration-of-rome",
+  "title": "28. Tiberius’ Administration of Rome",
+  "description": "An evaluation of how effectively Tiberius governed Rome, balancing senatorial administration, crisis management, and limited visibility in the sources.",
+  "questions": [
+    {
+      "question": "How does the PPT characterise Tiberius’ administration of Rome overall?",
+      "options": [
+        "Generally effective and careful",
+        "Entirely delegated to officials",
+        "Neglectful and chaotic",
+        "Oppressive and harsh"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "To whom did Tiberius frequently pass business for debate and decision?",
+      "options": [
+        "The Senate",
+        "The equestrian order",
+        "Provincial governors",
+        "The Praetorian Guard"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How does the Senate appear to have functioned under Tiberius?",
+      "options": [
+        "As rivals to the emperor",
+        "As corrupt administrators",
+        "As powerless figureheads",
+        "As careful and effective administrators"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What change occurred when Tiberius retired to Capri?",
+      "options": [
+        "Administration collapsed",
+        "The Praetorian Guard ruled Rome",
+        "Little change in Rome’s administration",
+        "The Senate lost authority"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How does Suetonius describe Tiberius’ behaviour after retiring to Capri?",
+      "options": [
+        "As returning frequently to Rome",
+        "As ceasing to pay attention to administration",
+        "As more attentive to administration",
+        "As delegating to Sejanus openly"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why should Suetonius’ claim be treated with caution?",
+      "options": [
+        "He was an eyewitness",
+        "He praises Tiberius elsewhere",
+        "Other evidence contradicts him",
+        "He wrote contemporaneously"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In which years did Tiberius provide compensation after fires in Rome?",
+      "options": [
+        "27 and 37",
+        "19 and 27",
+        "32 and 33",
+        "14 and 23"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which sources record Tiberius’ compensation for fire victims?",
+      "options": [
+        "Cassius Dio only",
+        "Tacitus only",
+        "Suetonius only",
+        "Tacitus’ Annals 4.64 and 6.45"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What problem prompted Tiberius to write to the Senate in 32 CE?",
+      "options": [
+        "A military mutiny",
+        "A food shortage threatening unrest",
+        "A tax revolt",
+        "A religious dispute"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What action did Tiberius request from the Senate in 32 CE?",
+      "options": [
+        "A stern proclamation against rioting",
+        "Distribution of grain",
+        "Tax reform",
+        "Military intervention"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which source records the events of 32 CE?",
+      "options": [
+        "Dio Cassius 58.21",
+        "Tacitus, Annals 6.13",
+        "Suetonius, Tiberius 41",
+        "Tacitus, Annals 4.64"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What law did Tiberius enforce in 33 CE?",
+      "options": [
+        "A law on interest rates",
+        "A law on public order",
+        "A law on taxation",
+        "A law on grain prices"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What unintended consequence followed enforcement of this law?",
+      "options": [
+        "Inflation",
+        "Food shortages",
+        "A financial crisis",
+        "Riots in Rome"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Tiberius respond to this crisis?",
+      "options": [
+        "By repealing the law",
+        "By punishing lenders",
+        "By ignoring it",
+        "By swift and generous financial intervention"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which sources describe the crisis of 33 CE?",
+      "options": [
+        "Velleius only",
+        "Tacitus only",
+        "Suetonius only",
+        "Tacitus and Cassius Dio"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why might the evidence for Tiberius’ administration seem limited?",
+      "options": [
+        "Sources focused on scandal rather than routine administration",
+        "Records were destroyed",
+        "The Senate kept secrets",
+        "Rome had little administration"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does the PPT suggest limited evidence may still indicate?",
+      "options": [
+        "Disinterest in Rome",
+        "Administrative failure",
+        "Complete delegation",
+        "Active and effective involvement"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How does Tacitus’ evidence challenge Suetonius’ claim?",
+      "options": [
+        "By blaming Sejanus",
+        "By ignoring administration",
+        "By showing continued administrative action",
+        "By agreeing with it"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What advantage may Capri have given Tiberius administratively?",
+      "options": [
+        "Isolation from information",
+        "Closer control of Rome",
+        "Reduced responsibility",
+        "Freedom from daily distractions"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Overall, how should Tiberius’ administration of Rome be assessed?",
+      "options": [
+        "Entirely dependent on the Senate",
+        "Effective but largely invisible in the sources",
+        "Negligent and harmful",
+        "Chaotic and authoritarian"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

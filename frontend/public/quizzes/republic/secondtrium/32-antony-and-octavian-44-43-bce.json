@@ -1,0 +1,257 @@
+{
+  "id": "32-antony-and-octavian-44-43-bce",
+  "title": "32. Antony and Octavian, 44–43 BCE",
+  "description": "A study of the power struggle between Antony and Octavian after Caesar’s assassination and the collapse of senatorial control.",
+  "questions": [
+    {
+      "question": "Who were Caesar’s two main political heirs immediately after his death?",
+      "options": [
+        "Brutus and Cassius",
+        "Antony and Lepidus",
+        "Octavian and Lepidus",
+        "Antony and Octavian"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What key resources did Antony secure soon after Caesar’s assassination?",
+      "options": [
+        "Caesar’s money and papers",
+        "Public support",
+        "Provincial commands",
+        "Army and Senate"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What compromise did Antony arrange in the Senate?",
+      "options": [
+        "Civil war",
+        "Execution of assassins",
+        "Restored Republic",
+        "Amnesty and confirmation of Caesar’s acts"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why did senators accept Caesar’s measures?",
+      "options": [
+        "Fear",
+        "Religion",
+        "They benefited",
+        "Pressure"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who was named Caesar’s heir?",
+      "options": [
+        "Decimus Brutus",
+        "Gaius Octavius",
+        "Lepidus",
+        "Antony"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How much money did Caesar leave each citizen?",
+      "options": [
+        "100 denarii",
+        "75 denarii",
+        "50 denarii",
+        "150 denarii"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did the public react to the will?",
+      "options": [
+        "Indifference",
+        "Anger",
+        "Affection",
+        "Fear"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which act showed Antony’s compromise?",
+      "options": [
+        "Removal",
+        "Prosecution",
+        "Exile",
+        "Respect and provinces"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What did Antony do with Caesar’s papers?",
+      "options": [
+        "Used or forged them",
+        "Ignored them",
+        "Returned them",
+        "Destroyed them"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which provinces did Antony claim?",
+      "options": [
+        "Cisalpine and Transalpine Gaul",
+        "Asia",
+        "Macedonia",
+        "Spain and Africa"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why did Antony prefer Gaul?",
+      "options": [
+        "More troops",
+        "Near Italy",
+        "Wealth",
+        "Estates"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Cicero view Antony?",
+      "options": [
+        "Republican",
+        "Neutral",
+        "Protector",
+        "Enemy who annulled laws"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What name did Octavian take?",
+      "options": [
+        "Octavius",
+        "Gaius Julius Caesar",
+        "Augustus",
+        "Caesar Antonius"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why was Antony cold to Octavian?",
+      "options": [
+        "Rivalry",
+        "Refused adoption",
+        "Dislike",
+        "Fear"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Octavian gain popularity?",
+      "options": [
+        "Land",
+        "Victories",
+        "Paid legacy and games",
+        "Senate support"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What symbol showed Caesar’s deification?",
+      "options": [
+        "Comet",
+        "Wreath",
+        "Eagle",
+        "Star"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Where did Antony besiege Decimus Brutus?",
+      "options": [
+        "Rome",
+        "Capua",
+        "Ravenna",
+        "Mutina"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Octavian gain troops?",
+      "options": [
+        "Allies",
+        "Won Antony’s legions",
+        "The Senate",
+        "Inheritance"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was Cicero’s role in 44–43 BCE?",
+      "options": [
+        "General",
+        "Led Senate opposition",
+        "Mediator",
+        "Antony ally"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did the Senate grant Octavian imperium?",
+      "options": [
+        "To use him against Antony",
+        "At his demand",
+        "Out of fear",
+        "To make him consul"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What happened near Mutina?",
+      "options": [
+        "Antony fled, consuls died",
+        "Peace",
+        "Antony won",
+        "Octavian lost"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why did the Senate turn on Octavian?",
+      "options": [
+        "Antony returned",
+        "War ended",
+        "They tried to discard him",
+        "He lost support"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What did Octavian do after refusal of the consulship?",
+      "options": [
+        "Retired",
+        "Marched on Rome",
+        "Went east",
+        "Allied with Antony"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who was Octavian’s consular colleague in 43 BCE?",
+      "options": [
+        "Antony",
+        "Quintus Pedius",
+        "Lepidus",
+        "Decimus Brutus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What did Octavian do regarding the assassins?",
+      "options": [
+        "Restored offices",
+        "Granted amnesty",
+        "Held trials in absentia",
+        "Ignored them"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

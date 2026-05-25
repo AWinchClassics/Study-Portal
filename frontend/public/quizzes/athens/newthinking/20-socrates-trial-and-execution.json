@@ -1,0 +1,187 @@
+{
+  "id": "20-socrates-trial-and-execution",
+  "title": "20. Socrates’ Trial and Execution",
+  "description": "The trial, conviction, and execution of Socrates, and how ancient sources interpret his conduct and death.",
+  "questions": [
+    {
+      "question": "In what year was Socrates put on trial?",
+      "options": [
+        "399 BCE",
+        "403 BCE",
+        "395 BCE",
+        "404 BCE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which political situation made Socrates a convenient scapegoat?",
+      "options": [
+        "The Persian Wars",
+        "The Athenian Empire",
+        "The rule of the Thirty Tyrants",
+        "The rise of Macedon"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which former associates of Socrates caused suspicion after 404 BCE?",
+      "options": [
+        "Alcibiades, Critias, and Charmides",
+        "Nicias and Cleon",
+        "Pericles and Xanthippus",
+        "Plato and Xenophon"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why could the oligarchs not be prosecuted after democracy was restored?",
+      "options": [
+        "They were protected by an amnesty",
+        "They fled Athens",
+        "They were executed",
+        "They were tried by Sparta"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "According to Plato, how many formal charges were brought against Socrates?",
+      "options": [
+        "Two",
+        "Three",
+        "Four",
+        "One"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What were the two charges against Socrates?",
+      "options": [
+        "Impiety and corrupting the youth",
+        "Sophistry and deception",
+        "Treason and bribery",
+        "Atheism and tyranny"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How does Xenophon respond to the charge of atheism?",
+      "options": [
+        "He argues Socrates sought divine truth",
+        "He agrees with it",
+        "He ignores it",
+        "He blames the jury"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How does Plato portray Socrates’ behaviour during the trial?",
+      "options": [
+        "As apologetic",
+        "As conciliatory",
+        "As deliberately provocative",
+        "As evasive"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What conventional tactic does Socrates refuse to use in court?",
+      "options": [
+        "Calling witnesses",
+        "Hiring a speechwriter",
+        "Bribing jurors",
+        "Bringing his children to evoke pity"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How many jurors sat on Socrates’ trial?",
+      "options": [
+        "300",
+        "600",
+        "500",
+        "400"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "By what margin was Socrates found guilty?",
+      "options": [
+        "Unanimously",
+        "60 votes",
+        "100 votes",
+        "30 votes"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What alternative punishment could Socrates realistically have requested?",
+      "options": [
+        "Exile",
+        "Military service",
+        "A fine",
+        "Imprisonment"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What punishment did Socrates propose instead?",
+      "options": [
+        "Free meals for life",
+        "House arrest",
+        "A small fine",
+        "Exile"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why did this proposal anger the jury?",
+      "options": [
+        "It was illegal",
+        "It admitted guilt",
+        "It mocked the court",
+        "It rejected democracy"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why did Socrates refuse to escape from prison?",
+      "options": [
+        "Fear of capture",
+        "Loyalty to the laws of Athens",
+        "Pressure from friends",
+        "Lack of opportunity"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does Plato describe Socrates’ attitude toward death?",
+      "options": [
+        "Angry",
+        "Calm and accepting",
+        "Fearful",
+        "Uncertain"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What method of execution was used?",
+      "options": [
+        "Beheading",
+        "Stoning",
+        "Poisoning with hemlock",
+        "Starvation"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which works describe Socrates’ trial and death?",
+      "options": [
+        "Politics and Ethics",
+        "Clouds and Memorabilia",
+        "Apology, Crito, Phaedo",
+        "Republic and Laws"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

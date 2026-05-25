@@ -1,0 +1,257 @@
+{
+  "id": "12-sullas-dictatorship",
+  "title": "12. Sulla’s Dictatorship",
+  "description": "An analysis of Sulla’s dictatorship, his constitutional reforms, and their long-term impact on Roman politics and the Republic.",
+  "questions": [
+    {
+      "question": "In which years did Sulla hold the dictatorship?",
+      "options": [
+        "82–80 BCE",
+        "83–81 BCE",
+        "80–78 BCE",
+        "81–79 BCE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How was Sulla formally appointed dictator?",
+      "options": [
+        "By military acclamation",
+        "By self-declaration",
+        "Through an interrex and senatorial bill",
+        "By popular vote"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the stated purpose of Sulla’s dictatorship?",
+      "options": [
+        "To abolish the Senate",
+        "To establish monarchy",
+        "To restore the Republic",
+        "To conquer new territory"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was unusual about the term of Sulla’s dictatorship?",
+      "options": [
+        "It was undefined in length",
+        "It required annual renewal",
+        "It lasted six months",
+        "It was hereditary"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Sulla’s authority compare to other magistrates?",
+      "options": [
+        "Equal to consuls",
+        "Subject to veto",
+        "Limited to Rome",
+        "Superior to all other magistrates"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which institutions still formally passed Sulla’s reforms?",
+      "options": [
+        "The popular assemblies",
+        "The Senate only",
+        "The army",
+        "The courts"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What year did Sulla resign his dictatorship?",
+      "options": [
+        "80 BCE",
+        "79 BCE",
+        "78 BCE",
+        "81 BCE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What did Sulla do after resigning?",
+      "options": [
+        "Remain politically active",
+        "Retire into private life",
+        "Become consul again",
+        "Leave Italy"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was one main aim of Sulla’s reforms?",
+      "options": [
+        "Increase tribune power",
+        "Strengthen the Senate",
+        "Abolish magistracies",
+        "Expand democracy"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How were the powers of the tribunes changed?",
+      "options": [
+        "Unchanged",
+        "They lost legislative and veto powers",
+        "They gained military command",
+        "Expanded significantly"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What career restriction was placed on former tribunes?",
+      "options": [
+        "Barred from further office",
+        "Forced exile",
+        "Loss of citizenship",
+        "Mandatory military service"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "To what size was the Senate enlarged under Sulla?",
+      "options": [
+        "500",
+        "400",
+        "300",
+        "600"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How were future senators to be recruited?",
+      "options": [
+        "By inheritance",
+        "By popular election",
+        "From ex-quaestors automatically",
+        "By censors only"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What approval was now required before bills reached the assembly?",
+      "options": [
+        "Senatorial approval",
+        "Judicial approval",
+        "Tribunician approval",
+        "Consular approval"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What change did Sulla make to provincial governance?",
+      "options": [
+        "Governors needed Senate approval to wage war",
+        "Governors could act independently",
+        "Governors were banned",
+        "Consuls lost imperium"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What happened to consular imperium under Sulla’s reforms?",
+      "options": [
+        "It was abolished",
+        "It became inferior to governors’",
+        "It was shared",
+        "It remained superior"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What change was made to the cursus honorum?",
+      "options": [
+        "Consulships became hereditary",
+        "A ten-year gap between consulships was required",
+        "Tribunes could become consuls",
+        "Age limits were abolished"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How many quaestors were elected annually after Sulla’s reforms?",
+      "options": [
+        "12",
+        "10",
+        "20",
+        "18"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened to the corn dole under Sulla?",
+      "options": [
+        "It was expanded",
+        "It remained unchanged",
+        "It was privatised",
+        "It was abolished"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What effect did abolishing the corn dole have?",
+      "options": [
+        "Increased reliance on patrons",
+        "Strengthened the state",
+        "Reduced poverty",
+        "Lowered taxes"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How many permanent courts (quaestiones perpetuae) were established?",
+      "options": [
+        "Six",
+        "Seven",
+        "Ten",
+        "Five"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who now dominated the juries in the courts?",
+      "options": [
+        "Senators",
+        "Equites",
+        "Provincials",
+        "Plebeians"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the intended effect of reorganising the courts?",
+      "options": [
+        "Reduce corruption",
+        "Abolish trials",
+        "Increase popular power",
+        "Clarify procedures and penalties"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How long after resigning did Sulla live?",
+      "options": [
+        "One year",
+        "Two years",
+        "Ten years",
+        "Five years"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the overall significance of Sulla’s dictatorship?",
+      "options": [
+        "It entrenched democratic reform",
+        "It restored lasting stability",
+        "It set precedents for personal power",
+        "It ended civil war permanently"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

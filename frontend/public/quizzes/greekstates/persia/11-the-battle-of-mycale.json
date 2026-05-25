@@ -1,0 +1,257 @@
+{
+  "id": "11-the-battle-of-mycale",
+  "title": "11. The Battle of Mycale",
+  "description": "The final Greek naval and land victory of 479 BCE and its consequences for Ionian freedom and Athenian leadership.",
+  "questions": [
+    {
+      "question": "In which year was the Battle of Mycale fought?",
+      "options": [
+        "479 BCE",
+        "477 BCE",
+        "478 BCE",
+        "480 BCE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which ancient historian ends his account with the Battle of Mycale?",
+      "options": [
+        "Xenophon",
+        "Herodotus",
+        "Thucydides",
+        "Plutarch"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where was the Greek fleet assembled after Salamis?",
+      "options": [
+        "Salamis",
+        "Chios",
+        "Delos",
+        "Aegina"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Approximately what proportion of its original strength did the Greek fleet have after Salamis?",
+      "options": [
+        "One third",
+        "One quarter",
+        "One half",
+        "Three quarters"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who was the Spartan king and admiral of the Greek fleet?",
+      "options": [
+        "Cleomenes",
+        "Leotychides",
+        "Pausanias",
+        "Eurybiades"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which Ionian island first approached Leotychides asking for help?",
+      "options": [
+        "Lesbos",
+        "Chios",
+        "Samos",
+        "Miletus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did Leotychides initially sail to Delos instead of aiding Ionia?",
+      "options": [
+        "To consult the oracle",
+        "To test Ionian loyalty",
+        "To gather allies",
+        "To resupply the fleet"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where was the Persian fleet headquartered before Mycale?",
+      "options": [
+        "Ephesus",
+        "Sardis",
+        "Samos",
+        "Miletus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the Persian fleet’s primary task at Samos?",
+      "options": [
+        "To attack Athens",
+        "To guard against Ionian revolt",
+        "To resupply the army",
+        "To prepare an invasion"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did the Greeks decide to sail to Samos?",
+      "options": [
+        "Athenian pressure",
+        "A storm damaged their ships",
+        "Orders from Sparta",
+        "Reports that the Persians were in disarray"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What did the Persians do when the Greeks approached Samos?",
+      "options": [
+        "Surrendered",
+        "Retreated inland and beached ships",
+        "Burned their fleet",
+        "Sought battle at sea"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where were the Persian ships beached?",
+      "options": [
+        "At Euboea",
+        "At the Hellespont",
+        "On the Mycale promontory",
+        "Near Sestos"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who were sent to guard the inland routes for the Persians?",
+      "options": [
+        "Phoenicians",
+        "Milesians",
+        "Persian cavalry",
+        "Egyptians"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was notable about many of the Persian troops at Mycale?",
+      "options": [
+        "They were mercenaries",
+        "They were inexperienced",
+        "They were cavalry",
+        "They were Greek in origin"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was the outcome of the battle at Mycale?",
+      "options": [
+        "Persian withdrawal only",
+        "Persian victory",
+        "Stalemate",
+        "Greek victory"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What debate followed the victory at Mycale?",
+      "options": [
+        "How to treat the Ionians",
+        "Who should command the fleet",
+        "Where to build defences",
+        "Whether to invade Persia"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What solution did the Peloponnesians initially propose?",
+      "options": [
+        "Leaving Ionia unprotected",
+        "Settling Ionians in Greece",
+        "Forcing Ionia to join Sparta",
+        "Resettling Ionians on medisers’ land"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who opposed the Peloponnesian proposal?",
+      "options": [
+        "The Samians",
+        "Leotychides",
+        "Pausanias",
+        "Xanthippus and the Athenians"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was eventually agreed regarding the island states?",
+      "options": [
+        "They would join Persia",
+        "They would become Athenian colonies",
+        "They would be enrolled in the Hellenic League",
+        "They would be abandoned"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which islands were enrolled after Mycale?",
+      "options": [
+        "Rhodes, Cos, Samos",
+        "Euboea, Salamis, Aegina",
+        "Chios, Lesbos, Samos",
+        "Naxos, Paros, Delos"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why were Ionian cities left vulnerable after Mycale?",
+      "options": [
+        "Spartan opposition",
+        "No immediate protection was organised",
+        "Persian counterattack",
+        "Greek lack of interest"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did the Greeks sail to the Hellespont after Mycale?",
+      "options": [
+        "To pursue Mardonius",
+        "To collect tribute",
+        "To capture cities",
+        "To destroy Xerxes’ bridge"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why did the Peloponnesians return home from the Hellespont?",
+      "options": [
+        "The bridge was already destroyed",
+        "Disagreement with Athens",
+        "Lack of supplies",
+        "Defeat in battle"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was Sestos strategically important to Athens?",
+      "options": [
+        "Naval base",
+        "Religious significance",
+        "Control of trade with Asia",
+        "Grain supply from the Black Sea"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What long-term significance did Mycale have?",
+      "options": [
+        "Spartan dominance",
+        "Collapse of the Hellenic League",
+        "Establishment of Athenian leadership in the Aegean",
+        "Immediate end of Persian Wars"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

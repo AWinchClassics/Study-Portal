@@ -1,7 +1,128 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { supabase } from '../supabase'
 import Breadcrumb from '../components/Breadcrumb'
+
+const SECTIONS = [
+  { key: 'core',      label: 'Core Content',  icon: '📖' },
+  { key: 'homework',  label: 'Homework',       icon: '✏️' },
+  { key: 'revision',  label: 'Revision',       icon: '🔁' },
+  { key: 'extension', label: 'Extension',      icon: '⭐' },
+]
+
+const TYPE_ICONS = {
+  video:      '▶',
+  quiz:       '❓',
+  pdf:        '📄',
+  text:       '📝',
+  audio:      '🎧',
+  worksheet:  '📋',
+  task:       '✅',
+  flashcards: '🃏',
+  source:     '📜',
+}
+
+function ResourceItem({ resource, navContext }) {
+  const navigate = useNavigate()
+  const type = resource.type?.toLowerCase()
+  const icon = TYPE_ICONS[type] ?? '📎'
+  const isQuiz = type === 'quiz'
+  const hasExternalLink = resource.url?.startsWith('http') && !isQuiz
+
+  function handleQuizClick() {
+    navigate(`/quiz/${resource.id}`, { state: navContext })
+  }
+
+  return (
+    <div className="resource-item">
+      <span className="resource-icon">{icon}</span>
+
+      <div className="resource-info">
+        <span className="resource-title">{resource.title}</span>
+        {resource.description && (
+          <span className="resource-desc">{resource.description}</span>
+        )}
+      </div>
+
+      <span className="resource-type-pill">{resource.type}</span>
+
+      {isQuiz && (
+        <button className="resource-quiz-btn" onClick={handleQuizClick}>
+          Start quiz →
+        </button>
+      )}
+
+      {hasExternalLink && (
+        <a
+          href={resource.url}
+          target="_blank"
+          rel="noreferrer"
+          className="resource-open-arrow"
+          onClick={e => e.stopPropagation()}
+        >
+          ↗
+        </a>
+      )}
+    </div>
+  )
+}
+
+function ChunkCard({ chunk, resources, navContext }) {
+  const byPurpose = {}
+  resources.forEach(r => {
+    const key = r.purpose ?? 'core'
+    if (!byPurpose[key]) byPurpose[key] = []
+    byPurpose[key].push(r)
+  })
+
+  const activeSections = SECTIONS.filter(s => byPurpose[s.key]?.length > 0)
+
+  return (
+    <div className="chunk-card">
+      <div className="chunk-card-header">
+        <h2 className="chunk-title">{chunk.title}</h2>
+        {chunk.estimated_time && (
+          <span className="chunk-time">⏱ {chunk.estimated_time} min</span>
+        )}
+      </div>
+
+      {chunk.description && (
+        <p className="chunk-description">{chunk.description}</p>
+      )}
+
+      {resources.length === 0 ? (
+        <p className="chunk-empty">No resources attached to this chunk yet.</p>
+      ) : activeSections.length > 0 ? (
+        <div className="chunk-sections">
+          {activeSections.map(section => (
+            <div key={section.key} className="chunk-section">
+              <div className="chunk-section-header">
+                <span className="chunk-section-icon">{section.icon}</span>
+                <span className="chunk-section-label">{section.label}</span>
+                <span className="chunk-section-count">{byPurpose[section.key].length}</span>
+              </div>
+              <ul className="chunk-resource-list">
+                {byPurpose[section.key].map(r => (
+                  <li key={r.id}>
+                    <ResourceItem resource={r} navContext={navContext} />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <ul className="chunk-resource-list">
+          {resources.map(r => (
+            <li key={r.id}>
+              <ResourceItem resource={r} navContext={navContext} />
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  )
+}
 
 export default function ChunkPage() {
   const { unitId } = useParams()
@@ -15,7 +136,6 @@ export default function ChunkPage() {
 
   useEffect(() => {
     async function fetchData() {
-      // Fetch unit → module → course in one query
       const { data: unitData, error: unitError } = await supabase
         .from('units')
         .select('id, title, module_id, modules(id, title, course_id, courses(id, title))')
@@ -32,7 +152,6 @@ export default function ChunkPage() {
       setModule(unitData.modules)
       setCourse(unitData.modules?.courses)
 
-      // Fetch chunks for this unit
       const { data: chunksData, error: chunksError } = await supabase
         .from('chunks')
         .select('*')
@@ -47,7 +166,6 @@ export default function ChunkPage() {
 
       setChunks(chunksData)
 
-      // Fetch all resources for every chunk in this unit in one query
       if (chunksData.length > 0) {
         const chunkIds = chunksData.map(c => c.id)
 
@@ -58,7 +176,6 @@ export default function ChunkPage() {
           .order('order_index')
 
         if (!crError && crData) {
-          // Group resources by chunk_id
           const grouped = {}
           crData.forEach(row => {
             if (!grouped[row.chunk_id]) grouped[row.chunk_id] = []
@@ -74,54 +191,62 @@ export default function ChunkPage() {
     fetchData()
   }, [unitId])
 
-  if (loading) return <p className="page-status">Loading chunks…</p>
-  if (error)   return <p className="page-status page-error">Error: {error}</p>
+  if (loading) return <div className="page"><div className="loading-pulse">Loading chunks…</div></div>
+  if (error)   return <div className="page"><p className="page-error">Error: {error}</p></div>
+
+  const totalResources = Object.values(resourcesByChunk).flat().length
+
+  // Navigation context passed to QuizPage so it can build its breadcrumb
+  const navContext = {
+    unitId,
+    unitTitle:   unit?.title,
+    moduleId:    module?.id,
+    moduleTitle: module?.title,
+    courseId:    course?.id,
+    courseTitle: course?.title,
+  }
 
   return (
     <div className="page">
       <Breadcrumb
         items={[
-          { label: 'Courses', to: '/' },
-          { label: course?.title ?? 'Course', to: `/modules/${course?.id}` },
-          { label: module?.title ?? 'Module', to: `/units/${module?.id}` },
+          { label: 'Courses',           to: '/' },
+          { label: course?.title ?? 'Course',   to: `/modules/${course?.id}` },
+          { label: module?.title ?? 'Module',   to: `/units/${module?.id}` },
           { label: unit?.title ?? 'Unit' },
         ]}
       />
 
-      <h1>{unit?.title}</h1>
+      <div className="page-header">
+        <div>
+          <div className="page-level-label">Unit</div>
+          <h1>{unit?.title}</h1>
+          <p className="page-subtitle">Part of <strong>{module?.title}</strong></p>
+        </div>
+        <div className="page-header-meta">
+          <span className="meta-badge">{chunks.length} {chunks.length === 1 ? 'chunk' : 'chunks'}</span>
+          {totalResources > 0 && (
+            <span className="meta-badge">{totalResources} {totalResources === 1 ? 'resource' : 'resources'}</span>
+          )}
+        </div>
+      </div>
 
       {chunks.length === 0 ? (
-        <p className="page-status">No chunks found for this unit.</p>
+        <div className="empty-state">
+          <div className="empty-state-icon">🧩</div>
+          <p>No chunks have been added to this unit yet.</p>
+        </div>
       ) : (
-        <ul className="chunk-list">
-          {chunks.map(chunk => {
-            const resources = resourcesByChunk[chunk.id] ?? []
-            return (
-              <li key={chunk.id} className="chunk-card">
-                <h2>{chunk.title}</h2>
-                {chunk.description && (
-                  <p className="chunk-description">{chunk.description}</p>
-                )}
-
-                {resources.length === 0 ? (
-                  <p className="page-status">No resources attached yet.</p>
-                ) : (
-                  <ul className="resource-list">
-                    {resources.map(r => (
-                      <li key={r.id} className="resource-item">
-                        <span className="resource-type">{r.type}</span>
-                        <span className="resource-title">{r.title}</span>
-                        {r.purpose && (
-                          <span className="resource-purpose">{r.purpose}</span>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            )
-          })}
-        </ul>
+        <div className="chunk-list">
+          {chunks.map(chunk => (
+            <ChunkCard
+              key={chunk.id}
+              chunk={chunk}
+              resources={resourcesByChunk[chunk.id] ?? []}
+              navContext={navContext}
+            />
+          ))}
+        </div>
       )}
     </div>
   )

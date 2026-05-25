@@ -1,0 +1,157 @@
+{
+  "id": "14-augustus-building-programme",
+  "title": "14. Augustus' Building Programme",
+  "description": "Augustus’ use of monumental architecture and urban renewal to promote stability, tradition, and imperial authority.",
+  "questions": [
+    {
+      "question": "What was Augustus’ main aim in undertaking a vast building programme in Rome?",
+      "options": [
+        "To reward the army",
+        "To create a capital worthy of the Empire",
+        "To compete with Alexandria",
+        "To reduce unemployment only"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does Suetonius summarise the impact of Augustus’ building programme on Rome?",
+      "options": [
+        "Rome became militarised",
+        "Rome was expanded beyond its walls",
+        "Rome was transformed from brick to marble",
+        "Rome declined architecturally"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which source outlines the full scale of Augustus’ building programme?",
+      "options": [
+        "Tacitus, Annals",
+        "Pliny, Natural History",
+        "Res Gestae",
+        "Strabo, Geography"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the central focus of Augustus’ building programme?",
+      "options": [
+        "The Capitoline Hill",
+        "The Palatine Palace",
+        "The Augustan Forum",
+        "The Circus Maximus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What temple dominated the Augustan Forum?",
+      "options": [
+        "Temple of Jupiter Optimus Maximus",
+        "Temple of Apollo",
+        "Temple of Venus Genetrix",
+        "Temple of Mars Ultor"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did the Augustan Forum function as propaganda?",
+      "options": [
+        "It displayed Rome’s wealth only",
+        "It presented Augustus as a victorious general and restorer of tradition",
+        "It glorified the Senate",
+        "It emphasised democratic values"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What policy did Augustus follow when restoring older buildings?",
+      "options": [
+        "He demolished and rebuilt them",
+        "He added his own name prominently",
+        "He left the original builders’ names intact",
+        "He sold them to private citizens"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which authors record the restoration of Rome’s aqueducts under Augustus?",
+      "options": [
+        "Suetonius and Tacitus",
+        "Livy and Cassius Dio",
+        "Strabo and Pliny",
+        "Velleius and Seneca"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Augustus involve other elites in the building programme?",
+      "options": [
+        "By forcing them to fund projects",
+        "By encouraging leading citizens to contribute",
+        "By taxing the Senate",
+        "By excluding them"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which prominent figures carried out major public works alongside Augustus?",
+      "options": [
+        "Maecenas and Lepidus",
+        "Tiberius and Agrippa",
+        "Marcellus and Drusus",
+        "Gaius and Lucius"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What economic effect did the building programme have on Rome’s population?",
+      "options": [
+        "It caused inflation",
+        "It provided widespread employment",
+        "It reduced wages",
+        "It displaced workers"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why was Augustus careful not to attach his name to restored buildings?",
+      "options": [
+        "He disliked publicity",
+        "To appear respectful of tradition and Republican values",
+        "He lacked legal authority",
+        "The Senate forbade it"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does the building programme link to Augustus’ claim to have restored the Republic?",
+      "options": [
+        "It reduced senatorial power",
+        "It focused on military fortifications",
+        "It emphasised continuity with Rome’s past",
+        "It removed old monuments"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which phrase best captures Augustus’ own assessment of his building achievements?",
+      "options": [
+        "‘A city without equal’",
+        "‘A Rome reborn’",
+        "‘Found a city of brick, left it of marble’",
+        "‘The eternal city’"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What wider political message did Augustus’ building programme convey?",
+      "options": [
+        "Military dominance",
+        "Economic exploitation",
+        "Stability, peace, and renewal",
+        "Republican decline"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

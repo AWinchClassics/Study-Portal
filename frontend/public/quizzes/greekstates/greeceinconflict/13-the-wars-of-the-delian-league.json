@@ -1,0 +1,257 @@
+{
+  "id": "13-the-wars-of-the-delian-league",
+  "title": "13. The Wars of the Delian League",
+  "description": "Athenian campaigns between 478–469 BCE and their role in transforming the Delian League into an empire.",
+  "questions": [
+    {
+      "question": "What period is covered by the Wars of the Delian League?",
+      "options": [
+        "480–470 BCE",
+        "469–460 BCE",
+        "490–480 BCE",
+        "478–469 BCE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which historian provides the main account of these wars?",
+      "options": [
+        "Thucydides",
+        "Xenophon",
+        "Plutarch",
+        "Herodotus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the strategic importance of Eion?",
+      "options": [
+        "A naval base for Athens",
+        "A trading hub for Sparta",
+        "A religious centre",
+        "A Persian supply depot"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did the Persian commander at Eion respond to imminent defeat?",
+      "options": [
+        "He negotiated terms",
+        "He fled the city",
+        "He killed himself and his family",
+        "He surrendered"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In which years did the siege of Eion take place?",
+      "options": [
+        "472 BCE",
+        "476–475 BCE",
+        "478–477 BCE",
+        "474–473 BCE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did Athens target Scyrus?",
+      "options": [
+        "It was a pirate stronghold",
+        "It refused tribute",
+        "It controlled grain routes",
+        "It was allied with Sparta"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What oracle instruction influenced the conquest of Scyrus?",
+      "options": [
+        "To honour Athena",
+        "To attack Persia",
+        "To recover the bones of Theseus",
+        "To found a colony"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was a key result of the conquest of Scyrus?",
+      "options": [
+        "Loss of Athenian ships",
+        "Improved trade with Thrace",
+        "Spartan intervention",
+        "Persian retaliation"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why was Carystos coerced into joining the League?",
+      "options": [
+        "It supported Sparta",
+        "It refused tribute",
+        "It revolted",
+        "It avoided membership and might aid Persia"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "In which year was Carystos forced into the League?",
+      "options": [
+        "474 BCE",
+        "473 BCE",
+        "470 BCE",
+        "472 BCE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was significant about the revolt of Naxos?",
+      "options": [
+        "It succeeded",
+        "It involved Persia",
+        "It was the first loss of League autonomy",
+        "It ended the League"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What consequences did Naxos likely suffer after its revolt?",
+      "options": [
+        "Spartan occupation",
+        "Complete destruction",
+        "Loss of fleet and autonomy",
+        "Persian control"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In which year did the revolt of Naxos occur?",
+      "options": [
+        "470 BCE",
+        "469 BCE",
+        "471 BCE",
+        "472 BCE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why did Cimon campaign in Caria?",
+      "options": [
+        "To remove remaining Persian control",
+        "To collect tribute",
+        "To defend Athens",
+        "To punish Sparta"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What city initially refused to revolt from Persia during Cimon’s campaign?",
+      "options": [
+        "Miletus",
+        "Phaselis",
+        "Halicarnassus",
+        "Ephesus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Cimon deal with Phaselis?",
+      "options": [
+        "He besieged the city",
+        "He negotiated peacefully",
+        "He attacked the city and countryside",
+        "He ignored it"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Where did Cimon defeat the Persian navy?",
+      "options": [
+        "At the Eurymedon River",
+        "At Cyprus",
+        "At Salamis",
+        "At Mycale"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was defeated at the Battle of Eurymedon?",
+      "options": [
+        "Only the Persian army",
+        "Only the Persian navy",
+        "Greek rebels",
+        "Both Persian land and naval forces"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How were the spoils from Eurymedon used?",
+      "options": [
+        "To construct major Athenian fortifications",
+        "To build temples only",
+        "To pay tribute",
+        "To fund colonies"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which structures benefited from the spoils of Eurymedon?",
+      "options": [
+        "Temple of Athena Nike",
+        "Piraeus docks",
+        "Long Walls and Acropolis walls",
+        "Parthenon and Agora"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What pattern of Athenian behaviour is evident during these wars?",
+      "options": [
+        "Strict equality among allies",
+        "Declining involvement",
+        "Increasing coercion of allies",
+        "Spartan dominance"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which League member’s treatment foreshadowed later Athenian imperialism?",
+      "options": [
+        "Carystos",
+        "Phaselis",
+        "Scyrus",
+        "Naxos"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was the overall impact of these wars on Athens?",
+      "options": [
+        "Growth of wealth and influence",
+        "End of the League",
+        "Weakening of power",
+        "Loss of allies"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What geographical area remained under Persian control until Eurymedon?",
+      "options": [
+        "Ionia",
+        "Cyprus",
+        "Thrace",
+        "Caria"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What long-term consequence followed these campaigns?",
+      "options": [
+        "Collapse of Athenian navy",
+        "Persian reconquest",
+        "Immediate peace",
+        "Transformation of the League into an empire"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

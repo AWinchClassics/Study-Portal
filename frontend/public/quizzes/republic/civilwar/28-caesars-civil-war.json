@@ -1,0 +1,257 @@
+{
+  "id": "28-caesars-civil-war",
+  "title": "28. Caesar’s Civil War",
+  "description": "An overview of Caesar’s Civil War (49–45 BCE), tracing key campaigns, battles, and the defeat of Pompey and the Optimates.",
+  "questions": [
+    {
+      "question": "Why did Pompey and the Optimates evacuate Rome in 49 BCE?",
+      "options": [
+        "The Senate ordered retreat",
+        "Caesar offered peace",
+        "Pompey’s army was not ready",
+        "They feared popular unrest"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Where did Pompey and the Senate initially flee after leaving Rome?",
+      "options": [
+        "Corfinium",
+        "Greece",
+        "Capua",
+        "Brundisium"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which Pompeian commander surrendered three legions at Corfinium?",
+      "options": [
+        "Afranius",
+        "Varro",
+        "Labienus",
+        "Ahenobarbus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Where did Pompey and the senators head after Capua?",
+      "options": [
+        "Sicily",
+        "Africa",
+        "Brundisium",
+        "Spain"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why did Caesar not immediately follow Pompey to Greece?",
+      "options": [
+        "He lacked ships",
+        "The Senate recalled him",
+        "He feared ambush",
+        "He wished to secure Italy and Spain"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Caesar fund the civil war after entering Rome?",
+      "options": [
+        "Plundering the treasury",
+        "Allied contributions",
+        "Private loans",
+        "Provincial taxes"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which provinces did Caesar secure for grain supply?",
+      "options": [
+        "Africa and Spain",
+        "Sicily and Sardinia",
+        "Asia and Syria",
+        "Gaul and Illyricum"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who commanded Pompeian forces in Spain in 49 BCE?",
+      "options": [
+        "Afranius and Varro",
+        "Labienus and Scipio",
+        "Pompey’s sons",
+        "Cato and Juba"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was securing Spain important for Caesar?",
+      "options": [
+        "To gain wealth",
+        "To remove Pompeian forces",
+        "To gain allies",
+        "To recruit troops"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where did Caesar attempt to blockade Pompey in Greece?",
+      "options": [
+        "Dyrrhachium",
+        "Pharsalus",
+        "Thessaly",
+        "Athens"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Where was Pompey finally defeated by Caesar?",
+      "options": [
+        "Thapsus",
+        "Pharsalus",
+        "Dyrrhachium",
+        "Munda"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happened to Pompey after fleeing Pharsalus?",
+      "options": [
+        "Exiled",
+        "Captured by Caesar",
+        "Killed in Egypt",
+        "Retired from politics"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Caesar react to Pompey’s death?",
+      "options": [
+        "Indifferent",
+        "Relieved",
+        "Celebrated",
+        "Horrified"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "In which dynastic conflict did Caesar become involved in Egypt?",
+      "options": [
+        "Antony and Octavian",
+        "Cleopatra and Ptolemy XIII",
+        "Seleucid dispute",
+        "Cleopatra and Ptolemy XII"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which enemy did Caesar defeat in Asia Minor in 47 BCE?",
+      "options": [
+        "Juba",
+        "Antiochus",
+        "Pharnaces",
+        "Mithridates"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What issue did Caesar face on returning to Rome in 47 BCE?",
+      "options": [
+        "Economic collapse",
+        "Senatorial opposition",
+        "Veteran mutiny",
+        "Foreign invasion"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who led the Pompeian forces in Africa?",
+      "options": [
+        "Metellus Scipio",
+        "Pompey",
+        "Afranius",
+        "Varro"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which African king supported the Pompeians?",
+      "options": [
+        "Ptolemy",
+        "Juba",
+        "Pharnaces",
+        "Antiochus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where did Caesar defeat the Pompeians in Africa?",
+      "options": [
+        "Zama",
+        "Carthage",
+        "Thapsus",
+        "Utica"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened to Cato after Thapsus?",
+      "options": [
+        "Executed",
+        "Committed suicide",
+        "Exiled",
+        "Captured"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where did the final phase of the civil war occur?",
+      "options": [
+        "Africa",
+        "Spain",
+        "Asia",
+        "Greece"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which battle effectively ended the civil war?",
+      "options": [
+        "Thapsus",
+        "Pharsalus",
+        "Dyrrhachium",
+        "Munda"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which Pompeian leader escaped after Munda?",
+      "options": [
+        "Sextus Pompeius",
+        "Labienus",
+        "Gnaeus Pompeius",
+        "Afranius"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the outcome for Caesar after the war?",
+      "options": [
+        "Retirement",
+        "Assassination",
+        "Exile",
+        "Unprecedented acclaim"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Overall, what did Caesar’s victory establish?",
+      "options": [
+        "Restoration of Republic",
+        "Caesar’s supremacy",
+        "Senate control",
+        "Pompey’s dominance"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

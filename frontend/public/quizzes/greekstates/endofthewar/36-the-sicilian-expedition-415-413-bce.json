@@ -1,0 +1,257 @@
+{
+  "id": "36-the-sicilian-expedition-415-413-bce",
+  "title": "36. The Sicilian Expedition, 415–413 BCE",
+  "description": "Athens’ catastrophic western expedition, revealing the dangers of overreach and the decisive turning point of the Peloponnesian War.",
+  "questions": [
+    {
+      "question": "What earlier Athenian involvement shows long-term interest in the west?",
+      "options": [
+        "Foundation of Thurii",
+        "Occupation of Melos",
+        "Capture of Amphipolis",
+        "Alliance with Sparta"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which Sicilian city first appealed to Athens for help in 416 BCE?",
+      "options": [
+        "Syracuse",
+        "Leontini",
+        "Segesta",
+        "Selinus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What claim by Segesta persuaded Athens to intervene?",
+      "options": [
+        "Ability to finance the war",
+        "Military strength",
+        "Control of Syracuse",
+        "Spartan support"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which Athenian leader most strongly promoted the expedition?",
+      "options": [
+        "Lamachus",
+        "Nicias",
+        "Demosthenes",
+        "Alcibiades"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which motives did Alcibiades emphasise?",
+      "options": [
+        "Religious duty",
+        "Wealth and further conquest",
+        "Peace with Sparta",
+        "Defence of Attica"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How many ships were initially agreed for the expedition?",
+      "options": [
+        "100",
+        "40",
+        "60",
+        "30"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which three generals were appointed?",
+      "options": [
+        "Nicias, Cleon, Demosthenes",
+        "Lamachus, Demosthenes, Eurymedon",
+        "Nicias, Alcibiades, Lamachus",
+        "Alcibiades, Pericles, Lamachus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which historian records the debates over the expedition?",
+      "options": [
+        "Thucydides",
+        "Plutarch",
+        "Herodotus",
+        "Xenophon"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What incident before departure caused panic in Athens?",
+      "options": [
+        "Desecration of temples",
+        "Plague outbreak",
+        "Spartan invasion",
+        "Mutilation of the hermae"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who was accused in connection with this incident?",
+      "options": [
+        "Demosthenes",
+        "Lamachus",
+        "Alcibiades",
+        "Nicias"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened when Alcibiades was recalled for trial?",
+      "options": [
+        "He defected to Sparta",
+        "He went into exile in Persia",
+        "He was executed",
+        "He returned to Athens"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What strategic advice did Alcibiades give Sparta?",
+      "options": [
+        "Invade Ionia",
+        "Attack Sicily directly",
+        "Sue for peace",
+        "Fortify Decelea"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who was sent to command Syracuse with Spartan backing?",
+      "options": [
+        "Agis",
+        "Archidamus",
+        "Gylippus",
+        "Brasidas"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was Athens’ main siege plan for Syracuse?",
+      "options": [
+        "Capture Selinus first",
+        "Immediate naval assault",
+        "Starve the city by land walls",
+        "Blockade Sicily"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What Athenian weakness became clear at Plemmyrium?",
+      "options": [
+        "Lack of cavalry and supplies",
+        "Poor morale",
+        "Weak navy",
+        "Inexperienced generals"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which Athenian general was killed during the siege?",
+      "options": [
+        "Lamachus",
+        "Demosthenes",
+        "Nicias",
+        "Eurymedon"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why did Nicias refuse to withdraw when advised?",
+      "options": [
+        "Lack of ships",
+        "Orders from Athens",
+        "Fear of Spartan attack",
+        "Fear of Athenian judgement"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What religious event delayed Athenian retreat?",
+      "options": [
+        "Lunar eclipse",
+        "Oracle consultation",
+        "Solar eclipse",
+        "Sacrifice failure"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What innovation helped Syracuse defeat Athens at sea?",
+      "options": [
+        "Heavily reinforced prows",
+        "Ramming tactics",
+        "More triremes",
+        "Fire ships"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What happened to Eurymedon during the naval defeat?",
+      "options": [
+        "He was captured",
+        "He was killed",
+        "He escaped",
+        "He surrendered"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What fate befell Nicias and Demosthenes?",
+      "options": [
+        "Execution",
+        "Imprisonment",
+        "Exile",
+        "Enslavement"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What happened to most captured Athenian soldiers?",
+      "options": [
+        "Executed",
+        "Released",
+        "Imprisoned in quarries",
+        "Sent to the silver mines"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Approximately how many Athenians were captured?",
+      "options": [
+        "4,000",
+        "10,000",
+        "2,000",
+        "7,000"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What immediate effect did the disaster have on Athens?",
+      "options": [
+        "Persian invasion",
+        "Peace with Sparta",
+        "Shock and demoralisation",
+        "Loss of empire"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What is the overall significance of the Sicilian Expedition?",
+      "options": [
+        "It was Athens’ greatest defeat",
+        "It strengthened democracy",
+        "It secured western empire",
+        "It ended the war"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

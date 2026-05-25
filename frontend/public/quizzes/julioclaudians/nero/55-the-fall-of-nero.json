@@ -1,0 +1,257 @@
+{
+  "id": "55-the-fall-of-nero",
+  "title": "55. The Fall of Nero",
+  "description": "An evaluation of the final collapse of Nero’s rule, tracing the roles of Galba, the Senate, and the army in his loss of power and death.",
+  "questions": [
+    {
+      "question": "Which development caused Nero to take the revolt of Vindex more seriously?",
+      "options": [
+        "The involvement of Galba",
+        "A Parthian invasion",
+        "The destruction of Gaul",
+        "A senatorial decree"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What position did Galba hold at the time of the revolt?",
+      "options": [
+        "Legate of Hispania Tarraconensis",
+        "Praetorian Prefect",
+        "Governor of Africa",
+        "Consul"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why did Vindex support Galba?",
+      "options": [
+        "Personal loyalty",
+        "To gain wider support against Nero",
+        "Because Galba led an army",
+        "Because the Senate ordered it"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does Dio Cassius describe Nero’s reaction to Galba’s involvement?",
+      "options": [
+        "Shocked",
+        "Indifferent",
+        "Amused",
+        "Encouraged"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "According to Suetonius, what did Nero do when he decided to act?",
+      "options": [
+        "Addressed the Senate",
+        "Fled immediately",
+        "Mobilised the army",
+        "Packed stage equipment and gathered concubines"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What criticism is made of Nero’s response despite this parody?",
+      "options": [
+        "It lacked practical action",
+        "It was cruel",
+        "It angered the Senate",
+        "It was too violent"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who gathered forces in Upper Germany?",
+      "options": [
+        "Galba",
+        "Verginius Rufus",
+        "Tigellinus",
+        "Vindex"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happened when Rufus’ forces encountered Vindex’s troops?",
+      "options": [
+        "A battle resulting in Vindex’s defeat and suicide",
+        "Roman withdrawal",
+        "A negotiated settlement",
+        "Vindex was captured"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Approximately how many of Vindex’s troops were killed?",
+      "options": [
+        "10,000",
+        "20,000",
+        "5,000",
+        "40,000"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did this not secure Nero’s position?",
+      "options": [
+        "Nero still took no determined action",
+        "The army mutinied",
+        "The Senate intervened",
+        "Galba withdrew"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What title did Galba refuse?",
+      "options": [
+        "General of Caesar",
+        "Imperator",
+        "Caesar",
+        "Emperor"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What title did Galba adopt instead?",
+      "options": [
+        "General of the Senate and People of Rome",
+        "Emperor of Rome",
+        "General of the People",
+        "Defender of the Republic"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Galba’s troops respond to him?",
+      "options": [
+        "They hailed him as imperator",
+        "They executed him",
+        "They ignored him",
+        "They abandoned him"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How much money did Galba offer the Praetorians?",
+      "options": [
+        "40,000 sestertii",
+        "15,000 sestertii",
+        "20,000 sestertii",
+        "30,000 sestertii"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who is associated with this offer to the Praetorians?",
+      "options": [
+        "Burrus",
+        "Seneca",
+        "Tigellinus",
+        "Rufus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What did Verginius Rufus refuse to do?",
+      "options": [
+        "Fight Galba",
+        "Leave Germany",
+        "Accept imperial power",
+        "Support Nero"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "On whose authority did Rufus insist decisions should be made?",
+      "options": [
+        "The Senate and People of Rome",
+        "The army",
+        "The emperor",
+        "The Praetorians"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What action did the Senate take against Nero?",
+      "options": [
+        "Exiled him",
+        "Ordered his arrest",
+        "Stripped his titles",
+        "Declared him a public enemy"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did the Senate justify its decision?",
+      "options": [
+        "Foreign invasion",
+        "Military defeat",
+        "Nero’s impiety",
+        "Support for Vindex and resentment of Nero"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What did Nero do after the Senate’s decision?",
+      "options": [
+        "Surrendered",
+        "Fled Rome",
+        "Addressed the people",
+        "Fought the Senate"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Nero die?",
+      "options": [
+        "Execution",
+        "Assassination",
+        "Forced suicide",
+        "Natural causes"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who carried out Nero’s death?",
+      "options": [
+        "A senator",
+        "Galba’s agent",
+        "A Praetorian",
+        "His servant"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How does Dio Cassius present Nero’s final moments?",
+      "options": [
+        "Ignored",
+        "Brief and unemotional",
+        "Confused and silent",
+        "Highly dramatic"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What were Nero’s reported final words?",
+      "options": [
+        "‘What an artist perishes in me!’",
+        "‘I regret nothing’",
+        "Roma perit",
+        "Acta est fabula"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What overall judgement does the PPT encourage regarding Nero’s fall?",
+      "options": [
+        "It was sudden and unexpected",
+        "It was unjustified",
+        "It was inevitable due to accumulated opposition",
+        "It was a military coup only"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

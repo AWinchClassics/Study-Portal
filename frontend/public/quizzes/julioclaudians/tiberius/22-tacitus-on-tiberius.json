@@ -1,0 +1,207 @@
+{
+  "id": "22-tacitus-on-tiberius",
+  "title": "22. Tacitus on Tiberius",
+  "description": "Tacitus’ interpretation of Tiberius’ reign, shaped by rhetorical technique, senatorial bias, and experiences under tyranny.",
+  "questions": [
+    {
+      "question": "Around what year was Tacitus born?",
+      "options": [
+        "c. 50 CE",
+        "c. 56 CE",
+        "c. 65 CE",
+        "c. 40 CE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Under which emperor did Tacitus begin his senatorial career?",
+      "options": [
+        "Nero",
+        "Vespasian",
+        "Domitian",
+        "Nerva"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which period does Tacitus’ Histories cover?",
+      "options": [
+        "96–117 CE",
+        "27 BCE–14 CE",
+        "68–96 CE",
+        "14–68 CE"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What period is covered by Tacitus’ Annals?",
+      "options": [
+        "The Severan emperors",
+        "The Republic",
+        "The Flavian dynasty",
+        "The Julio-Claudian emperors"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was Tacitus’ stated aim in writing the Annals?",
+      "options": [
+        "To record military campaigns",
+        "To praise Roman emperors",
+        "To entertain through drama",
+        "To show the decline into tyranny"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which emperor’s reign influenced Tacitus’ attitude to tyranny most strongly?",
+      "options": [
+        "Tiberius",
+        "Domitian",
+        "Nero",
+        "Augustus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What rhetorical technique does Tacitus frequently use?",
+      "options": [
+        "Damning aside",
+        "Epic simile",
+        "Dialogue",
+        "Extended speeches"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the purpose of the ‘damning aside’?",
+      "options": [
+        "To praise the emperor subtly",
+        "To contradict earlier praise with negativity",
+        "To explain chronology",
+        "To summarise events"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does Tacitus explain Tiberius’ reluctance to accept power?",
+      "options": [
+        "As senatorial pressure",
+        "As manipulative hypocrisy",
+        "As genuine hesitation",
+        "As illness"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why does Tacitus suggest Tiberius sent Germanicus east?",
+      "options": [
+        "To reward loyalty",
+        "To remove a popular rival",
+        "To expand territory",
+        "For diplomatic skill"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does Tacitus treat rumours in his narrative?",
+      "options": [
+        "He often presents them in detail",
+        "He briefly mentions them only",
+        "He ignores them",
+        "He dismisses them entirely"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What example illustrates Tacitus’ use of rumour?",
+      "options": [
+        "Death of Germanicus",
+        "Death of Augustus",
+        "Plague at Rome",
+        "Fall of Sejanus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which figures receive particularly hostile treatment in Tacitus’ account?",
+      "options": [
+        "Livia and Sejanus",
+        "Agrippina and Drusus",
+        "Germanicus and Piso",
+        "Augustus and Nero"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How does Tacitus present positive aspects of Tiberius’ rule?",
+      "options": [
+        "As central themes",
+        "As irrelevant",
+        "As undermined by negative context",
+        "As proof of fairness"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "According to Syme, why may Tacitus have portrayed Tiberius harshly?",
+      "options": [
+        "Influence of Domitian’s tyranny",
+        "Senatorial pressure",
+        "Personal hatred of Tiberius",
+        "Lack of sources"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What caution does Syme add to this explanation?",
+      "options": [
+        "The explanation is too simple",
+        "Tacitus fabricated events",
+        "Bias explains everything",
+        "Tacitus admired Domitian"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What genre did Tacitus consider history to be?",
+      "options": [
+        "Moral philosophy",
+        "Literature meant to be read aloud",
+        "Pure record",
+        "Scientific analysis"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which aspect of history did Tacitus largely ignore?",
+      "options": [
+        "Moral lessons",
+        "Economic factors",
+        "Provincial administration",
+        "Political intrigue"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why must Tacitus be used carefully as a source?",
+      "options": [
+        "His facts are incorrect",
+        "Interpretation reveals strong bias",
+        "He invents events",
+        "He lacks information"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Overall, how should Tacitus’ account of Tiberius be assessed?",
+      "options": [
+        "As neutral and objective",
+        "As wholly inaccurate",
+        "As unreliable fiction",
+        "As factually grounded but interpretatively biased"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

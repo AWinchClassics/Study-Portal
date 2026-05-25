@@ -1,0 +1,227 @@
+{
+  "id": "53-corbulo-in-armenia",
+  "title": "53. Corbulo in Armenia",
+  "description": "An analysis of Rome’s eastern frontier crisis under Nero, focusing on Corbulo’s campaigns in Armenia and the negotiated settlement with Parthia.",
+  "questions": [
+    {
+      "question": "Where did the greatest external dangers to Nero’s rule arise?",
+      "options": [
+        "In the East",
+        "In Britain",
+        "On the Rhine frontier",
+        "In Africa"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was Armenia strategically important to Rome?",
+      "options": [
+        "It was rich in gold",
+        "It lay between Rome and Parthia",
+        "It bordered Italy",
+        "It controlled access to Britain"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What event in 58 CE triggered conflict in Armenia?",
+      "options": [
+        "A Roman invasion",
+        "A senatorial decree",
+        "Replacement of Rome’s nominee by a Parthian prince",
+        "A Jewish revolt"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who replaced the Roman-backed king of Armenia?",
+      "options": [
+        "A local noble",
+        "The Parthian king himself",
+        "A Roman general",
+        "The Parthian king’s brother"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who advised Nero to respond militarily in Armenia?",
+      "options": [
+        "Seneca",
+        "The Senate",
+        "Corbulo",
+        "Burrus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What major geographical barrier did Corbulo cross during his campaign?",
+      "options": [
+        "The Danube",
+        "The Rhine",
+        "The Euphrates",
+        "The Nile"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which city did Corbulo capture during the campaign?",
+      "options": [
+        "Ctesiphon",
+        "Antioch",
+        "Jerusalem",
+        "Tigranocerta"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What happened to the Parthian-installed Armenian king after Corbulo’s advance?",
+      "options": [
+        "He was executed",
+        "He remained in Armenia",
+        "He surrendered to Rome",
+        "He fled to Parthia"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Whom did Corbulo place on the Armenian throne?",
+      "options": [
+        "A Roman senator",
+        "Paetus",
+        "Tigranes",
+        "Vespasian"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which ancient source describes Corbulo’s campaign in detail?",
+      "options": [
+        "Tacitus’ Annals",
+        "Josephus",
+        "Suetonius",
+        "Cassius Dio"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What additional role did Corbulo assume after the death of Syria’s governor?",
+      "options": [
+        "Praetorian Prefect",
+        "Commander of the Rhine",
+        "Governor of Syria",
+        "Governor of Armenia"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who was left in charge of Armenia after Corbulo moved to Syria?",
+      "options": [
+        "Seneca",
+        "Tigranes",
+        "Burrus",
+        "Caesennius Paetus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What action by Tigranes reignited war in 61 CE?",
+      "options": [
+        "Invading part of Parthia",
+        "Deposing Paetus",
+        "Refusing Roman authority",
+        "Allying with Judea"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was Paetus unable to receive reinforcements?",
+      "options": [
+        "Bad weather",
+        "Roman civil war",
+        "Parthians blocked Syrian support",
+        "Nero recalled the army"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the outcome of Paetus’ campaign?",
+      "options": [
+        "A stalemate",
+        "A Roman defeat",
+        "A negotiated peace",
+        "A Roman victory"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In which year did Corbulo return to Armenia?",
+      "options": [
+        "64 CE",
+        "63 CE",
+        "61 CE",
+        "62 CE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How was the conflict ultimately resolved?",
+      "options": [
+        "Complete Roman conquest",
+        "Negotiated settlement recognising Roman authority",
+        "Permanent Parthian control",
+        "Division of Armenia"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What compromise was agreed regarding the Armenian throne?",
+      "options": [
+        "A Parthian nominee accepted Roman authority",
+        "Joint rule by Rome and Parthia",
+        "The throne was abolished",
+        "A Roman governor would rule"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the broader outcome of the settlement?",
+      "options": [
+        "Continued war",
+        "Immediate rebellion",
+        "About 50 years of peace",
+        "Roman withdrawal from the East"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How was Corbulo’s success commemorated in Rome?",
+      "options": [
+        "A senatorial decree",
+        "A triumph procession",
+        "A victory arch",
+        "Coins in his name"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who received public credit for the Armenian settlement?",
+      "options": [
+        "The Senate",
+        "Nero",
+        "Corbulo",
+        "Paetus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does this episode suggest about Nero’s role in military affairs?",
+      "options": [
+        "He was an active battlefield commander",
+        "He ignored military matters",
+        "He relied heavily on competent generals",
+        "He opposed eastern expansion"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

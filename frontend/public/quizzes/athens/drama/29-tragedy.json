@@ -1,0 +1,247 @@
+{
+  "id": "29-tragedy",
+  "title": "29. Tragedy",
+  "description": "The origins, performance conventions, themes, and surviving works of Greek tragedy in fifth-century Athens.",
+  "questions": [
+    {
+      "question": "From which earlier performance tradition did tragedy develop?",
+      "options": [
+        "Comedy",
+        "Epic poetry",
+        "Rhapsodic recitation",
+        "Dithyramb"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who is traditionally credited with introducing the first actor into tragedy?",
+      "options": [
+        "Thespis",
+        "Sophocles",
+        "Euripides",
+        "Aeschylus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Throughout the fifth century, what role continued to be central in tragedy?",
+      "options": [
+        "The messenger",
+        "The chorus",
+        "The playwright",
+        "The narrator"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How many actors could appear on stage at one time in classical tragedy?",
+      "options": [
+        "One",
+        "Three",
+        "Five",
+        "Two"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the typical size of the chorus?",
+      "options": [
+        "Twelve or fifteen",
+        "Twenty-four",
+        "Six",
+        "Ten"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Where was the chorus positioned during performances?",
+      "options": [
+        "Below the stage",
+        "Behind the scenery",
+        "On the skene roof",
+        "Among the audience"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which element was central to tragic performance alongside speech?",
+      "options": [
+        "Mime",
+        "Silence",
+        "Music and dance",
+        "Improvisation"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What did all performers wear during tragic performances?",
+      "options": [
+        "Armour",
+        "Masks and costumes",
+        "Crowns",
+        "Uniform robes"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which tragedian is known as the ‘father of tragedy’?",
+      "options": [
+        "Euripides",
+        "Sophocles",
+        "Phrynicus",
+        "Aeschylus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Approximately how many of Aeschylus’ plays survive?",
+      "options": [
+        "Six or seven",
+        "Twelve",
+        "Eighteen",
+        "Three"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which tragedian wrote over one hundred plays, of which only six survive?",
+      "options": [
+        "Aeschylus",
+        "Phrynicus",
+        "Euripides",
+        "Sophocles"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which tragedian has the greatest number of surviving plays?",
+      "options": [
+        "Aeschylus",
+        "Sophocles",
+        "Euripides",
+        "Phrynicus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What is the only surviving ‘historical’ tragedy?",
+      "options": [
+        "Trojan Women",
+        "Persians",
+        "The Fall of Miletus",
+        "Eumenides"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did Phrynicus’ Fall of Miletus upset the Athenians?",
+      "options": [
+        "It criticised democracy",
+        "It depicted recent suffering",
+        "It mocked the gods",
+        "It praised Persia"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which play explains the origins of the Athenian legal system?",
+      "options": [
+        "Eumenides",
+        "Oedipus Tyrannus",
+        "Persians",
+        "Hippolytus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What contemporary issue is explored in Euripides’ Trojan Women?",
+      "options": [
+        "Religious reform",
+        "Treatment of the defeated in war",
+        "Colonisation",
+        "Economic inequality"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Tragedy most commonly explored relationships between individuals and what?",
+      "options": [
+        "Foreign states",
+        "The natural world",
+        "The economy",
+        "The gods and the polis"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What central question did tragedy often focus on?",
+      "options": [
+        "Economic success",
+        "The nature of suffering",
+        "Political leadership",
+        "The causes of war"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How are audiences invited to respond to the suffering of tragic heroes?",
+      "options": [
+        "By laughing at them",
+        "By condemning the gods",
+        "By suffering alongside them",
+        "By judging them"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which play famously leaves the suffering of its protagonist unresolved?",
+      "options": [
+        "Persians",
+        "Eumenides",
+        "Oedipus Tyrannus",
+        "Hippolytus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which play ends with much of the suffering resolved?",
+      "options": [
+        "Persians",
+        "Eumenides",
+        "Oedipus Tyrannus",
+        "Trojan Women"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Hippolytus won first prize at the City Dionysia in which year?",
+      "options": [
+        "428 BCE",
+        "425 BCE",
+        "431 BCE",
+        "415 BCE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was Euripides’ earlier version of Hippolytus unsuccessful?",
+      "options": [
+        "It lacked gods",
+        "Phaedra was portrayed as shameless",
+        "It was too long",
+        "The chorus was reduced"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In Hippolytus, what limits human freedom of action?",
+      "options": [
+        "Divine intervention",
+        "Tradition",
+        "Law",
+        "Economic status"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

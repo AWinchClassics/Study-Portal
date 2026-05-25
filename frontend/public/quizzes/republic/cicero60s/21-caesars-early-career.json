@@ -1,0 +1,257 @@
+{
+  "id": "21-caesars-early-career",
+  "title": "21. Caesar’s Early Career",
+  "description": "An overview of Julius Caesar’s early life, political advancement, and formative experiences before his rise to supreme power.",
+  "questions": [
+    {
+      "question": "In which year did Caesar become head of his family?",
+      "options": [
+        "85 BCE",
+        "84 BCE",
+        "88 BCE",
+        "82 BCE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How old was Caesar when he became head of his family?",
+      "options": [
+        "18",
+        "16",
+        "14",
+        "15"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Whose daughter did Caesar marry in 84 BCE?",
+      "options": [
+        "Sulla",
+        "Crassus",
+        "Marius",
+        "Cinna"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What priesthood did Caesar hold as a young man?",
+      "options": [
+        "Quindecimvir",
+        "Flamen Dialis",
+        "Pontifex",
+        "Augur"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did Sulla proscribe Caesar in 82 BCE?",
+      "options": [
+        "Refusal to divorce Cinna’s daughter",
+        "Military disobedience",
+        "Political rivalry",
+        "Debt"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What ultimately happened to Caesar’s proscription?",
+      "options": [
+        "It remained in force",
+        "He was executed",
+        "It was retracted",
+        "He fled Rome"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In which battle did Caesar win the Civic Crown?",
+      "options": [
+        "Battle of Mutina",
+        "Battle of Pharsalus",
+        "Battle of Munda",
+        "Siege of Mytilene"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What honour did the Civic Crown represent?",
+      "options": [
+        "Consular rank",
+        "Saving a Roman citizen’s life",
+        "Victory in battle",
+        "Triumph"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "When did Caesar return to Rome to begin a legal career?",
+      "options": [
+        "75 BCE",
+        "74 BCE",
+        "81 BCE",
+        "78 BCE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why did Caesar travel to Rhodes in 75 BCE?",
+      "options": [
+        "Diplomacy",
+        "Rhetorical training",
+        "Military command",
+        "Exile"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happened to Caesar while travelling to Rhodes?",
+      "options": [
+        "He was recalled to Rome",
+        "He was shipwrecked",
+        "He was captured by pirates",
+        "He joined an army"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Caesar respond to his pirate captors?",
+      "options": [
+        "Joined them",
+        "Escaped secretly",
+        "Paid ransom quietly",
+        "Later captured and executed them"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What did Caesar do in 74 BCE in response to Mithridates?",
+      "options": [
+        "Returned to Rome",
+        "Joined Lucullus",
+        "Negotiated peace",
+        "Raised his own troops"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Where did Caesar serve as quaestor in 69/68 BCE?",
+      "options": [
+        "Spain",
+        "Africa",
+        "Gaul",
+        "Asia"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which relative’s funeral speech enhanced Caesar’s popularity?",
+      "options": [
+        "His wife",
+        "His mother",
+        "His father",
+        "His aunt, wife of Marius"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What personal losses did Caesar suffer around 69/68 BCE?",
+      "options": [
+        "Death of wife only",
+        "Death of father only",
+        "Death of aunt and wife",
+        "No losses"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Whom did Caesar marry in 67 BCE?",
+      "options": [
+        "Cornelia",
+        "Pompeia",
+        "Servilia",
+        "Calpurnia"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Whose granddaughter was Pompeia?",
+      "options": [
+        "Crassus",
+        "Pompey",
+        "Marius",
+        "Sulla"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which office did Caesar hold in 65 BCE?",
+      "options": [
+        "Aedile",
+        "Quaestor",
+        "Consul",
+        "Praetor"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How were Caesar’s games as aedile funded?",
+      "options": [
+        "Personal wealth",
+        "Loans from Crassus",
+        "State funds",
+        "Provincial taxes"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "To which major religious office was Caesar elected in 63 BCE?",
+      "options": [
+        "Pontifex Maximus",
+        "Augur",
+        "Flamen Dialis",
+        "Censor"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Caesar secure this election?",
+      "options": [
+        "Bribery funded by Crassus",
+        "Popular vote alone",
+        "Military support",
+        "Senatorial backing"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What legal issue arose during the trial of Rabirius?",
+      "options": [
+        "Validity of the SCU",
+        "Rights of tribunes",
+        "Military command",
+        "Use of torture"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why did Caesar divorce Pompeia in 62 BCE?",
+      "options": [
+        "Financial reasons",
+        "Infidelity",
+        "Political pressure",
+        "Bona Dea scandal"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What condition did Crassus impose before Caesar left for Spain in 61 BCE?",
+      "options": [
+        "Marriage arrangement",
+        "Military oath",
+        "Payment of Caesar’s debts",
+        "Political alliance"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

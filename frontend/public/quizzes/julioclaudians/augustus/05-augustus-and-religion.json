@@ -1,0 +1,177 @@
+{
+  "id": "05-augustus-and-religion",
+  "title": "05. Augustus and Religion",
+  "description": "Augustus’ use of traditional and new religious practices to legitimise and reinforce his authority.",
+  "questions": [
+    {
+      "question": "What was Augustus’ overall approach to religion during his reign?",
+      "options": [
+        "Radical religious reform",
+        "Complete tolerance of all cults",
+        "Revival and restoration of traditional religion",
+        "Replacement of Roman religion with emperor worship"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Augustus use priestly colleges to strengthen his authority?",
+      "options": [
+        "By abolishing them",
+        "By becoming a member of each college",
+        "By placing them under Senate control",
+        "By restricting membership to equites"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which position gave Augustus ultimate authority over Roman religion from 12 BCE?",
+      "options": [
+        "Augur",
+        "Flamen Dialis",
+        "Pontifex Maximus",
+        "Rex Sacrorum"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does the revival of festivals such as the Lupercalia suggest about Augustus’ aims?",
+      "options": [
+        "Promotion of foreign cults",
+        "Rejection of tradition",
+        "Emphasis on Rome’s ancient customs",
+        "Military propaganda"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why did Augustus build temples to gods such as Mars and Divine Julius?",
+      "options": [
+        "To weaken senatorial religion",
+        "To emphasise his divine ancestry and achievements",
+        "To introduce new religions",
+        "To suppress traditional worship"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Augustus link himself to the worship of the Lares?",
+      "options": [
+        "By banning their worship",
+        "By associating his Genius with them",
+        "By replacing them with foreign gods",
+        "By moving their shrines to temples"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does Augustus’ encouragement of Lares worship indicate about his religious policy?",
+      "options": [
+        "Focus on elite religion only",
+        "Neglect of popular religion",
+        "Engagement with everyday religious practice",
+        "Opposition to household cults"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which new deities were formalised during Augustus’ reign?",
+      "options": [
+        "Jupiter and Juno",
+        "Fortuna, Pax, and Mercury",
+        "Isis and Serapis",
+        "Apollo and Mars"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Augustus associate himself with these new deities?",
+      "options": [
+        "By claiming to be divine",
+        "By attaching his name to them",
+        "By abolishing their cults",
+        "By dedicating foreign temples"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which poet refers to Augustus in divine terms?",
+      "options": [
+        "Virgil",
+        "Ovid",
+        "Horace",
+        "Propertius"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What discrepancy exists in sources regarding temple restoration?",
+      "options": [
+        "Whether temples existed",
+        "The number of temples restored",
+        "The purpose of restoration",
+        "The location of temples"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which source claims Augustus restored 82 temples?",
+      "options": [
+        "Virgil",
+        "Suetonius",
+        "Res Gestae",
+        "Tacitus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Virgil differ in his account of temple restoration?",
+      "options": [
+        "He denied restoration",
+        "He gave a much higher figure",
+        "He ignored religion entirely",
+        "He criticised Augustus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Augustus treat foreign cults within Rome?",
+      "options": [
+        "He encouraged all of them",
+        "He suppressed or restricted some",
+        "He replaced Roman cults with them",
+        "He ignored them completely"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which foreign cults were banned in Rome under Augustus?",
+      "options": [
+        "Eleusinian cults",
+        "Jewish worship",
+        "Isis and Serapis",
+        "Apollo and Mars"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does Augustus’ tolerance of Jewish practices suggest?",
+      "options": [
+        "Complete religious freedom",
+        "Selective tolerance based on political stability",
+        "Rejection of Roman religion",
+        "Personal conversion"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does Augustus’ initiation into the Eleusinian Mysteries demonstrate?",
+      "options": [
+        "Hostility to Greek religion",
+        "His personal atheism",
+        "Willingness to engage with respected Greek cults",
+        "Desire to abolish Roman religion"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

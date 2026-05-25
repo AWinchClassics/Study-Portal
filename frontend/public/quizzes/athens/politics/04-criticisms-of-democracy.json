@@ -1,0 +1,167 @@
+{
+  "id": "04-criticisms-of-democracy",
+  "title": "04. Criticisms of Democracy",
+  "description": "Ancient critiques of Athenian democracy from historians, playwrights, and philosophers.",
+  "questions": [
+    {
+      "question": "How did Herodotus generally view democracy?",
+      "options": [
+        "As the most noble constitution despite its flaws",
+        "As inherently corrupt",
+        "As inferior to oligarchy",
+        "As unsuitable for Athens"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What flaw in democracy did Herodotus particularly criticise?",
+      "options": [
+        "Excessive power of elites",
+        "Lack of restraint among the people",
+        "Absence of law courts",
+        "Military weakness"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "When did Thucydides believe democracy functioned best?",
+      "options": [
+        "Under Cleisthenes",
+        "During the Persian Wars",
+        "Under strong leadership, especially Pericles",
+        "After the Peloponnesian War"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How does Thucydides portray democracy after Pericles’ death?",
+      "options": [
+        "Efficient and disciplined",
+        "More egalitarian",
+        "Strongly guided by the law courts",
+        "Weak, fickle, and incompetent"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why is the Old Oligarch highly critical of democracy?",
+      "options": [
+        "It empowers the poor at the expense of the elite",
+        "It excludes naval forces",
+        "It concentrates power in magistrates",
+        "It limits political participation"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What positive point does the Old Oligarch acknowledge about democracy?",
+      "options": [
+        "It encourages moral behaviour",
+        "The poor deserve influence due to their naval importance",
+        "It promotes philosophical debate",
+        "It strengthens the Areopagus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What problem did the Peloponnesian War expose in democratic decision-making?",
+      "options": [
+        "Lack of religious authority",
+        "Weak naval leadership",
+        "Poor or misguided decisions by the demos",
+        "Excessive control by generals"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who were often blamed for misleading the demos during the war?",
+      "options": [
+        "Generals",
+        "Philosophers",
+        "Magistrates",
+        "Demagogues"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Aristophanes criticise democracy?",
+      "options": [
+        "Through satire mocking the demos and its leaders",
+        "Through philosophical treatises",
+        "Through historical analysis",
+        "Through legal speeches"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which plays by Aristophanes directly criticise Athenian politics?",
+      "options": [
+        "Frogs and Clouds",
+        "Wasps and Knights",
+        "Birds and Lysistrata",
+        "Peace and Frogs"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What general concern did philosophers have about democracy?",
+      "options": [
+        "Excessive military power",
+        "Economic inequality",
+        "Rule by the uninformed masses",
+        "Lack of religious observance"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which philosophers are associated with critiques of democracy?",
+      "options": [
+        "Socrates and Xenophon",
+        "Herodotus and Thucydides",
+        "Solon and Cleisthenes",
+        "Plato and Aristotle"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What analogy does Plato use to criticise democracy in the Republic?",
+      "options": [
+        "A ship with an unqualified crew",
+        "A collapsing building",
+        "A diseased body",
+        "A broken law code"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What second analogy does Plato use to explain democratic weakness?",
+      "options": [
+        "A shepherd and flock",
+        "An animal tamer",
+        "A judge and jury",
+        "A craftsman and tools"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "According to critics, what made democracy especially vulnerable?",
+      "options": [
+        "Lack of written laws",
+        "Excessive military commitments",
+        "Susceptibility to persuasion and rhetoric",
+        "Absence of elections"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Overall, what do these criticisms suggest about Athenian democracy?",
+      "options": [
+        "It was universally admired",
+        "It failed immediately",
+        "It worked only in theory",
+        "It had strengths but serious weaknesses"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

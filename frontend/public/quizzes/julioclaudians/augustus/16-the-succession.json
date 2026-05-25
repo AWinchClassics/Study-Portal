@@ -1,0 +1,187 @@
+{
+  "id": "16-the-succession",
+  "title": "16. The Succession",
+  "description": "How Augustus attempted to manage succession and the problems created by Rome’s non-hereditary political system.",
+  "questions": [
+    {
+      "question": "Why was succession a particular problem for Augustus?",
+      "options": [
+        "He refused to plan for it",
+        "He had no natural son",
+        "The Senate controlled inheritance",
+        "The principate was hereditary by law"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What personal factor encouraged Augustus to plan carefully for succession?",
+      "options": [
+        "Pressure from the Senate",
+        "Fear of civil war",
+        "Recurrent ill-health",
+        "Military rebellion"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why could Augustus not simply pass on the principate like a monarchy?",
+      "options": [
+        "Roman law forbade inheritance of power",
+        "The army opposed it",
+        "The Senate rejected emperors",
+        "The people elected rulers"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What lesson may Augustus have drawn from the death of Julius Caesar?",
+      "options": [
+        "That assassinations were inevitable",
+        "That succession needed careful management",
+        "That the Senate could not be trusted",
+        "That military power was unnecessary"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Augustus generally promote potential successors?",
+      "options": [
+        "By naming them emperors",
+        "By granting them military commands only",
+        "By associating them with offices and powers",
+        "By holding public elections"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which powers were commonly granted to possible heirs?",
+      "options": [
+        "Dictatorship and censorship",
+        "Consular imperium only",
+        "Proconsular imperium and tribunician potestas",
+        "Praetorship alone"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who was Augustus’ first intended successor?",
+      "options": [
+        "Agrippa",
+        "Tiberius",
+        "Marcellus",
+        "Germanicus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What signalled Marcellus’ promotion as heir?",
+      "options": [
+        "Appointment as consul",
+        "Permission to hold office ten years early",
+        "Adoption by Augustus",
+        "Grant of tribunician power"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did Marcellus cease to be a candidate for succession?",
+      "options": [
+        "He was exiled",
+        "He retired",
+        "He died in 23 BCE",
+        "He lost Senate support"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was Agrippa considered a potential successor?",
+      "options": [
+        "He was Augustus’ nephew",
+        "He held key constitutional powers",
+        "He controlled Egypt",
+        "He was popular with the plebs"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which evidence suggests Agrippa was almost Augustus’ equal?",
+      "options": [
+        "His command of Rome",
+        "His portrayal as colleague on coins",
+        "His election as consul for life",
+        "His Senate speeches"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which heirs were designated princeps iuventutis?",
+      "options": [
+        "Tiberius and Germanicus",
+        "Agrippa Postumus and Marcellus",
+        "Gaius and Lucius Caesar",
+        "Drusus and Germanicus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What honours were given to Gaius and Lucius Caesar at a young age?",
+      "options": [
+        "Governorships",
+        "Military commands",
+        "Designation as consuls",
+        "Tribunician power"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why did Augustus’ plans for Gaius and Lucius fail?",
+      "options": [
+        "They opposed Augustus",
+        "They were exiled",
+        "They died prematurely",
+        "They lost popularity"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How does Velleius Paterculus portray the accession of Tiberius?",
+      "options": [
+        "As violent and contested",
+        "As smooth and inevitable",
+        "As imposed by the army",
+        "As unpopular"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What accusation does Tacitus make regarding Tiberius’ succession?",
+      "options": [
+        "That the Senate chose him",
+        "That Augustus disliked him",
+        "That Livia influenced his promotion",
+        "That he seized power by force"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was Tiberius required to adopt Germanicus?",
+      "options": [
+        "To reward Germanicus",
+        "To strengthen the Julian bloodline",
+        "To weaken Tiberius’ authority",
+        "To satisfy the army"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What cynical explanation does Tacitus give for Augustus choosing Tiberius?",
+      "options": [
+        "Tiberius was the most popular",
+        "Tiberius was easily controlled",
+        "Tiberius’ flaws made Augustus look better",
+        "Tiberius was the only option"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

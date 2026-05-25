@@ -1,0 +1,187 @@
+{
+  "id": "06-athens-and-her-empire",
+  "title": "06. Athens and her Empire",
+  "description": "Athenian imperial control, criticism, and decision-making during the fifth century BCE.",
+  "questions": [
+    {
+      "question": "How does the Old Oligarch characterise Athens’ treatment of allied oligarchies?",
+      "options": [
+        "As deliberately undermining elite power",
+        "As respectful of local autonomy",
+        "As inconsistent and weak",
+        "As motivated by religious concerns"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What economic criticism does the Old Oligarch make about Athenian tribute policy?",
+      "options": [
+        "Tribute was too low to be effective",
+        "Athens charged excessive tribute regardless of allies’ ability to pay",
+        "Tribute was shared equally among allies",
+        "Tribute was only temporary"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why does the Old Oligarch claim Athens wanted allies to be financially weak?",
+      "options": [
+        "To punish rebellion",
+        "To enrich the Assembly",
+        "To prevent allies from defecting",
+        "To expand democracy"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why must historians treat this claim with caution?",
+      "options": [
+        "It contradicts Thucydides",
+        "It is unsupported by evidence",
+        "It ignores tribute records",
+        "It is written too late"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What legal practice does the Old Oligarch criticise regarding allied states?",
+      "options": [
+        "Forcing allies to come to Athens for trials",
+        "Executing allied elites",
+        "Removing local courts",
+        "Imposing Athenian magistrates"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What motive does the Old Oligarch attribute to this legal policy?",
+      "options": [
+        "Ensuring justice",
+        "Extracting rent and tax from visitors",
+        "Promoting democracy",
+        "Speeding up trials"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What alternative explanation for this policy is suggested in the PPT?",
+      "options": [
+        "It reduced corruption",
+        "It strengthened oligarchies",
+        "It protected democratic allies from oligarchic abuse",
+        "It discouraged trade"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why would the Old Oligarch be unlikely to acknowledge this explanation?",
+      "options": [
+        "He lacked information",
+        "He supported democracy",
+        "He distrusted Athens",
+        "His political views were hostile to democracy"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "When did the Mytilene Debate take place?",
+      "options": [
+        "427 BCE",
+        "431 BCE",
+        "421 BCE",
+        "404 BCE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was Mytilene’s status within the Athenian Empire before the revolt?",
+      "options": [
+        "A tribute-paying subject state",
+        "An ally exempt from tribute",
+        "A cleruchy",
+        "A democracy"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What type of governments controlled most cities on Lesbos?",
+      "options": [
+        "Tyrannies",
+        "Democracies",
+        "Oligarchies",
+        "Monarchies"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which city on Lesbos remained democratic and loyal to Athens?",
+      "options": [
+        "Mytilene",
+        "Antissa",
+        "Eresos",
+        "Methymna"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who led the Athenian force sent against Mytilene?",
+      "options": [
+        "Paches",
+        "Cleon",
+        "Nicias",
+        "Diodotus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the initial decision of the Athenian Assembly regarding punishment?",
+      "options": [
+        "Fines only",
+        "Execution of men and enslavement of women and children",
+        "Destruction of the city",
+        "Confiscation of land"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who argued for a more lenient policy in the second debate?",
+      "options": [
+        "Cleon",
+        "Paches",
+        "Diodotus",
+        "Pericles"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was Diodotus’ main argument?",
+      "options": [
+        "Justice demanded mercy",
+        "The gods would punish Athens",
+        "The empire was collapsing",
+        "Leniency was in Athens’ self-interest"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What ultimately happened to the Mytileneans?",
+      "options": [
+        "Only the revolt leaders were executed",
+        "All men were killed",
+        "The city was destroyed",
+        "They were enslaved"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does the Mytilene Debate reveal about Athenian imperial decision-making?",
+      "options": [
+        "It was purely moral",
+        "It could be harsh, impulsive, but also self-correcting",
+        "It was dominated by oligarchs",
+        "It always favoured leniency"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

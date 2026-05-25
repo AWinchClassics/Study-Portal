@@ -1,0 +1,257 @@
+{
+  "id": "18-ciceros-early-career",
+  "title": "18. Cicero’s Early Career",
+  "description": "A study of Cicero’s early military service, rise through the cursus honorum, and emergence as a leading advocate before his consulship.",
+  "questions": [
+    {
+      "question": "During which conflict did Cicero first serve in the army?",
+      "options": [
+        "The Jugurthine War",
+        "Sulla’s Civil War",
+        "The Social War",
+        "The Third Servile War"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Under which commanders did Cicero serve during the Social War?",
+      "options": [
+        "Pompey and Crassus",
+        "Metellus and Pompey",
+        "Marius and Sulla",
+        "Sulla and Strabo"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "When did Cicero’s legal career begin?",
+      "options": [
+        "90–88 BCE",
+        "83–81 BCE",
+        "75 BCE",
+        "70 BCE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which case first brought Cicero to public attention?",
+      "options": [
+        "Trial of Sextus Roscius",
+        "Pro Murena",
+        "Pro Verrem",
+        "In Catilinam"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was defending Sextus Roscius risky for Cicero?",
+      "options": [
+        "It challenged Pompey",
+        "It involved foreign allies",
+        "Roscius was guilty",
+        "It opposed Sulla’s supporters"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What office did Cicero hold in Sicily?",
+      "options": [
+        "Quaestor",
+        "Tribune",
+        "Praetor",
+        "Aedile"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What reputation did Cicero gain as quaestor?",
+      "options": [
+        "Harsh taxation",
+        "Military efficiency",
+        "Severity",
+        "Fairness"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why did the Sicilians ask Cicero to prosecute Verres?",
+      "options": [
+        "He opposed the Senate",
+        "He had been fair as quaestor",
+        "He was related to them",
+        "He was famous"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What crime was Verres accused of?",
+      "options": [
+        "Provincial extortion",
+        "Bribery",
+        "Conspiracy",
+        "Treason"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why did Verres expect acquittal?",
+      "options": [
+        "Senatorial juries",
+        "Cicero’s inexperience",
+        "Weak evidence",
+        "Popular support"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Cicero secure victory against Verres?",
+      "options": [
+        "Violence",
+        "Tribunician veto",
+        "Political alliances",
+        "Overwhelming evidence"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What happened to Verres before the trial concluded?",
+      "options": [
+        "He was acquitted",
+        "He was executed",
+        "He was imprisoned",
+        "He fled into exile"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "In which year did the prosecution of Verres take place?",
+      "options": [
+        "72 BCE",
+        "70 BCE",
+        "69 BCE",
+        "75 BCE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which work records Cicero’s speeches against Verres?",
+      "options": [
+        "In Catilinam",
+        "In Verrem",
+        "Pro Archia",
+        "De Re Publica"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which office did Cicero hold in 69 BCE?",
+      "options": [
+        "Aedile",
+        "Praetor",
+        "Quaestor",
+        "Consul"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which office followed Cicero’s aedileship?",
+      "options": [
+        "Tribune",
+        "Consul",
+        "Praetor",
+        "Censor"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What court did Cicero oversee as praetor?",
+      "options": [
+        "Murder court",
+        "Religious court",
+        "Extortion court",
+        "Debt court"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In which year did Cicero stand for the consulship?",
+      "options": [
+        "63 BCE",
+        "65 BCE",
+        "64 BCE",
+        "66 BCE"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What status made Cicero’s consulship bid difficult?",
+      "options": [
+        "Equestrian",
+        "Novus homo",
+        "Foreigner",
+        "Plebeian"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which text advised Cicero on electioneering?",
+      "options": [
+        "In Verrem",
+        "De Officiis",
+        "Commentariolum Petitionis",
+        "Bellum Catilinae"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who was Cicero’s main rival in the consular elections?",
+      "options": [
+        "Crassus",
+        "Antonius",
+        "Pompey",
+        "Catiline"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What policy did Catiline advocate?",
+      "options": [
+        "Land reform",
+        "Citizenship expansion",
+        "Debt cancellation",
+        "Judicial reform"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why did the optimates support Cicero?",
+      "options": [
+        "He opposed Catiline",
+        "He supported debt cancellation",
+        "He promised reforms",
+        "He was noble"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who was elected consul alongside Cicero for 63 BCE?",
+      "options": [
+        "Pompey",
+        "Catiline",
+        "Crassus",
+        "Antonius Hybrida"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What stance did Cicero take early in his consulship?",
+      "options": [
+        "Alignment with the optimates",
+        "Withdrawal from politics",
+        "Support for populares",
+        "Neutrality"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

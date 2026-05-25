@@ -1,0 +1,207 @@
+{
+  "id": "44-claudius-death",
+  "title": "44. Claudius’ Death",
+  "description": "An assessment of the circumstances surrounding Claudius’ death, weighing ancient accusations of poisoning against uncertainty and source bias.",
+  "questions": [
+    {
+      "question": "On what date did Claudius die?",
+      "options": [
+        "13 October 54 CE",
+        "14 October 54 CE",
+        "15 October 54 CE",
+        "12 October 54 CE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the most common explanation given by ancient sources for Claudius’ death?",
+      "options": [
+        "Natural illness",
+        "Assassination by the Senate",
+        "Accidental overdose",
+        "Poisoning"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who is most frequently implicated in Claudius’ death?",
+      "options": [
+        "Halotus",
+        "Narcissus",
+        "Xenophon",
+        "Agrippina"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which source directly implicates Agrippina?",
+      "options": [
+        "Tacitus",
+        "Suetonius",
+        "Josephus",
+        "Seneca"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What role did Agrippina play regardless of her guilt?",
+      "options": [
+        "She delayed Nero’s accession",
+        "She confessed publicly",
+        "She staged-managed the succession",
+        "She fled Rome"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "According to Suetonius, how many times was Claudius poisoned?",
+      "options": [
+        "Twice",
+        "Once",
+        "Unclear",
+        "Three times"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who was Claudius’ taster allegedly involved in poisoning?",
+      "options": [
+        "Locusta",
+        "Xenophon",
+        "Narcissus",
+        "Halotus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which doctor is accused by Tacitus of administering poison?",
+      "options": [
+        "Halotus",
+        "Xenophon",
+        "Seneca",
+        "Locusta"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which infamous poisoner is also mentioned by Tacitus?",
+      "options": [
+        "Locusta",
+        "Messalina",
+        "Agrippina",
+        "Canidia"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which author suggests Claudius may have recovered briefly before dying?",
+      "options": [
+        "Suetonius",
+        "Josephus",
+        "Tacitus",
+        "Seneca"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which author attributed Claudius’ death to natural causes?",
+      "options": [
+        "Seneca",
+        "Suetonius",
+        "Josephus",
+        "Tacitus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How does Josephus describe reports of poisoning?",
+      "options": [
+        "Invented later",
+        "As rumours",
+        "As propaganda",
+        "Certain and proven"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What overall impression do the sources give about Claudius’ death?",
+      "options": [
+        "Confused and contradictory",
+        "Clear and consistent",
+        "Fully reliable",
+        "Completely fabricated"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why is it difficult to reach a firm conclusion about Claudius’ death?",
+      "options": [
+        "Archaeological evidence disproves it",
+        "Contradictory and biased accounts",
+        "Senatorial censorship",
+        "Lack of sources"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which sources provide the main narratives of Claudius’ death?",
+      "options": [
+        "Tacitus, Suetonius, and Josephus",
+        "Velleius and Pliny",
+        "Pliny and Dio",
+        "Seneca alone"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What motive is commonly attributed to Agrippina in poisoning Claudius?",
+      "options": [
+        "Securing Nero’s succession",
+        "Fear for her life",
+        "Revenge",
+        "Political reform"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What action did Agrippina allegedly take immediately after Claudius’ death?",
+      "options": [
+        "Public mourning",
+        "Consulted the Senate",
+        "Kept Britannicus isolated",
+        "Fled Rome"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What detail reinforces the idea of careful stage-management?",
+      "options": [
+        "Delayed announcement of death",
+        "Public funeral",
+        "Immediate burial",
+        "Senatorial debate"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which source is most sceptical of the poisoning narrative?",
+      "options": [
+        "Suetonius",
+        "Seneca",
+        "Tacitus",
+        "Josephus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What conclusion does the PPT suggest students should reach?",
+      "options": [
+        "Agrippina was certainly guilty",
+        "The evidence is inconclusive",
+        "Claudius died naturally",
+        "The Senate arranged the murder"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

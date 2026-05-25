@@ -1,0 +1,187 @@
+{
+  "id": "01-the-classical-greek-world",
+  "title": "01. The Classical Greek World",
+  "description": "Key geographical, political, and cultural features of the Greek world in the fifth century BCE.",
+  "questions": [
+    {
+      "question": "What term did Greeks primarily use to identify themselves politically?",
+      "options": [
+        "League",
+        "Kingdom",
+        "Empire",
+        "Polis"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What does the term polis refer to?",
+      "options": [
+        "A religious sanctuary",
+        "A city-state community",
+        "A military alliance",
+        "A royal palace"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which factor most contributed to Greek isolation?",
+      "options": [
+        "Desert climate",
+        "Mountainous terrain",
+        "Large rivers",
+        "Dense forests"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Between which centuries did major Greek colonisation occur?",
+      "options": [
+        "8th–6th centuries BCE",
+        "10th–8th centuries BCE",
+        "9th–7th centuries BCE",
+        "7th–5th centuries BCE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What activity was central to Greek expansion?",
+      "options": [
+        "Cavalry warfare",
+        "Road building",
+        "River transport",
+        "Seafaring"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Greeks usually travel long distances?",
+      "options": [
+        "By caravan",
+        "By road",
+        "By sea",
+        "By river"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which empire posed the major external challenge to Greece in c. 499 BCE?",
+      "options": [
+        "Roman Kingdom",
+        "Persian Empire",
+        "Egyptian Empire",
+        "Assyrian Empire"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What term did Greeks sometimes use collectively for themselves?",
+      "options": [
+        "Phoenicians",
+        "Romans",
+        "Latins",
+        "Hellenes"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What aspect of life was shaped by Greece’s climate?",
+      "options": [
+        "Outdoor lifestyle",
+        "Indoor living",
+        "Urban overcrowding",
+        "Nomadic movement"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What geographical feature most influenced Greek trade and contact?",
+      "options": [
+        "Sea",
+        "Forests",
+        "Plains",
+        "Rivers"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What characterised Greek political organisation?",
+      "options": [
+        "Unified monarchy",
+        "Independent city-states",
+        "Centralised empire",
+        "Tribal federation"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What shared elements linked Greek communities?",
+      "options": [
+        "Standing army",
+        "Language, religion, and culture",
+        "Unified laws",
+        "Common ruler"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which event marks the start of the Second Persian Invasion?",
+      "options": [
+        "Battle of Marathon",
+        "Battle of Eurymedon",
+        "Formation of the Delian League",
+        "Mardonius’ expedition"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which battle ended the Peloponnesian War?",
+      "options": [
+        "Battle of Aegospotami",
+        "Battle of Eurymedon",
+        "Battle of Marathon",
+        "Battle of Pylos"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the Delian League originally formed to oppose?",
+      "options": [
+        "Sparta",
+        "Persia",
+        "Macedon",
+        "Athens"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What treaty temporarily ended the Peloponnesian War?",
+      "options": [
+        "Treaty of Miletus",
+        "King’s Peace",
+        "Peace of Nicias",
+        "Thirty Years’ Peace"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What major conflict dominated the fifth century BCE?",
+      "options": [
+        "Persian Wars only",
+        "Alexander’s conquests",
+        "Peloponnesian War",
+        "Roman expansion"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which expedition was a turning point against Athens?",
+      "options": [
+        "Mardonius’ Expedition",
+        "Ionian Revolt",
+        "Sicilian Expedition",
+        "Eurymedon Campaign"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

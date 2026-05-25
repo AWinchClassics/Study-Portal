@@ -1,0 +1,167 @@
+{
+  "id": "25-the-theatre-of-dionysus-and-odeon-of-pericles",
+  "title": "25. The Theatre of Dionysus and the Odeon of Pericles",
+  "description": "The development, structure, and functions of Athens’ major performance spaces in the fifth century BCE.",
+  "questions": [
+    {
+      "question": "To which god was the Theatre of Dionysus dedicated?",
+      "options": [
+        "Zeus",
+        "Dionysus",
+        "Athena",
+        "Apollo"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where was the Theatre of Dionysus located?",
+      "options": [
+        "Near the Dipylon Gate",
+        "On the Pnyx",
+        "On the south slope of the Acropolis",
+        "In the Agora"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "During which period did major building works take place at the Theatre of Dionysus?",
+      "options": [
+        "Late fifth century BCE",
+        "Early fifth century BCE",
+        "Early sixth century BCE",
+        "Fourth century BCE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What change was made to the performance area in the fifth century BCE?",
+      "options": [
+        "It was enlarged",
+        "It was moved slightly northwards",
+        "It was roofed",
+        "It was paved in marble"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What structural additions were made around the performance space?",
+      "options": [
+        "Retaining walls on three sides",
+        "Columns and porticoes",
+        "A permanent roof",
+        "Temporary fencing"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What material were the theatre seats most likely made from in the fifth century BCE?",
+      "options": [
+        "Bronze",
+        "Wood",
+        "Stone",
+        "Marble"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why was the slope of the Acropolis important for the theatre’s design?",
+      "options": [
+        "It improved acoustics only",
+        "It allowed natural tiered seating",
+        "It reduced construction costs",
+        "It protected the stage"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What building associated with performances may have existed by the late fifth century BCE?",
+      "options": [
+        "A temple",
+        "A stoa",
+        "A stone orchestra",
+        "A permanent skene"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which ancient author records Pericles’ involvement in building an Odeon?",
+      "options": [
+        "Plutarch",
+        "Herodotus",
+        "Xenophon",
+        "Thucydides"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Around what date was the Odeon of Pericles constructed?",
+      "options": [
+        "435 BCE",
+        "450 BCE",
+        "420 BCE",
+        "470 BCE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Where was the Odeon of Pericles located in relation to the theatre?",
+      "options": [
+        "North of the Acropolis",
+        "On the Pnyx",
+        "In the Agora",
+        "Next to the Theatre of Dionysus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was the primary function of the Odeon of Pericles?",
+      "options": [
+        "Athletic training",
+        "Political meetings",
+        "Musical and performance events",
+        "Religious sacrifice"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How large was the Odeon of Pericles?",
+      "options": [
+        "Smaller than the theatre",
+        "Over 60m by 60m",
+        "About 30m by 30m",
+        "About 100m long"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What structure reportedly inspired the design of the Odeon?",
+      "options": [
+        "The Persian king’s tent",
+        "Egyptian temples",
+        "The Parthenon",
+        "A Spartan hall"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why may the Odeon have been particularly useful for audiences?",
+      "options": [
+        "It improved visibility",
+        "It increased capacity",
+        "It reduced noise",
+        "It allowed shelter in bad weather"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What is the current state of archaeological work on the Odeon of Pericles?",
+      "options": [
+        "Abandoned",
+        "Fully excavated",
+        "Reconstructed",
+        "Still ongoing"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

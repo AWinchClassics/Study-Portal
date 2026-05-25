@@ -1,0 +1,257 @@
+{
+  "id": "09-the-battle-of-salamis",
+  "title": "09. The Battle of Salamis",
+  "description": "The events, tactics, and significance of the Greek naval victory over Persia at Salamis in 480 BCE.",
+  "questions": [
+    {
+      "question": "In which year was the Battle of Salamis fought?",
+      "options": [
+        "479 BCE",
+        "490 BCE",
+        "485 BCE",
+        "480 BCE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which source provides the main narrative of the battle?",
+      "options": [
+        "Thucydides",
+        "Herodotus",
+        "Xenophon",
+        "Plutarch"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where did Greek commanders debate strategy before the battle?",
+      "options": [
+        "Isthmus",
+        "Corinth",
+        "Salamis",
+        "Delphi"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who argued most strongly for fighting at Salamis?",
+      "options": [
+        "Adeimantus",
+        "Eurybiades",
+        "Aristeides",
+        "Themistocles"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why did Themistocles favour Salamis?",
+      "options": [
+        "Higher morale",
+        "Narrow waters favoured Greeks",
+        "Spartan support",
+        "Better supplies"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What threat did Themistocles reportedly make to persuade allies?",
+      "options": [
+        "To surrender",
+        "To attack Persia",
+        "To abandon Athens",
+        "To sail to Italy"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which playwright also describes the battle?",
+      "options": [
+        "Aristophanes",
+        "Euripides",
+        "Aeschylus",
+        "Sophocles"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who did Themistocles send to the Persians?",
+      "options": [
+        "A Phoenician",
+        "An Ionian Greek",
+        "A slave",
+        "A messenger"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What false information was given to the Persians?",
+      "options": [
+        "Greeks had surrendered",
+        "Greeks were divided and fleeing",
+        "Athens was undefended",
+        "Spartans had withdrawn"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which group led the Persian attack?",
+      "options": [
+        "Ionians",
+        "Phoenicians",
+        "Egyptians",
+        "Cypriots"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What problem affected the Persian fleet?",
+      "options": [
+        "Shortage of crews",
+        "Poor morale",
+        "Inability to manoeuvre",
+        "Lack of ships"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "About how many Persian ships were lost?",
+      "options": [
+        "300",
+        "500",
+        "100",
+        "200"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Approximately how many Greek ships were lost?",
+      "options": [
+        "10",
+        "100",
+        "20",
+        "40"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which Greek commander allegedly fled according to Herodotus?",
+      "options": [
+        "Themistocles",
+        "Adeimantus",
+        "Eurybiades",
+        "Leotychidas"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What natural condition aided the Greeks?",
+      "options": [
+        "Swell",
+        "Earthquake",
+        "Storm",
+        "Fog"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What happened on the island of Psyttaleia?",
+      "options": [
+        "Evacuation",
+        "Greek massacre of Persians",
+        "Stalemate",
+        "Persian victory"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who commanded the Greek forces on Psyttaleia?",
+      "options": [
+        "Aristeides",
+        "Leonidas",
+        "Miltiades",
+        "Pausanias"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What did Xerxes fear after the battle?",
+      "options": [
+        "Loss of Egypt",
+        "Destruction of the Hellespont bridge",
+        "Greek invasion of Asia",
+        "Spartan rebellion"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who was left in Greece to continue the campaign?",
+      "options": [
+        "Artaphernes",
+        "Mardonius",
+        "Datis",
+        "Xerxes"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why was Salamis strategically significant?",
+      "options": [
+        "Ended the war",
+        "Prevented land invasion",
+        "Captured Xerxes",
+        "Destroyed Persian supply lines"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which city was punished for medising after the battle?",
+      "options": [
+        "Andros",
+        "Chios",
+        "Delos",
+        "Megara"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What honour did Sparta grant Themistocles?",
+      "options": [
+        "Citizenship",
+        "Exile",
+        "Command of fleet",
+        "Heroic honours"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which state received the prize for valour?",
+      "options": [
+        "Athens",
+        "Aegina",
+        "Sparta",
+        "Corinth"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What broader theme is associated with the victory?",
+      "options": [
+        "Greek unity",
+        "Democracy over autocracy",
+        "Wealth over poverty",
+        "Sea power over land power"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the long-term consequence of the battle?",
+      "options": [
+        "Shift in momentum despite continued war",
+        "End of invasion",
+        "Greek civil war",
+        "Immediate Persian withdrawal"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

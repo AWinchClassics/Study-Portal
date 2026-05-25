@@ -1,0 +1,257 @@
+{
+  "id": "02-the-ionian-revolt",
+  "title": "02. The Ionian Revolt",
+  "description": "The causes, events, and consequences of the Ionian Revolt against Persian rule.",
+  "questions": [
+    {
+      "question": "Between which years did the Ionian Revolt take place?",
+      "options": [
+        "490–480 BCE",
+        "500–495 BCE",
+        "492–486 BCE",
+        "499–493 BCE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who initially attempted to invade Naxos in 499 BCE?",
+      "options": [
+        "Darius",
+        "Aristagoras",
+        "Histaeus",
+        "Miltiades"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did Aristagoras attempt to invade Naxos?",
+      "options": [
+        "To attack Athens",
+        "To overthrow Darius",
+        "At the urging of exiled Naxian aristocrats",
+        "To gain Persian favour"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the outcome of the Naxos expedition?",
+      "options": [
+        "Failure",
+        "Partial success",
+        "Complete success",
+        "Persian victory"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What political change did Aristagoras make after the failure at Naxos?",
+      "options": [
+        "Fled to Athens",
+        "Renounced his tyranny",
+        "Sought Persian pardon",
+        "Declared himself king"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which Greek states sent aid to the Ionian Revolt?",
+      "options": [
+        "Sparta and Corinth",
+        "Athens and Eretria",
+        "Delphi and Aegina",
+        "Thebes and Argos"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How many ships did Athens contribute to the revolt?",
+      "options": [
+        "5",
+        "20",
+        "15",
+        "10"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happened when the rebels reached Sardis in 498 BCE?",
+      "options": [
+        "They burned the city",
+        "They negotiated peace",
+        "They were defeated immediately",
+        "They captured the satrap"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Where were the rebels defeated after leaving Sardis?",
+      "options": [
+        "Ephesus",
+        "Miletus",
+        "Chios",
+        "Lade"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the consequence of the defeat at Ephesus?",
+      "options": [
+        "The fleet returned home",
+        "Persian retreat",
+        "Spartan intervention",
+        "Greek victory"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which regions joined the revolt between 498–496 BCE?",
+      "options": [
+        "Lesbos and Chios",
+        "Cyprus and Caria",
+        "Macedon and Thrace",
+        "Crete and Rhodes"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What did Aristagoras do as the revolt spread?",
+      "options": [
+        "Fled",
+        "Was captured",
+        "Continued fighting",
+        "Negotiated with Persia"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who led resistance after Aristagoras fled?",
+      "options": [
+        "Darius",
+        "Miltiades",
+        "Histaeus",
+        "Themistocles"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Where did Histaeus raise forces to continue the revolt?",
+      "options": [
+        "Cyprus",
+        "Chios",
+        "Lesbos",
+        "Naxos"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which battle marked the decisive defeat of the rebels in 494 BCE?",
+      "options": [
+        "Battle of Ephesus",
+        "Battle of Lade",
+        "Battle of Marathon",
+        "Battle of Sardis"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happened to Miletus after the Battle of Lade?",
+      "options": [
+        "It surrendered peacefully",
+        "It became independent",
+        "It was destroyed",
+        "It was rewarded"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened to Histaeus in 493 BCE?",
+      "options": [
+        "He was pardoned",
+        "He escaped to Athens",
+        "He became satrap",
+        "He was defeated"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which islands were captured by Persia after the revolt?",
+      "options": [
+        "Delos and Paros",
+        "Lesbos, Chios, and Tenedos",
+        "Cyprus and Crete",
+        "Naxos and Rhodes"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did the Persians generally treat the Ionian cities after the revolt?",
+      "options": [
+        "With total destruction",
+        "With extreme brutality",
+        "With lenience",
+        "With enslavement"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What impact did the revolt have on Persian policy toward Greece?",
+      "options": [
+        "Strengthened Ionian autonomy",
+        "Prompted desire for revenge",
+        "Ended Persian interest",
+        "Led to alliance with Athens"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which Greek city felt it should have given more help to Miletus?",
+      "options": [
+        "Thebes",
+        "Athens",
+        "Sparta",
+        "Corinth"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which Persian king sought revenge for Athenian involvement?",
+      "options": [
+        "Darius",
+        "Xerxes",
+        "Cambyses",
+        "Cyrus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which Athenian figure returned home as a result of the revolt?",
+      "options": [
+        "Aristides",
+        "Miltiades",
+        "Pericles",
+        "Themistocles"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "According to Herodotus, who were chiefly responsible for the revolt?",
+      "options": [
+        "The Ionian people",
+        "Histaeus and Aristagoras",
+        "The Persian satraps",
+        "Athens and Eretria"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What long-term significance did the Ionian Revolt have?",
+      "options": [
+        "It led directly to Persian withdrawal",
+        "It strengthened tyrannies",
+        "It restored Ionian independence",
+        "It helped trigger the Persian Wars"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

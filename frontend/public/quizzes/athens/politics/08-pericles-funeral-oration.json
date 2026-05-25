@@ -1,0 +1,167 @@
+{
+  "id": "08-pericles-funeral-oration",
+  "title": "08. Pericles’ Funeral Oration",
+  "description": "Themes and historical interpretation of Pericles’ Funeral Oration during the early Peloponnesian War.",
+  "questions": [
+    {
+      "question": "In what context was Pericles’ Funeral Oration delivered?",
+      "options": [
+        "At a public funeral for those killed in the first year of the Peloponnesian War",
+        "At the opening of the Peloponnesian War",
+        "After the plague of Athens",
+        "Following the Peace of Nicias"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Where was the Funeral Oration traditionally delivered?",
+      "options": [
+        "In the Assembly",
+        "In the public cemetery of Athens",
+        "On the Acropolis",
+        "In the Agora"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the expected purpose of a funeral speech in Athens?",
+      "options": [
+        "To criticise Athens’ enemies",
+        "To describe the battle in detail",
+        "To praise the city and justify the deaths of the fallen",
+        "To announce new laws"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why does Pericles say his task as speaker is difficult?",
+      "options": [
+        "The audience is hostile",
+        "The war is ongoing",
+        "The dead are unknown to him",
+        "Praising the dead risks either understatement or exaggeration"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What political system does Pericles praise in the speech?",
+      "options": [
+        "Democracy",
+        "Oligarchy",
+        "Tyranny",
+        "Monarchy"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What claim does Pericles make about equality in Athens?",
+      "options": [
+        "Only elites are equal",
+        "Advancement depends on merit rather than birth",
+        "Wealth guarantees political power",
+        "Equality applies only in the law courts"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does Pericles describe Athenian foreign policy?",
+      "options": [
+        "Aggressive and expansionist",
+        "Defensive and cautious",
+        "Open and confident rather than secretive",
+        "Weak compared to Sparta"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which state is used as a contrast to Athens in the speech?",
+      "options": [
+        "Corinth",
+        "Thebes",
+        "Persia",
+        "Sparta"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How does Pericles portray Athenian freedom in private life?",
+      "options": [
+        "Citizens tolerate differences in personal behaviour",
+        "Citizens are strictly controlled",
+        "Freedom applies only to politics",
+        "Laws are rarely obeyed"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What quality does Pericles emphasise about Athenian courage?",
+      "options": [
+        "Blind obedience",
+        "Bravery combined with rational understanding",
+        "Recklessness",
+        "Fearlessness from harsh training"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does Pericles say motivates Athenians to fight for the city?",
+      "options": [
+        "Fear of punishment",
+        "Desire for wealth",
+        "Love of freedom and democracy",
+        "Hatred of Sparta"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does Pericles urge the living Athenians to do?",
+      "options": [
+        "End the war quickly",
+        "Reject democracy",
+        "Withdraw from empire",
+        "Live up to the standards set by the dead"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which group does Pericles briefly address towards the end of the speech?",
+      "options": [
+        "Women",
+        "Foreigners",
+        "Slaves",
+        "Metics"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What advice does Pericles give to women?",
+      "options": [
+        "To participate actively in politics",
+        "To attract as little attention as possible",
+        "To encourage military service",
+        "To oppose the war"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why must historians treat the speech with caution?",
+      "options": [
+        "It was written centuries later",
+        "It was copied inaccurately",
+        "Thucydides admits he shaped speeches to convey meaning",
+        "It contradicts all other sources"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What additional claim does Plato make about the speech?",
+      "options": [
+        "That Pericles copied it from another city",
+        "That it was never delivered",
+        "That Thucydides invented it",
+        "That Aspasia may have helped write it"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

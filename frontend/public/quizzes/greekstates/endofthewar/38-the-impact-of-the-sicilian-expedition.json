@@ -1,0 +1,257 @@
+{
+  "id": "38-the-impact-of-the-sicilian-expedition",
+  "title": "38. The Impact of the Sicilian Expedition",
+  "description": "The political, military, and economic consequences of the Sicilian Expedition for Athens, Sparta, and the wider Greek world.",
+  "questions": [
+    {
+      "question": "Which historian provides a detailed critique of Athenian decision-making after Sicily?",
+      "options": [
+        "Xenophon",
+        "Plutarch",
+        "Thucydides",
+        "Herodotus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "According to Thucydides, what was a key failure of the Assembly before the expedition?",
+      "options": [
+        "They feared Sparta too much",
+        "They lacked money",
+        "They underestimated Persia",
+        "They ignored Nicias’ warnings"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was flawed about the Assembly’s understanding of Sicily?",
+      "options": [
+        "They feared Syracuse",
+        "They knew it well",
+        "They relied heavily on Segesta’s claims",
+        "They believed it was uninhabited"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was the size of the expedition problematic?",
+      "options": [
+        "It lacked supplies",
+        "It was too small",
+        "It was too large and unfocused",
+        "It lacked cavalry"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was joint command a weakness?",
+      "options": [
+        "There were conflicting personalities",
+        "They lacked authority",
+        "Generals were inexperienced",
+        "They were unpopular"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was recalling Alcibiades a mistake?",
+      "options": [
+        "He was Athens’ best commander",
+        "He controlled the navy",
+        "He supported Nicias",
+        "He was innocent"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What key opportunity did Nicias miss at Syracuse?",
+      "options": [
+        "Attacking immediately",
+        "Building a fleet",
+        "Negotiating peace",
+        "Waiting for reinforcements"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which Spartan commander was able to enter Syracuse due to Athenian delay?",
+      "options": [
+        "Gylippus",
+        "Archidamus",
+        "Brasidas",
+        "Agis"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why did Nicias refuse to retreat after Demosthenes’ defeat?",
+      "options": [
+        "He feared exile",
+        "He feared Athenian judgement",
+        "He was wounded",
+        "He lacked ships"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What personal failing affected Nicias’ judgement?",
+      "options": [
+        "Ambition",
+        "Disloyalty",
+        "Incompetence",
+        "Excessive superstition"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What major constitutional change did Athens make after the disaster?",
+      "options": [
+        "Restored the Areopagus",
+        "Abolished democracy",
+        "Created the probuli",
+        "Elected a tyrant"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why were the probuli created?",
+      "options": [
+        "To negotiate peace",
+        "To command the army",
+        "To raise taxes",
+        "To reorganise and stabilise Athens"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Athens rebuild its navy?",
+      "options": [
+        "Tribute increases",
+        "Selling public land",
+        "Using Pericles’ emergency fund",
+        "Persian loans"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Approximately how many triremes were built within a year?",
+      "options": [
+        "50",
+        "200",
+        "100",
+        "150"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What financial measure was imposed across the empire?",
+      "options": [
+        "War loans",
+        "Extra tribute",
+        "Temple taxes",
+        "5% import/export tax"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which location did Athens fortify to protect grain supplies?",
+      "options": [
+        "Sunium",
+        "Decelea",
+        "Euboea",
+        "Piraeus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What effect did the disaster have on Spartan confidence?",
+      "options": [
+        "It collapsed",
+        "It rose sharply",
+        "It declined",
+        "It remained unchanged"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What naval policy did Sparta adopt after Sicily?",
+      "options": [
+        "Alliance with Athens",
+        "Withdrawal from war",
+        "Defensive posture",
+        "Shipbuilding programme"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which Athenian allies signalled willingness to revolt?",
+      "options": [
+        "Rhodes and Cyprus",
+        "Naxos and Delos",
+        "Euboea and Lesbos",
+        "Chios and Samos"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which Persian officials supported Sparta financially?",
+      "options": [
+        "Artaxerxes and Cyrus",
+        "Darius and Xerxes",
+        "Tissaphernes and Pharnabazus",
+        "Cambyses and Satraps"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What did Persia hope to regain?",
+      "options": [
+        "Sicily",
+        "Naval supremacy",
+        "Mainland Greece",
+        "Cities of Asia Minor"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which route did the Spartans plan to take first?",
+      "options": [
+        "To Chios",
+        "To the Hellespont",
+        "To Lesbos",
+        "To Athens"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Athens respond emotionally to defeat?",
+      "options": [
+        "They were paralysed",
+        "They resolved not to give in",
+        "They overthrew democracy",
+        "They surrendered"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does Thucydides suggest about Athens’ resilience?",
+      "options": [
+        "It was finished",
+        "It was short-lived",
+        "It was artificial",
+        "It was underestimated"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What is the overall significance of the Sicilian Expedition’s impact?",
+      "options": [
+        "It reshaped the war on a wider scale",
+        "It strengthened the empire",
+        "Athens collapsed politically",
+        "Immediate defeat ended the war"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

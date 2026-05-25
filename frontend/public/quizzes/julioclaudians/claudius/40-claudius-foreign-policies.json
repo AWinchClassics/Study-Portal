@@ -1,0 +1,307 @@
+{
+  "id": "40-claudius-foreign-policies",
+  "title": "40. Claudius’ Foreign Policies",
+  "description": "Claudius’ approach to foreign policy, combining continuity with selective expansion, client kingship, and the conquest of Britain.",
+  "questions": [
+    {
+      "question": "What general approach did Claudius take to foreign policy?",
+      "options": [
+        "Continuation with selective expansion",
+        "Total withdrawal",
+        "Radical innovation",
+        "Purely defensive"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which territories were annexed under Claudius in the East?",
+      "options": [
+        "Achaea and Macedonia",
+        "Judea and Syria",
+        "Lycia and Thrace",
+        "Noricum and Commagene"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What change did Claudius make in Judea?",
+      "options": [
+        "Left Gaius’ policy unchanged",
+        "Granted independence",
+        "Annexed it",
+        "Reversed Gaius’ arrangements"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What happened to Commagene under Claudius?",
+      "options": [
+        "It was abandoned",
+        "It became a Roman colony",
+        "It was returned to its former ruler",
+        "It was annexed"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Claudius strengthen Armenia?",
+      "options": [
+        "By military occupation",
+        "By placing Mithridates on the throne",
+        "By annexation",
+        "By alliance with Parthia"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was Claudius’ stance toward Parthia?",
+      "options": [
+        "Firm and assertive",
+        "Passive",
+        "Hostile war",
+        "Conciliatory"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Claudius deal with rebellion in Mauretania?",
+      "options": [
+        "Withdrew Roman forces",
+        "Ignored it",
+        "Annexed and divided it",
+        "Created a client kingdom"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Into which two provinces was Mauretania divided?",
+      "options": [
+        "Baetica and Lusitania",
+        "Cyrenaica and Crete",
+        "Tingitana and Caesariensis",
+        "Africa Proconsularis and Numidia"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What policy did Claudius pursue in Alexandria regarding Jews?",
+      "options": [
+        "Curbed antisemitism but denied local citizenship",
+        "Encouraged persecution",
+        "Expelled the Jews",
+        "Granted citizenship"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which provinces were returned to senatorial control?",
+      "options": [
+        "Britannia and Gaul",
+        "Lycia and Thrace",
+        "Noricum and Syria",
+        "Achaea and Macedonia"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How was Noricum governed under Claudius?",
+      "options": [
+        "By a legate",
+        "By a client king",
+        "By a senator",
+        "By an equestrian procurator"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What frontier policy did Claudius broadly maintain on the Rhine?",
+      "options": [
+        "Tiberius’",
+        "Augustus’",
+        "Drusus’",
+        "Gaius’"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which general extended the Rhine frontier to its mouth?",
+      "options": [
+        "Plautius",
+        "Drusus",
+        "Corbulo",
+        "Germanicus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why did Claudius believe Britain needed to be conquered?",
+      "options": [
+        "To weaken Parthia",
+        "For security of Gaul",
+        "For religious reasons",
+        "For trade"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which revolt influenced Claudius’ decision to invade Britain?",
+      "options": [
+        "Batavian revolt",
+        "Boudicca’s revolt",
+        "Scribonianus’ revolt",
+        "Civil war in Gaul"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who led the revolt against Claudius in 42 CE?",
+      "options": [
+        "Vinicianus",
+        "Caratacus",
+        "Camillus Scribonianus",
+        "Aulus Plautius"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How long did Scribonianus’ revolt last?",
+      "options": [
+        "One month",
+        "Three days",
+        "One day",
+        "Five days"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What happened to Scribonianus after the revolt failed?",
+      "options": [
+        "He fled",
+        "He was pardoned",
+        "He was captured",
+        "He committed suicide"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What reward did Claudius give loyal legions after the revolt?",
+      "options": [
+        "Citizenship",
+        "Cash donatives",
+        "Honorary titles",
+        "Land grants"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which legions were honoured as ‘Claudian’, ‘Loyal’, and ‘Patriotic’?",
+      "options": [
+        "Twentieth and Fourteenth",
+        "Seventh and Eleventh",
+        "Ninth and Tenth",
+        "First and Second"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who commanded the invasion of Britain in 43 CE?",
+      "options": [
+        "Aulus Plautius",
+        "Germanicus",
+        "Vespasian",
+        "Corbulo"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which British tribe was the main target of the invasion?",
+      "options": [
+        "Iceni",
+        "Brigantes",
+        "Silures",
+        "Catuvellauni"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which two leaders resisted Rome after Cunobelinus’ death?",
+      "options": [
+        "Venutius and Cartimandua",
+        "Togidumnus and Caratacus",
+        "Calgacus and Agricola",
+        "Boudicca and Prasutagus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which river was a key battle site during the invasion?",
+      "options": [
+        "Thames",
+        "Severn",
+        "Trent",
+        "Medway"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What city did Claudius capture to secure victory?",
+      "options": [
+        "Camulodunum",
+        "Londinium",
+        "Eboracum",
+        "Verulamium"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What title did the Senate grant Claudius after the invasion?",
+      "options": [
+        "Britannicus",
+        "Imperator",
+        "Augustus",
+        "Germanicus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How long did Claudius personally spend in Britain?",
+      "options": [
+        "One year",
+        "Sixteen days",
+        "Six months",
+        "Three months"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What ceremonial act did Claudius revive in 49 CE?",
+      "options": [
+        "Census",
+        "Extension of the pomerium",
+        "Triumph",
+        "Secular Games"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which inscription commemorates this act?",
+      "options": [
+        "Senatus Consultum",
+        "Lex de Imperio",
+        "Res Gestae",
+        "Cippus inscription"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What happened to Caratacus after his capture?",
+      "options": [
+        "Imprisoned for life",
+        "Executed",
+        "Paraded then pardoned",
+        "Exiled"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

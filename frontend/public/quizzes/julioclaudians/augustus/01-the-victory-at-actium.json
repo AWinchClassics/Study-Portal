@@ -1,0 +1,207 @@
+{
+  "id": "01-the-victory-at-actium",
+  "title": "01. The Victory at Actium",
+  "description": "The events, significance, and later interpretation of Octavian’s victory over Antony and Cleopatra at Actium.",
+  "questions": [
+    {
+      "question": "Why did Antony allow Cleopatra to accompany his fleet despite Roman advice?",
+      "options": [
+        "She commanded the navy",
+        "She provided ships and financial support",
+        "She was popular with Roman troops",
+        "She was a skilled general"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Approximately how many ships did Antony assemble for the Actium campaign?",
+      "options": [
+        "Around 300",
+        "Around 400",
+        "Over 600",
+        "Over 1,000"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What strategic role did Agrippa play before the Battle of Actium?",
+      "options": [
+        "Negotiating peace",
+        "Commanding Antony’s cavalry",
+        "Hemming Antony into the bay",
+        "Leading the land forces"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was Antony forced to attempt a breakout from Actium?",
+      "options": [
+        "Shortage of money",
+        "Senate pressure",
+        "Disease and supply problems",
+        "Desertion of allies"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How does the PPT describe the Battle of Actium itself?",
+      "options": [
+        "A long and evenly fought contest",
+        "A catastrophic defeat for Octavian",
+        "Less momentous than later propaganda suggests",
+        "A decisive land battle"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What action during the battle caused disorder in Antony’s fleet?",
+      "options": [
+        "Agrippa’s attack",
+        "Cleopatra’s retreat",
+        "Roman mutiny",
+        "Storms at sea"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happened to most of Antony’s fleet after the battle?",
+      "options": [
+        "It escaped intact",
+        "It was destroyed by fire",
+        "It was captured",
+        "It defected to Octavian"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Where did Antony and Cleopatra flee after Actium?",
+      "options": [
+        "Rome",
+        "Asia Minor",
+        "Syria",
+        "Alexandria"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What title was Octavian awarded following his victory?",
+      "options": [
+        "Princeps",
+        "Imperator for the sixth time",
+        "Dictator",
+        "Pater Patriae"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was Agrippa’s task in Italy after Actium?",
+      "options": [
+        "Reforming the Senate",
+        "Leading triumphs",
+        "Demobilising and settling veterans",
+        "Governing provinces"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What major political change followed the invasion of Egypt in 30 BCE?",
+      "options": [
+        "Egypt became a senatorial province",
+        "Egypt was annexed to Rome",
+        "Cleopatra was crowned queen again",
+        "Antony was pardoned"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Octavian generally treat Antony’s supporters?",
+      "options": [
+        "With mass executions",
+        "With exile",
+        "With leniency",
+        "With confiscation of property"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which individuals were executed by Octavian after Actium?",
+      "options": [
+        "All of Antony’s children",
+        "Cleopatra only",
+        "Caesarion and Antony’s eldest son by Fulvia",
+        "Agrippa Postumus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What monument did Octavian establish near the site of Actium?",
+      "options": [
+        "A triumphal arch",
+        "The city of Nikopolis",
+        "A temple to Mars",
+        "A Senate building"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Virgil present the victory at Actium?",
+      "options": [
+        "As a civil war tragedy",
+        "As a victory of East over West",
+        "As a victory of West over East",
+        "As a minor skirmish"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What did Augustus claim in the Res Gestae about support for Actium?",
+      "options": [
+        "The Senate opposed him",
+        "Only the army supported him",
+        "The whole of Italy demanded him as commander",
+        "Foreign allies chose him"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Augustus celebrate his victories on returning to Rome?",
+      "options": [
+        "A single triumph",
+        "A double triumph",
+        "A triple triumph",
+        "No public celebration"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What wider image did Augustus promote after Actium?",
+      "options": [
+        "Military conqueror",
+        "Republican revolutionary",
+        "Bringer of peace",
+        "Divine king"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What symbol demonstrated the peace Augustus claimed to have restored?",
+      "options": [
+        "The Ara Pacis",
+        "Closure of the Temple of Janus",
+        "The Senate House",
+        "New legions"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which policy helped restore confidence and stability after Actium?",
+      "options": [
+        "Expansion of legions",
+        "Renewed civil war",
+        "Clemency and amnesty",
+        "Increased taxation"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

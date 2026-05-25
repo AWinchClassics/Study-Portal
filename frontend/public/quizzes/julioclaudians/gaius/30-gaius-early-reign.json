@@ -1,0 +1,227 @@
+{
+  "id": "30-gaius-early-reign",
+  "title": "30. Gaius’ Early Reign",
+  "description": "Gaius’ accession and early popularity, shaped by succession politics, senatorial support, and contrasting ancient interpretations.",
+  "questions": [
+    {
+      "question": "Who were the three potential successors considered by Tiberius?",
+      "options": [
+        "Gaius, Drusus, Germanicus",
+        "Gaius, Claudius, Germanicus",
+        "Gaius, Claudius, Tiberius Gemellus",
+        "Claudius, Germanicus, Sejanus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Tiberius attempt to resolve the issue of succession?",
+      "options": [
+        "By choosing Claudius alone",
+        "By naming Gaius sole heir",
+        "By leaving no will",
+        "By naming Gaius and Tiberius Gemellus joint heirs"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why was Tiberius Gemellus at a disadvantage as a successor?",
+      "options": [
+        "He was unpopular",
+        "He was exiled",
+        "He lacked support",
+        "He was too young"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "At what age was Gaius taken to live with Tiberius on Capri?",
+      "options": [
+        "17",
+        "19",
+        "15",
+        "21"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which individual played a crucial role in cultivating Gaius’ position?",
+      "options": [
+        "Drusus",
+        "Sejanus",
+        "Claudius",
+        "Macro"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What actions did Macro take when Tiberius appeared to be dying?",
+      "options": [
+        "He delayed succession",
+        "He supported Gemellus",
+        "He fled Rome",
+        "He secured the support of the Senate and army"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What suspicion surrounds the death of Tiberius?",
+      "options": [
+        "Poisoning by Claudius",
+        "Assassination by the Senate",
+        "Natural illness only",
+        "Possible hastening by Macro and Gaius"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "In which year did Tiberius die?",
+      "options": [
+        "31 CE",
+        "35 CE",
+        "41 CE",
+        "37 CE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Tacitus view Gaius’ accession?",
+      "options": [
+        "As inevitable",
+        "As a return to republican rule",
+        "With grim predictions",
+        "Optimistically"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What concern did Tacitus have about Gaius’ upbringing?",
+      "options": [
+        "He was badly brought up and influenced by Macro",
+        "He was too old",
+        "He lacked education",
+        "He was unpopular"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was Gaius popular on his accession?",
+      "options": [
+        "He was son of the popular Germanicus",
+        "He had political experience",
+        "He was supported by the army alone",
+        "He promised tax cuts"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What decision did the Senate make regarding Tiberius’ will?",
+      "options": [
+        "They ignored it",
+        "They enforced it fully",
+        "They declared it invalid",
+        "They amended it"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which source records the Senate’s actions at Gaius’ accession?",
+      "options": [
+        "Cassius Dio",
+        "Suetonius",
+        "Tacitus",
+        "Velleius"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does Suetonius characterise the opening of Gaius’ reign?",
+      "options": [
+        "As a dream come true",
+        "As tyrannical",
+        "As cautious",
+        "As reluctant"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How does Suetonius divide Gaius’ reign overall?",
+      "options": [
+        "Good then monstrous",
+        "Republican then imperial",
+        "Successful then stagnant",
+        "Military then civil"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What event marked a turning point in Gaius’ reign?",
+      "options": [
+        "An illness in late 37 CE",
+        "Death of Gemellus",
+        "A senatorial conspiracy",
+        "A revolt in Rome"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Gaius initially distance himself from Tiberius?",
+      "options": [
+        "By recalling exiles and cancelling prosecutions",
+        "By criticising him openly",
+        "By reversing his laws",
+        "By abolishing the principate"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which actions did Suetonius list as early positive measures?",
+      "options": [
+        "Raising taxes",
+        "Limiting the Senate",
+        "Holding games and recalling exiles",
+        "Expanding the army"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Whom did Gaius propose to adopt to reunify the imperial household?",
+      "options": [
+        "Macro",
+        "Tiberius Gemellus",
+        "Germanicus",
+        "Claudius"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Whom did Gaius honour with the title Augusta?",
+      "options": [
+        "Julia",
+        "Antonia Minor",
+        "Agrippina the Elder",
+        "Livia"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where did Gaius travel to recover the remains of his family?",
+      "options": [
+        "Alexandria",
+        "Pandataria",
+        "Capri",
+        "Smyrna"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where were these remains reinterred?",
+      "options": [
+        "Forum Romanum",
+        "Pantheon",
+        "Temple of Mars Ultor",
+        "Mausoleum of Augustus"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

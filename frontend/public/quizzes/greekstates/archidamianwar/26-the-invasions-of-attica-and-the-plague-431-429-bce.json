@@ -1,0 +1,257 @@
+{
+  "id": "26-the-invasions-of-attica-and-the-plague-431-429-bce",
+  "title": "26. The Invasions of Attica and the Plague, 431–429 BCE",
+  "description": "Spartan invasions of Attica and the devastating plague that reshaped Athenian society and leadership in the early Peloponnesian War.",
+  "questions": [
+    {
+      "question": "In which year did King Archidamus first invade Attica?",
+      "options": [
+        "431 BCE",
+        "432 BCE",
+        "430 BCE",
+        "429 BCE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What strategy did Pericles advise during the Spartan invasion?",
+      "options": [
+        "Evacuate Attica entirely",
+        "Negotiate immediately",
+        "Fight a hoplite battle",
+        "Retreat behind the walls"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why were many Athenians angry with Pericles during the invasion?",
+      "options": [
+        "High taxation",
+        "Loss of allies",
+        "Naval defeat",
+        "Destruction of crops"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why did Pericles avoid calling an assembly during the invasion?",
+      "options": [
+        "Spartan pressure",
+        "To prevent rash decisions",
+        "He was ill",
+        "Fear of Persian spies"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which historian records Pericles’ conduct during the invasion?",
+      "options": [
+        "Plutarch",
+        "Thucydides",
+        "Xenophon",
+        "Herodotus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What military actions did Athens take while avoiding battle?",
+      "options": [
+        "Sent cavalry patrols and naval raids",
+        "Attacked Corinth directly",
+        "Besieged Sparta",
+        "Invaded Boeotia"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which city’s attack marked the first act of the war?",
+      "options": [
+        "Sparta",
+        "Thebes",
+        "Corinth",
+        "Athens"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which city was attacked by Thebes in 431 BCE?",
+      "options": [
+        "Megara",
+        "Plataea",
+        "Delphi",
+        "Naupactus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why was Plataea hostile to Thebes?",
+      "options": [
+        "Long-standing political rivalry",
+        "Alliance with Persia",
+        "Trade disputes",
+        "Religious rivalry"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did the Plataeans respond to the Theban attack?",
+      "options": [
+        "Defeated and captured the Thebans",
+        "Surrendered immediately",
+        "Fled to Athens",
+        "Negotiated peace"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What followed the Theban attack on Plataea?",
+      "options": [
+        "Immediate peace talks",
+        "A three-year siege",
+        "Spartan withdrawal",
+        "Persian intervention"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In which year did the plague first strike Athens?",
+      "options": [
+        "429 BCE",
+        "430 BCE",
+        "431 BCE",
+        "426 BCE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How long did the plague primarily last in Athens?",
+      "options": [
+        "Five years",
+        "One year",
+        "Ten years",
+        "Two years"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which source provides a detailed description of the plague?",
+      "options": [
+        "Thucydides",
+        "Aristotle",
+        "Herodotus",
+        "Plutarch"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Approximately how many Athenian hoplites died in the plague?",
+      "options": [
+        "4,400",
+        "2,000",
+        "13,000",
+        "8,000"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What proportion of Athens’ population may have died?",
+      "options": [
+        "One tenth",
+        "One third",
+        "One half",
+        "One quarter"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did the plague spread rapidly in Athens?",
+      "options": [
+        "Crowding behind walls and poor sanitation",
+        "Foreign traders",
+        "Lack of immunity",
+        "Persian sabotage"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What political consequence did Pericles face during the plague?",
+      "options": [
+        "Execution",
+        "Removal and fine",
+        "Exile",
+        "Loss of citizenship"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happened to Pericles in 429 BCE?",
+      "options": [
+        "He was exiled",
+        "He retired",
+        "He resigned",
+        "He died of the plague"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which new type of leader emerged after Pericles’ death?",
+      "options": [
+        "Tyrants",
+        "Kings",
+        "Oligarchs",
+        "Demagogues"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which general led Athenian naval operations in western Greece?",
+      "options": [
+        "Phormio",
+        "Cleon",
+        "Lysicles",
+        "Nicias"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Where did Phormio defeat the Peloponnesian fleet?",
+      "options": [
+        "Salamis",
+        "Sybota",
+        "Naupactus",
+        "Corcyra"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What did the Peloponnesians attempt diplomatically in 430 BCE?",
+      "options": [
+        "Embassy to Persia",
+        "Alliance with Athens",
+        "Alliance with Argos",
+        "Peace with Plataea"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What happened to the Peloponnesian envoys to Persia?",
+      "options": [
+        "They succeeded",
+        "They were captured and executed",
+        "They defected",
+        "They were imprisoned in Athens"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the overall significance of this period?",
+      "options": [
+        "Sparta dominated the sea",
+        "Athens suffered severe strain but held its strategy",
+        "Immediate Spartan victory",
+        "Athens gained land power"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

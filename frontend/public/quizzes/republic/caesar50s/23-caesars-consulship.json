@@ -1,0 +1,257 @@
+{
+  "id": "23-caesars-consulship",
+  "title": "23. Caesar’s Consulship",
+  "description": "An analysis of Caesar’s consulship in 59 BCE, focusing on land legislation, political conflict, and the consolidation of the First Triumvirate.",
+  "questions": [
+    {
+      "question": "In which year did Caesar hold the consulship?",
+      "options": [
+        "59 BCE",
+        "58 BCE",
+        "60 BCE",
+        "61 BCE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who was Caesar’s consular colleague in 59 BCE?",
+      "options": [
+        "Bibulus",
+        "Pompey",
+        "Cato",
+        "Crassus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was Caesar’s main aim in proposing land legislation?",
+      "options": [
+        "Reward soldiers and help the urban poor",
+        "Undermine the Senate",
+        "Strengthen the equites",
+        "Increase state revenue"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which group strongly opposed Caesar’s first land bill?",
+      "options": [
+        "Optimates led by Cato",
+        "Equites",
+        "Plebs urbana",
+        "Pompey’s veterans"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Cato attempt to block the land bill?",
+      "options": [
+        "Declaring omens",
+        "Use of veto",
+        "Filibustering speeches",
+        "Violence"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Caesar initially respond to Cato’s obstruction?",
+      "options": [
+        "Used violence",
+        "Ignored him",
+        "Abandoned the bill",
+        "Threatened arrest"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What role did Pompey play during the land bill debate?",
+      "options": [
+        "Remained neutral",
+        "Implied willingness to use violence",
+        "Opposed Caesar",
+        "Declared bad omens"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happened to Bibulus when he attempted to speak in the Forum?",
+      "options": [
+        "He fled Rome",
+        "He was ignored",
+        "He was physically attacked",
+        "He was arrested"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Bibulus attempt to prevent further legislation?",
+      "options": [
+        "Appealing to the Senate",
+        "Resigning office",
+        "Declaring the year sacred",
+        "Calling elections"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Caesar respond to Bibulus’ declaration of unfavourable omens?",
+      "options": [
+        "He delayed legislation",
+        "He sought Senate approval",
+        "He resigned",
+        "He ignored them"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What nickname later sources give to Caesar’s consulship?",
+      "options": [
+        "The Year of Reform",
+        "The Consulship of Caesar alone",
+        "The Tyrant’s Year",
+        "The Popular Consulship"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the lex Campania?",
+      "options": [
+        "A military law",
+        "A judicial reform",
+        "A tax law",
+        "A harsher land bill"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which land was included in the lex Campania?",
+      "options": [
+        "Public land in Gaul",
+        "Provincial land",
+        "Ager Campanus",
+        "Sicilian land"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Approximately how many allotments were created by the lex Campania?",
+      "options": [
+        "20,000",
+        "5,000",
+        "10,000",
+        "40,000"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Through which assembly was the lex Campania passed?",
+      "options": [
+        "Comitia centuriata",
+        "Senate",
+        "Comitia tributa",
+        "Concilium plebis"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who expressed concern about Pompey’s behaviour in letters to Atticus?",
+      "options": [
+        "Bibulus",
+        "Crassus",
+        "Caesar",
+        "Cicero"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What offer did Caesar make to Cicero during his consulship?",
+      "options": [
+        "Marriage alliance",
+        "A post in Gaul",
+        "A provincial command",
+        "Support for the consulship"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which tribune did Caesar use to pass proconsular commands?",
+      "options": [
+        "Gabinius",
+        "Vatinius",
+        "Manilius",
+        "Clodius"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What provinces were initially granted to Caesar?",
+      "options": [
+        "Africa and Sicily",
+        "Gaul and Spain",
+        "Transalpine Gaul only",
+        "Cisalpine Gaul and Illyricum"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "For how long was Caesar’s proconsular command?",
+      "options": [
+        "One year",
+        "Ten years",
+        "Five years",
+        "Three years"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Caesar acquire Transalpine Gaul?",
+      "options": [
+        "Popular election",
+        "Senate vote",
+        "Military conquest",
+        "Tribune proposal after governor’s death"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why did Clodius need to be adopted into a plebeian family?",
+      "options": [
+        "To avoid prosecution",
+        "To stand for consul",
+        "To gain Senate support",
+        "To become tribune"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Whom did Caesar help Clodius oppose?",
+      "options": [
+        "Crassus",
+        "Cicero",
+        "Pompey",
+        "Cato"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which two consuls were secured for the following year?",
+      "options": [
+        "Piso and Gabinius",
+        "Cato and Cicero",
+        "Pompey and Crassus",
+        "Caesar and Bibulus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Caesar strengthen ties within the Triumvirate?",
+      "options": [
+        "Marriage alliances",
+        "Financial loans",
+        "Legal reforms",
+        "Military alliances"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}
