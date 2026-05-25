@@ -1,0 +1,217 @@
+{
+  "id": "11-augustus-and-the-people-of-rome",
+  "title": "11. Augustus and the People of Rome",
+  "description": "Augustus’ management of the Senate, equites, and plebs to secure stability while preserving Republican forms.",
+  "questions": [
+    {
+      "question": "Why did Augustus try to preserve Republican forms of government?",
+      "options": [
+        "He believed the Republic was still functioning effectively",
+        "To avoid causing offence and gain cooperation",
+        "He lacked legal authority",
+        "To prevent military revolts"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why was Augustus dependent on the cooperation of the Senate?",
+      "options": [
+        "He lacked popular support",
+        "The administration of the empire was too large for one man",
+        "The Senate controlled the army",
+        "The Senate elected the emperor"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Augustus revise the senatorial rolls?",
+      "options": [
+        "By abolishing the Senate",
+        "By expelling disreputable members",
+        "By increasing membership to 1,000",
+        "By replacing senators with equites"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What number did Augustus eventually settle on for Senate membership?",
+      "options": [
+        "300",
+        "500",
+        "600",
+        "900"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What qualification was required to be a senator under Augustus?",
+      "options": [
+        "400,000 sestertii",
+        "500,000 sestertii",
+        "1,000,000 sestertii",
+        "2,000,000 sestertii"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Augustus encourage the sons of senators to engage in public life?",
+      "options": [
+        "By granting military commands",
+        "By allowing them to wear the toga laticlave",
+        "By appointing them as consuls",
+        "By exempting them from taxes"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Augustus try to restore dignity to the Senate?",
+      "options": [
+        "By increasing its political power",
+        "By introducing ceremonial behaviour and penalties",
+        "By abolishing debates",
+        "By reducing attendance requirements"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What punishment was introduced for senators who failed to attend sessions?",
+      "options": [
+        "Exile",
+        "Loss of rank",
+        "Increased fines",
+        "Public humiliation"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How often did the Senate meet under Augustus’ reforms?",
+      "options": [
+        "Weekly",
+        "Monthly",
+        "Twice per month",
+        "Quarterly"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the role of the Senate committee created by Augustus?",
+      "options": [
+        "To govern provinces",
+        "To prepare business for Senate sessions",
+        "To supervise elections",
+        "To control the army"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How was the consulship altered after 5 BCE?",
+      "options": [
+        "It was abolished",
+        "It was reduced to a six-month term",
+        "Only equites could hold it",
+        "It became a lifetime position"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What additional responsibilities were given to praetors after 22 BCE?",
+      "options": [
+        "Military command",
+        "Oversight of provinces",
+        "Organisation of festivals and games",
+        "Control of taxation"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Augustus expand opportunities within the cursus honorum?",
+      "options": [
+        "By limiting offices",
+        "By expanding lower magistracies",
+        "By abolishing elections",
+        "By appointing senators directly"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did Augustus create new roles for equites?",
+      "options": [
+        "To weaken the army",
+        "To reduce conflict with the Senate",
+        "To abolish aristocratic privilege",
+        "To replace senators"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What qualifications were required for membership of the equestrian order?",
+      "options": [
+        "Military service only",
+        "400,000 sestertii and the princeps’ approval",
+        "Election by the people",
+        "Ownership of land in Italy"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What privileges were granted to equites?",
+      "options": [
+        "Exemption from taxation",
+        "Right to hold the consulship",
+        "Distinctive dress, jury service, and seating rights",
+        "Control of provincial armies"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Augustus bind the plebs to himself politically?",
+      "options": [
+        "Through military service",
+        "Through tribunician power",
+        "Through Senate membership",
+        "Through provincial administration"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Augustus change eligibility for the grain dole?",
+      "options": [
+        "He abolished it",
+        "He expanded it",
+        "He reduced recipients from 250,000 to 200,000",
+        "He restricted it to veterans"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was Augustus’ concern regarding handouts to the plebs?",
+      "options": [
+        "That they were insufficient",
+        "That people would become dependent",
+        "That the Senate opposed them",
+        "That they caused inflation"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Augustus maintain the loyalty of the plebs?",
+      "options": [
+        "Through political empowerment",
+        "Through strict repression",
+        "Through gifts, grain, and spectacles",
+        "Through military service"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "According to Tacitus, how did Augustus secure overall stability?",
+      "options": [
+        "By fear alone",
+        "By seducing each group with targeted benefits",
+        "By abolishing social classes",
+        "By restoring democracy"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

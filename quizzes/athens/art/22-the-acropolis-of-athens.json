@@ -1,0 +1,257 @@
+{
+  "id": "22-the-acropolis-of-athens",
+  "title": "22. The Acropolis of Athens",
+  "description": "The buildings, artistic features, religious functions, and symbolic meanings of the Acropolis in fifth-century Athens.",
+  "questions": [
+    {
+      "question": "What was the original function of the Acropolis before its religious role?",
+      "options": [
+        "A political assembly site",
+        "A religious sanctuary",
+        "A military stronghold",
+        "A residential area"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the overall purpose of the Acropolis during the fifth century BCE?",
+      "options": [
+        "Commercial trade",
+        "Political administration",
+        "Religious worship",
+        "Military defence"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which architectural orders were used on the Acropolis?",
+      "options": [
+        "Both Doric and Ionic",
+        "Ionic only",
+        "Doric only",
+        "Corinthian and Ionic"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which building was mainly Doric but included Ionic features?",
+      "options": [
+        "The Parthenon",
+        "The Propylaea",
+        "The Erechtheion",
+        "The Temple of Athena Nike"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which source provides a detailed later description of the Acropolis?",
+      "options": [
+        "Plutarch",
+        "Herodotus",
+        "Pausanias",
+        "Thucydides"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In which century did Pausanias write his Description of Greece?",
+      "options": [
+        "1st century CE",
+        "2nd century CE",
+        "1st century BCE",
+        "4th century CE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which was the first building visible to visitors approaching the Acropolis?",
+      "options": [
+        "The Erechtheion",
+        "The Parthenon",
+        "The Propylaea",
+        "The Temple of Athena Nike"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "To whom was the Temple of Athena Nike dedicated?",
+      "options": [
+        "Athena Parthenos",
+        "Athena Polias",
+        "Athena as goddess of victory",
+        "Nike alone"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "When was the Temple of Athena Nike built?",
+      "options": [
+        "During the Peace of Nicias",
+        "During the rule of the Thirty",
+        "After the Peloponnesian War",
+        "During the Persian Wars"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What type of sculptural decoration surrounded the Temple of Athena Nike?",
+      "options": [
+        "Pedimental sculpture",
+        "Statues in the round",
+        "Metopes only",
+        "A continuous frieze"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which battles were shown on the frieze of the Temple of Athena Nike?",
+      "options": [
+        "Athenians versus Spartans",
+        "Greeks versus Amazons",
+        "Greeks versus Persians and Corinthians",
+        "Only mythical battles"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was unusual about the depiction of Nike fastening her sandal?",
+      "options": [
+        "She was wingless",
+        "She held a shield",
+        "She was seated",
+        "She wore armour"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What symbolic meaning may the wingless Nike have conveyed?",
+      "options": [
+        "Permanent victory",
+        "Athens’ weakness",
+        "Divine punishment",
+        "Peace with Persia"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the main function of the Propylaea?",
+      "options": [
+        "A treasury",
+        "A formal entrance",
+        "A temple",
+        "A council chamber"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who was the architect of the Propylaea?",
+      "options": [
+        "Callicrates",
+        "Pheidias",
+        "Ictinus",
+        "Mnesikles"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why was the Propylaea difficult to construct?",
+      "options": [
+        "Religious opposition",
+        "Steep and uneven terrain",
+        "Persian attacks",
+        "Lack of funds"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What feature decorated the ceiling of the Propylaea?",
+      "options": [
+        "Painted scenes",
+        "Wooden beams",
+        "Dark blue ceiling with golden stars",
+        "Marble coffers"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What artwork was housed in the northwest wing of the Propylaea?",
+      "options": [
+        "A treasury",
+        "A cult statue",
+        "A picture gallery",
+        "A council room"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who created the bronze statue of Athena Promachos?",
+      "options": [
+        "Callicrates",
+        "Ictinus",
+        "Praxiteles",
+        "Pheidias"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Where did the statue of Athena Promachos stand?",
+      "options": [
+        "Between the Propylaea and the Parthenon",
+        "At the entrance to the Agora",
+        "On the south slope",
+        "Inside the Parthenon"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What evidence confirms the existence of Athena Promachos?",
+      "options": [
+        "Coins depicting the statue",
+        "Temple foundations",
+        "Inscriptions",
+        "Literary sources only"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which building on the Acropolis was non-symmetrical in design?",
+      "options": [
+        "The Temple of Athena Nike",
+        "The Parthenon",
+        "The Propylaea",
+        "The Erechtheion"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "To whom was the Erechtheion primarily dedicated?",
+      "options": [
+        "Athena Polias",
+        "Athena Parthenos",
+        "Zeus",
+        "Poseidon alone"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What object inside the Erechtheion was regarded as extremely sacred?",
+      "options": [
+        "A golden shield",
+        "An olive-wood carving of Athena",
+        "A bronze spear",
+        "A marble statue of Athena"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which feature symbolised Athens’ autochthonous identity?",
+      "options": [
+        "The Athena Promachos statue",
+        "The Parthenon frieze",
+        "The olive tree of Athena",
+        "The Propylaea gateway"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

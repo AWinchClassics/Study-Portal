@@ -1,0 +1,257 @@
+{
+  "id": "14-pompeys-early-career",
+  "title": "14. Pompey’s Early Career",
+  "description": "A study of Pompey’s rapid and unconventional rise during Sulla’s civil war and its implications for Republican politics.",
+  "questions": [
+    {
+      "question": "Which years are covered by Pompey’s early career?",
+      "options": [
+        "90–83 BCE",
+        "80–67 BCE",
+        "88–82 BCE",
+        "83–70 BCE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "During whose civil war did Pompey begin his rise?",
+      "options": [
+        "Marius’",
+        "Sulla’s",
+        "Caesar’s",
+        "Cinna’s"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Pompey initially raise troops for Sulla?",
+      "options": [
+        "By Senate levy",
+        "From Italian allies",
+        "From his father’s veterans and clients",
+        "Through conscription"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why did Sulla send Pompey to Sicily in 81 BCE?",
+      "options": [
+        "To collect taxes",
+        "To suppress a slave revolt",
+        "To fight pirates",
+        "To deal with Perpenna and Marian refugees"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Pompey treat the Sicilians after restoring order?",
+      "options": [
+        "Leniently",
+        "Harshly",
+        "With indifference",
+        "He executed local leaders"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What nickname did Pompey earn after executing Carbo?",
+      "options": [
+        "Imperator",
+        "Magnus",
+        "Princeps",
+        "Adulescentulus carnifex"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Where was Pompey sent after Sicily?",
+      "options": [
+        "Asia",
+        "Africa",
+        "Spain",
+        "Gaul"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which enemy did Pompey defeat in Africa?",
+      "options": [
+        "Domitius",
+        "Perpenna",
+        "Sertorius",
+        "Jugurtha"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What happened when Pompey arrived in Africa?",
+      "options": [
+        "Sulla recalled him",
+        "He was defeated",
+        "7000 troops defected to him",
+        "Local resistance increased"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which region did Pompey subdue after defeating Domitius?",
+      "options": [
+        "Mauretania",
+        "Numidia",
+        "Cyrenaica",
+        "Egypt"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What title did Sulla grant Pompey on his return to Rome?",
+      "options": [
+        "Consul",
+        "Magnus",
+        "Imperator",
+        "Princeps"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why was Pompey’s triumph controversial?",
+      "options": [
+        "He had not held office",
+        "He had no victories",
+        "He lacked senatorial approval",
+        "He was too young"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which of Sulla’s reforms did Pompey’s triumph undermine?",
+      "options": [
+        "Senate expansion",
+        "Cursus honorum",
+        "Court reforms",
+        "Tribunate restrictions"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which ancient source describes Pompey’s early career?",
+      "options": [
+        "Tacitus",
+        "Plutarch",
+        "Suetonius",
+        "Livy"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which consulship did Pompey help secure in 78 BCE?",
+      "options": [
+        "Lepidus",
+        "Crassus",
+        "Catulus",
+        "Cotta"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What role did Pompey play in Lepidus’ rebellion?",
+      "options": [
+        "Supported Lepidus",
+        "Helped suppress the rebellion",
+        "Remained neutral",
+        "Fled Rome"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where did Sertorius establish resistance against Rome?",
+      "options": [
+        "Africa",
+        "Asia",
+        "Spain",
+        "Gaul"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In which year was Pompey sent to assist Metellus in Spain?",
+      "options": [
+        "80 BCE",
+        "78 BCE",
+        "76 BCE",
+        "74 BCE"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened to Pompey when he first arrived in Spain?",
+      "options": [
+        "He was recalled",
+        "He lost two battles",
+        "Sertorius surrendered",
+        "Immediate victory"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did Pompey request reinforcements in 75 BCE?",
+      "options": [
+        "Mutiny in his army",
+        "Threat of invasion of Italy",
+        "Pressure from Metellus",
+        "Lack of supplies"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did the Senate respond to Pompey’s request?",
+      "options": [
+        "Declared war",
+        "Sent two legions",
+        "Recalled him",
+        "Refused"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happened to Sertorius in 72 BCE?",
+      "options": [
+        "Murdered by Perpenna",
+        "Exiled",
+        "Captured by Pompey",
+        "Defeated in battle"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What happened to Perpenna in 71 BCE?",
+      "options": [
+        "Was easily defeated by Pompey",
+        "Joined Pompey",
+        "Became consul",
+        "Escaped"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What characteristic best describes Pompey’s early career?",
+      "options": [
+        "Strictly constitutional",
+        "Rapid and irregular advancement",
+        "Slow and cautious",
+        "Politically passive"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does Pompey’s early career reveal about the Republic?",
+      "options": [
+        "Strong constitutional control",
+        "Popular stability",
+        "Merit-based advancement",
+        "Erosion of traditional norms"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

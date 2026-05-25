@@ -1,0 +1,187 @@
+{
+  "id": "17-socrates",
+  "title": "17. Socrates",
+  "description": "The life of Socrates, the sources for his ideas, and the problems historians face in reconstructing the historical Socrates.",
+  "questions": [
+    {
+      "question": "When was Socrates born?",
+      "options": [
+        "c. 470 BCE",
+        "c. 500 BCE",
+        "c. 450 BCE",
+        "c. 430 BCE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What occupation did Socrates initially work in?",
+      "options": [
+        "Soldier",
+        "Stonecutter",
+        "Farmer",
+        "Teacher"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which evidence suggests Socrates was moderately wealthy earlier in life?",
+      "options": [
+        "His ownership of slaves",
+        "His payment of Sophists",
+        "His ability to afford hoplite armour",
+        "His property holdings"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In which campaigns did Socrates serve as a hoplite?",
+      "options": [
+        "Marathon and Salamis",
+        "Sicily and Pylos",
+        "Delium and Amphipolis",
+        "Potidaea, Delium, and Amphipolis"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What physical traits were Socrates famously associated with?",
+      "options": [
+        "Handsome and athletic",
+        "Tall and elegant",
+        "Long hair and beard",
+        "Flat nose, bulging eyes, and large belly"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Socrates spend the last twenty years of his life?",
+      "options": [
+        "Teaching in a school",
+        "Writing philosophical treatises",
+        "Wandering Athens engaging people in debate",
+        "Living in exile"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What civic role did Socrates hold in 407/6 BCE?",
+      "options": [
+        "Strategos",
+        "Juror",
+        "Council member",
+        "Archon"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How was Socrates described financially in old age?",
+      "options": [
+        "Wealthy",
+        "Supported by the state",
+        "Living off inherited estates",
+        "Poor and dependent on friends"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What charges led to Socrates’ execution?",
+      "options": [
+        "Treason and corruption",
+        "Impiety and corrupting the youth",
+        "Bribery and atheism",
+        "Sophistry and deception"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In what year was Socrates executed?",
+      "options": [
+        "404 BCE",
+        "399 BCE",
+        "395 BCE",
+        "392 BCE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who are the main contemporary sources for Socrates?",
+      "options": [
+        "Plato and Aristotle",
+        "Xenophon and Aristotle",
+        "Plato and Xenophon",
+        "Aristophanes and Thucydides"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How do Plato and Xenophon generally portray Socrates?",
+      "options": [
+        "As dangerous and immoral",
+        "As politically radical",
+        "As foolish",
+        "As idealised and admirable"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What is the Socratic Problem?",
+      "options": [
+        "The absence of Socratic dialogues",
+        "Difficulty reconstructing the historical Socrates",
+        "The lack of archaeological evidence",
+        "The failure of his trial"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why is Plato’s portrayal of Socrates problematic?",
+      "options": [
+        "Plato was hostile to Socrates",
+        "Plato contradicts Xenophon",
+        "Plato may project his own ideas onto Socrates",
+        "Plato wrote too early"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How does Xenophon’s Socrates differ from Plato’s?",
+      "options": [
+        "He focuses on elenchus",
+        "He emphasises self-control over questioning",
+        "He is politically radical",
+        "He is hostile to philosophy"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How is Socrates portrayed by Aristophanes?",
+      "options": [
+        "As a moral hero",
+        "As a political leader",
+        "As a sophist caricature",
+        "As a tragic victim"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why is Aristophanes’ portrayal still valuable to historians?",
+      "options": [
+        "It is factual",
+        "It proves Socrates taught rhetoric",
+        "It shows Socrates’ prominence in Athens",
+        "It defends Socrates"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why is the Socratic Problem considered unsolved?",
+      "options": [
+        "Sources are incomplete",
+        "No trial records survive",
+        "Plato destroyed evidence",
+        "Scholars disagree on interpreting biased sources"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

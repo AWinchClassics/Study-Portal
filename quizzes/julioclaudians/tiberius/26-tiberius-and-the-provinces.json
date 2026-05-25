@@ -1,0 +1,257 @@
+{
+  "id": "26-tiberius-and-the-provinces",
+  "title": "26. Tiberius and the Provinces",
+  "description": "Tiberius’ provincial and frontier policy, focusing on diplomacy, administration, and treatment of provincials.",
+  "questions": [
+    {
+      "question": "What overall frontier policy did Tiberius follow?",
+      "options": [
+        "Complete withdrawal",
+        "Augustus’ policy of limited expansion for security",
+        "Permanent warfare",
+        "Aggressive expansion"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Tiberius primarily strengthen the eastern frontiers?",
+      "options": [
+        "Through diplomacy",
+        "Through mass recruitment",
+        "Through conquest",
+        "Through colonisation"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Tiberius respond to abuses of provincials by governors and equites?",
+      "options": [
+        "He acted swiftly to punish offenders",
+        "He delegated them to the Senate",
+        "He ignored them",
+        "He tolerated minor abuses"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which revolt challenged Tiberius’ provincial administration?",
+      "options": [
+        "Tacfarinas",
+        "Arminius",
+        "Boudicca",
+        "Civilis"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why did long governorships sometimes cause problems?",
+      "options": [
+        "They angered the army",
+        "They encouraged corruption in some cases",
+        "They reduced efficiency",
+        "Governors lost authority"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which governor’s long tenure caused unrest in Judaea?",
+      "options": [
+        "Pontius Pilate",
+        "Macro",
+        "Sabinus",
+        "Blaesus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why were the Jews of Judaea later calmed by the governor of Syria?",
+      "options": [
+        "Pilate was recalled for trial",
+        "Taxes were increased",
+        "Pilate was promoted",
+        "A revolt broke out"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why were some senators unhappy with Tiberius’ provincial policy?",
+      "options": [
+        "He ignored the Senate",
+        "He encroached into senatorial provinces",
+        "He reduced their power",
+        "He abolished senatorial courts"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where did Tiberius maintain the northern frontier?",
+      "options": [
+        "At the Danube",
+        "At the Alps",
+        "At the Elbe",
+        "At the Rhine"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why did Tiberius refuse to extend the Rhine frontier?",
+      "options": [
+        "Lack of troops",
+        "Germanicus’ failure",
+        "Commitment to Augustus’ policy",
+        "Fear of rebellion"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Tiberius secure the Upper Danube?",
+      "options": [
+        "Colonisation",
+        "Naval patrols",
+        "Native tribal leaders",
+        "Permanent legions"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which provinces were combined under Poppaeus Sabinus?",
+      "options": [
+        "Achaea, Macedonia, and Moesia",
+        "Syria and Cilicia",
+        "Gaul and Germania",
+        "Asia and Bithynia"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How was control maintained in the Lower Danube?",
+      "options": [
+        "Direct senatorial rule",
+        "Military dictatorship",
+        "Roman overseer replaced client kings",
+        "Client kings"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What task was Germanicus given in the East?",
+      "options": [
+        "Conquer Parthia",
+        "Reform taxation",
+        "Install a new king in Armenia",
+        "Annex Egypt"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which regions were annexed under Tiberius?",
+      "options": [
+        "Africa and Sicily",
+        "Cappadocia and Commagene",
+        "Britain and Spain",
+        "Gaul and Germania"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What change occurred regarding Cilicia?",
+      "options": [
+        "It was annexed to Asia",
+        "It was abandoned",
+        "It was added to Syria",
+        "It became independent"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What action did Tiberius take regarding Parthia?",
+      "options": [
+        "Invaded it",
+        "Withdrew diplomacy",
+        "Installed a new king",
+        "Annexed territory"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "According to Suetonius, what characterised Tiberius’ provincial justice?",
+      "options": [
+        "Senatorial dominance",
+        "Neglect",
+        "Harsh punishment",
+        "Fair treatment of provincials and citizens"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why did Tiberius retain governors for long periods?",
+      "options": [
+        "To reward loyalty",
+        "To weaken the Senate",
+        "To increase efficiency",
+        "To save money"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which governor served for over twenty years?",
+      "options": [
+        "Blaesus",
+        "Piso",
+        "Pilate",
+        "Sabinus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Tiberius treat equestrian tax collectors?",
+      "options": [
+        "Encouraged their actions",
+        "Abolished them",
+        "Ignored abuses",
+        "Checked excessive plundering"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What religious policy did Tiberius promote in the provinces?",
+      "options": [
+        "No imperial cult",
+        "Worship of himself",
+        "Worship of Augustus",
+        "Worship of local gods only"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Tiberius treat senatorial provinces?",
+      "options": [
+        "He abolished them",
+        "He ruled them directly",
+        "He ignored them entirely",
+        "He avoided excessive interference"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Tiberius respond to provincial disasters?",
+      "options": [
+        "By raising taxes",
+        "By providing generous aid",
+        "By military occupation",
+        "By ignoring them"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What aid did Tiberius give after the Asia Minor earthquake of 17 CE?",
+      "options": [
+        "Money and a delegation",
+        "A new governor",
+        "Tax increases",
+        "Troops only"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "id": "50-nero-and-the-people-of-rome",
+  "title": "50. Nero and the People of Rome",
+  "description": "An assessment of Nero’s relationship with the plebs, equestrians, and Senate, focusing on popularity, spectacle, and growing elite opposition.",
+  "questions": [
+    {
+      "question": "With which group did Nero most strongly seek adulation?",
+      "options": [
+        "The Senate",
+        "The plebs",
+        "The equestrians",
+        "The army"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which historian is critical of Nero’s relationship with the plebs?",
+      "options": [
+        "Josephus",
+        "Cassius Dio",
+        "Tacitus",
+        "Suetonius"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Nero gain the affection of the plebs?",
+      "options": [
+        "Public amusements and generosity",
+        "Military victories",
+        "Tax cuts",
+        "Legal reforms"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What type of entertainment did Nero frequently provide?",
+      "options": [
+        "Athletic contests only",
+        "Chariot racing",
+        "Military parades",
+        "Theatrical tragedies only"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What coin commemorated Nero’s generosity in 64 CE?",
+      "options": [
+        "As",
+        "Sestertius commemorating a corn dole",
+        "Denarius",
+        "Aureus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did the plebs turn against Nero toward the end of his reign?",
+      "options": [
+        "Military defeat",
+        "Tax increases",
+        "Religious persecution",
+        "Profiteering with grain"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What phenomenon after Nero’s death shows his lasting popularity?",
+      "options": [
+        "Restoration of the Republic",
+        "Civil war",
+        "Pretenders impersonating Nero",
+        "Immediate damnatio memoriae"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How were equestrians used in Nero’s public appearances?",
+      "options": [
+        "As bodyguards",
+        "As paid applauders",
+        "As advisers",
+        "As magistrates"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How much were Nero’s paid applauders reportedly paid per performance?",
+      "options": [
+        "400,000 sestertii",
+        "1 million sestertii",
+        "100,000 sestertii",
+        "200,000 sestertii"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who was the most prominent equestrian under Nero?",
+      "options": [
+        "Tigellinus",
+        "Burrus",
+        "Faenius Rufus",
+        "Seneca"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How does Suetonius portray Tigellinus?",
+      "options": [
+        "As ineffective",
+        "As a reformer",
+        "As corrupting Nero with depravity",
+        "As a loyal moral guide"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened to Tigellinus when Nero’s position collapsed?",
+      "options": [
+        "He became emperor",
+        "He remained loyal",
+        "He was executed",
+        "He deserted Nero"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What characterised Nero’s speech on accession regarding the Senate?",
+      "options": [
+        "Conciliation",
+        "Hostility",
+        "Indifference",
+        "Threats"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What promise did Nero make concerning the Senate’s authority?",
+      "options": [
+        "To militarise it",
+        "To end encroachment on its authority",
+        "To reduce its size",
+        "To abolish it"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What legal change did Nero promise regarding criminal cases?",
+      "options": [
+        "They would be heard by the Senate again",
+        "They would be abolished",
+        "They would be delegated to freedmen",
+        "They would be decided by the army"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What did Nero promise regarding freedmen?",
+      "options": [
+        "They would replace senators",
+        "They would dominate government",
+        "They would be expelled",
+        "They would no longer interfere in state affairs"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What type of charges were dropped early in Nero’s reign?",
+      "options": [
+        "Military charges",
+        "Religious charges",
+        "Delatores’ charges",
+        "Tax charges"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Nero respond to offers of statues from the Senate?",
+      "options": [
+        "Accepted all",
+        "Rejected gold and silver statues",
+        "Accepted only gold",
+        "Demanded more"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did the Senate react after Agrippina’s death?",
+      "options": [
+        "With exile",
+        "With festive garb and celebration",
+        "With silence",
+        "With rebellion"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What did the Senate decree after Octavia’s death?",
+      "options": [
+        "Condemnation of Nero",
+        "Thanksgiving",
+        "Public mourning",
+        "Restoration of her honours"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which senator is portrayed as a voice of opposition by Tacitus?",
+      "options": [
+        "Piso",
+        "Seneca",
+        "Burrus",
+        "Thrasea Paetus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What action did Thrasea Paetus take after Agrippina’s death?",
+      "options": [
+        "Supported Nero",
+        "Left the Senate house",
+        "Organised a conspiracy",
+        "Wore festive garb"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What punishment did Thrasea oppose regarding Sosianus?",
+      "options": [
+        "Exile",
+        "Death sentence",
+        "Flogging",
+        "Confiscation of property"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was Thrasea’s eventual fate?",
+      "options": [
+        "Withdrawal from public life followed by death",
+        "Immediate execution",
+        "Political triumph",
+        "Exile"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What event demonstrated the extent of dissatisfaction with Nero?",
+      "options": [
+        "The Pisonian Conspiracy",
+        "The Great Fire",
+        "The Galba revolt",
+        "The Jewish War"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

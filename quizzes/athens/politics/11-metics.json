@@ -1,0 +1,167 @@
+{
+  "id": "11-metics",
+  "title": "11. Metics",
+  "description": "The status, rights, and obligations of metics (resident foreigners) in classical Athens.",
+  "questions": [
+    {
+      "question": "What was a metic in classical Athens?",
+      "options": [
+        "A foreign resident living permanently in Athens",
+        "A freed citizen",
+        "A visiting merchant",
+        "A dependent ally"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Approximately what proportion of Athens’ population may have been metics?",
+      "options": [
+        "One tenth",
+        "Around one third",
+        "One half",
+        "Less than five percent"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How was metic status determined?",
+      "options": [
+        "By place of birth",
+        "By wealth",
+        "By inheritance",
+        "By military service"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How could a metic become a citizen?",
+      "options": [
+        "After long residence",
+        "Through military distinction",
+        "By marriage",
+        "Only by a vote of the Assembly"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What political rights did metics possess?",
+      "options": [
+        "None",
+        "Voting only",
+        "Assembly attendance",
+        "Jury service"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What restriction did metics face regarding property?",
+      "options": [
+        "They could not own slaves",
+        "They could not own land in Attica",
+        "They could not run businesses",
+        "They could not rent property"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What status did a freed slave acquire?",
+      "options": [
+        "Citizen",
+        "Dependent",
+        "Metic",
+        "Ally"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was it difficult to distinguish metics from citizens in public?",
+      "options": [
+        "They dressed identically by law",
+        "They lived separately",
+        "They used different dialects",
+        "There were no visible legal markers"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What administrative requirement applied to all metics?",
+      "options": [
+        "Registration in a deme with a citizen sponsor",
+        "Military training only",
+        "Annual Assembly approval",
+        "Residence outside the city"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which civic obligation were metics expected to fulfil?",
+      "options": [
+        "Jury service",
+        "Military service as hoplites or rowers",
+        "Holding magistracies",
+        "Voting in the Assembly"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What additional tax did metics pay monthly?",
+      "options": [
+        "Eisphora",
+        "Xenika",
+        "Metoikion",
+        "Leitourgia"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the xenika tax?",
+      "options": [
+        "A military levy",
+        "A land tax",
+        "A festival contribution",
+        "A tax for selling goods in the agora"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How were metics treated under Athenian law courts?",
+      "options": [
+        "They could be tortured and faced harsher penalties",
+        "They were legally equal to citizens",
+        "They were exempt from punishment",
+        "They were judged only by magistrates"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which punishment could metics face for serious offences?",
+      "options": [
+        "Ostracism",
+        "Enslavement",
+        "Exile only",
+        "Loss of voting rights"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which source emphasises the economic importance of metics?",
+      "options": [
+        "Thucydides",
+        "Plato",
+        "Xenophon",
+        "Aristotle"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which individual mentioned in sources was a prominent metic?",
+      "options": [
+        "Pericles",
+        "Cleon",
+        "Nicias",
+        "Aspasia"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "id": "20-tiberius-and-sejanus",
+  "title": "20. Tiberius and Sejanus",
+  "description": "The rise and fall of Sejanus under Tiberius, exploring power, manipulation, and the transformation of the principate.",
+  "questions": [
+    {
+      "question": "After Germanicus’ death, whom did Tiberius attempt to promote as his successor?",
+      "options": [
+        "Gaius",
+        "Nero",
+        "Drusus",
+        "Sejanus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In which year did Drusus become consul?",
+      "options": [
+        "19 CE",
+        "26 CE",
+        "23 CE",
+        "21 CE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which power was granted to Drusus in 22 CE?",
+      "options": [
+        "Censorial authority",
+        "Tribunician power",
+        "Proconsular imperium",
+        "Command of the Praetorian Guard"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does Tacitus portray Sejanus’ character?",
+      "options": [
+        "Loyal and modest",
+        "Ineffective and weak",
+        "Sexually perverse and power-hungry",
+        "Ideologically driven"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Under which emperors did Sejanus rise to prominence?",
+      "options": [
+        "Tiberius only",
+        "Augustus only",
+        "Claudius and Tiberius",
+        "Augustus and Tiberius"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What position did Sejanus hold from 17 CE?",
+      "options": [
+        "Sole Praetorian Prefect",
+        "Governor of Syria",
+        "Urban prefect",
+        "Joint consul"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which early campaign did Sejanus accompany Drusus on?",
+      "options": [
+        "Pannonia",
+        "Africa",
+        "Germania",
+        "Illyricum"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why may Tiberius have relied heavily on Sejanus early in his reign?",
+      "options": [
+        "Lack of military experience",
+        "Senatorial hostility",
+        "Ill health",
+        "Limited personal support"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How does Velleius Paterculus describe Sejanus?",
+      "options": [
+        "A corrupt manipulator",
+        "A distinguished assistant",
+        "A tyrant",
+        "A failed general"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What relationship did Sejanus form with Livilla?",
+      "options": [
+        "Open rivalry",
+        "Secret affair",
+        "Political alliance",
+        "Marriage"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the alleged purpose of Sejanus’ relationship with Livilla?",
+      "options": [
+        "To poison Drusus",
+        "To weaken Germanicus’ family",
+        "To overthrow Tiberius directly",
+        "To gain senatorial support"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "In which year did Drusus die?",
+      "options": [
+        "23 CE",
+        "22 CE",
+        "26 CE",
+        "21 CE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was Tiberius’ response to Drusus’ death according to Tacitus?",
+      "options": [
+        "Political reform",
+        "Public resignation",
+        "Immediate retaliation",
+        "Long-term withdrawal and grief"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "To where did Tiberius retire in 26 CE?",
+      "options": [
+        "Capri",
+        "Rome",
+        "Ravenna",
+        "Campania"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What role did Sejanus play during Tiberius’ retirement?",
+      "options": [
+        "Consul",
+        "Controller of access and communication",
+        "Provincial governor",
+        "Military commander"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does Dio describe Sejanus’ power at Rome?",
+      "options": [
+        "As resembling that of an emperor",
+        "As limited",
+        "As purely military",
+        "As equal to the Senate"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which members of Agrippina’s family were persecuted under Sejanus’ influence?",
+      "options": [
+        "Only Agrippina",
+        "Gaius",
+        "Germanicus",
+        "Nero and Drusus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What changed after the death of Livia in 29 CE?",
+      "options": [
+        "Sejanus lost influence",
+        "Agrippina lost protection",
+        "Germanicus was rehabilitated",
+        "Tiberius returned to Rome"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who warned Tiberius about Sejanus’ ambitions?",
+      "options": [
+        "Agrippina",
+        "Macro",
+        "Livilla",
+        "Antonia"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who replaced Sejanus as Praetorian Prefect?",
+      "options": [
+        "Piso",
+        "Drusus",
+        "Germanicus",
+        "Macro"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How was Sejanus removed from power?",
+      "options": [
+        "Forced suicide",
+        "Exile",
+        "Senatorial arrest and execution",
+        "Assassination"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In which year was Sejanus executed?",
+      "options": [
+        "29 CE",
+        "33 CE",
+        "30 CE",
+        "31 CE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What followed Sejanus’ execution?",
+      "options": [
+        "Amnesty",
+        "Reconciliation",
+        "Widespread prosecutions",
+        "Immediate reform"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What term does Tacitus use for the later part of Tiberius’ reign?",
+      "options": [
+        "Principate Restored",
+        "Reign of Terror",
+        "Golden Age",
+        "Age of Reform"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

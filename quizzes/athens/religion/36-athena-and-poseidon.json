@@ -1,0 +1,167 @@
+{
+  "id": "36-athena-and-poseidon",
+  "title": "36. Athena and Poseidon",
+  "description": "How the worship and symbolism of Athena and Poseidon reflected Athenian identity, power, and values.",
+  "questions": [
+    {
+      "question": "Which qualities did Athena most strongly represent for Athens?",
+      "options": [
+        "Trade and commerce",
+        "Fate and prophecy",
+        "Intelligence, both military and intellectual",
+        "Agriculture and fertility"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What aspect of Athenian power was Poseidon particularly associated with?",
+      "options": [
+        "Land warfare",
+        "Artistic skill",
+        "Naval power and prowess",
+        "Legal authority"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which building on the Acropolis was primarily dedicated to Athena Parthenos?",
+      "options": [
+        "The Temple of Athena Nike",
+        "The Propylaea",
+        "The Parthenon",
+        "The Erechtheion"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Where were Athena and Poseidon both represented on the Parthenon?",
+      "options": [
+        "The pediments",
+        "The cult statue",
+        "The metopes",
+        "The frieze only"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What myth was shown on the west pediment of the Parthenon?",
+      "options": [
+        "The birth of Athena",
+        "The Gigantomachy",
+        "The contest between Athena and Poseidon",
+        "The Trojan War"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which building was associated with the contest between Athena and Poseidon?",
+      "options": [
+        "The Propylaea",
+        "The Parthenon",
+        "The Hephaestion",
+        "The Erechtheion"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which features inside the Erechtheion related to Athena and Poseidon?",
+      "options": [
+        "Treasuries for both gods",
+        "A statue of Athena Parthenos and altar of Zeus",
+        "The olive tree and Poseidon’s salt-water spring",
+        "Two cult statues of Athena"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which hero was closely linked with Poseidon in Athenian myth?",
+      "options": [
+        "Ajax",
+        "Perseus",
+        "Heracles",
+        "Theseus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Poseidon’s connection to Theseus reinforced which aspect of Athenian identity?",
+      "options": [
+        "Philosophical tradition",
+        "Naval strength and kingship",
+        "Judicial authority",
+        "Agricultural dominance"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which building outside Athens was dedicated to Poseidon?",
+      "options": [
+        "Temple of Zeus at Olympia",
+        "Temple of Poseidon at Souneion",
+        "Hephaestion",
+        "Temple of Apollo at Delphi"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why was the location of the Temple of Poseidon at Souneion significant?",
+      "options": [
+        "It stood near the Agora",
+        "It marked Athens’ naval routes",
+        "It was the city’s centre",
+        "It overlooked farmland"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which festival involved priests of Poseidon alongside Athena and other gods?",
+      "options": [
+        "City Dionysia",
+        "Skirophoria",
+        "Panathenaia",
+        "Lenaia"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the Skirophoria suggest about Athena and Poseidon?",
+      "options": [
+        "They could be honoured together",
+        "They were rivals only",
+        "Poseidon replaced Athena",
+        "They were worshipped separately"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which temple symbolised Athena’s role as goddess of victory?",
+      "options": [
+        "The Parthenon",
+        "The Temple of Athena Nike",
+        "The Hephaestion",
+        "The Erechtheion"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does the prominence of Athena and Poseidon across Athens reflect the city’s power?",
+      "options": [
+        "Focus on agriculture",
+        "Balance of land and sea power",
+        "Dependence on Sparta",
+        "Religious exclusivity"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Overall, what does the worship of both Athena and Poseidon demonstrate about Athens?",
+      "options": [
+        "Rejection of older gods",
+        "Religious inconsistency",
+        "Reliance on divine favour alone",
+        "Combination of military intelligence and naval strength"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

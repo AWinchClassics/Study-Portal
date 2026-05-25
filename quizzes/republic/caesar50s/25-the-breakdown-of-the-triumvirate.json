@@ -1,0 +1,257 @@
+{
+  "id": "25-the-breakdown-of-the-triumvirate",
+  "title": "25. The Breakdown of the Triumvirate",
+  "description": "An analysis of the weakening and eventual collapse of the First Triumvirate between 57 and 52 BCE, focusing on political violence and shifting alliances.",
+  "questions": [
+    {
+      "question": "Which relationship within the Triumvirate was particularly tense by 57 BCE?",
+      "options": [
+        "Pompey and Crassus",
+        "Caesar and Crassus",
+        "Caesar and Pompey",
+        "Pompey and Cicero"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which politician led a rival gang to oppose Clodius in Rome?",
+      "options": [
+        "Cato",
+        "Bibulus",
+        "Vatinius",
+        "T. Annius Milo"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who backed Clodius’ street gangs against Pompey?",
+      "options": [
+        "Crassus",
+        "Bibulus",
+        "Cicero",
+        "Caesar"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What bill did Pompey support in 57 BCE with Caesar’s reluctant approval?",
+      "options": [
+        "Extension of Caesar’s command",
+        "Lex Campania",
+        "Recall of Cicero",
+        "Grain command"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Pompey ensure the recall of Cicero passed?",
+      "options": [
+        "Using men from his estates to vote",
+        "Senatorial decree",
+        "Bribery",
+        "Use of troops"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Cicero return to Rome in late 57 BCE?",
+      "options": [
+        "In exile again",
+        "With a triumphal reception",
+        "Under guard",
+        "Quietly"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What special command was Pompey granted after Cicero’s return?",
+      "options": [
+        "Governorship of Gaul",
+        "Command in Spain",
+        "Grain supply of Rome",
+        "Eastern settlement"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was Pompey well suited to the grain command?",
+      "options": [
+        "Organisational ability",
+        "Political popularity",
+        "Wealth",
+        "Military power"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which deposed ruler requested Pompey’s help in 56 BCE?",
+      "options": [
+        "Mithridates",
+        "Pharnaces",
+        "Antiochus",
+        "Ptolemy Auletes"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who discouraged Pompey from restoring Ptolemy Auletes?",
+      "options": [
+        "Cato",
+        "Caesar",
+        "Cicero",
+        "Crassus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who threatened to remove Caesar from his Gallic command?",
+      "options": [
+        "Bibulus",
+        "Ahenobarbus",
+        "Vatinius",
+        "Clodius"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where did Caesar and Crassus meet before reconciling with Pompey?",
+      "options": [
+        "Ravenna",
+        "Capua",
+        "Rome",
+        "Luca"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What event formally renewed the Triumvirate in 56 BCE?",
+      "options": [
+        "Marriage alliance",
+        "Senate vote",
+        "Conference at Luca",
+        "Election of consuls"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How many senators accompanied Pompey to Luca?",
+      "options": [
+        "120",
+        "30",
+        "200",
+        "60"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was agreed about Caesar’s command in Gaul?",
+      "options": [
+        "It would end",
+        "It would be reduced",
+        "It would be extended five years",
+        "It would be transferred"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What command was Crassus to receive after 55 BCE?",
+      "options": [
+        "Africa",
+        "Spain",
+        "Syria",
+        "Gaul"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How was Pompey to govern Spain after 55 BCE?",
+      "options": [
+        "With Caesar",
+        "Through legates",
+        "Via the Senate",
+        "In person"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which tribune helped Pompey and Crassus secure their commands?",
+      "options": [
+        "Clodius",
+        "Trebonius",
+        "Gabinius",
+        "Vatinius"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What event in 53 BCE severely weakened the Triumvirate?",
+      "options": [
+        "Recall of Cicero",
+        "Death of Julia",
+        "Conference at Luca",
+        "Battle of Carrhae"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why was Crassus’ death significant?",
+      "options": [
+        "Loss of wealth",
+        "Senate dominance",
+        "Loss of popular support",
+        "Removal of a bond between Caesar and Pompey"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which personal event further weakened Caesar and Pompey’s alliance?",
+      "options": [
+        "Julia’s death",
+        "Pompey’s remarriage",
+        "Cicero’s exile",
+        "Clodius’ trial"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who did Pompey marry in 52 BCE?",
+      "options": [
+        "Servilia",
+        "Pompeia",
+        "Cornelia",
+        "Julia"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which two rivals clashed violently in 52 BCE?",
+      "options": [
+        "Caesar and Pompey",
+        "Crassus and Pompey",
+        "Cato and Bibulus",
+        "Clodius and Milo"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What happened to Clodius in January 52 BCE?",
+      "options": [
+        "Elected praetor",
+        "Killed on Milo’s orders",
+        "Arrested",
+        "Exiled"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What power did Pompey receive after the Senate passed an SCU?",
+      "options": [
+        "Tribunate",
+        "Consulship",
+        "Sole imperium to restore order",
+        "Dictatorship"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

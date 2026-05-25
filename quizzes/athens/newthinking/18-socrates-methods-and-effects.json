@@ -1,0 +1,187 @@
+{
+  "id": "18-socrates-methods-and-effects",
+  "title": "18. Socrates’ Methods and Effects",
+  "description": "Socrates’ method of questioning, its aims, and its social and political consequences in Athens.",
+  "questions": [
+    {
+      "question": "What name is given to Socrates’ method of questioning?",
+      "options": [
+        "Dialectic",
+        "Elenchus",
+        "Rhetoric",
+        "Sophistry"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the Greek term elenchus most closely mean?",
+      "options": [
+        "Teaching",
+        "Persuading",
+        "Cross-examining",
+        "Lecturing"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How does Socrates typically begin his method of enquiry?",
+      "options": [
+        "By giving a definition",
+        "By delivering a speech",
+        "By asking a question",
+        "By citing authority"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What is usually revealed through Socratic questioning?",
+      "options": [
+        "Absolute truth",
+        "Moral certainty",
+        "A new doctrine",
+        "A false premise in the original claim"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What does Socrates’ method deliberately avoid doing?",
+      "options": [
+        "Winning arguments",
+        "Providing a final answer",
+        "Questioning assumptions",
+        "Challenging beliefs"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Socrates describe his own role in learning?",
+      "options": [
+        "As a teacher",
+        "As a lecturer",
+        "As a midwife",
+        "As a lawgiver"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why did Socrates compare learning to childbirth?",
+      "options": [
+        "It produces wisdom instantly",
+        "It requires expert instruction",
+        "It is painful but productive",
+        "It guarantees knowledge"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What did Socrates believe about his own knowledge?",
+      "options": [
+        "He possessed true wisdom",
+        "He knew nothing except his ignorance",
+        "He knew more than the Sophists",
+        "He had divine insight"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In Plato’s Euthyphro, what definition of piety is first proposed?",
+      "options": [
+        "What benefits society",
+        "What the law commands",
+        "What is loved by the gods",
+        "What pleases priests"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why does Socrates reject this definition of piety?",
+      "options": [
+        "The gods do not exist",
+        "The gods disagree with one another",
+        "Laws are inconsistent",
+        "Priests are corrupt"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What contradiction does Socrates expose in Euthyphro’s argument?",
+      "options": [
+        "Something could be both lawful and unlawful",
+        "Something could be both just and unjust",
+        "Something could be both pious and impious",
+        "Something could be both sacred and profane"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What conclusion is reached at the end of the discussion?",
+      "options": [
+        "Piety is clearly defined",
+        "Euthyphro abandons religion",
+        "The gods are immoral",
+        "The definition of piety is insufficient"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which prominent Athenian was closely associated with Socrates?",
+      "options": [
+        "Nicias",
+        "Cleon",
+        "Alcibiades",
+        "Pericles"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which former associates of Socrates became members of the Thirty Tyrants?",
+      "options": [
+        "Alcibiades and Nicias",
+        "Critias and Charmides",
+        "Pericles and Xanthippus",
+        "Cleon and Hyperbolus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did these associations damage Socrates’ reputation?",
+      "options": [
+        "They suggested oligarchic connections",
+        "They proved he taught rhetoric",
+        "They showed he opposed philosophy",
+        "They demonstrated political ambition"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How is Socrates portrayed in Aristophanes’ Clouds?",
+      "options": [
+        "As a heroic moral reformer",
+        "As a military leader",
+        "As a caricatured sophist-philosopher",
+        "As a democratic champion"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does Socrates’ comparison of himself to a gadfly suggest?",
+      "options": [
+        "He was destructive",
+        "He irritated and challenged the city",
+        "He avoided politics",
+        "He supported tyranny"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did Socrates’ method make him enemies in Athens?",
+      "options": [
+        "He opposed religion",
+        "He charged fees",
+        "He publicly humiliated powerful individuals",
+        "He supported Sparta"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "id": "09-leadership-in-athens",
+  "title": "09. Leadership in Athens",
+  "description": "The role and impact of key leaders in Athenian politics, from Pericles to Alcibiades.",
+  "questions": [
+    {
+      "question": "How does Thucydides characterise Pericles’ leadership of Athens?",
+      "options": [
+        "Democracy in name, but rule by the first citizen",
+        "Tyrannical domination",
+        "Weak and indecisive",
+        "Fully egalitarian"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which source states that Athens was a democracy in name only under Pericles?",
+      "options": [
+        "Aristotle",
+        "Plutarch",
+        "Herodotus",
+        "Aristophanes"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "From which year was Pericles continuously elected strategos?",
+      "options": [
+        "460 BCE",
+        "450 BCE",
+        "445 BCE",
+        "431 BCE"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who was Pericles’ father?",
+      "options": [
+        "Miltiades",
+        "Cimon",
+        "Aristeides",
+        "Xanthippus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which intellectual most influenced Pericles’ rational outlook?",
+      "options": [
+        "Anaxagoras",
+        "Damon",
+        "Protagoras",
+        "Sophocles"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which critic of Pericles did he have ostracised?",
+      "options": [
+        "Cleon",
+        "Thucydides son of Melesias",
+        "Nicias",
+        "Hyperbolus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happened to Pericles in 430 BCE?",
+      "options": [
+        "He was assassinated",
+        "He resigned voluntarily",
+        "He was deposed and fined, then reinstated",
+        "He went into exile"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which reform completed the move to radical democracy under Pericles?",
+      "options": [
+        "Creation of the boulē",
+        "Selection of archons by lot",
+        "Introduction of ostracism",
+        "Removal of powers from the Areopagus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why was payment for jurors controversial?",
+      "options": [
+        "It was said to encourage idleness and bribery",
+        "It excluded the poor",
+        "It reduced participation",
+        "It favoured oligarchs"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the effect of the citizenship law of 451 BCE?",
+      "options": [
+        "It expanded the citizen body",
+        "It restricted citizenship to those with two Athenian parents",
+        "It abolished metic status",
+        "It removed women from citizenship"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Pericles transform the Delian League?",
+      "options": [
+        "By abolishing tribute",
+        "By dissolving allied councils",
+        "By turning it into an Athenian empire",
+        "By withdrawing Athenian garrisons"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What form of colonisation did Pericles promote?",
+      "options": [
+        "Emporia",
+        "Apoikiai",
+        "Military camps",
+        "Cleruchies"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was one aim of Pericles’ building programme?",
+      "options": [
+        "To glorify Athens and employ the poor",
+        "To strengthen defences only",
+        "To honour Sparta",
+        "To replace religious buildings"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which sculptor was closely associated with Pericles’ building programme?",
+      "options": [
+        "Polyclitus",
+        "Pheidias",
+        "Myron",
+        "Praxiteles"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does Thucydides portray Cleon?",
+      "options": [
+        "Moderate and cautious",
+        "Intellectual and restrained",
+        "Brutal, violent, and cowardly",
+        "Principled and farsighted"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which event may have contributed to Thucydides’ hostility toward Cleon?",
+      "options": [
+        "The Mytilene Debate",
+        "Pylos",
+        "Sphacteria",
+        "Thucydides’ exile after Amphipolis"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What social group formed the basis of Cleon’s support?",
+      "options": [
+        "The wealthy merchant class",
+        "Rural farmers",
+        "Aristocrats",
+        "Metics"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which leader sought peace while maintaining the empire?",
+      "options": [
+        "Cleon",
+        "Nicias",
+        "Alcibiades",
+        "Hyperbolus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What weakness is commonly attributed to Nicias?",
+      "options": [
+        "Aggression",
+        "Corruption",
+        "Lack of daring and initiative",
+        "Disloyalty"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What quality best explains Alcibiades’ political success?",
+      "options": [
+        "Military discipline",
+        "Religious devotion",
+        "Loyalty to democracy",
+        "Charisma and rhetorical ability"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

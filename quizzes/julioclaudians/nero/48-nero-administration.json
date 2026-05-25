@@ -1,0 +1,207 @@
+{
+  "id": "48-nero-administration",
+  "title": "48. Nero’s Administration",
+  "description": "An evaluation of Nero’s administrative style, balancing early promise, social conservatism, financial policy, and the long-term impact of extravagance.",
+  "questions": [
+    {
+      "question": "How did Nero’s early administration compare to that of Claudius?",
+      "options": [
+        "More militaristic",
+        "Identical",
+        "A promising break",
+        "More autocratic"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What change did Nero initially make regarding Claudius’ freedmen?",
+      "options": [
+        "Promoted them",
+        "Executed them",
+        "Removed them from power",
+        "Ignored them"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened to freedmen after Claudius’ officials were removed?",
+      "options": [
+        "They disappeared from administration",
+        "They were replaced by senators",
+        "They led rebellions",
+        "They were replaced by other freedmen"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Nero view social status?",
+      "options": [
+        "Indifferent",
+        "Hostile to elites",
+        "Radically progressive",
+        "Conservative"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Nero restrict freedmen socially?",
+      "options": [
+        "Banned marriages",
+        "Confiscated property",
+        "Limited social mobility",
+        "Excluded them from Rome"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Nero use freedmen to raise funds?",
+      "options": [
+        "Heavy taxation",
+        "Confiscations",
+        "Military levies",
+        "Forced loans"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which group may have been persecuted due to Nero’s social conservatism?",
+      "options": [
+        "Christians",
+        "Equites",
+        "Jews",
+        "Stoics"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What attitude toward justice is attributed to Nero by Suetonius?",
+      "options": [
+        "Indifferent",
+        "Cruel",
+        "Reckless",
+        "Careful and reluctant"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Nero prefer advice to be given to him?",
+      "options": [
+        "In writing only",
+        "In secret",
+        "In public",
+        "By the Senate"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How is Nero described when signing death warrants?",
+      "options": [
+        "Eager",
+        "Reluctant",
+        "Unconcerned",
+        "Celebratory"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does Tacitus say about Nero’s handling of complex cases?",
+      "options": [
+        "He punished harshly",
+        "He reached careful compromises",
+        "He avoided them",
+        "He delegated them"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was Nero’s approach to tax collection?",
+      "options": [
+        "Careful",
+        "Negligent",
+        "Punitive",
+        "Unregulated"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What financial reform was discussed to reduce corruption?",
+      "options": [
+        "Centralising revenues",
+        "Raising taxes",
+        "Privatising taxes",
+        "Abolishing certain taxes"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which source mentions discussion of tax abolition?",
+      "options": [
+        "Suetonius",
+        "Cassius Dio",
+        "Tacitus",
+        "Josephus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What characterised Nero’s spending?",
+      "options": [
+        "Only military spending",
+        "Mixed prudence and extravagance",
+        "Complete austerity",
+        "Consistent restraint"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which activity significantly weakened imperial finances?",
+      "options": [
+        "Civic reforms",
+        "German wars",
+        "African campaigns",
+        "Trip to Greece"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What major event required extensive rebuilding?",
+      "options": [
+        "The Great Fire of Rome",
+        "Civil war",
+        "Earthquake",
+        "Floods"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How was the rebuilding of Rome generally received?",
+      "options": [
+        "With hostility",
+        "Mostly positively",
+        "With rebellion",
+        "With indifference"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which project caused notable resentment?",
+      "options": [
+        "Domus Aurea",
+        "Aqueduct repairs",
+        "Harbour works",
+        "New roads"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does the PPT emphasise overall about Nero’s administration?",
+      "options": [
+        "Uniformly successful",
+        "Entirely incompetent",
+        "Purely tyrannical",
+        "Mixed and complex"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

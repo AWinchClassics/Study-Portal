@@ -1,0 +1,207 @@
+{
+  "id": "20-the-revolt-of-samos-440-439-bce",
+  "title": "20. The Revolt of Samos, c. 440–439 BCE",
+  "description": "A major revolt against Athenian control that highlights the coercive nature of the Delian League empire.",
+  "questions": [
+    {
+      "question": "In which years did the Revolt of Samos take place?",
+      "options": [
+        "440–439 BCE",
+        "437–436 BCE",
+        "446–445 BCE",
+        "443–442 BCE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which two Athenian allies were at war prior to the revolt?",
+      "options": [
+        "Samos and Miletus",
+        "Miletus and Chios",
+        "Samos and Chios",
+        "Samos and Lesbos"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which state appealed to Athens for help during this conflict?",
+      "options": [
+        "Lesbos",
+        "Samos",
+        "Chios",
+        "Miletus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What form of government did Samos have before Athenian intervention?",
+      "options": [
+        "Tyranny",
+        "Democracy",
+        "Oligarchy",
+        "Monarchy"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What political change did Athens impose on Samos?",
+      "options": [
+        "Creation of a tyranny",
+        "Restoration of oligarchy",
+        "Removal from the League",
+        "Installation of a democracy"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "To whom did the expelled Samian oligarchs turn for support?",
+      "options": [
+        "The Persian king",
+        "The Corinthian assembly",
+        "The Spartan ephors",
+        "Pissuthnes, satrap of Lydia"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What role did Pissuthnes play in the revolt?",
+      "options": [
+        "He funded Athens",
+        "He led the revolt personally",
+        "He mediated peace",
+        "He helped expel the Athenian garrison"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What happened to the Athenian garrison on Samos?",
+      "options": [
+        "It was massacred",
+        "It was expelled",
+        "It surrendered peacefully",
+        "It was reinforced"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did the conflict between Athens and Samos develop?",
+      "options": [
+        "A naval battle followed by two sieges",
+        "One decisive battle",
+        "A land invasion only",
+        "Only a siege"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How long did the Samian resistance last?",
+      "options": [
+        "Nine months",
+        "One year",
+        "Six months",
+        "Three months"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the outcome of the revolt for Samos?",
+      "options": [
+        "Independence",
+        "Alliance with Sparta",
+        "Persian protection",
+        "Surrender to Athens"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What happened to the Samian fleet after the surrender?",
+      "options": [
+        "It joined Persia",
+        "It was destroyed",
+        "It was returned later",
+        "It was handed over to Athens"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What new obligation was imposed on Samos after the revolt?",
+      "options": [
+        "Payment of tribute",
+        "Military service only",
+        "Neutrality",
+        "Religious contributions"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which ancient historian provides the main narrative of the revolt?",
+      "options": [
+        "Herodotus",
+        "Thucydides",
+        "Xenophon",
+        "Polybius"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which later author also discusses the revolt in connection with Pericles?",
+      "options": [
+        "Diodorus",
+        "Aristotle",
+        "Plutarch",
+        "Pausanias"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does the revolt demonstrate about Athenian control of allies?",
+      "options": [
+        "It had ended",
+        "It was weakening",
+        "It relied on coercion",
+        "It was voluntary"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What issue did Corinth later raise when discussing Corcyra?",
+      "options": [
+        "Spartan neutrality",
+        "Persian involvement",
+        "Athens’ right to control allies",
+        "Athens’ weakness"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does Corinth’s argument imply about Spartan voting at the time?",
+      "options": [
+        "Sparta was absent",
+        "Sparta supported Athens",
+        "Sparta voted for war",
+        "Sparta abstained"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What feature of the Peloponnesian League explains this implication?",
+      "options": [
+        "Religious leadership",
+        "Democratic vote",
+        "Single assembly voting",
+        "Bicameral voting system"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What wider significance does the Samian revolt have?",
+      "options": [
+        "It illustrates Athenian imperialism",
+        "It ended the Thirty Year Peace",
+        "It exposed Persian weakness",
+        "It strengthened Spartan alliances"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

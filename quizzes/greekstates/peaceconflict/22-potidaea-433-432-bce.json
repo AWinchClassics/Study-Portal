@@ -1,0 +1,207 @@
+{
+  "id": "22-potidaea-433-432-bce",
+  "title": "22. Potidaea, c. 433–432 BCE",
+  "description": "The siege of Potidaea and its role in escalating tensions between Athens, Corinth, and Sparta before the Peloponnesian War.",
+  "questions": [
+    {
+      "question": "Where was Potidaea located?",
+      "options": [
+        "Chalcidice",
+        "Ionia",
+        "Attica",
+        "Thrace"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which city founded Potidaea as a colony?",
+      "options": [
+        "Athens",
+        "Corinth",
+        "Sparta",
+        "Megara"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was unusual about Potidaea’s political position?",
+      "options": [
+        "Independent polis",
+        "Member of the Peloponnesian League",
+        "Athenian cleruchy",
+        "Athenian ally but Corinthian colony"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What annual right did Potidaea retain despite Athenian control?",
+      "options": [
+        "Minting coinage",
+        "Electing archons",
+        "Sending Corinthian magistrates",
+        "Holding independent courts"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why did Athens become suspicious of Potidaea in 433 BCE?",
+      "options": [
+        "Persian support",
+        "Potential revolt encouraged by Corinth",
+        "Failure to pay tribute",
+        "Religious offences"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What demands did Athens make of Potidaea?",
+      "options": [
+        "Increase tribute",
+        "Hand over fleet",
+        "Pull down walls and expel magistrates",
+        "Install democracy"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Potidaea respond to Athenian demands?",
+      "options": [
+        "Immediate compliance",
+        "Appealed to Corinth and Sparta",
+        "Declared neutrality",
+        "Attacked Athens"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What secret promise did Sparta allegedly make to Potidaea?",
+      "options": [
+        "Naval support",
+        "Immediate invasion of Attica",
+        "Persian alliance",
+        "Financial aid"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which Corinthian general supported Potidaea?",
+      "options": [
+        "Brasidas",
+        "Aristeus",
+        "Archidamus",
+        "Cleon"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What action triggered open conflict at Potidaea?",
+      "options": [
+        "Corinthian invasion",
+        "Athenian siege",
+        "Potidaean attack on Athenian forces",
+        "Spartan declaration of war"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Athens respond militarily?",
+      "options": [
+        "Sent envoys only",
+        "Launched a naval blockade",
+        "Sent a land and naval force",
+        "Invaded Corinth"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What additional burden did Athens impose on allies to fund the siege?",
+      "options": [
+        "Extra ships",
+        "Emergency tax",
+        "Increased tribute",
+        "Forced cleruchies"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How long did the siege of Potidaea last?",
+      "options": [
+        "One year",
+        "Two years",
+        "Three years",
+        "Over two years"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What hardships were reported inside Potidaea during the siege?",
+      "options": [
+        "Plague",
+        "Starvation",
+        "Civil war",
+        "Flooding"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the outcome for Potidaea after surrender?",
+      "options": [
+        "Destruction",
+        "Loss of autonomy and walls",
+        "Persian protection",
+        "Alliance with Corinth"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happened to the inhabitants after the siege?",
+      "options": [
+        "Enslavement",
+        "Execution",
+        "Expulsion",
+        "Allowed to remain under terms"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was the cost of the siege to Athens according to Thucydides?",
+      "options": [
+        "1,000 talents",
+        "2,000 talents",
+        "3,000 talents",
+        "4,000 talents"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which historian provides the main account of Potidaea?",
+      "options": [
+        "Herodotus",
+        "Xenophon",
+        "Thucydides",
+        "Plutarch"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was the Potidaea affair significant diplomatically?",
+      "options": [
+        "It ended the Delian League",
+        "It broke the Thirty Year Peace in practice",
+        "It caused Persian intervention",
+        "It weakened Sparta"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What wider conflict did Potidaea help precipitate?",
+      "options": [
+        "Greco-Persian Wars",
+        "Peloponnesian War",
+        "Sacred War",
+        "Corinthian War"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

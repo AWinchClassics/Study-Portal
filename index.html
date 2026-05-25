@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<script>
+	  // Pick up any redirect stored by 404.html
+	  const redirect = sessionStorage.getItem('redirect')
+	  if (redirect && redirect !== '/') {
+		sessionStorage.removeItem('redirect')
+		window.history.replaceState(null, '', '/Study-Portal' + redirect)
+	  }
+	</script>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/Study-Portal/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>frontend</title>
+    <script type="module" crossorigin src="/Study-Portal/assets/index-DIv6caAi.js"></script>
+    <link rel="stylesheet" crossorigin href="/Study-Portal/assets/index-3-BJ-_iv.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

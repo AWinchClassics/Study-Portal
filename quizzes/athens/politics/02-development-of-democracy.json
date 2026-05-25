@@ -1,0 +1,167 @@
+{
+  "id": "02-development-of-democracy",
+  "title": "02. Development of Democracy",
+  "description": "The evolution of Athenian democracy from Solon to Pericles and the impact of key reforms.",
+  "questions": [
+    {
+      "question": "Why was Solon appointed eponymous archon in 594/3 BCE?",
+      "options": [
+        "To prevent revolution through social reform",
+        "To lead Athens in war",
+        "To overthrow the aristocracy",
+        "To abolish debt slavery entirely"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which group formed the richest class in Solon’s property divisions?",
+      "options": [
+        "Thētes",
+        "Pentakosiomedimnoi",
+        "Zeugitai",
+        "Hippeis"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which political right did Solon grant to all citizens regardless of class?",
+      "options": [
+        "The right to hold office",
+        "The right to become archon",
+        "The right to attend the ekklēsia",
+        "The right to serve as strategos"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Under Solon, where did most political power remain concentrated?",
+      "options": [
+        "The ekklēsia",
+        "The boulē",
+        "Popular juries",
+        "The archons and the Council of the Areopagus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What major administrative reform did Cleisthenes introduce?",
+      "options": [
+        "The division of citizens into ten tribes",
+        "Payment for jurors",
+        "Selection of archons by lot",
+        "The citizenship law of two Athenian parents"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the size and structure of the boulē created by Cleisthenes?",
+      "options": [
+        "400 members chosen by wealth",
+        "500 members with 50 from each tribe annually",
+        "600 members elected for life",
+        "300 members appointed by the Areopagus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What military obligation was tied to Cleisthenes’ tribal system?",
+      "options": [
+        "Each tribe funded ships",
+        "Each tribe elected archons",
+        "Each tribe provided a regiment led by a strategos",
+        "Each tribe guarded Attica"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the significance of selecting archons by lot from 487–486 BCE?",
+      "options": [
+        "It strengthened aristocratic control",
+        "It increased the power of the strategoi",
+        "It abolished the Areopagus",
+        "It reduced elite dominance of the Areopagus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did the Persian Wars affect democratic development in Athens?",
+      "options": [
+        "They increased the political importance of the lower classes",
+        "They weakened naval power",
+        "They restored oligarchy",
+        "They reduced citizen participation"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which group gained influence due to service in the navy during the Persian Wars?",
+      "options": [
+        "Hippeis",
+        "Thētes",
+        "Pentakosiomedimnoi",
+        "Metics"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What office did Pericles hold repeatedly from 443 BCE?",
+      "options": [
+        "Archon",
+        "King",
+        "Strategos",
+        "Ephor"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which reform is attributed to Ephialtes in 462/1 BCE?",
+      "options": [
+        "Introduction of jury pay",
+        "Creation of the boulē",
+        "Reform of citizenship laws",
+        "Reduction of the powers of the Areopagus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which new responsibility did the Areopagus retain after Ephialtes’ reforms?",
+      "options": [
+        "Jurisdiction over murder and religious offences",
+        "Scrutiny of public officials",
+        "Control of the law code",
+        "Appointment of magistrates"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What democratic reform is associated with Pericles to increase participation?",
+      "options": [
+        "Abolition of the Areopagus",
+        "Payment for jurors",
+        "Selection of strategoi by lot",
+        "Removal of property classes"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the effect of Pericles’ citizenship law?",
+      "options": [
+        "It expanded the citizen body",
+        "It reduced the role of women",
+        "It restricted citizenship to those with two Athenian parents",
+        "It abolished metic status"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What exception did Pericles later seek after the plague?",
+      "options": [
+        "To restore aristocratic power",
+        "To repeal jury pay",
+        "To allow metics to vote",
+        "To grant citizenship to his sons by Aspasia"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

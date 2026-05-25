@@ -1,0 +1,247 @@
+{
+  "id": "30-comedy",
+  "title": "30. Comedy",
+  "description": "The origins, conventions, playwrights, and political role of Old Comedy in classical Athens.",
+  "questions": [
+    {
+      "question": "Comedy emerged from worship of which god?",
+      "options": [
+        "Apollo",
+        "Athena",
+        "Dionysus",
+        "Zeus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "From which ritual did comedy develop?",
+      "options": [
+        "Procession",
+        "Dithyramb",
+        "Satyr play",
+        "Kōmos"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What does the term kōmōidia literally mean?",
+      "options": [
+        "Song of Dionysus",
+        "Play of the people",
+        "Dance of actors",
+        "Song of the kōmos"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What object was a central symbol of the kōmos?",
+      "options": [
+        "Mask",
+        "Torch",
+        "Wine cup",
+        "Phallus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How many actors typically appeared in Old Comedy?",
+      "options": [
+        "Two",
+        "Five",
+        "Four",
+        "Three"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the usual size of the comic chorus?",
+      "options": [
+        "Twenty",
+        "Twelve",
+        "Fifteen",
+        "Twenty-four"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How could the comic chorus be arranged?",
+      "options": [
+        "Behind the skene",
+        "In two sub-choruses",
+        "Without masks",
+        "In pairs only"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What feature most clearly distinguished comic costume from tragic costume?",
+      "options": [
+        "Dignified robes",
+        "Padded body and exaggerated phallus",
+        "Helmets",
+        "Bright colours"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the parabasis?",
+      "options": [
+        "Direct address to the audience",
+        "A choral dance",
+        "A scene change",
+        "A sacrifice"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who spoke during the parabasis?",
+      "options": [
+        "The playwright in person",
+        "The chorus leader",
+        "The lead actor",
+        "A magistrate"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What topics could the parabasis address?",
+      "options": [
+        "Mythology",
+        "Playwright’s career and contemporary events",
+        "Only religious matters",
+        "Only the plot"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who is the only Old Comic playwright whose plays survive intact?",
+      "options": [
+        "Menander",
+        "Cratinus",
+        "Eupolis",
+        "Aristophanes"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Approximately how many plays by Aristophanes survive?",
+      "options": [
+        "Five",
+        "Twenty-four",
+        "Eleven",
+        "Eight"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which comic playwright is known to have written about twenty-four plays?",
+      "options": [
+        "Cratinus",
+        "Eupolis",
+        "Aristophanes",
+        "Philemon"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which playwright was both a friend and rival of Aristophanes?",
+      "options": [
+        "Phrynicus",
+        "Eupolis",
+        "Menander",
+        "Cratinus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which play features a private peace with Sparta?",
+      "options": [
+        "Knights",
+        "Acharnians",
+        "Wasps",
+        "Birds"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In which play is Cleon satirised as a demagogue?",
+      "options": [
+        "Frogs",
+        "Knights",
+        "Wasps",
+        "Birds"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What is the central idea of Lysistrata?",
+      "options": [
+        "Criticism of the courts",
+        "Foundation of a new city",
+        "Legal reform",
+        "Women organise a sex-strike to end war"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which play centres on criticism of the law courts?",
+      "options": [
+        "Acharnians",
+        "Wasps",
+        "Birds",
+        "Knights"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which play involves the founding of a city in the sky?",
+      "options": [
+        "Peace",
+        "Knights",
+        "Frogs",
+        "Birds"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which playwright is mocked repeatedly in Aristophanes’ plays?",
+      "options": [
+        "Euripides",
+        "Aeschylus",
+        "Thucydides",
+        "Sophocles"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "In which play does Euripides appear as a character?",
+      "options": [
+        "Birds",
+        "Frogs",
+        "Knights",
+        "Wasps"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What style best describes Old Comedy?",
+      "options": [
+        "Formal and religious",
+        "Philosophical",
+        "Realistic and restrained",
+        "Fantastic and satirical"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How could comedy influence Athenian politics?",
+      "options": [
+        "By excluding citizens",
+        "By mocking public figures",
+        "By proposing laws",
+        "By replacing Assembly debates"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

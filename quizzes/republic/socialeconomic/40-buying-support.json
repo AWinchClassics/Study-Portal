@@ -1,0 +1,227 @@
+{
+  "id": "40-buying-support",
+  "title": "40. Buying Support",
+  "description": "An exploration of how Roman politicians used largesse, games, land distribution, and the corn dole to secure popular and political support.",
+  "questions": [
+    {
+      "question": "What does the term 'largesse' refer to in Roman politics?",
+      "options": [
+        "Tax relief",
+        "Religious generosity",
+        "Giving money, gifts, or benefits to gain support",
+        "Military discipline"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which office did Caesar hold when he hosted lavish games in 63 BCE?",
+      "options": [
+        "Praetor",
+        "Aedile",
+        "Consul",
+        "Tribune"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did Caesar host games in 63 BCE?",
+      "options": [
+        "To mark his election as consul",
+        "To celebrate a military victory",
+        "To appease the Senate",
+        "To honour his deceased father"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which event prompted Caesar to host further games in hopes of gaining the consulship?",
+      "options": [
+        "His praetorship",
+        "Julia’s death",
+        "Pompey’s triumph",
+        "His daughter's death"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which major building did Pompey celebrate with games in 55 BCE?",
+      "options": [
+        "Forum of Caesar",
+        "Pantheon",
+        "Theatre of Pompey",
+        "Circus Maximus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What form of largesse did Crassus provide in 70 BCE?",
+      "options": [
+        "A city-wide banquet and provisions",
+        "Free grain",
+        "Debt cancellation",
+        "Free land"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What gift did Caesar give each freeborn Roman citizen after his Gallic triumphs?",
+      "options": [
+        "400 sesterces",
+        "Free grain",
+        "Land grants",
+        "A Gallic slave"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How much money did Caesar leave to each citizen in his will?",
+      "options": [
+        "300 sesterces",
+        "200 sesterces",
+        "500 sesterces",
+        "400 sesterces"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who first established a subsidised corn dole?",
+      "options": [
+        "Caesar",
+        "Gaius Gracchus",
+        "Sulla",
+        "Tiberius Gracchus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the political effect of the subsidised corn dole?",
+      "options": [
+        "Reduced urban unrest",
+        "Shifted loyalty to populares politicians",
+        "Weakened elections",
+        "Strengthened the Senate"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which dictator abolished the corn dole?",
+      "options": [
+        "Crassus",
+        "Caesar",
+        "Pompey",
+        "Sulla"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who restored the corn dole in 72 BCE?",
+      "options": [
+        "Gracchus and Saturninus",
+        "Caesar and Pompey",
+        "Varro and Longinus",
+        "Clodius and Cato"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why did Cato increase the number of corn dole recipients in 62 BCE?",
+      "options": [
+        "To reward allies",
+        "To gain consulship",
+        "To suppress unrest after Catiline",
+        "To weaken Caesar"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who made the corn dole free to 320,000 citizens in 58 BCE?",
+      "options": [
+        "Cicero",
+        "Pompey",
+        "Clodius",
+        "Caesar"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Caesar reduce the burden of the corn dole when dictator?",
+      "options": [
+        "Abolishing it",
+        "Reducing grain quality",
+        "Charging a small fee",
+        "Reducing recipients to 150,000"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What other methods did Caesar use to support the poor?",
+      "options": [
+        "Public works and resettlement",
+        "Religious festivals",
+        "Debt forgiveness only",
+        "Tax cuts only"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why were land bills an effective way to buy political support?",
+      "options": [
+        "They rewarded soldiers",
+        "They pleased the Senate",
+        "They reduced taxes",
+        "They increased trade"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Where did Sulla settle his veterans?",
+      "options": [
+        "Campania",
+        "Etruria",
+        "Spain",
+        "Gaul"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happened when Lepidus proposed returning land taken by Sulla’s veterans?",
+      "options": [
+        "Senatorial approval",
+        "Public indifference",
+        "Peaceful reform",
+        "Veteran revolt"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which land bill did Cicero speak against in 63 BCE?",
+      "options": [
+        "Caesar’s bill",
+        "Pompey’s bill",
+        "Clodius’ bill",
+        "Rullus’ bill"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who secured land grants for Pompey’s veterans after earlier failures?",
+      "options": [
+        "Cicero",
+        "Octavian",
+        "Caesar",
+        "Crassus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why did Octavian frequently face land redistribution problems?",
+      "options": [
+        "Lack of public land",
+        "Senatorial opposition",
+        "Repeated need to settle veterans",
+        "Economic collapse"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

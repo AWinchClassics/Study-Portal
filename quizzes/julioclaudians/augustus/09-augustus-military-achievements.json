@@ -1,0 +1,207 @@
+{
+  "id": "09-augustus-military-achievements",
+  "title": "09. Augustus’ Military Achievements",
+  "description": "Augustus’ use of military victory and controlled expansion to end civil war and secure peace across the Roman world.",
+  "questions": [
+    {
+      "question": "What major victory ended the civil war phase of Augustus’ rise to power?",
+      "options": [
+        "The Battle of Philippi",
+        "The Battle of Actium",
+        "The Battle of Mutina",
+        "The Battle of Naulochus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In which areas did fighting continue after Actium?",
+      "options": [
+        "Gaul and Spain",
+        "Asia Minor and Syria",
+        "Alexandria and Dalmatia",
+        "Africa and Sicily"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Augustus publicly celebrate the end of the civil wars?",
+      "options": [
+        "A single triumph",
+        "A double triumph",
+        "A triple triumph",
+        "No triumph"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which media were used to promote Augustus’ military successes?",
+      "options": [
+        "Senate decrees only",
+        "Public speeches",
+        "Coinage showing captured territories",
+        "Private inscriptions"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which regions does the Res Gestae claim Augustus expanded into?",
+      "options": [
+        "Africa and Italy",
+        "Hispania, Syria, Judea, and the Rhine",
+        "Britain and Germania",
+        "Greece and Asia Minor"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was Armenia’s status under Augustus?",
+      "options": [
+        "A Roman province",
+        "An allied republic",
+        "A client kingdom",
+        "An independent monarchy"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What did the closure of the Temple of Janus symbolise?",
+      "options": [
+        "Religious reform",
+        "Augustus’ dictatorship",
+        "Rome at peace",
+        "Military expansion"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What monument commemorated the peace established by Augustus?",
+      "options": [
+        "Temple of Mars Ultor",
+        "Ara Pacis",
+        "Forum of Augustus",
+        "Mausoleum of Augustus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was Augustus’ aim in expanding into Germania?",
+      "options": [
+        "To conquer Britain",
+        "To protect Gaul",
+        "To gain gold resources",
+        "To punish tribes"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which commanders initially led successful campaigns in Germania?",
+      "options": [
+        "Agrippa and Marcellus",
+        "Tiberius and Germanicus",
+        "Drusus and Tiberius",
+        "Varus and Arminius"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened to Drusus during the German campaigns?",
+      "options": [
+        "He retired",
+        "He was executed",
+        "He died on campaign in 9 BCE",
+        "He was recalled to Rome"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who was given command of the German legions after early successes?",
+      "options": [
+        "Germanicus",
+        "Tiberius",
+        "Varus",
+        "Agrippa"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What caused the revolt in Germania in 9 CE?",
+      "options": [
+        "Roman withdrawal",
+        "Heavy taxation and harsh rule",
+        "Religious persecution",
+        "Foreign invasion"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who led the rebellion against Rome in Germania?",
+      "options": [
+        "Drusus",
+        "Germanicus",
+        "Arminius",
+        "Maroboduus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the outcome of the Battle of the Teutoburg Forest?",
+      "options": [
+        "Roman victory",
+        "A stalemate",
+        "Destruction of three Roman legions",
+        "Capture of Augustus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How many Roman troops were lost in the Teutoburg disaster?",
+      "options": [
+        "Around 5,000",
+        "Around 10,000",
+        "Around 20,000",
+        "Around 40,000"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was Varus’ response to defeat?",
+      "options": [
+        "He fled",
+        "He surrendered",
+        "He committed suicide",
+        "He was executed"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Augustus react to the disaster in Germania?",
+      "options": [
+        "He ignored it",
+        "He celebrated it",
+        "He was deeply distressed",
+        "He immediately expanded further"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "According to Suetonius, how did Augustus change policy after 9 CE?",
+      "options": [
+        "Aggressive expansion",
+        "Naval warfare",
+        "Defensive consolidation",
+        "Complete withdrawal"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Overall, how did Augustus present his military record?",
+      "options": [
+        "As continuous conquest",
+        "As failure",
+        "As bringing peace and security",
+        "As purely defensive"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

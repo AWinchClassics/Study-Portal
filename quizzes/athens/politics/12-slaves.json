@@ -1,0 +1,167 @@
+{
+  "id": "12-slaves",
+  "title": "12. Slaves",
+  "description": "The legal status, treatment, and roles of slaves in classical Athenian society.",
+  "questions": [
+    {
+      "question": "In classical Athens, what was the legal status of slaves?",
+      "options": [
+        "Property of their master",
+        "Dependent citizens",
+        "Resident foreigners",
+        "State employees"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which actions could a master legally take with a slave?",
+      "options": [
+        "Grant citizenship unilaterally",
+        "Sell, rent, or bequeath them",
+        "Enlist them as magistrates",
+        "Allow them to vote"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How were slaves represented in legal disputes?",
+      "options": [
+        "By state advocates",
+        "By themselves",
+        "By their master",
+        "By elected jurors"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Under what condition was a slave’s testimony admissible in court?",
+      "options": [
+        "When sworn by oath",
+        "When supported by witnesses",
+        "When approved by a magistrate",
+        "Only when given under torture"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What option was available to a slave who felt mistreated by their master?",
+      "options": [
+        "Seek refuge at a religious sanctuary",
+        "Appeal directly to the Assembly",
+        "Bring a private prosecution",
+        "Join another household"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What consequence could a master face if found guilty of mistreating a slave?",
+      "options": [
+        "Loss of citizenship",
+        "Being forced to sell the slave",
+        "Public execution",
+        "Exile"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which restriction applied to masters’ behaviour toward slaves?",
+      "options": [
+        "They could not punish slaves",
+        "They could not sell slaves",
+        "They could not engage in pederastic relationships with free boys",
+        "They could not use slave labour"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which religious right did slaves possess?",
+      "options": [
+        "Holding priesthoods",
+        "Leading public sacrifices",
+        "Voting in cult decisions",
+        "Participation in civic and family cult practices"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What economic role did slaves play in Athens?",
+      "options": [
+        "Providing labour in farming, mining, and households",
+        "Managing state finances",
+        "Serving exclusively as soldiers",
+        "Acting as diplomats"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which source suggests slavery itself was rarely questioned in Athens?",
+      "options": [
+        "Thucydides",
+        "Xenophon, Memorabilia",
+        "Plato, Republic",
+        "Aristotle, Politics"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "According to Xenophon, whom was it considered acceptable to enslave?",
+      "options": [
+        "All defeated peoples",
+        "Fellow Greeks",
+        "Enemies rather than friends",
+        "Only criminals"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which source notes exceptions to the practice of enslaving only non-Greeks?",
+      "options": [
+        "Aristophanes",
+        "Old Oligarch",
+        "Plato",
+        "Thucydides"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which example shows slaves could work alongside free people?",
+      "options": [
+        "Construction of the Erechtheion",
+        "Jury service",
+        "Assembly debates",
+        "Magistracies"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which group were state-owned slaves in Athens?",
+      "options": [
+        "Helots",
+        "Scythian Archers",
+        "Metics",
+        "Thetes"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What complaint does the Old Oligarch make about slaves?",
+      "options": [
+        "They were too harshly treated",
+        "They dominated politics",
+        "They had it too easy",
+        "They were too numerous"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What do dramatic sources suggest about relationships between slaves and households?",
+      "options": [
+        "Slaves were isolated from families",
+        "Slaves were hostile to masters",
+        "Slaves avoided childcare",
+        "Slaves could have close relationships and raise children"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "id": "10-sullas-early-career",
+  "title": "10. Sulla’s Early Career",
+  "description": "An examination of Sulla’s rise to prominence, his consulship of 88 BCE, and the events that led to his unprecedented march on Rome.",
+  "questions": [
+    {
+      "question": "In which year was Sulla elected consul?",
+      "options": [
+        "90 BCE",
+        "91 BCE",
+        "88 BCE",
+        "87 BCE"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "On the back of which conflict was Sulla elected consul?",
+      "options": [
+        "Social War",
+        "Civil War",
+        "Jugurthine War",
+        "Mithridatic War"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which province was Sulla granted as his proconsular command?",
+      "options": [
+        "Asia",
+        "Spain",
+        "Gaul",
+        "Africa"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Against whom was Sulla expected to fight in Asia?",
+      "options": [
+        "Tigranes",
+        "Mithridates of Pontus",
+        "Jugurtha",
+        "Spartacus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which tribune attempted to redistribute the newly enfranchised allies across all 35 tribes?",
+      "options": [
+        "Octavius",
+        "Drusus",
+        "Saturninus",
+        "Sulpicius"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why did Marius support Sulpicius’ proposals?",
+      "options": [
+        "To obtain the Mithridatic command",
+        "To pass land reform",
+        "To gain citizenship",
+        "To weaken the Senate"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Sulpicius attempt to force his legislation through?",
+      "options": [
+        "Armed bodyguards",
+        "Senatorial debate",
+        "Military intervention",
+        "Popular assemblies"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who was Sulla’s co-consul in 88 BCE?",
+      "options": [
+        "Pompey Magnus",
+        "Pompeius Rufus",
+        "Cinna",
+        "Octavius"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happened when violence broke out in Rome in 88 BCE?",
+      "options": [
+        "Marius was executed",
+        "Sulla surrendered",
+        "Sulla fled to his army",
+        "The Senate intervened"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What unprecedented action did Sulla take in response?",
+      "options": [
+        "Formed an alliance",
+        "Declared dictatorship",
+        "Resigned his consulship",
+        "Marched on Rome with his army"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why was Sulla’s march on Rome so shocking?",
+      "options": [
+        "It ignored elections",
+        "It broke religious law",
+        "It violated the pomerium with armed troops",
+        "It defied the Senate"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What did Sulla do after taking Rome?",
+      "options": [
+        "Declared monarchy",
+        "Ended assemblies",
+        "Repealed Sulpicius’ legislation",
+        "Executed Marius"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What constitutional change did Sulla introduce?",
+      "options": [
+        "Ended elections",
+        "Abolished the tribunate",
+        "Required senatorial approval before legislation",
+        "Expanded citizenship"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who were elected consuls for 87 BCE under Sulla’s supervision?",
+      "options": [
+        "Pompey and Crassus",
+        "Cinna and Carbo",
+        "Octavius and Cinna",
+        "Marius and Cinna"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why did Sulla distrust Cinna?",
+      "options": [
+        "He was incompetent",
+        "He supported the allies",
+        "He opposed the Senate",
+        "He supported Marius"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What happened to Cinna after Sulla left Rome?",
+      "options": [
+        "He was exiled and declared a public enemy",
+        "He was executed",
+        "He resigned",
+        "He was imprisoned"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "With whom did Marius ally on his return to Rome?",
+      "options": [
+        "Cinna",
+        "Octavius",
+        "Sulla",
+        "Carbo"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What followed Marius’ return to Rome?",
+      "options": [
+        "Immediate exile",
+        "Renewed violence",
+        "Senatorial reform",
+        "Peaceful reconciliation"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In which year did Marius die?",
+      "options": [
+        "87 BCE",
+        "86 BCE",
+        "85 BCE",
+        "88 BCE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who dominated Roman politics during Sulla’s absence in the East?",
+      "options": [
+        "Optimates",
+        "Equestrians",
+        "Senate",
+        "Marians"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Where did Sulla land when beginning his eastern campaign?",
+      "options": [
+        "Epirus",
+        "Athens",
+        "Macedonia",
+        "Asia Minor"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which city did Sulla capture in 86 BCE?",
+      "options": [
+        "Pergamum",
+        "Ephesus",
+        "Byzantium",
+        "Athens"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "At which battles did Sulla defeat Mithridates in 86 BCE?",
+      "options": [
+        "Granicus and Issus",
+        "Chaeronea and Orchomenos",
+        "Issus and Gaugamela",
+        "Actium and Philippi"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What agreement ended the First Mithridatic War?",
+      "options": [
+        "Lex Manilia",
+        "Peace of Nicias",
+        "Treaty of Apamea",
+        "Treaty of Dardanus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was one consequence of Sulla’s hurried settlement with Mithridates?",
+      "options": [
+        "Mithridates remained a future threat",
+        "Rome gained new provinces",
+        "End of Roman debt",
+        "Permanent peace in the East"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

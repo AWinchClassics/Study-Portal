@@ -1,0 +1,207 @@
+{
+  "id": "03-mardonius-campaign",
+  "title": "03. Mardonius’ Campaign",
+  "description": "The aims, events, and consequences of Mardonius’ campaign against Greece in 492 BCE.",
+  "questions": [
+    {
+      "question": "In which year did Mardonius’ campaign take place?",
+      "options": [
+        "492 BCE",
+        "499 BCE",
+        "494 BCE",
+        "490 BCE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who ordered Mardonius’ campaign against Greece?",
+      "options": [
+        "Xerxes",
+        "Cambyses",
+        "Cyrus",
+        "Darius I"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What political change did Mardonius introduce in Ionian cities?",
+      "options": [
+        "Satrapies",
+        "Oligarchies",
+        "Tyrannies",
+        "Democracies"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which source records Mardonius setting up democracies in Ionia?",
+      "options": [
+        "Xenophon",
+        "Herodotus",
+        "Plutarch",
+        "Thucydides"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did the Ionians assist Mardonius’ army?",
+      "options": [
+        "By ferrying troops across the Hellespont",
+        "By attacking Thrace",
+        "By supplying ships",
+        "By providing cavalry"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which body of water did Mardonius’ troops cross with Ionian help?",
+      "options": [
+        "Hellespont",
+        "Black Sea",
+        "Bosporus",
+        "Aegean Sea"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which regions submitted largely without resistance?",
+      "options": [
+        "Ionia and Caria",
+        "Attica and Boeotia",
+        "Thrace and Macedonia",
+        "Sparta and Corinth"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which island was taken by Mardonius during the campaign?",
+      "options": [
+        "Chios",
+        "Naxos",
+        "Lesbos",
+        "Thasos"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What disaster struck the Persian fleet during the campaign?",
+      "options": [
+        "Fire",
+        "Storm in the Hellespont",
+        "Shipwreck off Mount Athos",
+        "Defeat by Greeks"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened to Mardonius during the Thracian campaign?",
+      "options": [
+        "He was wounded by rebels",
+        "He retreated immediately",
+        "He surrendered",
+        "He was killed"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "After subduing the Thracians, what did Mardonius do?",
+      "options": [
+        "Launched a naval invasion",
+        "Advanced into Attica",
+        "Turned back",
+        "Attacked Sparta"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the immediate outcome of the campaign?",
+      "options": [
+        "Persian withdrawal",
+        "Occupation of Athens",
+        "Complete Persian victory",
+        "Greek surrender"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What demand did Darius make of Greek cities in 491 BCE?",
+      "options": [
+        "Earth and water",
+        "Hostages",
+        "Ships",
+        "Tribute"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which city’s submission particularly angered Athens?",
+      "options": [
+        "Thebes",
+        "Corinth",
+        "Aegina",
+        "Argos"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was Athens angered by Aegina’s actions?",
+      "options": [
+        "Naval rivalry and fear of betrayal",
+        "Religious rivalry",
+        "Economic competition",
+        "Fear of Spartan intervention"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which Spartan king attempted to arrest Aeginetan leaders?",
+      "options": [
+        "Demaratus",
+        "Leonidas",
+        "Agesilaus",
+        "Cleomenes"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What happened when Cleomenes went to Aegina?",
+      "options": [
+        "He was killed",
+        "He was ignored",
+        "He succeeded",
+        "He was turned away"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Athens treat Persian messengers demanding submission?",
+      "options": [
+        "Threw them into a pit",
+        "Imprisoned them",
+        "Executed them publicly",
+        "Exiled them"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Sparta respond to Persian heralds?",
+      "options": [
+        "Threw them into a well",
+        "Accepted demands",
+        "Sent them back unharmed",
+        "Imprisoned them"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does Mardonius’ campaign demonstrate about Persian policy?",
+      "options": [
+        "Lack of planning",
+        "Combination of diplomacy and force",
+        "Religious motivation",
+        "Immediate conquest"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

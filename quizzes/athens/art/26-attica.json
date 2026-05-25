@@ -1,0 +1,207 @@
+{
+  "id": "26-attica",
+  "title": "26. Attica",
+  "description": "Major building projects, sanctuaries, and religious centres across Attica in the fifth century BCE.",
+  "questions": [
+    {
+      "question": "Why were many building projects undertaken across Attica in the fifth century BCE?",
+      "options": [
+        "Population growth",
+        "Democratic reforms",
+        "Economic expansion",
+        "Damage caused during the Persian Wars"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What type of sites were most commonly rebuilt across Attica?",
+      "options": [
+        "Domestic housing",
+        "Religious sanctuaries",
+        "Military forts",
+        "Marketplaces"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which sanctuary was dedicated to Artemis and rebuilt in the 420s BCE?",
+      "options": [
+        "Souneion",
+        "Rhamnous",
+        "Brauron",
+        "Eleusis"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What distinctive shape did the stoa at Brauron have?",
+      "options": [
+        "U-shaped",
+        "Π-shaped",
+        "Straight",
+        "Circular"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the primary purpose of the stoa at Brauron?",
+      "options": [
+        "Storage of tribute",
+        "Assembly meetings",
+        "Displaying votive offerings",
+        "Housing priests"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How was the stoa at Brauron architecturally unusual?",
+      "options": [
+        "It had columns set further apart",
+        "It was roofless",
+        "It used Ionic columns",
+        "It was underground"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which goddess was worshipped at Eleusis?",
+      "options": [
+        "Hera",
+        "Demeter",
+        "Artemis",
+        "Athena"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why was the sanctuary at Eleusis considered pan-Hellenic?",
+      "options": [
+        "Initiates came from across Greece",
+        "It was funded by all Greeks",
+        "It hosted Olympic events",
+        "It was controlled by Sparta"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which architect may have been involved in rebuilding the Telesterion at Eleusis?",
+      "options": [
+        "Callicrates",
+        "Mnesikles",
+        "Iktinos",
+        "Pheidias"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Approximately how many people could the Telesterion hold?",
+      "options": [
+        "500",
+        "1,000",
+        "10,000",
+        "3,000"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which goddess was worshipped at the sanctuary of Rhamnous?",
+      "options": [
+        "Artemis",
+        "Athena",
+        "Nemesis",
+        "Demeter"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What material was used to make the statue of Nemesis at Rhamnous?",
+      "options": [
+        "Bronze",
+        "Gold",
+        "Marble left by the Persians",
+        "Ivory"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was the temple of Nemesis left incomplete?",
+      "options": [
+        "Earthquake damage",
+        "Lack of funds",
+        "Religious opposition",
+        "Columns were never fluted"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What concept did Nemesis personify?",
+      "options": [
+        "Victory",
+        "Fertility",
+        "Wisdom",
+        "Divine retribution"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Where is Cape Souneion located?",
+      "options": [
+        "Northern Attica",
+        "Near Marathon",
+        "Western Attica",
+        "Southern tip of Attica"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What additional role did the Temple of Poseidon at Souneion serve?",
+      "options": [
+        "Treasury",
+        "Military lookout",
+        "Assembly hall",
+        "Law court"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which mythological scenes appeared on the frieze of the Temple of Poseidon?",
+      "options": [
+        "Persian Wars",
+        "Gigantomachy and labours of Theseus",
+        "Trojan War",
+        "Panathenaic procession"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was unusual about the stoa at Thorikos?",
+      "options": [
+        "It had two U-shaped halves",
+        "It was roofless",
+        "It was underground",
+        "It lacked columns"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "During which conflict was the stoa at Thorikos likely built?",
+      "options": [
+        "Peloponnesian War",
+        "Social War",
+        "Corinthian War",
+        "Persian Wars"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which goddess may the Thorikos stoa have been associated with?",
+      "options": [
+        "Artemis",
+        "Athena",
+        "Demeter",
+        "Hera"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

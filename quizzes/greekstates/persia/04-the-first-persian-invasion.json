@@ -1,0 +1,257 @@
+{
+  "id": "04-the-first-persian-invasion",
+  "title": "04. The First Persian Invasion",
+  "description": "The events, leadership, and significance of the First Persian Invasion of Greece, including the Battle of Marathon.",
+  "questions": [
+    {
+      "question": "In which year did the First Persian Invasion take place?",
+      "options": [
+        "491 BCE",
+        "490 BCE",
+        "489 BCE",
+        "492 BCE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who were appointed as Persian commanders for the invasion?",
+      "options": [
+        "Mardonius and Darius",
+        "Xerxes and Mardonius",
+        "Megabyzus and Otanes",
+        "Datis and Artaphernes"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How many ships did the Persian fleet reportedly include?",
+      "options": [
+        "300",
+        "800",
+        "400",
+        "600"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Where did the Persian force begin its campaign?",
+      "options": [
+        "Samos",
+        "Naxos",
+        "Eretria",
+        "Delos"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What happened at Naxos?",
+      "options": [
+        "The city surrendered peacefully",
+        "The Persians were defeated",
+        "The population was enslaved",
+        "The city was spared"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did the Persians behave at Delos?",
+      "options": [
+        "They acted respectfully toward the gods",
+        "They ignored the island",
+        "They destroyed the sanctuary",
+        "They enslaved the priests"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which city was besieged before Eretria?",
+      "options": [
+        "Athens",
+        "Carystos",
+        "Plataea",
+        "Sparta"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why was Eretria divided before its fall?",
+      "options": [
+        "Economic hardship",
+        "Debate over whether to medise",
+        "Fear of Sparta",
+        "Internal tyranny"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "On which day of the siege did Eretria fall?",
+      "options": [
+        "Third",
+        "Tenth",
+        "Fifth",
+        "Seventh"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Where did the Persians land after taking Eretria?",
+      "options": [
+        "Salamis",
+        "Plain of Marathon",
+        "Cape Sounion",
+        "The Piraeus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who led the Athenian forces at Marathon?",
+      "options": [
+        "Themistocles",
+        "Callimachus",
+        "Miltiades",
+        "Aristides"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How many generals commanded the Athenian army?",
+      "options": [
+        "8",
+        "5",
+        "10",
+        "12"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who cast the deciding vote to fight at Marathon?",
+      "options": [
+        "Miltiades",
+        "Themistocles",
+        "Philippides",
+        "Callimachus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why was Sparta unable to help immediately?",
+      "options": [
+        "Lack of troops",
+        "Distance",
+        "Civil unrest",
+        "Observance of the Carnea"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which Greek city sent help to Athens at Marathon?",
+      "options": [
+        "Plataea",
+        "Corinth",
+        "Megara",
+        "Thebes"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How was the Greek battle line arranged?",
+      "options": [
+        "Defensive square",
+        "Strong wings, weak centre",
+        "Strong centre, weak wings",
+        "Equal strength throughout"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What unusual tactic did the Greeks use when attacking?",
+      "options": [
+        "Feigned retreat",
+        "Ambush",
+        "Advanced at a run",
+        "Night attack"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What nearly allowed the Persians to win the battle?",
+      "options": [
+        "Greek panic",
+        "Arrival of reinforcements",
+        "Breakthrough in the Greek centre",
+        "Betrayal by Sparta"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened after the Persian defeat?",
+      "options": [
+        "They retreated inland",
+        "They allied with Aegina",
+        "They surrendered",
+        "They sailed around Sounion toward Athens"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which family was accused of signalling to betray Athens?",
+      "options": [
+        "Alcmaeonidae",
+        "Peisistratids",
+        "Eupatrids",
+        "Philaids"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What did the Athenians do to prevent a Persian attack on Athens?",
+      "options": [
+        "Surrendered",
+        "Marched back rapidly to the city",
+        "Waited for Sparta",
+        "Built walls"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What did the Spartans do upon arriving after the battle?",
+      "options": [
+        "Criticised Athens",
+        "Inspected and praised the Athenians",
+        "Chased the Persians",
+        "Ignored the battlefield"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the significance of Marathon for Persia?",
+      "options": [
+        "Ended expansion west",
+        "Destroyed the fleet",
+        "Temporary setback only",
+        "Caused civil war"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What lesson did Persians learn from Marathon?",
+      "options": [
+        "They needed no changes",
+        "They required a much larger force",
+        "Sea power was useless",
+        "Greeks were weak"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the significance of Marathon for Athens?",
+      "options": [
+        "Loss of power",
+        "Moral and prestige victory",
+        "End of democracy",
+        "Isolation from Greece"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

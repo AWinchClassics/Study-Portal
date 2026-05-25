@@ -1,0 +1,207 @@
+{
+  "id": "07-the-hellenic-league",
+  "title": "07. The Hellenic League",
+  "description": "The formation, leadership, and strategic aims of the Greek alliance formed to resist the Persian invasion.",
+  "questions": [
+    {
+      "question": "In which year did the Congress at the Isthmus take place?",
+      "options": [
+        "490 BCE",
+        "485 BCE",
+        "481 BCE",
+        "480 BCE"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Approximately how many Greek states attended the Congress at the Isthmus?",
+      "options": [
+        "10–20",
+        "Over 300",
+        "30–70",
+        "100–150"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which source records the Congress at the Isthmus?",
+      "options": [
+        "Thucydides",
+        "Plutarch",
+        "Herodotus",
+        "Xenophon"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What term is first used collectively for the Greek states at the Congress?",
+      "options": [
+        "Ionians",
+        "Leagues",
+        "Hellenes",
+        "Allies"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was one immediate outcome of the Congress?",
+      "options": [
+        "Election of a king",
+        "Creation of new laws",
+        "Formation of an empire",
+        "Ending conflicts between members"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What role was Sparta given within the alliance?",
+      "options": [
+        "Naval command",
+        "Religious leadership",
+        "High command of the alliance",
+        "Control of finances"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was Sparta chosen for this role?",
+      "options": [
+        "Its military reputation",
+        "Its wealth",
+        "Its large navy",
+        "Its population size"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What oath did members of the League swear?",
+      "options": [
+        "To pay tribute",
+        "To resist Persia and punish non-participants",
+        "To support democracy",
+        "To obey Sparta absolutely"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What pledge was made regarding membership of the alliance?",
+      "options": [
+        "Annual renewal",
+        "No secession from the alliance",
+        "Freedom to leave at any time",
+        "Automatic expansion"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What did the League agree to do regarding intelligence?",
+      "options": [
+        "Consult Delphi only",
+        "Send spies to Persia",
+        "Rely on Sparta",
+        "Ignore Persian movements"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What monument lists cities that resisted the Persians?",
+      "options": [
+        "The Ara Pacis",
+        "The Serpent Column",
+        "The Parthenon Frieze",
+        "The Column of Trajan"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How many cities are listed on the Serpent Column?",
+      "options": [
+        "31",
+        "25",
+        "50",
+        "40"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which Greek state requested overall command but was refused?",
+      "options": [
+        "Corcyra",
+        "Argos",
+        "Syracuse",
+        "Crete"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why did Argos remain neutral?",
+      "options": [
+        "Fear of Athens",
+        "Delphic advice and rivalry with Sparta",
+        "Support for Persia",
+        "Lack of troops"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What did Gelon of Syracuse offer in return for command?",
+      "options": [
+        "Cavalry",
+        "Food supplies",
+        "Ships",
+        "Money"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was Corcyra’s response to the League?",
+      "options": [
+        "Neutrality",
+        "Immediate support",
+        "Open hostility",
+        "Delayed naval support"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which Greek region was advised by Delphi to remain neutral?",
+      "options": [
+        "Crete",
+        "Argos",
+        "Macedon",
+        "Corcyra"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the initial Greek defensive strategy?",
+      "options": [
+        "Fight at Salamis",
+        "Advance into Asia",
+        "Hold the Vale of Tempe",
+        "Defend the Isthmus only"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was the Vale of Tempe abandoned?",
+      "options": [
+        "Naval defeat",
+        "Lack of troops",
+        "Alternative passes for Persians",
+        "Spartan withdrawal"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What final defensive positions were chosen?",
+      "options": [
+        "Athens and Sparta",
+        "Plataea and Marathon",
+        "Thermopylae and Artemisium",
+        "Delos and Salamis"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

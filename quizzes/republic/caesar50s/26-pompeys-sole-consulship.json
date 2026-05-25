@@ -1,0 +1,257 @@
+{
+  "id": "26-pompeys-sole-consulship",
+  "title": "26. Pompey’s Sole Consulship",
+  "description": "An exploration of Pompey’s sole consulship in 52 BCE, the laws he passed, and their consequences for Caesar and the Republic.",
+  "questions": [
+    {
+      "question": "In which year was Pompey appointed sole consul?",
+      "options": [
+        "53 BCE",
+        "51 BCE",
+        "54 BCE",
+        "52 BCE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who proposed that Pompey be made sole consul?",
+      "options": [
+        "Bibulus and Cato",
+        "Clodius and Curio",
+        "Cicero and Milo",
+        "Caesar and Crassus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was the sole consulship preferred to a dictatorship?",
+      "options": [
+        "It removed the Senate",
+        "It avoided using emergency powers",
+        "It gave Pompey permanent power",
+        "It was quicker"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which safeguard still applied to Pompey as sole consul?",
+      "options": [
+        "Dictatorship limits",
+        "Military oversight",
+        "Tribunician veto",
+        "Annual elections"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How many major laws did Pompey pass during his sole consulship?",
+      "options": [
+        "Two",
+        "Three",
+        "Four",
+        "One"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the purpose of Pompey’s law against public violence?",
+      "options": [
+        "To punish bribery",
+        "To suppress gangs",
+        "To control provinces",
+        "To limit elections"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who was prosecuted under the law against public violence?",
+      "options": [
+        "Curio",
+        "Caesar",
+        "Clodius",
+        "Milo"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why did Pompey bring troops into the Forum?",
+      "options": [
+        "Foreign threat",
+        "Election disorder",
+        "Celebrate victory",
+        "Maintain public order"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What interval did Pompey’s second law enforce?",
+      "options": [
+        "Lifetime commands",
+        "Immediate transition",
+        "Ten years between commands",
+        "Five years between magistracy and province"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why did this law concern Caesar?",
+      "options": [
+        "Loss of allies",
+        "Risk of prosecution",
+        "Financial strain",
+        "Loss of popularity"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What did Pompey’s third law require of candidates?",
+      "options": [
+        "Property qualification",
+        "Military service",
+        "Personal appearance",
+        "Senate approval"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did this law affect Caesar specifically?",
+      "options": [
+        "Ended his Gallic command",
+        "Prevented standing in absentia",
+        "Cancelled elections",
+        "Forced him into exile"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which earlier protection for Caesar was overridden?",
+      "options": [
+        "Tribunician veto",
+        "Law allowing in absentia candidacy",
+        "Senate decree",
+        "Lex Campania"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why was Caesar vulnerable if removed from command?",
+      "options": [
+        "Loss of wealth",
+        "Exposure to prosecution",
+        "Loss of citizenship",
+        "Loss of army"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What would the enforced gap after consulship prevent?",
+      "options": [
+        "Marriage alliances",
+        "Immediate provincial command",
+        "Re-election",
+        "Tribunate"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Whom did Pompey take as colleague later in the year?",
+      "options": [
+        "Bibulus",
+        "Crassus",
+        "Cato",
+        "Metellus Scipio"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was Metellus Scipio’s relationship to Pompey?",
+      "options": [
+        "Brother",
+        "Political rival",
+        "Father-in-law",
+        "Son-in-law"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How long was Pompey’s command in Spain extended?",
+      "options": [
+        "Ten years",
+        "One year",
+        "Three years",
+        "Five years"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Pompey govern Spain during this period?",
+      "options": [
+        "Through legates",
+        "With Caesar",
+        "In person",
+        "By Senate committee"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which provinces did Pompey control?",
+      "options": [
+        "The two Spains",
+        "Africa",
+        "Asia",
+        "Gaul"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What political balance did the sole consulship represent?",
+      "options": [
+        "Military dictatorship",
+        "Popular revolution",
+        "Return to tradition",
+        "Temporary compromise"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which event precipitated the crisis of 52 BCE?",
+      "options": [
+        "Senate decree",
+        "Caesar’s victories",
+        "Death of Crassus",
+        "Clodius’ murder"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What building was burned during the unrest of 52 BCE?",
+      "options": [
+        "Basilica",
+        "Senate House",
+        "Curia",
+        "Temple of Jupiter"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Pompey’s actions affect relations with Caesar?",
+      "options": [
+        "Ended rivalry",
+        "Improved them",
+        "Increased suspicion",
+        "Neutral"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was Pompey’s sole consulship significant?",
+      "options": [
+        "Ended Republic",
+        "Undermined Caesar’s position",
+        "Created dictatorship",
+        "Strengthened Senate"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

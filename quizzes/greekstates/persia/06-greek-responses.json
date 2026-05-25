@@ -1,0 +1,207 @@
+{
+  "id": "06-greek-responses",
+  "title": "06. Greek Responses",
+  "description": "Political, military, and strategic responses of Greek states to the growing Persian threat between 490–480 BCE.",
+  "questions": [
+    {
+      "question": "Which years are covered by the period known as Greek Responses?",
+      "options": [
+        "490–480 BCE",
+        "492–490 BCE",
+        "480–470 BCE",
+        "499–493 BCE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How were Athenian archons selected from 487 BCE?",
+      "options": [
+        "By appointment",
+        "By heredity",
+        "By lot",
+        "By election"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the consequence of selecting archons by lot?",
+      "options": [
+        "Changed composition of the Areopagus",
+        "Strengthened kingship",
+        "Ended aristocratic influence",
+        "Weakened democracy"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which officials became the chief officers of state in Athens?",
+      "options": [
+        "Areopagites",
+        "Boule members",
+        "Archons",
+        "Strategoi"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How many strategoi were elected each year?",
+      "options": [
+        "8",
+        "12",
+        "10",
+        "5"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which Greek state was Athens at war with during this period?",
+      "options": [
+        "Thebes",
+        "Sparta",
+        "Aegina",
+        "Corinth"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was Athens initially disadvantaged in this war?",
+      "options": [
+        "Weaker navy",
+        "Lack of allies",
+        "Inferior hoplites",
+        "Political instability"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which Athenian leader rose to prominence during this period?",
+      "options": [
+        "Miltiades",
+        "Pericles",
+        "Aristides",
+        "Themistocles"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What happened to the Spartan king Demaratus in 491 BCE?",
+      "options": [
+        "He was exiled",
+        "He abdicated",
+        "He was executed",
+        "He was imprisoned"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "To whose court did Demaratus flee?",
+      "options": [
+        "Artaphernes",
+        "Darius",
+        "Xerxes",
+        "Both Darius and Xerxes"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How is Themistocles generally portrayed by ancient authors?",
+      "options": [
+        "Religious and conservative",
+        "Honest and cautious",
+        "Unscrupulous and clever",
+        "Weak and indecisive"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which family was Herodotus friendly towards, affecting his portrayal of Themistocles?",
+      "options": [
+        "Peisistratids",
+        "Philaids",
+        "Eupatrids",
+        "Alcmaeonids"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which quality of Themistocles could not be denied even by hostile sources?",
+      "options": [
+        "His loyalty to Sparta",
+        "His importance and greatness",
+        "His morality",
+        "His wealth"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In which year was a major silver vein discovered at Laurium?",
+      "options": [
+        "480 BCE",
+        "483 BCE",
+        "487 BCE",
+        "490 BCE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What did Aristides propose doing with the Laurium silver?",
+      "options": [
+        "Building ships",
+        "Paying mercenaries",
+        "Funding temples",
+        "Distributing to citizens"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What did Themistocles propose instead?",
+      "options": [
+        "Paying off Sparta",
+        "Building a fleet",
+        "Using it for festivals",
+        "Saving the silver"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happened to Aristides as a result of this dispute?",
+      "options": [
+        "He was executed",
+        "He resigned",
+        "He fled Athens",
+        "He was ostracised"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Approximately how many ships were built with the Laurium silver?",
+      "options": [
+        "300",
+        "50",
+        "500",
+        "100 or 200"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What major construction project did Themistocles begin as archon?",
+      "options": [
+        "Walls of Athens",
+        "Fortifications of Piraeus",
+        "Long Walls",
+        "Temples on the Acropolis"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the long-term significance of these policies?",
+      "options": [
+        "Strengthened land warfare",
+        "Decline of democracy",
+        "Naval dominance of Athens",
+        "Alliance with Persia"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

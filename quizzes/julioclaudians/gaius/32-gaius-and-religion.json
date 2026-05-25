@@ -1,0 +1,187 @@
+{
+  "id": "32-gaius-and-religion",
+  "title": "32. Gaius and Religion",
+  "description": "An examination of Gaius’ religious policy, focusing on divine status, cult practices, and the political use of religion.",
+  "questions": [
+    {
+      "question": "What do the sources suggest about Gaius’ personal religious beliefs?",
+      "options": [
+        "They are well documented",
+        "They were deeply philosophical",
+        "They were strictly traditional",
+        "They are largely unknown"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which natural phenomena was Gaius reportedly afraid of?",
+      "options": [
+        "Storms at sea",
+        "Earthquakes and floods",
+        "Eclipses",
+        "Thunder and Mount Etna"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What behaviour shows Gaius’ lack of fear of divine retribution?",
+      "options": [
+        "Refusing sacrifice",
+        "Closing temples",
+        "Ignoring priests",
+        "Disrespecting statues of the gods"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "According to Suetonius, why did Gaius decide to assume divine status?",
+      "options": [
+        "Popular demand",
+        "To assert authority over client kings and Roman aristocracy",
+        "Pressure from the Senate",
+        "Religious devotion"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which sources describe Gaius’ interest in appearing more than human?",
+      "options": [
+        "Josephus only",
+        "Tacitus only",
+        "Suetonius only",
+        "Cassius Dio and Suetonius"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Gaius visually present himself as divine?",
+      "options": [
+        "By wearing military dress",
+        "By refusing imperial symbols",
+        "By dressing as different gods",
+        "By remaining unseen"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which architectural change reinforced Gaius’ divinity?",
+      "options": [
+        "Restoring the Capitol",
+        "Destroying temples",
+        "Remodelling the palace to pass through the shrine of Castor and Pollux",
+        "Building a new forum"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Where did Gaius build temples to his numen?",
+      "options": [
+        "The Forum",
+        "The Palatine and Capitoline",
+        "The Campus Martius",
+        "Rome only"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What religious institution did Gaius establish for himself?",
+      "options": [
+        "A new priesthood",
+        "A new temple staff",
+        "A new augury college",
+        "A new oracle"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did the Senate respond to Gaius’ religious pretensions according to Dio?",
+      "options": [
+        "They ignored them",
+        "They granted him a temple on the Palatine",
+        "They resisted them",
+        "They expelled him"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who paid for the temple granted on the Palatine?",
+      "options": [
+        "Priesthood fees",
+        "The people",
+        "The Senate",
+        "Gaius himself"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Rome’s elite react to the new priesthoods?",
+      "options": [
+        "They ignored them",
+        "They competed eagerly for them",
+        "They avoided them",
+        "They opposed them"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did divine status affect Gaius’ behaviour according to the sources?",
+      "options": [
+        "It restrained excess",
+        "It justified capricious cruelty",
+        "It moderated him",
+        "It reduced public criticism"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which aspect of Gaius’ private life is emphasised as extraordinary?",
+      "options": [
+        "Religious piety",
+        "Administrative skill",
+        "Sexual behaviour",
+        "Military ambition"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which comparison is made between Gaius and other rulers?",
+      "options": [
+        "Persian Great Kings",
+        "Republican magistrates",
+        "Hellenistic rulers like the Ptolemies",
+        "Spartan kings"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why might ancient condemnation of Gaius’ divinity be exaggerated?",
+      "options": [
+        "Lack of sources",
+        "Provincial hostility",
+        "Bias against monarchy",
+        "Later Christian influence"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What alternative interpretation of Gaius’ actions is suggested?",
+      "options": [
+        "They were purely religious",
+        "They were meaningless",
+        "They were a rational display of absolute authority",
+        "They were symptoms of madness"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Gaius’ religious policy relate to Augustus’ principate?",
+      "options": [
+        "It reinforced Augustan restraint",
+        "It shattered the republican façade",
+        "It ignored politics",
+        "It restored republican religion"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

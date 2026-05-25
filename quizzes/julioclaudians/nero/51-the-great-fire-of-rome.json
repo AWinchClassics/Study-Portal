@@ -1,0 +1,257 @@
+{
+  "id": "51-the-great-fire-of-rome",
+  "title": "51. The Great Fire of Rome",
+  "description": "An evaluation of the causes, impact, and aftermath of the Great Fire of 64 CE, weighing ancient accusations against Nero with evidence of relief and reconstruction.",
+  "questions": [
+    {
+      "question": "In which year did the Great Fire of Rome occur?",
+      "options": [
+        "64 CE",
+        "65 CE",
+        "62 CE",
+        "63 CE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was Rome particularly vulnerable to fire?",
+      "options": [
+        "Overcrowding and poorly built insulae",
+        "Constant warfare",
+        "Lack of population",
+        "Frequent earthquakes"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Where did the Great Fire begin?",
+      "options": [
+        "In Nero’s palace",
+        "In shops near the Circus Maximus",
+        "In the Forum",
+        "On the Palatine"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How long did the fire burn for?",
+      "options": [
+        "Five days",
+        "Three days",
+        "Two weeks",
+        "Over a week"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How many of Rome’s fourteen regions were undamaged?",
+      "options": [
+        "Eight",
+        "Two",
+        "Six",
+        "Four"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which areas largely escaped destruction?",
+      "options": [
+        "The Aventine and Caelian",
+        "The Forum, Capitol, and part of the Palatine",
+        "The Campus Martius",
+        "The Subura"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What immediate relief measures did Nero take?",
+      "options": [
+        "Built the Domus Aurea immediately",
+        "Opened his gardens and public buildings to the homeless",
+        "Left Rome",
+        "Raised taxes"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Nero address food shortages after the fire?",
+      "options": [
+        "Ignored the issue",
+        "Imported grain from Egypt only",
+        "Reduced consumption",
+        "Brought supplies from Ostia and reduced corn prices"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which source directly blames Nero for starting the fire?",
+      "options": [
+        "Pliny the Elder",
+        "Suetonius",
+        "Josephus",
+        "Tacitus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What motive does Suetonius attribute to Nero?",
+      "options": [
+        "Desire to rebuild Rome more grandly",
+        "Hatred of the Senate",
+        "Religious zeal",
+        "Military distraction"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "According to Suetonius, what did Nero do during the fire?",
+      "options": [
+        "Consulted the Senate",
+        "Sang of the fall of Troy",
+        "Fled to Antium",
+        "Directed relief efforts"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does Tacitus differ from Suetonius in his account?",
+      "options": [
+        "He denies the fire occurred",
+        "He fully agrees Nero was guilty",
+        "He blames Christians",
+        "He presents both accidental and deliberate explanations"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Where was Nero when the fire broke out, according to Tacitus?",
+      "options": [
+        "In Naples",
+        "In Ostia",
+        "In Antium",
+        "In Rome"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What rumour intensified suspicion against Nero?",
+      "options": [
+        "Foreign invasion",
+        "Senatorial conspiracy",
+        "Christian preaching",
+        "A second outbreak on Tigellinus’ estates"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What major building did Nero construct after the fire?",
+      "options": [
+        "The Colosseum",
+        "A new Forum",
+        "The Pantheon",
+        "The Domus Aurea"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How does Pliny the Elder describe the Domus Aurea?",
+      "options": [
+        "A temporary residence",
+        "A military fortress",
+        "A sprawling and lavish complex",
+        "Modest"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What building regulations were introduced after the fire?",
+      "options": [
+        "More wooden insulae",
+        "Taller buildings",
+        "Wider streets and stone construction",
+        "Narrower roads"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Romans generally react to the rebuilding programme?",
+      "options": [
+        "With indifference",
+        "With approval",
+        "With hostility",
+        "With rebellion"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which group was blamed as a scapegoat for the fire?",
+      "options": [
+        "Senators",
+        "Christians",
+        "Jews",
+        "Stoics"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which source describes the persecution of Christians in detail?",
+      "options": [
+        "Seneca",
+        "Tacitus",
+        "Suetonius",
+        "Josephus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does Suetonius describe Christians?",
+      "options": [
+        "A new and mischievous sect",
+        "Foreign invaders",
+        "Loyal citizens",
+        "Political revolutionaries"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What punishments were inflicted on Christians?",
+      "options": [
+        "Crucifixion, burning, and execution by dogs",
+        "Fines",
+        "Imprisonment only",
+        "Exile only"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the public reaction to the persecution?",
+      "options": [
+        "Support for Nero",
+        "Approval",
+        "Indifference",
+        "Pity for the victims"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What religious action did Nero take after the fire?",
+      "options": [
+        "Abolished foreign cults",
+        "Declared himself divine",
+        "Ended sacrifices",
+        "Consulted the Sibylline Books"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What overall conclusion does the PPT encourage?",
+      "options": [
+        "Nero was certainly guilty",
+        "The fire was accidental",
+        "Christians caused the fire",
+        "The evidence is mixed and uncertain"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

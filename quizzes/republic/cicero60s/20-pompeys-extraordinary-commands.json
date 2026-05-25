@@ -1,0 +1,257 @@
+{
+  "id": "20-pompeys-extraordinary-commands",
+  "title": "20. Pompey’s Extraordinary Commands",
+  "description": "An examination of Pompey’s unprecedented military commands against piracy and Mithridates, and their constitutional significance.",
+  "questions": [
+    {
+      "question": "What problem prompted Pompey’s first extraordinary command?",
+      "options": [
+        "Civil war",
+        "Slave revolts",
+        "Piracy",
+        "Provincial corruption"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which law granted Pompey command against the pirates?",
+      "options": [
+        "Lex Manilia",
+        "Lex Gabinia",
+        "Lex Hortensia",
+        "Lex Julia"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In which year was the Lex Gabinia passed?",
+      "options": [
+        "70 BCE",
+        "69 BCE",
+        "67 BCE",
+        "66 BCE"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who proposed the Lex Gabinia?",
+      "options": [
+        "Caesar",
+        "Aulus Gabinius",
+        "Cicero",
+        "Crassus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What powers did the Lex Gabinia give Pompey?",
+      "options": [
+        "Command over Italy only",
+        "Command over the Mediterranean and coastal provinces",
+        "Consular imperium only",
+        "Dictatorship"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the geographical extent of Pompey’s command?",
+      "options": [
+        "Italy only",
+        "Mediterranean and 50 miles inland",
+        "Eastern provinces only",
+        "All Roman territory"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why was piracy a serious problem?",
+      "options": [
+        "It threatened Rome’s grain supply",
+        "It undermined elections",
+        "It weakened the army",
+        "It reduced tax revenue"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How quickly did Pompey defeat the pirates?",
+      "options": [
+        "Three months",
+        "One year",
+        "Two years",
+        "Five years"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What policy did Pompey adopt toward defeated pirates?",
+      "options": [
+        "Execution",
+        "Enslavement",
+        "Resettlement",
+        "Exile"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was Pompey’s treatment of pirates significant?",
+      "options": [
+        "It was unusually lenient",
+        "It followed tradition",
+        "It was illegal",
+        "It angered the Senate"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which law granted Pompey command against Mithridates?",
+      "options": [
+        "Lex Gabinia",
+        "Lex Cornelia",
+        "Lex Manilia",
+        "Lex Aurelia"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In which year was the Lex Manilia passed?",
+      "options": [
+        "67 BCE",
+        "66 BCE",
+        "65 BCE",
+        "64 BCE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Whose command did Pompey replace in the East?",
+      "options": [
+        "Crassus",
+        "Lucullus",
+        "Sulla",
+        "Caesar"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who supported the Lex Manilia in a famous speech?",
+      "options": [
+        "Caesar",
+        "Cicero",
+        "Cato",
+        "Crassus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which speech records Cicero’s support?",
+      "options": [
+        "In Catilinam",
+        "Pro Lege Manilia",
+        "Pro Archia",
+        "Philippics"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What powers did Pompey receive under the Lex Manilia?",
+      "options": [
+        "Limited consular command",
+        "Supreme command in the East",
+        "Dictatorship",
+        "Censorship"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which enemy was Pompey fighting in the East?",
+      "options": [
+        "Jugurtha",
+        "Spartacus",
+        "Mithridates VI",
+        "Tigranes"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened to Mithridates after Pompey’s campaign?",
+      "options": [
+        "He surrendered",
+        "He was captured",
+        "He committed suicide",
+        "He fled to Rome"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Pompey reorganise the East?",
+      "options": [
+        "Created client kingdoms and provinces",
+        "Returned land to natives",
+        "Abolished provinces",
+        "Left it unchanged"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why were Pompey’s commands controversial?",
+      "options": [
+        "They bypassed the Senate",
+        "They concentrated power in one man",
+        "They were unpopular",
+        "They were ineffective"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which group most strongly opposed Pompey’s commands?",
+      "options": [
+        "Equites",
+        "Populares",
+        "Optimates",
+        "Plebs"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What precedent did Pompey’s commands reinforce?",
+      "options": [
+        "Collective leadership",
+        "Extraordinary personal power",
+        "Rule of law",
+        "Senatorial dominance"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What later figure benefited from these precedents?",
+      "options": [
+        "Cicero",
+        "Caesar",
+        "Cato",
+        "Brutus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Pompey’s commands affect the Republic?",
+      "options": [
+        "They stabilised politics",
+        "They weakened the constitution",
+        "They ended civil war",
+        "They restored senatorial control"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What best summarises Pompey’s extraordinary commands?",
+      "options": [
+        "Traditional and limited",
+        "Constitutional and cautious",
+        "Effective but dangerous",
+        "Ineffective and radical"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

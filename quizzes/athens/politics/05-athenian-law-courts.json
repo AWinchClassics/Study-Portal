@@ -1,0 +1,167 @@
+{
+  "id": "05-athenian-law-courts",
+  "title": "05. Athenian Law Courts",
+  "description": "Key features of the Athenian law courts: selection of dikastai, jury sizes, case types, and trial procedure.",
+  "questions": [
+    {
+      "question": "How many dikastai were appointed each year to serve in the Athenian law courts?",
+      "options": [
+        "6,000",
+        "500",
+        "3,000",
+        "1,500"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How were dikastai selected each year?",
+      "options": [
+        "By election",
+        "By lot",
+        "By appointment of magistrates",
+        "By wealth qualification"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the minimum age requirement to serve as a dikast?",
+      "options": [
+        "18",
+        "25",
+        "30",
+        "40"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How many dikastai were drawn from each tribe annually?",
+      "options": [
+        "100",
+        "400",
+        "500",
+        "600"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What device was used to allocate dikastai to courts on the day of a trial?",
+      "options": [
+        "The kleroterion",
+        "The bouleuterion",
+        "The tholos",
+        "The prytaneion"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why were Athenian juries deliberately large?",
+      "options": [
+        "To speed up trials",
+        "To reduce the risk of bribery",
+        "To allow appeals",
+        "To increase magistrates’ authority"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What sizes could Athenian juries take?",
+      "options": [
+        "50, 100, or 150",
+        "100, 200, or 300",
+        "201, 401, 501, or 1501",
+        "Always exactly 500"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why were jury numbers always odd?",
+      "options": [
+        "To reflect tribal divisions",
+        "To increase participation",
+        "To allow appeals",
+        "To prevent tied verdicts"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who was responsible for bringing most legal cases in Athens?",
+      "options": [
+        "Private citizens",
+        "State prosecutors",
+        "Magistrates",
+        "The Areopagus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was a dikē?",
+      "options": [
+        "A public prosecution",
+        "A private lawsuit by the injured party",
+        "A jury panel",
+        "A magistrate’s inquiry"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What type of case was a graphē?",
+      "options": [
+        "A religious offence only",
+        "A private dispute",
+        "A public lawsuit for offences against the community",
+        "An appeal case"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "When could a citizen bring charges against a magistrate during euthunai?",
+      "options": [
+        "Before taking office",
+        "While holding office",
+        "Only during festivals",
+        "At the end of the magistrate’s term"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How were speeches timed during trials?",
+      "options": [
+        "By a water clock",
+        "By magistrates",
+        "By the jury",
+        "By the Assembly"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did dikastai cast their votes?",
+      "options": [
+        "By show of hands",
+        "By placing stones in urns",
+        "By written ballot",
+        "By voice vote"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happened if a defendant was found guilty?",
+      "options": [
+        "The magistrate set the penalty",
+        "The Assembly decided punishment",
+        "Both sides proposed penalties and the jury chose",
+        "The Areopagus intervened"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What aspect of the law courts does Aristophanes’ Wasps particularly highlight?",
+      "options": [
+        "The professionalism of advocates",
+        "The speed of trials",
+        "The dominance of young jurors",
+        "The obsession of elderly jurors with jury service"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

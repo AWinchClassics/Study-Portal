@@ -1,0 +1,257 @@
+{
+  "id": "31-caesars-assassination",
+  "title": "31. Caesar’s Assassination",
+  "description": "An analysis of the motives, events, and consequences of Julius Caesar’s assassination in March 44 BCE.",
+  "questions": [
+    {
+      "question": "Why did many Romans accept Caesar’s rule according to Plutarch?",
+      "options": [
+        "Religious devotion",
+        "Economic prosperity",
+        "Weariness after civil wars",
+        "Fear of foreign invasion"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What made Caesar’s dictatorship particularly alarming to Romans?",
+      "options": [
+        "Its popularity",
+        "Its military basis",
+        "Its cost",
+        "Its permanence"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which two ancient writers are particularly critical of Caesar’s powers?",
+      "options": [
+        "Livy and Appian",
+        "Tacitus and Sallust",
+        "Plutarch and Suetonius",
+        "Cicero and Caesar"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which action angered the Senate shortly before the assassination?",
+      "options": [
+        "Raising taxes",
+        "Refusing to stand to greet senators",
+        "Abolishing elections",
+        "Executing senators"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why were tribunes offended by Caesar’s behaviour?",
+      "options": [
+        "He punished citizens they defended",
+        "He removed them from office",
+        "He ignored their veto",
+        "He reduced their pay"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What happened when Antony offered Caesar a diadem at the Lupercalia?",
+      "options": [
+        "The crowd protested",
+        "Caesar accepted it",
+        "Caesar postponed acceptance",
+        "Caesar refused it"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was the likely purpose of Antony offering the diadem?",
+      "options": [
+        "Mockery",
+        "A genuine coronation",
+        "Testing public reaction",
+        "Religious ritual"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Caesar respond to rumours of an assassination plot?",
+      "options": [
+        "Left Rome",
+        "Ignored them",
+        "Increased his guard",
+        "Arrested suspects"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "On which date was Caesar assassinated?",
+      "options": [
+        "14 March",
+        "15 March",
+        "16 March",
+        "13 March"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where was Caesar assassinated?",
+      "options": [
+        "Theatre of Pompey",
+        "Forum",
+        "Curia Julia",
+        "Capitol"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was the timing of the assassination significant?",
+      "options": [
+        "It was election day",
+        "It was a religious festival",
+        "Caesar was leaving for Parthia",
+        "The Senate was dissolved"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Approximately how many conspirators were involved?",
+      "options": [
+        "60",
+        "20",
+        "80",
+        "40"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which three men led the conspiracy?",
+      "options": [
+        "Cassius, Brutus, Decimus Brutus",
+        "Antony, Brutus, Cassius",
+        "Brutus, Cassius, Cicero",
+        "Cato, Brutus, Cassius"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which prominent Roman was not involved in the plot?",
+      "options": [
+        "Cicero",
+        "Decimus Brutus",
+        "Cassius",
+        "Brutus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What office did Cassius hold at the time of the plot?",
+      "options": [
+        "Praetor",
+        "Consul",
+        "Aedile",
+        "Tribune"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was Marcus Brutus a symbolic leader of the conspiracy?",
+      "options": [
+        "Republican ancestry",
+        "Personal hatred of Caesar",
+        "Military reputation",
+        "Popular support"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What personal connection complicated Brutus’ decision?",
+      "options": [
+        "Caesar’s affair with his mother",
+        "Marriage to Caesar’s daughter",
+        "Shared command",
+        "Debt to Caesar"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who diverted Mark Antony away from Caesar?",
+      "options": [
+        "Casca",
+        "Brutus",
+        "Cassius",
+        "Trebonius"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who struck the first blow against Caesar?",
+      "options": [
+        "Decimus Brutus",
+        "Cassius",
+        "Casca",
+        "Brutus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How many times was Caesar stabbed?",
+      "options": [
+        "23",
+        "20",
+        "17",
+        "30"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "According to Suetonius, what were Caesar’s dying words?",
+      "options": [
+        "Veni, vidi, vici",
+        "Roma is lost",
+        "You too, child",
+        "Et tu, Brute"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Where did Caesar fall according to Plutarch?",
+      "options": [
+        "Beside the altar",
+        "At Pompey’s statue",
+        "On the Capitol steps",
+        "At the Senate doors"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What did the conspirators believe would follow Caesar’s death?",
+      "options": [
+        "Restoration of the Republic",
+        "Foreign invasion",
+        "Military dictatorship",
+        "Civil war"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was this belief a miscalculation?",
+      "options": [
+        "Caesar was unpopular",
+        "Pompey returned",
+        "The Republic could not be restored",
+        "The army opposed them"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What key protection did Caesar think would keep him safe?",
+      "options": [
+        "Bodyguard",
+        "Popular support",
+        "Military escort",
+        "Tribunician sacrosanctity and Senate oath"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

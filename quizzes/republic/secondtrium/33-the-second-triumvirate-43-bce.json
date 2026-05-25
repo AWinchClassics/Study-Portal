@@ -1,0 +1,257 @@
+{
+  "id": "33-the-second-triumvirate-43-bce",
+  "title": "33. The Second Triumvirate, 43 BCE",
+  "description": "An examination of the formation, powers, and consequences of the Second Triumvirate following Caesar’s assassination.",
+  "questions": [
+    {
+      "question": "Which three men formed the Second Triumvirate?",
+      "options": [
+        "Caesar, Pompey, Crassus",
+        "Antony, Brutus, Cassius",
+        "Antony, Lepidus, Octavian",
+        "Octavian, Cicero, Lepidus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In which year was the Second Triumvirate formed?",
+      "options": [
+        "42 BCE",
+        "44 BCE",
+        "41 BCE",
+        "43 BCE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How was the Second Triumvirate made legal?",
+      "options": [
+        "Senate decree",
+        "Consular edict",
+        "Tribune’s law",
+        "Popular vote"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "For how long were the Triumvirs officially appointed?",
+      "options": [
+        "Three years",
+        "Ten years",
+        "Five years",
+        "One year"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What level of power did the Triumvirs possess?",
+      "options": [
+        "Greater than consuls",
+        "Dictatorial powers without the title",
+        "Limited emergency powers",
+        "Equal to kings"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which power did the Triumvirs hold regarding magistrates?",
+      "options": [
+        "Elect them",
+        "Nominate them in advance",
+        "Veto them",
+        "Dismiss them"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which territories were assigned to Antony?",
+      "options": [
+        "Asia and Syria",
+        "Macedonia",
+        "Transalpine and Cisalpine Gaul",
+        "Spain and Africa"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which territories were controlled by Lepidus?",
+      "options": [
+        "Italy",
+        "Africa",
+        "Sicily",
+        "Narbonese Gaul and Spain"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which territories were allocated to Octavian?",
+      "options": [
+        "Spain",
+        "Illyricum",
+        "Africa, Sicily, and Sardinia",
+        "Gaul"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was a key purpose of the proscriptions?",
+      "options": [
+        "Reward allies",
+        "Win popular support",
+        "Replenish the treasury",
+        "Appease the Senate"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What additional aim did the proscriptions serve?",
+      "options": [
+        "Prevent civil war",
+        "Protect Caesar’s memory",
+        "Restore the Republic",
+        "Destroy political enemies"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Approximately how many senators were killed in the proscriptions?",
+      "options": [
+        "500",
+        "100",
+        "200",
+        "300"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Approximately how many equites were killed?",
+      "options": [
+        "2000",
+        "1000",
+        "3000",
+        "500"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did the proscriptions differ from Caesar’s actions?",
+      "options": [
+        "Legal basis",
+        "Caesar avoided mass killings",
+        "Fewer victims",
+        "Targeted enemies"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What financial benefit did the Triumvirs gain?",
+      "options": [
+        "Confiscated property",
+        "Higher taxes",
+        "Loans",
+        "Foreign tribute"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was land confiscated?",
+      "options": [
+        "Reward veterans",
+        "Control Rome",
+        "Punish elites",
+        "Expand Italy"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What religious measure was passed?",
+      "options": [
+        "New gods",
+        "Deification of Caesar",
+        "Abolition of cults",
+        "Temple closures"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which office was Lepidus appointed to for 42 BCE?",
+      "options": [
+        "Consul",
+        "Censor",
+        "Dictator",
+        "Praetor"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Against whom were Antony and Octavian preparing to fight?",
+      "options": [
+        "Parthians",
+        "Pompey’s sons",
+        "Brutus and Cassius",
+        "The Senate"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which famous orator was killed in the proscriptions?",
+      "options": [
+        "Virgil",
+        "Sallust",
+        "Cicero",
+        "Livy"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was Cicero targeted?",
+      "options": [
+        "Personal feud",
+        "Opposition to Antony in the Philippics",
+        "Supported Brutus",
+        "Wealth"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happened to Cicero?",
+      "options": [
+        "Imprisonment",
+        "Forced suicide",
+        "Exile",
+        "Execution and display of head and hands"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Where were Cicero’s remains displayed?",
+      "options": [
+        "Curia",
+        "Forum",
+        "Campus Martius",
+        "Capitol"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What key feature distinguished the Second Triumvirate?",
+      "options": [
+        "Use of proscriptions",
+        "Short duration",
+        "Greater legality",
+        "Less power"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Overall, the Second Triumvirate represented:",
+      "options": [
+        "Temporary compromise",
+        "Violent power-sharing dictatorship",
+        "Military alliance",
+        "Republican restoration"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

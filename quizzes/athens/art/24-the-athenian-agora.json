@@ -1,0 +1,207 @@
+{
+  "id": "24-the-athenian-agora",
+  "title": "24. The Athenian Agora",
+  "description": "The functions, buildings, and political, social, and cultural significance of the Athenian Agora.",
+  "questions": [
+    {
+      "question": "What was the primary function of the agora in a Greek city?",
+      "options": [
+        "A military base",
+        "A central public space",
+        "A religious sanctuary",
+        "A residential district"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which roles did the Athenian Agora fulfil?",
+      "options": [
+        "Military and defensive",
+        "Royal and aristocratic",
+        "Religious only",
+        "Commercial, economic, and civic"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which group was known for frequenting the Agora?",
+      "options": [
+        "Philosophers",
+        "Priests only",
+        "Foreign ambassadors",
+        "Spartan kings"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The philosophy of Stoicism is named after which structure?",
+      "options": [
+        "The Stoa of Zeus",
+        "The Stoa Basileus",
+        "The Hephaestion",
+        "The Stoa Poikile"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What architectural feature defines a stoa?",
+      "options": [
+        "A circular plan",
+        "An open façade of columns",
+        "A closed interior hall",
+        "A stepped platform"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In which century was the Stoa Poikile built?",
+      "options": [
+        "5th century BCE",
+        "6th century BCE",
+        "3rd century BCE",
+        "4th century BCE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which artists decorated the Stoa Poikile?",
+      "options": [
+        "Apelles and Zeuxis",
+        "Pheidias and Praxiteles",
+        "Ictinus and Callicrates",
+        "Micon and Polygnotos"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which events were depicted in the paintings of the Stoa Poikile?",
+      "options": [
+        "Persian Wars only",
+        "Mythical and historical battles",
+        "Only mythical scenes",
+        "Religious rituals"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which battles shown there were particularly significant for Athens?",
+      "options": [
+        "Thermopylae and Artemisium",
+        "Salamis and Plataea",
+        "Chaeronea and Mantinea",
+        "Oenoe and Marathon"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What civic role did the Stoa Basileus perform?",
+      "options": [
+        "Meeting place of the Assembly",
+        "Religious sacrifices",
+        "Storage of tribute",
+        "Headquarters of the archon basileus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What architectural order was used for the Stoa Basileus?",
+      "options": [
+        "Ionic",
+        "Doric",
+        "Composite",
+        "Corinthian"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What may have taken place in front of the Stoa Basileus?",
+      "options": [
+        "Religious festivals",
+        "Ostracisms",
+        "Military parades",
+        "Burials"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why is the Stoa of Zeus Eleutherios unusual?",
+      "options": [
+        "It lacked columns",
+        "It was dedicated to a god but not a temple",
+        "It was used as a temple",
+        "It was underground"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "To what did Zeus Eleutherios relate?",
+      "options": [
+        "Royal authority",
+        "Justice",
+        "Freedom after the Persian Wars",
+        "Victory in war"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which architect may have designed the Stoa of Zeus Eleutherios?",
+      "options": [
+        "Mnesikles",
+        "Ictinus",
+        "Callicrates",
+        "Pheidias"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What statue decorated the roof of the Stoa of Zeus Eleutherios?",
+      "options": [
+        "Nike",
+        "Athena Parthenos",
+        "Hermes",
+        "Zeus Olympios"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "To which god was the Hephaestion dedicated?",
+      "options": [
+        "Apollo",
+        "Zeus",
+        "Athena",
+        "Hephaestus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why was the location of the Hephaestion significant?",
+      "options": [
+        "At the city gates",
+        "Above the Acropolis",
+        "Near the Assembly",
+        "On a site burned by Persians in 480 BCE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What mythological scenes appeared on the Hephaestion’s metopes?",
+      "options": [
+        "Labours of Heracles and Theseus",
+        "Amazonomachy only",
+        "Trojan War",
+        "Gigantomachy only"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the function of the New Bouleuterion?",
+      "options": [
+        "Meeting place of the boule",
+        "Law courts",
+        "Religious council",
+        "Archives"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

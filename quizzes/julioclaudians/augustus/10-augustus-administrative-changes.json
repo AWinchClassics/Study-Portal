@@ -1,0 +1,207 @@
+{
+  "id": "10-augustus-administrative-changes",
+  "title": "10. Augustus' Administrative Changes",
+  "description": "Augustus’ reorganisation of Rome and the provinces, including urban administration, security, and financial control.",
+  "questions": [
+    {
+      "question": "Why did Augustus extend the pomerium of Rome?",
+      "options": [
+        "To reflect the acquisition of new provinces",
+        "To reduce the size of the city",
+        "To increase tax revenue",
+        "To strengthen religious boundaries only"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How was the city of Rome reorganised under Augustus?",
+      "options": [
+        "Into 10 regions governed by senators",
+        "Into 14 districts overseen by magistrates chosen by lot",
+        "Into wards controlled by the army",
+        "Into provinces administered by equestrians"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How many wards (vici) existed in Rome after Augustus’ reforms?",
+      "options": [
+        "120",
+        "200",
+        "265",
+        "300"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who supervised the individual wards of Rome?",
+      "options": [
+        "Senators appointed by Augustus",
+        "Military tribunes",
+        "Locally elected supervisors",
+        "Imperial legates"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the role of the vigiles?",
+      "options": [
+        "To govern provinces",
+        "To oversee elections",
+        "To act as a fire brigade and prevent fires",
+        "To collect taxes"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How were the vigiles organised within the city of Rome?",
+      "options": [
+        "One cohort per ward",
+        "One cohort per district",
+        "Each cohort oversaw two districts",
+        "They were not regionally organised"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What economic effect did Augustus’ building programme have?",
+      "options": [
+        "It increased unemployment",
+        "It benefited only elite architects",
+        "It provided work for skilled and unskilled labourers",
+        "It weakened the economy"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why did Augustus take control of the grain supply in 22 BCE?",
+      "options": [
+        "To punish the Senate",
+        "Following a major famine",
+        "To reward the army",
+        "To reduce reliance on Egypt"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What office did Augustus establish to oversee the grain supply?",
+      "options": [
+        "Praefectus urbi",
+        "Curator of the Grain Supply",
+        "Proconsul of Rome",
+        "Urban prefect"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who was responsible for maintaining aqueducts before Augustus created a new board?",
+      "options": [
+        "Tiberius",
+        "Maecenas",
+        "Agrippa",
+        "The Senate"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What change occurred after Agrippa’s death regarding water supply?",
+      "options": [
+        "Water management was abandoned",
+        "A board of three senatorial water curators was established",
+        "Control passed to local communities",
+        "It was placed under military control"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the purpose of the urban cohorts?",
+      "options": [
+        "Border defence",
+        "Policing major disturbances in Rome",
+        "Fire prevention",
+        "Tax collection"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who commanded the urban cohorts?",
+      "options": [
+        "A praetorian prefect",
+        "The Senate",
+        "A consular prefect",
+        "Augustus personally"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What measures did Augustus take to prevent flooding in Rome?",
+      "options": [
+        "Construction of dams",
+        "Clearing the Tiber channel",
+        "Diverting the river",
+        "Banning riverside building"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How was provincial power divided under Augustus?",
+      "options": [
+        "All provinces were governed by the Senate",
+        "All provinces were governed by Augustus",
+        "Provinces were divided into imperial and senatorial",
+        "Provinces were controlled by the army"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why did Augustus retain control of imperial provinces?",
+      "options": [
+        "They were economically unimportant",
+        "They contained most of the military forces",
+        "They were already pacified",
+        "The Senate refused them"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How were governors of imperial provinces selected?",
+      "options": [
+        "By lot for one year",
+        "By popular election",
+        "Appointed by Augustus for three years or more",
+        "Chosen by provincial assemblies"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What financial reform reduced corruption in the provinces?",
+      "options": [
+        "Reintroduction of publicani",
+        "Removal of all taxation",
+        "Payment of salaries and expenses to governors",
+        "Increased fines"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What role did Augustus’ procurators play in provincial administration?",
+      "options": [
+        "Military command",
+        "Religious leadership",
+        "Oversight of provincial finances",
+        "Urban planning"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why did Augustus keep Egypt under especially tight control?",
+      "options": [
+        "It was a frequent source of rebellion",
+        "It supplied a third of Rome’s grain",
+        "It lacked local administration",
+        "It had no Roman citizens"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

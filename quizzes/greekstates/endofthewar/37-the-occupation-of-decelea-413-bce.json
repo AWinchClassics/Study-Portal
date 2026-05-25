@@ -1,0 +1,207 @@
+{
+  "id": "37-the-occupation-of-decelea-413-bce",
+  "title": "37. The Occupation of Decelea, c. 413 BCE",
+  "description": "The Spartan occupation of Decelea and its devastating economic and strategic impact on Athens during the later stages of the Peloponnesian War.",
+  "questions": [
+    {
+      "question": "On whose advice did Sparta decide to occupy Decelea?",
+      "options": [
+        "Gylippus",
+        "Alcibiades",
+        "Nicias",
+        "Brasidas"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which Spartan king led the occupation of Decelea?",
+      "options": [
+        "Pleistoanax",
+        "Archidamus",
+        "Agis III",
+        "Cleomenes"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In which year was Decelea occupied by Sparta?",
+      "options": [
+        "414 BCE",
+        "412 BCE",
+        "415 BCE",
+        "413 BCE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why was Decelea a strategically important location?",
+      "options": [
+        "It threatened Sicily",
+        "It controlled sea routes",
+        "It overlooked Athens and key land routes",
+        "It guarded Sparta"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which regions’ routes were controlled from Decelea?",
+      "options": [
+        "Macedon and Thrace",
+        "Argos and Corinth",
+        "Boeotia and Euboea",
+        "Ionia and Lydia"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What immediate effect did the occupation have on Athenian agriculture?",
+      "options": [
+        "Only vineyards were affected",
+        "Farmland could no longer be used",
+        "Minimal impact",
+        "Improved production"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Athens now have to import much of its food?",
+      "options": [
+        "From Egypt",
+        "From Sicily",
+        "By land from Attica",
+        "By sea from Euboea"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why was importing food by sea more damaging for Athens?",
+      "options": [
+        "It took longer",
+        "It angered allies",
+        "It was less reliable",
+        "It was more expensive"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Approximately how many slaves deserted Athens after the occupation?",
+      "options": [
+        "30,000",
+        "20,000",
+        "10,000",
+        "5,000"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "From which important site did many slaves desert?",
+      "options": [
+        "Silver mines at Laurium",
+        "Agora",
+        "Piraeus",
+        "Delos"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What major source of Athenian revenue was badly affected?",
+      "options": [
+        "Tribute from allies",
+        "Silver mining at Laurium",
+        "Harbour taxes",
+        "Temple offerings"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What additional burden did Athens face after Decelea was occupied?",
+      "options": [
+        "Persian invasion",
+        "War on two fronts",
+        "Loss of democracy",
+        "Civil unrest"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Thucydides describe the impact of Decelea on Athens?",
+      "options": [
+        "A minor inconvenience",
+        "A short-term problem",
+        "One of the chief reasons for decline",
+        "An inevitable event"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which passage contains Thucydides’ judgement on Decelea?",
+      "options": [
+        "5.84",
+        "4.3",
+        "8.1",
+        "7.27"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Athens attempt to respond strategically?",
+      "options": [
+        "By fortifying Decelea",
+        "By suing for peace",
+        "By occupying a position opposite Cythera",
+        "By invading Boeotia"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Where is Cythera located?",
+      "options": [
+        "In the Aegean Sea",
+        "Near Sicily",
+        "Near Athens",
+        "Off the coast of Laconia"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why was Athens’ position near Cythera significant?",
+      "options": [
+        "It protected trade routes",
+        "It threatened Sparta directly",
+        "It compensated fully for Decelea",
+        "It had little effect"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did the occupation increase the danger of the Sicilian Expedition?",
+      "options": [
+        "It strained resources further",
+        "It encouraged revolts",
+        "It caused famine immediately",
+        "It weakened the navy"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which Athenian generals were operating abroad during this crisis?",
+      "options": [
+        "Alcibiades and Lamachus",
+        "Demosthenes and Eurymedon",
+        "Pericles and Phormio",
+        "Cleon and Nicias"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What long-term change in Spartan strategy does Decelea represent?",
+      "options": [
+        "Withdrawal from war",
+        "Permanent occupation of enemy territory",
+        "Defensive isolation",
+        "Naval dominance"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

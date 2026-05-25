@@ -1,0 +1,187 @@
+{
+  "id": "07-rhetoric-in-athens",
+  "title": "07. Rhetoric in Athens",
+  "description": "The role of rhetoric in Athenian political and legal decision-making during the classical period.",
+  "questions": [
+    {
+      "question": "Why was rhetoric especially important in the Athenian assembly?",
+      "options": [
+        "Decisions depended on persuasion rather than expertise",
+        "Only elites were allowed to speak",
+        "Votes were secret",
+        "Laws could not be challenged"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which statesman used rhetoric to secure the ostracism of Thucydides son of Melesias?",
+      "options": [
+        "Cleon",
+        "Pericles",
+        "Nicias",
+        "Hyperbolus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which source describes Pericles’ rhetorical dominance over the people?",
+      "options": [
+        "Thucydides",
+        "Aristophanes",
+        "Plutarch",
+        "Plato"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How does Cleon attempt to influence the Assembly in the Mytilene Debate?",
+      "options": [
+        "By appealing to mercy",
+        "By citing tradition",
+        "By promising reform",
+        "By using aggressive and emotional rhetoric"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why was Cleon unsuccessful in the second Mytilene debate?",
+      "options": [
+        "He was out-argued by Diodotus",
+        "He lost popular support",
+        "He refused to speak",
+        "He was absent"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which historian records the speeches of Cleon and Diodotus?",
+      "options": [
+        "Herodotus",
+        "Thucydides",
+        "Xenophon",
+        "Livy"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does Aristophanes portray Cleon in his comedies?",
+      "options": [
+        "As a wise leader",
+        "As a tragic hero",
+        "As an unscrupulous demagogue",
+        "As a foreign threat"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which plays heavily criticise Cleon’s rhetorical influence?",
+      "options": [
+        "Frogs and Clouds",
+        "Birds and Peace",
+        "Lysistrata and Peace",
+        "Knights and Wasps"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which individual does Aristophanes mock as a demagogue alongside Cleon?",
+      "options": [
+        "Hyperbolus",
+        "Nicias",
+        "Pericles",
+        "Socrates"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who persuaded the Athenians to launch the Sicilian Expedition?",
+      "options": [
+        "Nicias",
+        "Alcibiades",
+        "Cleophon",
+        "Pericles"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What consequence followed Alcibiades’ rhetorical success?",
+      "options": [
+        "Immediate victory",
+        "Expansion of the empire",
+        "A disastrous military defeat",
+        "Political stability"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which source emphasises Alcibiades’ persuasive influence over the people?",
+      "options": [
+        "Thucydides",
+        "Aristophanes",
+        "Xenophon",
+        "Plutarch"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Nicias and Alcibiades remove Hyperbolus from politics?",
+      "options": [
+        "By combining rhetoric to secure his ostracism",
+        "By prosecuting him in court",
+        "By exile through force",
+        "By assassination"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who dominated the Assembly near the end of the Peloponnesian War?",
+      "options": [
+        "Alcibiades",
+        "Cleophon",
+        "Nicias",
+        "Theramenes"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did Cleophon’s rhetoric obstruct peace?",
+      "options": [
+        "He lacked influence",
+        "He favoured oligarchy",
+        "He persuaded the demos to reject compromise",
+        "He opposed democracy"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was rhetoric especially important in the law courts?",
+      "options": [
+        "Judges were professionals",
+        "Lawyers represented citizens",
+        "Written evidence dominated trials",
+        "Citizens had to speak for themselves"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What claim does Socrates make about his own speaking ability in the Apology?",
+      "options": [
+        "That he is poor at rhetoric",
+        "That he is a skilled orator",
+        "That rhetoric is immoral",
+        "That juries are corrupt"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why is Socrates’ claim ironic?",
+      "options": [
+        "He later abandons it",
+        "The speech itself is highly rhetorical",
+        "He contradicts Plato",
+        "The jury ignores him"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

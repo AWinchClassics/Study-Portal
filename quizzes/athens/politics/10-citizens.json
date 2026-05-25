@@ -1,0 +1,167 @@
+{
+  "id": "10-citizens",
+  "title": "10. Citizens",
+  "description": "The rights, duties, and political participation of Athenian citizens.",
+  "questions": [
+    {
+      "question": "Which political rights did all Athenian citizens possess?",
+      "options": [
+        "Proposing legislation, attending the Assembly, and voting",
+        "Serving as strategoi automatically",
+        "Holding office for life",
+        "Commanding the navy"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How were most political offices filled in Athens?",
+      "options": [
+        "By inheritance",
+        "By lot",
+        "By appointment",
+        "By purchase"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which offices were elected rather than chosen by lot?",
+      "options": [
+        "Archons",
+        "Jurors",
+        "Strategoi",
+        "Councillors"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why were annual tenures significant for citizens?",
+      "options": [
+        "They reduced corruption only",
+        "They favoured wealthy families",
+        "They limited democratic participation",
+        "They allowed many citizens to gain political experience"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What role did citizens play in the law courts?",
+      "options": [
+        "They served as jurors deciding verdicts and punishments",
+        "They acted as professional lawyers",
+        "They only observed trials",
+        "They judged appeals only"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why were officials and jurors paid?",
+      "options": [
+        "To reward loyalty",
+        "To allow wider participation regardless of wealth",
+        "To encourage long service",
+        "To increase state revenue"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Approximately how many citizens lived in Athens in the fifth century BCE?",
+      "options": [
+        "5,000–10,000",
+        "10,000–20,000",
+        "30,000–60,000",
+        "100,000"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Roughly what proportion of the population were citizens?",
+      "options": [
+        "1–5%",
+        "5–10%",
+        "25–30%",
+        "10–20%"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What legal protection distinguished citizens from non-citizens?",
+      "options": [
+        "Citizens could not be enslaved",
+        "Citizens paid no taxes",
+        "Citizens could not be prosecuted",
+        "Citizens were exempt from military service"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was expected of wealthy citizens through liturgy?",
+      "options": [
+        "Serving as archons",
+        "Funding public services such as drama or warships",
+        "Paying tribute to Athens",
+        "Commanding armies"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was a choregos?",
+      "options": [
+        "A military commander",
+        "A council official",
+        "A citizen who funded dramatic festivals",
+        "A religious priest"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was required for a male to be recognised as a citizen after Pericles’ reforms?",
+      "options": [
+        "Wealth qualification",
+        "One Athenian parent",
+        "Completion of military service only",
+        "Two Athenian parents legally married"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "At what age did a boy normally begin the process of becoming a citizen?",
+      "options": [
+        "18",
+        "16",
+        "21",
+        "30"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which body scrutinised young men before full citizenship?",
+      "options": [
+        "The Assembly",
+        "The councillors",
+        "The Areopagus",
+        "The law courts"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How could citizenship be granted in exceptional cases?",
+      "options": [
+        "By the strategoi",
+        "By magistrates",
+        "By a vote of the Assembly",
+        "By inheritance"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why might some citizens be temporarily excluded from political participation?",
+      "options": [
+        "Illness",
+        "Age",
+        "Military absence",
+        "Suspension for debts or legal penalties"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

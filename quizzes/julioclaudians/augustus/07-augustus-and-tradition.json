@@ -1,0 +1,157 @@
+{
+  "id": "07-augustus-and-tradition",
+  "title": "07. Augustus and Tradition",
+  "description": "Augustus’ presentation of his rule as a restoration of Republican traditions while consolidating personal power.",
+  "questions": [
+    {
+      "question": "What claim did Augustus make regarding his relationship with the Roman Republic?",
+      "options": [
+        "That he replaced it entirely",
+        "That he restored it in full",
+        "That he restored its practices while retaining control",
+        "That it was no longer relevant"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why is Augustus’ claim to have restored the Republic debated by historians?",
+      "options": [
+        "The Senate opposed him",
+        "His powers represented a clear break from tradition",
+        "He rejected Republican offices",
+        "There are no sources"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How were Augustus’ powers presented to appear traditional?",
+      "options": [
+        "Through military force",
+        "Through hereditary rule",
+        "Through a veneer of Republicanism",
+        "Through popular elections"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What aspect of Augustus’ rule clearly broke with Republican tradition?",
+      "options": [
+        "Annual elections",
+        "Senatorial debate",
+        "Ultimate concentration of power",
+        "Magistracies"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What did Augustus believe contributed to Rome’s earlier instability?",
+      "options": [
+        "Foreign invasion",
+        "Moral decline",
+        "Weak armies",
+        "Religious diversity"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Augustus use coinage in relation to morality?",
+      "options": [
+        "To criticise elites",
+        "To promote himself as moral restorer",
+        "To fund reforms",
+        "To abolish corruption"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which poet describes Augustus as bringing a new Golden Age?",
+      "options": [
+        "Horace",
+        "Ovid",
+        "Virgil",
+        "Tacitus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What aim lay behind Augustus’ moral reforms?",
+      "options": [
+        "Economic growth",
+        "Expansion of citizenship",
+        "Protection of Roman blood and values",
+        "Popular support"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why are Augustus’ moral reforms significant despite being unpopular?",
+      "options": [
+        "They were fully effective",
+        "They reveal his desire to promote traditional values",
+        "They strengthened democracy",
+        "They pleased the Senate"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which lapsed Republican practice did Augustus revive?",
+      "options": [
+        "Popular assemblies",
+        "Censuses",
+        "Dictatorship",
+        "Tribuneship"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Augustus’ religious policies reflect tradition?",
+      "options": [
+        "By abolishing priesthoods",
+        "By restoring temples and priestly colleges",
+        "By rejecting state religion",
+        "By promoting atheism"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why does the Imperial Cult complicate Augustus’ claim to restore tradition?",
+      "options": [
+        "It reduced religious participation",
+        "It introduced worship of a living ruler",
+        "It strengthened foreign cults",
+        "It abolished Roman gods"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What criticism does Tacitus make of Augustus’ religious honours?",
+      "options": [
+        "That they weakened the army",
+        "That they left no honours for the gods",
+        "That they offended the plebs",
+        "That they ignored tradition"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What action demonstrates Augustus’ control over tradition itself?",
+      "options": [
+        "Building new temples",
+        "Restoring festivals",
+        "Destroying prophetic verses",
+        "Appointing priests"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does Augustus’ editing of the Sibylline Books suggest?",
+      "options": [
+        "Respect for prophecy",
+        "Political manipulation of tradition",
+        "Religious ignorance",
+        "Decline of belief"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "id": "03-the-second-constitutional-settlement-23-bce",
+  "title": "03. The Second Constitutional Settlement, 23 BCE",
+  "description": "The powers granted to Augustus in 23 BCE and how they reshaped imperial authority while maintaining Republican appearances.",
+  "questions": [
+    {
+      "question": "Why was a Second Constitutional Settlement necessary in 23 BCE?",
+      "options": [
+        "Augustus wished to abolish the Senate",
+        "Augustus faced political, military, and health crises",
+        "The army demanded new leadership",
+        "The First Settlement had failed completely"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which major power was affirmed by the Second Constitutional Settlement?",
+      "options": [
+        "Dictatorial power",
+        "Consular imperium",
+        "Imperium proconsulare maius",
+        "Censorship"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What did imperium proconsulare maius allow Augustus to do?",
+      "options": [
+        "Govern Rome directly",
+        "Override provincial governors",
+        "Command only senatorial provinces",
+        "Control elections"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why was imperium proconsulare maius especially important after 23 BCE?",
+      "options": [
+        "Augustus abandoned military command",
+        "Augustus resigned the consulship",
+        "The Senate demanded it",
+        "It replaced tribunician power"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What long-term consequence did imperium proconsulare maius have?",
+      "options": [
+        "It weakened Augustus’ authority",
+        "It made military command hereditary",
+        "It abolished provincial armies",
+        "It strengthened popular assemblies"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What powers did tribunicia potestas grant Augustus?",
+      "options": [
+        "Command of legions",
+        "Judicial authority only",
+        "The ability to propose and veto laws",
+        "Control of the Senate"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Augustus use tribunician power in practice?",
+      "options": [
+        "To abolish elections",
+        "To pass the Julian laws",
+        "To punish senators",
+        "To raise taxes"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does Tacitus characterise tribunician power under Augustus?",
+      "options": [
+        "A temporary emergency measure",
+        "The expression of imperial supremacy",
+        "A purely symbolic office",
+        "A weakening of authority"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does Velleius Paterculus describe the effects of Augustus’ powers?",
+      "options": [
+        "The destruction of liberty",
+        "The restoration of force to laws and dignity to the Senate",
+        "The abolition of courts",
+        "The decline of senatorial authority"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which event in 23 BCE intensified the succession problem?",
+      "options": [
+        "Agrippa’s exile",
+        "The death of Marcellus",
+        "The fall of Lepidus",
+        "Germanicus’ promotion"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What personal issue affected Augustus in 23 BCE?",
+      "options": [
+        "Exile",
+        "Financial ruin",
+        "Serious illness",
+        "Military defeat"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why did Augustus’ continual consulship cause resentment?",
+      "options": [
+        "It excluded equestrians",
+        "It limited opportunities for other senators",
+        "It weakened the army",
+        "It violated religious custom"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Augustus respond to calls for dictatorship during the corn riots?",
+      "options": [
+        "He accepted reluctantly",
+        "He postponed the decision",
+        "He refused",
+        "He delegated authority"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which powers did Augustus reportedly refuse in this period?",
+      "options": [
+        "Tribunician power",
+        "Proconsular imperium",
+        "Dictatorship and consulship for life",
+        "Pontifex Maximus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What unusual privilege accompanied Augustus’ consular imperium without office?",
+      "options": [
+        "Command of the Praetorian Guard",
+        "The right to sit between the consuls",
+        "Power to appoint magistrates",
+        "Control of elections"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What religious office did Augustus assume after Lepidus’ death?",
+      "options": [
+        "Augur",
+        "Pontifex Maximus",
+        "Flamen Dialis",
+        "Rex Sacrorum"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What title did Augustus receive that emphasised his role as father of the state?",
+      "options": [
+        "Princeps",
+        "Imperator",
+        "Pater Patriae",
+        "Augustus"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

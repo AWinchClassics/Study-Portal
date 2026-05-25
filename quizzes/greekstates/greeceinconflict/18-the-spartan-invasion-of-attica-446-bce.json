@@ -1,0 +1,207 @@
+{
+  "id": "18-the-spartan-invasion-of-attica-446-bce",
+  "title": "18. The Spartan Invasion of Attica, 446 BCE",
+  "description": "The brief Spartan invasion of Attica and how it accelerated Athens’ transformation of the Delian League into an empire.",
+  "questions": [
+    {
+      "question": "In which year did King Pleistoanax lead a Spartan invasion of Attica?",
+      "options": [
+        "445 BCE",
+        "446 BCE",
+        "443 BCE",
+        "447 BCE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which Spartan king led the invasion of Attica?",
+      "options": [
+        "Leotychides",
+        "Archidamus",
+        "Cleomenes",
+        "Pleistoanax"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was unusual about the Spartan invasion of Attica in 446 BCE?",
+      "options": [
+        "The army withdrew quickly",
+        "Athens surrendered immediately",
+        "It ended in a decisive battle",
+        "It lasted several years"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "According to Thucydides, why did the Spartan army withdraw?",
+      "options": [
+        "Lack of supplies",
+        "Persian threat",
+        "Military defeat",
+        "Possible bribery"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which ancient author claims that Pericles paid the bribe?",
+      "options": [
+        "Xenophon",
+        "Plutarch",
+        "Herodotus",
+        "Thucydides"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happened to Pleistoanax after returning to Sparta?",
+      "options": [
+        "He became ephor",
+        "He was praised",
+        "He was executed",
+        "He was fined and exiled"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which regions revolted against Athens following the defeat at Choroneia?",
+      "options": [
+        "Euboea and Megara",
+        "Corinth and Argos",
+        "Boeotia and Phocis",
+        "Thrace and Macedonia"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which city switched sides and invited Corinthians to massacre the Athenian garrison?",
+      "options": [
+        "Megara",
+        "Thebes",
+        "Euboea",
+        "Chalcis"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was Pericles forced to abandon his campaign in Euboea?",
+      "options": [
+        "Spartan invasion of Attica",
+        "Persian invasion",
+        "Lack of troops",
+        "Revolt in Athens"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What did Pericles do after the Spartan withdrawal from Attica?",
+      "options": [
+        "Invaded Megara",
+        "Returned to Athens permanently",
+        "Resubjugated Euboea",
+        "Sought peace with Sparta"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What oath were the people of Euboea required to swear?",
+      "options": [
+        "Oath of loyalty to Athens",
+        "Military service oath",
+        "Neutrality oath",
+        "Oath to Sparta"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which decree formalised Athens’ control over Euboea?",
+      "options": [
+        "Cleinias Decree",
+        "Chalcis Decree",
+        "Coinage Decree",
+        "Megarian Decree"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What powers did Athens retain under the Chalcis Decree?",
+      "options": [
+        "Military command only",
+        "Judicial authority over major cases",
+        "Tax collection only",
+        "Control of religious festivals"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What types of legal cases could be appealed to Athens?",
+      "options": [
+        "Property disputes",
+        "Trade disputes",
+        "Religious cases",
+        "Cases involving death, exile, or loss of citizenship"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What does the Euboean settlement indicate about Athens by 446 BCE?",
+      "options": [
+        "Return to alliance politics",
+        "Weakening control",
+        "Clear imperial authority",
+        "Equality among allies"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which historian records Pericles’ interruption of the Euboean campaign?",
+      "options": [
+        "Xenophon",
+        "Herodotus",
+        "Plutarch",
+        "Thucydides"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was the immediate consequence of Megara’s revolt?",
+      "options": [
+        "Persian intervention",
+        "Spartan occupation of Athens",
+        "Athenian withdrawal",
+        "Corinthian assistance in killing Athenians"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What punishment was imposed on Euboea after suppression?",
+      "options": [
+        "Mass enslavement",
+        "Loss of tribute only",
+        "Execution of leaders",
+        "Oath of loyalty and loss of autonomy"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why was the Spartan invasion significant despite no battle being fought?",
+      "options": [
+        "It forced Athens to abandon Euboea temporarily",
+        "It ended the Delian League",
+        "It demonstrated Athens’ dependence on Persia",
+        "It showed Spartan weakness"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What wider process does this episode illustrate?",
+      "options": [
+        "Rise of Macedon",
+        "Transformation of the Delian League into an empire",
+        "Decline of Athens",
+        "End of Greek warfare"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

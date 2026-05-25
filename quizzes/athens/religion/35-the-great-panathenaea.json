@@ -1,0 +1,257 @@
+{
+  "id": "35-the-great-panathenaea",
+  "title": "35. The Great Panathenaea",
+  "description": "The organisation, rituals, contests, and civic significance of the Great Panathenaea festival in classical Athens.",
+  "questions": [
+    {
+      "question": "The Panathenaia was held in honour of which goddess?",
+      "options": [
+        "Hera",
+        "Artemis",
+        "Demeter",
+        "Athena"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "In which months was the Panathenaia celebrated?",
+      "options": [
+        "August–September",
+        "July–August",
+        "June–July",
+        "May–June"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the main purpose of the Panathenaia?",
+      "options": [
+        "Honouring Athena as protector of the city",
+        "Celebrating democracy",
+        "Commemorating victory over Persia",
+        "Honouring all Olympian gods"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the central event of the Panathenaic festival?",
+      "options": [
+        "Dramatic performances",
+        "A large procession to the Acropolis",
+        "Prize-giving ceremonies",
+        "Athletic contests"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was sacrificed at the culmination of the procession?",
+      "options": [
+        "A hecatomb",
+        "A pig",
+        "A goat",
+        "A bull"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What garment was presented to Athena during the procession?",
+      "options": [
+        "Chiton",
+        "Himation",
+        "Chlamys",
+        "Peplos"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "To which aspect of Athena was the peplos presented?",
+      "options": [
+        "Athena Nike",
+        "Athena Parthenos",
+        "Athena Ergane",
+        "Athena Polias"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What does a scholiast on Demosthenes suggest about the importance of the festival?",
+      "options": [
+        "Foreigners were excluded",
+        "Prisoners were released on bail",
+        "Military service was suspended",
+        "Taxes were cancelled"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the annual version of the festival called?",
+      "options": [
+        "Greater Panathenaia",
+        "Lesser Panathenaia",
+        "Rural Panathenaia",
+        "City Panathenaia"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How often was the Greater Panathenaia held?",
+      "options": [
+        "Every eight years",
+        "Every year",
+        "Every two years",
+        "Every four years"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "When did the Greater Panathenaia begin?",
+      "options": [
+        "c. 550 BCE",
+        "c. 520 BCE",
+        "c. 566 BCE",
+        "c. 600 BCE"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which types of contests were included in the Greater Panathenaia?",
+      "options": [
+        "Athletic, musical, equestrian and naval",
+        "Dramatic only",
+        "Musical and poetic only",
+        "Athletic only"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Where were rhapsodic and musical contests held?",
+      "options": [
+        "The Theatre of Dionysus",
+        "The Odeon of Pericles",
+        "The Agora",
+        "The Pnyx"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which statesman is associated with expanding musical contests?",
+      "options": [
+        "Solon",
+        "Cleisthenes",
+        "Themistocles",
+        "Pericles"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What distinguished Panathenaic prizes from those at other Panhellenic games?",
+      "options": [
+        "They had monetary value",
+        "They were religious objects only",
+        "They were symbolic wreaths",
+        "They were temporary honours"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What were Panathenaic amphorae filled with?",
+      "options": [
+        "Grain",
+        "Honey",
+        "Wine",
+        "Olive oil"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How many amphorae could a chariot race victor receive in the 4th century BCE?",
+      "options": [
+        "140",
+        "80",
+        "40",
+        "200"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which contests were organised between Athenian tribes?",
+      "options": [
+        "Musical performances",
+        "Athletic races only",
+        "Naval battles",
+        "Tribal contests such as the torch race"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was the purpose of the torch race?",
+      "options": [
+        "Entertainment",
+        "Honouring Apollo",
+        "Training soldiers",
+        "Lighting the sacrificial fire"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Where did the boat race take place?",
+      "options": [
+        "Eleusis",
+        "The Acropolis",
+        "The Piraeus",
+        "The Agora"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Where did the Panathenaic procession begin?",
+      "options": [
+        "The Acropolis",
+        "The Agora",
+        "The Pnyx",
+        "The Dipylon Gate"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which route did the procession follow?",
+      "options": [
+        "Kerameikos Road",
+        "Sacred Way",
+        "Royal Road",
+        "Panathenaic Way"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who carried the peplos in the procession?",
+      "options": [
+        "Priests",
+        "The arrephoroi",
+        "The strategoi",
+        "The boule"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What age were the arrephoroi?",
+      "options": [
+        "5–7",
+        "7–11",
+        "12–16",
+        "Adult women"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What scene was depicted on the peplos?",
+      "options": [
+        "Contest with Poseidon",
+        "Battle of Marathon",
+        "Athena defeating Enceladus",
+        "Trojan War"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

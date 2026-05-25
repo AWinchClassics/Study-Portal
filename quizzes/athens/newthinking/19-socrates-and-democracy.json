@@ -1,0 +1,187 @@
+{
+  "id": "19-socrates-and-democracy",
+  "title": "19. Socrates and Democracy",
+  "description": "Socrates’ critique of Athenian democracy as presented by Plato and Xenophon, including key political analogies.",
+  "questions": [
+    {
+      "question": "How do Plato and Xenophon present Socrates’ attitude towards democracy?",
+      "options": [
+        "As supportive but cautious",
+        "As critical of its reliance on unqualified decision-makers",
+        "As neutral",
+        "As hostile only after 404 BCE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does Socrates criticise about the democratic selection of officials?",
+      "options": [
+        "Officials were too wealthy",
+        "Officials were chosen for life",
+        "Officials lacked ambition",
+        "Constant turnover prevented the development of expertise"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "According to Socrates, why were democratic voters flawed?",
+      "options": [
+        "They lacked education and rational understanding",
+        "They were corrupt",
+        "They were foreign-born",
+        "They were too wealthy"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What effect did popular ignorance have on politicians?",
+      "options": [
+        "It strengthened leadership",
+        "It encouraged honesty",
+        "It forced politicians to follow popular whims",
+        "It reduced debate"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In Plato’s Republic, who should rule the ideal state?",
+      "options": [
+        "The demos",
+        "Philosopher-kings",
+        "Elected generals",
+        "Wealthy elites"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What quality makes philosopher-kings suitable to rule?",
+      "options": [
+        "Popularity",
+        "Military success",
+        "Wealth",
+        "Wisdom and knowledge"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "In the Ship of State analogy, whom does the ship-owner represent?",
+      "options": [
+        "The democratic people (demos)",
+        "The philosopher-king",
+        "The law courts",
+        "The generals"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What do the quarrelling crew members symbolise?",
+      "options": [
+        "Ordinary citizens",
+        "Foreign enemies",
+        "Demagogues",
+        "Magistrates"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why is the navigator dismissed by the crew in the Ship of State?",
+      "options": [
+        "He is corrupt",
+        "He is labelled a useless stargazer",
+        "He refuses to speak",
+        "He lacks experience"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Whom does the navigator represent in Socrates’ analogy?",
+      "options": [
+        "The Assembly",
+        "The law courts",
+        "The Sophists",
+        "The philosopher-king"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "In the Animal Trainer analogy, what does the ‘beast’ represent?",
+      "options": [
+        "The people of Athens",
+        "The aristocracy",
+        "The law courts",
+        "The army"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does the animal trainer learn to do?",
+      "options": [
+        "Improve the animal morally",
+        "Discipline the animal",
+        "Placate the animal’s desires",
+        "Control the city"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What is the main criticism of speakers in the Assembly?",
+      "options": [
+        "They lacked education",
+        "They prioritised popularity over the good of the state",
+        "They opposed democracy",
+        "They rejected rhetoric"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why does Socrates see rhetoric as dangerous in democracy?",
+      "options": [
+        "It discourages debate",
+        "It promotes silence",
+        "It removes persuasion",
+        "It replaces knowledge with persuasion"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which work contains both analogies discussed in the PPT?",
+      "options": [
+        "Plato’s Republic",
+        "Xenophon’s Memorabilia",
+        "Aristotle’s Politics",
+        "Plato’s Apology"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What do both analogies ultimately argue for?",
+      "options": [
+        "Expanded democracy",
+        "Popular sovereignty",
+        "Rule by knowledge rather than opinion",
+        "Military leadership"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why might Socrates’ views have been threatening to democracy?",
+      "options": [
+        "They promoted tyranny",
+        "They undermined faith in popular decision-making",
+        "They supported Sparta",
+        "They rejected law"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Overall, how do Plato and Xenophon portray Socrates’ political thought?",
+      "options": [
+        "As supportive of democracy",
+        "As indifferent",
+        "As inconsistent",
+        "As critical but idealistic"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

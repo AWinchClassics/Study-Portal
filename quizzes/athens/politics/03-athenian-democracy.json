@@ -1,0 +1,167 @@
+{
+  "id": "03-athenian-democracy",
+  "title": "03. Athenian Democracy",
+  "description": "The structure and operation of democratic institutions in classical Athens.",
+  "questions": [
+    {
+      "question": "How many councillors made up the Athenian boule?",
+      "options": [
+        "500",
+        "400",
+        "300",
+        "600"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How were members of the boule selected each year?",
+      "options": [
+        "Election by the ekklesia",
+        "Selection by lot from each tribe",
+        "Appointment by archons",
+        "Nomination by the Areopagus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the minimum age requirement to serve on the boule?",
+      "options": [
+        "21",
+        "25",
+        "30",
+        "40"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What payment did boule members receive per day?",
+      "options": [
+        "4 obols",
+        "2 obols",
+        "1 obol",
+        "1 drachma"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was the primary role of the boule in relation to the ekklesia?",
+      "options": [
+        "Preparing motions and overseeing decisions",
+        "Voting on laws directly",
+        "Commanding the army",
+        "Acting as a court"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was a prytany?",
+      "options": [
+        "A meeting of the ekklesia",
+        "A 35/36-day period when one tribe was on duty",
+        "A law court session",
+        "A religious festival"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where did the prytaneis live during their prytany?",
+      "options": [
+        "Bouleuterion",
+        "Pnyx",
+        "Tholos",
+        "Agora"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the role of the epistatēs?",
+      "options": [
+        "Commander of the army",
+        "Chief judge",
+        "Religious official",
+        "Daily chairman of the boule and assembly"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who could attend the ekklesia?",
+      "options": [
+        "All Athenian citizens",
+        "All residents of Attica",
+        "Only magistrates",
+        "Only landowners"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How were most votes taken in the ekklesia?",
+      "options": [
+        "Secret ballot",
+        "Show of hands",
+        "Voice vote",
+        "Written vote"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What quorum was required for certain important decisions?",
+      "options": [
+        "3,000",
+        "4,000",
+        "6,000",
+        "10,000"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was dokimasia?",
+      "options": [
+        "A method of voting",
+        "A legal punishment",
+        "A financial audit",
+        "Pre-office scrutiny of a magistrate"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was euthunai?",
+      "options": [
+        "An end-of-office review of a magistrate",
+        "A form of exile",
+        "A religious ceremony",
+        "A military oath"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How were archons selected each year?",
+      "options": [
+        "Election",
+        "By lot",
+        "Appointment by strategoi",
+        "Hereditary succession"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which officials were elected rather than chosen by lot?",
+      "options": [
+        "Archons",
+        "Thesmothetae",
+        "Strategoi",
+        "The Eleven"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the purpose of ostracism?",
+      "options": [
+        "Punishing criminal behaviour",
+        "Confiscating property",
+        "Removing political rights permanently",
+        "Preventing a return to tyranny"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

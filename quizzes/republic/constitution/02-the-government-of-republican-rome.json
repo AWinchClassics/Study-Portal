@@ -1,0 +1,257 @@
+{
+  "id": "02-the-government-of-republican-rome",
+  "title": "02. The Government of Republican Rome",
+  "description": "A structured overview of Republican Rome’s political institutions, assemblies, magistracies, and the balance of power within the Roman constitution.",
+  "questions": [
+    {
+      "question": "What does SPQR stand for?",
+      "options": [
+        "Senate Power of Roman Quaestors",
+        "Supreme Power of Rome",
+        "Senators and People of Rome",
+        "Senatus Populusque Romanus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Approximately how many members did the Senate usually have in the late Republic?",
+      "options": [
+        "1,000",
+        "400",
+        "300",
+        "600"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who made up the membership of the Roman Senate?",
+      "options": [
+        "Serving magistrates only",
+        "Former magistrates",
+        "All adult male citizens",
+        "Equestrians"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which area was the Senate primarily responsible for?",
+      "options": [
+        "Electing magistrates",
+        "Judicial decisions",
+        "Passing laws directly",
+        "Foreign policy"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was a senatus consultum?",
+      "options": [
+        "A judicial verdict",
+        "A Senate recommendation",
+        "A popular decree",
+        "A binding law"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was a senatus consultum ultimum?",
+      "options": [
+        "A final vote of the people",
+        "An emergency decree granting full powers",
+        "A judicial sentence",
+        "A declaration of war"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which assembly was historically organised as a military body?",
+      "options": [
+        "Comitia Tributa",
+        "Senate",
+        "Concilium Plebis",
+        "Comitia Centuriata"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How many centuries made up the Comitia Centuriata according to Cicero?",
+      "options": [
+        "193",
+        "180",
+        "150",
+        "105"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How was voting carried out in the Comitia Centuriata?",
+      "options": [
+        "Each tribe voted once",
+        "Each century voted as a block",
+        "Each man voted individually",
+        "Votes were cast by lot"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did poorer citizens rarely vote in the Comitia Centuriata?",
+      "options": [
+        "They lived too far away",
+        "Voting ended once a majority was reached",
+        "They were excluded",
+        "They lacked citizenship"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which magistrates were mainly elected by the Comitia Centuriata?",
+      "options": [
+        "Quaestors and Aediles",
+        "Censors and Dictators",
+        "Consuls and Praetors",
+        "Tribunes and Aediles"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which assembly included both patricians and plebeians?",
+      "options": [
+        "Concilium Plebis",
+        "Council of 400",
+        "Comitia Populi Tributa",
+        "Senate"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who presided over the Comitia Populi Tributa?",
+      "options": [
+        "Quaestors",
+        "Consuls or Praetors",
+        "Tribunes only",
+        "Censors"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which assembly most frequently passed legislation?",
+      "options": [
+        "Censorial Assembly",
+        "Senate",
+        "Comitia Centuriata",
+        "Concilium Plebis"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How many tribes existed in the Roman tribal system?",
+      "options": [
+        "35",
+        "32",
+        "40",
+        "30"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How were tribes assigned in the late Republic?",
+      "options": [
+        "Hereditary and administrative",
+        "By place of residence",
+        "By military service",
+        "By wealth"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How many quaestors were elected each year?",
+      "options": [
+        "10",
+        "20",
+        "18",
+        "12"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the main responsibility of the aediles?",
+      "options": [
+        "Buildings, food supply, and games",
+        "Foreign policy",
+        "Provincial government",
+        "Judicial cases"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which magistrates possessed imperium?",
+      "options": [
+        "Tribunes and Censors",
+        "Praetors and Consuls",
+        "Aediles and Quaestors",
+        "Quaestors only"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the primary role of the Praetor?",
+      "options": [
+        "Financial administration",
+        "Military command",
+        "Judicial duties",
+        "Census"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What made Tribunes of the Plebs unique?",
+      "options": [
+        "They governed provinces",
+        "They could command armies",
+        "They served for life",
+        "They were sacrosanct and could veto actions"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who could be appointed Dictator?",
+      "options": [
+        "A magistrate for a specific crisis",
+        "Only a consul’s relative",
+        "Only plebeians",
+        "Any citizen"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What official assisted the Dictator?",
+      "options": [
+        "Master of the Horse",
+        "Censor",
+        "Praetor",
+        "Tribune"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the role of the Censors?",
+      "options": [
+        "Preside over courts",
+        "Command armies",
+        "Maintain Senate rolls and census",
+        "Propose laws"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How often were Censors appointed?",
+      "options": [
+        "Every 10 years",
+        "Every 5 years",
+        "Every 18 months",
+        "Annually"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

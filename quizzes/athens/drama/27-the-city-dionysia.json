@@ -1,0 +1,247 @@
+{
+  "id": "27-the-city-dionysia",
+  "title": "27. The City Dionysia",
+  "description": "The organisation, rituals, dramatic competitions, and civic significance of the City Dionysia festival in classical Athens.",
+  "questions": [
+    {
+      "question": "The City Dionysia was a festival held in honour of which god?",
+      "options": [
+        "Athena",
+        "Dionysus",
+        "Zeus",
+        "Apollo"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In which month was the City Dionysia held?",
+      "options": [
+        "Gamelion",
+        "Metageitnion",
+        "Poseideon",
+        "Elaphebolion"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who organised the City Dionysia?",
+      "options": [
+        "The Strategoi",
+        "The Eponymous Archon",
+        "The Areopagus",
+        "The Boule"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What type of competition took place at the City Dionysia?",
+      "options": [
+        "Political",
+        "Athletic",
+        "Dramatic",
+        "Musical only"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How many tragedians were selected to compete?",
+      "options": [
+        "Five",
+        "Four",
+        "Two",
+        "Three"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What did each tragedian propose?",
+      "options": [
+        "Three tragedies and a satyr play",
+        "Two tragedies",
+        "One tragedy",
+        "Four unrelated plays"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the role of the choregos?",
+      "options": [
+        "To judge the plays",
+        "To write the plays",
+        "To act in the chorus",
+        "To finance the production"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Acting as a choregos was an example of what?",
+      "options": [
+        "A magistracy",
+        "A punishment",
+        "A liturgy",
+        "A priesthood"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which prominent Athenian served as choregos for Aeschylus in 472 BCE?",
+      "options": [
+        "Alcibiades",
+        "Cimon",
+        "Pericles",
+        "Themistocles"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the proagon?",
+      "options": [
+        "The final review",
+        "A pre-contest announcement of plays",
+        "The judging ceremony",
+        "The opening sacrifice"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where was the proagon held?",
+      "options": [
+        "The Odeon of Pericles",
+        "The Agora",
+        "The Theatre of Dionysus",
+        "The Pnyx"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What happened on the eve of the festival?",
+      "options": [
+        "Assembly meeting",
+        "Dithyrambic contests",
+        "Torchlight procession",
+        "Judging of plays"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the pompe?",
+      "options": [
+        "A judicial review",
+        "A comic performance",
+        "A grand religious procession",
+        "A choral dance"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which groups took part in the pompe?",
+      "options": [
+        "Citizens and metics only",
+        "Citizens only",
+        "Citizens, metics, and colonial representatives",
+        "Priests only"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What took place on Day 2 of the City Dionysia?",
+      "options": [
+        "Opening ceremonies and comedies",
+        "Judging",
+        "Tragedies only",
+        "Satyr plays only"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How many comedies were performed?",
+      "options": [
+        "Four",
+        "Ten",
+        "Three",
+        "Five"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "On which days were tragedies performed?",
+      "options": [
+        "Days 3–4",
+        "Days 2–3",
+        "Days 1–2",
+        "Days 4–5"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How was judging designed to avoid bribery?",
+      "options": [
+        "Votes were public",
+        "Foreign judges were used",
+        "Judging was randomised",
+        "Judges were paid"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened a few days after the festival?",
+      "options": [
+        "A review by the Assembly",
+        "Sacrifices",
+        "Prize-giving",
+        "Another procession"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How much did entry to the theatre cost per day?",
+      "options": [
+        "Three obols",
+        "Four obols",
+        "One obol",
+        "Two obols"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What were theorika?",
+      "options": [
+        "State payments for poor citizens to attend",
+        "Payments to judges",
+        "Religious offerings",
+        "Payments to actors"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who sat in the prohedria?",
+      "options": [
+        "Foreign visitors",
+        "Ordinary citizens",
+        "Women and children",
+        "Important officials and priests"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "By the fourth century, how was seating organised?",
+      "options": [
+        "By wealth",
+        "By tribe",
+        "Randomly",
+        "By deme"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why is women’s attendance at the festival uncertain?",
+      "options": [
+        "They lived outside Athens",
+        "Sources are unclear",
+        "They were legally banned",
+        "The theatre was too small"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

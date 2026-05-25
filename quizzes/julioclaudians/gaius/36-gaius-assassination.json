@@ -1,0 +1,227 @@
+{
+  "id": "36-gaius-assassination",
+  "title": "36. Gaius’ Assassination",
+  "description": "The circumstances, motives, and consequences of the assassination of Gaius, drawing on ancient accounts and political context.",
+  "questions": [
+    {
+      "question": "In which year was Gaius assassinated?",
+      "options": [
+        "39 CE",
+        "40 CE",
+        "41 CE",
+        "42 CE"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Where did the assassination take place?",
+      "options": [
+        "The Senate House",
+        "The Palatine Palace",
+        "A theatre passageway",
+        "The Forum"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who led the conspiracy against Gaius?",
+      "options": [
+        "Macro",
+        "Cassius Chaerea",
+        "Claudius",
+        "Senators alone"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What position did Cassius Chaerea hold?",
+      "options": [
+        "Consul",
+        "Praetorian tribune",
+        "Praetorian prefect",
+        "Urban prefect"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did Chaerea resent Gaius personally?",
+      "options": [
+        "Loss of property",
+        "Humiliating insults",
+        "Religious disagreements",
+        "Political rivalry"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which group played the most direct role in the killing?",
+      "options": [
+        "The Senate",
+        "The Praetorian Guard",
+        "The urban cohorts",
+        "The people"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happened to Gaius’ wife Caesonia?",
+      "options": [
+        "She escaped",
+        "She was imprisoned",
+        "She was executed",
+        "She committed suicide"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened to Gaius’ daughter Julia Drusilla?",
+      "options": [
+        "She was exiled",
+        "She survived",
+        "She was killed",
+        "She was adopted"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How many wounds was Gaius said to have received?",
+      "options": [
+        "Over 20",
+        "Exactly 10",
+        "Only one",
+        "Unknown"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which source gives the most graphic account of the murder?",
+      "options": [
+        "Tacitus",
+        "Suetonius",
+        "Josephus",
+        "Cassius Dio"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What immediate problem followed Gaius’ death?",
+      "options": [
+        "Foreign invasion",
+        "Succession uncertainty",
+        "Civil war",
+        "Economic collapse"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who was found hiding by the Praetorian Guard?",
+      "options": [
+        "Germanicus",
+        "Claudius",
+        "Nero",
+        "Macro"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where was Claudius found?",
+      "options": [
+        "In the Forum",
+        "Behind a curtain",
+        "In the Senate House",
+        "In the palace gardens"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did the Praetorian Guard support Claudius?",
+      "options": [
+        "Senatorial backing",
+        "Popular demand",
+        "Dynastic legitimacy and reward",
+        "Military experience"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What role did the Senate attempt to play after the assassination?",
+      "options": [
+        "They immediately elected Claudius",
+        "They attempted to restore the Republic",
+        "They fled Rome",
+        "They appointed a dictator"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did the Senate fail to restore the Republic?",
+      "options": [
+        "Popular resistance",
+        "Lack of leadership and military support",
+        "Foreign threats",
+        "Economic collapse"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What reward did Claudius give the Praetorian Guard?",
+      "options": [
+        "Land grants",
+        "Citizenship",
+        "A cash donative",
+        "Political offices"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What precedent did this set?",
+      "options": [
+        "Military elections",
+        "Guard control over succession",
+        "Senatorial supremacy",
+        "Popular rule"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How do ancient sources generally portray Gaius’ assassination?",
+      "options": [
+        "As tragic",
+        "As justified tyrannicide",
+        "As accidental",
+        "As unlawful murder"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which historian provides the fullest narrative of events?",
+      "options": [
+        "Tacitus",
+        "Suetonius",
+        "Josephus",
+        "Velleius"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the long-term significance of Gaius’ assassination?",
+      "options": [
+        "End of the principate",
+        "Strengthening of the Praetorian Guard",
+        "Restoration of the Republic",
+        "Weakening of the army"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Claudius’ accession differ from Augustus’?",
+      "options": [
+        "By senatorial election",
+        "By military backing",
+        "By popular acclamation",
+        "By hereditary succession"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

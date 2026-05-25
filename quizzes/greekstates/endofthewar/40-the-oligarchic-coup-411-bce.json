@@ -1,0 +1,257 @@
+{
+  "id": "40-the-oligarchic-coup-411-bce",
+  "title": "40. The Oligarchic Coup, 411 BCE",
+  "description": "The overthrow of Athenian democracy during wartime and the brief rule of the Four Hundred, revealing deep political divisions under pressure.",
+  "questions": [
+    {
+      "question": "Why did Alcibiades flee to the Persian satrap Tissaphernes?",
+      "options": [
+        "He was captured by Persia",
+        "He was distrusted by Sparta",
+        "He sought wealth",
+        "He was exiled by Athens"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What policy did Alcibiades encourage Tissaphernes to adopt?",
+      "options": [
+        "Withdrawal from Greece",
+        "Immediate aid to Athens",
+        "Maintaining naval balance",
+        "Full support for Sparta"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why did Alcibiades seek reconciliation with Athens?",
+      "options": [
+        "Fear of execution",
+        "Desire to regain influence",
+        "Loss of Persian support",
+        "Pressure from Sparta"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What did Alcibiades promise Athenian oligarchs in return for regime change?",
+      "options": [
+        "Return of democracy",
+        "Control of the fleet",
+        "Peace with Sparta",
+        "Persian financial support"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "From where did Pisander travel to Athens to promote oligarchy?",
+      "options": [
+        "Lesbos",
+        "Miletus",
+        "Samos",
+        "Chios"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why were sailors at Samos receptive to oligarchic proposals?",
+      "options": [
+        "Hatred of democracy",
+        "Promise of regular pay",
+        "Fear of Persia",
+        "Ideological agreement"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which failure strengthened opposition to democracy?",
+      "options": [
+        "Sicilian Expedition",
+        "Battle of Salamis",
+        "Ionian Revolt",
+        "Peace of Nicias"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which Spartan action further undermined democratic confidence?",
+      "options": [
+        "Capture of Piraeus",
+        "Invasion of Sicily",
+        "Occupation of Decelea",
+        "Naval defeat at Cyzicus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who led the extremist oligarchs in Athens?",
+      "options": [
+        "Pisander",
+        "Antiphon",
+        "Theramenes",
+        "Cleophon"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who led the moderate oligarchs?",
+      "options": [
+        "Theramenes",
+        "Alcibiades",
+        "Cleon",
+        "Antiphon"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How was the oligarchic revolution enforced in Athens?",
+      "options": [
+        "Persuasion",
+        "Violence and intimidation",
+        "Popular vote",
+        "Spartan troops"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What body did the Council of 400 replace?",
+      "options": [
+        "Heliaia",
+        "Boule",
+        "Areopagus",
+        "Ecclesia"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why was an assembly of 5,000 proposed?",
+      "options": [
+        "To restore democracy",
+        "To appease moderates",
+        "To share power equally",
+        "To include allies"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Where was the assembly convened to intimidate citizens?",
+      "options": [
+        "Piraeus",
+        "Outside the city",
+        "Acropolis",
+        "Agora"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the real purpose of the fortress at Piraeus?",
+      "options": [
+        "Defence from Sparta",
+        "Cutting off supplies",
+        "Housing the fleet",
+        "Protection from Persia"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What revealed the oligarchs’ intention to betray Athens?",
+      "options": [
+        "Revolt at Samos",
+        "Food shortages",
+        "Desertion of allies",
+        "Arrival of Spartan fleet"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who led the revolt against the Council of 400?",
+      "options": [
+        "Theramenes",
+        "Cleophon",
+        "Antiphon",
+        "Alcibiades"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Where did many oligarchs flee after their overthrow?",
+      "options": [
+        "Sparta",
+        "Chios",
+        "Samos",
+        "Decelea"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was Antiphon’s fate?",
+      "options": [
+        "Exile",
+        "Escape to Persia",
+        "Imprisonment",
+        "Execution"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did the fleet at Samos respond to the coup?",
+      "options": [
+        "Declared loyalty to Sparta",
+        "Upheld democracy",
+        "Disbanded",
+        "Supported the oligarchy"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What did the fleet claim to be?",
+      "options": [
+        "The legitimate Athenian government",
+        "Rebels",
+        "Spartan allies",
+        "Neutral force"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What role did Alcibiades play at Samos?",
+      "options": [
+        "Encouraged peace with Sparta",
+        "Led attack on Athens",
+        "Prevented attack on Athens",
+        "Resigned command"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What political system replaced the 400?",
+      "options": [
+        "Spartan rule",
+        "Full democracy",
+        "Tyranny",
+        "Council of 5,000"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Thucydides judge the moderate regime?",
+      "options": [
+        "Temporary failure",
+        "Inevitable collapse",
+        "Best government Athens had",
+        "Worst government"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What reform followed in 410 BCE?",
+      "options": [
+        "Permanent oligarchy",
+        "Restoration of full democracy",
+        "Spartan occupation",
+        "Persian control"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

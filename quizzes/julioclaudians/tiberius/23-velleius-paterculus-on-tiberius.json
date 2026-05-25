@@ -1,0 +1,187 @@
+{
+  "id": "23-velleius-paterculus-on-tiberius",
+  "title": "23. Velleius Paterculus on Tiberius",
+  "description": "Velleius Paterculus’ highly positive account of Tiberius, shaped by personal loyalty and panegyrical intent.",
+  "questions": [
+    {
+      "question": "When was Velleius Paterculus born?",
+      "options": [
+        "c. 19 BCE",
+        "c. 5 CE",
+        "c. 10 BCE",
+        "c. 30 BCE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Under which emperor did Velleius serve as a senator?",
+      "options": [
+        "Augustus",
+        "Caligula",
+        "Claudius",
+        "Tiberius"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which social background did Velleius come from?",
+      "options": [
+        "Plebeian Roman family",
+        "Equestrian Spanish family",
+        "Noble Campanian family",
+        "Provincial Greek elite"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "With which members of the imperial family did Velleius serve militarily?",
+      "options": [
+        "Nero and Claudius",
+        "Augustus only",
+        "Gaius Caesar and Tiberius",
+        "Germanicus and Drusus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In which year was Velleius designated praetor?",
+      "options": [
+        "17 CE",
+        "9 CE",
+        "12 CE",
+        "14 CE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How does Velleius’ portrayal of Tiberius differ from Tacitus and Suetonius?",
+      "options": [
+        "It ignores his reign",
+        "It is much more positive",
+        "It is more critical",
+        "It is neutral"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which passages are key for Velleius’ account of Tiberius?",
+      "options": [
+        "2.90–95",
+        "2.110–115",
+        "2.126.1–4 and 2.129.1–4",
+        "2.150–155"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What tone characterises Velleius’ writing on Tiberius?",
+      "options": [
+        "Panegyrical",
+        "Hostile",
+        "Detached",
+        "Sarcastic"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which individual was Velleius personally associated with?",
+      "options": [
+        "Macro",
+        "Germanicus",
+        "Agrippina",
+        "Sejanus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How might this association affect Velleius’ reliability?",
+      "options": [
+        "It has no impact",
+        "It may introduce bias in favour of Tiberius and Sejanus",
+        "It makes him hostile to the regime",
+        "It makes him entirely objective"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does Velleius describe Tiberius’ character?",
+      "options": [
+        "Cruel and paranoid",
+        "Moderate, restrained, and virtuous",
+        "Incompetent",
+        "Reluctant and deceitful"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does Velleius emphasise about Tiberius’ military record?",
+      "options": [
+        "It was insignificant",
+        "It was exaggerated",
+        "It was controversial",
+        "It was extensive and successful"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "According to Velleius, how did Tiberius treat the Senate?",
+      "options": [
+        "With indifference",
+        "With manipulation",
+        "With respect and cooperation",
+        "With contempt"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does Velleius suggest about Tiberius’ accession?",
+      "options": [
+        "It was legitimate and welcomed",
+        "It was unlawful",
+        "It was resisted",
+        "It was forced"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How does Velleius respond to accusations of tyranny?",
+      "options": [
+        "He ignores them",
+        "He partially accepts them",
+        "He endorses them",
+        "He refutes them"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "On which issue does Velleius directly contradict Suetonius?",
+      "options": [
+        "Tiberius’ foreign policy",
+        "Tiberius’ public building works",
+        "Tiberius’ military ability",
+        "Tiberius’ cruelty"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does Suetonius claim about Tiberius’ public works?",
+      "options": [
+        "He was responsible for none",
+        "They were extensive",
+        "They were unnecessary",
+        "They were badly managed"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How should historians treat Velleius’ account overall?",
+      "options": [
+        "As wholly unreliable",
+        "As valuable but highly biased",
+        "As objective truth",
+        "As inferior to Tacitus"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

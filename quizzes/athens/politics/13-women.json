@@ -1,0 +1,167 @@
+{
+  "id": "13-women",
+  "title": "13. Women",
+  "description": "The legal status, social roles, and limited public visibility of women in classical Athens.",
+  "questions": [
+    {
+      "question": "How were women regarded in Athenian law?",
+      "options": [
+        "As legal minors with limited rights",
+        "As full legal equals to men",
+        "As dependent citizens with voting rights",
+        "As resident foreigners"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What political rights did Athenian women possess?",
+      "options": [
+        "Assembly attendance",
+        "None",
+        "Jury service",
+        "Magistracies"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why is evidence for women’s lives in Athens limited?",
+      "options": [
+        "Records were destroyed",
+        "Women lived separately",
+        "Women were poorly educated and left little writing",
+        "Historians ignored private life"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does Pericles say about women in his Funeral Oration?",
+      "options": [
+        "They should participate in politics",
+        "They should inspire courage",
+        "They should manage households",
+        "Their greatest glory was not to be spoken of"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why was Pericles’ citizenship law of 451 BCE significant for women?",
+      "options": [
+        "It increased their importance as mothers of citizens",
+        "It granted women voting rights",
+        "It allowed women to hold office",
+        "It reduced marriage expectations"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was producing children especially important in Athens?",
+      "options": [
+        "Warfare reduced the male population",
+        "High infant mortality required high birth rates",
+        "Slavery was declining",
+        "Colonisation demanded settlers"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In which area of Athenian life did women have a prominent public role?",
+      "options": [
+        "Politics",
+        "Law courts",
+        "Religion",
+        "Warfare"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which festival was restricted to women and associated with fertility?",
+      "options": [
+        "Panathenaia",
+        "Dionysia",
+        "Eleusinia",
+        "Thesmophoria"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which goddesses were honoured at the Thesmophoria?",
+      "options": [
+        "Demeter and Persephone",
+        "Athena and Artemis",
+        "Hera and Aphrodite",
+        "Hestia and Rhea"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What activity did women undertake during the Thesmophoria festival?",
+      "options": [
+        "Sacrificing animals in the agora",
+        "Camping together for several days near the Pnyx",
+        "Voting on religious laws",
+        "Performing tragedies"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What type of evidence has provided limited insight into women’s lives?",
+      "options": [
+        "Assembly decrees",
+        "Tribute lists",
+        "Funerary epitaphs",
+        "Military records"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which genre offers insight into gender relations in Athens?",
+      "options": [
+        "Philosophy only",
+        "Oratory",
+        "Historiography",
+        "Drama"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What theme does Euripides’ Hippolytus explore?",
+      "options": [
+        "The destructive power of love and rejection of marriage",
+        "The virtues of democracy",
+        "Military leadership",
+        "Economic inequality"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What role does Phaedra play in Hippolytus?",
+      "options": [
+        "She accuses Theseus falsely",
+        "She falsely accuses Hippolytus after despair",
+        "She kills Hippolytus herself",
+        "She exposes Aphrodite"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How does Aristophanes’ Thesmophoriazusae portray women?",
+      "options": [
+        "As politically powerless",
+        "As silent and obedient",
+        "As capable of collective organisation and criticism",
+        "As excluded from religion"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What limitation affects our interpretation of dramatic evidence?",
+      "options": [
+        "Plays were censored",
+        "Women were not mentioned",
+        "Audiences were mixed",
+        "All roles were performed by men for male audiences"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

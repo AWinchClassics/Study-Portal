@@ -1,0 +1,257 @@
+{
+  "id": "08-thermopylae-and-artemisium",
+  "title": "08. The Battles of Thermopylae and Artemisium",
+  "description": "The key land and naval engagements of 480 BCE that shaped the Greek response to Xerxes’ invasion.",
+  "questions": [
+    {
+      "question": "In which year did the Battles of Thermopylae and Artemisium take place?",
+      "options": [
+        "485 BCE",
+        "480 BCE",
+        "479 BCE",
+        "490 BCE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which two events coincided with Xerxes’ estimated arrival in Greece?",
+      "options": [
+        "Olympics and Panathenaea",
+        "Isthmian Games and Carnaea",
+        "Carnaea and Dionysia",
+        "Olympic Games and Carnaea"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why were the Spartans initially reluctant to send troops?",
+      "options": [
+        "Religious festivals",
+        "Political division",
+        "Fear of Persia",
+        "Lack of soldiers"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who led the Spartan force to Thermopylae?",
+      "options": [
+        "Cleomenes",
+        "Pausanias",
+        "Agesilaus",
+        "Leonidas"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How many Spartans accompanied Leonidas?",
+      "options": [
+        "500",
+        "100",
+        "200",
+        "300"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Approximately how many Greek troops arrived at Thermopylae initially?",
+      "options": [
+        "3,000",
+        "10,000",
+        "7,000",
+        "5,000"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What defensive measure did the Greeks rebuild at Thermopylae?",
+      "options": [
+        "An ancient wall",
+        "A ditch",
+        "A watchtower",
+        "A palisade"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who was tasked with guarding the mountain path?",
+      "options": [
+        "Thespians",
+        "Thebans",
+        "Locrians",
+        "Phocians"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How long did the Persians delay before attacking the pass?",
+      "options": [
+        "Four days",
+        "Five days",
+        "Two days",
+        "Three days"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How many days did Persian infantry attacks fail in the pass?",
+      "options": [
+        "Four",
+        "Two",
+        "Three",
+        "One"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who revealed the mountain path to Xerxes?",
+      "options": [
+        "Demaratus",
+        "Artaphernes",
+        "Ephialtes",
+        "Mardonius"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What action did Leonidas take once he learned the Persians were approaching from behind?",
+      "options": [
+        "Surrendered",
+        "Sent most allies away",
+        "Attacked at night",
+        "Retreated with all troops"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which Greek contingents remained with Leonidas at the end?",
+      "options": [
+        "Spartans only",
+        "Spartans and Athenians",
+        "Peloponnesians only",
+        "Spartans, Thebans, and Thespians"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What happened to Leonidas during the final fighting?",
+      "options": [
+        "He was killed",
+        "He escaped",
+        "He was wounded",
+        "He was captured"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the outcome of the Battle of Thermopylae?",
+      "options": [
+        "Greek victory",
+        "Persian withdrawal",
+        "Persian breakthrough",
+        "Stalemate"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Where was the Greek fleet stationed during the naval battle?",
+      "options": [
+        "Piraeus",
+        "Salamis",
+        "Artemisium",
+        "Corinth"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Approximately how many triremes made up the Greek fleet?",
+      "options": [
+        "150",
+        "200",
+        "271",
+        "400"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What natural event damaged the Persian fleet early in the campaign?",
+      "options": [
+        "Flood",
+        "Earthquake",
+        "Fire",
+        "Storm"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What happened to the Persian squadron sent around Euboea?",
+      "options": [
+        "It escaped",
+        "It joined the main fleet",
+        "It was destroyed",
+        "It captured Athens"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the result of the naval fighting at Artemisium?",
+      "options": [
+        "Greek withdrawal under attack",
+        "Greek victory",
+        "Inconclusive",
+        "Persian victory"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why did the Greeks withdraw from Artemisium?",
+      "options": [
+        "Shortage of ships",
+        "Storm damage",
+        "Lack of supplies",
+        "News of Thermopylae’s fall"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Where did the Greek fleet withdraw to after Artemisium?",
+      "options": [
+        "Salamis",
+        "Delos",
+        "Corinth",
+        "Athens"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What did the fall of Thermopylae expose to invasion?",
+      "options": [
+        "Attica",
+        "Boeotia",
+        "The Peloponnese",
+        "Euboea"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What happened to Athens after the Persians advanced south?",
+      "options": [
+        "It was fortified",
+        "It was evacuated and burned",
+        "It resisted successfully",
+        "It surrendered"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was left behind on the Acropolis?",
+      "options": [
+        "Persian hostages",
+        "Empty temples",
+        "Spartan garrison",
+        "A volunteer defence force"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

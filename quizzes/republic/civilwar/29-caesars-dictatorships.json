@@ -1,0 +1,257 @@
+{
+  "id": "29-caesars-dictatorships",
+  "title": "29. Caesar’s Dictatorships",
+  "description": "A study of Caesar’s successive dictatorships and the honours that marked the transition from Republican norms to personal rule.",
+  "questions": [
+    {
+      "question": "In which year was Caesar first appointed dictator?",
+      "options": [
+        "47 BCE",
+        "49 BCE",
+        "50 BCE",
+        "48 BCE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How long did Caesar hold his first dictatorship?",
+      "options": [
+        "11 days",
+        "Ten years",
+        "For life",
+        "One year"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why did Caesar resign his dictatorship in 49 BCE?",
+      "options": [
+        "Military defeat",
+        "Senate pressure",
+        "Illness",
+        "To stand for consulship"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "In which year was Caesar appointed dictator for one year?",
+      "options": [
+        "46 BCE",
+        "48 BCE",
+        "47 BCE",
+        "49 BCE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which office did Caesar hold alongside the dictatorship in 48 BCE?",
+      "options": [
+        "Consul",
+        "Censor",
+        "Praetor",
+        "Tribune"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "In which year was Caesar elected to all remaining priestly colleges?",
+      "options": [
+        "48 BCE",
+        "46 BCE",
+        "47 BCE",
+        "49 BCE"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In which year was Caesar appointed dictator for ten years?",
+      "options": [
+        "45 BCE",
+        "47 BCE",
+        "46 BCE",
+        "48 BCE"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What additional role gave Caesar the powers of a censor?",
+      "options": [
+        "Princeps senatus",
+        "Pontifex Maximus",
+        "Tribunicia potestas",
+        "Praefectura morum"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "In which year was Caesar sole consul?",
+      "options": [
+        "44 BCE",
+        "43 BCE",
+        "46 BCE",
+        "45 BCE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which title was Caesar hailed with in 45 BCE?",
+      "options": [
+        "Dominus",
+        "Pater Patriae",
+        "Imperator",
+        "Princeps"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which protection was granted to Caesar in 45 BCE?",
+      "options": [
+        "Dictatorial veto",
+        "Tribunician sacrosanctity",
+        "Censorial power",
+        "Consular immunity"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In which year was Caesar appointed dictator for life?",
+      "options": [
+        "46 BCE",
+        "44 BCE",
+        "43 BCE",
+        "45 BCE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What change symbolised Caesar’s increasingly autocratic image?",
+      "options": [
+        "Portrait on coins",
+        "Purple toga daily",
+        "Royal crown",
+        "Statues removed"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How might Romans have interpreted Caesar placing his portrait on coins?",
+      "options": [
+        "Military honour",
+        "Artistic reform",
+        "Intention to be king",
+        "Religious devotion"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was the title of king particularly unpopular at Rome?",
+      "options": [
+        "Religious reasons",
+        "Foreign origin",
+        "Economic control",
+        "Association with tyranny"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What key power did Caesar hold over the Senate?",
+      "options": [
+        "Right to veto",
+        "Right to dissolve it",
+        "Right to elect senators",
+        "Right to speak first"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which month was renamed in Caesar’s honour?",
+      "options": [
+        "Martius",
+        "Sextilis",
+        "Aprilis",
+        "Quinctilis"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Where were statues of Caesar placed?",
+      "options": [
+        "Circus Maximus",
+        "Temple of Quirinus and near kings",
+        "Capitol",
+        "Forum"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What new priesthood was established in Caesar’s honour?",
+      "options": [
+        "Augures",
+        "Julian Luperci",
+        "Flamines",
+        "Pontifices"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which symbol of honour was Caesar allowed to use?",
+      "options": [
+        "Gilded chair",
+        "Royal crown",
+        "Diadem",
+        "Sceptre"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How many triumphs did Caesar celebrate?",
+      "options": [
+        "Four",
+        "Three",
+        "Five",
+        "Two"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which areas did Caesar celebrate triumphs for?",
+      "options": [
+        "Spain, Africa, Egypt, Syria",
+        "Gaul, Spain, Africa, Greece",
+        "Gaul, Pontus, Egypt, Africa",
+        "Gaul, Asia, Africa, Italy"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who was named Caesar’s heir in his will?",
+      "options": [
+        "Mark Antony",
+        "Lepidus",
+        "Brutus",
+        "Gaius Octavius"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What campaign was Caesar planning at the time of his death?",
+      "options": [
+        "Dacian",
+        "German",
+        "British",
+        "Parthian"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How many legions was Caesar recruiting for this campaign?",
+      "options": [
+        "8",
+        "16",
+        "10",
+        "12"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

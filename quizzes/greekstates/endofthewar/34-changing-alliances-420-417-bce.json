@@ -1,0 +1,257 @@
+{
+  "id": "34-changing-alliances-420-417-bce",
+  "title": "34. Changing Alliances, 420–417 BCE",
+  "description": "The breakdown of the Peace of Nicias through shifting alliances and rivalry, culminating in the Battle of Mantinea.",
+  "questions": [
+    {
+      "question": "Which years does the period of changing alliances cover?",
+      "options": [
+        "420–417 BCE",
+        "418–415 BCE",
+        "419–416 BCE",
+        "421–418 BCE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which states refused to ratify the Peace of Nicias?",
+      "options": [
+        "Corinth, Megara, Boeotia, Elis, Mantinea",
+        "Chios and Lesbos",
+        "Argos and Athens",
+        "Sparta and Thebes"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was Corinth dissatisfied with the Peace of Nicias?",
+      "options": [
+        "Loss of trade routes",
+        "Religious concerns",
+        "Loss of colonies without compensation",
+        "Fear of Argos"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was Megara unhappy with the peace settlement?",
+      "options": [
+        "Economic collapse",
+        "Spartan pressure",
+        "Loss of independence",
+        "Occupation of Nisaea by Athens"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why did Boeotia refuse to accept the treaty?",
+      "options": [
+        "Argive pressure",
+        "Fear of Athens",
+        "Religious dispute",
+        "Refusal to return Panactum"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What development followed dissatisfaction with the peace?",
+      "options": [
+        "Immediate war",
+        "Period of shifting alliances",
+        "Persian intervention",
+        "Spartan naval expansion"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which power secretly attracted some Spartan allies?",
+      "options": [
+        "Persia",
+        "Argos",
+        "Corinth",
+        "Athens"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Sparta respond to the threat of defections?",
+      "options": [
+        "Ignored it",
+        "Appealed to Persia",
+        "Tried unsuccessfully to win allies back",
+        "Declared war"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which alliance did Sparta form during this period?",
+      "options": [
+        "With Argos",
+        "With Athens",
+        "With Persia",
+        "With the Boeotian League"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who in Athens sought to preserve the Peace of Nicias?",
+      "options": [
+        "Nicias",
+        "Cleon",
+        "Alcibiades",
+        "Demosthenes"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which ambitious Athenian politician opposed Nicias’ approach?",
+      "options": [
+        "Cleon",
+        "Alcibiades",
+        "Phormio",
+        "Pericles"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "According to Plutarch, why did Alcibiades oppose Nicias?",
+      "options": [
+        "Fear of Sparta",
+        "Jealousy of Nicias",
+        "Desire for peace",
+        "Economic motives"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "According to Thucydides, what motivated Alcibiades?",
+      "options": [
+        "Belief Sparta could not be trusted",
+        "Religious conviction",
+        "Hatred of Argos",
+        "Personal safety"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which states formed an alliance with Athens through Alcibiades’ diplomacy?",
+      "options": [
+        "Chios and Lesbos",
+        "Corinth, Megara, Boeotia",
+        "Argos, Mantinea, Elis",
+        "Sparta and Thebes"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which states returned to the Spartan alliance?",
+      "options": [
+        "Thebes and Athens",
+        "Corinth and Megara",
+        "Elis and Athens",
+        "Argos and Mantinea"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What major battle resulted from these shifting alliances?",
+      "options": [
+        "Battle of Delium",
+        "Battle of Mantinea",
+        "Battle of Pylos",
+        "Battle of Amphipolis"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In which year was the Battle of Mantinea fought?",
+      "options": [
+        "416 BCE",
+        "419 BCE",
+        "417 BCE",
+        "418 BCE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What strategic goal did the Athenian–Argive alliance pursue at Mantinea?",
+      "options": [
+        "Occupy Pylos",
+        "Invade Athens",
+        "Control Tegea and access to Laconia",
+        "Capture Corinth"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who commanded the Spartan forces at Mantinea?",
+      "options": [
+        "Pleistoanax",
+        "Archidamus",
+        "Brasidas",
+        "Agis"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was the outcome of the Battle of Mantinea?",
+      "options": [
+        "Athenian victory",
+        "Argive victory",
+        "Conclusive Spartan victory",
+        "Stalemate"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What political change occurred in Argos after Mantinea?",
+      "options": [
+        "Tyranny established",
+        "Persian alliance",
+        "Democratic reform",
+        "Oligarchic takeover"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What alliance followed the political change in Argos?",
+      "options": [
+        "Neutrality pact",
+        "Alliance with Persia",
+        "Alliance with Athens",
+        "50-year alliance with Sparta"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What happened to Mantinea after the battle?",
+      "options": [
+        "It joined Athens",
+        "It re-joined the Spartan alliance",
+        "It became neutral",
+        "It was destroyed"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does this period show about the Peace of Nicias?",
+      "options": [
+        "It was fragile and unstable",
+        "It created stability",
+        "It was fully effective",
+        "It strengthened Athens"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the overall significance of changing alliances, 420–417 BCE?",
+      "options": [
+        "It strengthened democracy everywhere",
+        "It undermined the Peace of Nicias and led to renewed conflict",
+        "It ended the war",
+        "It restored Spartan unity"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "id": "31-gaius-madness",
+  "title": "31. Gaius’ ‘Madness’",
+  "description": "An exploration of claims about Gaius’ madness, assessing ancient accusations of cruelty and tyranny against modern interpretations.",
+  "questions": [
+    {
+      "question": "Which event is commonly identified as the turning point in Gaius’ behaviour?",
+      "options": [
+        "The death of Tiberius",
+        "An illness in late 37 CE",
+        "His accession",
+        "A senatorial conspiracy"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which historian notes that Tiberius was already aware of Gaius’ cruelty?",
+      "options": [
+        "Suetonius",
+        "Tacitus",
+        "Cassius Dio",
+        "Josephus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which source agrees that Gaius showed cruelty even early in his reign?",
+      "options": [
+        "Josephus",
+        "Tacitus",
+        "Suetonius",
+        "Seneca"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How do modern historians often interpret claims of Gaius’ madness?",
+      "options": [
+        "As propaganda",
+        "As medical diagnosis",
+        "As a way to explain political failure",
+        "As literal mental illness"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which sources record Gaius’ descent into tyranny?",
+      "options": [
+        "Suetonius alone",
+        "Multiple ancient sources",
+        "Later medieval writers",
+        "Tacitus alone"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which act symbolised Gaius’ insistence on divine status?",
+      "options": [
+        "Building temples to Jupiter",
+        "Refusing sacrifice",
+        "Replacing statue heads with his own",
+        "Abolishing the priesthood"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What building did Gaius convert into a vestibule for his palace?",
+      "options": [
+        "Shrine of Castor and Pollux",
+        "Temple of Mars",
+        "Pantheon",
+        "Temple of Jupiter"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What new religious role did Gaius establish for himself?",
+      "options": [
+        "A priesthood for his own worship",
+        "Augur for life",
+        "Oracle of Apollo",
+        "Chief pontiff only"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which groups were particularly targeted by Gaius’ cruelty?",
+      "options": [
+        "Senators and equestrians",
+        "Foreigners",
+        "Provincial governors",
+        "Slaves and freedmen"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which relative did Gaius order to be killed?",
+      "options": [
+        "Macro",
+        "Claudius",
+        "Germanicus",
+        "Tiberius Gemellus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What punishment did Gaius impose on his father-in-law?",
+      "options": [
+        "Execution",
+        "Forced suicide",
+        "Imprisonment",
+        "Exile"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What accusation is made regarding Gaius’ treatment of his grandmother?",
+      "options": [
+        "He ignored her",
+        "He caused stress that hastened her death",
+        "He exiled her",
+        "He imprisoned her"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does Suetonius claim Gaius enjoyed watching?",
+      "options": [
+        "Public games",
+        "Military drills",
+        "Legal debates",
+        "Slow torture of victims"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Gaius manipulate the grain supply?",
+      "options": [
+        "He sold it cheaply",
+        "He exported it",
+        "He distributed it freely",
+        "He closed granaries to cause suffering"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What rumour does Suetonius report about Gaius’ family relations?",
+      "options": [
+        "Political marriages",
+        "Bigamy",
+        "Adultery",
+        "Incest with his sisters"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Gaius raise funds according to the sources?",
+      "options": [
+        "Voluntary donations",
+        "False accusations, auctions, and taxes",
+        "Inheritance laws",
+        "Provincial tribute"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which source emphasises Gaius’ cruelty in Jewish Antiquities?",
+      "options": [
+        "Tacitus",
+        "Pliny",
+        "Josephus",
+        "Suetonius"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How does Seneca portray Gaius’ cruelty?",
+      "options": [
+        "As misunderstood",
+        "As extreme and tyrannical",
+        "As humorous",
+        "As exaggerated"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "id": "46-nero-and-agrippina",
+  "title": "46. Nero and Agrippina",
+  "description": "An analysis of Agrippina’s influence over Nero, the breakdown of their relationship, and the political motives and consequences of her murder.",
+  "questions": [
+    {
+      "question": "How influential was Agrippina at the start of Nero’s reign?",
+      "options": [
+        "Politically irrelevant",
+        "A major influence",
+        "Only ceremonial",
+        "Completely sidelined"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What type of coin from 54 CE symbolises Agrippina’s early influence?",
+      "options": [
+        "Sestertius",
+        "As",
+        "Denarius",
+        "Aureus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What did the 54 CE aureus depict?",
+      "options": [
+        "Britannicus",
+        "Nero and Agrippina together",
+        "Agrippina alone",
+        "Nero alone"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "According to Tacitus, when did factionalism begin to emerge?",
+      "options": [
+        "Before Nero’s accession",
+        "After Agrippina’s death",
+        "Soon after Nero’s accession",
+        "Immediately after Claudius’ death"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which two men opposed Agrippina’s influence?",
+      "options": [
+        "Burrus and Poppaea",
+        "Narcissus and Pallas",
+        "Seneca and Burrus",
+        "Poppaea and Seneca"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What method does Tacitus allege Agrippina used to control Nero?",
+      "options": [
+        "Threats",
+        "Sexual manipulation",
+        "Violence",
+        "Bribery"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What threat did Agrippina make when her influence was challenged?",
+      "options": [
+        "To resign from politics",
+        "To support Britannicus as emperor",
+        "To flee Rome",
+        "To expose Nero"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why was Britannicus poisoned in 55 CE?",
+      "options": [
+        "Personal rivalry",
+        "Health reasons",
+        "To remove him as a focus of opposition",
+        "By accident"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In which year did Nero decide to kill Agrippina?",
+      "options": [
+        "56 CE",
+        "57 CE",
+        "55 CE",
+        "58 CE"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "According to Tacitus, who encouraged Nero to kill Agrippina?",
+      "options": [
+        "Poppaea",
+        "Burrus",
+        "Faenius Rufus",
+        "Seneca"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "According to Suetonius, why did Nero want Agrippina dead?",
+      "options": [
+        "Fear of rebellion",
+        "Financial disputes",
+        "Political rivalry",
+        "Her over-watchful control"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What method was initially planned to kill Agrippina?",
+      "options": [
+        "Poisoning",
+        "A collapsing boat",
+        "Assassination at night",
+        "Drowning"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What went wrong with the original murder plan?",
+      "options": [
+        "The boat collapsed too early",
+        "Agrippina survived and swam ashore",
+        "Assassins hesitated",
+        "The poison failed"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How was Agrippina eventually killed?",
+      "options": [
+        "Killed by assassins",
+        "Poisoned",
+        "Forced suicide",
+        "Exiled"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Nero justify Agrippina’s murder?",
+      "options": [
+        "As an accident",
+        "By claiming she plotted to kill him",
+        "By blaming Poppaea",
+        "As divine punishment"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which sources describe Agrippina’s death in detail?",
+      "options": [
+        "Josephus and Seneca",
+        "Tacitus, Suetonius, and Cassius Dio",
+        "Tacitus alone",
+        "Suetonius alone"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the episode demonstrate about Nero’s reign?",
+      "options": [
+        "Stability",
+        "Peaceful governance",
+        "Increasing tyranny",
+        "Senatorial dominance"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened to Agrippina’s influence over time?",
+      "options": [
+        "It disappeared immediately",
+        "It steadily declined",
+        "It increased",
+        "It remained constant"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

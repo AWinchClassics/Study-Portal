@@ -1,0 +1,257 @@
+{
+  "id": "43-claudius-britannicus-and-nero",
+  "title": "43. Claudius, Britannicus, and Nero",
+  "description": "The dynastic rivalry between Britannicus and Nero, examining adoption, propaganda, and succession politics under Claudius.",
+  "questions": [
+    {
+      "question": "In which year was Britannicus born?",
+      "options": [
+        "41 CE",
+        "42 CE",
+        "40 CE",
+        "39 CE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which wife of Claudius was Britannicus’ mother?",
+      "options": [
+        "Agrippina",
+        "Urgulanilla",
+        "Aelia Paetina",
+        "Messalina"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What inscription appeared on coins celebrating Britannicus’ birth?",
+      "options": [
+        "Virtus Augusta",
+        "Spes Augusta",
+        "Pax Augusta",
+        "Concordia Augusta"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What honorific title was Britannicus granted in 43 CE?",
+      "options": [
+        "Augustus",
+        "Germanicus",
+        "Britannicus",
+        "Princeps"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "According to Suetonius, how did Claudius feel about Britannicus?",
+      "options": [
+        "Indifferent",
+        "He adored him",
+        "Hostile",
+        "Suspicious"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "During the Secular Games of 48 CE, who received a more favourable response from the people?",
+      "options": [
+        "Domitius",
+        "Britannicus",
+        "Claudius",
+        "Octavia"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who was Domitius before his adoption?",
+      "options": [
+        "Claudius’ nephew",
+        "A freedman",
+        "Messalina’s son",
+        "Agrippina’s son"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "In which year did Agrippina marry Claudius?",
+      "options": [
+        "51 CE",
+        "49 CE",
+        "50 CE",
+        "48 CE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "To whom was Domitius betrothed in 49 CE?",
+      "options": [
+        "Claudia Antonia",
+        "Messalina",
+        "Octavia",
+        "Antonia"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In which year was Domitius adopted by Claudius and renamed Nero?",
+      "options": [
+        "52 CE",
+        "50 CE",
+        "49 CE",
+        "51 CE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which precedents helped convince Claudius to adopt Nero?",
+      "options": [
+        "Augustus and Tiberius",
+        "Germanicus and Drusus",
+        "Caesar and Augustus",
+        "Tiberius and Gaius"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "After the adoption, what status did Nero and Britannicus hold?",
+      "options": [
+        "Nero sole heir",
+        "Joint-heirs",
+        "Rivals",
+        "Britannicus sole heir"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "At what age was Nero granted the toga virilis?",
+      "options": [
+        "14",
+        "12",
+        "13",
+        "15"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What title was Nero granted by the Senate?",
+      "options": [
+        "Princeps iuventutis",
+        "Princeps senatus",
+        "Imperator",
+        "Augustus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "In which years did Nero give public speeches?",
+      "options": [
+        "51–52",
+        "52–53",
+        "49–50",
+        "50–51"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Whom did Nero marry in 53 CE?",
+      "options": [
+        "Agrippina",
+        "Octavia",
+        "Poppaea",
+        "Antonia"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How was Britannicus increasingly treated at public events?",
+      "options": [
+        "More isolated and marginalised",
+        "As heir apparent",
+        "As equal to Nero",
+        "With greater honour"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which visible contrast symbolised Britannicus’ marginalisation?",
+      "options": [
+        "Lack of tutors",
+        "Nero’s triumphal dress versus Britannicus’ boy’s clothes",
+        "Absence from Rome",
+        "Seating position"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who replaced Britannicus’ tutors with men loyal to Agrippina?",
+      "options": [
+        "Pallas",
+        "Claudius",
+        "Narcissus",
+        "Agrippina"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which prefects were replaced to favour Agrippina’s position?",
+      "options": [
+        "Censors",
+        "Urban prefects",
+        "Provincial governors",
+        "Praetorian prefects"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who supported Britannicus’ claim late in Claudius’ reign?",
+      "options": [
+        "Callistus",
+        "Narcissus",
+        "Pallas",
+        "Polybius"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does Suetonius say Claudius considered doing in 54 CE?",
+      "options": [
+        "Abdicating",
+        "Adopting Britannicus",
+        "Divorcing Agrippina and removing Nero",
+        "Naming Nero sole heir"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "On what date did Claudius die?",
+      "options": [
+        "14 October 54 CE",
+        "13 October 53 CE",
+        "13 October 54 CE",
+        "12 October 54 CE"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Agrippina respond immediately after Claudius’ death?",
+      "options": [
+        "Kept Britannicus and his sisters confined",
+        "Declared Nero emperor",
+        "Appealed to the Senate",
+        "Public mourning"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Agrippina justify Nero’s position after Claudius’ death?",
+      "options": [
+        "Senatorial decree",
+        "Nero’s descent from Augustus and adoption by Claudius",
+        "Military support",
+        "Popular vote"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

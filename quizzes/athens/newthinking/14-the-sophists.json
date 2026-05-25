@@ -1,0 +1,187 @@
+{
+  "id": "14-the-sophists",
+  "title": "14. The Sophists",
+  "description": "The origins, ideas, and controversies surrounding the Sophists and their role in Athenian intellectual life.",
+  "questions": [
+    {
+      "question": "Where did the intellectual revolution that influenced the Sophists begin?",
+      "options": [
+        "The Ionian cities of Asia Minor",
+        "Mainland Greece",
+        "Southern Italy",
+        "Macedonia"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What new fields of study emerged from the study of non-Greek customs?",
+      "options": [
+        "Astronomy and medicine",
+        "Anthropology and ethnography",
+        "Geometry and engineering",
+        "Rhetoric and politics"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which thinker proposed that all life originated from water?",
+      "options": [
+        "Anaximander",
+        "Xenophanes",
+        "Thales of Miletus",
+        "Democritus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which pre-Socratic philosopher argued that everything was made of atoms?",
+      "options": [
+        "Hippocrates",
+        "Anaxagoras",
+        "Xenophanes",
+        "Democritus of Abdera"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What did Xenophanes criticise about traditional Greek religion?",
+      "options": [
+        "The anthropomorphic portrayal of the gods",
+        "The lack of temples",
+        "The role of priests",
+        "The absence of rituals"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why is Anaxagoras not usually classed as a Sophist?",
+      "options": [
+        "He rejected rational explanations",
+        "He did not teach rhetoric or life skills for pay",
+        "He opposed democracy",
+        "He lived outside Athens"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What charge was Anaxagoras brought to trial for in Athens?",
+      "options": [
+        "Treason",
+        "Corruption",
+        "Impiety",
+        "Tyranny"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened to Anaxagoras after his trial?",
+      "options": [
+        "He was executed",
+        "He became a citizen",
+        "He continued teaching in Athens",
+        "He retired to Lampsacus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Sophists typically earn their living?",
+      "options": [
+        "By charging fees for teaching and lectures",
+        "Through state salaries",
+        "By inheriting wealth",
+        "Through priesthoods"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which subject was central to Sophistic education?",
+      "options": [
+        "Astronomy",
+        "Rhetoric",
+        "Engineering",
+        "Mathematics"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why are surviving sources on the Sophists problematic?",
+      "options": [
+        "They were written too late",
+        "They are incomplete",
+        "They are often hostile and biased",
+        "They contradict archaeology"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which Sophist was known as a polymath and diplomat to Sparta?",
+      "options": [
+        "Protagoras",
+        "Prodicus",
+        "Gorgias",
+        "Hippias of Elis"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How does Plato portray Hippias?",
+      "options": [
+        "As vain and arrogant",
+        "As modest and cautious",
+        "As hostile to Athens",
+        "As ignorant"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which Sophist specialised in language and semantics?",
+      "options": [
+        "Hippias",
+        "Prodicus of Keos",
+        "Protagoras",
+        "Anaxagoras"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which Sophist was closely associated with Pericles and democracy?",
+      "options": [
+        "Hippias",
+        "Prodicus",
+        "Protagoras of Abdera",
+        "Xenophanes"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What doctrine is associated with Protagoras?",
+      "options": [
+        "Atomism",
+        "Determinism",
+        "Ideal forms",
+        "Relativism"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What did Protagoras believe about truth?",
+      "options": [
+        "It depends on the individual’s perspective",
+        "It is fixed by the gods",
+        "It is discovered through science",
+        "It is imposed by law"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why were Sophists controversial in Athens?",
+      "options": [
+        "They rejected education",
+        "They charged fees and questioned traditional values",
+        "They opposed rhetoric",
+        "They avoided politics"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

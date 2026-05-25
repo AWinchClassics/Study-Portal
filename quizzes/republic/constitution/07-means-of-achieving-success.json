@@ -1,0 +1,207 @@
+{
+  "id": "07-means-of-achieving-success",
+  "title": "07. Means of Achieving Success",
+  "description": "An exploration of how Romans achieved political success through reputation, patronage, military achievement, and the cursus honorum.",
+  "questions": [
+    {
+      "question": "What did success in the Roman Republic primarily depend upon?",
+      "options": [
+        "Wealth only",
+        "Birth alone",
+        "Military strength alone",
+        "A combination of reputation, networks, and achievement"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What term described personal reputation and prestige in Rome?",
+      "options": [
+        "Gravitas",
+        "Imperium",
+        "Dignitas",
+        "Auctoritas"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was auctoritas?",
+      "options": [
+        "Religious authority",
+        "Military command",
+        "Formal legal power",
+        "Influence derived from reputation and experience"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which quality referred to seriousness and moral weight?",
+      "options": [
+        "Fides",
+        "Honos",
+        "Gravitas",
+        "Virtus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was virtus traditionally associated with?",
+      "options": [
+        "Wealth",
+        "Birth",
+        "Education",
+        "Manly excellence and courage"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How could a Roman display virtus?",
+      "options": [
+        "Serving in the army",
+        "Owning land",
+        "Holding office",
+        "Marrying well"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was fides?",
+      "options": [
+        "Trustworthiness and reliability",
+        "Legal authority",
+        "Religious faith",
+        "Military discipline"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was fides important in Roman politics?",
+      "options": [
+        "It encouraged loyalty and cooperation",
+        "It guaranteed legal immunity",
+        "It limited rivalry",
+        "It replaced elections"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What role did patronage play in achieving success?",
+      "options": [
+        "It guaranteed office",
+        "It abolished social classes",
+        "It replaced elections",
+        "It mobilised support networks"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was the cursus honorum?",
+      "options": [
+        "The sequence of political offices",
+        "A military unit",
+        "A series of public games",
+        "A legal code"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which office usually began the cursus honorum?",
+      "options": [
+        "Quaestor",
+        "Tribune",
+        "Praetor",
+        "Aedile"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the minimum age for a quaestor?",
+      "options": [
+        "30",
+        "25",
+        "28",
+        "32"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was military success important for political advancement?",
+      "options": [
+        "It avoided patronage",
+        "It replaced elections",
+        "It ensured wealth",
+        "It demonstrated virtus and leadership"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was a triumph?",
+      "options": [
+        "A military parade celebrating victory",
+        "A Senate meeting",
+        "A religious festival",
+        "An election"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who granted a triumph?",
+      "options": [
+        "The Senate",
+        "The army",
+        "The people",
+        "The consuls"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How could wealth assist political success?",
+      "options": [
+        "By buying votes openly",
+        "By replacing elections",
+        "By guaranteeing office",
+        "By funding campaigns and games"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why were public games politically useful?",
+      "options": [
+        "They limited opposition",
+        "They replaced assemblies",
+        "They displayed generosity and popularity",
+        "They trained soldiers"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What risk did competition for success create?",
+      "options": [
+        "Economic equality",
+        "Political rivalry and conflict",
+        "Stability",
+        "Unity"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which group faced the greatest barriers to political success?",
+      "options": [
+        "Patricians",
+        "Nobiles",
+        "Novus homo",
+        "Equestrians"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What best summarises Roman ideas of success?",
+      "options": [
+        "Inherited status only",
+        "Private wealth alone",
+        "Public achievement supported by reputation and networks",
+        "Legal authority alone"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

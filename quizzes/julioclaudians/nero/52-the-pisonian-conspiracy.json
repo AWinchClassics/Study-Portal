@@ -1,0 +1,257 @@
+{
+  "id": "52-the-pisonian-conspiracy",
+  "title": "52. The Pisonian Conspiracy",
+  "description": "An analysis of the failed conspiracy of 65 CE, its aims, exposure, and consequences for Nero’s rule and the Roman elite.",
+  "questions": [
+    {
+      "question": "In which year did the Pisonian Conspiracy take place?",
+      "options": [
+        "65 CE",
+        "66 CE",
+        "63 CE",
+        "64 CE"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the primary aim of the conspirators?",
+      "options": [
+        "To overthrow Nero",
+        "To start a civil war",
+        "To assassinate Seneca",
+        "To reform the Senate"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Approximately how many senators were involved in the conspiracy?",
+      "options": [
+        "60",
+        "25",
+        "41",
+        "12"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Whom did many conspirators intend to replace Nero with?",
+      "options": [
+        "Calpurnius Piso",
+        "Lucius Silanus",
+        "Faenius Rufus",
+        "Thrasea Paetus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was notable about Piso’s role in the conspiracy?",
+      "options": [
+        "He was unaware of it",
+        "He led the conspiracy",
+        "He was not a ringleader",
+        "He betrayed it"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "According to Tacitus, how widespread was support for the plot?",
+      "options": [
+        "Limited to Rome",
+        "Only among soldiers",
+        "Widespread across elites",
+        "Confined to senators"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What changed the conspirators’ plans from replacement to murder?",
+      "options": [
+        "Senatorial pressure",
+        "Popular unrest",
+        "Nero’s cruelty",
+        "Faenius Rufus joining"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What uncertainty existed among the conspirators?",
+      "options": [
+        "Who would kill Nero",
+        "What to do after Nero’s removal",
+        "Whether Piso would accept power",
+        "When to act"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which alternative candidate for power existed alongside Piso?",
+      "options": [
+        "Britannicus",
+        "Galba",
+        "Lucius Silanus",
+        "Germanicus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How long did the conspirators delay before acting?",
+      "options": [
+        "Four months",
+        "Two months",
+        "One month",
+        "Six months"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "At which festival was Nero to be assassinated?",
+      "options": [
+        "Festival of Ceres",
+        "Parilia",
+        "Ludi Romani",
+        "Saturnalia"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who was chosen as the would-be assassin?",
+      "options": [
+        "Flavius Scaevinus",
+        "Piso",
+        "Milichus",
+        "Faenius Rufus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What weapon was Scaevinus to use?",
+      "options": [
+        "Axe",
+        "Poison",
+        "Specially procured dagger",
+        "Sword"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who betrayed the conspiracy to Nero?",
+      "options": [
+        "Faenius Rufus",
+        "Milichus",
+        "Seneca",
+        "Tigellinus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was Milichus’ relationship to Scaevinus?",
+      "options": [
+        "Brother",
+        "Friend",
+        "Client",
+        "Freedman"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What happened to Scaevinus after the betrayal?",
+      "options": [
+        "He escaped",
+        "He was exiled",
+        "He was quickly arrested",
+        "He was pardoned"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why was Seneca arrested?",
+      "options": [
+        "To please Nero despite weak evidence",
+        "Due to public pressure",
+        "Because he confessed",
+        "Clear evidence against him"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How does Tacitus judge the behaviour of the conspirators under arrest?",
+      "options": [
+        "Loyal",
+        "Quick to betray one another",
+        "Heroic",
+        "Slow to respond"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Piso die?",
+      "options": [
+        "Battle",
+        "Execution",
+        "Natural causes",
+        "Suicide"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Nero use the conspiracy to his advantage?",
+      "options": [
+        "To reconcile with the Senate",
+        "To abdicate",
+        "To restore the Republic",
+        "To execute rivals and confiscate property"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which prominent figure’s death symbolised Nero’s decline?",
+      "options": [
+        "Seneca",
+        "Tigellinus",
+        "Piso",
+        "Burrus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which senators were executed despite not being involved?",
+      "options": [
+        "Seneca and Burrus",
+        "Thrasea and Soranus",
+        "Rufus and Tigellinus",
+        "Piso and Silanus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who led the purges after the conspiracy?",
+      "options": [
+        "Seneca",
+        "Tigellinus",
+        "Piso",
+        "Faenius Rufus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "According to Suetonius, what was Nero’s aim after the conspiracy?",
+      "options": [
+        "To expand the empire",
+        "To gain popularity",
+        "To reform Rome",
+        "To annihilate the senatorial class"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What does the PPT emphasise about the conspiracy overall?",
+      "options": [
+        "It restored stability",
+        "It strengthened senatorial power",
+        "It was insignificant",
+        "It marked a turning point toward terror"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

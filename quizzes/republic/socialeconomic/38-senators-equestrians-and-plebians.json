@@ -1,0 +1,257 @@
+{
+  "id": "38-senators-equestrians-and-plebians",
+  "title": "38. Senators, Equestrians, and Plebians",
+  "description": "An overview of the social hierarchy of Republican Rome, examining senators, equestrians, and the urban and rural plebs.",
+  "questions": [
+    {
+      "question": "Which group sat at the top of the Roman wealth and status hierarchy?",
+      "options": [
+        "Plebs",
+        "Senators",
+        "Equestrians",
+        "Publicani"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why were senators able to devote significant time to politics?",
+      "options": [
+        "Their wealth freed them from manual work",
+        "They owned businesses",
+        "They were legally required to",
+        "They were paid salaries"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did senators typically view their political role?",
+      "options": [
+        "As private businessmen",
+        "As rulers by force",
+        "As military commanders only",
+        "As public servants"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What activity were senators technically barred from engaging in?",
+      "options": [
+        "Business ventures",
+        "Military command",
+        "Public speaking",
+        "Holding magistracies"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What primarily distinguished senators from equestrians?",
+      "options": [
+        "Legal rights",
+        "Military service",
+        "Class and prestige",
+        "Wealth"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which term describes a politician who was the first in his family to enter the Senate?",
+      "options": [
+        "Nobilis",
+        "Eques",
+        "Novus homo",
+        "Populares"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which aristocrat looked down on Cicero as a novus homo?",
+      "options": [
+        "Caesar",
+        "Crassus",
+        "Pompey",
+        "Catiline"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What political approach did the populares adopt?",
+      "options": [
+        "Appealing to the poor",
+        "Supporting the Senate",
+        "Opposing reform",
+        "Avoiding elections"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why did populares often support measures favouring the poor?",
+      "options": [
+        "Military loyalty",
+        "To gain popularity and power",
+        "Economic necessity",
+        "Moral obligation"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What minimum wealth was required to be an equestrian?",
+      "options": [
+        "300,000 sestertii",
+        "200,000 sestertii",
+        "400,000 sestertii",
+        "500,000 sestertii"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the approximate annual income from the minimum equestrian property qualification?",
+      "options": [
+        "20,000 HS",
+        "15,000 HS",
+        "30,000 HS",
+        "10,000 HS"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "In which economic activity were equestrians particularly prominent?",
+      "options": [
+        "Foreign trade",
+        "Local politics",
+        "Craft production",
+        "Agriculture"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What were publicani primarily involved in?",
+      "options": [
+        "Military recruitment",
+        "Grain distribution",
+        "Tax-farming",
+        "Judicial administration"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What financial action by equestrian money-lenders caused a credit crisis in the 60s BCE?",
+      "options": [
+        "Raising interest rates",
+        "Calling in debts",
+        "Debasing currency",
+        "Refusing loans"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did publicani seek renegotiation of eastern tax contracts?",
+      "options": [
+        "Natural disasters",
+        "Political pressure",
+        "Lack of manpower",
+        "They had overbid"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why do historians know less about equestrians than senators?",
+      "options": [
+        "They kept fewer records",
+        "Historians focused on war and politics",
+        "They avoided politics",
+        "They were less influential"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why were the poor rarely represented in court?",
+      "options": [
+        "Legal exclusion",
+        "Illiteracy",
+        "Lack of influential patrons",
+        "High fees"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why were rural poor worse off than the plebs urbana?",
+      "options": [
+        "Lack of citizenship",
+        "They were liable for military service",
+        "Higher taxes",
+        "Lower wages"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happened to small farmers when they were called up for military service?",
+      "options": [
+        "They lost and sold their land",
+        "They were exempt from taxes",
+        "Their land was maintained",
+        "They gained land"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did increased grain imports affect Italian farmers?",
+      "options": [
+        "Raised prices",
+        "Lowered land values",
+        "Encouraged expansion",
+        "Decreased grain prices"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What agricultural strategy could wealthy landowners adopt that poor farmers could not?",
+      "options": [
+        "Tenant farming",
+        "Subsistence farming",
+        "Grain farming",
+        "Cash crops like olives and grapes"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why did many rural poor migrate to Rome?",
+      "options": [
+        "Military service",
+        "Religious festivals",
+        "Work opportunities or the corn dole",
+        "Political ambition"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why were the plebs urbana politically influential?",
+      "options": [
+        "They could easily attend assemblies",
+        "They controlled the army",
+        "They held office",
+        "They owned land"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did politicians respond to the power of the urban poor?",
+      "options": [
+        "Ignored them",
+        "Sought to please and placate them",
+        "Excluded them from voting",
+        "Suppressed them"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Caesar attempt to reduce the number of plebs urbana?",
+      "options": [
+        "Food rationing",
+        "Colonies and increased army pay",
+        "Expanding citizenship",
+        "Lowering taxes"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

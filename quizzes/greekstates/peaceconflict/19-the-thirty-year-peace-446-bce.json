@@ -1,0 +1,207 @@
+{
+  "id": "19-the-thirty-year-peace-446-bce",
+  "title": "19. The Thirty Year Peace, 446 BCE",
+  "description": "The terms, significance, and limitations of the treaty that temporarily stabilised relations between Athens and Sparta.",
+  "questions": [
+    {
+      "question": "In approximately which years was the Thirty Year Peace agreed?",
+      "options": [
+        "450–449 BCE",
+        "446–445 BCE",
+        "448–447 BCE",
+        "443–442 BCE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which ancient historian records the terms of the Thirty Year Peace?",
+      "options": [
+        "Thucydides",
+        "Plutarch",
+        "Xenophon",
+        "Herodotus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How long was the treaty intended to last?",
+      "options": [
+        "Twenty years",
+        "Ten years",
+        "Thirty years",
+        "Fifty years"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which Megarian harbours did Athens agree to give up?",
+      "options": [
+        "Chalcis and Eretria",
+        "Nisaea and Pegae",
+        "Piraeus and Phaleron",
+        "Eion and Amphipolis"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which regions outside Megara did Athens abandon under the treaty?",
+      "options": [
+        "Thrace and Macedonia",
+        "Euboea and Naxos",
+        "Boeotia and Phocis",
+        "Troezen and Achaea"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What principle governed the possession of allies under the treaty?",
+      "options": [
+        "Allies were redistributed",
+        "All leagues were dissolved",
+        "Each side kept its current allies",
+        "All allies became neutral"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What would happen if an ally revolted and joined the other side?",
+      "options": [
+        "Nothing",
+        "Arbitration was required",
+        "The ally was punished jointly",
+        "The treaty was broken"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What option was open to neutral states under the treaty?",
+      "options": [
+        "They joined Athens automatically",
+        "They joined Sparta automatically",
+        "They could join either side",
+        "They had to remain neutral"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which city-state was explicitly excluded from the treaty?",
+      "options": [
+        "Megara",
+        "Corinth",
+        "Argos",
+        "Aegina"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was Argos nevertheless allowed to do?",
+      "options": [
+        "Ally with Persia",
+        "Remain at peace with Athens",
+        "Join the Delian League",
+        "Control Delphi"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How were disputes between Athens and Sparta to be resolved?",
+      "options": [
+        "By religious courts",
+        "By a council of allies",
+        "By arbitration",
+        "By war"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What obligation accompanied the arbitration clause?",
+      "options": [
+        "Both sides must disarm",
+        "Athens must lead arbitration",
+        "Sparta chose the judges",
+        "Neither side could attack if arbitration was offered"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What uncertainty exists in the treaty’s terms?",
+      "options": [
+        "The length of the treaty",
+        "A clause concerning Aegina",
+        "Athens’ naval rights",
+        "Persian involvement"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which later complaint suggests Aegina may have been covered by the treaty?",
+      "options": [
+        "Argive alliance",
+        "Aeginetan grievances",
+        "Corinthian protests",
+        "Megarian Decree"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the treaty suggest about Sparta’s view of Athenian power?",
+      "options": [
+        "Athens dominated the Aegean",
+        "Athens needed Spartan protection",
+        "Athens was weak on land",
+        "Athens was declining"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What area did Sparta clearly retain control over?",
+      "options": [
+        "Central Greece",
+        "Asia Minor",
+        "The Aegean",
+        "The Peloponnese"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How is the tone of the treaty best described?",
+      "options": [
+        "Temporary",
+        "Aggressive",
+        "Conciliatory",
+        "Punitive"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What strategic balance did the treaty formalise?",
+      "options": [
+        "Empire vs colony",
+        "Naval vs land power",
+        "Democracy vs oligarchy",
+        "Persian dominance"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the treaty reveal about relations in 446 BCE?",
+      "options": [
+        "Imminent total war",
+        "Spartan superiority",
+        "Complete trust",
+        "Mutual recognition of spheres of influence"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why is the treaty considered comprehensive?",
+      "options": [
+        "It unified Greece",
+        "It ended all Greek wars",
+        "It dissolved all leagues",
+        "It detailed allies, neutrals, and arbitration"
+      ],
+      "correctIndex": 3
+    }
+  ]
+}

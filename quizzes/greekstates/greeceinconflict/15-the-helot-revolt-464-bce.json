@@ -1,0 +1,207 @@
+{
+  "id": "15-the-helot-revolt-464-bce",
+  "title": "15. The Helot Revolt, 464 BCE",
+  "description": "The causes, events, and consequences of the Helot Revolt and its impact on Athenian–Spartan relations.",
+  "questions": [
+    {
+      "question": "What event triggered the Helot Revolt of 464 BCE?",
+      "options": [
+        "A Persian invasion",
+        "Spartan military defeat",
+        "A major earthquake",
+        "A famine"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which group rose up against Spartan control during the revolt?",
+      "options": [
+        "Thessalian allies",
+        "Messenian helots",
+        "Athenian cleruchs",
+        "Perioikoi"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "In which region did the helots retreat after the initial uprising?",
+      "options": [
+        "Argos",
+        "Messenia",
+        "Laconia",
+        "Arcadia"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "To which fortified position did the helots withdraw?",
+      "options": [
+        "Mount Cithaeron",
+        "Mount Ithome",
+        "Mount Taygetus",
+        "Mount Olympus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did Sparta appeal to its allies for help?",
+      "options": [
+        "Persian threat",
+        "The Hellenic League still existed",
+        "Naval weakness",
+        "Economic collapse"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which political leader in Athens supported aiding Sparta?",
+      "options": [
+        "Pericles",
+        "Ephialtes",
+        "Themistocles",
+        "Cimon"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who opposed helping Sparta during the Athenian debate?",
+      "options": [
+        "Miltiades",
+        "Aristides",
+        "Ephialtes",
+        "Cimon"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What type of force did Athens send to assist Sparta?",
+      "options": [
+        "Archers",
+        "Hoplites",
+        "Sailors",
+        "Cavalry"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does Thucydides suggest was Sparta’s concern about the Athenians?",
+      "options": [
+        "Their numbers",
+        "Their military skill",
+        "Their radical democracy",
+        "Their loyalty"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What decision did Sparta eventually make regarding Athenian assistance?",
+      "options": [
+        "They dismissed the Athenians",
+        "They withdrew entirely",
+        "They gave Athens command",
+        "They requested reinforcements"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did the Athenians react to being sent home?",
+      "options": [
+        "They were deeply offended",
+        "They apologised",
+        "They ignored the insult",
+        "They declared war immediately"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which alliance did Athens break after this episode?",
+      "options": [
+        "With Thessaly",
+        "With Persia",
+        "With Argos",
+        "With Sparta"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which states did Athens subsequently ally with?",
+      "options": [
+        "Corinth and Megara",
+        "Chios and Lesbos",
+        "Argos and Thessaly",
+        "Thebes and Phocis"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the impact of this episode on Cimon’s political career?",
+      "options": [
+        "Ostracism",
+        "No change",
+        "Promotion",
+        "Execution"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "In which year was Cimon ostracised?",
+      "options": [
+        "464 BCE",
+        "461 BCE",
+        "462 BCE",
+        "458 BCE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does the Helot Revolt reveal about Spartan society?",
+      "options": [
+        "Dependence on allies",
+        "Political unity",
+        "Naval weakness",
+        "Fear of internal revolt"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How long did the helots resist at Mount Ithome?",
+      "options": [
+        "One year",
+        "A few months",
+        "Several years",
+        "Ten years"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which historian is the main source for this episode?",
+      "options": [
+        "Thucydides",
+        "Plutarch",
+        "Xenophon",
+        "Herodotus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was the broader impact of the revolt on Greek politics?",
+      "options": [
+        "Strengthened Spartan leadership",
+        "Deepened Athenian–Spartan hostility",
+        "Brought peace",
+        "Ended the Delian League"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What long-term consequence followed the Helot Revolt?",
+      "options": [
+        "Formal split between Athens and Sparta",
+        "End of helotage",
+        "Persian return to Greece",
+        "Immediate Peloponnesian War"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

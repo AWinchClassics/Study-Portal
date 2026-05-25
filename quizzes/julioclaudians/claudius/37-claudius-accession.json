@@ -1,0 +1,247 @@
+{
+  "id": "37-claudius-accession",
+  "title": "37. Claudius’ Accession",
+  "description": "The circumstances of Claudius’ unexpected accession, highlighting the role of the Praetorian Guard, senatorial debate, and constitutional precedent.",
+  "questions": [
+    {
+      "question": "What political precedent was established by the assassination of Gaius?",
+      "options": [
+        "Peaceful succession",
+        "Murder as a political tool",
+        "Senatorial control of succession",
+        "Automatic hereditary rule"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did Gaius’ death create a constitutional crisis?",
+      "options": [
+        "Rome was invaded",
+        "The army revolted",
+        "There was no named heir",
+        "The Senate was dissolved"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How does Suetonius describe Claudius’ accession?",
+      "options": [
+        "An extraordinary accident",
+        "A planned coup",
+        "A military revolt",
+        "A senatorial decision"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Where was Claudius reportedly found after Gaius’ assassination?",
+      "options": [
+        "Hiding in the palace",
+        "In the Forum",
+        "In the Praetorian camp",
+        "In the Senate House"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who discovered Claudius and brought him to safety?",
+      "options": [
+        "The plebs",
+        "Freedmen",
+        "The Praetorian Guard",
+        "The Senate"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Where was Claudius taken after being discovered?",
+      "options": [
+        "The Forum",
+        "The Capitol",
+        "The Senate House",
+        "The Praetorian barracks"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What persuaded Claudius to accept imperial power?",
+      "options": [
+        "Popular demand",
+        "Senatorial decree",
+        "Pressure from the Praetorian Guard",
+        "Divine signs"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How much did Claudius promise each Praetorian Guardsman?",
+      "options": [
+        "10,000 sestertii",
+        "5,000 sestertii",
+        "20,000 sestertii",
+        "15,000 sestertii"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why was this payment significant?",
+      "options": [
+        "It was illegal",
+        "It angered the plebs",
+        "It set a precedent for military donatives",
+        "It ended corruption"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which sources describe the Praetorian role in Claudius’ accession?",
+      "options": [
+        "Suetonius, Dio, and Josephus",
+        "Tacitus only",
+        "Cassius Dio only",
+        "Josephus only"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What options were discussed in the Senate after Gaius’ death?",
+      "options": [
+        "Immediate coronation",
+        "Return to republicanism or alternative candidates",
+        "Foreign rule",
+        "Civil war"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which individual was mentioned as a possible alternative candidate?",
+      "options": [
+        "Macro",
+        "Vinicianus",
+        "Germanicus",
+        "Sejanus"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did the Senate ultimately accept Claudius?",
+      "options": [
+        "They preferred monarchy",
+        "They supported him fully",
+        "They were compelled by the Praetorian Guard",
+        "They feared popular revolt"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "According to Josephus, who wanted the continuation of the principate?",
+      "options": [
+        "The Senate only",
+        "The plebs and the Senate",
+        "The soldiery and the plebs",
+        "The provinces"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How long after the assassination did the Senate grant Claudius power?",
+      "options": [
+        "One day",
+        "The same day",
+        "One week",
+        "Two days"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What action did Claudius take regarding records of constitutional debate?",
+      "options": [
+        "He ignored them",
+        "He destroyed them",
+        "He published them",
+        "He revised them"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What general policy did Claudius announce on accession?",
+      "options": [
+        "General amnesty",
+        "Mass prosecutions",
+        "Senatorial purge",
+        "Expansion of maiestas trials"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Claudius try to present his position as princeps?",
+      "options": [
+        "As first among equals",
+        "As a divine ruler",
+        "As a military dictator",
+        "As sole lawgiver"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which policy contrasted sharply with Gaius’ approach?",
+      "options": [
+        "Refusal of divine honours",
+        "Increased taxation",
+        "Use of freedmen",
+        "Aggressive expansion"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What impact did Claudius’ accession have on his relationship with the Senate?",
+      "options": [
+        "It strengthened it permanently",
+        "It damaged trust despite later respect",
+        "It abolished senatorial power",
+        "It had no impact"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which actions did Claudius take to reassure the Senate?",
+      "options": [
+        "Continued maiestas trials",
+        "Stopped maiestas trials and recalled exiles",
+        "Prosecuted assassins",
+        "Reduced senatorial numbers"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Claudius treat those who favoured republicanism?",
+      "options": [
+        "He punished them",
+        "He exiled them",
+        "He promised immunity",
+        "He ignored them"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What characterised Claudius’ relationship with the army?",
+      "options": [
+        "Frequent mutinies",
+        "Neglect",
+        "Annual donatives and reliance",
+        "Distance and distrust"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which policy helped Claudius maintain popular support with the plebs?",
+      "options": [
+        "Reduced games",
+        "Gladiatorial shows and festivals",
+        "Military repression",
+        "Tax increases"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

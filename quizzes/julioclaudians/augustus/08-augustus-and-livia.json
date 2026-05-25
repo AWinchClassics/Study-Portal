@@ -1,0 +1,177 @@
+{
+  "id": "08-augustus-and-livia",
+  "title": "08. Augustus and Livia",
+  "description": "The relationship between Augustus and Livia and her influence on politics, succession, and imperial image.",
+  "questions": [
+    {
+      "question": "Who was Livia married to before marrying Augustus?",
+      "options": [
+        "Agrippa",
+        "Mark Antony",
+        "Tiberius Claudius Nero",
+        "Marcellus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which two sons did Livia have from her first marriage?",
+      "options": [
+        "Gaius and Lucius",
+        "Germanicus and Claudius",
+        "Tiberius and Drusus",
+        "Marcellus and Agrippa Postumus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In what year did Livia marry Octavian?",
+      "options": [
+        "42 BCE",
+        "38 BCE",
+        "31 BCE",
+        "27 BCE"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How is Livia’s relationship with Augustus generally described?",
+      "options": [
+        "Distant and hostile",
+        "Political only",
+        "Stable and mutually supportive",
+        "Short-lived"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What role did Livia play in Augustus’ decision-making?",
+      "options": [
+        "She was excluded from politics",
+        "She acted as a confidant and adviser",
+        "She commanded the army",
+        "She ruled provinces"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why was Livia presented as a model Roman matrona?",
+      "options": [
+        "She held public office",
+        "She lived extravagantly",
+        "She embodied traditional female virtues",
+        "She rejected marriage"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Livia demonstrate influence at court?",
+      "options": [
+        "By controlling the Senate",
+        "By promoting clients into positions of power",
+        "By leading religious cults",
+        "By commanding legions"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why is Livia often described as ambitious?",
+      "options": [
+        "She sought military glory",
+        "She aimed to expand Roman territory",
+        "She worked to promote her sons in the succession",
+        "She opposed Augustus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which potential heir was exiled and later killed, with rumours of Livia’s involvement?",
+      "options": [
+        "Marcellus",
+        "Germanicus",
+        "Agrippa Postumus",
+        "Drusus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which source associates Livia with the death of Agrippa Postumus?",
+      "options": [
+        "Suetonius",
+        "Tacitus, Annals",
+        "Velleius Paterculus",
+        "Pliny"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which nephew of Augustus was rumoured to have been eliminated by Livia?",
+      "options": [
+        "Germanicus",
+        "Drusus",
+        "Marcellus",
+        "Claudius"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which ancient historian reports rumours about Marcellus’ death?",
+      "options": [
+        "Tacitus",
+        "Suetonius",
+        "Dio Cassius",
+        "Livy"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Livia strengthen Drusus’ position within the imperial family?",
+      "options": [
+        "By arranging his adoption",
+        "By securing his marriage to Antonia Minor",
+        "By granting him tribunician power",
+        "By appointing him consul"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What happened to Drusus in 9 BCE?",
+      "options": [
+        "He was exiled",
+        "He died unexpectedly",
+        "He was executed",
+        "He retired"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What marriage further advanced Tiberius’ position in 11 BCE?",
+      "options": [
+        "Marriage to Livia",
+        "Marriage to Scribonia",
+        "Marriage to Julia",
+        "Marriage to Antonia"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "In which year was Tiberius adopted as Augustus’ heir?",
+      "options": [
+        "11 BCE",
+        "9 BCE",
+        "4 CE",
+        "14 CE"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which rumour circulated regarding Augustus’ death?",
+      "options": [
+        "He died in battle",
+        "He was assassinated by the Senate",
+        "He was poisoned with figs by Livia",
+        "He committed suicide"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "id": "33-gaius-and-the-empire",
+  "title": "33. Gaius and the Empire",
+  "description": "An evaluation of Gaius’ imperial and frontier policy, highlighting erratic decision-making, client kingship, and provincial instability.",
+  "questions": [
+    {
+      "question": "How did Gaius’ frontier policy differ from his predecessors?",
+      "options": [
+        "He avoided client kings",
+        "He pursued systematic expansion",
+        "He withdrew Roman forces",
+        "He focused on rewarding loyal client kings"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How is Gaius’ imperial policy best described overall?",
+      "options": [
+        "Consistent and cautious",
+        "Passive and defensive",
+        "Erratic and provocative",
+        "Traditional and Augustan"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What did Gaius’ treatment of the Jews demonstrate?",
+      "options": [
+        "Religious tolerance",
+        "Administrative efficiency",
+        "The dangers of irresponsible rule",
+        "Successful integration"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why did Gaius travel personally to the Rhine frontier?",
+      "options": [
+        "To punish commanders",
+        "To inspect fortifications",
+        "To lead an invasion",
+        "To gain army support and address fears of conspiracy"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which commander was suspected of conspiracy with Gaius’ sisters?",
+      "options": [
+        "Germanicus",
+        "Sulpicius Galba",
+        "Aemilius Lepidus",
+        "Sejanus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Who was appointed commander of the Upper Rhine?",
+      "options": [
+        "Aemilius Lepidus",
+        "Claudius",
+        "Sulpicius Galba",
+        "Germanicus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened when Gaius’ army reached the Channel coast?",
+      "options": [
+        "They withdrew peacefully",
+        "They mutinied and refused to cross",
+        "They were recalled",
+        "They invaded Britain"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "According to Suetonius, how serious was Gaius’ intention to invade Britain?",
+      "options": [
+        "Abandoned at the last moment",
+        "Unclear or doubtful",
+        "Well planned",
+        "Certain"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What action did Gaius take toward the king of Mauretania, Ptolemy?",
+      "options": [
+        "He imprisoned him",
+        "He exiled him",
+        "He rewarded him",
+        "He ordered him to commit suicide"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was the Roman aim in Mauretania following Ptolemy’s removal?",
+      "options": [
+        "Annexation",
+        "Client kingship",
+        "Military occupation",
+        "Abandonment"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did the people of Mauretania respond to Roman actions?",
+      "options": [
+        "They migrated",
+        "They resisted violently",
+        "They negotiated",
+        "They welcomed them"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What change occurred in the governance of Africa?",
+      "options": [
+        "The governor became a military commander",
+        "The governor was reduced to civil authority",
+        "Africa became imperial",
+        "The Senate gained power"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who assumed military command in Africa?",
+      "options": [
+        "The Senate",
+        "A Praetorian Prefect",
+        "The provincial governor",
+        "An imperial legate"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Gaius treat friendly kings in the East?",
+      "options": [
+        "He restored and rewarded favourites",
+        "He imposed Roman governors",
+        "He ignored them",
+        "He removed all kings"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What consequence followed Gaius’ eastern policy?",
+      "options": [
+        "Economic growth",
+        "Peace with Parthia",
+        "Stability",
+        "Disorder and disruption"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What religious demand did Gaius place on Jews in Alexandria and Jerusalem?",
+      "options": [
+        "Military service",
+        "Payment of a tax",
+        "Participation in Roman sacrifices",
+        "Display of imperial statues in synagogues"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Was this policy fully carried out?",
+      "options": [
+        "No, due to revolt",
+        "Yes, immediately",
+        "No, due to Gaius’ death",
+        "Yes, after delay"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What action did Gaius take regarding Armenia?",
+      "options": [
+        "Strengthened its king",
+        "Ignored it",
+        "Removed its king",
+        "Annexed it"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was the result of this action in Armenia?",
+      "options": [
+        "Armenia became a province",
+        "Roman dominance increased",
+        "Parthia regained influence",
+        "Peace with Parthia"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which source provides the main narrative for Gaius’ imperial policy?",
+      "options": [
+        "Suetonius, Gaius 43–48",
+        "Cassius Dio",
+        "Josephus",
+        "Tacitus"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

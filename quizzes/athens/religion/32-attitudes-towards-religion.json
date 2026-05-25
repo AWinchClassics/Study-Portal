@@ -1,0 +1,207 @@
+{
+  "id": "32-attitudes-towards-religion",
+  "title": "32. Attitudes towards Religion",
+  "description": "How Athenians viewed religion and how religious belief interacted with politics, culture, and intellectual life.",
+  "questions": [
+    {
+      "question": "How did Athens generally regard religion?",
+      "options": [
+        "As purely private",
+        "As a serious civic matter",
+        "As optional",
+        "As unimportant"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which evidence best shows the importance of religion in Athens?",
+      "options": [
+        "Architectural investment in temples",
+        "Foreign religious influence",
+        "Private household shrines only",
+        "Lack of festivals"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which site best demonstrates heavy religious spending?",
+      "options": [
+        "The Long Walls",
+        "The Acropolis",
+        "The Pnyx",
+        "The Agora"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What role did festivals play in Athenian religion?",
+      "options": [
+        "They were rare",
+        "They were informal gatherings",
+        "They required large-scale organisation",
+        "They involved little expense"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which festival was a major celebration of Dionysus?",
+      "options": [
+        "The City Dionysia",
+        "The Lenaia",
+        "The Eleusinia",
+        "The Panathenaia"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How was religion integrated into Athenian politics?",
+      "options": [
+        "It was kept separate",
+        "Only priests handled religion",
+        "The Assembly ignored religion",
+        "Archons had religious responsibilities"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What occurred before meetings of the Assembly?",
+      "options": [
+        "A speech",
+        "A sacrifice",
+        "A vote",
+        "A debate"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What religious role did the Assembly have?",
+      "options": [
+        "Occasional discussion of religious matters",
+        "None",
+        "Training priests",
+        "Running temples"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which building in the Agora had both political and religious functions?",
+      "options": [
+        "The Stoa of Zeus Eleutherios",
+        "The Tholos",
+        "The Bouleuterion",
+        "The Stoa Poikile"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which thinker was prosecuted for religious reasons?",
+      "options": [
+        "Thucydides",
+        "Anaxagoras",
+        "Herodotus",
+        "Pericles"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who records the prosecution of Anaxagoras?",
+      "options": [
+        "Plato",
+        "Plutarch",
+        "Herodotus",
+        "Xenophon"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which individual was prosecuted following the mutilation of the herms?",
+      "options": [
+        "Pericles",
+        "Alcibiades",
+        "Nicias",
+        "Cleon"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which sources discuss the trial of Socrates?",
+      "options": [
+        "Herodotus and Thucydides",
+        "Plutarch and Aristotle",
+        "Plato and Xenophon",
+        "Aristophanes and Euripides"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which historian treats religion seriously and attributes events to divine influence?",
+      "options": [
+        "Xenophon",
+        "Plutarch",
+        "Herodotus",
+        "Thucydides"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What religious episode does Herodotus recount involving Pheidippides?",
+      "options": [
+        "An encounter with the god Pan",
+        "A prophecy of defeat",
+        "A plague sent by Apollo",
+        "A sacrifice to Zeus"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Athenians respond to Pheidippides’ encounter with Pan?",
+      "options": [
+        "They banned worship of Pan",
+        "They ignored it",
+        "They consulted Delphi",
+        "They built a temple and festival"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How does Sophocles portray divine action in Oedipus Tyrannus?",
+      "options": [
+        "As random",
+        "As irrelevant",
+        "As benevolent",
+        "As punishment for wrongdoing"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How do Euripides’ plays generally depict the gods?",
+      "options": [
+        "As absent",
+        "As distant and unknowable",
+        "As perfect beings",
+        "As human-like and flawed"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What warning is given in Euripides’ Hippolytus and Bacchae?",
+      "options": [
+        "Avoid political ambition",
+        "Reject tradition",
+        "Respect the gods",
+        "Question the polis"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How does Aristophanes’ Clouds ultimately treat traditional religion?",
+      "options": [
+        "It ignores it",
+        "It ultimately reaffirms it",
+        "It mocks and replaces it",
+        "It rejects it completely"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

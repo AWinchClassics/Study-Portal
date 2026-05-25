@@ -1,0 +1,157 @@
+{
+  "id": "49-nero-and-religion",
+  "title": "49. Nero and Religion",
+  "description": "An assessment of Nero’s religious outlook, including traditional practices, attitudes to new cults, and the persecution of Christians after the Great Fire.",
+  "questions": [
+    {
+      "question": "How is Nero’s overall religious outlook described in the PPT?",
+      "options": [
+        "Indifferent",
+        "Traditional",
+        "Hostile to all religion",
+        "Radically innovative"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What type of religions did Nero not tolerate?",
+      "options": [
+        "Traditional Roman religions",
+        "State cults",
+        "Non-traditional religions",
+        "Imperial cult"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Into which religious bodies was Nero formally inducted?",
+      "options": [
+        "Princely cults",
+        "Foreign priesthoods",
+        "Roman priestly colleges",
+        "Mystery cults"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which event is most closely associated with Nero’s religious persecution?",
+      "options": [
+        "The Great Fire of Rome",
+        "The Pisonian Conspiracy",
+        "The death of Agrippina",
+        "The Jewish War"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which group was blamed after the Great Fire of 64 CE?",
+      "options": [
+        "Stoics",
+        "Jews",
+        "Senators",
+        "Christians"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which historian records this persecution?",
+      "options": [
+        "Josephus",
+        "Suetonius",
+        "Cassius Dio",
+        "Tacitus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How does Tacitus describe Nero’s motive in persecuting Christians?",
+      "options": [
+        "Personal vendetta",
+        "Religious hatred",
+        "Political necessity and scapegoating",
+        "Senatorial pressure"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does the PPT suggest about Nero’s personal feelings toward Christians?",
+      "options": [
+        "He actively hated them",
+        "He was indifferent but used them",
+        "He admired them",
+        "He converted"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why were Christians a convenient target?",
+      "options": [
+        "They were wealthy",
+        "They were politically powerful",
+        "They were a fringe group",
+        "They opposed Nero publicly"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How much attention do sources give to Nero and the Imperial Cult?",
+      "options": [
+        "Very little",
+        "None at all",
+        "Moderate coverage",
+        "Extensive detail"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How do sources portray Nero’s use of the Imperial Cult?",
+      "options": [
+        "As exploitative",
+        "As aggressively enforced",
+        "As central to his rule",
+        "As limited or unclear"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which poets praise Nero as a god?",
+      "options": [
+        "Calpurnius Siculus",
+        "Virgil",
+        "Horace",
+        "Ovid"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How should such poetic praise be interpreted?",
+      "options": [
+        "As literal belief",
+        "As senatorial decree",
+        "As poetic convention",
+        "As political propaganda only"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What alternative interpretation of this praise does the PPT raise?",
+      "options": [
+        "Nero demanded worship",
+        "Nero abolished the cult",
+        "Nero may have seen himself as divine",
+        "Nero rejected it"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What conclusion does the PPT encourage regarding Nero and religion?",
+      "options": [
+        "His religious policy was cautious and selective",
+        "He rejected all cults",
+        "He promoted Christianity",
+        "He was overtly impious"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

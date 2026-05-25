@@ -1,0 +1,227 @@
+{
+  "id": "23-the-parthenon",
+  "title": "23. The Parthenon",
+  "description": "The architecture, sculpture, symbolism, and significance of the Parthenon in fifth-century Athens.",
+  "questions": [
+    {
+      "question": "To which deity was the Parthenon dedicated?",
+      "options": [
+        "Athena Parthenos",
+        "Nike",
+        "Poseidon",
+        "Athena Polias"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What type of temple was the Parthenon architecturally?",
+      "options": [
+        "Doric peripteral",
+        "Ionic prostyle",
+        "Mixed Ionic",
+        "Corinthian tholos"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How many columns did the Parthenon have on its short and long sides?",
+      "options": [
+        "12 by 24",
+        "8 by 17",
+        "6 by 13",
+        "10 by 20"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Who supervised the construction of the Parthenon?",
+      "options": [
+        "Ictinus",
+        "Pericles",
+        "Pheidias",
+        "Callicrates"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "From where was the marble for the Parthenon sourced?",
+      "options": [
+        "Hymettus",
+        "Paros",
+        "Pentelicus",
+        "Naxos"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What visual refinements were used to enhance the Parthenon’s appearance?",
+      "options": [
+        "Curvature and column positioning",
+        "Straight columns and base",
+        "Metal decoration",
+        "Painted stucco only"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which areas traditionally contained sculpture in a Doric temple?",
+      "options": [
+        "Pediments and metopes",
+        "Columns and bases",
+        "Naos walls",
+        "Friezes and capitals"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What was unusual about the Parthenon’s sculptural programme?",
+      "options": [
+        "All metopes were decorated",
+        "Only pediments were decorated",
+        "It lacked metopes",
+        "It used Corinthian capitals"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which myth was shown on the west metopes?",
+      "options": [
+        "Amazonomachy",
+        "Sack of Troy",
+        "Centauromachy",
+        "Gigantomachy"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What scene was depicted on the north metopes?",
+      "options": [
+        "Gigantomachy",
+        "Amazonomachy",
+        "Battle of Marathon",
+        "Sack of Troy"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What theme links the metope scenes overall?",
+      "options": [
+        "Naval warfare",
+        "Religious ritual",
+        "Foundation myths",
+        "Conflict between order and chaos"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was shown on the east pediment of the Parthenon?",
+      "options": [
+        "Gigantomachy",
+        "Panathenaic procession",
+        "Contest of Athena and Poseidon",
+        "Birth of Athena"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was depicted on the west pediment?",
+      "options": [
+        "Centauromachy",
+        "Birth of Athena",
+        "Amazonomachy",
+        "Contest for Attica"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which sculptural feature was Ionic rather than Doric in style?",
+      "options": [
+        "Inner continuous frieze",
+        "Metopes",
+        "Column capitals",
+        "Pediments"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What event is most commonly thought to be shown on the frieze?",
+      "options": [
+        "Trojan War",
+        "Founding of Athens",
+        "Panathenaic procession",
+        "Persian Wars"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Why would the frieze have been difficult for ancient viewers to see clearly?",
+      "options": [
+        "It was partially destroyed",
+        "It was inside the naos",
+        "It was painted dark colours",
+        "It was high on the inner wall"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What possible military reference is associated with the frieze’s horsemen?",
+      "options": [
+        "Persian cavalry",
+        "Spartan hoplites",
+        "Victors at Salamis",
+        "Hoplites killed at Marathon"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What material technique was used for the statue of Athena Parthenos?",
+      "options": [
+        "Marble carving",
+        "Chryselephantine",
+        "Bronze casting",
+        "Terracotta"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Approximately how tall was the statue of Athena Parthenos?",
+      "options": [
+        "11.5 metres",
+        "8 metres",
+        "15 metres",
+        "5 metres"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What did Athena hold in her right hand on the statue?",
+      "options": [
+        "An olive branch",
+        "A shield",
+        "A spear",
+        "Nike (Victory)"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which scenes decorated Athena’s shield on the statue?",
+      "options": [
+        "Centauromachy only",
+        "Panathenaic procession",
+        "Persians and Greeks",
+        "Amazonomachy and Gigantomachy"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What was the symbolic meaning of the statue’s decoration overall?",
+      "options": [
+        "Athens’ power and victory",
+        "Economic prosperity",
+        "Religious unity",
+        "Democratic reform"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

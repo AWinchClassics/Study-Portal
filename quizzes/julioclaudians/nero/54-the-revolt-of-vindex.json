@@ -1,0 +1,207 @@
+{
+  "id": "54-the-revolt-of-vindex",
+  "title": "54. The Revolt of Vindex",
+  "description": "An analysis of the Revolt of Vindex, assessing its causes, portrayal in ancient sources, and its significance in the collapse of Nero’s authority.",
+  "questions": [
+    {
+      "question": "In which years did the Revolt of Vindex take place?",
+      "options": [
+        "68–69 CE",
+        "65–66 CE",
+        "67–68 CE",
+        "66–67 CE"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Where did the Revolt of Vindex occur?",
+      "options": [
+        "Judea",
+        "Spain",
+        "Britain",
+        "Gaul"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which ancient authors provide accounts of the revolt?",
+      "options": [
+        "Suetonius and Dio Cassius",
+        "Pliny and Seneca",
+        "Josephus and Tacitus",
+        "Tacitus alone"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How does Suetonius interpret the revolt?",
+      "options": [
+        "As a senatorial plot",
+        "As a military accident",
+        "As a Parthian-backed rebellion",
+        "As divine retribution against Nero"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How does Dio Cassius portray Vindex?",
+      "options": [
+        "As a Roman general",
+        "As a heroic and capable leader",
+        "As a barbarian enemy",
+        "As weak and ineffective"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What role does Vindex play in Dio’s narrative?",
+      "options": [
+        "A minor rebel",
+        "An anti-thesis to Nero",
+        "A tyrant",
+        "A failed usurper"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What cultural contrast does Dio emphasise in Vindex?",
+      "options": [
+        "Eastern luxury",
+        "A barbarian adopting Roman culture",
+        "Greek upbringing",
+        "Roman barbarity"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What theme does Vindex’s speech reinforce in Dio?",
+      "options": [
+        "Criticism of Nero’s rule",
+        "Praise of Roman taxation",
+        "Support for Nero",
+        "Calls for peace with Parthia"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What unusual action did Vindex take during the revolt?",
+      "options": [
+        "Allied with Britain",
+        "Burned Roman cities",
+        "Minted his own coins",
+        "Declared himself emperor"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How does Suetonius’ description of the revolt hint at its nature?",
+      "options": [
+        "He calls it civil",
+        "He calls it Gallic",
+        "He calls it imperial",
+        "He ignores it"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What might Suetonius’ term ‘Gallic’ suggest?",
+      "options": [
+        "Nationalism rather than Roman oppression",
+        "Economic prosperity",
+        "Religious motivation",
+        "Foreign invasion"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Where was Nero when the revolt broke out?",
+      "options": [
+        "Rome",
+        "Neapolis",
+        "Ostia",
+        "Antium"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How long did Nero do nothing after hearing of the revolt?",
+      "options": [
+        "Three days",
+        "Two weeks",
+        "Five days",
+        "Eight days"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Why might Nero have initially ignored the revolt?",
+      "options": [
+        "He was abroad",
+        "He trusted provincial loyalty",
+        "He was ill",
+        "He underestimated its seriousness"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which legions did Nero expect to remain loyal?",
+      "options": [
+        "Cohorts at Lugdunum and legions in Upper Germany",
+        "British legions",
+        "Eastern legions",
+        "Praetorians"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why might Nero have welcomed the revolt?",
+      "options": [
+        "To reform the army",
+        "To justify tax rises and executions",
+        "To negotiate peace",
+        "To abdicate"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which other provinces showed discontent during Nero’s reign?",
+      "options": [
+        "Gaul and Germany",
+        "Asia and Egypt",
+        "Africa and Spain",
+        "Britain and Judea"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What broader judgement do the sources make about Nero’s removal?",
+      "options": [
+        "It was a blessing",
+        "It was premature",
+        "It was unnecessary",
+        "It was tragic"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How does the revolt contribute to Nero’s downfall?",
+      "options": [
+        "It directly kills Nero",
+        "It restores order",
+        "It strengthens Nero’s control",
+        "It destabilises imperial authority"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What does the PPT emphasise overall about the Revolt of Vindex?",
+      "options": [
+        "It was a key turning point",
+        "It was easily suppressed",
+        "It was purely nationalist",
+        "It was insignificant"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

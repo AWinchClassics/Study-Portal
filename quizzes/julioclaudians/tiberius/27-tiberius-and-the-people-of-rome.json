@@ -1,0 +1,307 @@
+{
+  "id": "27-tiberius-and-the-people-of-rome",
+  "title": "27. Tiberius and the People of Rome",
+  "description": "An assessment of Tiberius’ relationship with the Roman people and Senate, focusing on popularity, restraint, and perceptions of power.",
+  "questions": [
+    {
+      "question": "How was Tiberius’ relationship with the plebs generally characterised?",
+      "options": [
+        "Problematic and distant",
+        "Hostile and violent",
+        "Indifferent but popular",
+        "Warm and generous"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why was Tiberius less popular with the plebs than Augustus?",
+      "options": [
+        "He reduced grain supply",
+        "He avoided public appearances",
+        "He was prudent with money and avoided lavish spending",
+        "He raised taxes"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What does Suetonius say about Tiberius’ use of largesse?",
+      "options": [
+        "It was frequent",
+        "It was rare",
+        "It was excessive",
+        "It was compulsory"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "According to Tacitus, what policy did Tiberius pursue regarding luxury?",
+      "options": [
+        "He ignored it",
+        "He encouraged it",
+        "He taxed it lightly",
+        "He actively opposed it"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Which crises did Tiberius respond to with aid and relief?",
+      "options": [
+        "Famines in Egypt",
+        "Floods in Gaul",
+        "Plagues and invasions",
+        "Fires in Rome and earthquakes in Asia"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What financial situation did Gaius Caligula inherit?",
+      "options": [
+        "A massive surplus",
+        "An empty treasury",
+        "Large debts",
+        "Balanced accounts"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How does Velleius Paterculus describe Tiberius’ generosity?",
+      "options": [
+        "As generous",
+        "As reckless",
+        "As non-existent",
+        "As moderate"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How does Suetonius describe the reaction to Tiberius’ death in Rome?",
+      "options": [
+        "Public mourning",
+        "Indifference",
+        "Unbridled joy",
+        "Violent riots"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What chant does Suetonius report at news of Tiberius’ death?",
+      "options": [
+        "‘Down with the tyrant!’",
+        "‘To the Tiber with Tiberius!’",
+        "‘Long live Tiberius!’",
+        "‘Hail Caligula!’"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why might Suetonius’ portrayal of popular reaction be biased?",
+      "options": [
+        "He disliked Tiberius",
+        "He relied on rumours",
+        "All of the above",
+        "He wrote much later"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which description best fits Tiberius’ administrative style?",
+      "options": [
+        "Competent and modest",
+        "Extravagant and showy",
+        "Negligent",
+        "Incompetent"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Tiberius’ behaviour as princeps differ from Augustus’?",
+      "options": [
+        "More populist",
+        "More religious",
+        "More military",
+        "Less performative and less generous"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What opportunities did equestrians have under Tiberius?",
+      "options": [
+        "Only military roles",
+        "Similar opportunities to Augustus’ reign",
+        "Fewer than under Augustus",
+        "None"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which equestrian rose to great power under Tiberius?",
+      "options": [
+        "Drusus",
+        "Germanicus",
+        "Macro",
+        "Sejanus"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Who replaced Sejanus as Praetorian Prefect?",
+      "options": [
+        "Blaesus",
+        "Germanicus",
+        "Macro",
+        "Drusus"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How did Tiberius treat abuses by equestrians in the provinces?",
+      "options": [
+        "He punished them",
+        "He ignored them",
+        "He rewarded them",
+        "He encouraged them"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What happened to an equestrian financial procurator of Asia?",
+      "options": [
+        "He was exiled without trial",
+        "He was convicted of corruption",
+        "He was promoted",
+        "He was ignored"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was Tiberius’ stated aim in his relationship with the Senate early on?",
+      "options": [
+        "To rule without it",
+        "To abolish it",
+        "To dominate it",
+        "To co-rule with it"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What administrative problem made senatorial cooperation necessary?",
+      "options": [
+        "Lack of money",
+        "Constant war",
+        "Foreign invasions",
+        "No centralised bureaucracy"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "How did Tiberius initially treat the Senate?",
+      "options": [
+        "With indifference",
+        "With contempt",
+        "With dignity and respect",
+        "With suspicion"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Which responsibility was transferred from the people to the Senate?",
+      "options": [
+        "Tax collection",
+        "Election of magistrates",
+        "Religious offices",
+        "Military command"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What new judicial role did the Senate gain prominence in?",
+      "options": [
+        "Maiestas trials",
+        "Religious disputes",
+        "Provincial courts",
+        "Civil law only"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "How did Tiberius try to keep worthy men in the Senate?",
+      "options": [
+        "By threats",
+        "By forced promotion",
+        "By granting money",
+        "By lowering standards"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "How does Tacitus characterise the Senate?",
+      "options": [
+        "Independent and strong",
+        "Hostile",
+        "Sycophantic and servile",
+        "Revolutionary"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What did Tacitus say Tiberius thought of the Senate?",
+      "options": [
+        "They were loyal",
+        "They were primed for slavery",
+        "They were dangerous",
+        "They were wise"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Why did the Senate become increasingly subservient?",
+      "options": [
+        "Fear and uncertainty",
+        "Economic decline",
+        "Strong leadership",
+        "Clear laws"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which factor contributed to senatorial fear?",
+      "options": [
+        "Undefined maiestas",
+        "Popular support",
+        "Tiberius’ clarity",
+        "Low taxes"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Whose power particularly alarmed the Senate?",
+      "options": [
+        "Germanicus",
+        "Drusus",
+        "Sejanus",
+        "Macro"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What happened to senators who acted independently?",
+      "options": [
+        "They were rewarded",
+        "They gained popularity",
+        "They were ignored",
+        "Their careers suffered"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "What happened to Cremutius Cordus after defending himself?",
+      "options": [
+        "He was acquitted",
+        "He committed suicide",
+        "He was exiled",
+        "He was executed"
+      ],
+      "correctIndex": 1
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "id": "04-augustus-moral-legislation",
+  "title": "04. Augustus' Moral Legislation",
+  "description": "Augustus’ use of moral laws to promote traditional values, marriage, and childbirth while regulating elite behaviour.",
+  "questions": [
+    {
+      "question": "What moral problems did Augustus believe were particularly common among the Roman upper classes?",
+      "options": [
+        "Adultery, casual marriage, avoidance of child-rearing, and excessive luxury",
+        "Military indiscipline and refusal to serve in the legions",
+        "Religious neglect and hostility to traditional gods",
+        "Provincial rebellion and tax evasion"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why might Augustus’ promotion of traditional morality appear hypocritical to contemporaries?",
+      "options": [
+        "He openly rejected Roman religion",
+        "His own early behaviour and family life conflicted with his moral ideals",
+        "He never married and had no children",
+        "He refused to enforce his laws on elites"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which aspect of Augustus’ family life most clearly conflicted with his later moral legislation?",
+      "options": [
+        "His refusal to acknowledge his heirs",
+        "His daughter's notorious sexual behaviour",
+        "His exile of political rivals",
+        "His adoption of Tiberius"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What does Augustus’ treatment of Julia suggest about his commitment to moral legislation?",
+      "options": [
+        "He ignored the law when family was involved",
+        "He enforced the law even at great personal cost",
+        "He repealed the law to protect her",
+        "He publicly defended her actions"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "How did Augustus attempt to encourage population growth among Roman citizens?",
+      "options": [
+        "By granting land to veterans only",
+        "By encouraging immigration",
+        "By rewarding marriage and childbirth through legislation",
+        "By abolishing inheritance laws"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What was Augustus’ stated concern regarding the Roman population?",
+      "options": [
+        "That Romans were becoming too wealthy",
+        "That Roman stock would be diluted by foreign or servile blood",
+        "That the army was shrinking",
+        "That women held too much power"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What was the main purpose of the Lex Julia de ambitu (18 BCE)?",
+      "options": [
+        "To punish adultery",
+        "To regulate marriage across classes",
+        "To penalise electoral bribery",
+        "To restrict luxury spending"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "What did the Lex Julia de maritandis ordinibus aim to achieve?",
+      "options": [
+        "The abolition of marriage among elites",
+        "Encouragement of marriage within social classes and punishment of celibacy",
+        "Greater political rights for women",
+        "Legalisation of adultery"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Which incentive was used by the Lex Papia Poppaea (9 CE)?",
+      "options": [
+        "Reduced military service",
+        "Political and legal advantages for parents of many children",
+        "Abolition of property taxes",
+        "Guaranteed public office"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "What irony is associated with the passing of the Lex Papia Poppaea?",
+      "options": [
+        "It was proposed by married consuls",
+        "It failed immediately",
+        "It was passed by two unmarried consuls",
+        "It repealed earlier laws"
+      ],
+      "correctIndex": 2
+    }
+  ]
+}
