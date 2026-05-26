@@ -1,31 +1,35 @@
 import { Routes, Route } from 'react-router-dom'
 import { TeacherAuthProvider } from './context/TeacherAuthContext'
-import NavBar from './components/NavBar'
+import Sidebar from './components/Sidebar'
 import TeacherRoute from './components/teacher/TeacherRoute'
 
 // Student pages
-import CoursesPage   from './pages/CoursesPage'
-import ModulePage    from './pages/ModulePage'
-import UnitPage      from './pages/UnitPage'
-import ChunkPage     from './pages/ChunkPage'
-import QuizPage      from './pages/QuizPage'
+import CoursesPage    from './pages/CoursesPage'
+import ModulePage     from './pages/ModulePage'
+import UnitPage       from './pages/UnitPage'
+import ChunkPage      from './pages/ChunkPage'
+import QuizPage       from './pages/QuizPage'
+import RandomiserPage from './pages/RandomiserPage'
 
 // Teacher pages
-import TeacherDashboard     from './pages/teacher/TeacherDashboard'
-import TeacherCoursesPage   from './pages/teacher/TeacherCoursesPage'
-import TeacherCoursePage    from './pages/teacher/TeacherCoursePage'
-import TeacherModulePage    from './pages/teacher/TeacherModulePage'
-import TeacherUnitPage      from './pages/teacher/TeacherUnitPage'
-import TeacherChunkPage     from './pages/teacher/TeacherChunkPage'
-import TeacherResourcesPage from './pages/teacher/TeacherResourcesPage'
+import TeacherDashboard         from './pages/teacher/TeacherDashboard'
+import TeacherCoursesPage       from './pages/teacher/TeacherCoursesPage'
+import TeacherCoursePage        from './pages/teacher/TeacherCoursePage'
+import TeacherModulePage        from './pages/teacher/TeacherModulePage'
+import TeacherUnitPage          from './pages/teacher/TeacherUnitPage'
+import TeacherChunkPage         from './pages/teacher/TeacherChunkPage'
+import TeacherResourcesPage     from './pages/teacher/TeacherResourcesPage'
+import TeacherRandomiserPage    from './pages/teacher/TeacherRandomiserPage'
 
-// Shared layout wrapper for all student pages (adds NavBar)
+// Student layout — sidebar + main content
 function StudentLayout({ children }) {
   return (
-    <>
-      <NavBar />
-      {children}
-    </>
+    <div className="student-layout">
+      <Sidebar />
+      <main className="student-main">
+        {children}
+      </main>
+    </div>
   )
 }
 
@@ -41,6 +45,7 @@ function TeacherSection() {
         <Route path="/units/:unitId"     element={<TeacherUnitPage />} />
         <Route path="/chunks/:chunkId"   element={<TeacherChunkPage />} />
         <Route path="/resources"         element={<TeacherResourcesPage />} />
+        <Route path="/randomiser"        element={<TeacherRandomiserPage />} />
       </Routes>
     </TeacherRoute>
   )
@@ -50,14 +55,15 @@ function App() {
   return (
     <TeacherAuthProvider>
       <Routes>
-        {/* Student routes */}
-        <Route path="/" element={<StudentLayout><CoursesPage /></StudentLayout>} />
+        {/* Student routes — all wrapped in sidebar layout */}
+        <Route path="/"                  element={<StudentLayout><CoursesPage /></StudentLayout>} />
         <Route path="/modules/:courseId" element={<StudentLayout><ModulePage /></StudentLayout>} />
         <Route path="/units/:moduleId"   element={<StudentLayout><UnitPage /></StudentLayout>} />
         <Route path="/chunks/:unitId"    element={<StudentLayout><ChunkPage /></StudentLayout>} />
         <Route path="/quiz/:resourceId"  element={<StudentLayout><QuizPage /></StudentLayout>} />
+        <Route path="/randomiser"        element={<StudentLayout><RandomiserPage /></StudentLayout>} />
 
-        {/* Teacher routes */}
+        {/* Teacher routes — no student sidebar, own layout */}
         <Route path="/teacher/*" element={<TeacherSection />} />
       </Routes>
     </TeacherAuthProvider>

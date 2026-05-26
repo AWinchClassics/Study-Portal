@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { supabase } from '../supabase'
 import Breadcrumb from '../components/Breadcrumb'
+import ChunkRandomiser from '../components/ChunkRandomiser'
 
 const SECTIONS = [
   { key: 'core',      label: 'Core Content',  icon: '📖' },
@@ -36,22 +37,18 @@ function ResourceItem({ resource, navContext }) {
   return (
     <div className="resource-item">
       <span className="resource-icon">{icon}</span>
-
       <div className="resource-info">
         <span className="resource-title">{resource.title}</span>
         {resource.description && (
           <span className="resource-desc">{resource.description}</span>
         )}
       </div>
-
       <span className="resource-type-pill">{resource.type}</span>
-
       {isQuiz && (
         <button className="resource-quiz-btn" onClick={handleQuizClick}>
           Start quiz →
         </button>
       )}
-
       {hasExternalLink && (
         <a
           href={resource.url}
@@ -74,7 +71,6 @@ function ChunkCard({ chunk, resources, navContext }) {
     if (!byPurpose[key]) byPurpose[key] = []
     byPurpose[key].push(r)
   })
-
   const activeSections = SECTIONS.filter(s => byPurpose[s.key]?.length > 0)
 
   return (
@@ -120,19 +116,24 @@ function ChunkCard({ chunk, resources, navContext }) {
           ))}
         </ul>
       )}
+
+      {/* Randomiser widget — always shown at the bottom of each chunk */}
+      <div className="chunk-randomiser-wrapper">
+        <ChunkRandomiser chunkTitle={chunk.title} />
+      </div>
     </div>
   )
 }
 
 export default function ChunkPage() {
   const { unitId } = useParams()
-  const [unit, setUnit] = useState(null)
-  const [module, setModule] = useState(null)
-  const [course, setCourse] = useState(null)
-  const [chunks, setChunks] = useState([])
+  const [unit, setUnit]                   = useState(null)
+  const [module, setModule]               = useState(null)
+  const [course, setCourse]               = useState(null)
+  const [chunks, setChunks]               = useState([])
   const [resourcesByChunk, setResourcesByChunk] = useState({})
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
+  const [loading, setLoading]             = useState(true)
+  const [error, setError]                 = useState(null)
 
   useEffect(() => {
     async function fetchData() {
@@ -142,12 +143,7 @@ export default function ChunkPage() {
         .eq('id', unitId)
         .single()
 
-      if (unitError) {
-        setError(unitError.message)
-        setLoading(false)
-        return
-      }
-
+      if (unitError) { setError(unitError.message); setLoading(false); return }
       setUnit(unitData)
       setModule(unitData.modules)
       setCourse(unitData.modules?.courses)
@@ -158,24 +154,18 @@ export default function ChunkPage() {
         .eq('unit_id', unitId)
         .order('order_index')
 
-      if (chunksError) {
-        setError(chunksError.message)
-        setLoading(false)
-        return
-      }
-
+      if (chunksError) { setError(chunksError.message); setLoading(false); return }
       setChunks(chunksData)
 
       if (chunksData.length > 0) {
         const chunkIds = chunksData.map(c => c.id)
-
-        const { data: crData, error: crError } = await supabase
+        const { data: crData } = await supabase
           .from('chunk_resources')
           .select('chunk_id, purpose, order_index, resources(*)')
           .in('chunk_id', chunkIds)
           .order('order_index')
 
-        if (!crError && crData) {
+        if (crData) {
           const grouped = {}
           crData.forEach(row => {
             if (!grouped[row.chunk_id]) grouped[row.chunk_id] = []
@@ -187,7 +177,6 @@ export default function ChunkPage() {
 
       setLoading(false)
     }
-
     fetchData()
   }, [unitId])
 
@@ -196,7 +185,6 @@ export default function ChunkPage() {
 
   const totalResources = Object.values(resourcesByChunk).flat().length
 
-  // Navigation context passed to QuizPage so it can build its breadcrumb
   const navContext = {
     unitId,
     unitTitle:   unit?.title,
@@ -210,9 +198,9 @@ export default function ChunkPage() {
     <div className="page">
       <Breadcrumb
         items={[
-          { label: 'Courses',           to: '/' },
-          { label: course?.title ?? 'Course',   to: `/modules/${course?.id}` },
-          { label: module?.title ?? 'Module',   to: `/units/${module?.id}` },
+          { label: 'Courses',                           to: '/' },
+          { label: course?.title ?? 'Course',  to: `/modules/${course?.id}` },
+          { label: module?.title ?? 'Module',  to: `/units/${module?.id}` },
           { label: unit?.title ?? 'Unit' },
         ]}
       />

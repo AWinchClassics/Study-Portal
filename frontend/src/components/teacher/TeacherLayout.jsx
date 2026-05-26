@@ -2,9 +2,10 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import { useTeacherAuth } from '../../context/TeacherAuthContext'
 
 const NAV_ITEMS = [
-  { to: '/teacher',           label: 'Dashboard',  icon: '⊞',  end: true },
-  { to: '/teacher/courses',   label: 'Courses',    icon: '📚' },
-  { to: '/teacher/resources', label: 'Resources',  icon: '📦' },
+  { to: '/teacher',              label: 'Dashboard',   icon: '⊞', end: true },
+  { to: '/teacher/courses',      label: 'Courses',     icon: '📚' },
+  { to: '/teacher/resources',    label: 'Resources',   icon: '📦' },
+  { to: '/teacher/randomiser',   label: 'Randomiser',  icon: '🎲' },
 ]
 
 export default function TeacherLayout({ children, title, actions }) {
@@ -48,7 +49,10 @@ export default function TeacherLayout({ children, title, actions }) {
             <span className="tl-nav-icon">←</span>
             Student view
           </NavLink>
-          <button className="tl-nav-item tl-nav-item-muted tl-logout-btn" onClick={handleLogout}>
+          <button
+            className="tl-nav-item tl-nav-item-muted tl-logout-btn"
+            onClick={handleLogout}
+          >
             <span className="tl-nav-icon">⏻</span>
             Sign out
           </button>
