@@ -78,7 +78,7 @@ function TreeNode({ node, level, selectedChunks, onToggle, customData }) {
     if (checkRef.current) checkRef.current.indeterminate = someSelected
   }, [someSelected])
 
-  const { groupsByModuleId = {}, groupsByUnitId = {},
+  const { groupsByCourseId = {}, groupsByModuleId = {}, groupsByUnitId = {},
           selectedCustomCards, onToggleCard, onToggleGroup } = customData ?? {}
 
   if (isLeaf) {
@@ -96,13 +96,12 @@ function TreeNode({ node, level, selectedChunks, onToggle, customData }) {
 
   const children = node.modules ?? node.units ?? node.chunks ?? []
 
-  // Custom groups attached at this node's level
-  const isModule = !!node.modules || (node.course_id !== undefined && !node.unit_id && !node.modules && !node.units && !node.chunks)
-  // Detect level: modules have units, units have chunks, courses have modules
+  // Attach custom groups at the right level:
+  // course nodes have .modules, module nodes have .units, unit nodes have .chunks
   const attachedGroups =
-    node.modules ? (groupsByModuleId[node.id] ?? [])  // wait, modules have units not modules
-    : node.units   ? (groupsByModuleId[node.id] ?? [])  // this is a module (has units)
-    : node.chunks  ? (groupsByUnitId[node.id]   ?? [])  // this is a unit (has chunks)
+    node.modules ? (groupsByCourseId[node.id] ?? [])
+    : node.units  ? (groupsByModuleId[node.id] ?? [])
+    : node.chunks ? (groupsByUnitId[node.id]   ?? [])
     : []
 
   return (
@@ -186,6 +185,7 @@ export default function RandomiserPage() {
   const [funcGroups, setFuncGroups]       = useState([])
   const [groupsByModuleId, setGroupsByModuleId] = useState({})
   const [groupsByUnitId, setGroupsByUnitId]     = useState({})
+  const [groupsByCourseId, setGroupsByCourseId] = useState({})
   const [standaloneGroups, setStandaloneGroups] = useState([])
   const [loading, setLoading]             = useState(true)
   const [controlsOpen, setControlsOpen]   = useState(false)
@@ -241,10 +241,14 @@ export default function RandomiserPage() {
 
         const byModule = {}
         const byUnit   = {}
+        const byCourse = {}
         const standalone = []
 
         allGroups.forEach(g => {
-          if (g.module_id) {
+          if (g.course_id) {
+            if (!byCourse[g.course_id]) byCourse[g.course_id] = []
+            byCourse[g.course_id].push(g)
+          } else if (g.module_id) {
             if (!byModule[g.module_id]) byModule[g.module_id] = []
             byModule[g.module_id].push(g)
           } else if (g.unit_id) {
@@ -257,6 +261,7 @@ export default function RandomiserPage() {
 
         setGroupsByModuleId(byModule)
         setGroupsByUnitId(byUnit)
+        setGroupsByCourseId(byCourse)
         setStandaloneGroups(standalone)
       }
 
@@ -335,6 +340,7 @@ export default function RandomiserPage() {
 
     // Selected custom cards
     const allCustomCards = [
+      ...Object.values(groupsByCourseId).flat(),
       ...Object.values(groupsByModuleId).flat(),
       ...Object.values(groupsByUnitId).flat(),
       ...standaloneGroups,
@@ -372,6 +378,7 @@ export default function RandomiserPage() {
   const totalChunks    = hierarchy.flatMap(c => getAllChunkIds(c)).length
 
   const customData = {
+    groupsByCourseId,
     groupsByModuleId,
     groupsByUnitId,
     selectedCustomCards,

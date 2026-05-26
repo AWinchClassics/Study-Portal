@@ -4,7 +4,7 @@ import TeacherLayout from '../../components/teacher/TeacherLayout'
 import { ConfirmButton, StatusMessage, Modal, FormField } from '../../components/teacher/TeacherUI'
 
 // ── Card group editor ─────────────────────────────────────────────
-function CardGroupEditor({ group, moduleMap, unitMap, onAddCard, onDeleteCard, onDeleteGroup }) {
+function CardGroupEditor({ group, courseMap, moduleMap, unitMap, onAddCard, onDeleteCard, onDeleteGroup }) {
   const [expanded, setExpanded] = useState(false)
   const [newCard, setNewCard]   = useState('')
 
@@ -17,7 +17,9 @@ function CardGroupEditor({ group, moduleMap, unitMap, onAddCard, onDeleteCard, o
 
   // Build attachment label
   let attachmentLabel = 'Standalone'
-  if (group.module_id && moduleMap[group.module_id]) {
+  if (group.course_id && courseMap[group.course_id]) {
+    attachmentLabel = `In course: ${courseMap[group.course_id]}`
+  } else if (group.module_id && moduleMap[group.module_id]) {
     attachmentLabel = `In module: ${moduleMap[group.module_id]}`
   } else if (group.unit_id && unitMap[group.unit_id]) {
     attachmentLabel = `In unit: ${unitMap[group.unit_id]}`
@@ -98,8 +100,10 @@ export default function TeacherRandomiserPage() {
   const [contentGroups, setContentGroups] = useState([])
 
   // Hierarchy for attachment dropdowns
+  const [courses, setCourses]       = useState([]) // [{id, title}]
   const [modules, setModules]       = useState([]) // [{id, title, course_title}]
-  const [units, setUnits]           = useState([]) // [{id, title, module_title}]
+  const [units, setUnits]           = useState([]) // [{id, title, module_title, module_id}]
+  const [courseMap, setCourseMap]   = useState({}) // id → title
   const [moduleMap, setModuleMap]   = useState({}) // id → title
   const [unitMap, setUnitMap]       = useState({}) // id → title
 
@@ -136,14 +140,18 @@ export default function TeacherRandomiserPage() {
       ...g, cards: (cc ?? []).filter(c => c.group_id === g.id)
     })))
 
-    // Build flat module and unit lists + lookup maps
+    // Build flat course, module and unit lists + lookup maps
     if (courseData) {
+      const flatCourses = []
       const flatModules = []
       const flatUnits   = []
+      const cMap = {}
       const mMap = {}
       const uMap = {}
 
       courseData.forEach(course => {
+        flatCourses.push({ id: course.id, title: course.title })
+        cMap[course.id] = course.title
         course.modules?.forEach(mod => {
           flatModules.push({ id: mod.id, title: mod.title, course_title: course.title })
           mMap[mod.id] = `${mod.title} (${course.title})`
@@ -154,8 +162,10 @@ export default function TeacherRandomiserPage() {
         })
       })
 
+      setCourses(flatCourses)
       setModules(flatModules)
       setUnits(flatUnits)
+      setCourseMap(cMap)
       setModuleMap(mMap)
       setUnitMap(uMap)
     }
@@ -164,12 +174,13 @@ export default function TeacherRandomiserPage() {
   }
 
   // ── Group CRUD ──
-  async function handleAddGroup({ name, module_id, unit_id }) {
+  async function handleAddGroup({ name, course_id, module_id, unit_id }) {
     const table = tab === 'function' ? 'randomiser_function_groups' : 'randomiser_content_groups'
     const currentGroups = tab === 'function' ? funcGroups : contentGroups
 
     const payload = { name: name.trim(), order_index: currentGroups.length }
     if (tab === 'content') {
+      if (course_id) payload.course_id = course_id
       if (module_id) payload.module_id = module_id
       if (unit_id)   payload.unit_id   = unit_id
     }
@@ -312,6 +323,7 @@ export default function TeacherRandomiserPage() {
               <CardGroupEditor
                 key={group.id}
                 group={group}
+                courseMap={{}}
                 moduleMap={{}}
                 unitMap={{}}
                 onAddCard={handleAddCard}
@@ -322,6 +334,7 @@ export default function TeacherRandomiserPage() {
               <CardGroupEditor
                 key={group.id}
                 group={group}
+                courseMap={courseMap}
                 moduleMap={moduleMap}
                 unitMap={unitMap}
                 onAddCard={handleAddCard}
@@ -336,6 +349,7 @@ export default function TeacherRandomiserPage() {
       {showAddGroup && (
         <AddGroupModal
           tab={tab}
+          courses={courses}
           modules={modules}
           units={units}
           onSave={handleAddGroup}
@@ -445,44 +459,32 @@ function QuickAddCardModal({ modules, units, onSave, onClose }) {
 }
 
 // ── Add group modal ───────────────────────────────────────────────
-function AddGroupModal({ tab, modules, units, onSave, onClose }) {
-  const [name, setName]               = useState('')
-  const [attachment, setAttachment]   = useState('standalone')
-  const [moduleId, setModuleId]       = useState('')
-  // For unit attachment: first pick a module, then pick a unit within it
-  const [unitFilterModuleId, setUnitFilterModuleId] = useState('')
-  const [unitId, setUnitId]           = useState('')
-
-  // Units filtered to the selected module
-  const filteredUnits = units.filter(u => u.module_id === unitFilterModuleId)
+function AddGroupModal({ tab, courses, modules, units, onSave, onClose }) {
+  const [name, setName]             = useState('')
+  const [attachment, setAttachment] = useState('standalone')
+  const [courseId, setCourseId]     = useState('')
+  const [moduleId, setModuleId]     = useState('')
 
   function handleAttachmentChange(value) {
     setAttachment(value)
-    // Reset selections when switching attachment type
+    setCourseId('')
     setModuleId('')
-    setUnitFilterModuleId('')
-    setUnitId('')
-  }
-
-  function handleUnitFilterModuleChange(id) {
-    setUnitFilterModuleId(id)
-    setUnitId('') // reset unit when module changes
   }
 
   function handleSave() {
     if (!name.trim()) return
     const payload = { name }
     if (tab === 'content') {
+      if (attachment === 'course' && courseId) payload.course_id = courseId
       if (attachment === 'module' && moduleId) payload.module_id = moduleId
-      if (attachment === 'unit'   && unitId)   payload.unit_id   = unitId
     }
     onSave(payload)
   }
 
   const canSave = name.trim() && (
     attachment === 'standalone' ||
-    (attachment === 'module' && moduleId) ||
-    (attachment === 'unit'   && unitId)
+    (attachment === 'course' && courseId) ||
+    (attachment === 'module' && moduleId)
   )
 
   return (
@@ -506,7 +508,6 @@ function AddGroupModal({ tab, modules, units, onSave, onClose }) {
           <FormField label="Attach to">
             <div className="rr-attach-options">
 
-              {/* Standalone */}
               <label className="rr-attach-option">
                 <input
                   type="radio"
@@ -517,7 +518,29 @@ function AddGroupModal({ tab, modules, units, onSave, onClose }) {
                 <span>Standalone</span>
               </label>
 
-              {/* Module */}
+              <label className="rr-attach-option">
+                <input
+                  type="radio"
+                  name="attachment"
+                  checked={attachment === 'course'}
+                  onChange={() => handleAttachmentChange('course')}
+                />
+                <span>Within a course</span>
+              </label>
+
+              {attachment === 'course' && (
+                <select
+                  className="t-input rr-attach-select"
+                  value={courseId}
+                  onChange={e => setCourseId(e.target.value)}
+                >
+                  <option value="">Select a course…</option>
+                  {courses.map(c => (
+                    <option key={c.id} value={c.id}>{c.title}</option>
+                  ))}
+                </select>
+              )}
+
               <label className="rr-attach-option">
                 <input
                   type="radio"
@@ -541,49 +564,6 @@ function AddGroupModal({ tab, modules, units, onSave, onClose }) {
                     </option>
                   ))}
                 </select>
-              )}
-
-              {/* Unit — two-step: pick module first, then unit */}
-              <label className="rr-attach-option">
-                <input
-                  type="radio"
-                  name="attachment"
-                  checked={attachment === 'unit'}
-                  onChange={() => handleAttachmentChange('unit')}
-                />
-                <span>Within a unit</span>
-              </label>
-
-              {attachment === 'unit' && (
-                <>
-                  <select
-                    className="t-input rr-attach-select"
-                    value={unitFilterModuleId}
-                    onChange={e => handleUnitFilterModuleChange(e.target.value)}
-                  >
-                    <option value="">1. Select a module…</option>
-                    {modules.map(m => (
-                      <option key={m.id} value={m.id}>
-                        {m.title} ({m.course_title})
-                      </option>
-                    ))}
-                  </select>
-
-                  {unitFilterModuleId && (
-                    <select
-                      className="t-input rr-attach-select"
-                      value={unitId}
-                      onChange={e => setUnitId(e.target.value)}
-                    >
-                      <option value="">2. Select a unit…</option>
-                      {filteredUnits.map(u => (
-                        <option key={u.id} value={u.id}>
-                          {u.title}
-                        </option>
-                      ))}
-                    </select>
-                  )}
-                </>
               )}
 
             </div>
