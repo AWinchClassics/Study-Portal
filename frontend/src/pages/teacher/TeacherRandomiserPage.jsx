@@ -103,9 +103,10 @@ export default function TeacherRandomiserPage() {
   const [moduleMap, setModuleMap]   = useState({}) // id → title
   const [unitMap, setUnitMap]       = useState({}) // id → title
 
-  const [loading, setLoading]       = useState(true)
-  const [status, setStatus]         = useState(null)
+  const [loading, setLoading]           = useState(true)
+  const [status, setStatus]             = useState(null)
   const [showAddGroup, setShowAddGroup] = useState(false)
+  const [showQuickAdd, setShowQuickAdd] = useState(false)
 
   useEffect(() => { fetchAll() }, [])
 
@@ -147,7 +148,7 @@ export default function TeacherRandomiserPage() {
           flatModules.push({ id: mod.id, title: mod.title, course_title: course.title })
           mMap[mod.id] = `${mod.title} (${course.title})`
           mod.units?.forEach(unit => {
-            flatUnits.push({ id: unit.id, title: unit.title, module_title: mod.title })
+            flatUnits.push({ id: unit.id, title: unit.title, module_title: mod.title, module_id: mod.id })
             uMap[unit.id] = `${unit.title} (${mod.title})`
           })
         })
@@ -220,15 +221,54 @@ export default function TeacherRandomiserPage() {
     else setContentGroups(updater)
   }
 
+  // Quick-add a single card to a unit.
+  // Finds an existing group for that unit, or creates one named after the unit.
+  async function handleQuickAddCard({ unitId, unitTitle, cardText }) {
+    const existing = contentGroups.find(g => g.unit_id === unitId)
+    let groupId
+
+    if (existing) {
+      groupId = existing.id
+    } else {
+      const { data: newGroup, error: groupError } = await supabase
+        .from('randomiser_content_groups')
+        .insert({ name: unitTitle, unit_id: unitId, order_index: contentGroups.length })
+        .select().single()
+      if (groupError) { setStatus({ type: 'error', msg: groupError.message }); return }
+      groupId = newGroup.id
+      setContentGroups(prev => [...prev, { ...newGroup, cards: [] }])
+    }
+
+    const group = contentGroups.find(g => g.id === groupId)
+    const { data: newCard, error: cardError } = await supabase
+      .from('randomiser_content_cards')
+      .insert({ group_id: groupId, text: cardText.trim(), order_index: group?.cards.length ?? 0 })
+      .select().single()
+    if (cardError) { setStatus({ type: 'error', msg: cardError.message }); return }
+
+    setContentGroups(prev => prev.map(g =>
+      g.id === groupId ? { ...g, cards: [...g.cards, newCard] } : g
+    ))
+    setShowQuickAdd(false)
+    setStatus({ type: 'success', msg: `Card added to "${existing?.name ?? unitTitle}".` })
+  }
+
   const activeGroups = tab === 'function' ? funcGroups : contentGroups
 
   return (
     <TeacherLayout
       title="Randomiser Cards"
       actions={
-        <button className="t-btn t-btn-primary" onClick={() => setShowAddGroup(true)}>
-          + New group
-        </button>
+        <div style={{ display: 'flex', gap: 8 }}>
+          {tab === 'content' && (
+            <button className="t-btn t-btn-secondary" onClick={() => setShowQuickAdd(true)}>
+              + Quick add card
+            </button>
+          )}
+          <button className="t-btn t-btn-primary" onClick={() => setShowAddGroup(true)}>
+            + New group
+          </button>
+        </div>
       }
     >
       <StatusMessage type={status?.type} onDismiss={() => setStatus(null)}>
@@ -302,16 +342,132 @@ export default function TeacherRandomiserPage() {
           onClose={() => setShowAddGroup(false)}
         />
       )}
+
+      {showQuickAdd && (
+        <QuickAddCardModal
+          modules={modules}
+          units={units}
+          onSave={handleQuickAddCard}
+          onClose={() => setShowQuickAdd(false)}
+        />
+      )}
     </TeacherLayout>
+  )
+}
+
+// ── Quick add card modal ──────────────────────────────────────────
+// Adds a single card to a unit, creating a default group if needed.
+function QuickAddCardModal({ modules, units, onSave, onClose }) {
+  const [filterModuleId, setFilterModuleId] = useState('')
+  const [unitId, setUnitId]                 = useState('')
+  const [unitTitle, setUnitTitle]           = useState('')
+  const [cardText, setCardText]             = useState('')
+
+  const filteredUnits = units.filter(u => u.module_id === filterModuleId)
+
+  function handleModuleChange(id) {
+    setFilterModuleId(id)
+    setUnitId('')
+    setUnitTitle('')
+  }
+
+  function handleUnitChange(id) {
+    setUnitId(id)
+    const unit = units.find(u => u.id === id)
+    setUnitTitle(unit?.title ?? '')
+  }
+
+  const canSave = unitId && cardText.trim()
+
+  return (
+    <Modal title="Quick add card to unit" onClose={onClose}>
+      <div className="t-form">
+
+        <FormField label="1. Select a module">
+          <select
+            className="t-input"
+            value={filterModuleId}
+            autoFocus
+            onChange={e => handleModuleChange(e.target.value)}
+          >
+            <option value="">Select a module…</option>
+            {modules.map(m => (
+              <option key={m.id} value={m.id}>
+                {m.title} ({m.course_title})
+              </option>
+            ))}
+          </select>
+        </FormField>
+
+        {filterModuleId && (
+          <FormField label="2. Select a unit">
+            <select
+              className="t-input"
+              value={unitId}
+              onChange={e => handleUnitChange(e.target.value)}
+            >
+              <option value="">Select a unit…</option>
+              {filteredUnits.map(u => (
+                <option key={u.id} value={u.id}>{u.title}</option>
+              ))}
+            </select>
+          </FormField>
+        )}
+
+        {unitId && (
+          <FormField label="3. Card text">
+            <input
+              className="t-input"
+              placeholder="e.g. Herodotus"
+              value={cardText}
+              onChange={e => setCardText(e.target.value)}
+              onKeyDown={e => {
+                if (e.key === 'Enter' && canSave)
+                  onSave({ unitId, unitTitle, cardText })
+              }}
+            />
+          </FormField>
+        )}
+
+        <div className="t-modal-footer">
+          <button className="t-btn t-btn-secondary" onClick={onClose}>Cancel</button>
+          <button
+            className="t-btn t-btn-primary"
+            onClick={() => onSave({ unitId, unitTitle, cardText })}
+            disabled={!canSave}
+          >
+            Add card
+          </button>
+        </div>
+      </div>
+    </Modal>
   )
 }
 
 // ── Add group modal ───────────────────────────────────────────────
 function AddGroupModal({ tab, modules, units, onSave, onClose }) {
-  const [name, setName]             = useState('')
-  const [attachment, setAttachment] = useState('standalone') // 'standalone' | 'module' | 'unit'
-  const [moduleId, setModuleId]     = useState('')
-  const [unitId, setUnitId]         = useState('')
+  const [name, setName]               = useState('')
+  const [attachment, setAttachment]   = useState('standalone')
+  const [moduleId, setModuleId]       = useState('')
+  // For unit attachment: first pick a module, then pick a unit within it
+  const [unitFilterModuleId, setUnitFilterModuleId] = useState('')
+  const [unitId, setUnitId]           = useState('')
+
+  // Units filtered to the selected module
+  const filteredUnits = units.filter(u => u.module_id === unitFilterModuleId)
+
+  function handleAttachmentChange(value) {
+    setAttachment(value)
+    // Reset selections when switching attachment type
+    setModuleId('')
+    setUnitFilterModuleId('')
+    setUnitId('')
+  }
+
+  function handleUnitFilterModuleChange(id) {
+    setUnitFilterModuleId(id)
+    setUnitId('') // reset unit when module changes
+  }
 
   function handleSave() {
     if (!name.trim()) return
@@ -322,6 +478,12 @@ function AddGroupModal({ tab, modules, units, onSave, onClose }) {
     }
     onSave(payload)
   }
+
+  const canSave = name.trim() && (
+    attachment === 'standalone' ||
+    (attachment === 'module' && moduleId) ||
+    (attachment === 'unit'   && unitId)
+  )
 
   return (
     <Modal
@@ -335,7 +497,7 @@ function AddGroupModal({ tab, modules, units, onSave, onClose }) {
             autoFocus
             value={name}
             onChange={e => setName(e.target.value)}
-            onKeyDown={e => { if (e.key === 'Enter' && name.trim()) handleSave() }}
+            onKeyDown={e => { if (e.key === 'Enter' && canSave) handleSave() }}
             placeholder={tab === 'function' ? 'e.g. Interpretations' : 'e.g. Sources'}
           />
         </FormField>
@@ -343,24 +505,25 @@ function AddGroupModal({ tab, modules, units, onSave, onClose }) {
         {tab === 'content' && (
           <FormField label="Attach to">
             <div className="rr-attach-options">
+
+              {/* Standalone */}
               <label className="rr-attach-option">
                 <input
                   type="radio"
                   name="attachment"
-                  value="standalone"
                   checked={attachment === 'standalone'}
-                  onChange={() => setAttachment('standalone')}
+                  onChange={() => handleAttachmentChange('standalone')}
                 />
-                <span>Standalone (no attachment)</span>
+                <span>Standalone</span>
               </label>
 
+              {/* Module */}
               <label className="rr-attach-option">
                 <input
                   type="radio"
                   name="attachment"
-                  value="module"
                   checked={attachment === 'module'}
-                  onChange={() => setAttachment('module')}
+                  onChange={() => handleAttachmentChange('module')}
                 />
                 <span>Within a module</span>
               </label>
@@ -380,31 +543,49 @@ function AddGroupModal({ tab, modules, units, onSave, onClose }) {
                 </select>
               )}
 
+              {/* Unit — two-step: pick module first, then unit */}
               <label className="rr-attach-option">
                 <input
                   type="radio"
                   name="attachment"
-                  value="unit"
                   checked={attachment === 'unit'}
-                  onChange={() => setAttachment('unit')}
+                  onChange={() => handleAttachmentChange('unit')}
                 />
                 <span>Within a unit</span>
               </label>
 
               {attachment === 'unit' && (
-                <select
-                  className="t-input rr-attach-select"
-                  value={unitId}
-                  onChange={e => setUnitId(e.target.value)}
-                >
-                  <option value="">Select a unit…</option>
-                  {units.map(u => (
-                    <option key={u.id} value={u.id}>
-                      {u.title} ({u.module_title})
-                    </option>
-                  ))}
-                </select>
+                <>
+                  <select
+                    className="t-input rr-attach-select"
+                    value={unitFilterModuleId}
+                    onChange={e => handleUnitFilterModuleChange(e.target.value)}
+                  >
+                    <option value="">1. Select a module…</option>
+                    {modules.map(m => (
+                      <option key={m.id} value={m.id}>
+                        {m.title} ({m.course_title})
+                      </option>
+                    ))}
+                  </select>
+
+                  {unitFilterModuleId && (
+                    <select
+                      className="t-input rr-attach-select"
+                      value={unitId}
+                      onChange={e => setUnitId(e.target.value)}
+                    >
+                      <option value="">2. Select a unit…</option>
+                      {filteredUnits.map(u => (
+                        <option key={u.id} value={u.id}>
+                          {u.title}
+                        </option>
+                      ))}
+                    </select>
+                  )}
+                </>
               )}
+
             </div>
           </FormField>
         )}
@@ -414,7 +595,7 @@ function AddGroupModal({ tab, modules, units, onSave, onClose }) {
           <button
             className="t-btn t-btn-primary"
             onClick={handleSave}
-            disabled={!name.trim()}
+            disabled={!canSave}
           >
             Create group
           </button>
