@@ -3,10 +3,10 @@ import { supabase } from '../supabase'
 
 // ── Tree helpers ─────────────────────────────────────────────────
 function getAllChunkIds(node) {
-  if (node.unit_id)  return [node.id]               // chunk (leaf)
-  if (node.chunks)   return node.chunks.map(c => c.id)
-  if (node.units)    return node.units.flatMap(u => getAllChunkIds(u))
-  if (node.modules)  return node.modules.flatMap(m => getAllChunkIds(m))
+  if (node.unit_id)   return [node.id]
+  if (node.chunks)    return node.chunks.map(c => c.id)
+  if (node.units)     return node.units.flatMap(u => getAllChunkIds(u))
+  if (node.modules)   return node.modules.flatMap(m => getAllChunkIds(m))
   return []
 }
 
@@ -15,21 +15,71 @@ function countSelected(node, selected) {
   return { selected: ids.filter(id => selected.has(id)).length, total: ids.length }
 }
 
+// ── CustomGroupNode — collapsible card group inside the tree ─────
+function CustomGroupNode({ group, selectedCustomCards, onToggleCard, onToggleGroup }) {
+  const [expanded, setExpanded] = useState(false)
+  const checkRef = useRef(null)
+
+  const selectedCount = group.cards.filter(c => selectedCustomCards.has(c.id)).length
+  const total         = group.cards.length
+  const allSelected   = total > 0 && selectedCount === total
+  const someSelected  = selectedCount > 0 && selectedCount < total
+
+  useEffect(() => {
+    if (checkRef.current) checkRef.current.indeterminate = someSelected
+  }, [someSelected])
+
+  if (total === 0) return null
+
+  return (
+    <div className="rr-tree-node rr-tree-custom-node">
+      <div className="rr-tree-row" onClick={() => setExpanded(e => !e)}>
+        <input
+          ref={checkRef}
+          type="checkbox"
+          checked={allSelected}
+          onChange={e => { e.stopPropagation(); onToggleGroup(group, !allSelected) }}
+          onClick={e => e.stopPropagation()}
+        />
+        <span className="rr-tree-chevron">{expanded ? '▾' : '▸'}</span>
+        <span className="rr-tree-label">{group.name}</span>
+        <span className="rr-tree-count">{selectedCount}/{total}</span>
+        <span className="rr-tree-custom-badge">custom</span>
+      </div>
+      {expanded && (
+        <div className="rr-tree-children">
+          {group.cards.map(card => (
+            <label key={card.id} className="rr-tree-leaf">
+              <input
+                type="checkbox"
+                checked={selectedCustomCards.has(card.id)}
+                onChange={e => onToggleCard(card.id, e.target.checked)}
+              />
+              <span>{card.text}</span>
+            </label>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
 // ── TreeNode ─────────────────────────────────────────────────────
-function TreeNode({ node, level, selectedChunks, onToggle }) {
-  // Courses (level 0) start expanded so modules are visible.
-  // Everything else starts collapsed.
+function TreeNode({ node, level, selectedChunks, onToggle, customData }) {
   const [expanded, setExpanded] = useState(level === 0)
+  const checkRef = useRef(null)
 
   const isLeaf = !!node.unit_id
   const { selected, total } = countSelected(node, selectedChunks)
   const allSelected  = total > 0 && selected === total
   const someSelected = selected > 0 && selected < total
 
-  const checkRef = useRef(null)
   useEffect(() => {
     if (checkRef.current) checkRef.current.indeterminate = someSelected
   }, [someSelected])
+
+  const { groupsByModuleId = {}, groupsByUnitId = {},
+          selectedCustomCards, onToggleCard, onToggleGroup } = customData ?? {}
 
   if (isLeaf) {
     return (
@@ -46,6 +96,15 @@ function TreeNode({ node, level, selectedChunks, onToggle }) {
 
   const children = node.modules ?? node.units ?? node.chunks ?? []
 
+  // Custom groups attached at this node's level
+  const isModule = !!node.modules || (node.course_id !== undefined && !node.unit_id && !node.modules && !node.units && !node.chunks)
+  // Detect level: modules have units, units have chunks, courses have modules
+  const attachedGroups =
+    node.modules ? (groupsByModuleId[node.id] ?? [])  // wait, modules have units not modules
+    : node.units   ? (groupsByModuleId[node.id] ?? [])  // this is a module (has units)
+    : node.chunks  ? (groupsByUnitId[node.id]   ?? [])  // this is a unit (has chunks)
+    : []
+
   return (
     <div className="rr-tree-node">
       <div className="rr-tree-row" onClick={() => setExpanded(e => !e)}>
@@ -60,6 +119,7 @@ function TreeNode({ node, level, selectedChunks, onToggle }) {
         <span className="rr-tree-label">{node.title ?? node.name}</span>
         <span className="rr-tree-count">{selected}/{total}</span>
       </div>
+
       {expanded && (
         <div className="rr-tree-children">
           {children.map(child => (
@@ -69,6 +129,18 @@ function TreeNode({ node, level, selectedChunks, onToggle }) {
               level={level + 1}
               selectedChunks={selectedChunks}
               onToggle={onToggle}
+              customData={customData}
+            />
+          ))}
+
+          {/* Custom groups attached to this module or unit */}
+          {attachedGroups.map(group => (
+            <CustomGroupNode
+              key={group.id}
+              group={group}
+              selectedCustomCards={selectedCustomCards}
+              onToggleCard={onToggleCard}
+              onToggleGroup={onToggleGroup}
             />
           ))}
         </div>
@@ -111,10 +183,12 @@ function PlaceholderCard() {
 // ── Main page ────────────────────────────────────────────────────
 export default function RandomiserPage() {
   const [hierarchy, setHierarchy]         = useState([])
-  const [customGroups, setCustomGroups]   = useState([])
   const [funcGroups, setFuncGroups]       = useState([])
+  const [groupsByModuleId, setGroupsByModuleId] = useState({})
+  const [groupsByUnitId, setGroupsByUnitId]     = useState({})
+  const [standaloneGroups, setStandaloneGroups] = useState([])
   const [loading, setLoading]             = useState(true)
-  const [controlsOpen, setControlsOpen]   = useState(false) // mobile drawer
+  const [controlsOpen, setControlsOpen]   = useState(false)
 
   const [selectedChunks, setSelectedChunks]           = useState(new Set())
   const [selectedCustomCards, setSelectedCustomCards] = useState(new Set())
@@ -144,19 +218,46 @@ export default function RandomiserPage() {
             )
           )
         `).order('title'),
-        supabase.from('randomiser_content_groups').select('id, name, order_index').order('order_index'),
-        supabase.from('randomiser_content_cards').select('id, group_id, text').order('order_index'),
-        supabase.from('randomiser_function_groups').select('id, name, order_index').order('order_index'),
-        supabase.from('randomiser_function_cards').select('id, group_id, text').order('order_index'),
+        supabase.from('randomiser_content_groups')
+          .select('id, name, order_index, module_id, unit_id')
+          .order('order_index'),
+        supabase.from('randomiser_content_cards')
+          .select('id, group_id, text, order_index')
+          .order('order_index'),
+        supabase.from('randomiser_function_groups')
+          .select('id, name, order_index').order('order_index'),
+        supabase.from('randomiser_function_cards')
+          .select('id, group_id, text').order('order_index'),
       ])
 
       if (courses) setHierarchy(courses)
 
+      // Build custom group maps
       if (customGroupData) {
-        setCustomGroups(customGroupData.map(g => ({
+        const allGroups = customGroupData.map(g => ({
           ...g,
           cards: (customCardData ?? []).filter(c => c.group_id === g.id),
-        })))
+        }))
+
+        const byModule = {}
+        const byUnit   = {}
+        const standalone = []
+
+        allGroups.forEach(g => {
+          if (g.module_id) {
+            if (!byModule[g.module_id]) byModule[g.module_id] = []
+            byModule[g.module_id].push(g)
+          } else if (g.unit_id) {
+            if (!byUnit[g.unit_id]) byUnit[g.unit_id] = []
+            byUnit[g.unit_id].push(g)
+          } else {
+            standalone.push(g)
+          }
+        })
+
+        setGroupsByModuleId(byModule)
+        setGroupsByUnitId(byUnit)
+        setStandaloneGroups(standalone)
       }
 
       if (funcGroupData) {
@@ -165,8 +266,6 @@ export default function RandomiserPage() {
           cards: (funcCardData ?? []).filter(c => c.group_id === g.id),
         }))
         setFuncGroups(groups)
-
-        // Default: only General Instructions selected
         const generalGroup = groups.find(g => g.name === 'General Instructions')
         if (generalGroup) setSelectedFuncGroups(new Set([generalGroup.id]))
       }
@@ -179,8 +278,24 @@ export default function RandomiserPage() {
   const handleToggleNode = useCallback((node, checked) => {
     setSelectedChunks(prev => {
       const next = new Set(prev)
-      const ids = node.unit_id ? [node.id] : getAllChunkIds(node)
+      const ids  = node.unit_id ? [node.id] : getAllChunkIds(node)
       ids.forEach(id => checked ? next.add(id) : next.delete(id))
+      return next
+    })
+  }, [])
+
+  const onToggleCard = useCallback((cardId, checked) => {
+    setSelectedCustomCards(prev => {
+      const next = new Set(prev)
+      checked ? next.add(cardId) : next.delete(cardId)
+      return next
+    })
+  }, [])
+
+  const onToggleGroup = useCallback((group, checked) => {
+    setSelectedCustomCards(prev => {
+      const next = new Set(prev)
+      group.cards.forEach(c => checked ? next.add(c.id) : next.delete(c.id))
       return next
     })
   }, [])
@@ -205,8 +320,9 @@ export default function RandomiserPage() {
   const generate = useCallback(() => {
     setError('')
 
-    // Build content pool
     const contentPool = []
+
+    // Chunks from hierarchy
     hierarchy.forEach(course =>
       course.modules?.forEach(mod =>
         mod.units?.forEach(unit =>
@@ -216,18 +332,21 @@ export default function RandomiserPage() {
         )
       )
     )
-    customGroups.forEach(g =>
-      g.cards.forEach(card => {
-        if (selectedCustomCards.has(card.id)) contentPool.push(card.text)
-      })
-    )
 
-    // Build instruction pool
-    const instructionPool = []
-    funcGroups.forEach(g => {
-      if (selectedFuncGroups.has(g.id))
-        g.cards.forEach(c => instructionPool.push(c.text))
+    // Selected custom cards
+    const allCustomCards = [
+      ...Object.values(groupsByModuleId).flat(),
+      ...Object.values(groupsByUnitId).flat(),
+      ...standaloneGroups,
+    ].flatMap(g => g.cards)
+
+    allCustomCards.forEach(card => {
+      if (selectedCustomCards.has(card.id)) contentPool.push(card.text)
     })
+
+    const instructionPool = funcGroups
+      .filter(g => selectedFuncGroups.has(g.id))
+      .flatMap(g => g.cards.map(c => c.text))
 
     if (!contentPool.length) {
       setError('Select at least one topic from the content list.')
@@ -245,11 +364,20 @@ export default function RandomiserPage() {
     setResult(newResult)
     setAnimKey(k => k + 1)
     setHistory(prev => [newResult, ...prev].slice(0, 5))
-    setControlsOpen(false) // close mobile drawer after generating
-  }, [hierarchy, customGroups, funcGroups, selectedChunks, selectedCustomCards, selectedFuncGroups])
+    setControlsOpen(false)
+  }, [hierarchy, groupsByModuleId, groupsByUnitId, standaloneGroups,
+      funcGroups, selectedChunks, selectedCustomCards, selectedFuncGroups])
 
-  const totalSelected = selectedChunks.size + selectedCustomCards.size
-  const totalChunks   = hierarchy.flatMap(c => getAllChunkIds(c)).length
+  const totalSelected  = selectedChunks.size + selectedCustomCards.size
+  const totalChunks    = hierarchy.flatMap(c => getAllChunkIds(c)).length
+
+  const customData = {
+    groupsByModuleId,
+    groupsByUnitId,
+    selectedCustomCards,
+    onToggleCard,
+    onToggleGroup,
+  }
 
   if (loading) {
     return (
@@ -266,22 +394,14 @@ export default function RandomiserPage() {
 
       {/* ── Controls panel ── */}
       <>
-        {/* Mobile backdrop */}
         {controlsOpen && (
-          <div
-            className="rr-controls-backdrop"
-            onClick={() => setControlsOpen(false)}
-          />
+          <div className="rr-controls-backdrop" onClick={() => setControlsOpen(false)} />
         )}
 
         <div className={`rr-controls ${controlsOpen ? 'rr-controls-open' : ''}`}>
-
           <div className="rr-controls-heading">
             <span>Revision Randomiser</span>
-            <button
-              className="rr-controls-close"
-              onClick={() => setControlsOpen(false)}
-            >✕</button>
+            <button className="rr-controls-close" onClick={() => setControlsOpen(false)}>✕</button>
           </div>
 
           {/* Content */}
@@ -298,7 +418,9 @@ export default function RandomiserPage() {
             </div>
 
             {totalSelected > 0 && (
-              <p className="rr-ctrl-count">{totalSelected} topic{totalSelected !== 1 ? 's' : ''} selected</p>
+              <p className="rr-ctrl-count">
+                {totalSelected} topic{totalSelected !== 1 ? 's' : ''} selected
+              </p>
             )}
 
             <div className="rr-tree">
@@ -309,29 +431,19 @@ export default function RandomiserPage() {
                   level={0}
                   selectedChunks={selectedChunks}
                   onToggle={handleToggleNode}
+                  customData={customData}
                 />
               ))}
 
-              {customGroups.filter(g => g.cards.length > 0).map(group => (
-                <div key={group.id} className="rr-tree-custom-group">
-                  <p className="rr-tree-custom-label">{group.name}</p>
-                  {group.cards.map(card => (
-                    <label key={card.id} className="rr-tree-leaf">
-                      <input
-                        type="checkbox"
-                        checked={selectedCustomCards.has(card.id)}
-                        onChange={e => {
-                          setSelectedCustomCards(prev => {
-                            const next = new Set(prev)
-                            e.target.checked ? next.add(card.id) : next.delete(card.id)
-                            return next
-                          })
-                        }}
-                      />
-                      <span>{card.text}</span>
-                    </label>
-                  ))}
-                </div>
+              {/* Standalone custom groups (no module/unit attachment) */}
+              {standaloneGroups.filter(g => g.cards.length > 0).map(group => (
+                <CustomGroupNode
+                  key={group.id}
+                  group={group}
+                  selectedCustomCards={selectedCustomCards}
+                  onToggleCard={onToggleCard}
+                  onToggleGroup={onToggleGroup}
+                />
               ))}
             </div>
           </div>
@@ -363,22 +475,15 @@ export default function RandomiserPage() {
               🎲 Generate task
             </button>
           </div>
-
         </div>
       </>
 
       {/* ── Main result area ── */}
       <div className="rr-main">
-
-        {/* Mobile controls toggle */}
-        <button
-          className="rr-controls-toggle"
-          onClick={() => setControlsOpen(true)}
-        >
+        <button className="rr-controls-toggle" onClick={() => setControlsOpen(true)}>
           ⚙ Select topics & activity types
         </button>
 
-        {/* Result / placeholder card */}
         <div key={animKey} className="rr-card-wrapper">
           {result
             ? <ResultCard result={result} onRegenerate={generate} />
@@ -386,7 +491,6 @@ export default function RandomiserPage() {
           }
         </div>
 
-        {/* History */}
         {history.length > 1 && (
           <div className="rr-history">
             <p className="rr-history-heading">Recent</p>
@@ -401,7 +505,6 @@ export default function RandomiserPage() {
             </div>
           </div>
         )}
-
       </div>
     </div>
   )
