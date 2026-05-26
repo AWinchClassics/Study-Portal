@@ -408,6 +408,11 @@
 .rr-tree-leaf input[type="checkbox"] { accent-color: var(--accent); flex-shrink: 0; }
 .rr-tree-leaf span { font-size: 12px; color: var(--text-h); }
 
+.rr-tree-leaf-custom span {
+  color: var(--accent);
+  font-style: italic;
+}
+
 .rr-tree-custom-group { margin-top: 8px; }
 .rr-tree-custom-label {
   font-size: 11px;

@@ -132,16 +132,30 @@ function TreeNode({ node, level, selectedChunks, onToggle, customData }) {
             />
           ))}
 
-          {/* Custom groups attached to this module or unit */}
-          {attachedGroups.map(group => (
-            <CustomGroupNode
-              key={group.id}
-              group={group}
-              selectedCustomCards={selectedCustomCards}
-              onToggleCard={onToggleCard}
-              onToggleGroup={onToggleGroup}
-            />
-          ))}
+          {/* Custom groups:
+              - Unit level (node.chunks): render each card as a flat leaf, like a chunk
+              - Course/module level: render as a collapsible CustomGroupNode */}
+          {node.chunks
+            ? attachedGroups.flatMap(g => g.cards).map(card => (
+                <label key={card.id} className="rr-tree-leaf rr-tree-leaf-custom">
+                  <input
+                    type="checkbox"
+                    checked={selectedCustomCards.has(card.id)}
+                    onChange={e => onToggleCard(card.id, e.target.checked)}
+                  />
+                  <span>{card.text}</span>
+                </label>
+              ))
+            : attachedGroups.map(group => (
+                <CustomGroupNode
+                  key={group.id}
+                  group={group}
+                  selectedCustomCards={selectedCustomCards}
+                  onToggleCard={onToggleCard}
+                  onToggleGroup={onToggleGroup}
+                />
+              ))
+          }
         </div>
       )}
     </div>
