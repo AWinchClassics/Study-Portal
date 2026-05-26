@@ -45,7 +45,8 @@ export default function QuizPage() {
       }
 
       try {
-        const res = await fetch(resourceData.url)
+        const base = import.meta.env.PROD ? '/Study-Portal' : ''
+		const res = await fetch(`${base}${resourceData.url}`)
         if (!res.ok) throw new Error(`HTTP ${res.status}`)
         const data = await res.json()
 
