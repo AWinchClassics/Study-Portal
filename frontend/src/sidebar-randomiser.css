@@ -172,6 +172,9 @@
 
 /* ============================================
    CHUNK RANDOMISER (inline widget)
+   ============================================
+   Replace the existing CHUNK RANDOMISER block
+   in sidebar-randomiser.css with this.
    ============================================ */
 
 .chunk-randomiser-wrapper {
@@ -180,116 +183,102 @@
   border-top: 1px solid var(--border);
 }
 
-.chunk-randomiser-trigger {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text);
-  background: var(--bg-subtle);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 7px 14px;
-  cursor: pointer;
-  font-family: var(--sans);
-  transition: border-color 0.12s, color 0.12s, background 0.12s;
-}
-
-.chunk-randomiser-trigger:hover {
-  border-color: var(--accent-border);
-  color: var(--accent);
-  background: var(--accent-bg);
-}
-
-.chunk-randomiser-trigger-icon { font-size: 16px; }
-
 .chunk-randomiser {
-  background: var(--bg-subtle);
-  border: 1px solid var(--accent-border);
+  border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   overflow: hidden;
 }
 
-.chunk-randomiser-header {
+/* Top bar */
+.chunk-randomiser-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 14px;
+  padding: 8px 12px;
+  background: var(--bg-subtle);
   border-bottom: 1px solid var(--border);
 }
 
-.chunk-randomiser-title {
+.chunk-randomiser-label {
   font-size: 13px;
   font-weight: 600;
   color: var(--text-h);
 }
 
-.chunk-randomiser-close {
-  font-size: 13px;
-  color: var(--text);
-  background: none;
-  border: none;
+.chunk-randomiser-btn {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--sans);
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  border-radius: 5px;
+  padding: 4px 12px;
   cursor: pointer;
-  padding: 2px 6px;
-  border-radius: 4px;
-  transition: background 0.1s;
+  transition: background 0.12s, opacity 0.12s;
+  white-space: nowrap;
 }
-.chunk-randomiser-close:hover { background: var(--border); }
 
-.chunk-randomiser-controls {
+.chunk-randomiser-btn:hover:not(:disabled) {
+  background: var(--accent-border);
+}
+
+.chunk-randomiser-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* Body — fixed height so the card never reflowing */
+.chunk-randomiser-body {
+  height: 72px;
+  padding: 0 14px;
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 14px;
 }
 
-.chunk-randomiser-result {
-  margin: 0 14px 14px;
-  background: var(--bg);
-  border: 1px solid var(--accent-border);
-  border-radius: var(--radius-sm);
-  padding: 14px 16px;
-}
-
-.chunk-randomiser-result-in {
-  animation: result-pop 0.25s ease;
-}
-
-@keyframes result-pop {
-  from { opacity: 0; transform: scale(0.97); }
-  to   { opacity: 1; transform: scale(1); }
-}
-
-.chunk-randomiser-content-label {
-  font-size: 12px;
-  color: var(--text);
-  margin: 0 0 6px;
-}
-
-.chunk-randomiser-content-label strong {
-  color: var(--text-h);
-}
-
-.chunk-randomiser-instruction {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text-h);
-  line-height: 1.4;
-  margin: 0 0 10px;
-}
-
-.chunk-randomiser-regen {
-  font-size: 12px;
-}
-
-.chunk-randomiser-hint {
+.chunk-randomiser-placeholder {
   font-size: 13px;
   color: var(--text);
-  padding: 8px 14px 14px;
-  margin: 0;
   font-style: italic;
 }
+
+.chunk-randomiser-result-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 100%;
+  animation: cr-pop 0.2s ease;
+}
+
+@keyframes cr-pop {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.chunk-randomiser-for {
+  font-size: 11px;
+  color: var(--text);
+  display: block;
+}
+
+.chunk-randomiser-for strong {
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+.chunk-randomiser-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1.35;
+  display: block;
+  /* Clamp to 2 lines max so it never overflows the fixed height */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 
 /* ============================================
    FULL REVISION RANDOMISER PAGE
