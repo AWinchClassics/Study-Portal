@@ -109,7 +109,7 @@ function ChunkCard({ chunk, resources, navContext }) {
         )
       )}
 
-      {/* Flashcards tab — passes only this chunk's ID */}
+      {/* Flashcards tab — chunk level only (no unitIds passed) */}
       {chunkTab === 'flashcards' && (
         <FlashcardTabContent chunkIds={[chunk.id]} />
       )}
@@ -239,7 +239,10 @@ export default function ChunkPage() {
       )}
 
       {activeTab === 'flashcards' && (
-        <FlashcardTabContent chunkIds={chunks.map(c => c.id)} />
+        <FlashcardTabContent
+          chunkIds={chunks.map(c => c.id)}
+          unitIds={[unitId]}
+        />
       )}
     </div>
   )

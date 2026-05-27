@@ -5,22 +5,36 @@ import FlashcardViewer from './FlashcardViewer'
 /**
  * FlashcardTabContent
  *
- * Fetches glossary terms for a set of chunk IDs from all three levels:
- *   - chunk_glossary  — terms assigned to a specific chunk
- *   - unit_glossary   — terms assigned to a unit (shown for all its chunks)
- *   - module_glossary — terms assigned to a module (shown for all its chunks)
+ * Fetches glossary terms and renders FlashcardViewer.
+ * Terms filter UP — lower levels include terms from below, not above:
+ *
+ *   Chunk view  (chunkIds only)              → chunk_glossary only
+ *   Unit view   (chunkIds + unitIds)          → chunk_glossary + unit_glossary
+ *   Module view (chunkIds + unitIds + moduleIds) → all three tables
+ *
+ * The calling component decides the level by choosing which props to pass.
  *
  * Props:
- *   chunkIds — array of chunk UUIDs
+ *   chunkIds  — chunk UUIDs to include (always required)
+ *   unitIds   — unit UUIDs (pass for unit-level and above views)
+ *   moduleIds — module UUIDs (pass for module-level views only)
  */
-export default function FlashcardTabContent({ chunkIds = [] }) {
+export default function FlashcardTabContent({
+  chunkIds  = [],
+  unitIds   = [],
+  moduleIds = [],
+}) {
   const [cards, setCards]     = useState([])
   const [loading, setLoading] = useState(true)
 
-  const key = chunkIds.slice().sort().join(',')
+  const key = [
+    chunkIds.slice().sort().join(','),
+    unitIds.slice().sort().join(','),
+    moduleIds.slice().sort().join(','),
+  ].join('|')
 
   useEffect(() => {
-    if (chunkIds.length === 0) {
+    if (chunkIds.length === 0 && unitIds.length === 0 && moduleIds.length === 0) {
       setCards([])
       setLoading(false)
       return
@@ -29,43 +43,35 @@ export default function FlashcardTabContent({ chunkIds = [] }) {
     setLoading(true)
 
     async function fetchTerms() {
-      // 1. Resolve unit IDs from chunk IDs
-      const { data: chunkData } = await supabase
-        .from('chunks')
-        .select('id, unit_id')
-        .in('id', chunkIds)
+      // Query only the tables appropriate for this level
+      const queries = [
+        chunkIds.length > 0
+          ? supabase.from('chunk_glossary')
+              .select('priority, glossary_terms(id, term, definition, category, date)')
+              .in('chunk_id', chunkIds)
+          : Promise.resolve({ data: [] }),
 
-      const unitIds = [...new Set((chunkData ?? []).map(c => c.unit_id).filter(Boolean))]
-
-      // 2. Resolve module IDs from unit IDs
-      const { data: unitData } = unitIds.length > 0
-        ? await supabase.from('units').select('id, module_id').in('id', unitIds)
-        : { data: [] }
-
-      const moduleIds = [...new Set((unitData ?? []).map(u => u.module_id).filter(Boolean))]
-
-      // 3. Query all three glossary tables in parallel
-      const [{ data: chunkCG }, { data: unitCG }, { data: moduleCG }] = await Promise.all([
-        supabase.from('chunk_glossary')
-          .select('priority, glossary_terms(id, term, definition, category, date)')
-          .in('chunk_id', chunkIds),
         unitIds.length > 0
           ? supabase.from('unit_glossary')
               .select('priority, glossary_terms(id, term, definition, category, date)')
               .in('unit_id', unitIds)
-          : { data: [] },
+          : Promise.resolve({ data: [] }),
+
         moduleIds.length > 0
           ? supabase.from('module_glossary')
               .select('priority, glossary_terms(id, term, definition, category, date)')
               .in('module_id', moduleIds)
-          : { data: [] },
-      ])
+          : Promise.resolve({ data: [] }),
+      ]
 
-      // 4. Merge and deduplicate — more specific level wins on priority
-      const priorityRank = { core: 0, useful: 1, stretch: 2 }
+      const [{ data: chunkCG }, { data: unitCG }, { data: moduleCG }] =
+        await Promise.all(queries)
+
+      // Merge and deduplicate — chunk-level priority wins (most specific)
+      const priorityRank  = { core: 0, useful: 1, stretch: 2 }
       const byId = {}
 
-      // Module is least specific → chunk is most specific, so add in that order
+      // Add least-specific first so more-specific can override
       const allRows = [...(moduleCG ?? []), ...(unitCG ?? []), ...(chunkCG ?? [])]
       allRows.forEach(row => {
         const t = row.glossary_terms

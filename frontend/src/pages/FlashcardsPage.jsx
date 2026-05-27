@@ -130,18 +130,18 @@ export default function FlashcardsPage() {
 
     const chunkIdArray = [...selectedChunks]
 
-    // Resolve unit IDs from chunks
+    // Resolve parent unit IDs for selected chunks
     const { data: chunkData } = await supabase
       .from('chunks').select('id, unit_id').in('id', chunkIdArray)
     const unitIds = [...new Set((chunkData ?? []).map(c => c.unit_id).filter(Boolean))]
 
-    // Resolve module IDs from units
+    // Resolve parent module IDs for those units
     const { data: unitData } = unitIds.length > 0
       ? await supabase.from('units').select('id, module_id').in('id', unitIds)
       : { data: [] }
     const moduleIds = [...new Set((unitData ?? []).map(u => u.module_id).filter(Boolean))]
 
-    // Query all three tables in parallel
+    // Query all three tables — terms filter UP so each level includes its children
     const [{ data: chunkCG }, { data: unitCG }, { data: moduleCG }] = await Promise.all([
       supabase.from('chunk_glossary')
         .select('priority, glossary_terms(id, term, definition, category, date)')

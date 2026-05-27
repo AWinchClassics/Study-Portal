@@ -134,7 +134,11 @@ export default function UnitPage() {
       {activeTab === 'flashcards' && (
         loadingChunkIds
           ? <div className="loading-pulse">Loading flashcards…</div>
-          : <FlashcardTabContent chunkIds={moduleChunkIds ?? []} />
+          : <FlashcardTabContent
+              chunkIds={moduleChunkIds ?? []}
+              unitIds={units.map(u => u.id)}
+              moduleIds={module ? [module.id] : []}
+            />
       )}
     </div>
   )
