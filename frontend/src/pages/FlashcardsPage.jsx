@@ -128,25 +128,41 @@ export default function FlashcardsPage() {
     setLoadingCards(true)
     setControlsOpen(false)
 
-    const { data, error } = await supabase
-      .from('chunk_glossary')
-      .select('priority, glossary_terms(id, term, definition, category, date)')
-      .in('chunk_id', [...selectedChunks])
+    const chunkIdArray = [...selectedChunks]
 
-    if (!error && data) {
-      const priorityRank = { core: 0, useful: 1, stretch: 2 }
-      const byId = {}
-      data.forEach(row => {
-        const t = row.glossary_terms
-        if (!t) return
-        const existing = byId[t.id]
-        const rank = priorityRank[row.priority] ?? 99
-        if (!existing || rank < (priorityRank[existing.priority] ?? 99)) {
-          byId[t.id] = { ...t, priority: row.priority }
-        }
-      })
-      setCards(Object.values(byId))
-    }
+    // Find unique unit IDs for the selected chunks
+    const { data: chunkData } = await supabase
+      .from('chunks')
+      .select('id, unit_id')
+      .in('id', chunkIdArray)
+
+    const unitIds = [...new Set((chunkData ?? []).map(c => c.unit_id).filter(Boolean))]
+
+    // Fetch unit-level and chunk-level terms in parallel
+    const [{ data: unitCG }, { data: chunkCG }] = await Promise.all([
+      unitIds.length > 0
+        ? supabase.from('unit_glossary')
+            .select('priority, glossary_terms(id, term, definition, category, date)')
+            .in('unit_id', unitIds)
+        : { data: [] },
+      supabase.from('chunk_glossary')
+        .select('priority, glossary_terms(id, term, definition, category, date)')
+        .in('chunk_id', chunkIdArray),
+    ])
+
+    const priorityRank = { core: 0, useful: 1, stretch: 2 }
+    const byId = {}
+    const allRows = [...(unitCG ?? []), ...(chunkCG ?? [])]
+    allRows.forEach(row => {
+      const t = row.glossary_terms
+      if (!t) return
+      const existing = byId[t.id]
+      const rank = priorityRank[row.priority] ?? 99
+      if (!existing || rank < (priorityRank[existing.priority] ?? 99)) {
+        byId[t.id] = { ...t, priority: row.priority }
+      }
+    })
+    setCards(Object.values(byId))
 
     setLoadingCards(false)
   }
