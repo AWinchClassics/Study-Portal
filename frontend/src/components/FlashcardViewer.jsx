@@ -22,6 +22,7 @@ function shuffleArray(arr) {
 
 export default function FlashcardViewer({ cards = [] }) {
   const [priorityFilter, setPriorityFilter] = useState('all')
+  const [categoryFilter, setCategoryFilter] = useState('all')
   const [shuffled, setShuffled]             = useState(false)
   const [deck, setDeck]                     = useState([])
   const [index, setIndex]                   = useState(0)
@@ -37,6 +38,10 @@ export default function FlashcardViewer({ cards = [] }) {
       ? [...cards]
       : cards.filter(c => c.priority === priorityFilter)
 
+    if (categoryFilter !== 'all') {
+      filtered = filtered.filter(c => c.category === categoryFilter)
+    }
+
     if (hideKnown) filtered = filtered.filter(c => !knownIds.has(c.id))
     const ordered = shuffled ? shuffleArray(filtered) : filtered
 
@@ -44,7 +49,7 @@ export default function FlashcardViewer({ cards = [] }) {
     setIndex(0)
     setFlipped(false)
     setFinished(false)
-  }, [cards, priorityFilter, shuffled, hideKnown, knownIds])
+  }, [cards, priorityFilter, categoryFilter, shuffled, hideKnown, knownIds])
 
   // Keyboard navigation
   useEffect(() => {
@@ -147,6 +152,11 @@ export default function FlashcardViewer({ cards = [] }) {
     p === 'all' || cards.some(c => c.priority === p)
   )
 
+  // Available categories in current cards
+  const availableCategories = ['all', ...Object.keys(CATEGORY_COLOURS)].filter(cat =>
+    cat === 'all' || cards.some(c => c.category === cat)
+  )
+
   return (
     <div className="fc-shell">
       {/* Priority filter + controls */}
@@ -187,6 +197,34 @@ export default function FlashcardViewer({ cards = [] }) {
         </div>
       </div>
 
+      {/* Category filter — only shown when more than one category is present */}
+      {availableCategories.length > 2 && (
+        <div className="fc-category-bar">
+          {availableCategories.map(cat => {
+            const colour = CATEGORY_COLOURS[cat]
+            const isActive = categoryFilter === cat
+            return (
+              <button
+                key={cat}
+                className={`fc-category-pill ${isActive ? 'fc-category-active' : ''}`}
+                style={isActive && colour
+                  ? { background: colour + '22', color: colour, borderColor: colour + '66' }
+                  : {}
+                }
+                onClick={() => setCategoryFilter(cat)}
+              >
+                {cat === 'all' ? 'All types' : cat.charAt(0).toUpperCase() + cat.slice(1)}
+                {cat !== 'all' && (
+                  <span className="fc-pill-count">
+                    {cards.filter(c => c.category === cat).length}
+                  </span>
+                )}
+              </button>
+            )
+          })}
+        </div>
+      )}
+
       {deck.length === 0 ? (
         <div className="fc-empty">
           <p>No cards match the current filter.</p>
@@ -206,9 +244,6 @@ export default function FlashcardViewer({ cards = [] }) {
                   {card?.category ?? 'term'}
                 </span>
                 <p className="fc-term">{card?.term}</p>
-                {card?.date && (
-                  <span className="fc-date">{card.date}</span>
-                )}
                 <span className="fc-flip-hint">Click to reveal definition ↺</span>
               </div>
 
