@@ -29,7 +29,7 @@ export default function FlashcardTabContent({ chunkIds = [] }) {
 
     supabase
       .from('chunk_glossary')
-      .select('priority, glossary_terms(id, term, definition, category)')
+      .select('priority, glossary_terms(id, term, definition, category, date)')
       .in('chunk_id', chunkIds)
       .then(({ data, error }) => {
         if (!error && data) {

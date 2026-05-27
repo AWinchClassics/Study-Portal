@@ -231,6 +231,20 @@
   margin-top: 4px;
 }
 
+/* Date shown on event cards */
+.fc-date {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+
+.fc-date-small {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text);
+}
+
 /* Back face */
 .fc-term-small {
   font-size: 14px;

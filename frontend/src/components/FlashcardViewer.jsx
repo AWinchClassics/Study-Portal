@@ -206,6 +206,9 @@ export default function FlashcardViewer({ cards = [] }) {
                   {card?.category ?? 'term'}
                 </span>
                 <p className="fc-term">{card?.term}</p>
+                {card?.date && (
+                  <span className="fc-date">{card.date}</span>
+                )}
                 <span className="fc-flip-hint">Click to reveal definition ↺</span>
               </div>
 
@@ -217,7 +220,10 @@ export default function FlashcardViewer({ cards = [] }) {
                 >
                   {card?.category ?? 'term'}
                 </span>
-                <p className="fc-term-small">{card?.term}</p>
+                <p className="fc-term-small">
+                  {card?.term}
+                  {card?.date && <span className="fc-date-small"> · {card.date}</span>}
+                </p>
                 <hr className="fc-divider" />
                 <p className="fc-definition">{card?.definition}</p>
               </div>

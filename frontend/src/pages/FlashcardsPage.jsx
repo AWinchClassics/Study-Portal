@@ -130,7 +130,7 @@ export default function FlashcardsPage() {
 
     const { data, error } = await supabase
       .from('chunk_glossary')
-      .select('priority, glossary_terms(id, term, definition, category)')
+      .select('priority, glossary_terms(id, term, definition, category, date)')
       .in('chunk_id', [...selectedChunks])
 
     if (!error && data) {
