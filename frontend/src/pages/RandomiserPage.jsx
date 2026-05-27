@@ -2,6 +2,7 @@ import { useEffect, useState, useCallback, useRef } from 'react'
 import { supabase } from '../supabase'
 
 // ── Tree helpers ─────────────────────────────────────────────────
+
 function getAllChunkIds(node) {
   if (node.unit_id)   return [node.id]
   if (node.chunks)    return node.chunks.map(c => c.id)
@@ -10,9 +11,48 @@ function getAllChunkIds(node) {
   return []
 }
 
-function countSelected(node, selected) {
-  const ids = getAllChunkIds(node)
-  return { selected: ids.filter(id => selected.has(id)).length, total: ids.length }
+// Returns ALL selectable item IDs for a node — chunks AND custom cards.
+// Custom cards are gathered from the relevant group maps based on node level.
+function getAllSelectableIds(node, customData) {
+  const {
+    groupsByCourseId = {},
+    groupsByModuleId = {},
+    groupsByUnitId   = {},
+  } = customData ?? {}
+
+  // Leaf chunk — just itself, no custom cards
+  if (node.unit_id) return { chunkIds: [node.id], customCardIds: [] }
+
+  // Custom cards attached directly to this node
+  const directGroups =
+    node.modules ? (groupsByCourseId[node.id] ?? [])
+    : node.units  ? (groupsByModuleId[node.id] ?? [])
+    : node.chunks ? (groupsByUnitId[node.id]   ?? [])
+    : []
+  const directCustomCardIds = directGroups.flatMap(g => g.cards.map(c => c.id))
+
+  // Recurse into children
+  const children = node.modules ?? node.units ?? node.chunks ?? []
+  const childResults = children.map(child => getAllSelectableIds(child, customData))
+
+  return {
+    chunkIds:     childResults.flatMap(r => r.chunkIds),
+    customCardIds: [
+      ...directCustomCardIds,
+      ...childResults.flatMap(r => r.customCardIds),
+    ],
+  }
+}
+
+// Count selected items (chunks + custom cards) within a node
+function countSelected(node, selectedChunks, selectedCustomCards, customData) {
+  const { chunkIds, customCardIds } = getAllSelectableIds(node, customData)
+  return {
+    selected:
+      chunkIds.filter(id => selectedChunks.has(id)).length +
+      customCardIds.filter(id => selectedCustomCards.has(id)).length,
+    total: chunkIds.length + customCardIds.length,
+  }
 }
 
 // ── CustomGroupNode — collapsible card group inside the tree ─────
@@ -70,7 +110,9 @@ function TreeNode({ node, level, selectedChunks, onToggle, customData }) {
   const checkRef = useRef(null)
 
   const isLeaf = !!node.unit_id
-  const { selected, total } = countSelected(node, selectedChunks)
+  const { selected, total } = countSelected(
+    node, selectedChunks, customData?.selectedCustomCards ?? new Set(), customData
+  )
   const allSelected  = total > 0 && selected === total
   const someSelected = selected > 0 && selected < total
 
@@ -111,7 +153,7 @@ function TreeNode({ node, level, selectedChunks, onToggle, customData }) {
           ref={checkRef}
           type="checkbox"
           checked={allSelected}
-          onChange={e => { e.stopPropagation(); onToggle(node, !allSelected) }}
+          onChange={e => { e.stopPropagation(); onToggle(node, !allSelected, customData) }}
           onClick={e => e.stopPropagation()}
         />
         <span className="rr-tree-chevron">{expanded ? '▾' : '▸'}</span>
@@ -294,11 +336,18 @@ export default function RandomiserPage() {
     load()
   }, [])
 
-  const handleToggleNode = useCallback((node, checked) => {
+  // Toggles all chunks AND custom cards within a node.
+  // customData is passed at call time (not captured by closure) so it's always fresh.
+  const handleToggleNode = useCallback((node, checked, cd) => {
+    const { chunkIds, customCardIds } = getAllSelectableIds(node, cd)
     setSelectedChunks(prev => {
       const next = new Set(prev)
-      const ids  = node.unit_id ? [node.id] : getAllChunkIds(node)
-      ids.forEach(id => checked ? next.add(id) : next.delete(id))
+      chunkIds.forEach(id => checked ? next.add(id) : next.delete(id))
+      return next
+    })
+    setSelectedCustomCards(prev => {
+      const next = new Set(prev)
+      customCardIds.forEach(id => checked ? next.add(id) : next.delete(id))
       return next
     })
   }, [])
@@ -327,8 +376,15 @@ export default function RandomiserPage() {
     })
   }
 
-  function selectAllChunks() {
+  function selectAll() {
     setSelectedChunks(new Set(hierarchy.flatMap(c => getAllChunkIds(c))))
+    const allCustomCardIds = [
+      ...Object.values(groupsByCourseId).flat(),
+      ...Object.values(groupsByModuleId).flat(),
+      ...Object.values(groupsByUnitId).flat(),
+      ...standaloneGroups,
+    ].flatMap(g => g.cards.map(c => c.id))
+    setSelectedCustomCards(new Set(allCustomCardIds))
   }
 
   function clearAll() {
@@ -430,7 +486,7 @@ export default function RandomiserPage() {
             <div className="rr-ctrl-section-header">
               <span className="rr-ctrl-section-title">📚 Content</span>
               <div className="rr-ctrl-section-actions">
-                <button className="rr-ctrl-link" onClick={selectAllChunks}>
+                <button className="rr-ctrl-link" onClick={selectAll}>
                   All ({totalChunks})
                 </button>
                 <span className="rr-ctrl-sep">·</span>
