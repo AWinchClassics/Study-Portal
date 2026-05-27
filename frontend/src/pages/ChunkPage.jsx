@@ -45,6 +45,8 @@ function ResourceItem({ resource, navContext }) {
 }
 
 function ChunkCard({ chunk, resources, navContext }) {
+  const [chunkTab, setChunkTab] = useState('resources')
+
   const byPurpose = {}
   resources.forEach(r => {
     const key = r.purpose ?? 'core'
@@ -55,35 +57,64 @@ function ChunkCard({ chunk, resources, navContext }) {
 
   return (
     <div className="chunk-card">
+      {/* Header */}
       <div className="chunk-card-header">
         <h2 className="chunk-title">{chunk.title}</h2>
         {chunk.estimated_time && <span className="chunk-time">⏱ {chunk.estimated_time} min</span>}
       </div>
+
       {chunk.description && <p className="chunk-description">{chunk.description}</p>}
-      {resources.length === 0 ? (
-        <p className="chunk-empty">No resources attached to this chunk yet.</p>
-      ) : activeSections.length > 0 ? (
-        <div className="chunk-sections">
-          {activeSections.map(section => (
-            <div key={section.key} className="chunk-section">
-              <div className="chunk-section-header">
-                <span className="chunk-section-icon">{section.icon}</span>
-                <span className="chunk-section-label">{section.label}</span>
-                <span className="chunk-section-count">{byPurpose[section.key].length}</span>
+
+      {/* Per-chunk tabs */}
+      <div className="chunk-tabs">
+        <button
+          className={`chunk-tab ${chunkTab === 'resources' ? 'chunk-tab-active' : ''}`}
+          onClick={() => setChunkTab('resources')}
+        >
+          📖 Resources
+        </button>
+        <button
+          className={`chunk-tab ${chunkTab === 'flashcards' ? 'chunk-tab-active' : ''}`}
+          onClick={() => setChunkTab('flashcards')}
+        >
+          🃏 Flashcards
+        </button>
+      </div>
+
+      {/* Resources tab */}
+      {chunkTab === 'resources' && (
+        resources.length === 0 ? (
+          <p className="chunk-empty">No resources attached to this chunk yet.</p>
+        ) : activeSections.length > 0 ? (
+          <div className="chunk-sections">
+            {activeSections.map(section => (
+              <div key={section.key} className="chunk-section">
+                <div className="chunk-section-header">
+                  <span className="chunk-section-icon">{section.icon}</span>
+                  <span className="chunk-section-label">{section.label}</span>
+                  <span className="chunk-section-count">{byPurpose[section.key].length}</span>
+                </div>
+                <ul className="chunk-resource-list">
+                  {byPurpose[section.key].map(r => (
+                    <li key={r.id}><ResourceItem resource={r} navContext={navContext} /></li>
+                  ))}
+                </ul>
               </div>
-              <ul className="chunk-resource-list">
-                {byPurpose[section.key].map(r => (
-                  <li key={r.id}><ResourceItem resource={r} navContext={navContext} /></li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      ) : (
-        <ul className="chunk-resource-list">
-          {resources.map(r => <li key={r.id}><ResourceItem resource={r} navContext={navContext} /></li>)}
-        </ul>
+            ))}
+          </div>
+        ) : (
+          <ul className="chunk-resource-list">
+            {resources.map(r => <li key={r.id}><ResourceItem resource={r} navContext={navContext} /></li>)}
+          </ul>
+        )
       )}
+
+      {/* Flashcards tab — passes only this chunk's ID */}
+      {chunkTab === 'flashcards' && (
+        <FlashcardTabContent chunkIds={[chunk.id]} />
+      )}
+
+      {/* Randomiser — always visible at the bottom */}
       <div className="chunk-randomiser-wrapper">
         <ChunkRandomiser chunkTitle={chunk.title} />
       </div>

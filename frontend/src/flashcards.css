@@ -1,3 +1,34 @@
+/* ── Chunk-level tabs (inside each chunk card) ── */
+
+.chunk-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  margin: 12px 0 16px;
+}
+
+.chunk-tab {
+  font-size: 13px;
+  font-weight: 500;
+  font-family: var(--sans);
+  color: var(--text);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 7px 14px;
+  cursor: pointer;
+  margin-bottom: -1px;
+  transition: color 0.12s, border-color 0.12s;
+}
+
+.chunk-tab:hover { color: var(--text-h); }
+
+.chunk-tab-active {
+  color: var(--accent) !important;
+  border-bottom-color: var(--accent);
+  font-weight: 600;
+}
+
 /* ============================================
    PAGE TABS (used on ChunkPage, UnitPage)
    ============================================ */
