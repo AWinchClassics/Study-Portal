@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { supabase } from '../supabase'
 import Breadcrumb from '../components/Breadcrumb'
 import ChunkRandomiser from '../components/ChunkRandomiser'
+import FlashcardTabContent from '../components/FlashcardTabContent'
 
 const SECTIONS = [
   { key: 'core',      label: 'Core Content',  icon: '📖' },
@@ -12,15 +13,8 @@ const SECTIONS = [
 ]
 
 const TYPE_ICONS = {
-  video:      '▶',
-  quiz:       '❓',
-  pdf:        '📄',
-  text:       '📝',
-  audio:      '🎧',
-  worksheet:  '📋',
-  task:       '✅',
-  flashcards: '🃏',
-  source:     '📜',
+  video: '▶', quiz: '❓', pdf: '📄', text: '📝',
+  audio: '🎧', worksheet: '📋', task: '✅', flashcards: '🃏', source: '📜',
 }
 
 function ResourceItem({ resource, navContext }) {
@@ -30,35 +24,21 @@ function ResourceItem({ resource, navContext }) {
   const isQuiz = type === 'quiz'
   const hasExternalLink = resource.url?.startsWith('http') && !isQuiz
 
-  function handleQuizClick() {
-    navigate(`/quiz/${resource.id}`, { state: navContext })
-  }
-
   return (
     <div className="resource-item">
       <span className="resource-icon">{icon}</span>
       <div className="resource-info">
         <span className="resource-title">{resource.title}</span>
-        {resource.description && (
-          <span className="resource-desc">{resource.description}</span>
-        )}
+        {resource.description && <span className="resource-desc">{resource.description}</span>}
       </div>
       <span className="resource-type-pill">{resource.type}</span>
       {isQuiz && (
-        <button className="resource-quiz-btn" onClick={handleQuizClick}>
+        <button className="resource-quiz-btn" onClick={() => navigate(`/quiz/${resource.id}`, { state: navContext })}>
           Start quiz →
         </button>
       )}
       {hasExternalLink && (
-        <a
-          href={resource.url}
-          target="_blank"
-          rel="noreferrer"
-          className="resource-open-arrow"
-          onClick={e => e.stopPropagation()}
-        >
-          ↗
-        </a>
+        <a href={resource.url} target="_blank" rel="noreferrer" className="resource-open-arrow">↗</a>
       )}
     </div>
   )
@@ -77,15 +57,9 @@ function ChunkCard({ chunk, resources, navContext }) {
     <div className="chunk-card">
       <div className="chunk-card-header">
         <h2 className="chunk-title">{chunk.title}</h2>
-        {chunk.estimated_time && (
-          <span className="chunk-time">⏱ {chunk.estimated_time} min</span>
-        )}
+        {chunk.estimated_time && <span className="chunk-time">⏱ {chunk.estimated_time} min</span>}
       </div>
-
-      {chunk.description && (
-        <p className="chunk-description">{chunk.description}</p>
-      )}
-
+      {chunk.description && <p className="chunk-description">{chunk.description}</p>}
       {resources.length === 0 ? (
         <p className="chunk-empty">No resources attached to this chunk yet.</p>
       ) : activeSections.length > 0 ? (
@@ -99,9 +73,7 @@ function ChunkCard({ chunk, resources, navContext }) {
               </div>
               <ul className="chunk-resource-list">
                 {byPurpose[section.key].map(r => (
-                  <li key={r.id}>
-                    <ResourceItem resource={r} navContext={navContext} />
-                  </li>
+                  <li key={r.id}><ResourceItem resource={r} navContext={navContext} /></li>
                 ))}
               </ul>
             </div>
@@ -109,15 +81,9 @@ function ChunkCard({ chunk, resources, navContext }) {
         </div>
       ) : (
         <ul className="chunk-resource-list">
-          {resources.map(r => (
-            <li key={r.id}>
-              <ResourceItem resource={r} navContext={navContext} />
-            </li>
-          ))}
+          {resources.map(r => <li key={r.id}><ResourceItem resource={r} navContext={navContext} /></li>)}
         </ul>
       )}
-
-      {/* Randomiser widget — always shown at the bottom of each chunk */}
       <div className="chunk-randomiser-wrapper">
         <ChunkRandomiser chunkTitle={chunk.title} />
       </div>
@@ -127,13 +93,14 @@ function ChunkCard({ chunk, resources, navContext }) {
 
 export default function ChunkPage() {
   const { unitId } = useParams()
-  const [unit, setUnit]                   = useState(null)
-  const [module, setModule]               = useState(null)
-  const [course, setCourse]               = useState(null)
-  const [chunks, setChunks]               = useState([])
+  const [unit, setUnit]         = useState(null)
+  const [module, setModule]     = useState(null)
+  const [course, setCourse]     = useState(null)
+  const [chunks, setChunks]     = useState([])
   const [resourcesByChunk, setResourcesByChunk] = useState({})
-  const [loading, setLoading]             = useState(true)
-  const [error, setError]                 = useState(null)
+  const [loading, setLoading]   = useState(true)
+  const [error, setError]       = useState(null)
+  const [activeTab, setActiveTab] = useState('content')
 
   useEffect(() => {
     async function fetchData() {
@@ -149,22 +116,16 @@ export default function ChunkPage() {
       setCourse(unitData.modules?.courses)
 
       const { data: chunksData, error: chunksError } = await supabase
-        .from('chunks')
-        .select('*')
-        .eq('unit_id', unitId)
-        .order('order_index')
-
+        .from('chunks').select('*').eq('unit_id', unitId).order('order_index')
       if (chunksError) { setError(chunksError.message); setLoading(false); return }
       setChunks(chunksData)
 
       if (chunksData.length > 0) {
-        const chunkIds = chunksData.map(c => c.id)
         const { data: crData } = await supabase
           .from('chunk_resources')
           .select('chunk_id, purpose, order_index, resources(*)')
-          .in('chunk_id', chunkIds)
+          .in('chunk_id', chunksData.map(c => c.id))
           .order('order_index')
-
         if (crData) {
           const grouped = {}
           crData.forEach(row => {
@@ -174,7 +135,6 @@ export default function ChunkPage() {
           setResourcesByChunk(grouped)
         }
       }
-
       setLoading(false)
     }
     fetchData()
@@ -184,26 +144,20 @@ export default function ChunkPage() {
   if (error)   return <div className="page"><p className="page-error">Error: {error}</p></div>
 
   const totalResources = Object.values(resourcesByChunk).flat().length
-
   const navContext = {
-    unitId,
-    unitTitle:   unit?.title,
-    moduleId:    module?.id,
-    moduleTitle: module?.title,
-    courseId:    course?.id,
-    courseTitle: course?.title,
+    unitId, unitTitle: unit?.title,
+    moduleId: module?.id, moduleTitle: module?.title,
+    courseId: course?.id, courseTitle: course?.title,
   }
 
   return (
     <div className="page">
-      <Breadcrumb
-        items={[
-          { label: 'Courses',                           to: '/' },
-          { label: course?.title ?? 'Course',  to: `/modules/${course?.id}` },
-          { label: module?.title ?? 'Module',  to: `/units/${module?.id}` },
-          { label: unit?.title ?? 'Unit' },
-        ]}
-      />
+      <Breadcrumb items={[
+        { label: 'Courses', to: '/' },
+        { label: course?.title ?? 'Course', to: `/modules/${course?.id}` },
+        { label: module?.title ?? 'Module', to: `/units/${module?.id}` },
+        { label: unit?.title ?? 'Unit' },
+      ]} />
 
       <div className="page-header">
         <div>
@@ -213,28 +167,48 @@ export default function ChunkPage() {
         </div>
         <div className="page-header-meta">
           <span className="meta-badge">{chunks.length} {chunks.length === 1 ? 'chunk' : 'chunks'}</span>
-          {totalResources > 0 && (
-            <span className="meta-badge">{totalResources} {totalResources === 1 ? 'resource' : 'resources'}</span>
-          )}
+          {totalResources > 0 && <span className="meta-badge">{totalResources} {totalResources === 1 ? 'resource' : 'resources'}</span>}
         </div>
       </div>
 
-      {chunks.length === 0 ? (
-        <div className="empty-state">
-          <div className="empty-state-icon">🧩</div>
-          <p>No chunks have been added to this unit yet.</p>
-        </div>
-      ) : (
-        <div className="chunk-list">
-          {chunks.map(chunk => (
-            <ChunkCard
-              key={chunk.id}
-              chunk={chunk}
-              resources={resourcesByChunk[chunk.id] ?? []}
-              navContext={navContext}
-            />
-          ))}
-        </div>
+      {/* Tabs */}
+      <div className="page-tabs">
+        <button
+          className={`page-tab ${activeTab === 'content' ? 'page-tab-active' : ''}`}
+          onClick={() => setActiveTab('content')}
+        >
+          📖 Resources
+        </button>
+        <button
+          className={`page-tab ${activeTab === 'flashcards' ? 'page-tab-active' : ''}`}
+          onClick={() => setActiveTab('flashcards')}
+        >
+          🃏 Flashcards
+        </button>
+      </div>
+
+      {activeTab === 'content' && (
+        chunks.length === 0 ? (
+          <div className="empty-state">
+            <div className="empty-state-icon">🧩</div>
+            <p>No chunks have been added to this unit yet.</p>
+          </div>
+        ) : (
+          <div className="chunk-list">
+            {chunks.map(chunk => (
+              <ChunkCard
+                key={chunk.id}
+                chunk={chunk}
+                resources={resourcesByChunk[chunk.id] ?? []}
+                navContext={navContext}
+              />
+            ))}
+          </div>
+        )
+      )}
+
+      {activeTab === 'flashcards' && (
+        <FlashcardTabContent chunkIds={chunks.map(c => c.id)} />
       )}
     </div>
   )

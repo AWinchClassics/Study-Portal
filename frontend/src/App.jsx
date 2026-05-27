@@ -10,30 +10,28 @@ import UnitPage       from './pages/UnitPage'
 import ChunkPage      from './pages/ChunkPage'
 import QuizPage       from './pages/QuizPage'
 import RandomiserPage from './pages/RandomiserPage'
+import FlashcardsPage from './pages/FlashcardsPage'
 
 // Teacher pages
-import TeacherDashboard         from './pages/teacher/TeacherDashboard'
-import TeacherCoursesPage       from './pages/teacher/TeacherCoursesPage'
-import TeacherCoursePage        from './pages/teacher/TeacherCoursePage'
-import TeacherModulePage        from './pages/teacher/TeacherModulePage'
-import TeacherUnitPage          from './pages/teacher/TeacherUnitPage'
-import TeacherChunkPage         from './pages/teacher/TeacherChunkPage'
-import TeacherResourcesPage     from './pages/teacher/TeacherResourcesPage'
-import TeacherRandomiserPage    from './pages/teacher/TeacherRandomiserPage'
+import TeacherDashboard        from './pages/teacher/TeacherDashboard'
+import TeacherCoursesPage      from './pages/teacher/TeacherCoursesPage'
+import TeacherCoursePage       from './pages/teacher/TeacherCoursePage'
+import TeacherModulePage       from './pages/teacher/TeacherModulePage'
+import TeacherUnitPage         from './pages/teacher/TeacherUnitPage'
+import TeacherChunkPage        from './pages/teacher/TeacherChunkPage'
+import TeacherResourcesPage    from './pages/teacher/TeacherResourcesPage'
+import TeacherRandomiserPage   from './pages/teacher/TeacherRandomiserPage'
+import TeacherGlossaryPage     from './pages/teacher/TeacherGlossaryPage'
 
-// Student layout — sidebar + main content
 function StudentLayout({ children }) {
   return (
     <div className="student-layout">
       <Sidebar />
-      <main className="student-main">
-        {children}
-      </main>
+      <main className="student-main">{children}</main>
     </div>
   )
 }
 
-// Teacher section — password protected, own sidebar layout
 function TeacherSection() {
   return (
     <TeacherRoute>
@@ -46,6 +44,7 @@ function TeacherSection() {
         <Route path="/chunks/:chunkId"   element={<TeacherChunkPage />} />
         <Route path="/resources"         element={<TeacherResourcesPage />} />
         <Route path="/randomiser"        element={<TeacherRandomiserPage />} />
+        <Route path="/glossary"          element={<TeacherGlossaryPage />} />
       </Routes>
     </TeacherRoute>
   )
@@ -55,16 +54,14 @@ function App() {
   return (
     <TeacherAuthProvider>
       <Routes>
-        {/* Student routes — all wrapped in sidebar layout */}
         <Route path="/"                  element={<StudentLayout><CoursesPage /></StudentLayout>} />
         <Route path="/modules/:courseId" element={<StudentLayout><ModulePage /></StudentLayout>} />
         <Route path="/units/:moduleId"   element={<StudentLayout><UnitPage /></StudentLayout>} />
         <Route path="/chunks/:unitId"    element={<StudentLayout><ChunkPage /></StudentLayout>} />
         <Route path="/quiz/:resourceId"  element={<StudentLayout><QuizPage /></StudentLayout>} />
         <Route path="/randomiser"        element={<StudentLayout><RandomiserPage /></StudentLayout>} />
-
-        {/* Teacher routes — no student sidebar, own layout */}
-        <Route path="/teacher/*" element={<TeacherSection />} />
+        <Route path="/flashcards"        element={<StudentLayout><FlashcardsPage /></StudentLayout>} />
+        <Route path="/teacher/*"         element={<TeacherSection />} />
       </Routes>
     </TeacherAuthProvider>
   )
