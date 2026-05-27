@@ -5,10 +5,10 @@ import FlashcardViewer from './FlashcardViewer'
 /**
  * FlashcardTabContent
  *
- * Fetches glossary terms for a set of chunk IDs and renders FlashcardViewer.
- * Queries two sources and merges them:
- *   - unit_glossary  — terms assigned at unit level (bulk import / teacher)
- *   - chunk_glossary — terms assigned to a specific chunk (teacher manual)
+ * Fetches glossary terms for a set of chunk IDs from all three levels:
+ *   - chunk_glossary  — terms assigned to a specific chunk
+ *   - unit_glossary   — terms assigned to a unit (shown for all its chunks)
+ *   - module_glossary — terms assigned to a module (shown for all its chunks)
  *
  * Props:
  *   chunkIds — array of chunk UUIDs
@@ -29,7 +29,7 @@ export default function FlashcardTabContent({ chunkIds = [] }) {
     setLoading(true)
 
     async function fetchTerms() {
-      // 1. Find the unique unit IDs that own these chunks
+      // 1. Resolve unit IDs from chunk IDs
       const { data: chunkData } = await supabase
         .from('chunks')
         .select('id, unit_id')
@@ -37,23 +37,36 @@ export default function FlashcardTabContent({ chunkIds = [] }) {
 
       const unitIds = [...new Set((chunkData ?? []).map(c => c.unit_id).filter(Boolean))]
 
-      // 2. Fetch unit-level terms and chunk-level terms in parallel
-      const [{ data: unitCG }, { data: chunkCG }] = await Promise.all([
+      // 2. Resolve module IDs from unit IDs
+      const { data: unitData } = unitIds.length > 0
+        ? await supabase.from('units').select('id, module_id').in('id', unitIds)
+        : { data: [] }
+
+      const moduleIds = [...new Set((unitData ?? []).map(u => u.module_id).filter(Boolean))]
+
+      // 3. Query all three glossary tables in parallel
+      const [{ data: chunkCG }, { data: unitCG }, { data: moduleCG }] = await Promise.all([
+        supabase.from('chunk_glossary')
+          .select('priority, glossary_terms(id, term, definition, category, date)')
+          .in('chunk_id', chunkIds),
         unitIds.length > 0
           ? supabase.from('unit_glossary')
               .select('priority, glossary_terms(id, term, definition, category, date)')
               .in('unit_id', unitIds)
           : { data: [] },
-        supabase.from('chunk_glossary')
-          .select('priority, glossary_terms(id, term, definition, category, date)')
-          .in('chunk_id', chunkIds),
+        moduleIds.length > 0
+          ? supabase.from('module_glossary')
+              .select('priority, glossary_terms(id, term, definition, category, date)')
+              .in('module_id', moduleIds)
+          : { data: [] },
       ])
 
-      // 3. Merge and deduplicate — chunk-level priority wins over unit-level
+      // 4. Merge and deduplicate — more specific level wins on priority
       const priorityRank = { core: 0, useful: 1, stretch: 2 }
       const byId = {}
 
-      const allRows = [...(unitCG ?? []), ...(chunkCG ?? [])]
+      // Module is least specific → chunk is most specific, so add in that order
+      const allRows = [...(moduleCG ?? []), ...(unitCG ?? []), ...(chunkCG ?? [])]
       allRows.forEach(row => {
         const t = row.glossary_terms
         if (!t) return

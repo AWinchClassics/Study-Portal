@@ -3,12 +3,13 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { supabase } from '../../supabase'
 import TeacherLayout from '../../components/teacher/TeacherLayout'
 import { InlineEdit, ConfirmButton, StatusMessage } from '../../components/teacher/TeacherUI'
+import TeacherGlossarySection from '../../components/teacher/TeacherGlossarySection'
 
 export default function TeacherUnitPage() {
   const { unitId } = useParams()
   const navigate = useNavigate()
 
-  const [unit, setUnit] = useState(null)
+  const [unit, setUnit]     = useState(null)
   const [module, setModule] = useState(null)
   const [chunks, setChunks] = useState([])
   const [loading, setLoading] = useState(true)
@@ -20,19 +21,12 @@ export default function TeacherUnitPage() {
     const { data: unitData } = await supabase
       .from('units')
       .select('*, modules(id, title, course_id, courses(id, title))')
-      .eq('id', unitId)
-      .single()
+      .eq('id', unitId).single()
 
-    if (unitData) {
-      setUnit(unitData)
-      setModule(unitData.modules)
-    }
+    if (unitData) { setUnit(unitData); setModule(unitData.modules) }
 
     const { data: chunksData } = await supabase
-      .from('chunks')
-      .select('*')
-      .eq('unit_id', unitId)
-      .order('order_index')
+      .from('chunks').select('*').eq('unit_id', unitId).order('order_index')
 
     if (chunksData) setChunks(chunksData)
     setLoading(false)
@@ -48,8 +42,7 @@ export default function TeacherUnitPage() {
     const { data, error } = await supabase
       .from('chunks')
       .insert({ unit_id: unitId, title: 'New Chunk', order_index: chunks.length })
-      .select()
-      .single()
+      .select().single()
     if (error) { setStatus({ type: 'error', msg: error.message }); return }
     setChunks(prev => [...prev, data])
   }
@@ -87,9 +80,9 @@ export default function TeacherUnitPage() {
     ;[updated[idx], updated[swapIdx]] = [updated[swapIdx], updated[idx]]
     updated.forEach((c, i) => { c.order_index = i })
     setChunks(updated)
-    await Promise.all(
-      updated.map(c => supabase.from('chunks').update({ order_index: c.order_index }).eq('id', c.id))
-    )
+    await Promise.all(updated.map(c =>
+      supabase.from('chunks').update({ order_index: c.order_index }).eq('id', c.id)
+    ))
   }
 
   if (loading) return <div className="page"><div className="loading-pulse">Loading…</div></div>
@@ -98,7 +91,8 @@ export default function TeacherUnitPage() {
     <TeacherLayout
       title={unit?.title ?? 'Unit'}
       actions={
-        <button className="t-btn t-btn-ghost" onClick={() => navigate(`/teacher/modules/${module?.id}`)}>
+        <button className="t-btn t-btn-ghost"
+          onClick={() => navigate(`/teacher/modules/${module?.id}`)}>
           ← {module?.title ?? 'Module'}
         </button>
       }
@@ -107,6 +101,7 @@ export default function TeacherUnitPage() {
         {status?.msg}
       </StatusMessage>
 
+      {/* Unit title */}
       <div className="t-section">
         <h2 className="t-section-title">Unit title</h2>
         <InlineEdit
@@ -116,12 +111,11 @@ export default function TeacherUnitPage() {
         />
       </div>
 
+      {/* Chunks */}
       <div className="t-section">
         <div className="t-section-header">
           <h2 className="t-section-title">Chunks</h2>
-          <button className="t-btn t-btn-primary" onClick={handleAddChunk}>
-            + Add chunk
-          </button>
+          <button className="t-btn t-btn-primary" onClick={handleAddChunk}>+ Add chunk</button>
         </div>
 
         {chunks.length === 0 ? (
@@ -132,18 +126,9 @@ export default function TeacherUnitPage() {
               <div key={chunk.id} className="t-chunk-row">
                 <div className="t-chunk-row-top">
                   <div className="t-list-row-order">
-                    <button
-                      className="t-order-btn"
-                      onClick={() => handleMoveChunk(chunk.id, -1)}
-                      disabled={idx === 0}
-                    >↑</button>
-                    <button
-                      className="t-order-btn"
-                      onClick={() => handleMoveChunk(chunk.id, 1)}
-                      disabled={idx === chunks.length - 1}
-                    >↓</button>
+                    <button className="t-order-btn" onClick={() => handleMoveChunk(chunk.id, -1)} disabled={idx === 0}>↑</button>
+                    <button className="t-order-btn" onClick={() => handleMoveChunk(chunk.id, 1)} disabled={idx === chunks.length - 1}>↓</button>
                   </div>
-
                   <div className="t-chunk-row-title">
                     <InlineEdit
                       value={chunk.title}
@@ -151,12 +136,9 @@ export default function TeacherUnitPage() {
                       className="t-list-title"
                     />
                   </div>
-
                   <div className="t-list-row-actions">
-                    <button
-                      className="t-btn t-btn-ghost"
-                      onClick={() => navigate(`/teacher/chunks/${chunk.id}`)}
-                    >
+                    <button className="t-btn t-btn-ghost"
+                      onClick={() => navigate(`/teacher/chunks/${chunk.id}`)}>
                       Resources →
                     </button>
                     <ConfirmButton
@@ -168,7 +150,6 @@ export default function TeacherUnitPage() {
                     </ConfirmButton>
                   </div>
                 </div>
-
                 <div className="t-chunk-row-meta">
                   <div className="t-chunk-meta-field">
                     <span className="t-chunk-meta-label">Description</span>
@@ -193,6 +174,16 @@ export default function TeacherUnitPage() {
             ))}
           </div>
         )}
+      </div>
+
+      {/* Unit-level glossary terms */}
+      <div className="t-section">
+        <TeacherGlossarySection
+          table="unit_glossary"
+          parentId={unitId}
+          parentKey="unit_id"
+          onStatus={(type, msg) => setStatus({ type, msg })}
+        />
       </div>
     </TeacherLayout>
   )

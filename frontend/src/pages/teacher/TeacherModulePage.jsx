@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { supabase } from '../../supabase'
 import TeacherLayout from '../../components/teacher/TeacherLayout'
 import { InlineEdit, ConfirmButton, StatusMessage } from '../../components/teacher/TeacherUI'
+import TeacherGlossarySection from '../../components/teacher/TeacherGlossarySection'
 
 export default function TeacherModulePage() {
   const { moduleId } = useParams()
@@ -10,7 +11,7 @@ export default function TeacherModulePage() {
 
   const [module, setModule] = useState(null)
   const [course, setCourse] = useState(null)
-  const [units, setUnits] = useState([])
+  const [units, setUnits]   = useState([])
   const [loading, setLoading] = useState(true)
   const [status, setStatus] = useState(null)
 
@@ -20,19 +21,12 @@ export default function TeacherModulePage() {
     const { data: modData } = await supabase
       .from('modules')
       .select('*, courses(id, title)')
-      .eq('id', moduleId)
-      .single()
+      .eq('id', moduleId).single()
 
-    if (modData) {
-      setModule(modData)
-      setCourse(modData.courses)
-    }
+    if (modData) { setModule(modData); setCourse(modData.courses) }
 
     const { data: unitsData } = await supabase
-      .from('units')
-      .select('*')
-      .eq('module_id', moduleId)
-      .order('order_index')
+      .from('units').select('*').eq('module_id', moduleId).order('order_index')
 
     if (unitsData) setUnits(unitsData)
     setLoading(false)
@@ -48,8 +42,7 @@ export default function TeacherModulePage() {
     const { data, error } = await supabase
       .from('units')
       .insert({ module_id: moduleId, title: 'New Unit', order_index: units.length })
-      .select()
-      .single()
+      .select().single()
     if (error) { setStatus({ type: 'error', msg: error.message }); return }
     setUnits(prev => [...prev, data])
   }
@@ -74,9 +67,9 @@ export default function TeacherModulePage() {
     ;[updated[idx], updated[swapIdx]] = [updated[swapIdx], updated[idx]]
     updated.forEach((u, i) => { u.order_index = i })
     setUnits(updated)
-    await Promise.all(
-      updated.map(u => supabase.from('units').update({ order_index: u.order_index }).eq('id', u.id))
-    )
+    await Promise.all(updated.map(u =>
+      supabase.from('units').update({ order_index: u.order_index }).eq('id', u.id)
+    ))
   }
 
   if (loading) return <div className="page"><div className="loading-pulse">Loading…</div></div>
@@ -85,7 +78,8 @@ export default function TeacherModulePage() {
     <TeacherLayout
       title={module?.title ?? 'Module'}
       actions={
-        <button className="t-btn t-btn-ghost" onClick={() => navigate(`/teacher/courses/${course?.id}`)}>
+        <button className="t-btn t-btn-ghost"
+          onClick={() => navigate(`/teacher/courses/${course?.id}`)}>
           ← {course?.title ?? 'Course'}
         </button>
       }
@@ -94,6 +88,7 @@ export default function TeacherModulePage() {
         {status?.msg}
       </StatusMessage>
 
+      {/* Module title */}
       <div className="t-section">
         <h2 className="t-section-title">Module title</h2>
         <InlineEdit
@@ -103,12 +98,11 @@ export default function TeacherModulePage() {
         />
       </div>
 
+      {/* Units */}
       <div className="t-section">
         <div className="t-section-header">
           <h2 className="t-section-title">Units</h2>
-          <button className="t-btn t-btn-primary" onClick={handleAddUnit}>
-            + Add unit
-          </button>
+          <button className="t-btn t-btn-primary" onClick={handleAddUnit}>+ Add unit</button>
         </div>
 
         {units.length === 0 ? (
@@ -118,16 +112,8 @@ export default function TeacherModulePage() {
             {units.map((unit, idx) => (
               <div key={unit.id} className="t-list-row">
                 <div className="t-list-row-order">
-                  <button
-                    className="t-order-btn"
-                    onClick={() => handleMoveUnit(unit.id, -1)}
-                    disabled={idx === 0}
-                  >↑</button>
-                  <button
-                    className="t-order-btn"
-                    onClick={() => handleMoveUnit(unit.id, 1)}
-                    disabled={idx === units.length - 1}
-                  >↓</button>
+                  <button className="t-order-btn" onClick={() => handleMoveUnit(unit.id, -1)} disabled={idx === 0}>↑</button>
+                  <button className="t-order-btn" onClick={() => handleMoveUnit(unit.id, 1)} disabled={idx === units.length - 1}>↓</button>
                 </div>
                 <div className="t-list-row-main">
                   <InlineEdit
@@ -137,10 +123,8 @@ export default function TeacherModulePage() {
                   />
                 </div>
                 <div className="t-list-row-actions">
-                  <button
-                    className="t-btn t-btn-ghost"
-                    onClick={() => navigate(`/teacher/units/${unit.id}`)}
-                  >
+                  <button className="t-btn t-btn-ghost"
+                    onClick={() => navigate(`/teacher/units/${unit.id}`)}>
                     Manage →
                   </button>
                   <ConfirmButton
@@ -155,6 +139,16 @@ export default function TeacherModulePage() {
             ))}
           </div>
         )}
+      </div>
+
+      {/* Module-level glossary terms */}
+      <div className="t-section">
+        <TeacherGlossarySection
+          table="module_glossary"
+          parentId={moduleId}
+          parentKey="module_id"
+          onStatus={(type, msg) => setStatus({ type, msg })}
+        />
       </div>
     </TeacherLayout>
   )

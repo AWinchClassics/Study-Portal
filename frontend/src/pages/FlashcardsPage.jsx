@@ -130,29 +130,37 @@ export default function FlashcardsPage() {
 
     const chunkIdArray = [...selectedChunks]
 
-    // Find unique unit IDs for the selected chunks
+    // Resolve unit IDs from chunks
     const { data: chunkData } = await supabase
-      .from('chunks')
-      .select('id, unit_id')
-      .in('id', chunkIdArray)
-
+      .from('chunks').select('id, unit_id').in('id', chunkIdArray)
     const unitIds = [...new Set((chunkData ?? []).map(c => c.unit_id).filter(Boolean))]
 
-    // Fetch unit-level and chunk-level terms in parallel
-    const [{ data: unitCG }, { data: chunkCG }] = await Promise.all([
+    // Resolve module IDs from units
+    const { data: unitData } = unitIds.length > 0
+      ? await supabase.from('units').select('id, module_id').in('id', unitIds)
+      : { data: [] }
+    const moduleIds = [...new Set((unitData ?? []).map(u => u.module_id).filter(Boolean))]
+
+    // Query all three tables in parallel
+    const [{ data: chunkCG }, { data: unitCG }, { data: moduleCG }] = await Promise.all([
+      supabase.from('chunk_glossary')
+        .select('priority, glossary_terms(id, term, definition, category, date)')
+        .in('chunk_id', chunkIdArray),
       unitIds.length > 0
         ? supabase.from('unit_glossary')
             .select('priority, glossary_terms(id, term, definition, category, date)')
             .in('unit_id', unitIds)
         : { data: [] },
-      supabase.from('chunk_glossary')
-        .select('priority, glossary_terms(id, term, definition, category, date)')
-        .in('chunk_id', chunkIdArray),
+      moduleIds.length > 0
+        ? supabase.from('module_glossary')
+            .select('priority, glossary_terms(id, term, definition, category, date)')
+            .in('module_id', moduleIds)
+        : { data: [] },
     ])
 
     const priorityRank = { core: 0, useful: 1, stretch: 2 }
     const byId = {}
-    const allRows = [...(unitCG ?? []), ...(chunkCG ?? [])]
+    const allRows = [...(moduleCG ?? []), ...(unitCG ?? []), ...(chunkCG ?? [])]
     allRows.forEach(row => {
       const t = row.glossary_terms
       if (!t) return
@@ -163,7 +171,6 @@ export default function FlashcardsPage() {
       }
     })
     setCards(Object.values(byId))
-
     setLoadingCards(false)
   }
 
