@@ -11,6 +11,7 @@ import ChunkPage      from './pages/ChunkPage'
 import QuizPage       from './pages/QuizPage'
 import RandomiserPage from './pages/RandomiserPage'
 import FlashcardsPage from './pages/FlashcardsPage'
+import GlossaryPage   from './pages/GlossaryPage'
 
 // Teacher pages
 import TeacherDashboard        from './pages/teacher/TeacherDashboard'
@@ -61,6 +62,7 @@ function App() {
         <Route path="/quiz/:resourceId"  element={<StudentLayout><QuizPage /></StudentLayout>} />
         <Route path="/randomiser"        element={<StudentLayout><RandomiserPage /></StudentLayout>} />
         <Route path="/flashcards"        element={<StudentLayout><FlashcardsPage /></StudentLayout>} />
+        <Route path="/glossary"          element={<StudentLayout><GlossaryPage /></StudentLayout>} />
         <Route path="/teacher/*"         element={<TeacherSection />} />
       </Routes>
     </TeacherAuthProvider>

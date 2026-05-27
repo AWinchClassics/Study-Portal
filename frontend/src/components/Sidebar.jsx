@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 
 const NAV_ITEMS = [
-  { to: '/',            label: 'Courses',             icon: '📚', end: true },
-  { to: '/flashcards',  label: 'Flashcards',          icon: '🃏' },
-  { to: '/randomiser',  label: 'Revision Randomiser',  icon: '🎲' },
+  { to: '/',           label: 'Courses',             icon: '📚', end: true },
+  { to: '/glossary',   label: 'Glossary',            icon: '📖' },
+  { to: '/flashcards', label: 'Flashcards',          icon: '🃏' },
+  { to: '/randomiser', label: 'Revision Randomiser', icon: '🎲' },
 ]
 
 export default function Sidebar() {
@@ -42,7 +43,9 @@ export default function Sidebar() {
                 key={item.to}
                 to={item.to}
                 end={item.end}
-                className={({ isActive }) => `sidebar-nav-item ${isActive ? 'sidebar-nav-active' : ''}`}
+                className={({ isActive }) =>
+                  `sidebar-nav-item ${isActive ? 'sidebar-nav-active' : ''}`
+                }
               >
                 <span className="sidebar-nav-icon">{item.icon}</span>
                 {item.label}
