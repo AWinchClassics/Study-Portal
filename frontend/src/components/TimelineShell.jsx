@@ -1,14 +1,18 @@
 import { useState, useCallback } from 'react'
 
 // ── Helpers ──────────────────────────────────────────────────────
-function parseDateNum(str) {
+export function parseDateNum(str) {
   const m = String(str || '').match(/(\d+)/)
   return m ? parseInt(m[1]) : 0
 }
 
-// Sort oldest-first for BC dates (higher number = older)
-function sortByDate(events) {
-  return [...events].sort((a, b) => parseDateNum(b.date) - parseDateNum(a.date))
+// Oldest first for BC dates (higher number = older)
+export function sortByDate(events) {
+  return [...events].sort((a, b) => {
+    const d = parseDateNum(b.date) - parseDateNum(a.date)
+    if (d !== 0) return d
+    return (a.sort_order ?? 0) - (b.sort_order ?? 0)
+  })
 }
 
 function shuffleArray(arr) {
@@ -20,12 +24,12 @@ function shuffleArray(arr) {
   return a
 }
 
-function pickRandom(arr, n) {
+export function pickRandom(arr, n) {
   return shuffleArray(arr).slice(0, n)
 }
 
 // ── Vertical timeline view ───────────────────────────────────────
-function TimelineView({ events }) {
+export function TimelineView({ events }) {
   const sorted = sortByDate(events)
   return (
     <div className="tl-view">
@@ -40,9 +44,7 @@ function TimelineView({ events }) {
           </div>
           <div className="tl-content-col">
             <p className="tl-label">{ev.label}</p>
-            {ev.definition && (
-              <p className="tl-definition">{ev.definition}</p>
-            )}
+            {ev.definition && <p className="tl-definition">{ev.definition}</p>}
           </div>
         </div>
       ))}
@@ -53,7 +55,7 @@ function TimelineView({ events }) {
 // ── Session size picker ──────────────────────────────────────────
 const SESSION_SIZES = [5, 10, 15, 20]
 
-function SessionPicker({ total, onStart }) {
+export function SessionPicker({ total, onStart }) {
   const options = SESSION_SIZES.filter(n => n <= total)
   return (
     <div className="tl-session-picker">
@@ -72,15 +74,14 @@ function SessionPicker({ total, onStart }) {
 }
 
 // ── Date Test ────────────────────────────────────────────────────
-function DateTest({ events, allEvents, onRetry }) {
+export function DateTest({ events, allEvents, onRetry }) {
   const [index, setIndex]   = useState(0)
   const [score, setScore]   = useState(0)
-  const [chosen, setChosen] = useState(null) // chosen date string
+  const [chosen, setChosen] = useState(null)
   const [finished, setFinished] = useState(false)
 
   const current = events[index]
 
-  // Build 4 options: 1 correct + 3 wrong from allEvents pool
   const buildOptions = useCallback((ev) => {
     const wrong = allEvents
       .filter(e => e.id !== ev.id && e.date !== ev.date)
@@ -97,12 +98,8 @@ function DateTest({ events, allEvents, onRetry }) {
     setChosen(date)
     if (correct) setScore(s => s + 1)
     setTimeout(() => {
-      if (index < events.length - 1) {
-        setIndex(i => i + 1)
-        setChosen(null)
-      } else {
-        setFinished(true)
-      }
+      if (index < events.length - 1) { setIndex(i => i + 1); setChosen(null) }
+      else setFinished(true)
     }, 900)
   }
 
@@ -129,25 +126,19 @@ function DateTest({ events, allEvents, onRetry }) {
         <span className="tl-test-score">Score: {score}</span>
       </div>
       <div className="tl-progress-bar">
-        <div className="tl-progress-fill" style={{ width: `${((index) / events.length) * 100}%` }} />
+        <div className="tl-progress-fill" style={{ width: `${(index / events.length) * 100}%` }} />
       </div>
-
       <p className="tl-test-prompt">When did this event occur?</p>
       <p className="tl-test-question">{current.label}</p>
-
       <div className="tl-date-options">
         {currentOptions.map(date => {
           let cls = 'tl-date-option'
           if (chosen !== null) {
             if (date === current.date) cls += ' tl-opt-correct'
-            else if (date === chosen)  cls += ' tl-opt-incorrect'
-            else                       cls += ' tl-opt-dim'
+            else if (date === chosen) cls += ' tl-opt-incorrect'
+            else cls += ' tl-opt-dim'
           }
-          return (
-            <button key={date} className={cls} onClick={() => handleChoose(date)}>
-              {date}
-            </button>
-          )
+          return <button key={date} className={cls} onClick={() => handleChoose(date)}>{date}</button>
         })}
       </div>
     </div>
@@ -155,46 +146,49 @@ function DateTest({ events, allEvents, onRetry }) {
 }
 
 // ── Match Test ───────────────────────────────────────────────────
-// Ensures unique dates for clean matching
-function buildMatchSession(events, size) {
-  const seen = new Set()
-  const unique = events.filter(e => { if (seen.has(e.date)) return false; seen.add(e.date); return true })
-  return pickRandom(unique, Math.min(size, unique.length))
-}
+// Dates column: sorted chronologically, unique dates, showing count for duplicates.
+// Multiple events can share the same date — all are included and can be matched.
+export function MatchTest({ events, onRetry }) {
+  // Events shown shuffled in the left column
+  const [shuffledEvents] = useState(() => shuffleArray(events))
 
-function MatchTest({ events, allEvents, onRetry }) {
-  const [session]   = useState(() => buildMatchSession(events, events.length))
-  const [dates]     = useState(() => shuffleArray(session.map(e => e.date)))
-  const [selected, setSelected] = useState(null)   // selected event id
-  const [matched, setMatched]   = useState({})      // eventId → date
-  const [flash, setFlash]       = useState(null)    // {eventId, dateStr, result}
+  // Dates column: sorted unique dates (oldest BC first = highest number first)
+  const sortedUniqueDates = [...new Set(events.map(e => e.date))]
+    .sort((a, b) => parseDateNum(b) - parseDateNum(a))
+
+  const [selectedEventId, setSelectedEventId] = useState(null)
+  const [matched, setMatched] = useState(new Set()) // event IDs that are matched
+  const [flash, setFlash]     = useState(null)       // {eventId, date}
   const [finished, setFinished] = useState(false)
 
   function handleEventClick(eventId) {
-    if (matched[eventId]) return
-    setSelected(prev => prev === eventId ? null : eventId)
+    if (matched.has(eventId)) return
+    setSelectedEventId(prev => prev === eventId ? null : eventId)
     setFlash(null)
   }
 
-  function handleDateClick(dateStr) {
-    if (!selected) return
-    const ev = session.find(e => e.id === selected)
+  function handleDateClick(date) {
+    if (!selectedEventId) return
+    const ev = events.find(e => e.id === selectedEventId)
     if (!ev) return
 
-    if (ev.date === dateStr) {
-      const newMatched = { ...matched, [ev.id]: dateStr }
+    if (ev.date === date) {
+      const newMatched = new Set([...matched, ev.id])
       setMatched(newMatched)
-      setSelected(null)
+      setSelectedEventId(null)
       setFlash(null)
-      if (Object.keys(newMatched).length === session.length) setFinished(true)
+      if (newMatched.size === events.length) setFinished(true)
     } else {
-      setFlash({ eventId: ev.id, dateStr })
-      setTimeout(() => { setFlash(null); setSelected(null) }, 700)
+      setFlash({ eventId: ev.id, date })
+      setTimeout(() => { setFlash(null); setSelectedEventId(null) }, 700)
     }
   }
 
-  function isDateMatched(dateStr) {
-    return Object.values(matched).includes(dateStr)
+  // How many events with this date, how many are matched
+  function dateInfo(date) {
+    const total = events.filter(e => e.date === date).length
+    const done  = events.filter(e => e.date === date && matched.has(e.id)).length
+    return { total, done, complete: done === total }
   }
 
   if (finished) {
@@ -202,37 +196,36 @@ function MatchTest({ events, allEvents, onRetry }) {
       <div className="tl-result">
         <span className="tl-result-icon">🎉</span>
         <p className="tl-result-heading">All matched!</p>
-        <p className="tl-result-sub">{session.length} events matched correctly.</p>
+        <p className="tl-result-sub">{events.length} events matched correctly.</p>
         <button className="tl-btn tl-btn-primary" onClick={onRetry}>Try again</button>
       </div>
     )
   }
 
-  const matchedCount = Object.keys(matched).length
+  const matchedCount = matched.size
 
   return (
     <div className="tl-match-test">
       <div className="tl-test-progress">
-        <span>Matched: {matchedCount} / {session.length}</span>
+        <span>Matched: {matchedCount} / {events.length}</span>
       </div>
       <div className="tl-progress-bar">
-        <div className="tl-progress-fill" style={{ width: `${(matchedCount / session.length) * 100}%` }} />
+        <div className="tl-progress-fill" style={{ width: `${(matchedCount / events.length) * 100}%` }} />
       </div>
-
-      <p className="tl-match-hint">Select an event, then click its date to match them.</p>
+      <p className="tl-match-hint">Select an event, then click its date.</p>
 
       <div className="tl-match-grid">
-        {/* Events column */}
+        {/* Events column — shuffled */}
         <div className="tl-match-col">
           <p className="tl-match-col-header">Events</p>
-          {session.map(ev => {
-            const isMatched   = !!matched[ev.id]
-            const isSelected  = selected === ev.id
-            const isFlashing  = flash?.eventId === ev.id
+          {shuffledEvents.map(ev => {
+            const isMatched  = matched.has(ev.id)
+            const isSelected = selectedEventId === ev.id
+            const isFlashing = flash?.eventId === ev.id
             let cls = 'tl-match-item'
             if (isMatched)  cls += ' tl-match-correct'
-            else if (isSelected)  cls += ' tl-match-selected'
-            else if (isFlashing)  cls += ' tl-match-wrong'
+            else if (isSelected) cls += ' tl-match-selected'
+            else if (isFlashing) cls += ' tl-match-wrong'
             return (
               <button key={ev.id} className={cls} onClick={() => handleEventClick(ev.id)}>
                 {isMatched && <span className="tl-match-check">✓</span>}
@@ -242,20 +235,29 @@ function MatchTest({ events, allEvents, onRetry }) {
           })}
         </div>
 
-        {/* Dates column */}
+        {/* Dates column — sorted chronologically, unique dates */}
         <div className="tl-match-col">
           <p className="tl-match-col-header">Dates</p>
-          {dates.map(date => {
-            const isMatched  = isDateMatched(date)
-            const isFlashing = flash?.dateStr === date
+          {sortedUniqueDates.map(date => {
+            const { total, done, complete } = dateInfo(date)
+            const isFlashing = flash?.date === date
             let cls = 'tl-match-item tl-match-date'
-            if (isMatched)  cls += ' tl-match-correct'
+            if (complete)        cls += ' tl-match-correct'
             else if (isFlashing) cls += ' tl-match-wrong'
-            else if (selected)   cls += ' tl-match-date-active'
+            else if (selectedEventId) cls += ' tl-match-date-active'
             return (
-              <button key={date} className={cls} onClick={() => handleDateClick(date)} disabled={isMatched}>
-                {isMatched && <span className="tl-match-check">✓</span>}
-                {date}
+              <button key={date} className={cls}
+                onClick={() => handleDateClick(date)}
+                disabled={complete}
+              >
+                {complete && <span className="tl-match-check">✓</span>}
+                <span>{date}</span>
+                {/* Show count badge only when there are multiple events for this date */}
+                {total > 1 && (
+                  <span className="tl-date-multi-badge">
+                    {complete ? total : `${done}/${total}`}
+                  </span>
+                )}
               </button>
             )
           })}
@@ -265,18 +267,19 @@ function MatchTest({ events, allEvents, onRetry }) {
   )
 }
 
-// ── Main shell ───────────────────────────────────────────────────
+// ── Shell — pure content renderer, no mode bar ───────────────────
 /**
- * TimelineShell
+ * TimelineShell receives mode + session state from parent (TimelineTabContent).
+ * This keeps the mode selector above the timeline switcher at all times.
  *
  * Props:
- *   events  — array of {id, label, date, definition?}
- *   title   — string shown above the mode bar
+ *   events          — full event array
+ *   mode            — 'view' | 'date-test' | 'match-test'
+ *   session         — picked events for test, or null (shows session picker)
+ *   onStartSession  — (size) => void
+ *   onResetSession  — () => void
  */
-export default function TimelineShell({ events = [], title }) {
-  const [mode, setMode] = useState('view')
-  const [session, setSession] = useState(null) // array of picked events for test
-
+export default function TimelineShell({ events = [], mode, session, onStartSession, onResetSession }) {
   if (events.length === 0) {
     return (
       <div className="tl-empty">
@@ -286,61 +289,31 @@ export default function TimelineShell({ events = [], title }) {
     )
   }
 
-  function startSession(size) {
-    const sorted = sortByDate(events)
-    setSession(pickRandom(sorted, size))
+  if (mode === 'view') return <TimelineView events={events} />
+
+  // Test modes
+  if (!session) return <SessionPicker total={events.length} onStart={onStartSession} />
+
+  if (mode === 'date-test') {
+    return (
+      <DateTest
+        key={session.map(e => e.id).join('-')}
+        events={session}
+        allEvents={events}
+        onRetry={onResetSession}
+      />
+    )
   }
 
-  function resetSession() {
-    setSession(null)
+  if (mode === 'match-test') {
+    return (
+      <MatchTest
+        key={session.map(e => e.id).join('-')}
+        events={session}
+        onRetry={onResetSession}
+      />
+    )
   }
 
-  function changeMode(newMode) {
-    setMode(newMode)
-    setSession(null)
-  }
-
-  return (
-    <div className="tl-shell">
-      {/* Mode selector */}
-      <div className="tl-mode-bar">
-        <button className={`tl-mode-btn ${mode === 'view'       ? 'tl-mode-active' : ''}`} onClick={() => changeMode('view')}>
-          📅 Timeline
-        </button>
-        <button className={`tl-mode-btn ${mode === 'date-test'  ? 'tl-mode-active' : ''}`} onClick={() => changeMode('date-test')}>
-          🎯 Date Test
-        </button>
-        <button className={`tl-mode-btn ${mode === 'match-test' ? 'tl-mode-active' : ''}`} onClick={() => changeMode('match-test')}>
-          🔗 Match Test
-        </button>
-        <span className="tl-event-count">{events.length} events</span>
-      </div>
-
-      {/* View mode */}
-      {mode === 'view' && <TimelineView events={events} />}
-
-      {/* Test modes — session picker or active test */}
-      {(mode === 'date-test' || mode === 'match-test') && !session && (
-        <SessionPicker total={events.length} onStart={startSession} />
-      )}
-
-      {mode === 'date-test' && session && (
-        <DateTest
-          key={session.map(e => e.id).join('-')}
-          events={session}
-          allEvents={events}
-          onRetry={resetSession}
-        />
-      )}
-
-      {mode === 'match-test' && session && (
-        <MatchTest
-          key={session.map(e => e.id).join('-')}
-          events={session}
-          allEvents={events}
-          onRetry={resetSession}
-        />
-      )}
-    </div>
-  )
+  return null
 }

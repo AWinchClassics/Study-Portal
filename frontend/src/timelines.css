@@ -435,3 +435,72 @@
   .tl-date-options { grid-template-columns: 1fr 1fr; }
   .tl-test-question { font-size: 18px; }
 }
+
+/* ── Date count badge in match test ── */
+.tl-date-multi-badge {
+  margin-left: auto;
+  font-size: 10px;
+  font-weight: 700;
+  background: var(--border);
+  border-radius: 999px;
+  padding: 1px 6px;
+  color: var(--text);
+  flex-shrink: 0;
+}
+.tl-match-correct .tl-date-multi-badge {
+  background: rgba(22,163,74,0.2);
+  color: #16a34a;
+}
+
+/* ── Master timeline ordering section ── */
+.tl-teacher-date-group {
+  margin-bottom: 12px;
+}
+.tl-teacher-date-group-label {
+  font-size: 11px;
+  font-weight: 700;
+  font-family: var(--mono);
+  color: var(--accent);
+  letter-spacing: 0.06em;
+  margin: 0 0 4px;
+  padding: 0 2px;
+}
+
+/* ── Date suggestions dropdown ── */
+.tl-teacher-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  margin-top: 2px;
+}
+.tl-teacher-suggestions-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text);
+  padding: 6px 10px 4px;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.tl-teacher-suggestion-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 7px 10px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: var(--sans);
+  color: var(--text-h);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+.tl-teacher-suggestion-item:hover { background: var(--accent-bg); color: var(--accent); }
