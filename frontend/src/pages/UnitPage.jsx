@@ -3,6 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { supabase } from '../supabase'
 import Breadcrumb from '../components/Breadcrumb'
 import FlashcardTabContent from '../components/FlashcardTabContent'
+import TimelineTabContent from '../components/TimelineTabContent'
 
 export default function UnitPage() {
   const { moduleId } = useParams()
@@ -51,8 +52,8 @@ export default function UnitPage() {
   }, [moduleId])
 
   // Load chunk IDs for the flashcard tab when it's first opened
-  async function handleFlashcardTabOpen() {
-    setActiveTab('flashcards')
+  async function handleFlashcardTabOpen(tab = 'flashcards') {
+    setActiveTab(tab)
     if (moduleChunkIds !== null) return
     setLoadingChunkIds(true)
     const { data } = await supabase
@@ -85,17 +86,14 @@ export default function UnitPage() {
 
       {/* Tabs */}
       <div className="page-tabs">
-        <button
-          className={`page-tab ${activeTab === 'units' ? 'page-tab-active' : ''}`}
-          onClick={() => setActiveTab('units')}
-        >
+        <button className={`page-tab ${activeTab === 'units' ? 'page-tab-active' : ''}`} onClick={() => setActiveTab('units')}>
           📄 Units
         </button>
-        <button
-          className={`page-tab ${activeTab === 'flashcards' ? 'page-tab-active' : ''}`}
-          onClick={handleFlashcardTabOpen}
-        >
+        <button className={`page-tab ${activeTab === 'flashcards' ? 'page-tab-active' : ''}`} onClick={handleFlashcardTabOpen}>
           🃏 Flashcards
+        </button>
+        <button className={`page-tab ${activeTab === 'timelines' ? 'page-tab-active' : ''}`} onClick={handleFlashcardTabOpen.bind(null,'timelines')}>
+          📅 Timelines
         </button>
       </div>
 
@@ -135,6 +133,16 @@ export default function UnitPage() {
         loadingChunkIds
           ? <div className="loading-pulse">Loading flashcards…</div>
           : <FlashcardTabContent
+              chunkIds={moduleChunkIds ?? []}
+              unitIds={units.map(u => u.id)}
+              moduleIds={module ? [module.id] : []}
+            />
+      )}
+
+      {activeTab === 'timelines' && (
+        loadingChunkIds
+          ? <div className="loading-pulse">Loading timeline…</div>
+          : <TimelineTabContent
               chunkIds={moduleChunkIds ?? []}
               unitIds={units.map(u => u.id)}
               moduleIds={module ? [module.id] : []}

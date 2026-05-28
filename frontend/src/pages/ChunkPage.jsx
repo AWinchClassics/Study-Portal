@@ -4,6 +4,7 @@ import { supabase } from '../supabase'
 import Breadcrumb from '../components/Breadcrumb'
 import ChunkRandomiser from '../components/ChunkRandomiser'
 import FlashcardTabContent from '../components/FlashcardTabContent'
+import TimelineTabContent from '../components/TimelineTabContent'
 
 const SECTIONS = [
   { key: 'core',      label: 'Core Content',  icon: '📖' },
@@ -79,6 +80,12 @@ function ChunkCard({ chunk, resources, navContext }) {
         >
           🃏 Flashcards
         </button>
+        <button
+          className={`chunk-tab ${chunkTab === 'timelines' ? 'chunk-tab-active' : ''}`}
+          onClick={() => setChunkTab('timelines')}
+        >
+          📅 Timelines
+        </button>
       </div>
 
       {/* Resources tab */}
@@ -109,9 +116,14 @@ function ChunkCard({ chunk, resources, navContext }) {
         )
       )}
 
-      {/* Flashcards tab — chunk level only (no unitIds passed) */}
+      {/* Flashcards tab — chunk level only */}
       {chunkTab === 'flashcards' && (
         <FlashcardTabContent chunkIds={[chunk.id]} />
+      )}
+
+      {/* Timelines tab — chunk level only */}
+      {chunkTab === 'timelines' && (
+        <TimelineTabContent chunkIds={[chunk.id]} />
       )}
 
       {/* Randomiser — always visible at the bottom */}
@@ -216,6 +228,12 @@ export default function ChunkPage() {
         >
           🃏 Flashcards
         </button>
+        <button
+          className={`page-tab ${activeTab === 'timelines' ? 'page-tab-active' : ''}`}
+          onClick={() => setActiveTab('timelines')}
+        >
+          📅 Timelines
+        </button>
       </div>
 
       {activeTab === 'content' && (
@@ -240,6 +258,13 @@ export default function ChunkPage() {
 
       {activeTab === 'flashcards' && (
         <FlashcardTabContent
+          chunkIds={chunks.map(c => c.id)}
+          unitIds={[unitId]}
+        />
+      )}
+
+      {activeTab === 'timelines' && (
+        <TimelineTabContent
           chunkIds={chunks.map(c => c.id)}
           unitIds={[unitId]}
         />

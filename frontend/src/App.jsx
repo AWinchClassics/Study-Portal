@@ -2,8 +2,6 @@ import { Routes, Route } from 'react-router-dom'
 import { TeacherAuthProvider } from './context/TeacherAuthContext'
 import Sidebar from './components/Sidebar'
 import TeacherRoute from './components/teacher/TeacherRoute'
-
-// Student pages
 import CoursesPage    from './pages/CoursesPage'
 import ModulePage     from './pages/ModulePage'
 import UnitPage       from './pages/UnitPage'
@@ -12,8 +10,7 @@ import QuizPage       from './pages/QuizPage'
 import RandomiserPage from './pages/RandomiserPage'
 import FlashcardsPage from './pages/FlashcardsPage'
 import GlossaryPage   from './pages/GlossaryPage'
-
-// Teacher pages
+import TimelinesPage  from './pages/TimelinesPage'
 import TeacherDashboard        from './pages/teacher/TeacherDashboard'
 import TeacherCoursesPage      from './pages/teacher/TeacherCoursesPage'
 import TeacherCoursePage       from './pages/teacher/TeacherCoursePage'
@@ -23,6 +20,7 @@ import TeacherChunkPage        from './pages/teacher/TeacherChunkPage'
 import TeacherResourcesPage    from './pages/teacher/TeacherResourcesPage'
 import TeacherRandomiserPage   from './pages/teacher/TeacherRandomiserPage'
 import TeacherGlossaryPage     from './pages/teacher/TeacherGlossaryPage'
+import TeacherTimelinesPage    from './pages/teacher/TeacherTimelinesPage'
 
 function StudentLayout({ children }) {
   return (
@@ -46,6 +44,7 @@ function TeacherSection() {
         <Route path="/resources"         element={<TeacherResourcesPage />} />
         <Route path="/randomiser"        element={<TeacherRandomiserPage />} />
         <Route path="/glossary"          element={<TeacherGlossaryPage />} />
+        <Route path="/timelines"         element={<TeacherTimelinesPage />} />
       </Routes>
     </TeacherRoute>
   )
@@ -63,6 +62,7 @@ function App() {
         <Route path="/randomiser"        element={<StudentLayout><RandomiserPage /></StudentLayout>} />
         <Route path="/flashcards"        element={<StudentLayout><FlashcardsPage /></StudentLayout>} />
         <Route path="/glossary"          element={<StudentLayout><GlossaryPage /></StudentLayout>} />
+        <Route path="/timelines"         element={<StudentLayout><TimelinesPage /></StudentLayout>} />
         <Route path="/teacher/*"         element={<TeacherSection />} />
       </Routes>
     </TeacherAuthProvider>
