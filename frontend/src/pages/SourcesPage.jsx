@@ -2,6 +2,31 @@ import { useEffect, useState, useMemo } from 'react'
 import { supabase } from '../supabase'
 import { SourceGroup, groupByAuthorTitle, formatRef } from '../components/SourceTabContent'
 
+// ── Range-aware token matching (shared with AttachSourceModal) ────
+function parseRange(token) {
+  const m = token.match(/^(\d+)\.(\d+)-(\d+)$/)
+  if (!m) return null
+  const [, book, s, e] = m
+  const start = parseInt(s), end = parseInt(e)
+  if (end <= start || end - start > 30) return null
+  const chapters = Array.from({ length: end - start + 1 }, (_, i) => String(start + i))
+  return { book, chapters }
+}
+
+function matchToken(source, token) {
+  const range = parseRange(token)
+  if (range) {
+    return String(source.book    || '').trim() === range.book &&
+           range.chapters.includes(String(source.chapter || '').trim())
+  }
+  return (
+    source.author?.toLowerCase().includes(token) ||
+    source.title?.toLowerCase().includes(token) ||
+    formatRef(source).toLowerCase().includes(token) ||
+    source.content?.toLowerCase().includes(token)
+  )
+}
+
 export default function SourcesPage() {
   const [modules, setModules]       = useState([])
   const [moduleId, setModuleId]     = useState(null)
@@ -10,7 +35,6 @@ export default function SourcesPage() {
   const [search, setSearch]         = useState('')
   const [authorFilter, setAuthorFilter] = useState('all')
 
-  // Load modules that have sources
   useEffect(() => {
     supabase
       .from('sources')
@@ -31,7 +55,6 @@ export default function SourcesPage() {
       })
   }, [])
 
-  // Load sources for selected module
   useEffect(() => {
     if (!moduleId) return
     setLoading(true)
@@ -47,32 +70,22 @@ export default function SourcesPage() {
       })
   }, [moduleId])
 
-  // Unique authors for filter pills
   const authors = useMemo(() => {
     const set = new Set(sources.map(s => s.author?.trim()).filter(Boolean))
     return [...set].sort()
   }, [sources])
 
   const filtered = useMemo(() => {
-    // Split query into tokens — all tokens must match somewhere in the source
-    // e.g. "Herodotus 6.42" → token "herodotus" in author AND "6.42" in reference
-    const tokens = search.toLowerCase().split(/\s+/).filter(Boolean)
+    const tokens = search.replace(/,/g, ' ').toLowerCase().split(/\s+/).filter(Boolean)
     return sources.filter(s => {
       const matchAuthor = authorFilter === 'all' || s.author?.trim() === authorFilter
       if (!matchAuthor) return false
       if (tokens.length === 0) return true
-      return tokens.every(token =>
-        s.author?.toLowerCase().includes(token) ||
-        s.title?.toLowerCase().includes(token) ||
-        s.content?.toLowerCase().includes(token) ||
-        formatRef(s).toLowerCase().includes(token)
-      )
+      return tokens.every(token => matchToken(s, token))
     })
   }, [sources, search, authorFilter])
 
   const groups = useMemo(() => groupByAuthorTitle(filtered), [filtered])
-
-  // Auto-expand groups when searching
   const defaultOpen = search.length > 0
 
   return (
@@ -102,15 +115,13 @@ export default function SourcesPage() {
         )}
       </div>
 
-      {/* Search */}
       <input
         className="src-search"
-        placeholder="Search by author, title, reference, or content…"
+        placeholder="Search — e.g. Herodotus 6.42  ·  Thucydides, 1.89-91  ·  Persian fleet"
         value={search}
         onChange={e => setSearch(e.target.value)}
       />
 
-      {/* Author filter pills */}
       {authors.length > 1 && (
         <div className="src-author-pills">
           <button
@@ -134,7 +145,6 @@ export default function SourcesPage() {
         </div>
       )}
 
-      {/* Count */}
       {!loading && (
         <p className="src-results-count">
           {filtered.length === sources.length
@@ -143,7 +153,6 @@ export default function SourcesPage() {
         </p>
       )}
 
-      {/* Source list */}
       {loading ? (
         <div className="loading-pulse">Loading sources…</div>
       ) : groups.length === 0 ? (
