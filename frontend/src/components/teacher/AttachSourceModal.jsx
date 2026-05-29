@@ -1,28 +1,19 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useMemo } from 'react'
 import { supabase } from '../../supabase'
-import { Modal, FormField } from './TeacherUI'
+import { Modal } from './TeacherUI'
 import { formatRef } from '../SourceTabContent'
 
 /**
  * AttachSourceModal
  *
- * Two-step source attachment:
- *   1. Search by author/title → shows list of matching works
- *   2. Type a reference (e.g. "6.42") → filters to exact extract
- *   3. Confirm to attach
- *
- * Props:
- *   moduleId   — the module to search sources within
- *   excludeIds — source IDs already attached to this chunk
- *   onAttach   — (sourceId) => void
- *   onClose    — () => void
+ * Single search bar — same token-based AND matching as the student Sources page.
+ * e.g. "Herodotus 6.42", "Thucydides 1.70", "Persian fleet"
  */
 export default function AttachSourceModal({ moduleId, excludeIds = [], onAttach, onClose }) {
-  const [allSources, setAllSources]   = useState([])
-  const [loading, setLoading]         = useState(true)
-  const [titleSearch, setTitleSearch] = useState('')  // step 1: filter by author/title
-  const [refQuery, setRefQuery]       = useState('')   // step 2: exact reference
-  const [selected, setSelected]       = useState(null) // confirmed source
+  const [allSources, setAllSources] = useState([])
+  const [loading, setLoading]       = useState(true)
+  const [search, setSearch]         = useState('')
+  const [selected, setSelected]     = useState(null)
 
   useEffect(() => {
     if (!moduleId) return
@@ -35,112 +26,62 @@ export default function AttachSourceModal({ moduleId, excludeIds = [], onAttach,
       })
   }, [moduleId])
 
-  // Step 1: filter by author/title text
-  const titleFiltered = allSources.filter(s => {
-    const q = titleSearch.toLowerCase()
-    return !q ||
-      s.author?.toLowerCase().includes(q) ||
-      s.title?.toLowerCase().includes(q)
-  })
-
-  // Step 2: filter by exact reference (Book.Chapter)
-  function matchesRef(s, query) {
-    const q = query.trim()
-    if (!q) return true
-    const parts = q.split('.')
-    if (parts.length >= 2) {
-      return String(s.book || '').trim() === parts[0].trim() &&
-             String(s.chapter || '').trim() === parts[1].trim()
-    }
-    // Single value — match chapter or section
-    return String(s.chapter || '').trim() === q ||
-           String(s.section  || '').trim() === q
-  }
-
-  const refFiltered = titleFiltered.filter(s => matchesRef(s, refQuery))
-
-  // Group by author+title for display in step 1
-  function uniqueWorks() {
-    const seen = new Set()
-    return titleFiltered.filter(s => {
-      const k = `${s.author?.trim()}|||${s.title?.trim()}`
-      if (seen.has(k)) return false
-      seen.add(k)
-      return true
-    })
-  }
-
-  const showResults = refQuery.trim().length > 0 ? refFiltered : []
-  const works = uniqueWorks()
+  const results = useMemo(() => {
+    const tokens = search.toLowerCase().split(/\s+/).filter(Boolean)
+    if (tokens.length === 0) return []
+    return allSources.filter(s =>
+      tokens.every(token =>
+        s.author?.toLowerCase().includes(token) ||
+        s.title?.toLowerCase().includes(token) ||
+        s.content?.toLowerCase().includes(token) ||
+        formatRef(s).toLowerCase().includes(token)
+      )
+    )
+  }, [allSources, search])
 
   return (
-    <Modal title="Attach a source" onClose={onClose} width={640}>
+    <Modal title="Attach a source" onClose={onClose} width={600}>
       {loading ? (
         <div className="loading-pulse">Loading sources…</div>
       ) : (
         <div>
-          <FormField label="1. Search by author or title">
-            <input
-              className="t-input"
-              autoFocus
-              placeholder="e.g. Herodotus, Thucydides, Histories…"
-              value={titleSearch}
-              onChange={e => { setTitleSearch(e.target.value); setRefQuery(''); setSelected(null) }}
-            />
-          </FormField>
+          <input
+            className="t-input"
+            autoFocus
+            placeholder="Search — e.g. Herodotus 6.42, Persian fleet, Thucydides…"
+            value={search}
+            onChange={e => { setSearch(e.target.value); setSelected(null) }}
+            style={{ width: '100%', marginBottom: 12, boxSizing: 'border-box' }}
+          />
 
-          {/* Show matched works as reference guide */}
-          {titleSearch && works.length > 0 && (
-            <div className="src-attach-works">
-              {works.slice(0, 6).map(s => (
-                <span key={`${s.author}${s.title}`} className="src-attach-work-pill">
-                  {s.author?.trim()} · {s.title?.trim()}
-                </span>
-              ))}
-              {works.length > 6 && <span className="src-attach-work-pill">+{works.length - 6} more</span>}
-            </div>
+          {search.trim() && results.length === 0 && (
+            <p style={{ fontSize: 13, color: 'var(--text)', fontStyle: 'italic', margin: '0 0 12px' }}>
+              No sources match — try a different term or reference.
+            </p>
           )}
 
-          <FormField label="2. Enter reference (e.g. 6.42 for Book 6, Chapter 42)">
-            <input
-              className="t-input"
-              placeholder="e.g. 6.42 or 61-71"
-              value={refQuery}
-              onChange={e => { setRefQuery(e.target.value); setSelected(null) }}
-            />
-          </FormField>
-
-          {/* Results */}
-          {refQuery.trim() && (
-            <div className="src-attach-results">
-              {showResults.length === 0 ? (
-                <p className="src-attach-no-match">
-                  No source matches <strong>{refQuery}</strong>
-                  {titleSearch ? ` in "${titleSearch}"` : ''}.
-                </p>
-              ) : (
-                <>
-                  <p className="src-attach-match-label">
-                    {showResults.length} match{showResults.length !== 1 ? 'es' : ''}
-                  </p>
-                  {showResults.map(s => (
-                    <button
-                      key={s.id}
-                      className={`src-attach-result-row ${selected?.id === s.id ? 'src-attach-selected' : ''}`}
-                      onClick={() => setSelected(s)}
-                    >
-                      <div className="src-attach-result-header">
-                        <span className="src-attach-result-author">{s.author}</span>
-                        <span className="src-attach-result-title">{s.title}</span>
-                        <span className="src-ref">{formatRef(s)}</span>
-                      </div>
-                      <p className="src-attach-result-preview">
-                        {s.content?.slice(0, 150)}{s.content?.length > 150 ? '…' : ''}
-                      </p>
-                    </button>
-                  ))}
-                </>
-              )}
+          {results.length > 0 && (
+            <div className="src-attach-results" style={{ maxHeight: 340, overflowY: 'auto', marginBottom: 12 }}>
+              {results.map(s => {
+                const ref = formatRef(s)
+                const isSelected = selected?.id === s.id
+                return (
+                  <button
+                    key={s.id}
+                    className={`src-attach-result-row ${isSelected ? 'src-attach-selected' : ''}`}
+                    onClick={() => setSelected(isSelected ? null : s)}
+                  >
+                    <div className="src-attach-result-header">
+                      <span className="src-attach-result-author">{s.author}</span>
+                      <span className="src-attach-result-title">{s.title}</span>
+                      {ref && <span className="src-ref">{ref}</span>}
+                    </div>
+                    <p className="src-attach-result-preview">
+                      {s.content?.slice(0, 160)}{s.content?.length > 160 ? '…' : ''}
+                    </p>
+                  </button>
+                )
+              })}
             </div>
           )}
 
@@ -151,7 +92,9 @@ export default function AttachSourceModal({ moduleId, excludeIds = [], onAttach,
               onClick={() => selected && onAttach(selected.id)}
               disabled={!selected}
             >
-              Attach {selected ? `"${formatRef(selected) || selected.title}"` : ''}
+              {selected
+                ? `Attach "${formatRef(selected) || selected.title || selected.author}"`
+                : 'Select a source above'}
             </button>
           </div>
         </div>
