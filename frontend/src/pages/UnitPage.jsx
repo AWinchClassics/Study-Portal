@@ -4,6 +4,7 @@ import { supabase } from '../supabase'
 import Breadcrumb from '../components/Breadcrumb'
 import FlashcardTabContent from '../components/FlashcardTabContent'
 import TimelineTabContent from '../components/TimelineTabContent'
+import SourceTabContent from '../components/SourceTabContent'
 
 export default function UnitPage() {
   const { moduleId } = useParams()
@@ -95,6 +96,9 @@ export default function UnitPage() {
         <button className={`page-tab ${activeTab === 'timelines' ? 'page-tab-active' : ''}`} onClick={handleFlashcardTabOpen.bind(null,'timelines')}>
           📅 Timelines
         </button>
+        <button className={`page-tab ${activeTab === 'sources' ? 'page-tab-active' : ''}`} onClick={() => setActiveTab('sources')}>
+          📜 Sources
+        </button>
       </div>
 
       {activeTab === 'units' && (
@@ -147,6 +151,12 @@ export default function UnitPage() {
               unitIds={units.map(u => u.id)}
               moduleIds={module ? [module.id] : []}
             />
+      )}
+
+      {activeTab === 'sources' && (
+        loadingChunkIds
+          ? <div className="loading-pulse">Loading sources…</div>
+          : <SourceTabContent chunkIds={moduleChunkIds ?? []} />
       )}
     </div>
   )

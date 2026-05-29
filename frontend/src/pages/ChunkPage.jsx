@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { supabase } from '../supabase'
 import Breadcrumb from '../components/Breadcrumb'
 import ChunkRandomiser from '../components/ChunkRandomiser'
+import SourceTabContent from '../components/SourceTabContent'
 import FlashcardTabContent from '../components/FlashcardTabContent'
 import TimelineTabContent from '../components/TimelineTabContent'
 
@@ -86,6 +87,12 @@ function ChunkCard({ chunk, resources, navContext }) {
         >
           📅 Timelines
         </button>
+        <button
+          className={`chunk-tab ${chunkTab === 'sources' ? 'chunk-tab-active' : ''}`}
+          onClick={() => setChunkTab('sources')}
+        >
+          📜 Sources
+        </button>
       </div>
 
       {/* Resources tab */}
@@ -124,6 +131,11 @@ function ChunkCard({ chunk, resources, navContext }) {
       {/* Timelines tab — chunk level only */}
       {chunkTab === 'timelines' && (
         <TimelineTabContent chunkIds={[chunk.id]} />
+      )}
+
+      {/* Sources tab — chunk level only */}
+      {chunkTab === 'sources' && (
+        <SourceTabContent chunkIds={[chunk.id]} />
       )}
 
       {/* Randomiser — always visible at the bottom */}
@@ -234,6 +246,12 @@ export default function ChunkPage() {
         >
           📅 Timelines
         </button>
+        <button
+          className={`page-tab ${activeTab === 'sources' ? 'page-tab-active' : ''}`}
+          onClick={() => setActiveTab('sources')}
+        >
+          📜 Sources
+        </button>
       </div>
 
       {activeTab === 'content' && (
@@ -268,6 +286,10 @@ export default function ChunkPage() {
           chunkIds={chunks.map(c => c.id)}
           unitIds={[unitId]}
         />
+      )}
+
+      {activeTab === 'sources' && (
+        <SourceTabContent chunkIds={chunks.map(c => c.id)} />
       )}
     </div>
   )

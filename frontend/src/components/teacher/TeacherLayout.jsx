@@ -7,6 +7,7 @@ const NAV_ITEMS = [
   { to: '/teacher/resources',  label: 'Resources',  icon: '📦' },
   { to: '/teacher/glossary',   label: 'Glossary',   icon: '🃏' },
   { to: '/teacher/timelines',  label: 'Timelines',  icon: '📅' },
+  { to: '/teacher/sources',    label: 'Sources',    icon: '📜' },
   { to: '/teacher/randomiser', label: 'Randomiser', icon: '🎲' },
 ]
 

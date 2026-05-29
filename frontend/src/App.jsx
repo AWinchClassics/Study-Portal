@@ -2,31 +2,32 @@ import { Routes, Route } from 'react-router-dom'
 import { TeacherAuthProvider } from './context/TeacherAuthContext'
 import Sidebar from './components/Sidebar'
 import TeacherRoute from './components/teacher/TeacherRoute'
-import CoursesPage    from './pages/CoursesPage'
-import ModulePage     from './pages/ModulePage'
-import UnitPage       from './pages/UnitPage'
-import ChunkPage      from './pages/ChunkPage'
-import QuizPage       from './pages/QuizPage'
-import RandomiserPage from './pages/RandomiserPage'
-import FlashcardsPage from './pages/FlashcardsPage'
-import GlossaryPage   from './pages/GlossaryPage'
-import TimelinesPage  from './pages/TimelinesPage'
-import TeacherDashboard        from './pages/teacher/TeacherDashboard'
-import TeacherCoursesPage      from './pages/teacher/TeacherCoursesPage'
-import TeacherCoursePage       from './pages/teacher/TeacherCoursePage'
-import TeacherModulePage       from './pages/teacher/TeacherModulePage'
-import TeacherUnitPage         from './pages/teacher/TeacherUnitPage'
-import TeacherChunkPage        from './pages/teacher/TeacherChunkPage'
-import TeacherResourcesPage    from './pages/teacher/TeacherResourcesPage'
-import TeacherRandomiserPage   from './pages/teacher/TeacherRandomiserPage'
-import TeacherGlossaryPage     from './pages/teacher/TeacherGlossaryPage'
-import TeacherTimelinesPage    from './pages/teacher/TeacherTimelinesPage'
+import CoursesPage         from './pages/CoursesPage'
+import ModulePage          from './pages/ModulePage'
+import UnitPage            from './pages/UnitPage'
+import ChunkPage           from './pages/ChunkPage'
+import QuizPage            from './pages/QuizPage'
+import RandomiserPage      from './pages/RandomiserPage'
+import FlashcardsPage      from './pages/FlashcardsPage'
+import GlossaryPage        from './pages/GlossaryPage'
+import TimelinesPage       from './pages/TimelinesPage'
+import SourcesPage         from './pages/SourcesPage'
+import TeacherDashboard    from './pages/teacher/TeacherDashboard'
+import TeacherCoursesPage  from './pages/teacher/TeacherCoursesPage'
+import TeacherCoursePage   from './pages/teacher/TeacherCoursePage'
+import TeacherModulePage   from './pages/teacher/TeacherModulePage'
+import TeacherUnitPage     from './pages/teacher/TeacherUnitPage'
+import TeacherChunkPage    from './pages/teacher/TeacherChunkPage'
+import TeacherResourcesPage from './pages/teacher/TeacherResourcesPage'
+import TeacherRandomiserPage from './pages/teacher/TeacherRandomiserPage'
+import TeacherGlossaryPage  from './pages/teacher/TeacherGlossaryPage'
+import TeacherTimelinesPage from './pages/teacher/TeacherTimelinesPage'
+import TeacherSourcesPage  from './pages/teacher/TeacherSourcesPage'
 
 function StudentLayout({ children }) {
   return (
     <div className="student-layout">
-      <Sidebar />
-      <main className="student-main">{children}</main>
+      <Sidebar /><main className="student-main">{children}</main>
     </div>
   )
 }
@@ -45,6 +46,7 @@ function TeacherSection() {
         <Route path="/randomiser"        element={<TeacherRandomiserPage />} />
         <Route path="/glossary"          element={<TeacherGlossaryPage />} />
         <Route path="/timelines"         element={<TeacherTimelinesPage />} />
+        <Route path="/sources"           element={<TeacherSourcesPage />} />
       </Routes>
     </TeacherRoute>
   )
@@ -63,10 +65,10 @@ function App() {
         <Route path="/flashcards"        element={<StudentLayout><FlashcardsPage /></StudentLayout>} />
         <Route path="/glossary"          element={<StudentLayout><GlossaryPage /></StudentLayout>} />
         <Route path="/timelines"         element={<StudentLayout><TimelinesPage /></StudentLayout>} />
+        <Route path="/sources"           element={<StudentLayout><SourcesPage /></StudentLayout>} />
         <Route path="/teacher/*"         element={<TeacherSection />} />
       </Routes>
     </TeacherAuthProvider>
   )
 }
-
 export default App

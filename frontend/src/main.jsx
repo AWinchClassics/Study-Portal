@@ -7,6 +7,7 @@ import './teacher.css'
 import './sidebar-randomiser.css'
 import './flashcards.css'
 import './timelines.css'
+import './sources.css'
 import App from './App.jsx'
 
 const basename = import.meta.env.PROD ? '/Study-Portal' : '/'

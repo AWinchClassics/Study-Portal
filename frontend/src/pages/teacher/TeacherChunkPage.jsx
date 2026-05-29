@@ -1,3 +1,5 @@
+import AttachSourceModal from '../../components/teacher/AttachSourceModal'
+import { formatRef } from '../../components/SourceTabContent'
 import { useEffect, useState, useCallback } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { supabase } from '../../supabase'
@@ -35,6 +37,8 @@ export default function TeacherChunkPage() {
   const [showCreateModal, setShowCreateModal]   = useState(false)
   // Glossary modals
   const [showAttachTerm, setShowAttachTerm]     = useState(false)
+  const [showAttachSource, setShowAttachSource] = useState(false)
+  const [attachedSources, setAttachedSources]   = useState([])
   const [showCreateTerm, setShowCreateTerm]     = useState(false)
 
   useEffect(() => { fetchData() }, [chunkId])
@@ -48,14 +52,18 @@ export default function TeacherChunkPage() {
 
     if (chunkData) { setChunk(chunkData); setUnit(chunkData.units) }
 
-    const [{ data: crData }, { data: cgData }] = await Promise.all([
+    const [{ data: crData }, { data: cgData }, { data: csData }] = await Promise.all([
       supabase.from('chunk_resources')
         .select('id, purpose, order_index, resource_id, resources(*)')
         .eq('chunk_id', chunkId).order('order_index'),
       supabase.from('chunk_glossary')
         .select('id, priority, glossary_id, glossary_terms(*)')
         .eq('chunk_id', chunkId),
+      supabase.from('chunk_sources')
+        .select('id, source_id, sources(*)')
+        .eq('chunk_id', chunkId),
     ])
+    if (csData) setAttachedSources(csData)
 
     if (crData) setAttached(crData)
     if (cgData) setGlossary(cgData)
@@ -107,6 +115,23 @@ export default function TeacherChunkPage() {
     await Promise.all(updated.map(r =>
       supabase.from('chunk_resources').update({ order_index: r.order_index }).eq('id', r.id)
     ))
+  }
+
+  // ── Source handlers ──
+  async function handleAttachSource(sourceId) {
+    const { data, error } = await supabase.from('chunk_sources')
+      .insert({ chunk_id: chunkId, source_id: sourceId })
+      .select('id, source_id, sources(*)').single()
+    if (error) { setStatus({ type: 'error', msg: error.message }); return }
+    setAttachedSources(prev => [...prev, data])
+    setShowAttachSource(false)
+    setStatus({ type: 'success', msg: 'Source attached.' })
+  }
+
+  async function handleDetachSource(csId) {
+    const { error } = await supabase.from('chunk_sources').delete().eq('id', csId)
+    if (error) { setStatus({ type: 'error', msg: error.message }); return }
+    setAttachedSources(prev => prev.filter(s => s.id !== csId))
   }
 
   // ── Glossary handlers ──
@@ -237,6 +262,39 @@ export default function TeacherChunkPage() {
         )}
       </div>
 
+      {/* ── Sources ── */}
+      <div className="t-section">
+        <div className="t-section-header" style={{ marginBottom: 12 }}>
+          <h2 className="t-section-title" style={{ margin: 0 }}>Source extracts</h2>
+          <button className="t-btn t-btn-secondary" onClick={() => setShowAttachSource(true)}>
+            Attach source
+          </button>
+        </div>
+        {attachedSources.length === 0 ? (
+          <div className="t-empty"><p>No sources attached yet.</p></div>
+        ) : (
+          <div className="t-attached-list">
+            {attachedSources.map(cs => (
+              <div key={cs.id} className="t-attached-row">
+                <div className="t-attached-info">
+                  <span className="t-attached-title">{cs.sources?.author}</span>
+                  <span className="t-list-meta" style={{ marginLeft: 6, fontStyle: 'italic' }}>{cs.sources?.title}</span>
+                  {formatRef(cs.sources ?? {}) && (
+                    <span className="t-resource-type-pill" style={{ marginLeft: 8 }}>{formatRef(cs.sources ?? {})}</span>
+                  )}
+                  {cs.sources?.content && (
+                    <span className="t-attached-url">{cs.sources.content.slice(0, 70)}…</span>
+                  )}
+                </div>
+                <div className="t-attached-controls">
+                  <ConfirmButton className="t-btn t-btn-danger-ghost" onConfirm={() => handleDetachSource(cs.id)} confirmLabel="Remove?">Remove</ConfirmButton>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
       {/* Resource modals */}
       {showAttachModal && (
         <AttachResourceModal
@@ -259,6 +317,15 @@ export default function TeacherChunkPage() {
       )}
       {showCreateTerm && (
         <CreateTermModal onSave={handleCreateTerm} onClose={() => setShowCreateTerm(false)} />
+      )}
+
+      {showAttachSource && (
+        <AttachSourceModal
+          moduleId={unit?.modules?.id}
+          excludeIds={attachedSources.map(cs => cs.source_id)}
+          onAttach={handleAttachSource}
+          onClose={() => setShowAttachSource(false)}
+        />
       )}
     </TeacherLayout>
   )
