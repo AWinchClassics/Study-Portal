@@ -53,18 +53,19 @@ export default function SourcesPage() {
     return [...set].sort()
   }, [sources])
 
-  // Filter sources
   const filtered = useMemo(() => {
-    const q = search.toLowerCase()
+    // Split query into tokens — all tokens must match somewhere in the source
+    // e.g. "Herodotus 6.42" → token "herodotus" in author AND "6.42" in reference
+    const tokens = search.toLowerCase().split(/\s+/).filter(Boolean)
     return sources.filter(s => {
       const matchAuthor = authorFilter === 'all' || s.author?.trim() === authorFilter
       if (!matchAuthor) return false
-      if (!q) return true
-      return (
-        s.author?.toLowerCase().includes(q) ||
-        s.title?.toLowerCase().includes(q) ||
-        s.content?.toLowerCase().includes(q) ||
-        formatRef(s).toLowerCase().includes(q)
+      if (tokens.length === 0) return true
+      return tokens.every(token =>
+        s.author?.toLowerCase().includes(token) ||
+        s.title?.toLowerCase().includes(token) ||
+        s.content?.toLowerCase().includes(token) ||
+        formatRef(s).toLowerCase().includes(token)
       )
     })
   }, [sources, search, authorFilter])
