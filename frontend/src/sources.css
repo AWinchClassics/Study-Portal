@@ -278,3 +278,99 @@
 .src-attach-result-author { font-size: 13px; font-weight: 600; color: var(--text-h); }
 .src-attach-result-title  { font-size: 13px; color: var(--text); font-style: italic; }
 .src-attach-result-preview { font-size: 12px; color: var(--text); margin: 0; line-height: 1.5; }
+
+/* ── Image sources ───────────────────────────────────────────────── */
+
+/* Preview text style for image-only sources */
+.src-preview-image {
+  color: var(--accent);
+  font-style: italic;
+}
+
+/* Image badge on group header */
+.src-group-img-badge {
+  font-size: 11px;
+  background: var(--accent-bg);
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+  border-radius: 999px;
+  padding: 1px 7px;
+  flex-shrink: 0;
+}
+
+/* Image inside expanded source item */
+.src-image-wrap {
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.src-image {
+  max-width: 100%;
+  max-height: 540px;
+  width: auto;
+  height: auto;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  display: block;
+  margin: 0 auto;
+}
+
+/* Caption below image */
+.src-image-caption {
+  font-size: 13px;
+  color: var(--text);
+  font-style: italic;
+  text-align: center;
+  margin-top: 8px !important;
+  font-family: var(--sans) !important;
+}
+
+/* Teacher list badge */
+.src-type-image {
+  background: var(--accent-bg);
+  color: var(--accent);
+  border-color: var(--accent-border);
+}
+
+/* ── Teacher form — image upload ─────────────────────────────────── */
+
+.src-form-image-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.src-form-image-preview {
+  max-width: 100%;
+  max-height: 260px;
+  width: auto;
+  height: auto;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  display: block;
+}
+
+.src-form-remove-img {
+  font-size: 12px;
+  padding: 4px 10px;
+}
+
+.src-form-upload-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.src-form-upload-btn {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.src-form-upload-hint {
+  font-size: 12px;
+  color: var(--text);
+}

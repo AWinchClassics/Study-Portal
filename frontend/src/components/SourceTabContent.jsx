@@ -11,7 +11,7 @@ export function formatRef(s) {
   return base
 }
 
-function groupByAuthorTitle(sources) {
+export function groupByAuthorTitle(sources) {
   const map = {}
   sources.forEach(s => {
     const author = s.author?.trim() || 'Unknown'
@@ -23,22 +23,48 @@ function groupByAuthorTitle(sources) {
   return Object.values(map).sort((a, b) => a.author.localeCompare(b.author))
 }
 
-// ── Single source expand/collapse ────────────────────────────────
+// ── Single source item ────────────────────────────────────────────
 function SourceItem({ source }) {
   const [open, setOpen] = useState(false)
-  const ref = formatRef(source)
-  const preview = source.content?.slice(0, 120) + (source.content?.length > 120 ? '…' : '')
+  const ref     = formatRef(source)
+  const isImage = !!source.image_url
+  const hasText = !!source.content?.trim()
+
+  // Preview: image icon or first 120 chars of text
+  const preview = isImage && !hasText
+    ? '🖼 Visual source'
+    : (source.content?.slice(0, 120) + (source.content?.length > 120 ? '…' : ''))
 
   return (
     <div className={`src-item ${open ? 'src-item-open' : ''}`}>
       <button className="src-item-row" onClick={() => setOpen(o => !o)}>
         {ref && <span className="src-ref">{ref}</span>}
-        <span className="src-preview">{preview}</span>
+        <span className={`src-preview ${isImage && !hasText ? 'src-preview-image' : ''}`}>
+          {preview}
+        </span>
         <span className="src-chevron">{open ? '▾' : '▸'}</span>
       </button>
+
       {open && (
         <div className="src-content">
-          <p className="src-full-text">{source.content}</p>
+          {/* Image — shown first if present */}
+          {isImage && (
+            <div className="src-image-wrap">
+              <img
+                src={source.image_url}
+                alt={source.title || 'Source image'}
+                className="src-image"
+              />
+            </div>
+          )}
+
+          {/* Text — shown as caption below image, or standalone */}
+          {hasText && (
+            <p className={`src-full-text ${isImage ? 'src-image-caption' : ''}`}>
+              {source.content}
+            </p>
+          )}
+
           <div className="src-footer">
             {source.copyright && <span className="src-copyright">{source.copyright}</span>}
             {source.source_url && (
@@ -53,9 +79,10 @@ function SourceItem({ source }) {
   )
 }
 
-// ── Group (author + title) ────────────────────────────────────────
-function SourceGroup({ group, defaultOpen = false }) {
+// ── Source group (author + title) ─────────────────────────────────
+export function SourceGroup({ group, defaultOpen = false }) {
   const [open, setOpen] = useState(defaultOpen)
+  const imageCount = group.sources.filter(s => s.image_url).length
   return (
     <div className="src-group">
       <button className="src-group-header" onClick={() => setOpen(o => !o)}>
@@ -63,6 +90,11 @@ function SourceGroup({ group, defaultOpen = false }) {
         <span className="src-group-author">{group.author}</span>
         <span className="src-group-dot">·</span>
         <span className="src-group-title">{group.title}</span>
+        {imageCount > 0 && (
+          <span className="src-group-img-badge" title={`${imageCount} visual source${imageCount > 1 ? 's' : ''}`}>
+            🖼 {imageCount}
+          </span>
+        )}
         <span className="src-group-count">{group.sources.length}</span>
       </button>
       {open && (
@@ -74,24 +106,15 @@ function SourceGroup({ group, defaultOpen = false }) {
   )
 }
 
-/**
- * SourceTabContent
- *
- * Fetches sources attached to the given chunk IDs and renders
- * a grouped, expandable list.
- *
- * Props: chunkIds — array of chunk UUIDs
- */
+// ── Embedded tab ──────────────────────────────────────────────────
 export default function SourceTabContent({ chunkIds = [] }) {
   const [groups, setGroups]   = useState([])
   const [loading, setLoading] = useState(true)
-
   const key = chunkIds.slice().sort().join(',')
 
   useEffect(() => {
     if (chunkIds.length === 0) { setGroups([]); setLoading(false); return }
     setLoading(true)
-
     supabase
       .from('chunk_sources')
       .select('source_id, sources(*)')
@@ -125,5 +148,3 @@ export default function SourceTabContent({ chunkIds = [] }) {
     </div>
   )
 }
-
-export { SourceGroup, SourceItem, groupByAuthorTitle }
