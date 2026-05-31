@@ -4,7 +4,15 @@ import { SourceGroup, groupByAuthorTitle, formatRef } from '../components/Source
 
 // ── Range-aware token matching (shared with AttachSourceModal) ────
 function parseRange(token) {
-  // book.start-end  e.g. "1.89-91"
+  // "1.4.1-6"  → book=1, chapter=4, sections 1..6
+  const m3 = token.match(/^(\d+)\.(\d+)\.(\d+)-(\d+)$/)
+  if (m3) {
+    const [, book, chapter, s, e] = m3
+    const start = parseInt(s), end = parseInt(e)
+    if (end > start && end - start <= 30)
+      return { book, chapter, sections: Array.from({ length: end - start + 1 }, (_, i) => String(start + i)) }
+  }
+  // "1.89-91"  → book=1, chapters 89..91
   const m1 = token.match(/^(\d+)\.(\d+)-(\d+)$/)
   if (m1) {
     const [, book, s, e] = m1
@@ -12,7 +20,7 @@ function parseRange(token) {
     if (end > start && end - start <= 30)
       return { book, chapters: Array.from({ length: end - start + 1 }, (_, i) => String(start + i)) }
   }
-  // bare start-end  e.g. "30-31" (Plutarch, Sallust, authors without book numbers)
+  // "30-31"    → no book, chapters 30..31
   const m2 = token.match(/^(\d+)-(\d+)$/)
   if (m2) {
     const [, s, e] = m2
@@ -26,15 +34,26 @@ function parseRange(token) {
 function matchToken(source, token) {
   const range = parseRange(token)
   if (range) {
-    const bookMatch = !range.book || String(source.book || '').trim() === range.book
+    const srcBook    = String(source.book    || '').trim()
+    const srcChapter = String(source.chapter || '').trim()
+    const srcSection = String(source.section || '').trim()
+
+    if (range.sections) {
+      // Three-part range: book + chapter must both match, then check section
+      if (range.book && srcBook !== range.book) return false
+      if (srcChapter !== range.chapter) return false
+      if (range.sections.includes(srcSection)) return true
+      const secStart = srcSection.match(/^(\d+)/)?.[1]
+      return !!(secStart && range.sections.includes(secStart))
+    }
+
+    // Two-part range: book (optional) + chapter or section
+    const bookMatch = !range.book || srcBook === range.book
     if (!bookMatch) return false
-    const chapter = String(source.chapter || '').trim()
-    const section = String(source.section || '').trim()
-    if (chapter && range.chapters.includes(chapter)) return true
-    if (section && range.chapters.includes(section)) return true
-    const sectionStart = section.match(/^(\d+)/)?.[1]
-    if (sectionStart && range.chapters.includes(sectionStart)) return true
-    return false
+    if (srcChapter && range.chapters.includes(srcChapter)) return true
+    if (srcSection && range.chapters.includes(srcSection)) return true
+    const secStart = srcSection.match(/^(\d+)/)?.[1]
+    return !!(secStart && range.chapters.includes(secStart))
   }
   return (
     source.author?.toLowerCase().includes(token) ||
