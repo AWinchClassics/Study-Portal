@@ -154,9 +154,7 @@ export default function UnitPage() {
       )}
 
       {activeTab === 'sources' && (
-        loadingChunkIds
-          ? <div className="loading-pulse">Loading sources…</div>
-          : <SourceTabContent chunkIds={moduleChunkIds ?? []} />
+        <SourceTabContent moduleId={moduleId} />
       )}
     </div>
   )
