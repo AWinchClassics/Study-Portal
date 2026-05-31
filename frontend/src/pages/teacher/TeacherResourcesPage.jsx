@@ -216,19 +216,19 @@ function ResourceFormModal({ title, initial, onSave, onClose }) {
     set('url', '')
   }
 
+  const isVideo      = form.type === 'video'
+  const isUploadable = form.type === 'video' || form.type === 'pdf'
+
   async function handleSubmit() {
     const e = {}
     if (!form.title.trim()) e.title = 'Title is required'
-    if (form.type === 'video' && videoMode === 'url' && !form.url.trim()) e.url = 'Enter a URL or upload a file'
-    if (form.type === 'video' && videoMode === 'upload' && !videoFile) e.url = 'Choose a video file'
+    if (isUploadable && videoMode === 'url' && !form.url.trim()) e.url = 'Enter a URL or upload a file'
+    if (isUploadable && videoMode === 'upload' && !videoFile) e.url = 'Choose a file to upload'
     if (Object.keys(e).length) { setErrors(e); return }
     setSaving(true)
-    await onSave(form, form.type === 'video' && videoMode === 'upload' ? videoFile : null)
+    await onSave(form, isUploadable && videoMode === 'upload' ? videoFile : null)
     setSaving(false)
   }
-
-  const isVideo = form.type === 'video'
-  const isUploadable = form.type === 'video' || form.type === 'pdf'
 
   return (
     <Modal title={title} onClose={onClose}>
@@ -244,12 +244,12 @@ function ResourceFormModal({ title, initial, onSave, onClose }) {
         </FormField>
 
         {isUploadable ? (
-          <FormField label="Video source" error={errors.url}>
+          <FormField label={form.type === 'pdf' ? 'PDF source' : 'Video source'} error={errors.url}>
             <div className="vp-teacher-toggle">
               <button type="button"
                 className={`vp-toggle-btn ${videoMode === 'url' ? 'vp-toggle-active' : ''}`}
                 onClick={() => { setVideoMode('url'); setVideoFile(null) }}>
-                🔗 Link (YouTube / Vimeo / URL)
+                {form.type === 'pdf' ? '🔗 Link (URL)' : '🔗 Link (YouTube / Vimeo / URL)'}
               </button>
               <button type="button"
                 className={`vp-toggle-btn ${videoMode === 'upload' ? 'vp-toggle-active' : ''}`}
@@ -271,7 +271,7 @@ function ResourceFormModal({ title, initial, onSave, onClose }) {
                 onChange={handleFileChange}
               />
                 <span className="src-form-upload-btn t-btn t-btn-secondary">
-                  {videoFile ? `✓ ${videoFile.name}` : '📁 Choose video file…'}
+                  {videoFile ? `✓ ${videoFile.name}` : form.type === 'pdf' ? '📁 Choose PDF file…' : '📁 Choose video file…'}
                 </span>
                 <span className="src-form-upload-hint">{form.type === 'pdf' ? 'PDF files only' : 'MP4, WebM, MOV'}</span>
               </label>
