@@ -42,19 +42,35 @@ function groupByAuthorTitle(sources) {
 // ── Single source expand/collapse ────────────────────────────────
 function SourceItem({ source, defaultOpen = false }) {
   const [open, setOpen] = useState(defaultOpen)
-  const ref = formatRef(source)
-  const preview = source.content?.slice(0, 120) + (source.content?.length > 120 ? '…' : '')
+  const ref     = formatRef(source)
+  const isImage = !!source.image_url
+  const hasText = !!source.content?.trim()
+
+  const preview = isImage && !hasText
+    ? '🖼 Visual source'
+    : (source.content?.slice(0, 120) + (source.content?.length > 120 ? '…' : ''))
 
   return (
     <div className={`src-item ${open ? 'src-item-open' : ''}`}>
       <button className="src-item-row" onClick={() => setOpen(o => !o)}>
         {ref && <span className="src-ref">{ref}</span>}
-        <span className="src-preview">{preview}</span>
+        <span className={`src-preview ${isImage && !hasText ? 'src-preview-image' : ''}`}>
+          {preview}
+        </span>
         <span className="src-chevron">{open ? '▾' : '▸'}</span>
       </button>
       {open && (
         <div className="src-content">
-          <p className="src-full-text">{source.content}</p>
+          {isImage && (
+            <div className="src-image-wrap">
+              <img src={source.image_url} alt={source.title || 'Source image'} className="src-image" />
+            </div>
+          )}
+          {hasText && (
+            <p className={`src-full-text ${isImage ? 'src-image-caption' : ''}`}>
+              {source.content}
+            </p>
+          )}
           <div className="src-footer">
             {source.copyright && <span className="src-copyright">{source.copyright}</span>}
             {source.source_url && (
@@ -71,7 +87,8 @@ function SourceItem({ source, defaultOpen = false }) {
 
 // ── Group (author + title) ────────────────────────────────────────
 function SourceGroup({ group, defaultOpen = false }) {
-  const isSingle = group.sources.length === 1
+  const isSingle    = group.sources.length === 1
+  const imageCount  = group.sources.filter(s => s.image_url).length
   const [open, setOpen] = useState(defaultOpen)
   return (
     <div className="src-group">
@@ -80,6 +97,11 @@ function SourceGroup({ group, defaultOpen = false }) {
         <span className="src-group-author">{group.author}</span>
         {(group.author && group.title) && <span className="src-group-dot">·</span>}
         <span className="src-group-title">{group.title}</span>
+        {imageCount > 0 && (
+          <span className="src-group-img-badge" title={`${imageCount} visual source${imageCount > 1 ? 's' : ''}`}>
+            🖼 {imageCount}
+          </span>
+        )}
         <span className="src-group-count">{group.sources.length}</span>
       </button>
       {open && (
