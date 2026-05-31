@@ -119,3 +119,14 @@
 @media (max-width: 768px) {
   .pdf-iframe { height: 500px; }
 }
+
+/* PDF — open in new tab link (shown below embedded viewer) */
+.pdf-open-tab-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+.pdf-open-tab-link:hover { text-decoration: underline; }

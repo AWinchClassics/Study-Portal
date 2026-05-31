@@ -64,22 +64,15 @@ function ResourceItem({ resource, navContext }) {
             <span className="resource-title">{resource.title}</span>
             {resource.description && <span className="resource-desc">{resource.description}</span>}
           </div>
-          <a
-            href={resource.url}
-            target="_blank"
-            rel="noreferrer"
-            className="resource-open-arrow"
-            onClick={e => e.stopPropagation()}
-            title="Open in new tab"
-          >
-            ↗
-          </a>
           <span className="resource-type-pill">pdf</span>
           <span className="resource-open-arrow">{pdfOpen ? '▾' : '▸'}</span>
         </button>
         {pdfOpen && (
           <div className="resource-video-player">
             <PdfViewer url={resource.url} title={resource.title} />
+            <a href={resource.url} target="_blank" rel="noreferrer" className="pdf-open-tab-link">
+              Open in new tab ↗
+            </a>
           </div>
         )}
       </div>
