@@ -12,6 +12,9 @@ const CATEGORY_COLOURS = {
   source:  { bg: '#fef3c7', text: '#b45309' },
   place:   { bg: '#fce7f3', text: '#be185d' },
   other:   { bg: '#f3f4f6', text: '#4b5563' },
+  building:            { bg: '#fff7ed', text: '#c2410c' },
+  god:                 { bg: '#fefce8', text: '#ca8a04' },
+  'character/setting': { bg: '#ecfeff', text: '#0891b2' },
 }
 
 function CategoryBadge({ category }) {

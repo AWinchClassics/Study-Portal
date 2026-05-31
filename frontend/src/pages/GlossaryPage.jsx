@@ -41,6 +41,9 @@ const CATEGORY_COLOURS = {
   person:  '#7c3aed', event:   '#0ea5e9',
   concept: '#16a34a', source:  '#d97706',
   place:   '#db2777', other:   '#6b7280',
+  building:            '#c2410c',
+  god:                 '#ca8a04',
+  'character/setting': '#0891b2',
 }
 
 // ── Glossary table view ──────────────────────────────────────────
