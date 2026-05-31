@@ -90,10 +90,10 @@ export default function UnitPage() {
         <button className={`page-tab ${activeTab === 'units' ? 'page-tab-active' : ''}`} onClick={() => setActiveTab('units')}>
           📄 Units
         </button>
-        <button className={`page-tab ${activeTab === 'flashcards' ? 'page-tab-active' : ''}`} onClick={handleFlashcardTabOpen}>
+        <button className={`page-tab ${activeTab === 'flashcards' ? 'page-tab-active' : ''}`} onClick={() => handleFlashcardTabOpen()}>
           🃏 Flashcards
         </button>
-        <button className={`page-tab ${activeTab === 'timelines' ? 'page-tab-active' : ''}`} onClick={handleFlashcardTabOpen.bind(null,'timelines')}>
+        <button className={`page-tab ${activeTab === 'timelines' ? 'page-tab-active' : ''}`} onClick={() => handleFlashcardTabOpen('timelines')}>
           📅 Timelines
         </button>
         <button className={`page-tab ${activeTab === 'sources' ? 'page-tab-active' : ''}`} onClick={() => setActiveTab('sources')}>
