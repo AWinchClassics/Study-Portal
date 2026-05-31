@@ -1,0 +1,277 @@
+/* ============================================
+   RESOURCES PAGE  (.rp-*)
+   ============================================ */
+
+.rp-page { max-width: 900px; }
+
+/* Module selector */
+.rp-module-select {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--text-h);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Type filter pills */
+.rp-type-pills {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.rp-type-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px 12px;
+  cursor: pointer;
+  transition: background 0.1s, border-color 0.1s, color 0.1s;
+}
+.rp-type-pill:hover { border-color: var(--border-strong); color: var(--text-h); }
+.rp-type-active {
+  background: var(--accent-bg) !important;
+  border-color: var(--accent-border) !important;
+  color: var(--accent) !important;
+  font-weight: 600;
+}
+.rp-pill-count {
+  font-size: 11px;
+  background: var(--border);
+  border-radius: 999px;
+  padding: 0 5px;
+}
+.rp-type-active .rp-pill-count {
+  background: var(--accent-border);
+}
+
+/* Unit sections */
+.rp-units { display: flex; flex-direction: column; gap: 10px; }
+
+.rp-unit-section {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg);
+  box-shadow: var(--shadow-sm);
+}
+
+.rp-unit-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 16px;
+  width: 100%;
+  text-align: left;
+  background: var(--bg-subtle);
+  border: none;
+  cursor: pointer;
+  font-family: var(--sans);
+  transition: background 0.1s;
+}
+.rp-unit-header:hover { filter: brightness(0.97); }
+
+.rp-unit-chevron { font-size: 12px; color: var(--text); flex-shrink: 0; }
+.rp-unit-title   { font-size: 14px; font-weight: 700; color: var(--text-h); flex: 1; }
+.rp-unit-count   {
+  font-size: 11px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 1px 7px;
+  color: var(--text);
+  flex-shrink: 0;
+}
+
+.rp-unit-body {
+  border-top: 1px solid var(--border);
+  padding: 8px 0;
+}
+
+/* Chunk sections */
+.rp-chunk-section {
+  padding: 6px 16px 10px;
+}
+.rp-chunk-section + .rp-chunk-section {
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+}
+
+.rp-chunk-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 6px;
+}
+
+.rp-chunk-resources { display: flex; flex-direction: column; gap: 4px; }
+
+/* Resource cards */
+.rp-resource-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--bg);
+  transition: border-color 0.1s;
+}
+.rp-resource-card:hover { border-color: var(--border-strong); }
+.rp-card-open { border-color: var(--accent-border) !important; }
+
+.rp-resource-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  min-height: 40px;
+}
+
+.rp-resource-icon { font-size: 15px; flex-shrink: 0; }
+
+.rp-resource-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+.rp-resource-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-h);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.rp-resource-desc {
+  font-size: 11px;
+  color: var(--text);
+}
+
+.rp-resource-type-pill {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 6px;
+  flex-shrink: 0;
+}
+
+.rp-quiz-btn {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--sans);
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-sm);
+  padding: 4px 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+  white-space: nowrap;
+  transition: filter 0.1s;
+}
+.rp-quiz-btn:hover { filter: brightness(0.95); }
+
+.rp-link-arrow {
+  font-size: 14px;
+  color: var(--text);
+  text-decoration: none;
+  flex-shrink: 0;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+.rp-link-arrow:hover { color: var(--accent); }
+
+.rp-expand-btn {
+  font-size: 14px;
+  color: var(--text);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 6px;
+  flex-shrink: 0;
+  border-radius: 4px;
+}
+.rp-expand-btn:hover { color: var(--accent); }
+
+/* Expanded media area */
+.rp-media {
+  padding: 0 12px 12px;
+  border-top: 1px solid var(--accent-border);
+  background: var(--bg-subtle);
+}
+.rp-media > * { margin-top: 10px; }
+
+/* Teacher card controls */
+.rp-teacher-controls {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+  margin-left: 4px;
+}
+
+/* Empty state */
+.rp-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--text);
+  font-size: 15px;
+}
+.rp-empty span { font-size: 32px; opacity: 0.4; }
+
+/* Resource bank (teacher — unattached resources) */
+.rp-bank-section {
+  margin-top: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.rp-bank-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--bg-subtle);
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+.rp-bank-body {
+  border-top: 1px solid var(--border);
+}
+.rp-bank-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+.rp-bank-row:last-child { border-bottom: none; }
+.rp-bank-title { flex: 1; color: var(--text-h); font-weight: 500; }

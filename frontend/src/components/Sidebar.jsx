@@ -6,6 +6,7 @@ const NAV_ITEMS = [
   { to: '/glossary',   label: 'Glossary',            icon: '📖' },
   { to: '/flashcards', label: 'Flashcards',          icon: '🃏' },
   { to: '/timelines',  label: 'Timelines',           icon: '📅' },
+  { to: '/resources',  label: 'Resources',           icon: '📦' },
   { to: '/sources',    label: 'Sources',             icon: '📜' },
   { to: '/randomiser', label: 'Revision Randomiser', icon: '🎲' },
 ]

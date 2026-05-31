@@ -11,6 +11,7 @@ import RandomiserPage      from './pages/RandomiserPage'
 import FlashcardsPage      from './pages/FlashcardsPage'
 import GlossaryPage        from './pages/GlossaryPage'
 import TimelinesPage       from './pages/TimelinesPage'
+import ResourcesPage       from './pages/ResourcesPage'
 import SourcesPage         from './pages/SourcesPage'
 import TeacherDashboard    from './pages/teacher/TeacherDashboard'
 import TeacherCoursesPage  from './pages/teacher/TeacherCoursesPage'
@@ -65,6 +66,7 @@ function App() {
         <Route path="/flashcards"        element={<StudentLayout><FlashcardsPage /></StudentLayout>} />
         <Route path="/glossary"          element={<StudentLayout><GlossaryPage /></StudentLayout>} />
         <Route path="/timelines"         element={<StudentLayout><TimelinesPage /></StudentLayout>} />
+        <Route path="/resources"         element={<StudentLayout><ResourcesPage /></StudentLayout>} />
         <Route path="/sources"           element={<StudentLayout><SourcesPage /></StudentLayout>} />
         <Route path="/teacher/*"         element={<TeacherSection />} />
       </Routes>
