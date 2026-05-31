@@ -1,15 +1,34 @@
 import { useState, useCallback } from 'react'
 
 // ── Helpers ──────────────────────────────────────────────────────
+
+// Convert a date string to a signed integer for chronological sorting.
+// BCE / BC  → negative  (e.g. "31 BCE" → -31)
+// CE  / AD  → positive  (e.g. "9 CE"   →  +9)
+// No suffix → assumed BCE, negated (e.g. "490" → -490)
+// This gives a single ascending scale: most negative = oldest.
+export function parseDateToSort(str) {
+  if (!str) return 0
+  const s     = String(str).trim().toUpperCase()
+  const match = s.match(/(\d+)/)
+  if (!match) return 0
+  const n = parseInt(match[1])
+  if (s.includes('CE') || s.includes('AD')) return n    // CE / AD → positive
+  return -n                                              // BCE / BC / bare → negative
+}
+
+// Keep parseDateNum as an alias so TeacherTimelinesPage (which imports it)
+// continues to work — it only uses it for secondary sort within same-year groups,
+// where the old behaviour is still fine.
 export function parseDateNum(str) {
   const m = String(str || '').match(/(\d+)/)
   return m ? parseInt(m[1]) : 0
 }
 
-// Oldest first for BC dates (higher number = older)
+// Sort events oldest-first using the signed BCE/CE scale.
 export function sortByDate(events) {
   return [...events].sort((a, b) => {
-    const d = parseDateNum(b.date) - parseDateNum(a.date)
+    const d = parseDateToSort(a.date) - parseDateToSort(b.date)  // ascending = oldest first
     if (d !== 0) return d
     return (a.sort_order ?? 0) - (b.sort_order ?? 0)
   })
@@ -154,7 +173,7 @@ export function MatchTest({ events, onRetry }) {
 
   // Dates column: sorted unique dates (oldest BC first = highest number first)
   const sortedUniqueDates = [...new Set(events.map(e => e.date))]
-    .sort((a, b) => parseDateNum(b) - parseDateNum(a))
+    .sort((a, b) => parseDateToSort(a) - parseDateToSort(b))
 
   const [selectedEventId, setSelectedEventId] = useState(null)
   const [matched, setMatched] = useState(new Set()) // event IDs that are matched
