@@ -4,28 +4,44 @@ import { supabase } from '../supabase'
 // ── Helpers ──────────────────────────────────────────────────────
 export function formatRef(s) {
   const parts = []
-  if (s.book)    parts.push(String(s.book))
-  if (s.chapter) parts.push(String(s.chapter))
-  const base = parts.join('.')
-  if (s.section) return base ? `${base} (§${s.section})` : s.section
-  return base
+  if (s.book)    parts.push(String(s.book).trim())
+  if (s.chapter) parts.push(String(s.chapter).trim())
+  if (s.section) parts.push(String(s.section).trim())
+  return parts.join('.')
+}
+
+function parseRefNums(s) {
+  return [
+    parseInt(String(s.book    || 0)),
+    parseInt(String(s.chapter || 0)),
+    parseInt(String(s.section || '0').match(/\d+/)?.[0] || 0),
+  ]
 }
 
 function groupByAuthorTitle(sources) {
   const map = {}
   sources.forEach(s => {
-    const author = s.author?.trim() || 'Unknown'
-    const title  = s.title?.trim()  || 'Untitled'
+    const author = s.author?.trim() || ''
+    const title  = s.title?.trim()  || ''
     const key    = `${author}|||${title}`
     if (!map[key]) map[key] = { key, author, title, sources: [] }
     map[key].sources.push(s)
   })
-  return Object.values(map).sort((a, b) => a.author.localeCompare(b.author))
+  return Object.values(map)
+    .sort((a, b) => (a.author || '').localeCompare(b.author || ''))
+    .map(group => ({
+      ...group,
+      sources: [...group.sources].sort((a, b) => {
+        const [ab, ac, as_] = parseRefNums(a)
+        const [bb, bc, bs]  = parseRefNums(b)
+        return ab - bb || ac - bc || as_ - bs
+      }),
+    }))
 }
 
 // ── Single source expand/collapse ────────────────────────────────
-function SourceItem({ source }) {
-  const [open, setOpen] = useState(false)
+function SourceItem({ source, defaultOpen = false }) {
+  const [open, setOpen] = useState(defaultOpen)
   const ref = formatRef(source)
   const preview = source.content?.slice(0, 120) + (source.content?.length > 120 ? '…' : '')
 
@@ -55,19 +71,20 @@ function SourceItem({ source }) {
 
 // ── Group (author + title) ────────────────────────────────────────
 function SourceGroup({ group, defaultOpen = false }) {
+  const isSingle = group.sources.length === 1
   const [open, setOpen] = useState(defaultOpen)
   return (
     <div className="src-group">
       <button className="src-group-header" onClick={() => setOpen(o => !o)}>
         <span className="src-group-chevron">{open ? '▾' : '▸'}</span>
         <span className="src-group-author">{group.author}</span>
-        <span className="src-group-dot">·</span>
+        {(group.author && group.title) && <span className="src-group-dot">·</span>}
         <span className="src-group-title">{group.title}</span>
         <span className="src-group-count">{group.sources.length}</span>
       </button>
       {open && (
         <div className="src-group-items">
-          {group.sources.map(s => <SourceItem key={s.id} source={s} />)}
+          {group.sources.map(s => <SourceItem key={s.id} source={s} defaultOpen={isSingle} />)}
         </div>
       )}
     </div>

@@ -4,24 +4,38 @@ import { Modal } from './TeacherUI'
 import { formatRef } from '../SourceTabContent'
 
 // ── Range-aware token matching ────────────────────────────────────
-// Parses "1.89-91" into { book: "1", chapters: ["89","90","91"] }
-// Returns null for plain tokens
 function parseRange(token) {
-  const m = token.match(/^(\d+)\.(\d+)-(\d+)$/)
-  if (!m) return null
-  const [, book, s, e] = m
-  const start = parseInt(s), end = parseInt(e)
-  // Only expand genuinely sequential ranges (same-century chapters, max 30 at once)
-  if (end <= start || end - start > 30) return null
-  const chapters = Array.from({ length: end - start + 1 }, (_, i) => String(start + i))
-  return { book, chapters }
+  // book.start-end  e.g. "1.89-91"
+  const m1 = token.match(/^(\d+)\.(\d+)-(\d+)$/)
+  if (m1) {
+    const [, book, s, e] = m1
+    const start = parseInt(s), end = parseInt(e)
+    if (end > start && end - start <= 30)
+      return { book, chapters: Array.from({ length: end - start + 1 }, (_, i) => String(start + i)) }
+  }
+  // bare start-end  e.g. "30-31" (Plutarch, Sallust, authors without book numbers)
+  const m2 = token.match(/^(\d+)-(\d+)$/)
+  if (m2) {
+    const [, s, e] = m2
+    const start = parseInt(s), end = parseInt(e)
+    if (end > start && end - start <= 30)
+      return { book: null, chapters: Array.from({ length: end - start + 1 }, (_, i) => String(start + i)) }
+  }
+  return null
 }
 
 function matchToken(source, token) {
   const range = parseRange(token)
   if (range) {
-    return String(source.book    || '').trim() === range.book &&
-           range.chapters.includes(String(source.chapter || '').trim())
+    const bookMatch = !range.book || String(source.book || '').trim() === range.book
+    if (!bookMatch) return false
+    const chapter = String(source.chapter || '').trim()
+    const section = String(source.section || '').trim()
+    if (chapter && range.chapters.includes(chapter)) return true
+    if (section && range.chapters.includes(section)) return true
+    const sectionStart = section.match(/^(\d+)/)?.[1]
+    if (sectionStart && range.chapters.includes(sectionStart)) return true
+    return false
   }
   return (
     source.author?.toLowerCase().includes(token) ||
