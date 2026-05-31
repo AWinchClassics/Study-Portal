@@ -3,17 +3,21 @@ import { supabase } from '../../supabase'
 import TeacherLayout from '../../components/teacher/TeacherLayout'
 import { ConfirmButton, StatusMessage, Modal, FormField } from '../../components/teacher/TeacherUI'
 
-const VIDEO_BUCKET = 'resource-videos'
+const MEDIA_BUCKETS = {
+  video: 'resource-videos',
+  pdf:   'resource-pdfs',
+}
 
-async function uploadVideo(file) {
-  const ext  = file.name.split('.').pop().toLowerCase()
-  const path = `${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`
+async function uploadMedia(file, type) {
+  const bucket = MEDIA_BUCKETS[type] ?? 'resource-videos'
+  const ext    = file.name.split('.').pop().toLowerCase()
+  const path   = `${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`
   const { data, error } = await supabase.storage
-    .from(VIDEO_BUCKET)
+    .from(bucket)
     .upload(path, file, { upsert: false })
   if (error) throw new Error(`Upload failed: ${error.message}`)
   const { data: { publicUrl } } = supabase.storage
-    .from(VIDEO_BUCKET)
+    .from(bucket)
     .getPublicUrl(data.path)
   return publicUrl
 }
@@ -48,7 +52,7 @@ export default function TeacherResourcesPage() {
   async function handleCreate(form, videoFile) {
     let url = form.url.trim() || null
     if (videoFile) {
-      try { url = await uploadVideo(videoFile) }
+      try { url = await uploadMedia(videoFile, form.type) }
       catch (e) { setStatus({ type: 'error', msg: e.message }); return }
     }
     const { data, error } = await supabase
@@ -65,7 +69,7 @@ export default function TeacherResourcesPage() {
   async function handleUpdate(id, form, videoFile) {
     let url = form.url.trim() || null
     if (videoFile) {
-      try { url = await uploadVideo(videoFile) }
+      try { url = await uploadMedia(videoFile, form.type) }
       catch (e) { setStatus({ type: 'error', msg: e.message }); return }
     }
     const { error } = await supabase
@@ -224,6 +228,7 @@ function ResourceFormModal({ title, initial, onSave, onClose }) {
   }
 
   const isVideo = form.type === 'video'
+  const isUploadable = form.type === 'video' || form.type === 'pdf'
 
   return (
     <Modal title={title} onClose={onClose}>
@@ -238,7 +243,7 @@ function ResourceFormModal({ title, initial, onSave, onClose }) {
           </select>
         </FormField>
 
-        {isVideo ? (
+        {isUploadable ? (
           <FormField label="Video source" error={errors.url}>
             <div className="vp-teacher-toggle">
               <button type="button"
@@ -254,16 +259,21 @@ function ResourceFormModal({ title, initial, onSave, onClose }) {
             </div>
             {videoMode === 'url' ? (
               <input className="t-input" style={{ marginTop: 8 }}
-                placeholder="https://youtube.com/watch?v=… or https://vimeo.com/…"
+                placeholder={form.type === 'pdf' ? 'https://example.com/document.pdf' : 'https://youtube.com/watch?v=… or https://vimeo.com/…'}
                 value={form.url}
                 onChange={e => set('url', e.target.value)} />
             ) : (
               <label className="src-form-upload-label" style={{ marginTop: 8 }}>
-                <input type="file" accept="video/*" style={{ display: 'none' }} onChange={handleFileChange} />
+                <input
+                type="file"
+                accept={form.type === 'pdf' ? 'application/pdf' : 'video/*'}
+                style={{ display: 'none' }}
+                onChange={handleFileChange}
+              />
                 <span className="src-form-upload-btn t-btn t-btn-secondary">
                   {videoFile ? `✓ ${videoFile.name}` : '📁 Choose video file…'}
                 </span>
-                <span className="src-form-upload-hint">MP4, WebM, MOV</span>
+                <span className="src-form-upload-hint">{form.type === 'pdf' ? 'PDF files only' : 'MP4, WebM, MOV'}</span>
               </label>
             )}
           </FormField>

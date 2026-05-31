@@ -5,6 +5,7 @@ import Breadcrumb from '../components/Breadcrumb'
 import ChunkRandomiser from '../components/ChunkRandomiser'
 import SourceTabContent from '../components/SourceTabContent'
 import VideoPlayer from '../components/VideoPlayer'
+import PdfViewer from '../components/PdfViewer'
 import FlashcardTabContent from '../components/FlashcardTabContent'
 import TimelineTabContent from '../components/TimelineTabContent'
 
@@ -23,11 +24,13 @@ const TYPE_ICONS = {
 function ResourceItem({ resource, navContext }) {
   const navigate = useNavigate()
   const [videoOpen, setVideoOpen] = useState(false)
+  const [pdfOpen,   setPdfOpen]   = useState(false)
   const type    = resource.type?.toLowerCase()
   const icon    = TYPE_ICONS[type] ?? '📎'
   const isQuiz  = type === 'quiz'
   const isVideo = type === 'video' && !!resource.url
-  const hasExternalLink = resource.url?.startsWith('http') && !isQuiz && !isVideo
+  const isPdf   = type === 'pdf'   && !!resource.url
+  const hasExternalLink = resource.url?.startsWith('http') && !isQuiz && !isVideo && !isPdf
 
   // Video resource — collapsible inline player
   if (isVideo) {
@@ -45,6 +48,38 @@ function ResourceItem({ resource, navContext }) {
         {videoOpen && (
           <div className="resource-video-player">
             <VideoPlayer url={resource.url} title={resource.title} />
+          </div>
+        )}
+      </div>
+    )
+  }
+
+  // PDF resource — collapsible inline viewer
+  if (isPdf) {
+    return (
+      <div className={`resource-item resource-item-video ${pdfOpen ? 'resource-video-open' : ''}`}>
+        <button className="resource-video-header" onClick={() => setPdfOpen(o => !o)}>
+          <span className="resource-icon">📄</span>
+          <div className="resource-info">
+            <span className="resource-title">{resource.title}</span>
+            {resource.description && <span className="resource-desc">{resource.description}</span>}
+          </div>
+          <a
+            href={resource.url}
+            target="_blank"
+            rel="noreferrer"
+            className="resource-open-arrow"
+            onClick={e => e.stopPropagation()}
+            title="Open in new tab"
+          >
+            ↗
+          </a>
+          <span className="resource-type-pill">pdf</span>
+          <span className="resource-open-arrow">{pdfOpen ? '▾' : '▸'}</span>
+        </button>
+        {pdfOpen && (
+          <div className="resource-video-player">
+            <PdfViewer url={resource.url} title={resource.title} />
           </div>
         )}
       </div>
