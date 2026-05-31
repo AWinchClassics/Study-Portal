@@ -4,6 +4,7 @@ import { supabase } from '../supabase'
 import Breadcrumb from '../components/Breadcrumb'
 import ChunkRandomiser from '../components/ChunkRandomiser'
 import SourceTabContent from '../components/SourceTabContent'
+import VideoPlayer from '../components/VideoPlayer'
 import FlashcardTabContent from '../components/FlashcardTabContent'
 import TimelineTabContent from '../components/TimelineTabContent'
 
@@ -21,10 +22,34 @@ const TYPE_ICONS = {
 
 function ResourceItem({ resource, navContext }) {
   const navigate = useNavigate()
-  const type = resource.type?.toLowerCase()
-  const icon = TYPE_ICONS[type] ?? '📎'
-  const isQuiz = type === 'quiz'
-  const hasExternalLink = resource.url?.startsWith('http') && !isQuiz
+  const [videoOpen, setVideoOpen] = useState(false)
+  const type    = resource.type?.toLowerCase()
+  const icon    = TYPE_ICONS[type] ?? '📎'
+  const isQuiz  = type === 'quiz'
+  const isVideo = type === 'video' && !!resource.url
+  const hasExternalLink = resource.url?.startsWith('http') && !isQuiz && !isVideo
+
+  // Video resource — collapsible inline player
+  if (isVideo) {
+    return (
+      <div className={`resource-item resource-item-video ${videoOpen ? 'resource-video-open' : ''}`}>
+        <button className="resource-video-header" onClick={() => setVideoOpen(o => !o)}>
+          <span className="resource-icon">▶</span>
+          <div className="resource-info">
+            <span className="resource-title">{resource.title}</span>
+            {resource.description && <span className="resource-desc">{resource.description}</span>}
+          </div>
+          <span className="resource-type-pill">video</span>
+          <span className="resource-open-arrow">{videoOpen ? '▾' : '▸'}</span>
+        </button>
+        {videoOpen && (
+          <div className="resource-video-player">
+            <VideoPlayer url={resource.url} title={resource.title} />
+          </div>
+        )}
+      </div>
+    )
+  }
 
   return (
     <div className="resource-item">

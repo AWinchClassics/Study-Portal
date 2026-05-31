@@ -3,6 +3,21 @@ import { supabase } from '../../supabase'
 import TeacherLayout from '../../components/teacher/TeacherLayout'
 import { ConfirmButton, StatusMessage, Modal, FormField } from '../../components/teacher/TeacherUI'
 
+const VIDEO_BUCKET = 'resource-videos'
+
+async function uploadVideo(file) {
+  const ext  = file.name.split('.').pop().toLowerCase()
+  const path = `${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`
+  const { data, error } = await supabase.storage
+    .from(VIDEO_BUCKET)
+    .upload(path, file, { upsert: false })
+  if (error) throw new Error(`Upload failed: ${error.message}`)
+  const { data: { publicUrl } } = supabase.storage
+    .from(VIDEO_BUCKET)
+    .getPublicUrl(data.path)
+  return publicUrl
+}
+
 const RESOURCE_TYPES = ['video', 'quiz', 'pdf', 'text', 'audio', 'worksheet', 'task', 'flashcards', 'source']
 
 const TYPE_ICONS = {
@@ -30,10 +45,15 @@ export default function TeacherResourcesPage() {
     setLoading(false)
   }
 
-  async function handleCreate(form) {
+  async function handleCreate(form, videoFile) {
+    let url = form.url.trim() || null
+    if (videoFile) {
+      try { url = await uploadVideo(videoFile) }
+      catch (e) { setStatus({ type: 'error', msg: e.message }); return }
+    }
     const { data, error } = await supabase
       .from('resources')
-      .insert({ title: form.title.trim(), type: form.type, url: form.url.trim() || null, description: form.description.trim() || null })
+      .insert({ title: form.title.trim(), type: form.type, url, description: form.description.trim() || null })
       .select()
       .single()
     if (error) { setStatus({ type: 'error', msg: error.message }); return }
@@ -42,10 +62,15 @@ export default function TeacherResourcesPage() {
     setStatus({ type: 'success', msg: 'Resource created.' })
   }
 
-  async function handleUpdate(id, form) {
+  async function handleUpdate(id, form, videoFile) {
+    let url = form.url.trim() || null
+    if (videoFile) {
+      try { url = await uploadVideo(videoFile) }
+      catch (e) { setStatus({ type: 'error', msg: e.message }); return }
+    }
     const { error } = await supabase
       .from('resources')
-      .update({ title: form.title.trim(), type: form.type, url: form.url.trim() || null, description: form.description?.trim() || null })
+      .update({ title: form.title.trim(), type: form.type, url, description: form.description?.trim() || null })
       .eq('id', id)
     if (error) { setStatus({ type: 'error', msg: error.message }); return }
     setResources(prev => prev.map(r => r.id === id ? { ...r, ...form } : r))
@@ -155,7 +180,7 @@ export default function TeacherResourcesPage() {
         <ResourceFormModal
           title="Edit resource"
           initial={editingResource}
-          onSave={form => handleUpdate(editingResource.id, form)}
+          onSave={(form, videoFile) => handleUpdate(editingResource.id, form, videoFile)}
           onClose={() => setEditingResource(null)}
         />
       )}
@@ -170,60 +195,94 @@ function ResourceFormModal({ title, initial, onSave, onClose }) {
     url:         initial?.url         ?? '',
     description: initial?.description ?? '',
   })
-  const [errors, setErrors] = useState({})
+  const [errors, setErrors]     = useState({})
+  const [videoMode, setVideoMode] = useState('url')   // 'url' | 'upload'
+  const [videoFile, setVideoFile] = useState(null)
+  const [saving, setSaving]       = useState(false)
 
   function set(field, value) {
     setForm(prev => ({ ...prev, [field]: value }))
     setErrors(prev => ({ ...prev, [field]: null }))
   }
 
-  function handleSubmit() {
+  function handleFileChange(e) {
+    const file = e.target.files[0]
+    if (!file) return
+    setVideoFile(file)
+    set('url', '')
+  }
+
+  async function handleSubmit() {
     const e = {}
     if (!form.title.trim()) e.title = 'Title is required'
+    if (form.type === 'video' && videoMode === 'url' && !form.url.trim()) e.url = 'Enter a URL or upload a file'
+    if (form.type === 'video' && videoMode === 'upload' && !videoFile) e.url = 'Choose a video file'
     if (Object.keys(e).length) { setErrors(e); return }
-    onSave(form)
+    setSaving(true)
+    await onSave(form, form.type === 'video' && videoMode === 'upload' ? videoFile : null)
+    setSaving(false)
   }
+
+  const isVideo = form.type === 'video'
 
   return (
     <Modal title={title} onClose={onClose}>
       <div className="t-form">
         <FormField label="Title" error={errors.title}>
-          <input
-            className="t-input"
-            value={form.title}
-            autoFocus
-            onChange={e => set('title', e.target.value)}
-          />
+          <input className="t-input" value={form.title} autoFocus onChange={e => set('title', e.target.value)} />
         </FormField>
 
         <FormField label="Type">
-          <select className="t-input" value={form.type} onChange={e => set('type', e.target.value)}>
+          <select className="t-input" value={form.type} onChange={e => { set('type', e.target.value); setVideoFile(null) }}>
             {RESOURCE_TYPES.map(t => <option key={t} value={t}>{t}</option>)}
           </select>
         </FormField>
 
-        <FormField label="URL / path">
-          <input
-            className="t-input"
-            placeholder="https://… or /quizzes/…"
-            value={form.url}
-            onChange={e => set('url', e.target.value)}
-          />
-        </FormField>
+        {isVideo ? (
+          <FormField label="Video source" error={errors.url}>
+            <div className="vp-teacher-toggle">
+              <button type="button"
+                className={`vp-toggle-btn ${videoMode === 'url' ? 'vp-toggle-active' : ''}`}
+                onClick={() => { setVideoMode('url'); setVideoFile(null) }}>
+                🔗 Link (YouTube / Vimeo / URL)
+              </button>
+              <button type="button"
+                className={`vp-toggle-btn ${videoMode === 'upload' ? 'vp-toggle-active' : ''}`}
+                onClick={() => { setVideoMode('upload'); set('url', '') }}>
+                📁 Upload file
+              </button>
+            </div>
+            {videoMode === 'url' ? (
+              <input className="t-input" style={{ marginTop: 8 }}
+                placeholder="https://youtube.com/watch?v=… or https://vimeo.com/…"
+                value={form.url}
+                onChange={e => set('url', e.target.value)} />
+            ) : (
+              <label className="src-form-upload-label" style={{ marginTop: 8 }}>
+                <input type="file" accept="video/*" style={{ display: 'none' }} onChange={handleFileChange} />
+                <span className="src-form-upload-btn t-btn t-btn-secondary">
+                  {videoFile ? `✓ ${videoFile.name}` : '📁 Choose video file…'}
+                </span>
+                <span className="src-form-upload-hint">MP4, WebM, MOV</span>
+              </label>
+            )}
+          </FormField>
+        ) : (
+          <FormField label="URL / path">
+            <input className="t-input" placeholder="https://… or /quizzes/…"
+              value={form.url} onChange={e => set('url', e.target.value)} />
+          </FormField>
+        )}
 
         <FormField label="Description">
-          <input
-            className="t-input"
-            placeholder="Optional"
-            value={form.description}
-            onChange={e => set('description', e.target.value)}
-          />
+          <input className="t-input" placeholder="Optional"
+            value={form.description} onChange={e => set('description', e.target.value)} />
         </FormField>
 
         <div className="t-modal-footer">
-          <button className="t-btn t-btn-secondary" onClick={onClose}>Cancel</button>
-          <button className="t-btn t-btn-primary" onClick={handleSubmit}>
-            {initial ? 'Save changes' : 'Create resource'}
+          <button className="t-btn t-btn-secondary" onClick={onClose} disabled={saving}>Cancel</button>
+          <button className="t-btn t-btn-primary" onClick={handleSubmit} disabled={saving}>
+            {saving ? 'Saving…' : initial ? 'Save changes' : 'Create resource'}
           </button>
         </div>
       </div>

@@ -1,0 +1,98 @@
+/* ============================================
+   VIDEO PLAYER
+   ============================================ */
+
+/* 16:9 responsive wrapper for iframes (YouTube / Vimeo) */
+.vp-wrap {
+  position: relative;
+  padding-top: 56.25%;
+  background: #000;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.vp-iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Direct / uploaded video */
+.vp-direct-wrap {
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #000;
+}
+
+.vp-direct {
+  display: block;
+  width: 100%;
+  max-height: 480px;
+  border-radius: var(--radius);
+}
+
+/* ── Resource item — video variant ──────────── */
+
+.resource-item-video {
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0;
+  gap: 0;
+}
+
+.resource-video-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--sans);
+  transition: background 0.08s;
+  border-radius: var(--radius-sm);
+}
+.resource-video-header:hover { background: var(--bg-subtle); }
+.resource-video-open .resource-video-header {
+  background: var(--accent-bg);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.resource-video-player {
+  padding: 12px 14px 14px;
+  border-top: 1px solid var(--accent-border);
+  background: var(--bg-subtle);
+  border-bottom-left-radius: var(--radius-sm);
+  border-bottom-right-radius: var(--radius-sm);
+}
+
+/* ── Teacher form — video mode toggle ─────── */
+
+.vp-teacher-toggle {
+  display: flex;
+  gap: 6px;
+}
+
+.vp-toggle-btn {
+  font-size: 13px;
+  font-weight: 500;
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: background 0.1s, border-color 0.1s, color 0.1s;
+}
+.vp-toggle-btn:hover { border-color: var(--border-strong); color: var(--text-h); }
+.vp-toggle-active {
+  background: var(--accent-bg) !important;
+  border-color: var(--accent-border) !important;
+  color: var(--accent) !important;
+}
