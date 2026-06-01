@@ -41,7 +41,7 @@ export function InlineEdit({ value, onSave, className = '', placeholder = 'Untit
   return (
     <span
       className={`inline-edit-display ${className}`}
-      onClick={() => setEditing(true)}
+      onClick={e => { e.stopPropagation(); setEditing(true) }}
       title="Click to edit"
     >
       {value || <span className="inline-edit-placeholder">{placeholder}</span>}
