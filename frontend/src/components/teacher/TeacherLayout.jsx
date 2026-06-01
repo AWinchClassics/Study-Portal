@@ -1,4 +1,5 @@
-import { NavLink, useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { NavLink, useNavigate, useLocation } from 'react-router-dom'
 import { useTeacherAuth } from '../../context/TeacherAuthContext'
 
 const NAV_ITEMS = [
@@ -13,14 +14,36 @@ const NAV_ITEMS = [
 
 export default function TeacherLayout({ children, title, actions }) {
   const { logout } = useTeacherAuth()
-  const navigate = useNavigate()
+  const navigate  = useNavigate()
+  const location  = useLocation()
+  const [open, setOpen] = useState(false)
+
+  // Close drawer on navigation
+  useEffect(() => setOpen(false), [location.pathname])
+  // Prevent body scroll when drawer is open
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [open])
+
   function handleLogout() { logout(); navigate('/teacher') }
 
   return (
     <div className="tl-shell">
-      <aside className="tl-sidebar">
+      {/* Mobile hamburger */}
+      <button className="t-sidebar-hamburger" onClick={() => setOpen(true)} aria-label="Open menu">
+        <span /><span /><span />
+      </button>
+      {/* Backdrop */}
+      {open && <div className="t-sidebar-backdrop" onClick={() => setOpen(false)} />}
+
+      <aside className={`tl-sidebar ${open ? 'tl-sidebar-open' : ''}`}>
         <div className="tl-sidebar-top">
-          <div className="tl-brand"><span className="navbar-logo-mark">SP</span><span className="tl-brand-label">Teacher</span></div>
+          <div className="tl-brand">
+            <span className="navbar-logo-mark">SP</span>
+            <span className="tl-brand-label">Teacher</span>
+            <button className="t-sidebar-close" onClick={() => setOpen(false)} aria-label="Close menu">✕</button>
+          </div>
           <nav className="tl-nav">
             {NAV_ITEMS.map(item => (
               <NavLink key={item.to} to={item.to} end={item.end}

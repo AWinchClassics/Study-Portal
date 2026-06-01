@@ -122,8 +122,9 @@ export default function TeacherCoursePage() {
         ) : (
           <div className="t-list">
             {modules.map((mod, idx) => (
-              <div key={mod.id} className="t-list-row">
-                <div className="t-list-row-order">
+              <div key={mod.id} className="t-list-row t-list-row-nav"
+                onClick={() => navigate(`/teacher/modules/${mod.id}`)}>
+                <div className="t-list-row-order" onClick={e => e.stopPropagation()}>
                   <button
                     className="t-order-btn"
                     onClick={() => handleMoveModule(mod.id, -1)}
@@ -142,13 +143,7 @@ export default function TeacherCoursePage() {
                     className="t-list-title"
                   />
                 </div>
-                <div className="t-list-row-actions">
-                  <button
-                    className="t-btn t-btn-ghost"
-                    onClick={() => navigate(`/teacher/modules/${mod.id}`)}
-                  >
-                    Manage →
-                  </button>
+                <div className="t-list-row-actions" onClick={e => e.stopPropagation()}>
                   <ConfirmButton
                     className="t-btn t-btn-danger-ghost"
                     onConfirm={() => handleDeleteModule(mod.id)}

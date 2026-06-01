@@ -123,9 +123,10 @@ export default function TeacherUnitPage() {
         ) : (
           <div className="t-chunk-list">
             {chunks.map((chunk, idx) => (
-              <div key={chunk.id} className="t-chunk-row">
+              <div key={chunk.id} className="t-chunk-row t-list-row-nav"
+                onClick={() => navigate(`/teacher/chunks/${chunk.id}`)}>
                 <div className="t-chunk-row-top">
-                  <div className="t-list-row-order">
+                  <div className="t-list-row-order" onClick={e => e.stopPropagation()}>
                     <button className="t-order-btn" onClick={() => handleMoveChunk(chunk.id, -1)} disabled={idx === 0}>↑</button>
                     <button className="t-order-btn" onClick={() => handleMoveChunk(chunk.id, 1)} disabled={idx === chunks.length - 1}>↓</button>
                   </div>
@@ -136,11 +137,7 @@ export default function TeacherUnitPage() {
                       className="t-list-title"
                     />
                   </div>
-                  <div className="t-list-row-actions">
-                    <button className="t-btn t-btn-ghost"
-                      onClick={() => navigate(`/teacher/chunks/${chunk.id}`)}>
-                      Resources →
-                    </button>
+                  <div className="t-list-row-actions" onClick={e => e.stopPropagation()}>
                     <ConfirmButton
                       className="t-btn t-btn-danger-ghost"
                       onConfirm={() => handleDeleteChunk(chunk.id)}
