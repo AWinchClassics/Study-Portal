@@ -35,6 +35,7 @@ export default function TimelineTabContent({ chunkIds = [], unitIds = [], module
   const [customTimelines, setCustomTimelines] = useState([])
   const [selectedTimeline, setSelectedTimeline] = useState('master')
   const [loading, setLoading]                 = useState(true)
+  const [masterHidden, setMasterHidden]         = useState(false)
 
   // Mode and session state — owned here so mode bar is always at top
   const [mode, setMode]       = useState('view')
@@ -47,6 +48,7 @@ export default function TimelineTabContent({ chunkIds = [], unitIds = [], module
     setMode('view')
     setSession(null)
     setSelectedTimeline('master')
+    setMasterHidden(false)
 
     async function load() {
       // Master timeline — dated glossary terms, filter-up, include sort_order
@@ -96,6 +98,18 @@ export default function TimelineTabContent({ chunkIds = [], unitIds = [], module
         setCustomTimelines([])
       }
 
+      // Check if master timeline is hidden at the current level.
+      // Only check the primary level (module > unit > chunk).
+      const hmQuery = moduleIds.length > 0
+        ? supabase.from('hidden_master_timelines').select('id').eq('level','module').in('parent_id', moduleIds)
+        : unitIds.length > 0
+        ? supabase.from('hidden_master_timelines').select('id').eq('level','unit').in('parent_id', unitIds)
+        : chunkIds.length > 0
+        ? supabase.from('hidden_master_timelines').select('id').eq('level','chunk').in('parent_id', chunkIds)
+        : Promise.resolve({ data: [] })
+      const { data: hmData } = await hmQuery
+      setMasterHidden((hmData?.length ?? 0) > 0)
+
       setLoading(false)
     }
 
@@ -118,9 +132,9 @@ export default function TimelineTabContent({ chunkIds = [], unitIds = [], module
 
   if (loading) return <div className="loading-pulse" style={{ padding: '24px 0' }}>Loading timeline…</div>
 
-  // Only include master if it has events
+  // Only include master if it has events and is not hidden by teacher
   const allTimelines = [
-    ...(masterEvents.length > 0 ? [{ id: 'master', title: 'Master Timeline', events: masterEvents }] : []),
+    ...(masterEvents.length > 0 && !masterHidden ? [{ id: 'master', title: 'Master Timeline', events: masterEvents }] : []),
     ...customTimelines,
   ]
 

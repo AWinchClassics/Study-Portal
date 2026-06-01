@@ -222,6 +222,176 @@ function MasterTimelineEditor({ hierarchy }) {
 }
 
 // ── Main page ─────────────────────────────────────────────────────
+
+// ── Master Timeline Visibility ────────────────────────────────────
+function MasterTimelineVisibility({ hierarchy }) {
+  const [level, setLevel]         = useState('module')
+  const [modFilter, setModFilter] = useState('')
+  const [unitFilter, setUnit]     = useState('')
+  const [parentId, setParent]     = useState('')
+  const [hidden, setHidden]       = useState([])   // [{id, level, parent_id, label}]
+  const [saving, setSaving]       = useState(false)
+
+  const allModules = hierarchy.flatMap(c => (c.modules ?? []).map(m => ({ ...m, courseName: c.title })))
+  const allUnits   = allModules.flatMap(m => (m.units ?? []).map(u => ({ ...u, module_id: m.id, moduleName: m.title })))
+  const allChunks  = allUnits.flatMap(u  => (u.chunks ?? []).map(c => ({ ...c, unit_id: u.id, unitName: u.title })))
+  const fUnits  = modFilter   ? allUnits.filter(u  => u.module_id === modFilter)  : allUnits
+  const fChunks = unitFilter  ? allChunks.filter(c => c.unit_id  === unitFilter)  : allChunks
+
+  // Load existing hidden entries on mount
+  useEffect(() => {
+    supabase.from('hidden_master_timelines').select('*').then(({ data }) => {
+      if (!data) return
+      // Enrich with labels from hierarchy
+      const enriched = data.map(row => {
+        let label = row.parent_id
+        if (row.level === 'module') {
+          const m = allModules.find(m => m.id === row.parent_id)
+          label = m ? m.title : row.parent_id
+        } else if (row.level === 'unit') {
+          const u = allUnits.find(u => u.id === row.parent_id)
+          label = u ? `${u.moduleName} › ${u.title}` : row.parent_id
+        } else if (row.level === 'chunk') {
+          const c = allChunks.find(c => c.id === row.parent_id)
+          label = c ? `${c.unitName} › ${c.title}` : row.parent_id
+        }
+        return { ...row, label }
+      })
+      setHidden(enriched)
+    })
+  }, [hierarchy])
+
+  function changeLevel(l) { setLevel(l); setParent(''); setModFilter(''); setUnit('') }
+
+  async function handleHide() {
+    if (!parentId) return
+    setSaving(true)
+    const { data, error } = await supabase.from('hidden_master_timelines')
+      .insert({ level, parent_id: parentId })
+      .select().single()
+    setSaving(false)
+    if (error) return
+    // Build label
+    let label = parentId
+    if (level === 'module')      label = allModules.find(m => m.id === parentId)?.title ?? parentId
+    else if (level === 'unit')   { const u = allUnits.find(u => u.id === parentId); label = u ? `${u.moduleName} › ${u.title}` : parentId }
+    else if (level === 'chunk')  { const c = allChunks.find(c => c.id === parentId); label = c ? `${c.unitName} › ${c.title}` : parentId }
+    setHidden(prev => [...prev, { ...data, label }])
+    setParent('')
+  }
+
+  async function handleShow(id) {
+    await supabase.from('hidden_master_timelines').delete().eq('id', id)
+    setHidden(prev => prev.filter(h => h.id !== id))
+  }
+
+  const LEVEL_LABELS = { module: 'Module', unit: 'Unit', chunk: 'Chunk' }
+
+  return (
+    <div className="t-section" style={{ marginTop: 32 }}>
+      <h2 className="t-section-title" style={{ marginBottom: 4 }}>Master Timeline Visibility</h2>
+      <p className="t-chunk-desc" style={{ marginBottom: 16 }}>
+        Hide the auto-generated master timeline for a specific module, unit or chunk.
+      </p>
+
+      {/* Currently hidden list */}
+      {hidden.length > 0 && (
+        <div style={{ marginBottom: 16 }}>
+          <p style={{ fontSize: 12, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--text)', marginBottom: 6 }}>
+            Currently hidden
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+            {hidden.map(h => (
+              <div key={h.id} className="tl-teacher-event-row">
+                <span className="t-resource-type-pill">{LEVEL_LABELS[h.level]}</span>
+                <span className="tl-teacher-event-label">{h.label}</span>
+                <button className="t-btn t-btn-secondary" style={{ fontSize: 12, padding: '3px 10px' }}
+                  onClick={() => handleShow(h.id)}>
+                  Show
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Hide a new level */}
+      <div style={{ background: 'var(--bg-subtle)', border: '1px solid var(--border)', borderRadius: 'var(--radius-sm)', padding: '14px 16px', display: 'flex', flexDirection: 'column', gap: 10 }}>
+        <FormField label="Level to hide">
+          <div className="rr-attach-options">
+            {['module','unit','chunk'].map(l => (
+              <label key={l} className="rr-attach-option">
+                <input type="radio" name="vis-level" checked={level === l} onChange={() => changeLevel(l)} />
+                <span>{LEVEL_LABELS[l]}</span>
+              </label>
+            ))}
+          </div>
+        </FormField>
+
+        {level === 'module' && (
+          <FormField label="Select module">
+            <select className="t-input" value={parentId} onChange={e => setParent(e.target.value)}>
+              <option value="">Select…</option>
+              {allModules.map(m => <option key={m.id} value={m.id}>{m.title}</option>)}
+            </select>
+          </FormField>
+        )}
+
+        {level === 'unit' && (<>
+          <FormField label="1. Module">
+            <select className="t-input" value={modFilter} onChange={e => { setModFilter(e.target.value); setParent('') }}>
+              <option value="">Select…</option>
+              {allModules.map(m => <option key={m.id} value={m.id}>{m.title}</option>)}
+            </select>
+          </FormField>
+          {modFilter && (
+            <FormField label="2. Unit">
+              <select className="t-input" value={parentId} onChange={e => setParent(e.target.value)}>
+                <option value="">Select…</option>
+                {fUnits.map(u => <option key={u.id} value={u.id}>{u.title}</option>)}
+              </select>
+            </FormField>
+          )}
+        </>)}
+
+        {level === 'chunk' && (<>
+          <FormField label="1. Module">
+            <select className="t-input" value={modFilter} onChange={e => { setModFilter(e.target.value); setUnit(''); setParent('') }}>
+              <option value="">Select…</option>
+              {allModules.map(m => <option key={m.id} value={m.id}>{m.title}</option>)}
+            </select>
+          </FormField>
+          {modFilter && (
+            <FormField label="2. Unit">
+              <select className="t-input" value={unitFilter} onChange={e => { setUnit(e.target.value); setParent('') }}>
+                <option value="">Select…</option>
+                {fUnits.map(u => <option key={u.id} value={u.id}>{u.title}</option>)}
+              </select>
+            </FormField>
+          )}
+          {unitFilter && (
+            <FormField label="3. Chunk">
+              <select className="t-input" value={parentId} onChange={e => setParent(e.target.value)}>
+                <option value="">Select…</option>
+                {fChunks.map(c => <option key={c.id} value={c.id}>{c.title}</option>)}
+              </select>
+            </FormField>
+          )}
+        </>)}
+
+        <button
+          className="t-btn t-btn-primary"
+          style={{ alignSelf: 'flex-start' }}
+          onClick={handleHide}
+          disabled={!parentId || saving}
+        >
+          {saving ? 'Saving…' : 'Hide master timeline'}
+        </button>
+      </div>
+    </div>
+  )
+}
+
 export default function TeacherTimelinesPage() {
   const [timelines, setTimelines]   = useState([])
   const [expanded, setExpanded]     = useState(null)
@@ -310,6 +480,7 @@ export default function TeacherTimelinesPage() {
 
           {/* Master timeline ordering */}
           {hierarchy.length > 0 && <MasterTimelineEditor hierarchy={hierarchy} />}
+          {hierarchy.length > 0 && <MasterTimelineVisibility hierarchy={hierarchy} />}
         </>
       )}
 
