@@ -267,7 +267,9 @@ ul { list-style: none; padding: 0; margin: 0; }
   border-radius: var(--radius);
   padding: 24px 28px;
   box-shadow: var(--shadow-sm);
+  transition: border-color 0.1s;
 }
+.chunk-card-collapsed { padding-bottom: 20px; }
 
 .chunk-card-header {
   display: flex;
@@ -275,9 +277,28 @@ ul { list-style: none; padding: 0; margin: 0; }
   justify-content: space-between;
   gap: 12px;
   margin-bottom: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+.chunk-card-collapsed .chunk-card-header { margin-bottom: 0; }
+.chunk-card-header:hover .chunk-title { color: var(--accent); }
+
+.chunk-header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
 }
 
-.chunk-title { font-size: 18px; font-weight: 600; color: var(--text-h); }
+.chunk-chevron {
+  font-size: 14px;
+  color: var(--text);
+  flex-shrink: 0;
+  transition: color 0.1s;
+}
+.chunk-card-header:hover .chunk-chevron { color: var(--accent); }
+
+.chunk-title { font-size: 18px; font-weight: 600; color: var(--text-h); transition: color 0.1s; }
 
 .chunk-time {
   font-size: 12px;

@@ -64,15 +64,22 @@ function ResourceItem({ resource, navContext }) {
             <span className="resource-title">{resource.title}</span>
             {resource.description && <span className="resource-desc">{resource.description}</span>}
           </div>
+          <a
+            href={resource.url}
+            target="_blank"
+            rel="noreferrer"
+            className="resource-open-arrow"
+            onClick={e => e.stopPropagation()}
+            title="Open in new tab"
+          >
+            ↗
+          </a>
           <span className="resource-type-pill">pdf</span>
           <span className="resource-open-arrow">{pdfOpen ? '▾' : '▸'}</span>
         </button>
         {pdfOpen && (
           <div className="resource-video-player">
             <PdfViewer url={resource.url} title={resource.title} />
-            <a href={resource.url} target="_blank" rel="noreferrer" className="pdf-open-tab-link">
-              Open in new tab ↗
-            </a>
           </div>
         )}
       </div>
@@ -100,7 +107,8 @@ function ResourceItem({ resource, navContext }) {
 }
 
 function ChunkCard({ chunk, resources, navContext }) {
-  const [chunkTab, setChunkTab] = useState('resources')
+  const [collapsed, setCollapsed] = useState(true)
+  const [chunkTab, setChunkTab]   = useState('resources')
 
   const byPurpose = {}
   resources.forEach(r => {
@@ -111,16 +119,21 @@ function ChunkCard({ chunk, resources, navContext }) {
   const activeSections = SECTIONS.filter(s => byPurpose[s.key]?.length > 0)
 
   return (
-    <div className="chunk-card">
-      {/* Header */}
-      <div className="chunk-card-header">
+    <div className={`chunk-card ${collapsed ? 'chunk-card-collapsed' : ''}`}>
+      {/* Header — click anywhere to expand/collapse */}
+      <div className="chunk-card-header" onClick={() => setCollapsed(o => !o)}>
         <h2 className="chunk-title">{chunk.title}</h2>
-        {chunk.estimated_time && <span className="chunk-time">⏱ {chunk.estimated_time} min</span>}
+        <div className="chunk-header-right">
+          {chunk.estimated_time && <span className="chunk-time">⏱ {chunk.estimated_time} min</span>}
+          <span className="chunk-chevron">{collapsed ? '▸' : '▾'}</span>
+        </div>
       </div>
 
-      {chunk.description && <p className="chunk-description">{chunk.description}</p>}
+      {!collapsed && (
+        <>
+          {chunk.description && <p className="chunk-description">{chunk.description}</p>}
 
-      {/* Per-chunk tabs */}
+          {/* Per-chunk tabs */}
       <div className="chunk-tabs">
         <button
           className={`chunk-tab ${chunkTab === 'resources' ? 'chunk-tab-active' : ''}`}
@@ -191,10 +204,12 @@ function ChunkCard({ chunk, resources, navContext }) {
         <SourceTabContent chunkIds={[chunk.id]} />
       )}
 
-      {/* Randomiser — always visible at the bottom */}
-      <div className="chunk-randomiser-wrapper">
-        <ChunkRandomiser chunkTitle={chunk.title} />
-      </div>
+          {/* Randomiser */}
+          <div className="chunk-randomiser-wrapper">
+            <ChunkRandomiser chunkTitle={chunk.title} />
+          </div>
+        </>
+      )}
     </div>
   )
 }

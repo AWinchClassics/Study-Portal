@@ -73,7 +73,8 @@ export default function TeacherCoursesPage() {
       ) : (
         <div className="t-list">
           {courses.map(course => (
-            <div key={course.id} className="t-list-row">
+            <div key={course.id} className="t-list-row t-list-row-nav"
+              onClick={() => navigate(`/teacher/courses/${course.id}`)}>
               <div className="t-list-row-main">
                 <InlineEdit
                   value={course.title}
@@ -84,13 +85,7 @@ export default function TeacherCoursesPage() {
                   <span className="t-list-meta">{course.description}</span>
                 )}
               </div>
-              <div className="t-list-row-actions">
-                <button
-                  className="t-btn t-btn-ghost"
-                  onClick={() => navigate(`/teacher/courses/${course.id}`)}
-                >
-                  Manage →
-                </button>
+              <div className="t-list-row-actions" onClick={e => e.stopPropagation()}>
                 <ConfirmButton
                   className="t-btn t-btn-danger-ghost"
                   onConfirm={() => handleDelete(course.id)}
