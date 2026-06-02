@@ -43,7 +43,6 @@ function groupByAuthorTitle(sources) {
 function ImageSlideshow({ images }) {
   const [idx, setIdx] = useState(0)
   if (images.length === 0) return null
-
   if (images.length === 1) {
     return (
       <div className="src-image-wrap">
@@ -51,10 +50,8 @@ function ImageSlideshow({ images }) {
       </div>
     )
   }
-
   const prev = () => setIdx(i => (i - 1 + images.length) % images.length)
   const next = () => setIdx(i => (i + 1) % images.length)
-
   return (
     <div className="src-slideshow">
       <img src={images[idx]} alt={`Image ${idx + 1} of ${images.length}`} className="src-image" />
@@ -78,7 +75,6 @@ function SourceItem({ source, defaultOpen = false }) {
   const [open, setOpen] = useState(defaultOpen)
   const ref = formatRef(source)
 
-  // Collect all images: source_images table first, then legacy image_url
   const images = (() => {
     const sorted = (source.source_images ?? [])
       .slice().sort((a, b) => a.order_index - b.order_index)
@@ -129,7 +125,7 @@ function SourceItem({ source, defaultOpen = false }) {
 // ── Group (author + title) ────────────────────────────────────────
 function SourceGroup({ group, defaultOpen = false }) {
   const isSingle    = group.sources.length === 1
-  const imageCount  = group.sources.filter(s => s.image_url || (s.source_images?.length ?? 0) > 0).length
+  const imageCount  = group.sources.filter(s => s.image_url).length
   const [open, setOpen] = useState(defaultOpen)
   return (
     <div className="src-group">
@@ -173,7 +169,7 @@ export default function SourceTabContent({ chunkIds = [], moduleId = null }) {
     if (moduleId) {
       supabase
         .from('sources')
-        .select('*')
+        .select('*, source_images(id, image_url, order_index)')
         .eq('module_id', moduleId)
         .order('author')
         .then(({ data }) => {
@@ -187,7 +183,7 @@ export default function SourceTabContent({ chunkIds = [], moduleId = null }) {
 
     supabase
       .from('chunk_sources')
-      .select('source_id, sources(*)')
+      .select('source_id, sources(*, source_images(id, image_url, order_index))')
       .in('chunk_id', chunkIds)
       .then(({ data }) => {
         const seen = new Set()
