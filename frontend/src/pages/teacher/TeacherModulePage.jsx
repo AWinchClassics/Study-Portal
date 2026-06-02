@@ -14,7 +14,6 @@ export default function TeacherModulePage() {
   const [units, setUnits]   = useState([])
   const [loading, setLoading] = useState(true)
   const [status, setStatus] = useState(null)
-  const [showDeleteModule, setShowDeleteModule] = useState(false)
 
   useEffect(() => { fetchData() }, [moduleId])
 
@@ -52,17 +51,6 @@ export default function TeacherModulePage() {
     const { error } = await supabase.from('units').update({ title }).eq('id', id)
     if (error) { setStatus({ type: 'error', msg: error.message }); return }
     setUnits(prev => prev.map(u => u.id === id ? { ...u, title } : u))
-  }
-
-  async function handleArchiveUnit(id, archived) {
-    await supabase.from('units').update({ archived }).eq('id', id)
-    setUnits(prev => prev.map(x => x.id === id ? { ...x, archived } : x))
-  }
-
-  async function handleDeleteModule() {
-    const { error } = await supabase.from('modules').delete().eq('id', moduleId)
-    if (error) { setStatus({ type: 'error', msg: error.message }); return }
-    navigate(`/teacher/courses/${module?.course_id}`)
   }
 
   async function handleDeleteUnit(id) {
@@ -122,26 +110,29 @@ export default function TeacherModulePage() {
         ) : (
           <div className="t-list">
             {units.map((unit, idx) => (
-              <div key={unit.id}
-              className={`t-list-row t-list-row-nav ${unit.archived ? 't-list-row-archived' : ''}`}
-              onClick={() => navigate(`/teacher/units/${unit.id}`)}>
-              <div className="t-list-row-order" onClick={e => e.stopPropagation()}>
-                <button className="t-order-btn" onClick={() => handleMoveUnit(unit.id, -1)} disabled={idx === 0}>↑</button>
-                <button className="t-order-btn" onClick={() => handleMoveUnit(unit.id, 1)} disabled={idx === units.length - 1}>↓</button>
-              </div>
-              <div className="t-list-row-main">
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <InlineEdit value={unit.title} onSave={title => handleRenameUnit(unit.id, title)} className="t-list-title" />
-                  {unit.archived && <span className="t-archived-badge">Archived</span>}
+              <div key={unit.id} className="t-list-row t-list-row-nav"
+                onClick={() => navigate(`/teacher/units/${unit.id}`)}>
+                <div className="t-list-row-order" onClick={e => e.stopPropagation()}>
+                  <button className="t-order-btn" onClick={() => handleMoveUnit(unit.id, -1)} disabled={idx === 0}>↑</button>
+                  <button className="t-order-btn" onClick={() => handleMoveUnit(unit.id, 1)} disabled={idx === units.length - 1}>↓</button>
+                </div>
+                <div className="t-list-row-main">
+                  <InlineEdit
+                    value={unit.title}
+                    onSave={title => handleRenameUnit(unit.id, title)}
+                    className="t-list-title"
+                  />
+                </div>
+                <div className="t-list-row-actions" onClick={e => e.stopPropagation()}>
+                  <ConfirmButton
+                    className="t-btn t-btn-danger-ghost"
+                    onConfirm={() => handleDeleteUnit(unit.id)}
+                    confirmLabel="Delete?"
+                  >
+                    Delete
+                  </ConfirmButton>
                 </div>
               </div>
-              <div className="t-list-row-actions" onClick={e => e.stopPropagation()}>
-                {unit.archived
-                  ? <button className="t-btn t-btn-ghost" onClick={() => handleArchiveUnit(unit.id, false)}>↩ Restore</button>
-                  : <button className="t-btn t-btn-secondary" onClick={() => handleArchiveUnit(unit.id, true)}>🗄 Archive</button>
-                }
-              </div>
-            </div>
             ))}
           </div>
         )}
@@ -156,15 +147,6 @@ export default function TeacherModulePage() {
           onStatus={(type, msg) => setStatus({ type, msg })}
         />
       </div>
-
-      {showDeleteModule && (
-        <DeleteWarningModal
-          itemType="module"
-          itemName={module?.title ?? 'this module'}
-          onConfirm={handleDeleteModule}
-          onClose={() => setShowDeleteModule(false)}
-        />
-      )}
     </TeacherLayout>
   )
 }

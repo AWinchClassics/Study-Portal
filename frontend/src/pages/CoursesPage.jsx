@@ -14,7 +14,6 @@ export default function CoursesPage() {
       const { data: coursesData, error: coursesError } = await supabase
         .from('courses')
         .select('*')
-        .eq('archived', false)
         .order('title')
 
       if (coursesError) {

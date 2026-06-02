@@ -31,7 +31,6 @@ export default function ModulePage() {
       const { data: modulesData, error: modulesError } = await supabase
         .from('modules')
         .select('*')
-        .eq('archived', false)
         .eq('course_id', courseId)
         .order('order_index')
 
