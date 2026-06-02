@@ -39,35 +39,76 @@ function groupByAuthorTitle(sources) {
     }))
 }
 
+// ── Image slideshow ──────────────────────────────────────────────
+function ImageSlideshow({ images }) {
+  const [idx, setIdx] = useState(0)
+  if (images.length === 0) return null
+
+  if (images.length === 1) {
+    return (
+      <div className="src-image-wrap">
+        <img src={images[0]} alt="" className="src-image" />
+      </div>
+    )
+  }
+
+  const prev = () => setIdx(i => (i - 1 + images.length) % images.length)
+  const next = () => setIdx(i => (i + 1) % images.length)
+
+  return (
+    <div className="src-slideshow">
+      <img src={images[idx]} alt={`Image ${idx + 1} of ${images.length}`} className="src-image" />
+      <div className="src-slideshow-controls">
+        <button className="src-slideshow-btn" onClick={prev}>‹</button>
+        <div className="src-slideshow-dots">
+          {images.map((_, i) => (
+            <button key={i} className={`src-slideshow-dot ${i === idx ? 'src-slideshow-dot-active' : ''}`}
+              onClick={() => setIdx(i)} />
+          ))}
+        </div>
+        <button className="src-slideshow-btn" onClick={next}>›</button>
+      </div>
+      <p className="src-slideshow-counter">{idx + 1} / {images.length}</p>
+    </div>
+  )
+}
+
 // ── Single source expand/collapse ────────────────────────────────
 function SourceItem({ source, defaultOpen = false }) {
   const [open, setOpen] = useState(defaultOpen)
-  const ref     = formatRef(source)
-  const isImage = !!source.image_url
-  const hasText = !!source.content?.trim()
+  const ref = formatRef(source)
 
-  const preview = isImage && !hasText
-    ? '🖼 Visual source'
+  // Collect all images: source_images table first, then legacy image_url
+  const images = (() => {
+    const sorted = (source.source_images ?? [])
+      .slice().sort((a, b) => a.order_index - b.order_index)
+      .map(si => si.image_url)
+    if (source.image_url && !sorted.includes(source.image_url))
+      return [source.image_url, ...sorted]
+    return sorted
+  })()
+
+  const hasImages = images.length > 0
+  const hasText   = !!source.content?.trim()
+
+  const preview = hasImages && !hasText
+    ? `🖼 ${images.length > 1 ? images.length + ' images' : 'Visual source'}`
     : (source.content?.slice(0, 120) + (source.content?.length > 120 ? '…' : ''))
 
   return (
     <div className={`src-item ${open ? 'src-item-open' : ''}`}>
       <button className="src-item-row" onClick={() => setOpen(o => !o)}>
         {ref && <span className="src-ref">{ref}</span>}
-        <span className={`src-preview ${isImage && !hasText ? 'src-preview-image' : ''}`}>
+        <span className={`src-preview ${hasImages && !hasText ? 'src-preview-image' : ''}`}>
           {preview}
         </span>
         <span className="src-chevron">{open ? '▾' : '▸'}</span>
       </button>
       {open && (
         <div className="src-content">
-          {isImage && (
-            <div className="src-image-wrap">
-              <img src={source.image_url} alt={source.title || 'Source image'} className="src-image" />
-            </div>
-          )}
+          {hasImages && <ImageSlideshow images={images} />}
           {hasText && (
-            <p className={`src-full-text ${isImage ? 'src-image-caption' : ''}`}>
+            <p className={`src-full-text ${hasImages ? 'src-image-caption' : ''}`}>
               {source.content}
             </p>
           )}
@@ -88,7 +129,7 @@ function SourceItem({ source, defaultOpen = false }) {
 // ── Group (author + title) ────────────────────────────────────────
 function SourceGroup({ group, defaultOpen = false }) {
   const isSingle    = group.sources.length === 1
-  const imageCount  = group.sources.filter(s => s.image_url).length
+  const imageCount  = group.sources.filter(s => s.image_url || (s.source_images?.length ?? 0) > 0).length
   const [open, setOpen] = useState(defaultOpen)
   return (
     <div className="src-group">

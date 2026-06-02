@@ -97,7 +97,7 @@ export default function SourcesPage() {
     setSources([])
     supabase
       .from('sources')
-      .select('*')
+      .select('*, source_images(id, image_url, order_index)')
       .eq('module_id', moduleId)
       .order('author')
       .then(({ data }) => {

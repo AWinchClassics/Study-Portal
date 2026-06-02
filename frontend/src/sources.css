@@ -374,3 +374,140 @@
   font-size: 12px;
   color: var(--text);
 }
+
+/* ── Image slideshow ─────────────────────────────────────────────── */
+
+.src-slideshow {
+  margin-bottom: 12px;
+}
+
+.src-slideshow .src-image {
+  border-bottom-left-radius:  0;
+  border-bottom-right-radius: 0;
+  border-bottom: none;
+}
+
+.src-slideshow-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+}
+
+.src-slideshow-btn {
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 300;
+  color: var(--text-h);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.1s, border-color 0.1s, color 0.1s;
+}
+.src-slideshow-btn:hover { border-color: var(--accent-border); color: var(--accent); background: var(--accent-bg); }
+
+.src-slideshow-dots {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.src-slideshow-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border-strong);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  transition: background 0.1s, transform 0.1s;
+}
+.src-slideshow-dot:hover { background: var(--text); }
+.src-slideshow-dot-active {
+  background: var(--accent) !important;
+  transform: scale(1.25);
+}
+
+.src-slideshow-counter {
+  font-size: 12px;
+  color: var(--text);
+  white-space: nowrap;
+  margin: 0;
+}
+
+/* ── Teacher form — image thumbnail grid ────────────────────────── */
+
+.src-form-image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.src-form-thumb-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.src-form-thumb {
+  display: block;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.src-form-thumb-remove {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #dc2626;
+  color: #fff;
+  border: none;
+  font-size: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: background 0.1s;
+}
+.src-form-thumb-remove:hover { background: #b91c1c; }
+
+.src-form-thumb-new .src-form-thumb {
+  border-color: var(--accent-border);
+  border-style: dashed;
+}
+
+.src-form-thumb-new-badge {
+  position: absolute;
+  bottom: 2px;
+  left: 2px;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 3px;
+  padding: 1px 4px;
+  letter-spacing: 0.04em;
+}
