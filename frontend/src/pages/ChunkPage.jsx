@@ -107,8 +107,7 @@ function ResourceItem({ resource, navContext }) {
 }
 
 function ChunkCard({ chunk, resources, navContext }) {
-  const [collapsed, setCollapsed] = useState(true)
-  const [chunkTab, setChunkTab]   = useState('resources')
+  const [chunkTab, setChunkTab] = useState('resources')
 
   const byPurpose = {}
   resources.forEach(r => {
@@ -119,21 +118,16 @@ function ChunkCard({ chunk, resources, navContext }) {
   const activeSections = SECTIONS.filter(s => byPurpose[s.key]?.length > 0)
 
   return (
-    <div className={`chunk-card ${collapsed ? 'chunk-card-collapsed' : ''}`}>
-      {/* Header — click anywhere to expand/collapse */}
-      <div className="chunk-card-header" onClick={() => setCollapsed(o => !o)}>
+    <div className="chunk-card">
+      {/* Header */}
+      <div className="chunk-card-header">
         <h2 className="chunk-title">{chunk.title}</h2>
-        <div className="chunk-header-right">
-          {chunk.estimated_time && <span className="chunk-time">⏱ {chunk.estimated_time} min</span>}
-          <span className="chunk-chevron">{collapsed ? '▸' : '▾'}</span>
-        </div>
+        {chunk.estimated_time && <span className="chunk-time">⏱ {chunk.estimated_time} min</span>}
       </div>
 
-      {!collapsed && (
-        <>
-          {chunk.description && <p className="chunk-description">{chunk.description}</p>}
+      {chunk.description && <p className="chunk-description">{chunk.description}</p>}
 
-          {/* Per-chunk tabs */}
+      {/* Per-chunk tabs */}
       <div className="chunk-tabs">
         <button
           className={`chunk-tab ${chunkTab === 'resources' ? 'chunk-tab-active' : ''}`}
@@ -204,12 +198,10 @@ function ChunkCard({ chunk, resources, navContext }) {
         <SourceTabContent chunkIds={[chunk.id]} />
       )}
 
-          {/* Randomiser */}
-          <div className="chunk-randomiser-wrapper">
-            <ChunkRandomiser chunkTitle={chunk.title} />
-          </div>
-        </>
-      )}
+      {/* Randomiser — always visible at the bottom */}
+      <div className="chunk-randomiser-wrapper">
+        <ChunkRandomiser chunkTitle={chunk.title} />
+      </div>
     </div>
   )
 }
@@ -239,7 +231,7 @@ export default function ChunkPage() {
       setCourse(unitData.modules?.courses)
 
       const { data: chunksData, error: chunksError } = await supabase
-        .from('chunks').select('*').eq('unit_id', unitId).order('order_index')
+        .from('chunks').select('*').eq('unit_id', unitId).eq('archived', false).order('order_index')
       if (chunksError) { setError(chunksError.message); setLoading(false); return }
       setChunks(chunksData)
 

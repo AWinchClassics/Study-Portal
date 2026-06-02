@@ -14,6 +14,7 @@ export default function TeacherUnitPage() {
   const [chunks, setChunks] = useState([])
   const [loading, setLoading] = useState(true)
   const [status, setStatus] = useState(null)
+  const [showDeleteUnit, setShowDeleteUnit] = useState(false)
 
   useEffect(() => { fetchData() }, [unitId])
 
@@ -64,6 +65,17 @@ export default function TeacherUnitPage() {
     const { error } = await supabase.from('chunks').update({ estimated_time }).eq('id', id)
     if (error) { setStatus({ type: 'error', msg: error.message }); return }
     setChunks(prev => prev.map(c => c.id === id ? { ...c, estimated_time } : c))
+  }
+
+  async function handleArchiveChunk(id, archived) {
+    await supabase.from('chunks').update({ archived }).eq('id', id)
+    setChunks(prev => prev.map(x => x.id === id ? { ...x, archived } : x))
+  }
+
+  async function handleDeleteUnit() {
+    const { error } = await supabase.from('units').delete().eq('id', unitId)
+    if (error) { setStatus({ type: 'error', msg: error.message }); return }
+    navigate(`/teacher/modules/${unit?.module_id}`)
   }
 
   async function handleDeleteChunk(id) {
@@ -123,28 +135,25 @@ export default function TeacherUnitPage() {
         ) : (
           <div className="t-chunk-list">
             {chunks.map((chunk, idx) => (
-              <div key={chunk.id} className="t-chunk-row t-list-row-nav"
-                onClick={() => navigate(`/teacher/chunks/${chunk.id}`)}>
+              <div key={chunk.id}
+              className={`t-chunk-row t-list-row-nav ${chunk.archived ? 't-chunk-row-archived' : ''}`}
+              onClick={() => navigate(`/teacher/chunks/${chunk.id}`)}>
                 <div className="t-chunk-row-top">
                   <div className="t-list-row-order" onClick={e => e.stopPropagation()}>
                     <button className="t-order-btn" onClick={() => handleMoveChunk(chunk.id, -1)} disabled={idx === 0}>↑</button>
                     <button className="t-order-btn" onClick={() => handleMoveChunk(chunk.id, 1)} disabled={idx === chunks.length - 1}>↓</button>
                   </div>
                   <div className="t-chunk-row-title">
-                    <InlineEdit
-                      value={chunk.title}
-                      onSave={title => handleRenameChunk(chunk.id, title)}
-                      className="t-list-title"
-                    />
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      <InlineEdit value={chunk.title} onSave={title => handleRenameChunk(chunk.id, title)} className="t-list-title" />
+                      {chunk.archived && <span className="t-archived-badge">Archived</span>}
+                    </div>
                   </div>
                   <div className="t-list-row-actions" onClick={e => e.stopPropagation()}>
-                    <ConfirmButton
-                      className="t-btn t-btn-danger-ghost"
-                      onConfirm={() => handleDeleteChunk(chunk.id)}
-                      confirmLabel="Delete?"
-                    >
-                      Delete
-                    </ConfirmButton>
+                    {chunk.archived
+                      ? <button className="t-btn t-btn-ghost" onClick={() => handleArchiveChunk(chunk.id, false)}>↩ Restore</button>
+                      : <button className="t-btn t-btn-secondary" onClick={() => handleArchiveChunk(chunk.id, true)}>🗄 Archive</button>
+                    }
                   </div>
                 </div>
                 <div className="t-chunk-row-meta">
@@ -182,6 +191,15 @@ export default function TeacherUnitPage() {
           onStatus={(type, msg) => setStatus({ type, msg })}
         />
       </div>
+
+      {showDeleteUnit && (
+        <DeleteWarningModal
+          itemType="unit"
+          itemName={unit?.title ?? 'this unit'}
+          onConfirm={handleDeleteUnit}
+          onClose={() => setShowDeleteUnit(false)}
+        />
+      )}
     </TeacherLayout>
   )
 }

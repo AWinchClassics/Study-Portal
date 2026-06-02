@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { supabase } from '../../supabase'
 import TeacherLayout from '../../components/teacher/TeacherLayout'
-import { InlineEdit, ConfirmButton, StatusMessage, FormField } from '../../components/teacher/TeacherUI'
+import { InlineEdit, ConfirmButton, StatusMessage, FormField, DeleteWarningModal } from '../../components/teacher/TeacherUI'
 
 export default function TeacherCoursePage() {
   const { courseId } = useParams()
@@ -12,6 +12,7 @@ export default function TeacherCoursePage() {
   const [modules, setModules] = useState([])
   const [loading, setLoading] = useState(true)
   const [status, setStatus] = useState(null)
+  const [showDeleteCourse, setShowDeleteCourse] = useState(false)
 
   useEffect(() => { fetchData() }, [courseId])
 
@@ -46,6 +47,17 @@ export default function TeacherCoursePage() {
     const { error } = await supabase.from('modules').update({ title }).eq('id', id)
     if (error) { setStatus({ type: 'error', msg: error.message }); return }
     setModules(prev => prev.map(m => m.id === id ? { ...m, title } : m))
+  }
+
+  async function handleArchiveModule(id, archived) {
+    await supabase.from('modules').update({ archived }).eq('id', id)
+    setModules(prev => prev.map(x => x.id === id ? { ...x, archived } : x))
+  }
+
+  async function handleDeleteCourse() {
+    const { error } = await supabase.from('courses').delete().eq('id', course?.id)
+    if (error) { setStatus({ type: 'error', msg: error.message }); return }
+    navigate('/teacher/courses')
   }
 
   async function handleDeleteModule(id) {
@@ -122,41 +134,39 @@ export default function TeacherCoursePage() {
         ) : (
           <div className="t-list">
             {modules.map((mod, idx) => (
-              <div key={mod.id} className="t-list-row t-list-row-nav"
+              <div key={mod.id}
+                className={`t-list-row t-list-row-nav ${mod.archived ? 't-list-row-archived' : ''}`}
                 onClick={() => navigate(`/teacher/modules/${mod.id}`)}>
                 <div className="t-list-row-order" onClick={e => e.stopPropagation()}>
-                  <button
-                    className="t-order-btn"
-                    onClick={() => handleMoveModule(mod.id, -1)}
-                    disabled={idx === 0}
-                  >↑</button>
-                  <button
-                    className="t-order-btn"
-                    onClick={() => handleMoveModule(mod.id, 1)}
-                    disabled={idx === modules.length - 1}
-                  >↓</button>
+                  <button className="t-order-btn" onClick={() => handleMoveModule(mod.id, -1)} disabled={idx === 0}>↑</button>
+                  <button className="t-order-btn" onClick={() => handleMoveModule(mod.id, 1)} disabled={idx === modules.length - 1}>↓</button>
                 </div>
                 <div className="t-list-row-main">
-                  <InlineEdit
-                    value={mod.title}
-                    onSave={title => handleRenameModule(mod.id, title)}
-                    className="t-list-title"
-                  />
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                    <InlineEdit value={mod.title} onSave={title => handleRenameModule(mod.id, title)} className="t-list-title" />
+                    {mod.archived && <span className="t-archived-badge">Archived</span>}
+                  </div>
                 </div>
                 <div className="t-list-row-actions" onClick={e => e.stopPropagation()}>
-                  <ConfirmButton
-                    className="t-btn t-btn-danger-ghost"
-                    onConfirm={() => handleDeleteModule(mod.id)}
-                    confirmLabel="Delete?"
-                  >
-                    Delete
-                  </ConfirmButton>
+                  {mod.archived
+                    ? <button className="t-btn t-btn-ghost" onClick={() => handleArchiveModule(mod.id, false)}>↩ Restore</button>
+                    : <button className="t-btn t-btn-secondary" onClick={() => handleArchiveModule(mod.id, true)}>🗄 Archive</button>
+                  }
                 </div>
               </div>
             ))}
           </div>
         )}
       </div>
+
+      {showDeleteCourse && (
+        <DeleteWarningModal
+          itemType="course"
+          itemName={course?.title ?? 'this course'}
+          onConfirm={handleDeleteCourse}
+          onClose={() => setShowDeleteCourse(false)}
+        />
+      )}
     </TeacherLayout>
   )
 }

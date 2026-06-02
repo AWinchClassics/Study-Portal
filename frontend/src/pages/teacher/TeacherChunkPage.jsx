@@ -4,7 +4,7 @@ import { useEffect, useState, useCallback } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { supabase } from '../../supabase'
 import TeacherLayout from '../../components/teacher/TeacherLayout'
-import { ConfirmButton, StatusMessage, Modal, FormField } from '../../components/teacher/TeacherUI'
+import { ConfirmButton, StatusMessage, Modal, FormField, DeleteWarningModal } from '../../components/teacher/TeacherUI'
 
 const PURPOSES   = ['core', 'homework', 'revision', 'extension']
 const PRIORITIES = ['core', 'useful', 'stretch']
@@ -115,6 +115,12 @@ export default function TeacherChunkPage() {
     await Promise.all(updated.map(r =>
       supabase.from('chunk_resources').update({ order_index: r.order_index }).eq('id', r.id)
     ))
+  }
+
+  async function handleDeleteChunk() {
+    const { error } = await supabase.from('chunks').delete().eq('id', chunkId)
+    if (error) { setStatus({ type: 'error', msg: error.message }); return }
+    navigate(`/teacher/units/${unit?.id}`)
   }
 
   // ── Source handlers ──
@@ -325,6 +331,15 @@ export default function TeacherChunkPage() {
           excludeIds={attachedSources.map(cs => cs.source_id)}
           onAttach={handleAttachSource}
           onClose={() => setShowAttachSource(false)}
+        />
+      )}
+
+      {showDeleteChunk && (
+        <DeleteWarningModal
+          itemType="chunk"
+          itemName={chunk?.title ?? 'this chunk'}
+          onConfirm={handleDeleteChunk}
+          onClose={() => setShowDeleteChunk(false)}
         />
       )}
     </TeacherLayout>
