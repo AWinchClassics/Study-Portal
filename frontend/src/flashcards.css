@@ -838,3 +838,47 @@
   .gl-td-date { display: none; }
   .gl-th-term { width: 30%; }
 }
+
+/* ── Teacher glossary — new category form ────────────────────── */
+
+.gl-new-cat-form {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: -4px;
+}
+
+.gl-new-cat-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  margin: 0;
+}
+
+.gl-colour-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gl-colour-input {
+  width: 40px;
+  height: 32px;
+  padding: 2px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  cursor: pointer;
+}
+
+.gl-colour-hex {
+  font-size: 12px;
+  color: var(--text);
+  font-family: var(--mono, monospace);
+}

@@ -9,8 +9,6 @@ import { ConfirmButton, StatusMessage, Modal, FormField, DeleteWarningModal } fr
 const PURPOSES   = ['core', 'homework', 'revision', 'extension']
 const PRIORITIES = ['core', 'useful', 'stretch']
 const RESOURCE_TYPES = ['video','quiz','pdf','text','audio','worksheet','task','flashcards','source']
-const CATEGORIES = ['person','event','concept','source','place','other']
-
 // ── Shared section component ─────────────────────────────────────
 function SectionHeader({ title, children }) {
   return (
@@ -32,6 +30,7 @@ export default function TeacherChunkPage() {
   const [loading, setLoading]     = useState(true)
   const [status, setStatus]       = useState(null)
   const [showDeleteChunk, setShowDeleteChunk] = useState(false)
+  const [categories, setCategories]             = useState([])
 
   // Resource modals
   const [showAttachModal, setShowAttachModal]   = useState(false)
@@ -42,7 +41,12 @@ export default function TeacherChunkPage() {
   const [attachedSources, setAttachedSources]   = useState([])
   const [showCreateTerm, setShowCreateTerm]     = useState(false)
 
-  useEffect(() => { fetchData() }, [chunkId])
+  useEffect(() => { fetchData(); fetchCategories() }, [chunkId])
+
+  async function fetchCategories() {
+    const { data } = await supabase.from('glossary_categories').select('*').order('name')
+    if (data) setCategories(data)
+  }
 
   async function fetchData() {
     const { data: chunkData } = await supabase
@@ -72,6 +76,10 @@ export default function TeacherChunkPage() {
   }
 
   // ── Resource handlers ──
+  function handleCategoryAdded(newCat) {
+    setCategories(prev => [...prev, newCat].sort((a, b) => a.name.localeCompare(b.name)))
+  }
+
   async function handleDeleteChunk() {
     const { error } = await supabase.from('chunks').delete().eq('id', chunkId)
     if (error) { setStatus({ type: 'error', msg: error.message }); return }
@@ -328,7 +336,7 @@ export default function TeacherChunkPage() {
         />
       )}
       {showCreateTerm && (
-        <CreateTermModal onSave={handleCreateTerm} onClose={() => setShowCreateTerm(false)} />
+        <CreateTermModal categories={categories} onCategoryAdded={handleCategoryAdded} onSave={handleCreateTerm} onClose={() => setShowCreateTerm(false)} />
       )}
 
       {showAttachSource && (
@@ -499,8 +507,12 @@ function AttachTermModal({ excludeIds, onAttach, onClose }) {
 }
 
 // ── Create new glossary term modal ───────────────────────────────
-function CreateTermModal({ onSave, onClose }) {
-  const [form, setForm] = useState({ term: '', definition: '', category: 'concept', priority: 'core' })
+function CreateTermModal({ categories, onCategoryAdded, onSave, onClose }) {
+  const [form, setForm] = useState({
+    term: '', definition: '',
+    category: categories[0]?.name ?? 'concept',
+    priority: 'core',
+  })
   const [errors, setErrors] = useState({})
 
   function set(f, v) { setForm(p => ({ ...p, [f]: v })); setErrors(p => ({ ...p, [f]: null })) }
@@ -523,9 +535,12 @@ function CreateTermModal({ onSave, onClose }) {
           <textarea className="t-input gl-textarea" rows={3} value={form.definition} onChange={e => set('definition', e.target.value)} placeholder="The definition…" />
         </FormField>
         <FormField label="Category">
-          <select className="t-input" value={form.category} onChange={e => set('category', e.target.value)}>
-            {CATEGORIES.map(c => <option key={c} value={c}>{c.charAt(0).toUpperCase() + c.slice(1)}</option>)}
-          </select>
+          <CategorySelect
+            categories={categories}
+            value={form.category}
+            onChange={v => set('category', v)}
+            onCategoryAdded={onCategoryAdded}
+          />
         </FormField>
         <FormField label="Priority">
           <select className="t-input" value={form.priority} onChange={e => set('priority', e.target.value)}>

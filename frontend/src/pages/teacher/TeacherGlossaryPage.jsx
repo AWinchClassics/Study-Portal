@@ -1,45 +1,21 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useMemo } from 'react'
 import { supabase } from '../../supabase'
 import TeacherLayout from '../../components/teacher/TeacherLayout'
 import { StatusMessage, Modal, FormField, ConfirmButton } from '../../components/teacher/TeacherUI'
+import CategorySelect, { CategoryBadge, buildColourMap } from '../../components/teacher/CategorySelect'
 
-const CATEGORIES = ['person', 'event', 'concept', 'source', 'place', 'other']
-
-const CATEGORY_COLOURS = {
-  person:  { bg: '#f3e8ff', text: '#7c3aed' },
-  event:   { bg: '#e0f2fe', text: '#0369a1' },
-  concept: { bg: '#dcfce7', text: '#15803d' },
-  source:  { bg: '#fef3c7', text: '#b45309' },
-  place:   { bg: '#fce7f3', text: '#be185d' },
-  other:   { bg: '#f3f4f6', text: '#4b5563' },
-  building:            { bg: '#fff7ed', text: '#c2410c' },
-  god:                 { bg: '#fefce8', text: '#ca8a04' },
-  'character/setting': { bg: '#ecfeff', text: '#0891b2' },
-}
-
-function CategoryBadge({ category }) {
-  const colours = CATEGORY_COLOURS[category] ?? CATEGORY_COLOURS.other
-  return (
-    <span
-      className="gl-category-badge"
-      style={{ background: colours.bg, color: colours.text }}
-    >
-      {category}
-    </span>
-  )
-}
-
-function TermFormModal({ title, initial, onSave, onClose }) {
+// ── Term form modal ───────────────────────────────────────────────
+function TermFormModal({ title, initial, categories, onSave, onCategoryAdded, onClose }) {
   const [form, setForm] = useState({
     term:       initial?.term       ?? '',
     definition: initial?.definition ?? '',
-    category:   initial?.category   ?? 'concept',
+    category:   initial?.category   ?? (categories[0]?.name ?? 'concept'),
   })
   const [errors, setErrors] = useState({})
 
   function set(field, value) {
-    setForm(prev => ({ ...prev, [field]: value }))
-    setErrors(prev => ({ ...prev, [field]: null }))
+    setForm(p => ({ ...p, [field]: value }))
+    setErrors(p => ({ ...p, [field]: null }))
   }
 
   function handleSave() {
@@ -51,36 +27,25 @@ function TermFormModal({ title, initial, onSave, onClose }) {
   }
 
   return (
-    <Modal title={title} onClose={onClose} width={560}>
+    <Modal title={title} onClose={onClose} width={580}>
       <div className="t-form">
         <FormField label="Term" error={errors.term}>
-          <input
-            className="t-input"
-            autoFocus
-            value={form.term}
-            onChange={e => set('term', e.target.value)}
-            placeholder="e.g. Cleisthenes"
-          />
+          <input className="t-input" autoFocus value={form.term}
+            onChange={e => set('term', e.target.value)} placeholder="e.g. Cleisthenes" />
         </FormField>
-
         <FormField label="Definition" error={errors.definition}>
-          <textarea
-            className="t-input gl-textarea"
-            rows={4}
-            value={form.definition}
+          <textarea className="t-input gl-textarea" rows={4} value={form.definition}
             onChange={e => set('definition', e.target.value)}
-            placeholder="The definition or explanation…"
+            placeholder="The definition or explanation…" />
+        </FormField>
+        <FormField label="Category">
+          <CategorySelect
+            categories={categories}
+            value={form.category}
+            onChange={v => set('category', v)}
+            onCategoryAdded={onCategoryAdded}
           />
         </FormField>
-
-        <FormField label="Category">
-          <select className="t-input" value={form.category} onChange={e => set('category', e.target.value)}>
-            {CATEGORIES.map(c => (
-              <option key={c} value={c}>{c.charAt(0).toUpperCase() + c.slice(1)}</option>
-            ))}
-          </select>
-        </FormField>
-
         <div className="t-modal-footer">
           <button className="t-btn t-btn-secondary" onClick={onClose}>Cancel</button>
           <button className="t-btn t-btn-primary" onClick={handleSave}>
@@ -92,22 +57,25 @@ function TermFormModal({ title, initial, onSave, onClose }) {
   )
 }
 
+// ── Main page ─────────────────────────────────────────────────────
 export default function TeacherGlossaryPage() {
-  const [terms, setTerms]           = useState([])
+  const [terms, setTerms]             = useState([])
+  const [categories, setCategories]   = useState([])
   const [chunkCounts, setChunkCounts] = useState({})
-  const [loading, setLoading]       = useState(true)
-  const [search, setSearch]         = useState('')
-  const [filterCat, setFilterCat]   = useState('all')
-  const [status, setStatus]         = useState(null)
-  const [editTerm, setEditTerm]     = useState(null)
-  const [showCreate, setShowCreate] = useState(false)
+  const [loading, setLoading]         = useState(true)
+  const [search, setSearch]           = useState('')
+  const [filterCat, setFilterCat]     = useState('all')
+  const [status, setStatus]           = useState(null)
+  const [editTerm, setEditTerm]       = useState(null)
+  const [showCreate, setShowCreate]   = useState(false)
 
   useEffect(() => { fetchAll() }, [])
 
   async function fetchAll() {
-    const [{ data: termsData }, { data: cgData }] = await Promise.all([
+    const [{ data: termsData }, { data: cgData }, { data: catData }] = await Promise.all([
       supabase.from('glossary_terms').select('*').order('term'),
       supabase.from('chunk_glossary').select('glossary_id'),
+      supabase.from('glossary_categories').select('*').order('name'),
     ])
     if (termsData) setTerms(termsData)
     if (cgData) {
@@ -115,7 +83,21 @@ export default function TeacherGlossaryPage() {
       cgData.forEach(r => { counts[r.glossary_id] = (counts[r.glossary_id] || 0) + 1 })
       setChunkCounts(counts)
     }
+    if (catData) setCategories(catData)
     setLoading(false)
+  }
+
+  const colourMap = useMemo(() => buildColourMap(categories), [categories])
+
+  // Filter options: all from table + any category in terms not in table
+  const filterOptions = useMemo(() => {
+    const fromTable = categories.map(c => c.name)
+    const fromTerms = [...new Set(terms.map(t => t.category).filter(Boolean))]
+    return [...new Set([...fromTable, ...fromTerms])].sort()
+  }, [categories, terms])
+
+  function handleCategoryAdded(newCat) {
+    setCategories(prev => [...prev, newCat].sort((a, b) => a.name.localeCompare(b.name)))
   }
 
   async function handleCreate(form) {
@@ -162,15 +144,16 @@ export default function TeacherGlossaryPage() {
       </StatusMessage>
 
       <div className="t-filter-bar" style={{ flexWrap: 'wrap', gap: 8 }}>
-        <input
-          className="t-search-input"
-          placeholder="Search terms or definitions…"
-          value={search}
-          onChange={e => setSearch(e.target.value)}
-        />
-        <select className="t-filter-select" value={filterCat} onChange={e => setFilterCat(e.target.value)}>
+        <input className="t-search-input" placeholder="Search terms or definitions…"
+          value={search} onChange={e => setSearch(e.target.value)} />
+        <select className="t-filter-select" value={filterCat}
+          onChange={e => setFilterCat(e.target.value)}>
           <option value="all">All categories</option>
-          {CATEGORIES.map(c => <option key={c} value={c}>{c.charAt(0).toUpperCase() + c.slice(1)}</option>)}
+          {filterOptions.map(name => (
+            <option key={name} value={name}>
+              {name.charAt(0).toUpperCase() + name.slice(1)}
+            </option>
+          ))}
         </select>
         <span className="t-filter-count">{filtered.length} terms</span>
       </div>
@@ -186,7 +169,7 @@ export default function TeacherGlossaryPage() {
           {filtered.map(term => (
             <div key={term.id} className="t-list-row gl-term-row">
               <div className="t-list-row-main">
-                <CategoryBadge category={term.category} />
+                <CategoryBadge category={term.category} colourMap={colourMap} />
                 <div className="gl-term-info">
                   <span className="t-list-title">{term.term}</span>
                   <span className="t-list-meta gl-definition-preview">{term.definition}</span>
@@ -199,11 +182,8 @@ export default function TeacherGlossaryPage() {
               </div>
               <div className="t-list-row-actions">
                 <button className="t-btn t-btn-ghost" onClick={() => setEditTerm(term)}>Edit</button>
-                <ConfirmButton
-                  className="t-btn t-btn-danger-ghost"
-                  onConfirm={() => handleDelete(term.id)}
-                  confirmLabel="Delete?"
-                >
+                <ConfirmButton className="t-btn t-btn-danger-ghost"
+                  onConfirm={() => handleDelete(term.id)} confirmLabel="Delete?">
                   Delete
                 </ConfirmButton>
               </div>
@@ -213,15 +193,15 @@ export default function TeacherGlossaryPage() {
       )}
 
       {showCreate && (
-        <TermFormModal title="New glossary term" onSave={handleCreate} onClose={() => setShowCreate(false)} />
+        <TermFormModal title="New glossary term" categories={categories}
+          onSave={handleCreate} onCategoryAdded={handleCategoryAdded}
+          onClose={() => setShowCreate(false)} />
       )}
       {editTerm && (
-        <TermFormModal
-          title="Edit term"
-          initial={editTerm}
+        <TermFormModal title="Edit term" initial={editTerm} categories={categories}
           onSave={form => handleUpdate(editTerm.id, form)}
-          onClose={() => setEditTerm(null)}
-        />
+          onCategoryAdded={handleCategoryAdded}
+          onClose={() => setEditTerm(null)} />
       )}
     </TeacherLayout>
   )
