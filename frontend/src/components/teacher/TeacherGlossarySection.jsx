@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '../../supabase'
 import { ConfirmButton, Modal, FormField } from './TeacherUI'
+import CategorySelect from './CategorySelect'
 
 const PRIORITIES = ['core', 'useful', 'stretch']
-const CATEGORIES = ['person', 'event', 'concept', 'source', 'place', 'other']
-
 /**
  * TeacherGlossarySection
  *
@@ -22,6 +21,12 @@ export default function TeacherGlossarySection({ table, parentId, parentKey, onS
   const [loading, setLoading]             = useState(true)
   const [showAttach, setShowAttach]       = useState(false)
   const [showCreate, setShowCreate]       = useState(false)
+  const [categories, setCategories]       = useState([])
+
+  useEffect(() => {
+    supabase.from('glossary_categories').select('*').order('name')
+      .then(({ data }) => { if (data) setCategories(data) })
+  }, [])
 
   useEffect(() => {
     if (!parentId) return
@@ -34,6 +39,10 @@ export default function TeacherGlossarySection({ table, parentId, parentKey, onS
         setLoading(false)
       })
   }, [table, parentId, parentKey])
+
+  function handleCategoryAdded(newCat) {
+    setCategories(prev => [...prev, newCat].sort((a, b) => a.name.localeCompare(b.name)))
+  }
 
   async function handleAttach(glossaryId, priority) {
     if (attached.find(a => a.glossary_id === glossaryId)) {
@@ -137,6 +146,8 @@ export default function TeacherGlossarySection({ table, parentId, parentKey, onS
       )}
       {showCreate && (
         <CreateTermModal
+          categories={categories}
+          onCategoryAdded={handleCategoryAdded}
           onSave={handleCreate}
           onClose={() => setShowCreate(false)}
         />
@@ -217,8 +228,12 @@ function AttachTermModal({ excludeIds, onAttach, onClose }) {
 }
 
 // ── Create new term modal ─────────────────────────────────────────
-function CreateTermModal({ onSave, onClose }) {
-  const [form, setForm]     = useState({ term: '', definition: '', category: 'concept', priority: 'core' })
+function CreateTermModal({ categories, onCategoryAdded, onSave, onClose }) {
+  const [form, setForm]     = useState({
+    term: '', definition: '',
+    category: categories[0]?.name ?? 'concept',
+    priority: 'core',
+  })
   const [errors, setErrors] = useState({})
 
   function set(f, v) { setForm(p => ({ ...p, [f]: v })); setErrors(p => ({ ...p, [f]: null })) }
@@ -245,9 +260,12 @@ function CreateTermModal({ onSave, onClose }) {
             placeholder="The definition…" />
         </FormField>
         <FormField label="Category">
-          <select className="t-input" value={form.category} onChange={e => set('category', e.target.value)}>
-            {CATEGORIES.map(c => <option key={c} value={c}>{c.charAt(0).toUpperCase() + c.slice(1)}</option>)}
-          </select>
+          <CategorySelect
+            categories={categories}
+            value={form.category}
+            onChange={v => set('category', v)}
+            onCategoryAdded={onCategoryAdded}
+          />
         </FormField>
         <FormField label="Priority">
           <select className="t-input" value={form.priority} onChange={e => set('priority', e.target.value)}>

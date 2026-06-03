@@ -5,6 +5,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { supabase } from '../../supabase'
 import TeacherLayout from '../../components/teacher/TeacherLayout'
 import { ConfirmButton, StatusMessage, Modal, FormField, DeleteWarningModal } from '../../components/teacher/TeacherUI'
+import CategorySelect from '../../components/teacher/CategorySelect'
 
 const PURPOSES   = ['core', 'homework', 'revision', 'extension']
 const PRIORITIES = ['core', 'useful', 'stretch']
