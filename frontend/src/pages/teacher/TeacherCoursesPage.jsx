@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react'
-
-                  {course.archived && <span className="t-archived-badge">Archived</span>}
-                </div>import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { supabase } from '../../supabase'
 import TeacherLayout from '../../components/teacher/TeacherLayout'
 import { InlineEdit, ConfirmButton, StatusMessage } from '../../components/teacher/TeacherUI'
@@ -80,18 +78,15 @@ export default function TeacherCoursesPage() {
       ) : (
         <div className="t-list">
           {courses.map(course => (
-            <div key={course.id} className={`t-list-row t-list-row-nav ${course.archived ? "t-list-row-archived" : ""}`}
+            <div key={course.id}
+              className={`t-list-row t-list-row-nav ${course.archived ? 't-list-row-archived' : ''}`}
               onClick={() => navigate(`/teacher/courses/${course.id}`)}>
               <div className="t-list-row-main">
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <InlineEdit
-                    value={course.title}
-                  onSave={title => handleRename(course.id, title)}
-                  className="t-list-title"
-                />
-                {course.description && (
-                  <span className="t-list-meta">{course.description}</span>
-                )}
+                  <InlineEdit value={course.title} onSave={title => handleRename(course.id, title)} className="t-list-title" />
+                  {course.archived && <span className="t-archived-badge">Archived</span>}
+                </div>
+                {course.description && <span className="t-list-meta">{course.description}</span>}
               </div>
               <div className="t-list-row-actions" onClick={e => e.stopPropagation()}>
                 {course.archived
