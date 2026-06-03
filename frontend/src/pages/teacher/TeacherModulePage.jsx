@@ -60,7 +60,7 @@ export default function TeacherModulePage() {
   }
 
   async function handleDeleteModule() {
-    const { error } = await supabase.from('units').delete().eq('id', moduleId)
+    const { error } = await supabase.from('modules').delete().eq('id', moduleId)
     if (error) { setStatus({ type: 'error', msg: error.message }); return }
     navigate(`/teacher/courses/${module?.course_id}`)
   }
