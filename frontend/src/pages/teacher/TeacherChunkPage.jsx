@@ -31,6 +31,7 @@ export default function TeacherChunkPage() {
   const [glossary, setGlossary]   = useState([]) // chunk_glossary rows
   const [loading, setLoading]     = useState(true)
   const [status, setStatus]       = useState(null)
+  const [showDeleteChunk, setShowDeleteChunk] = useState(false)
 
   // Resource modals
   const [showAttachModal, setShowAttachModal]   = useState(false)
