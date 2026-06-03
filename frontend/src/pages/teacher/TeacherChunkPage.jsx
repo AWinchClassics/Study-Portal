@@ -71,6 +71,12 @@ export default function TeacherChunkPage() {
   }
 
   // ── Resource handlers ──
+  async function handleDeleteChunk() {
+    const { error } = await supabase.from('chunks').delete().eq('id', chunkId)
+    if (error) { setStatus({ type: 'error', msg: error.message }); return }
+    navigate(`/teacher/units/${unit?.id}`)
+  }
+
   async function handleDetach(crId) {
     const { error } = await supabase.from('chunk_resources').delete().eq('id', crId)
     if (error) { setStatus({ type: 'error', msg: error.message }); return }
