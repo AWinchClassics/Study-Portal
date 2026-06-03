@@ -34,6 +34,8 @@ export function InlineEdit({ value, onSave, className = '', placeholder = 'Untit
         onChange={e => setDraft(e.target.value)}
         onBlur={commit}
         onKeyDown={handleKey}
+        onClick={e => e.stopPropagation()}
+        onMouseDown={e => e.stopPropagation()}
       />
     )
   }
@@ -136,5 +138,25 @@ export function StatusMessage({ type = 'success', children, onDismiss }) {
         <button className="status-dismiss" onClick={onDismiss}>✕</button>
       )}
     </div>
+  )
+}
+
+// ── DeleteWarningModal ────────────────────────────────────────────
+export function DeleteWarningModal({ itemType, itemName, onConfirm, onClose }) {
+  return (
+    <Modal title={`Delete ${itemType}?`} onClose={onClose}>
+      <div className="t-form">
+        <p style={{ color: 'var(--text-h)', marginBottom: 8 }}>
+          Are you sure you want to permanently delete <strong>{itemName}</strong>?
+        </p>
+        <p style={{ color: 'var(--text)', fontSize: 13, marginBottom: 0 }}>
+          This will also remove all content within it and cannot be undone.
+        </p>
+        <div className="t-modal-footer" style={{ marginTop: 20 }}>
+          <button className="t-btn t-btn-secondary" onClick={onClose}>Cancel</button>
+          <button className="t-btn t-btn-danger" onClick={onConfirm}>Delete permanently</button>
+        </div>
+      </div>
+    </Modal>
   )
 }

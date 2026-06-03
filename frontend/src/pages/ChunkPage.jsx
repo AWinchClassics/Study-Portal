@@ -239,7 +239,7 @@ export default function ChunkPage() {
       setCourse(unitData.modules?.courses)
 
       const { data: chunksData, error: chunksError } = await supabase
-        .from('chunks').select('*').eq('unit_id', unitId).order('order_index')
+        .from('chunks').select('*').eq('unit_id', unitId).eq('archived', false).order('order_index')
       if (chunksError) { setError(chunksError.message); setLoading(false); return }
       setChunks(chunksData)
 

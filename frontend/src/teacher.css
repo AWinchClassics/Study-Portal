@@ -286,6 +286,8 @@
   border-color: transparent;
 }
 .t-btn-danger-ghost:hover { color: #dc2626; background: rgba(220,38,38,0.06); }
+.t-btn-danger { background: #dc2626; color: #fff; border-color: #dc2626; }
+.t-btn-danger:hover { background: #b91c1c; border-color: #b91c1c; }
 .t-btn-danger-ghost.confirming { color: #dc2626; border-color: rgba(220,38,38,0.3); background: rgba(220,38,38,0.06); }
 
 /* Sections */
@@ -989,4 +991,20 @@
   .tl-sidebar-open { transform: translateX(0); }
 
   .tl-main { padding-top: 52px; }
+}
+
+/* ── Archived items ──────────────────────────────── */
+.t-list-row-archived .t-list-title,
+.t-chunk-row-archived .t-list-title { opacity: 0.5; }
+.t-archived-badge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 6px;
+  color: var(--text);
+  flex-shrink: 0;
 }

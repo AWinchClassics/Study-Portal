@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+
+                  {course.archived && <span className="t-archived-badge">Archived</span>}
+                </div>import { useNavigate } from 'react-router-dom'
 import { supabase } from '../../supabase'
 import TeacherLayout from '../../components/teacher/TeacherLayout'
 import { InlineEdit, ConfirmButton, StatusMessage } from '../../components/teacher/TeacherUI'
@@ -38,6 +40,11 @@ export default function TeacherCoursesPage() {
     setCourses(prev => prev.map(c => c.id === id ? { ...c, title } : c))
   }
 
+  async function handleArchive(id, archived) {
+    await supabase.from('courses').update({ archived }).eq('id', id)
+    setCourses(prev => prev.map(x => x.id === id ? { ...x, archived } : x))
+  }
+
   async function handleDelete(id) {
     const { error } = await supabase.from('courses').delete().eq('id', id)
     if (error) { setStatus({ type: 'error', msg: error.message }); return }
@@ -73,11 +80,12 @@ export default function TeacherCoursesPage() {
       ) : (
         <div className="t-list">
           {courses.map(course => (
-            <div key={course.id} className="t-list-row t-list-row-nav"
+            <div key={course.id} className={`t-list-row t-list-row-nav ${course.archived ? "t-list-row-archived" : ""}`}
               onClick={() => navigate(`/teacher/courses/${course.id}`)}>
               <div className="t-list-row-main">
-                <InlineEdit
-                  value={course.title}
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <InlineEdit
+                    value={course.title}
                   onSave={title => handleRename(course.id, title)}
                   className="t-list-title"
                 />
@@ -86,13 +94,10 @@ export default function TeacherCoursesPage() {
                 )}
               </div>
               <div className="t-list-row-actions" onClick={e => e.stopPropagation()}>
-                <ConfirmButton
-                  className="t-btn t-btn-danger-ghost"
-                  onConfirm={() => handleDelete(course.id)}
-                  confirmLabel="Delete?"
-                >
-                  Delete
-                </ConfirmButton>
+                {course.archived
+                  ? <button className="t-btn t-btn-ghost" onClick={() => handleArchive(course.id, false)}>↩ Restore</button>
+                  : <button className="t-btn t-btn-secondary" onClick={() => handleArchive(course.id, true)}>🗄 Archive</button>
+                }
               </div>
             </div>
           ))}

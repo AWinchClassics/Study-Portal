@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { supabase } from '../../supabase'
 import TeacherLayout from '../../components/teacher/TeacherLayout'
-import { InlineEdit, ConfirmButton, StatusMessage } from '../../components/teacher/TeacherUI'
+import { InlineEdit, ConfirmButton, StatusMessage, DeleteWarningModal } from '../../components/teacher/TeacherUI'
 import TeacherGlossarySection from '../../components/teacher/TeacherGlossarySection'
 
 export default function TeacherModulePage() {
@@ -14,6 +14,7 @@ export default function TeacherModulePage() {
   const [units, setUnits]   = useState([])
   const [loading, setLoading] = useState(true)
   const [status, setStatus] = useState(null)
+  const [showDeleteModule, setShowDeleteModule] = useState(false)
 
   useEffect(() => { fetchData() }, [moduleId])
 
@@ -51,6 +52,17 @@ export default function TeacherModulePage() {
     const { error } = await supabase.from('units').update({ title }).eq('id', id)
     if (error) { setStatus({ type: 'error', msg: error.message }); return }
     setUnits(prev => prev.map(u => u.id === id ? { ...u, title } : u))
+  }
+
+  async function handleArchiveUnit(id, archived) {
+    await supabase.from('units').update({ archived }).eq('id', id)
+    setUnits(prev => prev.map(x => x.id === id ? { ...x, archived } : x))
+  }
+
+  async function handleDeleteModule() {
+    const { error } = await supabase.from('units').delete().eq('id', moduleId)
+    if (error) { setStatus({ type: 'error', msg: error.message }); return }
+    navigate(`/teacher/courses/${module?.course_id}`)
   }
 
   async function handleDeleteUnit(id) {
@@ -110,7 +122,7 @@ export default function TeacherModulePage() {
         ) : (
           <div className="t-list">
             {units.map((unit, idx) => (
-              <div key={unit.id} className="t-list-row t-list-row-nav"
+              <div key={unit.id} className={`t-list-row t-list-row-nav ${unit.archived ? "t-list-row-archived" : ""}`}
                 onClick={() => navigate(`/teacher/units/${unit.id}`)}>
                 <div className="t-list-row-order" onClick={e => e.stopPropagation()}>
                   <button className="t-order-btn" onClick={() => handleMoveUnit(unit.id, -1)} disabled={idx === 0}>↑</button>
@@ -124,13 +136,10 @@ export default function TeacherModulePage() {
                   />
                 </div>
                 <div className="t-list-row-actions" onClick={e => e.stopPropagation()}>
-                  <ConfirmButton
-                    className="t-btn t-btn-danger-ghost"
-                    onConfirm={() => handleDeleteUnit(unit.id)}
-                    confirmLabel="Delete?"
-                  >
-                    Delete
-                  </ConfirmButton>
+                  {unit.archived
+                    ? <button className="t-btn t-btn-ghost" onClick={() => handleArchiveUnit(unit.id, false)}>↩ Restore</button>
+                    : <button className="t-btn t-btn-secondary" onClick={() => handleArchiveUnit(unit.id, true)}>🗄 Archive</button>
+                  }
                 </div>
               </div>
             ))}
@@ -147,6 +156,14 @@ export default function TeacherModulePage() {
           onStatus={(type, msg) => setStatus({ type, msg })}
         />
       </div>
+      {showDeleteModule && (
+        <DeleteWarningModal
+          itemType="module"
+          itemName={module?.title ?? 'this module'}
+          onConfirm={handleDeleteModule}
+          onClose={() => setShowDeleteModule(false)}
+        />
+      )}
     </TeacherLayout>
   )
 }
