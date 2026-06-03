@@ -174,9 +174,14 @@ export default function TeacherChunkPage() {
     <TeacherLayout
       title={chunk?.title ?? 'Chunk'}
       actions={
-        <button className="t-btn t-btn-ghost" onClick={() => navigate(`/teacher/units/${unit?.id}`)}>
-          ← {unit?.title ?? 'Unit'}
-        </button>
+        <div style={{ display: 'flex', gap: 8 }}>
+          <button className="t-btn t-btn-ghost" onClick={() => navigate(`/teacher/units/${unit?.id}`)}>
+            ← {unit?.title ?? 'Unit'}
+          </button>
+          <button className="t-btn t-btn-danger-ghost" onClick={() => setShowDeleteChunk(true)}>
+            Delete chunk
+          </button>
+        </div>
       }
     >
       <StatusMessage type={status?.type} onDismiss={() => setStatus(null)}>

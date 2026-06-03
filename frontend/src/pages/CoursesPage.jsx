@@ -14,7 +14,6 @@ export default function CoursesPage() {
       const { data: coursesData, error: coursesError } = await supabase
         .from('courses')
         .select('*')
-        .eq('archived', false)
         .order('title')
 
       if (coursesError) {
@@ -30,6 +29,7 @@ export default function CoursesPage() {
         const { data: countData } = await supabase
           .from('modules')
           .select('course_id')
+          .eq('archived', false)
           .in('course_id', coursesData.map(c => c.id))
 
         if (countData) {

@@ -87,9 +87,14 @@ export default function TeacherCoursePage() {
     <TeacherLayout
       title={course?.title ?? 'Course'}
       actions={
-        <button className="t-btn t-btn-ghost" onClick={() => navigate('/teacher/courses')}>
-          ← All courses
-        </button>
+        <div style={{ display: 'flex', gap: 8 }}>
+          <button className="t-btn t-btn-ghost" onClick={() => navigate('/teacher/courses')}>
+            ← All courses
+          </button>
+          <button className="t-btn t-btn-danger-ghost" onClick={() => setShowDeleteCourse(true)}>
+            Delete course
+          </button>
+        </div>
       }
     >
       <StatusMessage type={status?.type} onDismiss={() => setStatus(null)}>

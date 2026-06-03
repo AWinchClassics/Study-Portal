@@ -103,10 +103,15 @@ export default function TeacherUnitPage() {
     <TeacherLayout
       title={unit?.title ?? 'Unit'}
       actions={
-        <button className="t-btn t-btn-ghost"
-          onClick={() => navigate(`/teacher/modules/${module?.id}`)}>
-          ← {module?.title ?? 'Module'}
-        </button>
+        <div style={{ display: 'flex', gap: 8 }}>
+          <button className="t-btn t-btn-ghost"
+            onClick={() => navigate(`/teacher/modules/${module?.id}`)}>
+            ← {module?.title ?? 'Module'}
+          </button>
+          <button className="t-btn t-btn-danger-ghost" onClick={() => setShowDeleteUnit(true)}>
+            Delete unit
+          </button>
+        </div>
       }
     >
       <StatusMessage type={status?.type} onDismiss={() => setStatus(null)}>

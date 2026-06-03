@@ -34,13 +34,13 @@ export default function UnitPage() {
       setCourse(moduleData.courses)
 
       const { data: unitsData, error: unitsError } = await supabase
-        .from('units').select('*').eq('module_id', moduleId).order('order_index')
+        .from('units').select('*').eq('module_id', moduleId).eq('archived', false).order('order_index')
       if (unitsError) { setError(unitsError.message); setLoading(false); return }
       setUnits(unitsData)
 
       if (unitsData.length > 0) {
         const { data: countData } = await supabase
-          .from('chunks').select('unit_id').in('unit_id', unitsData.map(u => u.id))
+          .from('chunks').select('unit_id').eq('archived', false).in('unit_id', unitsData.map(u => u.id))
         if (countData) {
           const counts = {}
           countData.forEach(row => { counts[row.unit_id] = (counts[row.unit_id] || 0) + 1 })
@@ -58,7 +58,7 @@ export default function UnitPage() {
     if (moduleChunkIds !== null) return
     setLoadingChunkIds(true)
     const { data } = await supabase
-      .from('chunks').select('id').in('unit_id', units.map(u => u.id))
+      .from('chunks').select('id').eq('archived', false).in('unit_id', units.map(u => u.id))
     setModuleChunkIds((data ?? []).map(c => c.id))
     setLoadingChunkIds(false)
   }

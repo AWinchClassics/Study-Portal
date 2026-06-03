@@ -90,10 +90,15 @@ export default function TeacherModulePage() {
     <TeacherLayout
       title={module?.title ?? 'Module'}
       actions={
-        <button className="t-btn t-btn-ghost"
-          onClick={() => navigate(`/teacher/courses/${course?.id}`)}>
-          ← {course?.title ?? 'Course'}
-        </button>
+        <div style={{ display: 'flex', gap: 8 }}>
+          <button className="t-btn t-btn-ghost"
+            onClick={() => navigate(`/teacher/courses/${course?.id}`)}>
+            ← {course?.title ?? 'Course'}
+          </button>
+          <button className="t-btn t-btn-danger-ghost" onClick={() => setShowDeleteModule(true)}>
+            Delete module
+          </button>
+        </div>
       }
     >
       <StatusMessage type={status?.type} onDismiss={() => setStatus(null)}>

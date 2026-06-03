@@ -17,6 +17,7 @@ export default function ModulePage() {
       const { data: courseData, error: courseError } = await supabase
         .from('courses')
         .select('id, title, description')
+        .eq('archived', false)
         .eq('id', courseId)
         .single()
 
@@ -31,7 +32,6 @@ export default function ModulePage() {
       const { data: modulesData, error: modulesError } = await supabase
         .from('modules')
         .select('*')
-        .eq('archived', false)
         .eq('course_id', courseId)
         .order('order_index')
 
@@ -48,6 +48,7 @@ export default function ModulePage() {
         const { data: countData } = await supabase
           .from('units')
           .select('module_id')
+          .eq('archived', false)
           .in('module_id', modulesData.map(m => m.id))
 
         if (countData) {
