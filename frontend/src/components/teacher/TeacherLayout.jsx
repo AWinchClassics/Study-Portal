@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { NavLink, useNavigate, useLocation } from 'react-router-dom'
-import { useTeacherAuth } from '../../context/TeacherAuthContext'
+import { useAuth } from '../../context/AuthContext'
 
 const NAV_ITEMS = [
   { to: '/teacher',            label: 'Dashboard',  icon: '⊞', end: true },
@@ -13,28 +13,24 @@ const NAV_ITEMS = [
 ]
 
 export default function TeacherLayout({ children, title, actions }) {
-  const { logout } = useTeacherAuth()
+  const { signOut } = useAuth()
   const navigate  = useNavigate()
   const location  = useLocation()
   const [open, setOpen] = useState(false)
 
-  // Close drawer on navigation
   useEffect(() => setOpen(false), [location.pathname])
-  // Prevent body scroll when drawer is open
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
   }, [open])
 
-  function handleLogout() { logout(); navigate('/teacher') }
+  function handleLogout() { signOut(); navigate('/teacher') }
 
   return (
     <div className="tl-shell">
-      {/* Mobile hamburger */}
       <button className="t-sidebar-hamburger" onClick={() => setOpen(true)} aria-label="Open menu">
         <span /><span /><span />
       </button>
-      {/* Backdrop */}
       {open && <div className="t-sidebar-backdrop" onClick={() => setOpen(false)} />}
 
       <aside className={`tl-sidebar ${open ? 'tl-sidebar-open' : ''}`}>
