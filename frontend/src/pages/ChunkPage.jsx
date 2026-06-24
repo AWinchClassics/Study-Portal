@@ -331,10 +331,16 @@ export default function ChunkPage() {
   }
 
   // Unit-level mastery pips (for the page header)
-  const unitQuizPipItems = quizResourceIds.map(id => {
-    const resource = allResources.find(r => r.id === id)
-    return { id, label: resource?.title ?? 'Quiz', percent: quizBest?.[id]?.bestPercent ?? null }
-  })
+  // Build pip items in chunk order → resource order within each chunk
+const unitQuizPipItems = chunks.flatMap(chunk =>
+  (resourcesByChunk[chunk.id] ?? [])
+    .filter(r => r.type?.toLowerCase() === 'quiz')
+    .map(r => ({
+      id: r.id,
+      label: r.title,
+      percent: quizBest?.[r.id]?.bestPercent ?? null,
+    }))
+)
   const unitTimelinePipItems = chunks.map(c => {
     const key = `chunk:${c.id}`
     const modes = timelineBest?.[key]
