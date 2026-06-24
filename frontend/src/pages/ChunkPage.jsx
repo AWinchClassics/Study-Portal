@@ -157,12 +157,12 @@ function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest, onMas
         <h2 className="chunk-title">{chunk.title}</h2>
         <div className="chunk-header-right">
           {/* Mastery pip summary — visible even when collapsed */}
-          {quizPipItems.length > 0 && (
+          {(quizPipItems.length > 0 || timelinePipItems.length > 0) && (
             <div className="chunk-mastery-pips" onClick={e => e.stopPropagation()}>
-              <MasteryPipRow label="Quizzes" items={quizPipItems} />
-              {timelinePipItems.length > 0 && (
-                <MasteryPipRow label="Timelines" items={timelinePipItems} />
+              {quizPipItems.length > 0 && (
+                <MasteryPipRow label="Quizzes" items={quizPipItems} />
               )}
+              <MasteryPipRow label="Timelines" items={timelinePipItems} />
             </div>
           )}
           {chunk.estimated_time && <span className="chunk-time">⏱ {chunk.estimated_time} min</span>}
@@ -320,7 +320,6 @@ export default function ChunkPage() {
 
   const masterTimelineKeys = chunks.map(c => `chunk:${c.id}`)
 
-  console.log('ChunkPage render - masterTimelineKeys:', masterTimelineKeys, 'user:', !!user, 'chunks:', chunks.length)
   const { quizBest, timelineBest, refresh } = useMastery({
     resourceIds:         user ? quizResourceIds    : [],
     masterTimelineKeys:  user ? masterTimelineKeys : [],
@@ -340,7 +339,6 @@ export default function ChunkPage() {
   }
 
   // Unit-level mastery pips (for the page header)
-  console.log('ChunkPage timelineBest:', JSON.stringify(timelineBest))
   const unitQuizPipItems = quizResourceIds.map(id => {
     const resource = allResources.find(r => r.id === id)
     return { id, label: resource?.title ?? 'Quiz', percent: quizBest?.[id]?.bestPercent ?? null }
