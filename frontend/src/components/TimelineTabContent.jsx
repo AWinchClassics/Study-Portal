@@ -43,6 +43,7 @@ export default function TimelineTabContent({
 
   const [masterEvents, setMasterEvents]       = useState([])
   const [customTimelines, setCustomTimelines] = useState([])
+  const [timelineChunkMap, setTimelineChunkMap] = useState({}) // timeline_id -> chunk_id
   const [selectedTimeline, setSelectedTimeline] = useState('master')
   const [loading, setLoading]                 = useState(true)
   const [masterHidden, setMasterHidden]         = useState(false)
@@ -83,7 +84,7 @@ export default function TimelineTabContent({
       ]))
 
       const [{ data: ctChunk }, { data: ctUnit }, { data: ctModule }] = await Promise.all([
-        chunkIds.length > 0   ? supabase.from('chunk_timelines').select('timeline_id').in('chunk_id', chunkIds)    : { data: [] },
+        chunkIds.length > 0   ? supabase.from('chunk_timelines').select('timeline_id, chunk_id').in('chunk_id', chunkIds)    : { data: [] },
         unitIds.length > 0    ? supabase.from('unit_timelines').select('timeline_id').in('unit_id', unitIds)       : { data: [] },
         moduleIds.length > 0  ? supabase.from('module_timelines').select('timeline_id').in('module_id', moduleIds) : { data: [] },
       ])
@@ -101,8 +102,13 @@ export default function TimelineTabContent({
           ...tl,
           events: (evData ?? []).filter(e => e.timeline_id === tl.id),
         })))
+        // Map timeline_id -> chunk_id for chunk-level fallback mastery
+        const tlChunkMap = {}
+        ;(ctChunk ?? []).forEach(r => { if (r.chunk_id) tlChunkMap[r.timeline_id] = r.chunk_id })
+        setTimelineChunkMap(tlChunkMap)
       } else {
         setCustomTimelines([])
+        setTimelineChunkMap({})
       }
 
       const hmQuery = moduleIds.length > 0
@@ -125,14 +131,16 @@ export default function TimelineTabContent({
   const customTimelineIds = customTimelines.map(t => t.id)
   const masterKey = parentType && parentId ? `${parentType}:${parentId}` : null
 
-  // Build fallback keys: chunk-level attempts for when viewing at unit/module level
-  const chunkMasterKeys = user ? chunkIds.map(id => `chunk:${id}`) : []
-  const unitMasterKeys  = user ? unitIds.map(id => `unit:${id}`) : []
-  const allLookupKeys   = user ? [
-    ...(masterKey ? [masterKey] : []),
-    ...chunkMasterKeys,
-    ...unitMasterKeys,
-  ] : []
+  // Build mastery lookup keys:
+  // - Primary masterKey (e.g. unit:uuid or chunk:uuid)
+  // - For each custom timeline, also include its originating chunk key as fallback
+  //   (handles cases where attempts were saved at chunk level before unit/module level saving)
+  const customTimelineChunkKeys = user
+    ? [...new Set(customTimelineIds.map(id => timelineChunkMap[id]).filter(Boolean).map(id => `chunk:${id}`))]
+    : []
+  const allLookupKeys = user
+    ? [...new Set([...(masterKey ? [masterKey] : []), ...customTimelineChunkKeys])]
+    : []
 
   const { timelineBest } = useMastery({
     timelineIds:        user && customTimelineIds.length > 0 ? customTimelineIds : [],
@@ -190,21 +198,25 @@ export default function TimelineTabContent({
     setSession(pickRandom(sortByDate(events), size))
   }
 
-  // Mastery: merge best score across all scope levels (chunk/unit/module) + custom timeline
-  // This ensures scores show correctly regardless of which level they were saved at
-  const scopeBest = allLookupKeys.reduce((acc, key) => {
-    const m = timelineBest?.[key]
-    if (!m) return acc
-    return {
-      'date-test':  Math.max(acc['date-test']  ?? -1, m['date-test']  ?? -1),
-      'match-test': Math.max(acc['match-test'] ?? -1, m['match-test'] ?? -1),
-    }
-  }, { 'date-test': -1, 'match-test': -1 })
-
-  const customMastery = activeId !== 'master' ? timelineBest?.[activeId] : null
+  // Mastery for the active timeline:
+  // - Master timeline: use primary masterKey
+  // - Custom timeline: use custom timeline's own attempts, falling back to its source chunk's attempts
+  const primaryMastery = masterKey ? timelineBest?.[masterKey] : null
+  const customMastery  = activeId !== 'master' ? timelineBest?.[activeId] : null
+  const chunkFallback  = activeId !== 'master' && timelineChunkMap[activeId]
+    ? timelineBest?.[`chunk:${timelineChunkMap[activeId]}`]
+    : null
   const activeMastery = {
-    'date-test':  Math.max(scopeBest['date-test'],  customMastery?.['date-test']  ?? -1),
-    'match-test': Math.max(scopeBest['match-test'], customMastery?.['match-test'] ?? -1),
+    'date-test':  Math.max(
+      primaryMastery?.['date-test']  ?? -1,
+      customMastery?.['date-test']   ?? -1,
+      chunkFallback?.['date-test']   ?? -1,
+    ),
+    'match-test': Math.max(
+      primaryMastery?.['match-test'] ?? -1,
+      customMastery?.['match-test']  ?? -1,
+      chunkFallback?.['match-test']  ?? -1,
+    ),
   }
   if (activeMastery['date-test']  < 0) activeMastery['date-test']  = null
   if (activeMastery['match-test'] < 0) activeMastery['match-test'] = null
