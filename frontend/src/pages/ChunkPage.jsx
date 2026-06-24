@@ -340,6 +340,7 @@ export default function ChunkPage() {
   }
 
   // Unit-level mastery pips (for the page header)
+  console.log('ChunkPage timelineBest:', JSON.stringify(timelineBest))
   const unitQuizPipItems = quizResourceIds.map(id => {
     const resource = allResources.find(r => r.id === id)
     return { id, label: resource?.title ?? 'Quiz', percent: quizBest?.[id]?.bestPercent ?? null }

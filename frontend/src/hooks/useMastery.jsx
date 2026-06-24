@@ -109,6 +109,7 @@ export function useMastery({ resourceIds = [], timelineIds = [], masterTimelineK
           }
         })
 
+        console.log('timelineBest computed:', JSON.stringify(best))
         setTimelineBest(best)
       } else {
         setTimelineBest({})
