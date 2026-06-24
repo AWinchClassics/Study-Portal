@@ -418,3 +418,57 @@ ul { list-style: none; padding: 0; margin: 0; }
 @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 
 .page-error { color: #dc2626; font-size: 15px; padding: 12px 0; }
+
+/* ============================================
+   CARD MASTERY (unit/module cards)
+   ============================================ */
+
+.card-mastery {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px 0 4px;
+  border-top: 1px solid var(--border);
+  margin-top: 8px;
+}
+
+.card-mastery-stats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 2px;
+}
+
+.mastery-stats-count {
+  font-size: 11px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.mastery-stats-avg {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 20px;
+}
+
+.mastery-stats-avg.mastery-high {
+  background: rgba(22, 163, 74, 0.12);
+  color: #16a34a;
+}
+
+.mastery-stats-avg.mastery-mid {
+  background: rgba(217, 119, 6, 0.12);
+  color: #b45309;
+}
+
+.mastery-stats-avg.mastery-low {
+  background: rgba(220, 38, 38, 0.1);
+  color: #dc2626;
+}
+
+@media (prefers-color-scheme: dark) {
+  .mastery-stats-avg.mastery-high { color: #4ade80; background: rgba(74, 222, 128, 0.1); }
+  .mastery-stats-avg.mastery-mid  { color: #fbbf24; background: rgba(251, 191, 36, 0.1); }
+  .mastery-stats-avg.mastery-low  { color: #f87171; background: rgba(248, 113, 113, 0.1); }
+}
