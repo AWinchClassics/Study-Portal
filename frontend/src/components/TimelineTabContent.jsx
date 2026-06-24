@@ -135,11 +135,6 @@ export default function TimelineTabContent({
     setSession(null)
   }
 
-  const handleStartSession = useCallback((size) => {
-    const events = activeTimeline?.events ?? []
-    setSession(pickRandom(sortByDate(events), size))
-  }, [selectedTimeline, masterEvents, customTimelines])
-
   const handleResetSession = useCallback(() => {
     setSession(null)
   }, [])
@@ -188,6 +183,12 @@ export default function TimelineTabContent({
 
   const activeId = allTimelines.find(t => t.id === selectedTimeline) ? selectedTimeline : allTimelines[0].id
   const activeTimeline = allTimelines.find(t => t.id === activeId)
+
+  // handleStartSession defined here so activeTimeline is never stale
+  function handleStartSession(size) {
+    const events = activeTimeline?.events ?? []
+    setSession(pickRandom(sortByDate(events), size))
+  }
 
   // Mastery for the currently active timeline
   const activeMasteryKey = activeId === 'master' ? masterKey : activeId
