@@ -320,6 +320,7 @@ export default function ChunkPage() {
 
   const masterTimelineKeys = chunks.map(c => `chunk:${c.id}`)
 
+  console.log('ChunkPage render - masterTimelineKeys:', masterTimelineKeys, 'user:', !!user, 'chunks:', chunks.length)
   const { quizBest, timelineBest, refresh } = useMastery({
     resourceIds:         user ? quizResourceIds    : [],
     masterTimelineKeys:  user ? masterTimelineKeys : [],
