@@ -1,0 +1,341 @@
+/* ============================================
+   PROGRESS DASHBOARD  (progress.css)
+   ============================================ */
+
+/* ── Stat strip ── */
+
+.pd-stat-strip {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+@media (max-width: 900px) {
+  .pd-stat-strip { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 560px) {
+  .pd-stat-strip { grid-template-columns: repeat(2, 1fr); }
+}
+
+.pd-stat-card {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 16px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.pd-stat-icon  { font-size: 20px; margin-bottom: 4px; }
+.pd-stat-value { font-size: 26px; font-weight: 700; color: var(--text-h); line-height: 1.1; }
+.pd-stat-label { font-size: 12px; color: var(--text); font-weight: 500; }
+.pd-stat-sub   { font-size: 11px; color: var(--text); margin-top: 2px; }
+
+/* ── Tab content area ── */
+
+.pd-tab-content { padding-top: 4px; }
+
+.pd-section-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-h);
+  margin-bottom: 16px;
+}
+
+/* ── Score distribution chart ── */
+
+.pd-distribution {
+  margin-bottom: 36px;
+}
+
+.pd-dist-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  height: 110px;
+  padding-bottom: 0;
+}
+
+.pd-dist-band {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 64px;
+}
+
+.pd-dist-bar-wrap {
+  width: 40px;
+  height: 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: var(--border);
+  border-radius: 6px 6px 4px 4px;
+  overflow: hidden;
+}
+
+.pd-dist-bar {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+  transition: height 0.3s ease;
+  min-height: 2px;
+}
+
+.pd-dist-bar-high { background: #16a34a; }
+.pd-dist-bar-mid  { background: #d97706; }
+.pd-dist-bar-low  { background: #dc2626; }
+.pd-dist-bar-none { background: var(--border-strong); }
+
+@media (prefers-color-scheme: dark) {
+  .pd-dist-bar-high { background: #4ade80; }
+  .pd-dist-bar-mid  { background: #fbbf24; }
+  .pd-dist-bar-low  { background: #f87171; }
+}
+
+.pd-dist-count {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.pd-dist-count-high { color: #16a34a; }
+.pd-dist-count-mid  { color: #d97706; }
+.pd-dist-count-low  { color: #dc2626; }
+.pd-dist-count-none { color: var(--text); }
+
+@media (prefers-color-scheme: dark) {
+  .pd-dist-count-high { color: #4ade80; }
+  .pd-dist-count-mid  { color: #fbbf24; }
+  .pd-dist-count-low  { color: #f87171; }
+}
+
+.pd-dist-label {
+  font-size: 11px;
+  color: var(--text);
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ── Module sections ── */
+
+.pd-modules { display: flex; flex-direction: column; gap: 10px; }
+
+.pd-module-section {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.pd-module-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 16px;
+  background: var(--bg-subtle);
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.12s;
+}
+.pd-module-header:hover { background: var(--bg); }
+
+.pd-module-chevron {
+  font-size: 12px;
+  color: var(--text);
+  flex-shrink: 0;
+  width: 14px;
+}
+
+.pd-module-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-h);
+  flex: 1;
+  text-align: left;
+}
+
+.pd-module-counts {
+  font-size: 12px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.pd-module-avg {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+/* mastery colour classes reuse the existing .mastery-high/mid/low from auth-mastery.css */
+
+.pd-module-rows { border-top: 1px solid var(--border); }
+
+/* ── Quiz row ── */
+
+.pd-quiz-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 16px;
+  background: var(--bg);
+  border: none;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.1s;
+}
+.pd-quiz-row:last-child { border-bottom: none; }
+.pd-quiz-row:hover { background: var(--bg-subtle); }
+
+.pd-quiz-row-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.pd-quiz-row-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-h);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pd-quiz-row-chunk {
+  font-size: 11px;
+  color: var(--text);
+}
+
+.pd-quiz-row-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.pd-quiz-row-attempts { font-size: 11px; color: var(--text); }
+.pd-quiz-row-date     { font-size: 11px; color: var(--text); }
+
+.pd-quiz-row-score {
+  font-size: 14px;
+  font-weight: 700;
+  min-width: 44px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* ── Progress bar (used in timeline rows) ── */
+
+.pd-bar-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pd-bar-track {
+  width: 80px;
+  height: 6px;
+  background: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.pd-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.pd-bar-high { background: #16a34a; }
+.pd-bar-mid  { background: #d97706; }
+.pd-bar-low  { background: #dc2626; }
+
+@media (prefers-color-scheme: dark) {
+  .pd-bar-high { background: #4ade80; }
+  .pd-bar-mid  { background: #fbbf24; }
+  .pd-bar-low  { background: #f87171; }
+}
+
+.pd-bar-label {
+  font-size: 13px;
+  font-weight: 600;
+  min-width: 36px;
+}
+
+.pd-no-data { font-size: 13px; color: var(--text); }
+
+/* ── Timeline list ── */
+
+.pd-timeline-list { display: flex; flex-direction: column; gap: 0; }
+
+.pd-timeline-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+.pd-timeline-row:last-child { border-bottom: none; }
+
+.pd-timeline-row-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+}
+
+.pd-timeline-row-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.pd-timeline-row-attempts {
+  font-size: 12px;
+  color: var(--text);
+}
+
+.pd-timeline-row-scores {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.pd-timeline-mode {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pd-timeline-mode-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  min-width: 36px;
+}
+
+@media (max-width: 600px) {
+  .pd-timeline-row { flex-direction: column; align-items: flex-start; }
+  .pd-timeline-row-scores { width: 100%; }
+  .pd-bar-track { width: 120px; }
+}

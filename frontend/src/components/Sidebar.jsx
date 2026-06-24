@@ -11,6 +11,7 @@ const NAV_ITEMS = [
   { to: '/resources',  label: 'Resources',           icon: '📦' },
   { to: '/sources',    label: 'Sources',             icon: '📜' },
   { to: '/randomiser', label: 'Revision Randomiser', icon: '🎲' },
+  { to: '/progress',   label: 'My Progress',         icon: '📈' },
 ]
 
 export default function Sidebar() {

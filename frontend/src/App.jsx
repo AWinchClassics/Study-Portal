@@ -13,6 +13,7 @@ import GlossaryPage        from './pages/GlossaryPage'
 import TimelinesPage       from './pages/TimelinesPage'
 import ResourcesPage       from './pages/ResourcesPage'
 import SourcesPage         from './pages/SourcesPage'
+import ProgressPage        from './pages/ProgressPage'
 import TeacherDashboard    from './pages/teacher/TeacherDashboard'
 import TeacherCoursesPage  from './pages/teacher/TeacherCoursesPage'
 import TeacherCoursePage   from './pages/teacher/TeacherCoursePage'
@@ -68,6 +69,7 @@ function App() {
         <Route path="/timelines"         element={<StudentLayout><TimelinesPage /></StudentLayout>} />
         <Route path="/resources"         element={<StudentLayout><ResourcesPage /></StudentLayout>} />
         <Route path="/sources"           element={<StudentLayout><SourcesPage /></StudentLayout>} />
+        <Route path="/progress"          element={<StudentLayout><ProgressPage /></StudentLayout>} />
         <Route path="/teacher/*"         element={<TeacherSection />} />
       </Routes>
     </AuthProvider>
