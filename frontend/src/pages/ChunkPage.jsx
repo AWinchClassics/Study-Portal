@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, useLocation } from 'react-router-dom'
 import { supabase } from '../supabase'
 import Breadcrumb from '../components/Breadcrumb'
 import ChunkRandomiser from '../components/ChunkRandomiser'
@@ -23,7 +23,7 @@ const TYPE_ICONS = {
   audio: '🎧', worksheet: '📋', task: '✅', flashcards: '🃏', source: '📜',
 }
 
-function ResourceItem({ resource, navContext, quizBest }) {
+function ResourceItem({ resource, navContext, quizBest, onMasteryRefresh }) {
   const navigate = useNavigate()
   const [videoOpen, setVideoOpen] = useState(false)
   const [pdfOpen,   setPdfOpen]   = useState(false)
@@ -118,7 +118,7 @@ function ResourceItem({ resource, navContext, quizBest }) {
   )
 }
 
-function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest }) {
+function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest, onMasteryRefresh }) {
   const [collapsed, setCollapsed] = useState(true)
   const [chunkTab, setChunkTab]   = useState('resources')
 
@@ -138,13 +138,17 @@ function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest }) {
     percent: quizBest?.[r.id]?.bestPercent ?? null,
   }))
 
-  // Timeline pip items — passed in from parent (ChunkPage knows the timeline IDs)
-  const timelinePipItems = Object.entries(timelineBest ?? {}).map(([key, modes]) => ({
-    id: key,
-    label: key.split(':')[0] + ' timeline',
-    // Show the best of date-test and match-test for a single pip
-    percent: Math.max(...Object.values(modes).filter(v => v != null)),
-  }))
+  // Timeline pip — one pip per chunk showing best across both test modes
+  // Always show a pip (grey if unattempted) so the row is visible
+  const chunkTimelineKey = `chunk:${chunk.id}`
+  const timelineModes = timelineBest?.[chunkTimelineKey]
+  const timelinePipItems = [{
+    id: chunkTimelineKey,
+    label: 'Timeline',
+    percent: timelineModes
+      ? Math.max(...Object.values(timelineModes).filter(v => v != null))
+      : null,
+  }]
 
   return (
     <div className={`chunk-card ${collapsed ? 'chunk-card-collapsed' : ''}`}>
@@ -214,7 +218,7 @@ function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest }) {
                     <ul className="chunk-resource-list">
                       {byPurpose[section.key].map(r => (
                         <li key={r.id}>
-                          <ResourceItem resource={r} navContext={navContext} quizBest={quizBest} />
+                          <ResourceItem resource={r} navContext={navContext} quizBest={quizBest} onMasteryRefresh={onMasteryRefresh} />
                         </li>
                       ))}
                     </ul>
@@ -225,7 +229,7 @@ function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest }) {
               <ul className="chunk-resource-list">
                 {resources.map(r => (
                   <li key={r.id}>
-                    <ResourceItem resource={r} navContext={navContext} quizBest={quizBest} />
+                    <ResourceItem resource={r} navContext={navContext} quizBest={quizBest} onMasteryRefresh={onMasteryRefresh} />
                   </li>
                 ))}
               </ul>
@@ -239,7 +243,7 @@ function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest }) {
 
           {/* Timelines tab */}
           {chunkTab === 'timelines' && (
-            <TimelineTabContent chunkIds={[chunk.id]} parentType="chunk" parentId={chunk.id} />
+            <TimelineTabContent chunkIds={[chunk.id]} parentType="chunk" parentId={chunk.id} onMasteryRefresh={onMasteryRefresh} />
           )}
 
           {/* Sources tab */}
@@ -260,6 +264,7 @@ function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest }) {
 export default function ChunkPage() {
   const { unitId } = useParams()
   const { user }   = useAuth()
+  const location       = useLocation()
   const [unit, setUnit]         = useState(null)
   const [module, setModule]     = useState(null)
   const [course, setCourse]     = useState(null)
@@ -315,10 +320,13 @@ export default function ChunkPage() {
 
   const masterTimelineKeys = chunks.map(c => `chunk:${c.id}`)
 
-  const { quizBest, timelineBest } = useMastery({
+  const { quizBest, timelineBest, refresh } = useMastery({
     resourceIds:         user ? quizResourceIds    : [],
     masterTimelineKeys:  user ? masterTimelineKeys : [],
   })
+
+  // Re-fetch mastery when returning to this page (e.g. after completing a quiz)
+  useEffect(() => { if (user) refresh() }, [location.key])
 
   if (loading) return <div className="page"><div className="loading-pulse">Loading chunks…</div></div>
   if (error)   return <div className="page"><p className="page-error">Error: {error}</p></div>
@@ -331,16 +339,10 @@ export default function ChunkPage() {
   }
 
   // Unit-level mastery pips (for the page header)
-  // Build pip items in chunk order → resource order within each chunk
-const unitQuizPipItems = chunks.flatMap(chunk =>
-  (resourcesByChunk[chunk.id] ?? [])
-    .filter(r => r.type?.toLowerCase() === 'quiz')
-    .map(r => ({
-      id: r.id,
-      label: r.title,
-      percent: quizBest?.[r.id]?.bestPercent ?? null,
-    }))
-)
+  const unitQuizPipItems = quizResourceIds.map(id => {
+    const resource = allResources.find(r => r.id === id)
+    return { id, label: resource?.title ?? 'Quiz', percent: quizBest?.[id]?.bestPercent ?? null }
+  })
   const unitTimelinePipItems = chunks.map(c => {
     const key = `chunk:${c.id}`
     const modes = timelineBest?.[key]
@@ -408,6 +410,7 @@ const unitQuizPipItems = chunks.flatMap(chunk =>
                 resources={resourcesByChunk[chunk.id] ?? []}
                 navContext={navContext}
                 quizBest={quizBest}
+                onMasteryRefresh={refresh}
                 timelineBest={
                   // Pass only the timeline mastery relevant to this chunk
                   Object.fromEntries(

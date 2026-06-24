@@ -22,6 +22,9 @@ export function useMastery({ resourceIds = [], timelineIds = [], masterTimelineK
   const { user } = useAuth()
   const [quizBest, setQuizBest]         = useState({})
   const [timelineBest, setTimelineBest] = useState({})
+  const [refreshKey, setRefreshKey]     = useState(0)
+
+  function refresh() { setRefreshKey(k => k + 1) }
 
   const rKey = resourceIds.slice().sort().join(',')
   const tKey = timelineIds.slice().sort().join(',')
@@ -110,9 +113,9 @@ export function useMastery({ resourceIds = [], timelineIds = [], masterTimelineK
     }
 
     load()
-  }, [user, rKey, tKey, mKey])
+  }, [user, rKey, tKey, mKey, refreshKey])
 
-  return { quizBest, timelineBest }
+  return { quizBest, timelineBest, refresh }
 }
 
 /**

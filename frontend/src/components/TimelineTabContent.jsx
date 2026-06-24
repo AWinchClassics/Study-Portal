@@ -35,7 +35,7 @@ function dedupeGlossaryRows(rows) {
  */
 export default function TimelineTabContent({
   chunkIds = [], unitIds = [], moduleIds = [],
-  parentType, parentId,
+  parentType, parentId, onMasteryRefresh,
 }) {
   const { user } = useAuth()
   const { saveAttempt } = useTimelineAttempt()
@@ -163,7 +163,8 @@ export default function TimelineTabContent({
         total,
       })
     }
-  }, [user, selectedTimeline, parentType, parentId, masterKey, saveAttempt])
+    onMasteryRefresh?.()
+  }, [user, selectedTimeline, parentType, parentId, masterKey, saveAttempt, onMasteryRefresh])
 
   if (loading) return <div className="loading-pulse" style={{ padding: '24px 0' }}>Loading timeline…</div>
 
