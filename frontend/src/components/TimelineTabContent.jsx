@@ -125,9 +125,18 @@ export default function TimelineTabContent({
   const customTimelineIds = customTimelines.map(t => t.id)
   const masterKey = parentType && parentId ? `${parentType}:${parentId}` : null
 
+  // Build fallback keys: chunk-level attempts for when viewing at unit/module level
+  const chunkMasterKeys = user ? chunkIds.map(id => `chunk:${id}`) : []
+  const unitMasterKeys  = user ? unitIds.map(id => `unit:${id}`) : []
+  const allLookupKeys   = user ? [
+    ...(masterKey ? [masterKey] : []),
+    ...chunkMasterKeys,
+    ...unitMasterKeys,
+  ] : []
+
   const { timelineBest } = useMastery({
     timelineIds:        user && customTimelineIds.length > 0 ? customTimelineIds : [],
-    masterTimelineKeys: user && masterKey ? [masterKey] : [],
+    masterTimelineKeys: allLookupKeys,
   })
 
   // ── Mode & session ─────────────────────────────────────────
@@ -181,12 +190,21 @@ export default function TimelineTabContent({
     setSession(pickRandom(sortByDate(events), size))
   }
 
-  // Mastery: merge master timeline mastery + active custom timeline mastery
-  const masterMastery = masterKey ? timelineBest?.[masterKey] : null
+  // Mastery: merge best score across all scope levels (chunk/unit/module) + custom timeline
+  // This ensures scores show correctly regardless of which level they were saved at
+  const scopeBest = allLookupKeys.reduce((acc, key) => {
+    const m = timelineBest?.[key]
+    if (!m) return acc
+    return {
+      'date-test':  Math.max(acc['date-test']  ?? -1, m['date-test']  ?? -1),
+      'match-test': Math.max(acc['match-test'] ?? -1, m['match-test'] ?? -1),
+    }
+  }, { 'date-test': -1, 'match-test': -1 })
+
   const customMastery = activeId !== 'master' ? timelineBest?.[activeId] : null
   const activeMastery = {
-    'date-test':  Math.max(masterMastery?.['date-test']  ?? -1, customMastery?.['date-test']  ?? -1),
-    'match-test': Math.max(masterMastery?.['match-test'] ?? -1, customMastery?.['match-test'] ?? -1),
+    'date-test':  Math.max(scopeBest['date-test'],  customMastery?.['date-test']  ?? -1),
+    'match-test': Math.max(scopeBest['match-test'], customMastery?.['match-test'] ?? -1),
   }
   if (activeMastery['date-test']  < 0) activeMastery['date-test']  = null
   if (activeMastery['match-test'] < 0) activeMastery['match-test'] = null
