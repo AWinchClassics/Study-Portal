@@ -82,7 +82,8 @@ export default function ModulePage() {
             const chunkToUnit = {}
             chunksData.forEach(c => { chunkToUnit[c.id] = c.unit_id })
             const unitToModule = {}
-            unitsData.forEach(u => { unitToModule[u.id] = u.module_id })
+            const unitOrderMap = {}
+            unitsData.forEach(u => { unitToModule[u.id] = u.module_id; unitOrderMap[u.id] = u.order_index ?? 0 })
 
             const quizMap = {}
             modulesData.forEach(m => { quizMap[m.id] = [] })
@@ -92,6 +93,7 @@ export default function ModulePage() {
                 const moduleId = unitToModule[unitId]
                 if (moduleId) quizMap[moduleId].push({
                   unitId,
+                  unitOrder:  unitOrderMap[unitId] ?? 0,
                   chunkId:    row.chunk_id,
                   resourceId: row.resources.id,
                 })
@@ -157,7 +159,8 @@ export default function ModulePage() {
             const avgScore     = scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : null
 
             // Per-unit pip: average best quiz score across all quizzes in that unit
-            const unitIds = [...new Set(quizEntries.map(q => q.unitId))]
+            const unitIds = [...new Map(quizEntries.map(q => [q.unitId, q.unitOrder])).entries()]
+              .sort((a, b) => a[1] - b[1]).map(([id]) => id)
             const unitPips = unitIds.map(uid => {
               const unitScores = quizEntries
                 .filter(q => q.unitId === uid)

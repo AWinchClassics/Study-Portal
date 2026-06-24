@@ -79,7 +79,7 @@ export default function UnitPage() {
 
         // Fetch all chunks + quiz resources for all units in one pass
         const { data: chunksData } = await supabase
-          .from('chunks').select('id, unit_id').eq('archived', false).in('unit_id', unitIds)
+          .from('chunks').select('id, unit_id, order_index').eq('archived', false).in('unit_id', unitIds).order('order_index')
 
         if (chunksData && chunksData.length > 0) {
           const chunkIds = chunksData.map(c => c.id)
@@ -90,7 +90,8 @@ export default function UnitPage() {
 
           // Build unitId -> [resourceId] map for quiz resources
           const chunkToUnit = {}
-          chunksData.forEach(c => { chunkToUnit[c.id] = c.unit_id })
+          const chunkOrderMap = {}
+          chunksData.forEach(c => { chunkToUnit[c.id] = c.unit_id; chunkOrderMap[c.id] = c.order_index ?? 0 })
 
           const quizMap = {}
           unitsData.forEach(u => { quizMap[u.id] = [] })
@@ -98,7 +99,8 @@ export default function UnitPage() {
             if (row.resources?.type?.toLowerCase() === 'quiz') {
               const unitId = chunkToUnit[row.chunk_id]
               if (unitId) quizMap[unitId].push({
-                chunkId: row.chunk_id,
+                chunkId:    row.chunk_id,
+                chunkOrder: chunkOrderMap[row.chunk_id] ?? 0,
                 resourceId: row.resources.id,
               })
             }
@@ -190,8 +192,9 @@ export default function UnitPage() {
               const scores       = quizEntries.map(q => quizBest?.[q.resourceId]?.bestPercent).filter(p => p != null)
               const avgScore     = scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : null
 
-              // Per-chunk pip: best quiz score across all quizzes in that chunk
-              const chunkIds = [...new Set(quizEntries.map(q => q.chunkId))]
+              // Per-chunk pip: best quiz score across all quizzes in that chunk, sorted by order_index
+              const chunkIds = [...new Map(quizEntries.map(q => [q.chunkId, q.chunkOrder])).entries()]
+                .sort((a, b) => a[1] - b[1]).map(([id]) => id)
               const chunkPips = chunkIds.map(cid => {
                 const chunkScores = quizEntries
                   .filter(q => q.chunkId === cid)
