@@ -115,9 +115,7 @@ function QuizRow({ row, onNavigate }) {
 function TimelineRow({ row, onNavigate }) {
   const dateBest  = row.modes?.date  ?? null
   const matchBest = row.modes?.match ?? null
-  // best = highest of the two modes, used for the score badge colour
-  const best = [dateBest, matchBest].filter(v => v != null)
-  row.best = best.length ? Math.max(...best) : null
+  // row.best is pre-computed in tlRowsByModule derivation — don't mutate here
   const cls = getMasteryClass(row.best)
 
   return (
