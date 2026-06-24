@@ -1,6 +1,9 @@
 import { useEffect, useState, useCallback } from 'react'
 import { supabase } from '../supabase'
 import TimelineShell, { sortByDate, pickRandom } from './TimelineShell'
+import { useTimelineAttempt } from '../hooks/useTimelineAttempt'
+import { useMastery, MasteryBadge } from '../hooks/useMastery'
+import { useAuth } from '../context/AuthContext'
 
 const PRIORITY_RANK = { core: 0, useful: 1, stretch: 2 }
 
@@ -25,19 +28,24 @@ function dedupeGlossaryRows(rows) {
 /**
  * TimelineTabContent
  *
- * Owns mode + session state so the mode bar renders at the very top,
- * above the master/custom timeline selector.
- *
- * Props: chunkIds, unitIds, moduleIds — same as FlashcardTabContent
+ * Props:
+ *   chunkIds, unitIds, moduleIds  — scope for timeline lookups
+ *   parentType                    — 'chunk' | 'unit' | 'module' (for master timeline attempt recording)
+ *   parentId                      — uuid of the primary parent (for master timeline attempt recording)
  */
-export default function TimelineTabContent({ chunkIds = [], unitIds = [], moduleIds = [] }) {
+export default function TimelineTabContent({
+  chunkIds = [], unitIds = [], moduleIds = [],
+  parentType, parentId,
+}) {
+  const { user } = useAuth()
+  const { saveAttempt } = useTimelineAttempt()
+
   const [masterEvents, setMasterEvents]       = useState([])
   const [customTimelines, setCustomTimelines] = useState([])
   const [selectedTimeline, setSelectedTimeline] = useState('master')
   const [loading, setLoading]                 = useState(true)
   const [masterHidden, setMasterHidden]         = useState(false)
 
-  // Mode and session state — owned here so mode bar is always at top
   const [mode, setMode]       = useState('view')
   const [session, setSession] = useState(null)
 
@@ -51,7 +59,6 @@ export default function TimelineTabContent({ chunkIds = [], unitIds = [], module
     setMasterHidden(false)
 
     async function load() {
-      // Master timeline — dated glossary terms, filter-up, include sort_order
       const [{ data: chunkCG }, { data: unitCG }, { data: moduleCG }] = await Promise.all([
         chunkIds.length > 0
           ? supabase.from('chunk_glossary')
@@ -74,7 +81,6 @@ export default function TimelineTabContent({ chunkIds = [], unitIds = [], module
         ...(moduleCG ?? []), ...(unitCG ?? []), ...(chunkCG ?? []),
       ]))
 
-      // Custom timelines — filter-up from all three attachment tables
       const [{ data: ctChunk }, { data: ctUnit }, { data: ctModule }] = await Promise.all([
         chunkIds.length > 0   ? supabase.from('chunk_timelines').select('timeline_id').in('chunk_id', chunkIds)    : { data: [] },
         unitIds.length > 0    ? supabase.from('unit_timelines').select('timeline_id').in('unit_id', unitIds)       : { data: [] },
@@ -98,8 +104,6 @@ export default function TimelineTabContent({ chunkIds = [], unitIds = [], module
         setCustomTimelines([])
       }
 
-      // Check if master timeline is hidden at the current level.
-      // Only check the primary level (module > unit > chunk).
       const hmQuery = moduleIds.length > 0
         ? supabase.from('hidden_master_timelines').select('id').eq('level','module').in('parent_id', moduleIds)
         : unitIds.length > 0
@@ -116,6 +120,16 @@ export default function TimelineTabContent({ chunkIds = [], unitIds = [], module
     load()
   }, [key])
 
+  // ── Mastery lookup ─────────────────────────────────────────
+  const customTimelineIds = customTimelines.map(t => t.id)
+  const masterKey = parentType && parentId ? `${parentType}:${parentId}` : null
+
+  const { timelineBest } = useMastery({
+    timelineIds:         user && customTimelineIds.length > 0 ? customTimelineIds : [],
+    masterTimelineKeys:  user && masterKey ? [masterKey] : [],
+  })
+
+  // ── Mode & session ─────────────────────────────────────────
   function changeMode(newMode) {
     setMode(newMode)
     setSession(null)
@@ -130,9 +144,34 @@ export default function TimelineTabContent({ chunkIds = [], unitIds = [], module
     setSession(null)
   }, [])
 
+  // Called by TimelineShell when a test finishes
+  const handleTestComplete = useCallback(async (score, total, testMode) => {
+    if (!user) return
+    const activeId = selectedTimeline
+
+    if (activeId === 'master' && masterKey) {
+      await saveAttempt({
+        timelineId:  null,
+        parentType,
+        parentId,
+        mode: testMode,
+        score,
+        total,
+      })
+    } else {
+      await saveAttempt({
+        timelineId: activeId,
+        parentType: null,
+        parentId:   null,
+        mode: testMode,
+        score,
+        total,
+      })
+    }
+  }, [user, selectedTimeline, parentType, parentId, masterKey, saveAttempt])
+
   if (loading) return <div className="loading-pulse" style={{ padding: '24px 0' }}>Loading timeline…</div>
 
-  // Only include master if it has events and is not hidden by teacher
   const allTimelines = [
     ...(masterEvents.length > 0 && !masterHidden ? [{ id: 'master', title: 'Master Timeline', events: masterEvents }] : []),
     ...customTimelines,
@@ -147,28 +186,37 @@ export default function TimelineTabContent({ chunkIds = [], unitIds = [], module
     )
   }
 
-  // Ensure selected timeline is valid
   const activeId = allTimelines.find(t => t.id === selectedTimeline) ? selectedTimeline : allTimelines[0].id
   const activeTimeline = allTimelines.find(t => t.id === activeId)
+
+  // Mastery for the currently active timeline
+  const activeMasteryKey = activeId === 'master' ? masterKey : activeId
+  const activeMastery = activeMasteryKey ? timelineBest?.[activeMasteryKey] : null
 
   return (
     <div className="tl-tab-content">
 
-      {/* Mode selector — always at the very top */}
+      {/* Mode selector */}
       <div className="tl-mode-bar">
         <button className={`tl-mode-btn ${mode === 'view'       ? 'tl-mode-active' : ''}`} onClick={() => changeMode('view')}>
           📅 Timeline
         </button>
         <button className={`tl-mode-btn ${mode === 'date-test'  ? 'tl-mode-active' : ''}`} onClick={() => changeMode('date-test')}>
           🎯 Date Test
+          {user && activeMastery?.['date-test'] != null && (
+            <MasteryBadge percent={activeMastery['date-test']} label={`Best: ${activeMastery['date-test']}%`} />
+          )}
         </button>
         <button className={`tl-mode-btn ${mode === 'match-test' ? 'tl-mode-active' : ''}`} onClick={() => changeMode('match-test')}>
           🔗 Match Test
+          {user && activeMastery?.['match-test'] != null && (
+            <MasteryBadge percent={activeMastery['match-test']} label={`Best: ${activeMastery['match-test']}%`} />
+          )}
         </button>
         <span className="tl-event-count">{activeTimeline?.events.length ?? 0} events</span>
       </div>
 
-      {/* Timeline selector — only shown if multiple timelines exist */}
+      {/* Timeline selector */}
       {allTimelines.length > 1 && (
         <div className="tl-selector">
           {allTimelines.map(tl => (
@@ -190,6 +238,7 @@ export default function TimelineTabContent({ chunkIds = [], unitIds = [], module
         session={session}
         onStartSession={handleStartSession}
         onResetSession={handleResetSession}
+        onTestComplete={handleTestComplete}
       />
     </div>
   )

@@ -11,6 +11,7 @@ import './sources.css'
 import './video.css'
 import './resources.css'
 import App from './App.jsx'
+import './auth-mastery.css'
 
 const basename = import.meta.env.PROD ? '/Study-Portal' : '/'
 

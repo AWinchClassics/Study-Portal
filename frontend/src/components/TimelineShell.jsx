@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 
 // ── Helpers ──────────────────────────────────────────────────────
 
@@ -93,9 +93,10 @@ export function SessionPicker({ total, onStart }) {
 }
 
 // ── Date Test ────────────────────────────────────────────────────
-export function DateTest({ events, allEvents, onRetry }) {
+export function DateTest({ events, allEvents, onRetry, onTestComplete }) {
   const [index, setIndex]   = useState(0)
-  const [score, setScore]   = useState(0)
+  const scoreRef            = useRef(0)   // track score in a ref to avoid stale closures
+  const [scoreDisplay, setScoreDisplay] = useState(0)
   const [chosen, setChosen] = useState(null)
   const [finished, setFinished] = useState(false)
 
@@ -115,20 +116,28 @@ export function DateTest({ events, allEvents, onRetry }) {
     if (chosen !== null) return
     const correct = date === current.date
     setChosen(date)
-    if (correct) setScore(s => s + 1)
+    if (correct) {
+      scoreRef.current += 1
+      setScoreDisplay(scoreRef.current)
+    }
     setTimeout(() => {
-      if (index < events.length - 1) { setIndex(i => i + 1); setChosen(null) }
-      else setFinished(true)
+      if (index < events.length - 1) {
+        setIndex(i => i + 1)
+        setChosen(null)
+      } else {
+        setFinished(true)
+        onTestComplete?.(scoreRef.current, events.length, 'date-test')
+      }
     }, 900)
   }
 
   if (finished) {
-    const pct = Math.round((score / events.length) * 100)
+    const pct = Math.round((scoreRef.current / events.length) * 100)
     const grade = pct >= 80 ? 'high' : pct >= 50 ? 'mid' : 'low'
     return (
       <div className="tl-result">
         <div className={`tl-result-score tl-score-${grade}`}>
-          <span className="tl-score-num">{score}<span className="tl-score-denom">/{events.length}</span></span>
+          <span className="tl-score-num">{scoreRef.current}<span className="tl-score-denom">/{events.length}</span></span>
           <span className="tl-score-pct">{pct}%</span>
         </div>
         <button className="tl-btn tl-btn-primary" onClick={onRetry}>Try again</button>
@@ -142,7 +151,7 @@ export function DateTest({ events, allEvents, onRetry }) {
     <div className="tl-date-test">
       <div className="tl-test-progress">
         <span>{index + 1} / {events.length}</span>
-        <span className="tl-test-score">Score: {score}</span>
+        <span className="tl-test-score">Score: {scoreDisplay}</span>
       </div>
       <div className="tl-progress-bar">
         <div className="tl-progress-fill" style={{ width: `${(index / events.length) * 100}%` }} />
@@ -167,7 +176,7 @@ export function DateTest({ events, allEvents, onRetry }) {
 // ── Match Test ───────────────────────────────────────────────────
 // Dates column: sorted chronologically, unique dates, showing count for duplicates.
 // Multiple events can share the same date — all are included and can be matched.
-export function MatchTest({ events, onRetry }) {
+export function MatchTest({ events, onRetry, onTestComplete }) {
   // Events shown shuffled in the left column
   const [shuffledEvents] = useState(() => shuffleArray(events))
 
@@ -196,7 +205,10 @@ export function MatchTest({ events, onRetry }) {
       setMatched(newMatched)
       setSelectedEventId(null)
       setFlash(null)
-      if (newMatched.size === events.length) setFinished(true)
+      if (newMatched.size === events.length) {
+        setFinished(true)
+        onTestComplete?.(events.length, events.length, 'match-test')
+      }
     } else {
       setFlash({ eventId: ev.id, date })
       setTimeout(() => { setFlash(null); setSelectedEventId(null) }, 700)
@@ -298,7 +310,7 @@ export function MatchTest({ events, onRetry }) {
  *   onStartSession  — (size) => void
  *   onResetSession  — () => void
  */
-export default function TimelineShell({ events = [], mode, session, onStartSession, onResetSession }) {
+export default function TimelineShell({ events = [], mode, session, onStartSession, onResetSession, onTestComplete }) {
   if (events.length === 0) {
     return (
       <div className="tl-empty">
@@ -320,6 +332,7 @@ export default function TimelineShell({ events = [], mode, session, onStartSessi
         events={session}
         allEvents={events}
         onRetry={onResetSession}
+        onTestComplete={onTestComplete}
       />
     )
   }
@@ -330,6 +343,7 @@ export default function TimelineShell({ events = [], mode, session, onStartSessi
         key={session.map(e => e.id).join('-')}
         events={session}
         onRetry={onResetSession}
+        onTestComplete={onTestComplete}
       />
     )
   }

@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
-import { TeacherAuthProvider } from './context/TeacherAuthContext'
+import { AuthProvider } from './context/AuthContext'
 import Sidebar from './components/Sidebar'
 import TeacherRoute from './components/teacher/TeacherRoute'
 import CoursesPage         from './pages/CoursesPage'
@@ -55,7 +55,7 @@ function TeacherSection() {
 
 function App() {
   return (
-    <TeacherAuthProvider>
+    <AuthProvider>
       <Routes>
         <Route path="/"                  element={<StudentLayout><CoursesPage /></StudentLayout>} />
         <Route path="/modules/:courseId" element={<StudentLayout><ModulePage /></StudentLayout>} />
@@ -70,7 +70,7 @@ function App() {
         <Route path="/sources"           element={<StudentLayout><SourcesPage /></StudentLayout>} />
         <Route path="/teacher/*"         element={<TeacherSection />} />
       </Routes>
-    </TeacherAuthProvider>
+    </AuthProvider>
   )
 }
 export default App
