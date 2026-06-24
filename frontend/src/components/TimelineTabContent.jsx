@@ -128,7 +128,6 @@ export default function TimelineTabContent({
     timelineIds:         user && customTimelineIds.length > 0 ? customTimelineIds : [],
     masterTimelineKeys:  user && masterKey ? [masterKey] : [],
   })
-  console.log('TLC timelineBest:', JSON.stringify(timelineBest), 'masterKey:', masterKey, 'activeId will be:', selectedTimeline)
 
   // ── Mode & session ─────────────────────────────────────────
   function changeMode(newMode) {
@@ -192,9 +191,24 @@ export default function TimelineTabContent({
     setSession(pickRandom(sortByDate(events), size))
   }
 
-  // Mastery for the currently active timeline
-  const activeMasteryKey = activeId === 'master' ? masterKey : activeId
-  const activeMastery = activeMasteryKey ? timelineBest?.[activeMasteryKey] : null
+  // Mastery: merge master timeline mastery + active custom timeline mastery
+  // This handles the case where attempts were saved on the master timeline
+  // but the user is now viewing a custom timeline (or vice versa)
+  const masterMastery   = masterKey ? timelineBest?.[masterKey] : null
+  const customMastery   = activeId !== 'master' ? timelineBest?.[activeId] : null
+  const activeMastery   = {
+    'date-test':  Math.max(
+      masterMastery?.['date-test']  ?? -1,
+      customMastery?.['date-test']  ?? -1,
+    ),
+    'match-test': Math.max(
+      masterMastery?.['match-test'] ?? -1,
+      customMastery?.['match-test'] ?? -1,
+    ),
+  }
+  // Convert -1 back to null (means no attempts)
+  if (activeMastery['date-test']  < 0) activeMastery['date-test']  = null
+  if (activeMastery['match-test'] < 0) activeMastery['match-test'] = null
 
   return (
     <div className="tl-tab-content">
