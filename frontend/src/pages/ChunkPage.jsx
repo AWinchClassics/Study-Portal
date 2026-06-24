@@ -243,7 +243,7 @@ function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest, onMas
 
           {/* Timelines tab */}
           {chunkTab === 'timelines' && (
-            <TimelineTabContent chunkIds={[chunk.id]} parentType="chunk" parentId={chunk.id} onMasteryRefresh={onMasteryRefresh} />
+            <TimelineTabContent chunkIds={[chunk.id]} parentType="chunk" parentId={chunk.id} allParents={[{ type: 'chunk', id: chunk.id }]} onMasteryRefresh={onMasteryRefresh} />
           )}
 
           {/* Sources tab */}
@@ -443,6 +443,10 @@ export default function ChunkPage() {
           unitIds={[unitId]}
           parentType="unit"
           parentId={unitId}
+          allParents={[
+            ...chunks.map(c => ({ type: 'chunk', id: c.id })),
+            { type: 'unit', id: unitId },
+          ]}
         />
       )}
 

@@ -264,6 +264,13 @@ export default function UnitPage() {
               chunkIds={moduleChunkIds ?? []}
               unitIds={units.map(u => u.id)}
               moduleIds={module ? [module.id] : []}
+              parentType="module"
+              parentId={module?.id}
+              allParents={[
+                ...(moduleChunkIds ?? []).map(id => ({ type: 'chunk', id })),
+                ...units.map(u => ({ type: 'unit', id: u.id })),
+                ...(module ? [{ type: 'module', id: module.id }] : []),
+              ]}
             />
       )}
 
