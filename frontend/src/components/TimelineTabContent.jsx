@@ -201,6 +201,7 @@ export default function TimelineTabContent({
 
   // Mastery: merge attempts from ALL scope keys + active custom timeline
   // Attempts may have been saved at chunk, unit, or module level — show the best across all
+  console.log('TLC allMasterKeys:', allMasterKeys.length, 'timelineBest keys:', Object.keys(timelineBest ?? {}), 'activeId:', activeId)
   const allScopeMastery = allMasterKeys.reduce((acc, key) => {
     const modes = timelineBest?.[key]
     if (!modes) return acc
