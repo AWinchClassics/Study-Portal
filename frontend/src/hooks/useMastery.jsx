@@ -83,6 +83,9 @@ export function useMastery({ resourceIds = [], timelineIds = [], masterTimelineK
           .from('timeline_attempts')
           .select('timeline_id, parent_type, parent_id, mode, percent')
           .eq('user_id', user.id)
+		  
+		console.log('timeline_attempts fetched:', data)  // ADD THIS
+		console.log('masterTimelineKeys:', masterTimelineKeys)  // ADD THIS
 
         const best = {}
 
