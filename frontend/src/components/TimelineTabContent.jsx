@@ -124,9 +124,17 @@ export default function TimelineTabContent({
   const customTimelineIds = customTimelines.map(t => t.id)
   const masterKey = parentType && parentId ? `${parentType}:${parentId}` : null
 
+  // Include ALL scope keys so we find attempts saved at any level
+  // (e.g. chunk-level attempts still show when viewing at unit/module level)
+  const allMasterKeys = user ? [
+    ...chunkIds.map(id => `chunk:${id}`),
+    ...unitIds.map(id => `unit:${id}`),
+    ...moduleIds.map(id => `module:${id}`),
+  ] : []
+
   const { timelineBest } = useMastery({
-    timelineIds:         user && customTimelineIds.length > 0 ? customTimelineIds : [],
-    masterTimelineKeys:  user && masterKey ? [masterKey] : [],
+    timelineIds:        user && customTimelineIds.length > 0 ? customTimelineIds : [],
+    masterTimelineKeys: allMasterKeys,
   })
 
   // ── Mode & session ─────────────────────────────────────────
@@ -191,22 +199,21 @@ export default function TimelineTabContent({
     setSession(pickRandom(sortByDate(events), size))
   }
 
-  // Mastery: merge master timeline mastery + active custom timeline mastery
-  // This handles the case where attempts were saved on the master timeline
-  // but the user is now viewing a custom timeline (or vice versa)
-  const masterMastery   = masterKey ? timelineBest?.[masterKey] : null
-  const customMastery   = activeId !== 'master' ? timelineBest?.[activeId] : null
-  const activeMastery   = {
-    'date-test':  Math.max(
-      masterMastery?.['date-test']  ?? -1,
-      customMastery?.['date-test']  ?? -1,
-    ),
-    'match-test': Math.max(
-      masterMastery?.['match-test'] ?? -1,
-      customMastery?.['match-test'] ?? -1,
-    ),
+  // Mastery: merge attempts from ALL scope keys + active custom timeline
+  // Attempts may have been saved at chunk, unit, or module level — show the best across all
+  const allScopeMastery = allMasterKeys.reduce((acc, key) => {
+    const modes = timelineBest?.[key]
+    if (!modes) return acc
+    if (modes['date-test']  != null && (acc['date-test']  == null || modes['date-test']  > acc['date-test']))  acc['date-test']  = modes['date-test']
+    if (modes['match-test'] != null && (acc['match-test'] == null || modes['match-test'] > acc['match-test'])) acc['match-test'] = modes['match-test']
+    return acc
+  }, { 'date-test': null, 'match-test': null })
+
+  const customMastery = activeId !== 'master' ? timelineBest?.[activeId] : null
+  const activeMastery = {
+    'date-test':  Math.max(allScopeMastery['date-test'] ?? -1, customMastery?.['date-test'] ?? -1),
+    'match-test': Math.max(allScopeMastery['match-test'] ?? -1, customMastery?.['match-test'] ?? -1),
   }
-  // Convert -1 back to null (means no attempts)
   if (activeMastery['date-test']  < 0) activeMastery['date-test']  = null
   if (activeMastery['match-test'] < 0) activeMastery['match-test'] = null
 
