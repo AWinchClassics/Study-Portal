@@ -34,7 +34,7 @@
 .pd-stat-label { font-size: 12px; color: var(--text); font-weight: 500; }
 .pd-stat-sub   { font-size: 11px; color: var(--text); margin-top: 2px; }
 
-/* ── Tab content area ── */
+/* ── Tab content ── */
 
 .pd-tab-content { padding-top: 4px; }
 
@@ -56,7 +56,6 @@
   align-items: flex-end;
   gap: 20px;
   height: 110px;
-  padding-bottom: 0;
 }
 
 .pd-dist-band {
@@ -175,13 +174,11 @@
   border-radius: 999px;
 }
 
-/* mastery colour classes reuse the existing .mastery-high/mid/low from auth-mastery.css */
-
 .pd-module-rows { border-top: 1px solid var(--border); }
 
-/* ── Quiz row ── */
+/* ── Generic item row (shared by quiz and timeline rows) ── */
 
-.pd-quiz-row {
+.pd-item-row {
   width: 100%;
   display: flex;
   align-items: center;
@@ -194,10 +191,10 @@
   text-align: left;
   transition: background 0.1s;
 }
-.pd-quiz-row:last-child { border-bottom: none; }
-.pd-quiz-row:hover { background: var(--bg-subtle); }
+.pd-item-row:last-child { border-bottom: none; }
+.pd-item-row:hover { background: var(--bg-subtle); }
 
-.pd-quiz-row-info {
+.pd-item-row-info {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -205,7 +202,7 @@
   min-width: 0;
 }
 
-.pd-quiz-row-title {
+.pd-item-row-title {
   font-size: 13px;
   font-weight: 500;
   color: var(--text-h);
@@ -214,23 +211,26 @@
   text-overflow: ellipsis;
 }
 
-.pd-quiz-row-chunk {
+.pd-item-row-sub {
   font-size: 11px;
   color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.pd-quiz-row-meta {
+.pd-item-row-meta {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 2px;
   flex-shrink: 0;
+  font-size: 11px;
+  color: var(--text);
 }
 
-.pd-quiz-row-attempts { font-size: 11px; color: var(--text); }
-.pd-quiz-row-date     { font-size: 11px; color: var(--text); }
-
-.pd-quiz-row-score {
+/* Quiz score badge (right-aligned number) */
+.pd-item-row-score {
   font-size: 14px;
   font-weight: 700;
   min-width: 44px;
@@ -238,104 +238,37 @@
   flex-shrink: 0;
 }
 
-/* ── Progress bar (used in timeline rows) ── */
+/* ── Timeline mode pills ── */
 
-.pd-bar-wrap {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+/* Timeline rows need a bit more right-side space for two pills */
+.pd-item-row-timeline { align-items: center; }
 
-.pd-bar-track {
-  width: 80px;
-  height: 6px;
-  background: var(--border);
-  border-radius: 999px;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-
-.pd-bar-fill {
-  height: 100%;
-  border-radius: 999px;
-  transition: width 0.3s ease;
-}
-
-.pd-bar-high { background: #16a34a; }
-.pd-bar-mid  { background: #d97706; }
-.pd-bar-low  { background: #dc2626; }
-
-@media (prefers-color-scheme: dark) {
-  .pd-bar-high { background: #4ade80; }
-  .pd-bar-mid  { background: #fbbf24; }
-  .pd-bar-low  { background: #f87171; }
-}
-
-.pd-bar-label {
-  font-size: 13px;
-  font-weight: 600;
-  min-width: 36px;
-}
-
-.pd-no-data { font-size: 13px; color: var(--text); }
-
-/* ── Timeline list ── */
-
-.pd-timeline-list { display: flex; flex-direction: column; gap: 0; }
-
-.pd-timeline-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 14px 0;
-  border-bottom: 1px solid var(--border);
-}
-.pd-timeline-row:last-child { border-bottom: none; }
-
-.pd-timeline-row-info {
+.pd-tl-mode-scores {
   display: flex;
   flex-direction: column;
-  gap: 3px;
-  flex: 1;
-  min-width: 0;
+  gap: 4px;
+  flex-shrink: 0;
+  align-items: flex-end;
 }
 
-.pd-timeline-row-title {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text-h);
-}
-
-.pd-timeline-row-attempts {
+.pd-tl-mode-pill {
   font-size: 12px;
-  color: var(--text);
-}
-
-.pd-timeline-row-scores {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  flex-shrink: 0;
-}
-
-.pd-timeline-mode {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.pd-timeline-mode-label {
-  font-size: 11px;
   font-weight: 600;
-  color: var(--text);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  min-width: 36px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+  /* colour provided by .mastery-high/mid/low from auth-mastery.css */
+}
+
+/* Ensure mastery colour classes apply inside pills */
+.pd-tl-mode-pill.mastery-high,
+.pd-tl-mode-pill.mastery-mid,
+.pd-tl-mode-pill.mastery-low {
+  border: 1px solid currentColor;
 }
 
 @media (max-width: 600px) {
-  .pd-timeline-row { flex-direction: column; align-items: flex-start; }
-  .pd-timeline-row-scores { width: 100%; }
-  .pd-bar-track { width: 120px; }
+  .pd-item-row { flex-wrap: wrap; }
+  .pd-item-row-meta { flex-direction: row; gap: 8px; align-items: center; }
+  .pd-tl-mode-scores { flex-direction: row; }
 }
