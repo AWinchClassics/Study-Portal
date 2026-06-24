@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { supabase } from '../supabase'
 import Breadcrumb from '../components/Breadcrumb'
+import { useMastery, MasteryPipRow } from '../hooks/useMastery'
+import { useAuth } from '../context/AuthContext'
 
 export default function ModulePage() {
   const { courseId } = useParams()
@@ -11,6 +13,13 @@ export default function ModulePage() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const navigate = useNavigate()
+  const { user } = useAuth()
+
+  // Module-level mastery keys
+  const moduleMasterKeys = modules.map(m => `module:${m.id}`)
+  const { timelineBest: moduleTimelineBest } = useMastery({
+    masterTimelineKeys: user && moduleMasterKeys.length > 0 ? moduleMasterKeys : [],
+  })
 
   useEffect(() => {
     async function fetchData() {
@@ -87,7 +96,9 @@ export default function ModulePage() {
           )}
         </div>
         <div className="page-header-meta">
-          <span className="meta-badge">{modules.length} {modules.length === 1 ? 'module' : 'modules'}</span>
+          <div className="page-header-meta-badges">
+            <span className="meta-badge">{modules.length} {modules.length === 1 ? 'module' : 'modules'}</span>
+          </div>
         </div>
       </div>
 
@@ -109,6 +120,16 @@ export default function ModulePage() {
                 >
                   <div className="card-level-tag">Module</div>
                   <h2 className="card-title">{mod.title}</h2>
+                  {user && (() => {
+                    const modKey = `module:${mod.id}`
+                    const tlModes = moduleTimelineBest?.[modKey]
+                    const tlPct = tlModes ? Math.max(...Object.values(tlModes).filter(v => v != null)) : null
+                    return tlPct != null ? (
+                      <div className="card-mastery">
+                        <MasteryPipRow label="Timelines" items={[{ id: modKey, label: 'Timeline', percent: tlPct }]} />
+                      </div>
+                    ) : null
+                  })()}
                   <div className="card-footer">
                     <span className="card-count">
                       {unitCount} {unitCount === 1 ? 'unit' : 'units'}

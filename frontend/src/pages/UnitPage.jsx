@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { supabase } from '../supabase'
 import Breadcrumb from '../components/Breadcrumb'
+import { useMastery, MasteryPipRow } from '../hooks/useMastery'
+import { useAuth } from '../context/AuthContext'
 import FlashcardTabContent from '../components/FlashcardTabContent'
 import TimelineTabContent from '../components/TimelineTabContent'
 import SourceTabContent from '../components/SourceTabContent'
@@ -19,6 +21,15 @@ export default function UnitPage() {
   // Lazy-loaded chunk IDs for the flashcards tab
   const [moduleChunkIds, setModuleChunkIds] = useState(null)
   const [loadingChunkIds, setLoadingChunkIds] = useState(false)
+
+  const { user } = useAuth()
+
+  // Per-unit mastery: fetch quiz and timeline attempts for all units
+  // We use unit-level master timeline keys (unit:uuid)
+  const unitMasterKeys = units.map(u => `unit:${u.id}`)
+  const { quizBest: unitQuizBest, timelineBest: unitTimelineBest } = useMastery({
+    masterTimelineKeys: user && unitMasterKeys.length > 0 ? unitMasterKeys : [],
+  })
 
   const navigate = useNavigate()
 
@@ -81,7 +92,9 @@ export default function UnitPage() {
           <p className="page-subtitle">Part of <strong>{course?.title}</strong></p>
         </div>
         <div className="page-header-meta">
-          <span className="meta-badge">{units.length} {units.length === 1 ? 'unit' : 'units'}</span>
+          <div className="page-header-meta-badges">
+            <span className="meta-badge">{units.length} {units.length === 1 ? 'unit' : 'units'}</span>
+          </div>
         </div>
       </div>
 
@@ -121,6 +134,17 @@ export default function UnitPage() {
                     <div className="card-index-number">{String(index + 1).padStart(2, '0')}</div>
                     <div className="card-level-tag">Unit</div>
                     <h2 className="card-title">{unit.title}</h2>
+                    {user && (() => {
+                      const unitKey = `unit:${unit.id}`
+                      const tlModes = unitTimelineBest?.[unitKey]
+                      const tlPct = tlModes ? Math.max(...Object.values(tlModes).filter(v => v != null)) : null
+                      const hasPips = tlPct != null
+                      return hasPips ? (
+                        <div className="card-mastery">
+                          {tlPct != null && <MasteryPipRow label="Timelines" items={[{ id: unitKey, label: 'Timeline', percent: tlPct }]} />}
+                        </div>
+                      ) : null
+                    })()}
                     <div className="card-footer">
                       <span className="card-count">{chunkCount} {chunkCount === 1 ? 'chunk' : 'chunks'}</span>
                       <span className="card-arrow">→</span>

@@ -372,11 +372,15 @@ export default function ChunkPage() {
           <p className="page-subtitle">Part of <strong>{module?.title}</strong></p>
         </div>
         <div className="page-header-meta">
-          <span className="meta-badge">{chunks.length} {chunks.length === 1 ? 'chunk' : 'chunks'}</span>
-          {totalResources > 0 && <span className="meta-badge">{totalResources} {totalResources === 1 ? 'resource' : 'resources'}</span>}
-          {user && unitQuizPipItems.length > 0 && (
+          <div className="page-header-meta-badges">
+            <span className="meta-badge">{chunks.length} {chunks.length === 1 ? 'chunk' : 'chunks'}</span>
+            {totalResources > 0 && <span className="meta-badge">{totalResources} {totalResources === 1 ? 'resource' : 'resources'}</span>}
+          </div>
+          {user && (unitQuizPipItems.length > 0 || unitTimelinePipItems.length > 0) && (
             <div className="page-mastery-pips">
-              <MasteryPipRow label="Quiz mastery" items={unitQuizPipItems} />
+              {unitQuizPipItems.length > 0 && (
+                <MasteryPipRow label="Quiz mastery" items={unitQuizPipItems} />
+              )}
               {unitTimelinePipItems.length > 0 && (
                 <MasteryPipRow label="Timeline mastery" items={unitTimelinePipItems} />
               )}
