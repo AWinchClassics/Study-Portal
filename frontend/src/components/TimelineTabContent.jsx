@@ -128,6 +128,7 @@ export default function TimelineTabContent({
     timelineIds:         user && customTimelineIds.length > 0 ? customTimelineIds : [],
     masterTimelineKeys:  user && masterKey ? [masterKey] : [],
   })
+  console.log('TLC timelineBest:', JSON.stringify(timelineBest), 'masterKey:', masterKey, 'activeId will be:', selectedTimeline)
 
   // ── Mode & session ─────────────────────────────────────────
   function changeMode(newMode) {
