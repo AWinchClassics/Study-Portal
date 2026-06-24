@@ -131,21 +131,32 @@ export default function TimelineTabContent({
   const customTimelineIds = customTimelines.map(t => t.id)
   const masterKey = parentType && parentId ? `${parentType}:${parentId}` : null
 
-  // Build mastery lookup keys:
-  // - Primary masterKey (e.g. unit:uuid or chunk:uuid)
-  // - For each custom timeline, also include its originating chunk key as fallback
-  //   (handles cases where attempts were saved at chunk level before unit/module level saving)
+  // For each custom timeline, also look up its source chunk key so that
+  // existing chunk-level attempts appear when the custom timeline is selected.
+  // We map: customTimeline uuid -> chunk:uuid (only for timelines attached via chunk_timelines)
   const customTimelineChunkKeys = user
-    ? [...new Set(customTimelineIds.map(id => timelineChunkMap[id]).filter(Boolean).map(id => `chunk:${id}`))]
-    : []
-  const allLookupKeys = user
-    ? [...new Set([...(masterKey ? [masterKey] : []), ...customTimelineChunkKeys])]
+    ? [...new Set(
+        customTimelineIds
+          .map(id => timelineChunkMap[id])
+          .filter(Boolean)
+          .map(id => `chunk:${id}`)
+      )]
     : []
 
-  const { timelineBest } = useMastery({
+  // masterTimelineKeys: only the primary masterKey (not all chunk keys — that bleeds scores)
+  // We include chunk fallback keys only in the lookup, not in masterTimelineKeys for display
+  const { timelineBest: timelineBestPrimary } = useMastery({
     timelineIds:        user && customTimelineIds.length > 0 ? customTimelineIds : [],
-    masterTimelineKeys: allLookupKeys,
+    masterTimelineKeys: user && masterKey ? [masterKey] : [],
   })
+
+  // Separate lookup just for chunk-level fallbacks (custom timelines with no direct attempts)
+  const { timelineBest: timelineBestChunks } = useMastery({
+    masterTimelineKeys: user && customTimelineChunkKeys.length > 0 ? customTimelineChunkKeys : [],
+  })
+
+  // Merge: primary takes precedence, chunk fallback used only when primary has no data
+  const timelineBest = { ...timelineBestChunks, ...timelineBestPrimary }
 
   // ── Mode & session ─────────────────────────────────────────
   function changeMode(newMode) {
@@ -198,25 +209,16 @@ export default function TimelineTabContent({
     setSession(pickRandom(sortByDate(events), size))
   }
 
-  // Mastery for the active timeline:
-  // - Master timeline: use primary masterKey
-  // - Custom timeline: use custom timeline's own attempts, falling back to its source chunk's attempts
-  const primaryMastery = masterKey ? timelineBest?.[masterKey] : null
-  const customMastery  = activeId !== 'master' ? timelineBest?.[activeId] : null
-  const chunkFallback  = activeId !== 'master' && timelineChunkMap[activeId]
-    ? timelineBest?.[`chunk:${timelineChunkMap[activeId]}`]
-    : null
+  // Mastery for the currently active timeline
+  const activeMasteryKey = activeId === 'master' ? masterKey : activeId
+  const activeMasteryModes = activeMasteryKey ? timelineBest?.[activeMasteryKey] : null
+  // For custom timelines with no direct attempts, fall back to chunk-level attempts
+  const chunkFallbackKey = activeId !== 'master' && timelineChunkMap[activeId]
+    ? `chunk:${timelineChunkMap[activeId]}` : null
+  const chunkFallbackModes = chunkFallbackKey ? timelineBestChunks?.[chunkFallbackKey] : null
   const activeMastery = {
-    'date-test':  Math.max(
-      primaryMastery?.['date-test']  ?? -1,
-      customMastery?.['date-test']   ?? -1,
-      chunkFallback?.['date-test']   ?? -1,
-    ),
-    'match-test': Math.max(
-      primaryMastery?.['match-test'] ?? -1,
-      customMastery?.['match-test']  ?? -1,
-      chunkFallback?.['match-test']  ?? -1,
-    ),
+    'date-test':  Math.max(activeMasteryModes?.['date-test']  ?? -1, chunkFallbackModes?.['date-test']  ?? -1),
+    'match-test': Math.max(activeMasteryModes?.['match-test'] ?? -1, chunkFallbackModes?.['match-test'] ?? -1),
   }
   if (activeMastery['date-test']  < 0) activeMastery['date-test']  = null
   if (activeMastery['match-test'] < 0) activeMastery['match-test'] = null
