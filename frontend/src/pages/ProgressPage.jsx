@@ -415,7 +415,7 @@ export default function ProgressPage() {
         key = `master:${a.parent_id}`
         if (a.parent_type === 'chunk') {
           const c = chunkToModule[a.parent_id]
-          title   = 'Master timeline'
+          title   = c?.chunkTitle ?? 'Master timeline'
           sub     = c?.chunkTitle ?? null
           modId   = c?.moduleId   ?? null
           modTitle= c?.moduleTitle ?? 'Unassigned'
