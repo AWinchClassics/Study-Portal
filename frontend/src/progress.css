@@ -272,3 +272,52 @@
   .pd-item-row-meta { flex-direction: row; gap: 8px; align-items: center; }
   .pd-tl-mode-scores { flex-direction: row; }
 }
+
+/* ── Unit sub-sections (nested inside module) ── */
+
+.pd-unit-section {
+  border-top: 1px solid var(--border);
+}
+.pd-unit-section:first-child { border-top: none; }
+
+.pd-unit-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 16px 9px 32px;
+  background: var(--bg);
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.12s;
+}
+.pd-unit-header:hover { background: var(--bg-subtle); }
+
+.pd-unit-chevron {
+  font-size: 11px;
+  color: var(--text);
+  flex-shrink: 0;
+  width: 12px;
+}
+
+.pd-unit-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-h);
+  flex: 1;
+  text-align: left;
+}
+
+.pd-unit-counts {
+  font-size: 11px;
+}
+
+.pd-unit-rows {
+  /* rows indent to align under unit title */
+}
+
+/* Item rows inside a unit are indented */
+.pd-unit-rows .pd-item-row {
+  padding-left: 44px;
+}
