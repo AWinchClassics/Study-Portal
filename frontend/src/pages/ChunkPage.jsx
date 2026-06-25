@@ -9,7 +9,6 @@ import PdfViewer from '../components/PdfViewer'
 import FlashcardTabContent from '../components/FlashcardTabContent'
 import TimelineTabContent from '../components/TimelineTabContent'
 import { useMastery, MasteryBadge, MasteryPipRow } from '../hooks/useMastery'
-import { useResourceProgress } from '../hooks/useResourceProgress'
 import { useAuth } from '../context/AuthContext'
 
 const SECTIONS = [
@@ -24,7 +23,7 @@ const TYPE_ICONS = {
   audio: '🎧', worksheet: '📋', task: '✅', flashcards: '🃏', source: '📜',
 }
 
-function ResourceItem({ resource, navContext, quizBest, onMasteryRefresh, isCompleted, onToggleComplete }) {
+function ResourceItem({ resource, navContext, quizBest, onMasteryRefresh }) {
   const navigate = useNavigate()
   const [videoOpen, setVideoOpen] = useState(false)
   const [pdfOpen,   setPdfOpen]   = useState(false)
@@ -47,24 +46,12 @@ function ResourceItem({ resource, navContext, quizBest, onMasteryRefresh, isComp
             <span className="resource-title">{resource.title}</span>
             {resource.description && <span className="resource-desc">{resource.description}</span>}
           </div>
-          {isCompleted && <span className="resource-completed-badge" title="Watched">✓</span>}
           <span className="resource-type-pill">video</span>
-          <button
-            className={`resource-tick ${isCompleted ? 'resource-tick-done' : ''}`}
-            title={isCompleted ? 'Mark as unwatched' : 'Mark as watched'}
-            onClick={e => { e.stopPropagation(); onToggleComplete(resource.id) }}
-          >{isCompleted ? '✓' : '○'}</button>
           <span className="resource-open-arrow">{videoOpen ? '▾' : '▸'}</span>
         </button>
         {videoOpen && (
           <div className="resource-video-player">
-            <VideoPlayer
-              url={resource.url}
-              title={resource.title}
-              resourceId={resource.id}
-              isCompleted={isCompleted}
-              onComplete={() => onToggleComplete(resource.id, true)}
-            />
+            <VideoPlayer url={resource.url} title={resource.title} />
           </div>
         )}
       </div>
@@ -92,11 +79,6 @@ function ResourceItem({ resource, navContext, quizBest, onMasteryRefresh, isComp
             ↗
           </a>
           <span className="resource-type-pill">pdf</span>
-          <button
-            className={`resource-tick ${isCompleted ? 'resource-tick-done' : ''}`}
-            title={isCompleted ? 'Mark as unread' : 'Mark as read'}
-            onClick={e => { e.stopPropagation(); onToggleComplete(resource.id) }}
-          >{isCompleted ? '✓' : '○'}</button>
           <span className="resource-open-arrow">{pdfOpen ? '▾' : '▸'}</span>
         </button>
         {pdfOpen && (
@@ -116,13 +98,6 @@ function ResourceItem({ resource, navContext, quizBest, onMasteryRefresh, isComp
         {resource.description && <span className="resource-desc">{resource.description}</span>}
       </div>
       <span className="resource-type-pill">{resource.type}</span>
-      {!isQuiz && (
-        <button
-          className={`resource-tick ${isCompleted ? 'resource-tick-done' : ''}`}
-          title={isCompleted ? 'Mark as incomplete' : 'Mark as complete'}
-          onClick={() => onToggleComplete(resource.id)}
-        >{isCompleted ? '✓' : '○'}</button>
-      )}
       {isQuiz && (
         <>
           {masteryData != null && (
@@ -143,7 +118,7 @@ function ResourceItem({ resource, navContext, quizBest, onMasteryRefresh, isComp
   )
 }
 
-function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest, onMasteryRefresh, completedResources, onToggleComplete }) {
+function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest, onMasteryRefresh }) {
   const [collapsed, setCollapsed] = useState(true)
   const [chunkTab, setChunkTab]   = useState('resources')
 
@@ -155,7 +130,7 @@ function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest, onMas
   })
   const activeSections = SECTIONS.filter(s => byPurpose[s.key]?.length > 0)
 
-  // Build pip data for quiz resources in this chunk
+  // Quiz pip data
   const quizResources = resources.filter(r => r.type?.toLowerCase() === 'quiz')
   const quizPipItems  = quizResources.map(r => ({
     id: r.id,
@@ -163,17 +138,33 @@ function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest, onMas
     percent: quizBest?.[r.id]?.bestPercent ?? null,
   }))
 
-  // Timeline pip — one pip per chunk showing best across both test modes
-  // Always show a pip (grey if unattempted) so the row is visible
+  // Timeline pip — only show if this chunk actually has timeline content
   const chunkTimelineKey = `chunk:${chunk.id}`
   const timelineModes = timelineBest?.[chunkTimelineKey]
-  const timelinePipItems = [{
+  const timelinePipItems = chunkHasTimeline ? [{
     id: chunkTimelineKey,
     label: 'Timeline',
     percent: timelineModes
       ? Math.max(...Object.values(timelineModes).filter(v => v != null))
       : null,
-  }]
+  }] : []
+
+  // Content pip — trackable resources are videos and PDFs (quizzes tracked separately)
+  const trackableResources = resources.filter(r => {
+    const t = r.type?.toLowerCase()
+    return t === 'video' || t === 'pdf'
+  })
+  const completedCount = trackableResources.filter(r => completedResources?.[r.id]).length
+  const contentPercent = trackableResources.length > 0
+    ? Math.round((completedCount / trackableResources.length) * 100)
+    : null
+  const contentPipItems = trackableResources.length > 0 ? [{
+    id: `content:${chunk.id}`,
+    label: `${completedCount}/${trackableResources.length} resources completed`,
+    percent: contentPercent,
+  }] : []
+
+  const hasAnything = quizPipItems.length > 0 || timelinePipItems.length > 0 || contentPipItems.length > 0
 
   return (
     <div className={`chunk-card ${collapsed ? 'chunk-card-collapsed' : ''}`}>
@@ -182,12 +173,17 @@ function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest, onMas
         <h2 className="chunk-title">{chunk.title}</h2>
         <div className="chunk-header-right">
           {/* Mastery pip summary — visible even when collapsed */}
-          {(quizPipItems.length > 0 || timelinePipItems.length > 0) && (
+          {user && hasAnything && (
             <div className="chunk-mastery-pips" onClick={e => e.stopPropagation()}>
+              {contentPipItems.length > 0 && (
+                <MasteryPipRow label="Content" items={contentPipItems} />
+              )}
               {quizPipItems.length > 0 && (
                 <MasteryPipRow label="Quizzes" items={quizPipItems} />
               )}
-              <MasteryPipRow label="Timelines" items={timelinePipItems} />
+              {timelinePipItems.length > 0 && (
+                <MasteryPipRow label="Timelines" items={timelinePipItems} />
+              )}
             </div>
           )}
           {chunk.estimated_time && <span className="chunk-time">⏱ {chunk.estimated_time} min</span>}
@@ -243,7 +239,7 @@ function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest, onMas
                     <ul className="chunk-resource-list">
                       {byPurpose[section.key].map(r => (
                         <li key={r.id}>
-                          <ResourceItem resource={r} navContext={navContext} quizBest={quizBest} onMasteryRefresh={onMasteryRefresh} isCompleted={!!completedResources?.[r.id]} onToggleComplete={onToggleComplete} />
+                          <ResourceItem resource={r} navContext={navContext} quizBest={quizBest} onMasteryRefresh={onMasteryRefresh} />
                         </li>
                       ))}
                     </ul>
@@ -254,7 +250,7 @@ function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest, onMas
               <ul className="chunk-resource-list">
                 {resources.map(r => (
                   <li key={r.id}>
-                    <ResourceItem resource={r} navContext={navContext} quizBest={quizBest} onMasteryRefresh={onMasteryRefresh} isCompleted={!!completedResources?.[r.id]} onToggleComplete={onToggleComplete} />
+                    <ResourceItem resource={r} navContext={navContext} quizBest={quizBest} onMasteryRefresh={onMasteryRefresh} />
                   </li>
                 ))}
               </ul>
@@ -295,6 +291,7 @@ export default function ChunkPage() {
   const [course, setCourse]     = useState(null)
   const [chunks, setChunks]     = useState([])
   const [resourcesByChunk, setResourcesByChunk] = useState({})
+  const [chunkTimelineSet, setChunkTimelineSet] = useState(new Set())
   const [loading, setLoading]   = useState(true)
   const [error, setError]       = useState(null)
   const [activeTab, setActiveTab] = useState('content')
@@ -331,6 +328,21 @@ export default function ChunkPage() {
           })
           setResourcesByChunk(grouped)
         }
+
+        // Fetch which chunks have timeline content (glossary terms with dates OR chunk_timelines)
+        const { data: ctData } = await supabase
+          .from('chunk_timelines')
+          .select('chunk_id')
+          .in('chunk_id', chunksData.map(c => c.id))
+        const { data: cgData } = await supabase
+          .from('chunk_glossary')
+          .select('chunk_id, glossary_terms(date)')
+          .in('chunk_id', chunksData.map(c => c.id))
+        const chunksWithTimelines = new Set([
+          ...(ctData ?? []).map(r => r.chunk_id),
+          ...(cgData ?? []).filter(r => r.glossary_terms?.date).map(r => r.chunk_id),
+        ])
+        setChunkTimelineSet(chunksWithTimelines)
       }
       setLoading(false)
     }
@@ -353,12 +365,6 @@ export default function ChunkPage() {
   // Re-fetch mastery when returning to this page (e.g. after completing a quiz)
   useEffect(() => { if (user) refresh() }, [location.key])
 
-  // Resource completion tracking
-  const allResourceIds = allResources.map(r => r.id)
-  const { completed: completedResources, toggleComplete } = useResourceProgress(
-    user ? allResourceIds : []
-  )
-
   if (loading) return <div className="page"><div className="loading-pulse">Loading chunks…</div></div>
   if (error)   return <div className="page"><p className="page-error">Error: {error}</p></div>
 
@@ -380,12 +386,28 @@ export default function ChunkPage() {
         percent: quizBest?.[r.id]?.bestPercent ?? null,
       }))
   )
-  const unitTimelinePipItems = chunks.map(c => {
-    const key = `chunk:${c.id}`
-    const modes = timelineBest?.[key]
-    const pct = modes ? Math.max(...Object.values(modes).filter(v => v != null)) : null
-    return { id: key, label: c.title, percent: pct }
-  }).filter(item => item.percent != null || unitQuizPipItems.length > 0)
+  // Timeline pips — only for chunks that actually have timelines
+  const unitTimelinePipItems = chunks
+    .filter(c => chunkTimelineSet.has(c.id))
+    .map(c => {
+      const key = `chunk:${c.id}`
+      const modes = timelineBest?.[key]
+      const pct = modes ? Math.max(...Object.values(modes).filter(v => v != null)) : null
+      return { id: key, label: c.title, percent: pct }
+    })
+
+  // Content pips — one per chunk that has trackable resources (video/pdf)
+  const unitContentPipItems = chunks.map(c => {
+    const chunkResources = resourcesByChunk[c.id] ?? []
+    const trackable = chunkResources.filter(r => {
+      const t = r.type?.toLowerCase()
+      return t === 'video' || t === 'pdf'
+    })
+    if (trackable.length === 0) return null
+    const done = trackable.filter(r => completedResources?.[r.id]).length
+    const pct  = Math.round((done / trackable.length) * 100)
+    return { id: `content:${c.id}`, label: `${c.title}: ${done}/${trackable.length}`, percent: pct }
+  }).filter(Boolean)
 
   return (
     <div className="page">
@@ -407,13 +429,16 @@ export default function ChunkPage() {
             <span className="meta-badge">{chunks.length} {chunks.length === 1 ? 'chunk' : 'chunks'}</span>
             {totalResources > 0 && <span className="meta-badge">{totalResources} {totalResources === 1 ? 'resource' : 'resources'}</span>}
           </div>
-          {user && (unitQuizPipItems.length > 0 || unitTimelinePipItems.length > 0) && (
+          {user && (unitContentPipItems.length > 0 || unitQuizPipItems.length > 0 || unitTimelinePipItems.length > 0) && (
             <div className="page-mastery-pips">
+              {unitContentPipItems.length > 0 && (
+                <MasteryPipRow label="Content" items={unitContentPipItems} />
+              )}
               {unitQuizPipItems.length > 0 && (
-                <MasteryPipRow label="Quiz mastery" items={unitQuizPipItems} />
+                <MasteryPipRow label="Quizzes" items={unitQuizPipItems} />
               )}
               {unitTimelinePipItems.length > 0 && (
-                <MasteryPipRow label="Timeline mastery" items={unitTimelinePipItems} />
+                <MasteryPipRow label="Timelines" items={unitTimelinePipItems} />
               )}
             </div>
           )}
@@ -452,8 +477,6 @@ export default function ChunkPage() {
                 navContext={navContext}
                 quizBest={quizBest}
                 onMasteryRefresh={refresh}
-                completedResources={completedResources}
-                onToggleComplete={toggleComplete}
                 timelineBest={
                   // Pass only the timeline mastery relevant to this chunk
                   Object.fromEntries(
