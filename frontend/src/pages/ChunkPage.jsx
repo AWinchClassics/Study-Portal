@@ -9,6 +9,7 @@ import PdfViewer from '../components/PdfViewer'
 import FlashcardTabContent from '../components/FlashcardTabContent'
 import TimelineTabContent from '../components/TimelineTabContent'
 import { useMastery, MasteryBadge, MasteryPipRow } from '../hooks/useMastery'
+import { useResourceProgress } from '../hooks/useResourceProgress'
 import { useAuth } from '../context/AuthContext'
 
 const SECTIONS = [
@@ -23,7 +24,7 @@ const TYPE_ICONS = {
   audio: '🎧', worksheet: '📋', task: '✅', flashcards: '🃏', source: '📜',
 }
 
-function ResourceItem({ resource, navContext, quizBest, onMasteryRefresh }) {
+function ResourceItem({ resource, navContext, quizBest, onMasteryRefresh, isCompleted, onToggleComplete }) {
   const navigate = useNavigate()
   const [videoOpen, setVideoOpen] = useState(false)
   const [pdfOpen,   setPdfOpen]   = useState(false)
@@ -46,12 +47,24 @@ function ResourceItem({ resource, navContext, quizBest, onMasteryRefresh }) {
             <span className="resource-title">{resource.title}</span>
             {resource.description && <span className="resource-desc">{resource.description}</span>}
           </div>
+          {isCompleted && <span className="resource-completed-badge" title="Watched">✓</span>}
           <span className="resource-type-pill">video</span>
+          <button
+            className={`resource-tick ${isCompleted ? 'resource-tick-done' : ''}`}
+            title={isCompleted ? 'Mark as unwatched' : 'Mark as watched'}
+            onClick={e => { e.stopPropagation(); onToggleComplete(resource.id) }}
+          >{isCompleted ? '✓' : '○'}</button>
           <span className="resource-open-arrow">{videoOpen ? '▾' : '▸'}</span>
         </button>
         {videoOpen && (
           <div className="resource-video-player">
-            <VideoPlayer url={resource.url} title={resource.title} />
+            <VideoPlayer
+              url={resource.url}
+              title={resource.title}
+              resourceId={resource.id}
+              isCompleted={isCompleted}
+              onComplete={() => onToggleComplete(resource.id, true)}
+            />
           </div>
         )}
       </div>
@@ -79,6 +92,11 @@ function ResourceItem({ resource, navContext, quizBest, onMasteryRefresh }) {
             ↗
           </a>
           <span className="resource-type-pill">pdf</span>
+          <button
+            className={`resource-tick ${isCompleted ? 'resource-tick-done' : ''}`}
+            title={isCompleted ? 'Mark as unread' : 'Mark as read'}
+            onClick={e => { e.stopPropagation(); onToggleComplete(resource.id) }}
+          >{isCompleted ? '✓' : '○'}</button>
           <span className="resource-open-arrow">{pdfOpen ? '▾' : '▸'}</span>
         </button>
         {pdfOpen && (
@@ -98,6 +116,13 @@ function ResourceItem({ resource, navContext, quizBest, onMasteryRefresh }) {
         {resource.description && <span className="resource-desc">{resource.description}</span>}
       </div>
       <span className="resource-type-pill">{resource.type}</span>
+      {!isQuiz && (
+        <button
+          className={`resource-tick ${isCompleted ? 'resource-tick-done' : ''}`}
+          title={isCompleted ? 'Mark as incomplete' : 'Mark as complete'}
+          onClick={() => onToggleComplete(resource.id)}
+        >{isCompleted ? '✓' : '○'}</button>
+      )}
       {isQuiz && (
         <>
           {masteryData != null && (
@@ -118,7 +143,7 @@ function ResourceItem({ resource, navContext, quizBest, onMasteryRefresh }) {
   )
 }
 
-function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest, onMasteryRefresh }) {
+function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest, onMasteryRefresh, completedResources, onToggleComplete }) {
   const [collapsed, setCollapsed] = useState(true)
   const [chunkTab, setChunkTab]   = useState('resources')
 
@@ -218,7 +243,7 @@ function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest, onMas
                     <ul className="chunk-resource-list">
                       {byPurpose[section.key].map(r => (
                         <li key={r.id}>
-                          <ResourceItem resource={r} navContext={navContext} quizBest={quizBest} onMasteryRefresh={onMasteryRefresh} />
+                          <ResourceItem resource={r} navContext={navContext} quizBest={quizBest} onMasteryRefresh={onMasteryRefresh} isCompleted={!!completedResources?.[r.id]} onToggleComplete={onToggleComplete} />
                         </li>
                       ))}
                     </ul>
@@ -229,7 +254,7 @@ function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest, onMas
               <ul className="chunk-resource-list">
                 {resources.map(r => (
                   <li key={r.id}>
-                    <ResourceItem resource={r} navContext={navContext} quizBest={quizBest} onMasteryRefresh={onMasteryRefresh} />
+                    <ResourceItem resource={r} navContext={navContext} quizBest={quizBest} onMasteryRefresh={onMasteryRefresh} isCompleted={!!completedResources?.[r.id]} onToggleComplete={onToggleComplete} />
                   </li>
                 ))}
               </ul>
@@ -328,6 +353,12 @@ export default function ChunkPage() {
   // Re-fetch mastery when returning to this page (e.g. after completing a quiz)
   useEffect(() => { if (user) refresh() }, [location.key])
 
+  // Resource completion tracking
+  const allResourceIds = allResources.map(r => r.id)
+  const { completed: completedResources, toggleComplete } = useResourceProgress(
+    user ? allResourceIds : []
+  )
+
   if (loading) return <div className="page"><div className="loading-pulse">Loading chunks…</div></div>
   if (error)   return <div className="page"><p className="page-error">Error: {error}</p></div>
 
@@ -421,6 +452,8 @@ export default function ChunkPage() {
                 navContext={navContext}
                 quizBest={quizBest}
                 onMasteryRefresh={refresh}
+                completedResources={completedResources}
+                onToggleComplete={toggleComplete}
                 timelineBest={
                   // Pass only the timeline mastery relevant to this chunk
                   Object.fromEntries(
