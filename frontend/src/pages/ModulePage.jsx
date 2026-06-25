@@ -2,22 +2,52 @@ import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { supabase } from '../supabase'
 import Breadcrumb from '../components/Breadcrumb'
-import { useMastery, MasteryPipRow, getMasteryClass } from '../hooks/useMastery'
+import { useMastery } from '../hooks/useMastery'
 import { useAuth } from '../context/AuthContext'
+import { useResourceProgress } from '../hooks/useResourceProgress'
 
 /**
- * MasteryStats — "X/Y attempted · Z% avg"
+ * EngagementPip — Option D: green/amber/grey with tooltip explaining tiers
  */
-function MasteryStats({ attempted, total, avg }) {
-  if (total === 0) return null
-  const cls = attempted > 0 ? getMasteryClass(avg) : ''
+function EngagementPip({ tier, label }) {
+  const [hover, setHover] = useState(false)
+  const cls = tier === 'complete' ? 'high' : tier === 'partial' ? 'mid' : 'unattempted'
+  const tierLabel = tier === 'complete' ? 'Complete' : tier === 'partial' ? 'In progress' : 'Not started'
+  const tooltip = `${label}: ${tierLabel}`
+
   return (
-    <div className="card-mastery-stats">
-      <span className="mastery-stats-count">{attempted}/{total} attempted</span>
-      {attempted > 0 && (
-        <span className={`mastery-stats-avg mastery-${cls}`}>{avg}% avg</span>
+    <span
+      className="weighted-pip-wrap"
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+    >
+      <span className={`mastery-pip mastery-pip-${cls}`} />
+      {hover && <span className="pip-tooltip">{tooltip}</span>}
+    </span>
+  )
+}
+
+/**
+ * EngagementLegend — floating legend explaining the tier colours
+ */
+function EngagementLegend() {
+  const [hover, setHover] = useState(false)
+  return (
+    <span
+      className="engagement-legend-trigger"
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+    >
+      ⓘ
+      {hover && (
+        <span className="pip-tooltip pip-tooltip-legend">
+          <strong>Progress pips (per unit):</strong><br/>
+          🟢 Complete — all content watched, all quizzes attempted, timeline done<br/>
+          🟡 In progress — some activity recorded<br/>
+          ⚫ Not started — nothing attempted yet
+        </span>
       )}
-    </div>
+    </span>
   )
 }
 
@@ -31,17 +61,17 @@ export default function ModulePage() {
   const navigate = useNavigate()
   const { user } = useAuth()
 
-  // Quiz resource data: { moduleId -> [{ unitId, chunkId, resourceId }] }
-  const [moduleQuizMap, setModuleQuizMap] = useState({})
+  // { moduleId -> [{ unitId, unitOrder, chunkId, resourceId, resourceType }] }
+  const [moduleResourceMap, setModuleResourceMap] = useState({})
+  // Set of chunk IDs with timeline content
+  const [chunkTimelineSet, setChunkTimelineSet] = useState(new Set())
+  // { moduleId -> { unitId -> [chunkId] } } — for tier calculation
+  const [moduleUnitChunkMap, setModuleUnitChunkMap] = useState({})
 
   useEffect(() => {
     async function fetchData() {
       const { data: courseData, error: courseError } = await supabase
-        .from('courses')
-        .select('id, title, description')
-        .eq('archived', false)
-        .eq('id', courseId)
-        .single()
+        .from('courses').select('id, title, description').eq('archived', false).eq('id', courseId).single()
       if (courseError) { setError(courseError.message); setLoading(false); return }
       setCourse(courseData)
 
@@ -53,7 +83,6 @@ export default function ModulePage() {
       if (modulesData.length > 0) {
         const moduleIds = modulesData.map(m => m.id)
 
-        // Unit counts
         const { data: unitCountData } = await supabase
           .from('units').select('module_id').eq('archived', false).in('module_id', moduleIds)
         if (unitCountData) {
@@ -62,7 +91,6 @@ export default function ModulePage() {
           setUnitCounts(counts)
         }
 
-        // Fetch all units -> chunks -> quiz resources in one pass
         const { data: unitsData } = await supabase
           .from('units').select('id, module_id, order_index').eq('archived', false).in('module_id', moduleIds).order('order_index')
 
@@ -73,33 +101,54 @@ export default function ModulePage() {
 
           if (chunksData && chunksData.length > 0) {
             const chunkIds = chunksData.map(c => c.id)
-            const { data: crData } = await supabase
-              .from('chunk_resources')
-              .select('chunk_id, resources(id, type)')
-              .in('chunk_id', chunkIds)
 
-            // Build lookup maps
+            const [{ data: crData }, { data: ctData }, { data: cgData }] = await Promise.all([
+              supabase.from('chunk_resources').select('chunk_id, resources(id, type)').in('chunk_id', chunkIds),
+              supabase.from('chunk_timelines').select('chunk_id').in('chunk_id', chunkIds),
+              supabase.from('chunk_glossary').select('chunk_id, glossary_terms(date)').in('chunk_id', chunkIds),
+            ])
+
             const chunkToUnit = {}
             chunksData.forEach(c => { chunkToUnit[c.id] = c.unit_id })
             const unitToModule = {}
             const unitOrderMap = {}
             unitsData.forEach(u => { unitToModule[u.id] = u.module_id; unitOrderMap[u.id] = u.order_index ?? 0 })
 
-            const quizMap = {}
-            modulesData.forEach(m => { quizMap[m.id] = [] })
+            // Resource map
+            const resMap = {}
+            modulesData.forEach(m => { resMap[m.id] = [] })
             ;(crData ?? []).forEach(row => {
-              if (row.resources?.type?.toLowerCase() === 'quiz') {
+              const t = row.resources?.type?.toLowerCase()
+              if (t === 'quiz' || t === 'video' || t === 'pdf') {
                 const unitId   = chunkToUnit[row.chunk_id]
                 const moduleId = unitToModule[unitId]
-                if (moduleId) quizMap[moduleId].push({
-                  unitId,
-                  unitOrder:  unitOrderMap[unitId] ?? 0,
-                  chunkId:    row.chunk_id,
-                  resourceId: row.resources.id,
+                if (moduleId) resMap[moduleId].push({
+                  unitId, unitOrder: unitOrderMap[unitId] ?? 0,
+                  chunkId: row.chunk_id, resourceId: row.resources.id, resourceType: t,
                 })
               }
             })
-            setModuleQuizMap(quizMap)
+            setModuleResourceMap(resMap)
+
+            // Unit->chunks map per module (for tier calc)
+            const ucMap = {}
+            modulesData.forEach(m => { ucMap[m.id] = {} })
+            chunksData.forEach(c => {
+              const uid = c.unit_id
+              const mid = unitToModule[uid]
+              if (mid) {
+                if (!ucMap[mid][uid]) ucMap[mid][uid] = []
+                ucMap[mid][uid].push(c.id)
+              }
+            })
+            setModuleUnitChunkMap(ucMap)
+
+            // Timeline presence
+            const withTimelines = new Set([
+              ...(ctData ?? []).map(r => r.chunk_id),
+              ...(cgData ?? []).filter(r => r.glossary_terms?.date).map(r => r.chunk_id),
+            ])
+            setChunkTimelineSet(withTimelines)
           }
         }
       }
@@ -108,10 +157,11 @@ export default function ModulePage() {
     fetchData()
   }, [courseId])
 
-  // Mastery: all quiz resource IDs + module-level timeline keys
-  const allQuizIds      = Object.values(moduleQuizMap).flat().map(q => q.resourceId)
-  const moduleMasterKeys = modules.map(m => `module:${m.id}`)
+  const allResourceIds  = Object.values(moduleResourceMap).flat().map(r => r.resourceId)
+  const { completed: completedResources } = useResourceProgress(user ? allResourceIds : [])
 
+  const allQuizIds       = Object.values(moduleResourceMap).flat().filter(r => r.resourceType === 'quiz').map(r => r.resourceId)
+  const moduleMasterKeys = modules.map(m => `module:${m.id}`)
   const { quizBest, timelineBest } = useMastery({
     resourceIds:        user && allQuizIds.length > 0 ? allQuizIds : [],
     masterTimelineKeys: user && moduleMasterKeys.length > 0 ? moduleMasterKeys : [],
@@ -150,31 +200,53 @@ export default function ModulePage() {
           {modules.map((mod, index) => {
             const unitCount = unitCounts[mod.id] ?? 0
             const modKey    = `module:${mod.id}`
+            const entries   = moduleResourceMap[mod.id] ?? []
+            const unitChunkMap = moduleUnitChunkMap[mod.id] ?? {}
 
-            // Quiz mastery stats for this module
-            const quizEntries  = moduleQuizMap[mod.id] ?? []
-            const totalQuizzes = quizEntries.length
-            const attempted    = quizEntries.filter(q => quizBest?.[q.resourceId] != null).length
-            const scores       = quizEntries.map(q => quizBest?.[q.resourceId]?.bestPercent).filter(p => p != null)
-            const avgScore     = scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : null
-
-            // Per-unit pip: average best quiz score across all quizzes in that unit
-            const unitIds = [...new Map(quizEntries.map(q => [q.unitId, q.unitOrder])).entries()]
+            // Unit IDs in order
+            const unitIds = [...new Map(entries.map(e => [e.unitId, e.unitOrder])).entries()]
               .sort((a, b) => a[1] - b[1]).map(([id]) => id)
-            const unitPips = unitIds.map(uid => {
-              const unitScores = quizEntries
-                .filter(q => q.unitId === uid)
-                .map(q => quizBest?.[q.resourceId]?.bestPercent)
-                .filter(p => p != null)
-              const pct = unitScores.length > 0
-                ? Math.round(unitScores.reduce((a, b) => a + b, 0) / unitScores.length)
-                : null
-              return { id: uid, label: 'Unit', percent: pct }
-            })
 
-            // Timeline mastery
+            // Timeline mastery (module-level)
             const tlModes = timelineBest?.[modKey]
             const tlPct   = tlModes ? Math.max(...Object.values(tlModes).filter(v => v != null)) : null
+
+            // Option D: engagement tier per unit
+            const unitPips = unitIds.map(uid => {
+              const chunkIds      = unitChunkMap[uid] ?? []
+              const unitEntries   = entries.filter(e => e.unitId === uid)
+              const quizEntries   = unitEntries.filter(e => e.resourceType === 'quiz')
+              const contentEntries = unitEntries.filter(e => e.resourceType === 'video' || e.resourceType === 'pdf')
+
+              // What signals does this unit have?
+              const hasContent  = contentEntries.length > 0
+              const hasQuizzes  = quizEntries.length > 0
+              const hasTimeline = chunkIds.some(cid => chunkTimelineSet.has(cid))
+
+              // What's done?
+              const contentDone   = hasContent  ? contentEntries.every(r => completedResources?.[r.resourceId]) : null
+              const quizzesDone   = hasQuizzes  ? quizEntries.every(r => quizBest?.[r.resourceId] != null) : null
+              const timelineDone  = hasTimeline ? tlPct != null : null
+
+              // Complete = all present signals are done
+              const signals = [contentDone, quizzesDone, timelineDone].filter(s => s !== null)
+              const anyDone = signals.some(s => s === true)
+              const allDone = signals.length > 0 && signals.every(s => s === true)
+
+              const tier = allDone ? 'complete' : anyDone ? 'partial' : 'untouched'
+
+              // Label for tooltip
+              const parts = []
+              if (hasContent)  parts.push(`Content: ${contentDone  ? 'done' : 'incomplete'}`)
+              if (hasQuizzes)  parts.push(`Quizzes: ${quizzesDone  ? 'done' : 'incomplete'}`)
+              if (hasTimeline) parts.push(`Timeline: ${timelineDone ? 'done' : 'incomplete'}`)
+              const label = parts.join(' · ') || 'No trackable content'
+
+              return { id: uid, tier, label }
+            })
+
+            const hasAnyProgress = unitPips.some(p => p.tier !== 'untouched')
+            const showPips = user && unitPips.length > 0
 
             return (
               <li key={mod.id}>
@@ -186,17 +258,17 @@ export default function ModulePage() {
                   <div className="card-level-tag">Module</div>
                   <h2 className="card-title">{mod.title}</h2>
 
-                  {user && (totalQuizzes > 0 || tlPct != null) && (
+                  {showPips && (
                     <div className="card-mastery">
-                      {totalQuizzes > 0 && (
-                        <>
-                          <MasteryPipRow label="Quizzes" items={unitPips} />
-                          <MasteryStats attempted={attempted} total={totalQuizzes} avg={avgScore} />
-                        </>
-                      )}
-                      {tlPct != null && (
-                        <MasteryPipRow label="Timelines" items={[{ id: modKey, label: 'Timeline', percent: tlPct }]} />
-                      )}
+                      <div className="mastery-pip-row">
+                        <span className="mastery-pip-label">Progress</span>
+                        <div className="mastery-pips">
+                          {unitPips.map(p => (
+                            <EngagementPip key={p.id} tier={p.tier} label={p.label} />
+                          ))}
+                        </div>
+                        <EngagementLegend />
+                      </div>
                     </div>
                   )}
 

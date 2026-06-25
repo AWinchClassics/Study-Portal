@@ -2,28 +2,56 @@ import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { supabase } from '../supabase'
 import Breadcrumb from '../components/Breadcrumb'
-import { useMastery, MasteryPipRow, getMasteryClass } from '../hooks/useMastery'
+import { useMastery, MasteryPip, getMasteryClass } from '../hooks/useMastery'
 import { useAuth } from '../context/AuthContext'
+import { useResourceProgress } from '../hooks/useResourceProgress'
 import FlashcardTabContent from '../components/FlashcardTabContent'
 import TimelineTabContent from '../components/TimelineTabContent'
 import SourceTabContent from '../components/SourceTabContent'
 
 /**
- * MasteryStats
- * Shows "X/Y attempted · Z% avg" with colour coding on the percentage.
+ * WeightedProgressPip
+ * A single pip with a tooltip explaining the weighted score breakdown.
+ */
+function WeightedProgressPip({ score, contentPct, quizPct, timelinePct, hasTimeline }) {
+  const [hover, setHover] = useState(false)
+  const cls = score == null ? 'unattempted'
+    : score >= 80 ? 'high'
+    : score >= 40 ? 'mid'
+    : 'low'
+
+  const lines = []
+  if (contentPct  != null) lines.push(`Content: ${contentPct}%`)
+  if (quizPct     != null) lines.push(`Quizzes: ${quizPct}%`)
+  if (hasTimeline && timelinePct != null) lines.push(`Timeline: ${timelinePct}%`)
+  if (score       != null) lines.push(`Overall: ${score}%`)
+  const tooltip = lines.length > 0 ? lines.join(' · ') : 'Not started'
+
+  return (
+    <span
+      className="weighted-pip-wrap"
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+    >
+      <span className={`mastery-pip mastery-pip-${cls}`} />
+      {hover && (
+        <span className="pip-tooltip">{tooltip}</span>
+      )}
+    </span>
+  )
+}
+
+/**
+ * MasteryStats — "X/Y quizzes · Z% avg"
  */
 function MasteryStats({ attempted, total, avg }) {
   if (total === 0) return null
   const cls = attempted > 0 ? getMasteryClass(avg) : ''
   return (
     <div className="card-mastery-stats">
-      <span className="mastery-stats-count">
-        {attempted}/{total} attempted
-      </span>
+      <span className="mastery-stats-count">{attempted}/{total} quizzes</span>
       {attempted > 0 && (
-        <span className={`mastery-stats-avg mastery-${cls}`}>
-          {avg}% avg
-        </span>
+        <span className={`mastery-stats-avg mastery-${cls}`}>{avg}% avg</span>
       )}
     </div>
   )
@@ -39,12 +67,13 @@ export default function UnitPage() {
   const [error, setError]       = useState(null)
   const [activeTab, setActiveTab] = useState('units')
 
-  // Lazy-loaded chunk IDs for the flashcards/timelines tabs
   const [moduleChunkIds, setModuleChunkIds] = useState(null)
   const [loadingChunkIds, setLoadingChunkIds] = useState(false)
 
-  // Quiz resource data: { unitId -> [{ chunkId, resourceId }] }
-  const [unitQuizMap, setUnitQuizMap] = useState({})
+  // { unitId -> [{ chunkId, chunkOrder, resourceId, resourceType }] }
+  const [unitResourceMap, setUnitResourceMap] = useState({})
+  // Set of chunk IDs that have timeline content
+  const [chunkTimelineSet, setChunkTimelineSet] = useState(new Set())
 
   const { user } = useAuth()
   const navigate = useNavigate()
@@ -68,7 +97,6 @@ export default function UnitPage() {
       if (unitsData.length > 0) {
         const unitIds = unitsData.map(u => u.id)
 
-        // Chunk counts
         const { data: countData } = await supabase
           .from('chunks').select('unit_id').eq('archived', false).in('unit_id', unitIds)
         if (countData) {
@@ -77,35 +105,45 @@ export default function UnitPage() {
           setChunkCounts(counts)
         }
 
-        // Fetch all chunks + quiz resources for all units in one pass
         const { data: chunksData } = await supabase
           .from('chunks').select('id, unit_id, order_index').eq('archived', false).in('unit_id', unitIds).order('order_index')
 
         if (chunksData && chunksData.length > 0) {
           const chunkIds = chunksData.map(c => c.id)
-          const { data: crData } = await supabase
-            .from('chunk_resources')
-            .select('chunk_id, resources(id, type)')
-            .in('chunk_id', chunkIds)
 
-          // Build unitId -> [resourceId] map for quiz resources
+          const [{ data: crData }, { data: ctData }, { data: cgData }] = await Promise.all([
+            supabase.from('chunk_resources').select('chunk_id, resources(id, type)').in('chunk_id', chunkIds),
+            supabase.from('chunk_timelines').select('chunk_id').in('chunk_id', chunkIds),
+            supabase.from('chunk_glossary').select('chunk_id, glossary_terms(date)').in('chunk_id', chunkIds),
+          ])
+
           const chunkToUnit = {}
           const chunkOrderMap = {}
           chunksData.forEach(c => { chunkToUnit[c.id] = c.unit_id; chunkOrderMap[c.id] = c.order_index ?? 0 })
 
-          const quizMap = {}
-          unitsData.forEach(u => { quizMap[u.id] = [] })
+          // Build resource map: quiz + trackable (video/pdf)
+          const resMap = {}
+          unitsData.forEach(u => { resMap[u.id] = [] })
           ;(crData ?? []).forEach(row => {
-            if (row.resources?.type?.toLowerCase() === 'quiz') {
+            const t = row.resources?.type?.toLowerCase()
+            if (t === 'quiz' || t === 'video' || t === 'pdf') {
               const unitId = chunkToUnit[row.chunk_id]
-              if (unitId) quizMap[unitId].push({
-                chunkId:    row.chunk_id,
-                chunkOrder: chunkOrderMap[row.chunk_id] ?? 0,
-                resourceId: row.resources.id,
+              if (unitId) resMap[unitId].push({
+                chunkId:      row.chunk_id,
+                chunkOrder:   chunkOrderMap[row.chunk_id] ?? 0,
+                resourceId:   row.resources.id,
+                resourceType: t,
               })
             }
           })
-          setUnitQuizMap(quizMap)
+          setUnitResourceMap(resMap)
+
+          // Timeline presence
+          const withTimelines = new Set([
+            ...(ctData ?? []).map(r => r.chunk_id),
+            ...(cgData ?? []).filter(r => r.glossary_terms?.date).map(r => r.chunk_id),
+          ])
+          setChunkTimelineSet(withTimelines)
         }
       }
       setLoading(false)
@@ -113,16 +151,18 @@ export default function UnitPage() {
     fetchData()
   }, [moduleId])
 
-  // Mastery: collect all quiz resource IDs and unit master timeline keys
-  const allQuizIds = Object.values(unitQuizMap).flat().map(q => q.resourceId)
-  const unitMasterKeys = units.map(u => `unit:${u.id}`)
+  // All resource IDs for progress tracking
+  const allResourceIds = Object.values(unitResourceMap).flat().map(r => r.resourceId)
+  const { completed: completedResources } = useResourceProgress(user ? allResourceIds : [])
 
+  // Mastery: quiz scores + unit timeline keys
+  const allQuizIds     = Object.values(unitResourceMap).flat().filter(r => r.resourceType === 'quiz').map(r => r.resourceId)
+  const unitMasterKeys = units.map(u => `unit:${u.id}`)
   const { quizBest, timelineBest } = useMastery({
     resourceIds:        user && allQuizIds.length > 0 ? allQuizIds : [],
     masterTimelineKeys: user && unitMasterKeys.length > 0 ? unitMasterKeys : [],
   })
 
-  // Load chunk IDs for the flashcard/timeline tabs when first opened
   async function handleFlashcardTabOpen(tab = 'flashcards') {
     setActiveTab(tab)
     if (moduleChunkIds !== null) return
@@ -157,7 +197,6 @@ export default function UnitPage() {
         </div>
       </div>
 
-      {/* Tabs */}
       <div className="page-tabs">
         <button className={`page-tab ${activeTab === 'units' ? 'page-tab-active' : ''}`} onClick={() => setActiveTab('units')}>
           📄 Units
@@ -184,31 +223,57 @@ export default function UnitPage() {
             {units.map((unit, index) => {
               const chunkCount = chunkCounts[unit.id] ?? 0
               const unitKey    = `unit:${unit.id}`
+              const entries    = unitResourceMap[unit.id] ?? []
 
-              // Quiz mastery stats for this unit
-              const quizEntries  = unitQuizMap[unit.id] ?? []
+              // Separate by type
+              const quizEntries     = entries.filter(r => r.resourceType === 'quiz')
+              const contentEntries  = entries.filter(r => r.resourceType === 'video' || r.resourceType === 'pdf')
+
+              // Quiz stats
               const totalQuizzes = quizEntries.length
               const attempted    = quizEntries.filter(q => quizBest?.[q.resourceId] != null).length
               const scores       = quizEntries.map(q => quizBest?.[q.resourceId]?.bestPercent).filter(p => p != null)
               const avgScore     = scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : null
 
-              // Per-chunk pip: best quiz score across all quizzes in that chunk, sorted by order_index
-              const chunkIds = [...new Map(quizEntries.map(q => [q.chunkId, q.chunkOrder])).entries()]
-                .sort((a, b) => a[1] - b[1]).map(([id]) => id)
-              const chunkPips = chunkIds.map(cid => {
-                const chunkScores = quizEntries
-                  .filter(q => q.chunkId === cid)
-                  .map(q => quizBest?.[q.resourceId]?.bestPercent)
-                  .filter(p => p != null)
-                const pct = chunkScores.length > 0
-                  ? Math.round(chunkScores.reduce((a, b) => a + b, 0) / chunkScores.length)
-                  : null
-                return { id: cid, label: 'Chunk', percent: pct }
-              })
-
               // Timeline mastery
               const tlModes = timelineBest?.[unitKey]
               const tlPct   = tlModes ? Math.max(...Object.values(tlModes).filter(v => v != null)) : null
+
+              // Per-chunk weighted progress pip (Option B)
+              const chunkIds = [...new Map(entries.map(q => [q.chunkId, q.chunkOrder])).entries()]
+                .sort((a, b) => a[1] - b[1]).map(([id]) => id)
+
+              const chunkPips = chunkIds.map(cid => {
+                const hasTimeline = chunkTimelineSet.has(cid)
+                const chunkQuizzes  = quizEntries.filter(r => r.chunkId === cid)
+                const chunkContent  = contentEntries.filter(r => r.chunkId === cid)
+
+                // Content %
+                const contentDone = chunkContent.filter(r => completedResources?.[r.resourceId]).length
+                const contentPct  = chunkContent.length > 0 ? Math.round((contentDone / chunkContent.length) * 100) : null
+
+                // Quiz %: average best score
+                const quizScores = chunkQuizzes.map(r => quizBest?.[r.resourceId]?.bestPercent).filter(p => p != null)
+                const quizPct    = quizScores.length > 0 ? Math.round(quizScores.reduce((a,b) => a+b,0) / quizScores.length) : null
+
+                // Timeline %: from unit-level key (best effort)
+                const timelinePct = tlPct
+
+                // Weighted score — only weight dimensions that exist for this chunk
+                const dimensions = []
+                if (chunkContent.length > 0) dimensions.push({ pct: contentPct ?? 0, weight: 1 })
+                if (chunkQuizzes.length > 0)  dimensions.push({ pct: quizPct    ?? 0, weight: 1 })
+                if (hasTimeline)               dimensions.push({ pct: timelinePct ?? 0, weight: 1 })
+
+                const hasAny = contentPct != null || quizPct != null || (hasTimeline && timelinePct != null)
+                const score  = dimensions.length > 0 && hasAny
+                  ? Math.round(dimensions.reduce((s, d) => s + d.pct, 0) / dimensions.length)
+                  : null
+
+                return { id: cid, score, contentPct, quizPct, timelinePct: hasTimeline ? timelinePct : null, hasTimeline }
+              })
+
+              const hasProgress = chunkPips.some(p => p.score != null)
 
               return (
                 <li key={unit.id}>
@@ -221,16 +286,27 @@ export default function UnitPage() {
                     <div className="card-level-tag">Unit</div>
                     <h2 className="card-title">{unit.title}</h2>
 
-                    {user && (totalQuizzes > 0 || tlPct != null) && (
+                    {user && (hasProgress || totalQuizzes > 0) && (
                       <div className="card-mastery">
-                        {totalQuizzes > 0 && (
-                          <>
-                            <MasteryPipRow label="Quizzes" items={chunkPips} />
-                            <MasteryStats attempted={attempted} total={totalQuizzes} avg={avgScore} />
-                          </>
+                        {chunkPips.length > 0 && (
+                          <div className="mastery-pip-row">
+                            <span className="mastery-pip-label">Progress</span>
+                            <div className="mastery-pips">
+                              {chunkPips.map(p => (
+                                <WeightedProgressPip
+                                  key={p.id}
+                                  score={p.score}
+                                  contentPct={p.contentPct}
+                                  quizPct={p.quizPct}
+                                  timelinePct={p.timelinePct}
+                                  hasTimeline={p.hasTimeline}
+                                />
+                              ))}
+                            </div>
+                          </div>
                         )}
-                        {tlPct != null && (
-                          <MasteryPipRow label="Timelines" items={[{ id: unitKey, label: 'Timeline', percent: tlPct }]} />
+                        {totalQuizzes > 0 && (
+                          <MasteryStats attempted={attempted} total={totalQuizzes} avg={avgScore} />
                         )}
                       </div>
                     )}

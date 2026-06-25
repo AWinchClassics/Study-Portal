@@ -542,3 +542,53 @@ ul { list-style: none; padding: 0; margin: 0; }
     color: #4ade80;
   }
 }
+
+/* ============================================
+   PIP TOOLTIPS & WEIGHTED PIPS
+   ============================================ */
+
+/* Wrapper for pips that have tooltips */
+.weighted-pip-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Floating tooltip */
+.pip-tooltip {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  padding: 5px 9px;
+  font-size: 11px;
+  color: var(--text);
+  white-space: nowrap;
+  z-index: 100;
+  pointer-events: none;
+  line-height: 1.5;
+}
+
+/* Legend tooltip — wider, multiline */
+.pip-tooltip-legend {
+  white-space: normal;
+  width: 240px;
+  left: 0;
+  transform: none;
+  line-height: 1.6;
+}
+
+/* Legend trigger icon */
+.engagement-legend-trigger {
+  font-size: 11px;
+  color: var(--text);
+  cursor: default;
+  margin-left: 4px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
