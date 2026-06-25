@@ -15,17 +15,19 @@ import SourceTabContent from '../components/SourceTabContent'
  */
 function WeightedProgressPip({ score, contentPct, quizPct, timelinePct, hasTimeline }) {
   const [hover, setHover] = useState(false)
-  const cls = score == null ? 'unattempted'
+
+  // Grey if nothing attempted at all; colour only once there's real activity
+  const hasActivity = contentPct != null || quizPct != null || (hasTimeline && timelinePct != null)
+  const cls = !hasActivity || score == null ? 'unattempted'
     : score >= 80 ? 'high'
     : score >= 40 ? 'mid'
     : 'low'
 
   const lines = []
-  if (contentPct  != null) lines.push(`Content: ${contentPct}%`)
-  if (quizPct     != null) lines.push(`Quizzes: ${quizPct}%`)
+  if (contentPct  != null)               lines.push(`Content: ${contentPct}%`)
+  if (quizPct     != null)               lines.push(`Quizzes: ${quizPct}%`)
   if (hasTimeline && timelinePct != null) lines.push(`Timeline: ${timelinePct}%`)
-  if (score       != null) lines.push(`Overall: ${score}%`)
-  const tooltip = lines.length > 0 ? lines.join(' · ') : 'Not started'
+  if (hasActivity && score != null)      lines.push(`Overall: ${score}%`)
 
   return (
     <span
@@ -35,7 +37,37 @@ function WeightedProgressPip({ score, contentPct, quizPct, timelinePct, hasTimel
     >
       <span className={`mastery-pip mastery-pip-${cls}`} />
       {hover && (
-        <span className="pip-tooltip">{tooltip}</span>
+        <span className="pip-tooltip pip-tooltip-stacked">
+          {lines.length > 0
+            ? lines.map((l, i) => <span key={i} className="pip-tooltip-line">{l}</span>)
+            : <span className="pip-tooltip-line">Not started</span>
+          }
+        </span>
+      )}
+    </span>
+  )
+}
+
+/**
+ * ProgressLegend — explains weighted pip colours
+ */
+function ProgressLegend() {
+  const [hover, setHover] = useState(false)
+  return (
+    <span
+      className="engagement-legend-trigger"
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+    >
+      ⓘ
+      {hover && (
+        <span className="pip-tooltip pip-tooltip-legend">
+          <span className="pip-legend-title">Progress pips (per chunk)</span>
+          <span className="pip-legend-row"><span className="pip-legend-dot mastery-pip mastery-pip-high" />≥80% weighted score</span>
+          <span className="pip-legend-row"><span className="pip-legend-dot mastery-pip mastery-pip-mid" />40–79% weighted score</span>
+          <span className="pip-legend-row"><span className="pip-legend-dot mastery-pip mastery-pip-low" />&lt;40% weighted score</span>
+          <span className="pip-legend-row"><span className="pip-legend-dot mastery-pip mastery-pip-unattempted" />Not started</span>
+        </span>
       )}
     </span>
   )
@@ -309,6 +341,7 @@ export default function UnitPage() {
                                 />
                               ))}
                             </div>
+                            <ProgressLegend />
                           </div>
                         )}
                         {totalQuizzes > 0 && (
