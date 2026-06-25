@@ -631,6 +631,13 @@ ul { list-style: none; padding: 0; margin: 0; }
   position: relative;
   display: inline-flex;
   align-items: center;
-  opacity: 0.6;
 }
-.engagement-legend-trigger:hover { opacity: 1; }
+.engagement-legend-trigger:hover { color: var(--text-h); }
+
+/* Portal tooltip — rendered in document.body, uses fixed positioning */
+.pip-tooltip-portal {
+  position: fixed !important;
+  z-index: 99999 !important;
+  bottom: auto !important;
+  pointer-events: none;
+}

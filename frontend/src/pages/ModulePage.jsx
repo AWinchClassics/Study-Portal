@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
+import ReactDOM from 'react-dom'
 import { useNavigate, useParams } from 'react-router-dom'
 import { supabase } from '../supabase'
 import Breadcrumb from '../components/Breadcrumb'
@@ -33,26 +34,40 @@ function EngagementPip({ tier, label }) {
 }
 
 /**
- * EngagementLegend — floating legend explaining the tier colours
+ * EngagementLegend — portal-based tooltip that escapes card stacking contexts
  */
 function EngagementLegend() {
-  const [hover, setHover] = useState(false)
+  const [rect, setRect] = useState(null)
+  const triggerRef = useRef(null)
+
+  function handleEnter() {
+    if (triggerRef.current) setRect(triggerRef.current.getBoundingClientRect())
+  }
+  function handleLeave() { setRect(null) }
+
   return (
-    <span
-      className="engagement-legend-trigger"
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-    >
-      ⓘ
-      {hover && (
-        <span className="pip-tooltip pip-tooltip-legend">
+    <>
+      <span
+        ref={triggerRef}
+        className="engagement-legend-trigger"
+        onMouseEnter={handleEnter}
+        onMouseLeave={handleLeave}
+      >ⓘ</span>
+      {rect && ReactDOM.createPortal(
+        <span className="pip-tooltip-legend pip-tooltip-portal" style={{
+          position: 'fixed',
+          top: rect.top - 8,
+          left: rect.left,
+          transform: 'translateY(-100%)',
+        }}>
           <span className="pip-legend-title">Progress pips (per unit)</span>
           <span className="pip-legend-row"><span className="pip-legend-dot mastery-pip mastery-pip-high" />Complete — all content, quizzes &amp; timeline done</span>
           <span className="pip-legend-row"><span className="pip-legend-dot mastery-pip mastery-pip-mid" />In progress — some activity recorded</span>
           <span className="pip-legend-row"><span className="pip-legend-dot mastery-pip mastery-pip-unattempted" />Not started</span>
-        </span>
+        </span>,
+        document.body
       )}
-    </span>
+    </>
   )
 }
 
