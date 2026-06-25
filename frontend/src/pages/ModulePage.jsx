@@ -12,8 +12,9 @@ import { useResourceProgress } from '../hooks/useResourceProgress'
 function EngagementPip({ tier, label }) {
   const [hover, setHover] = useState(false)
   const cls = tier === 'complete' ? 'high' : tier === 'partial' ? 'mid' : 'unattempted'
-  const tierLabel = tier === 'complete' ? 'Complete' : tier === 'partial' ? 'In progress' : 'Not started'
-  const tooltip = `${label}: ${tierLabel}`
+
+  // Parse label into lines: "Content: done · Quizzes: incomplete" -> array
+  const lines = label.split(' · ')
 
   return (
     <span
@@ -22,7 +23,11 @@ function EngagementPip({ tier, label }) {
       onMouseLeave={() => setHover(false)}
     >
       <span className={`mastery-pip mastery-pip-${cls}`} />
-      {hover && <span className="pip-tooltip">{tooltip}</span>}
+      {hover && (
+        <span className="pip-tooltip pip-tooltip-stacked">
+          {lines.map((line, i) => <span key={i} className="pip-tooltip-line">{line}</span>)}
+        </span>
+      )}
     </span>
   )
 }
@@ -41,10 +46,10 @@ function EngagementLegend() {
       ⓘ
       {hover && (
         <span className="pip-tooltip pip-tooltip-legend">
-          <strong>Progress pips (per unit):</strong><br/>
-          🟢 Complete — all content watched, all quizzes attempted, timeline done<br/>
-          🟡 In progress — some activity recorded<br/>
-          ⚫ Not started — nothing attempted yet
+          <span className="pip-legend-title">Progress pips (per unit)</span>
+          <span className="pip-legend-row"><span className="pip-legend-dot mastery-pip mastery-pip-high" />Complete — all content, quizzes &amp; timeline done</span>
+          <span className="pip-legend-row"><span className="pip-legend-dot mastery-pip mastery-pip-mid" />In progress — some activity recorded</span>
+          <span className="pip-legend-row"><span className="pip-legend-dot mastery-pip mastery-pip-unattempted" />Not started</span>
         </span>
       )}
     </span>
