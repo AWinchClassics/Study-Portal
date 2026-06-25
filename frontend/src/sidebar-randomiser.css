@@ -797,3 +797,10 @@
   margin-left: 22px;
   margin-top: 2px;
 }
+
+/* Extra top margin on the Tools section label to create visual break */
+.sidebar-nav-label-tools {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}

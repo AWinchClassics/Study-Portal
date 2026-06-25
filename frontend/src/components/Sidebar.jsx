@@ -3,22 +3,25 @@ import { NavLink, useLocation } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import AuthModal from './AuthModal'
 
-const NAV_ITEMS = [
-  { to: '/',           label: 'Courses',             icon: '📚', end: true },
-  { to: '/glossary',   label: 'Glossary',            icon: '📖' },
-  { to: '/flashcards', label: 'Flashcards',          icon: '🃏' },
-  { to: '/timelines',  label: 'Timelines',           icon: '📅' },
-  { to: '/resources',  label: 'Resources',           icon: '📦' },
-  { to: '/sources',    label: 'Sources',             icon: '📜' },
-  { to: '/randomiser', label: 'Revision Randomiser', icon: '🎲' },
-  { to: '/progress',   label: 'My Progress',         icon: '📈' },
+const MY_LEARNING = [
+  { to: '/',         label: 'My Courses',  icon: '📚', end: true },
+  { to: '/progress', label: 'My Progress', icon: '📈' },
+]
+
+const TOOLS = [
+  { to: '/glossary',   label: 'Glossary',   icon: '📖' },
+  { to: '/flashcards', label: 'Flashcards', icon: '🃏' },
+  { to: '/timelines',  label: 'Timelines',  icon: '📅' },
+  { to: '/resources',  label: 'Resources',  icon: '📦' },
+  { to: '/sources',    label: 'Sources',    icon: '📜' },
+  { to: '/randomiser', label: 'Randomiser', icon: '🎲' },
 ]
 
 export default function Sidebar() {
-  const [open, setOpen]           = useState(false)
-  const [authOpen, setAuthOpen]   = useState(false)
-  const location                  = useLocation()
-  const { user, profile, loading } = useAuth()
+  const [open, setOpen]         = useState(false)
+  const [authOpen, setAuthOpen] = useState(false)
+  const location                = useLocation()
+  const { user, profile, loading, isTeacher } = useAuth()
 
   useEffect(() => { setOpen(false) }, [location.pathname])
   useEffect(() => {
@@ -41,10 +44,22 @@ export default function Sidebar() {
             <span className="sidebar-brand-text">Study Portal</span>
           </div>
           <button className="sidebar-close" onClick={() => setOpen(false)} aria-label="Close menu">✕</button>
+
           <nav className="sidebar-nav">
-            <p className="sidebar-nav-label">Navigation</p>
-            {NAV_ITEMS.map(item => (
+            {/* My Learning section */}
+            <p className="sidebar-nav-label">My Learning</p>
+            {MY_LEARNING.map(item => (
               <NavLink key={item.to} to={item.to} end={item.end}
+                className={({ isActive }) => `sidebar-nav-item ${isActive ? 'sidebar-nav-active' : ''}`}>
+                <span className="sidebar-nav-icon">{item.icon}</span>
+                {item.label}
+              </NavLink>
+            ))}
+
+            {/* Tools section */}
+            <p className="sidebar-nav-label sidebar-nav-label-tools">Tools</p>
+            {TOOLS.map(item => (
+              <NavLink key={item.to} to={item.to}
                 className={({ isActive }) => `sidebar-nav-item ${isActive ? 'sidebar-nav-active' : ''}`}>
                 <span className="sidebar-nav-icon">{item.icon}</span>
                 {item.label}
@@ -74,9 +89,12 @@ export default function Sidebar() {
             )}
           </button>
 
-          <NavLink to="/teacher" className="sidebar-nav-item sidebar-nav-muted">
-            <span className="sidebar-nav-icon">⚙</span>Teacher
-          </NavLink>
+          {/* Teacher link — only visible to teacher accounts */}
+          {!loading && isTeacher && (
+            <NavLink to="/teacher" className="sidebar-nav-item sidebar-nav-muted">
+              <span className="sidebar-nav-icon">⚙</span>Teacher
+            </NavLink>
+          )}
         </div>
       </aside>
 
