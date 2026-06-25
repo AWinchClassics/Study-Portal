@@ -184,7 +184,8 @@ function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest, onMas
   const contentPipItems = trackableResources.length > 0 ? [{
     id: `content:${chunk.id}`,
     label: `${completedCount}/${trackableResources.length} resources completed`,
-    percent: Math.round((completedCount / trackableResources.length) * 100),
+    // null when nothing completed → grey pip; only colour when something is done
+    percent: completedCount > 0 ? Math.round((completedCount / trackableResources.length) * 100) : null,
   }] : []
 
   const hasAnything = quizPipItems.length > 0 || timelinePipItems.length > 0 || contentPipItems.length > 0
@@ -436,7 +437,7 @@ export default function ChunkPage() {
     return {
       id: `content:${c.id}`,
       label: `${c.title}: ${done}/${trackable.length}`,
-      percent: Math.round((done / trackable.length) * 100),
+      percent: done > 0 ? Math.round((done / trackable.length) * 100) : null,
     }
   }).filter(Boolean)
 

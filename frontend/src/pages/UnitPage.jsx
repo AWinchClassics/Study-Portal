@@ -286,10 +286,12 @@ export default function UnitPage() {
 
                 // Content %
                 const contentDone = chunkContent.filter(r => completedResources?.[r.resourceId]).length
-                const contentPct  = chunkContent.length > 0 ? Math.round((contentDone / chunkContent.length) * 100) : null
+                // null when nothing done → pip stays grey; only colour once something is completed
+                const contentPct  = contentDone > 0 ? Math.round((contentDone / chunkContent.length) * 100) : null
 
                 // Quiz %: average best score
                 const quizScores = chunkQuizzes.map(r => quizBest?.[r.resourceId]?.bestPercent).filter(p => p != null)
+                // null when no quizzes attempted yet
                 const quizPct    = quizScores.length > 0 ? Math.round(quizScores.reduce((a,b) => a+b,0) / quizScores.length) : null
 
                 // Timeline %: prefer chunk-level attempts, fall back to unit-level
