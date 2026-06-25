@@ -64,12 +64,12 @@ export default function ModulePage() {
 
         // Fetch all units -> chunks -> quiz resources in one pass
         const { data: unitsData } = await supabase
-          .from('units').select('id, module_id').eq('archived', false).in('module_id', moduleIds)
+          .from('units').select('id, module_id, order_index').eq('archived', false).in('module_id', moduleIds).order('order_index')
 
         if (unitsData && unitsData.length > 0) {
           const unitIds = unitsData.map(u => u.id)
           const { data: chunksData } = await supabase
-            .from('chunks').select('id, unit_id').eq('archived', false).in('unit_id', unitIds)
+            .from('chunks').select('id, unit_id, order_index').eq('archived', false).in('unit_id', unitIds).order('order_index')
 
           if (chunksData && chunksData.length > 0) {
             const chunkIds = chunksData.map(c => c.id)
