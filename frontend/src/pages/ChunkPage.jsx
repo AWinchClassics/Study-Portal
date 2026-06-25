@@ -143,7 +143,7 @@ function ResourceItem({ resource, navContext, quizBest, onMasteryRefresh, isComp
   )
 }
 
-function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest, onMasteryRefresh, completedResources, onToggleComplete }) {
+function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest, onMasteryRefresh, completedResources, onToggleComplete, chunkHasTimeline }) {
   const [collapsed, setCollapsed] = useState(true)
   const [chunkTab, setChunkTab]   = useState('resources')
 
@@ -155,7 +155,7 @@ function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest, onMas
   })
   const activeSections = SECTIONS.filter(s => byPurpose[s.key]?.length > 0)
 
-  // Build pip data for quiz resources in this chunk
+  // Quiz pips
   const quizResources = resources.filter(r => r.type?.toLowerCase() === 'quiz')
   const quizPipItems  = quizResources.map(r => ({
     id: r.id,
@@ -163,17 +163,30 @@ function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest, onMas
     percent: quizBest?.[r.id]?.bestPercent ?? null,
   }))
 
-  // Timeline pip — one pip per chunk showing best across both test modes
-  // Always show a pip (grey if unattempted) so the row is visible
+  // Timeline pip — only if this chunk has timeline content
   const chunkTimelineKey = `chunk:${chunk.id}`
   const timelineModes = timelineBest?.[chunkTimelineKey]
-  const timelinePipItems = [{
+  const timelinePipItems = chunkHasTimeline ? [{
     id: chunkTimelineKey,
     label: 'Timeline',
     percent: timelineModes
       ? Math.max(...Object.values(timelineModes).filter(v => v != null))
       : null,
-  }]
+  }] : []
+
+  // Content pip — videos and PDFs only (quizzes tracked separately)
+  const trackableResources = resources.filter(r => {
+    const t = r.type?.toLowerCase()
+    return t === 'video' || t === 'pdf'
+  })
+  const completedCount = trackableResources.filter(r => completedResources?.[r.id]).length
+  const contentPipItems = trackableResources.length > 0 ? [{
+    id: `content:${chunk.id}`,
+    label: `${completedCount}/${trackableResources.length} resources completed`,
+    percent: Math.round((completedCount / trackableResources.length) * 100),
+  }] : []
+
+  const hasAnything = quizPipItems.length > 0 || timelinePipItems.length > 0 || contentPipItems.length > 0
 
   return (
     <div className={`chunk-card ${collapsed ? 'chunk-card-collapsed' : ''}`}>
@@ -182,12 +195,17 @@ function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest, onMas
         <h2 className="chunk-title">{chunk.title}</h2>
         <div className="chunk-header-right">
           {/* Mastery pip summary — visible even when collapsed */}
-          {(quizPipItems.length > 0 || timelinePipItems.length > 0) && (
+          {user && hasAnything && (
             <div className="chunk-mastery-pips" onClick={e => e.stopPropagation()}>
+              {contentPipItems.length > 0 && (
+                <MasteryPipRow label="Content" items={contentPipItems} />
+              )}
               {quizPipItems.length > 0 && (
                 <MasteryPipRow label="Quizzes" items={quizPipItems} />
               )}
-              <MasteryPipRow label="Timelines" items={timelinePipItems} />
+              {timelinePipItems.length > 0 && (
+                <MasteryPipRow label="Timelines" items={timelinePipItems} />
+              )}
             </div>
           )}
           {chunk.estimated_time && <span className="chunk-time">⏱ {chunk.estimated_time} min</span>}
@@ -295,6 +313,7 @@ export default function ChunkPage() {
   const [course, setCourse]     = useState(null)
   const [chunks, setChunks]     = useState([])
   const [resourcesByChunk, setResourcesByChunk] = useState({})
+  const [chunkTimelineSet, setChunkTimelineSet] = useState(new Set())
   const [loading, setLoading]   = useState(true)
   const [error, setError]       = useState(null)
   const [activeTab, setActiveTab] = useState('content')
@@ -331,6 +350,20 @@ export default function ChunkPage() {
           })
           setResourcesByChunk(grouped)
         }
+
+        // Fetch which chunks have timeline content
+        const chunkIds = chunksData.map(c => c.id)
+        const [{ data: ctData }, { data: cgData }] = await Promise.all([
+          supabase.from('chunk_timelines').select('chunk_id').in('chunk_id', chunkIds),
+          supabase.from('chunk_glossary')
+            .select('chunk_id, glossary_terms(date)')
+            .in('chunk_id', chunkIds),
+        ])
+        const withTimelines = new Set([
+          ...(ctData ?? []).map(r => r.chunk_id),
+          ...(cgData ?? []).filter(r => r.glossary_terms?.date).map(r => r.chunk_id),
+        ])
+        setChunkTimelineSet(withTimelines)
       }
       setLoading(false)
     }
@@ -380,12 +413,31 @@ export default function ChunkPage() {
         percent: quizBest?.[r.id]?.bestPercent ?? null,
       }))
   )
-  const unitTimelinePipItems = chunks.map(c => {
-    const key = `chunk:${c.id}`
-    const modes = timelineBest?.[key]
-    const pct = modes ? Math.max(...Object.values(modes).filter(v => v != null)) : null
-    return { id: key, label: c.title, percent: pct }
-  }).filter(item => item.percent != null || unitQuizPipItems.length > 0)
+  // Timeline pips — only for chunks that have timeline content
+  const unitTimelinePipItems = chunks
+    .filter(c => chunkTimelineSet.has(c.id))
+    .map(c => {
+      const key = `chunk:${c.id}`
+      const modes = timelineBest?.[key]
+      const pct = modes ? Math.max(...Object.values(modes).filter(v => v != null)) : null
+      return { id: key, label: c.title, percent: pct }
+    })
+
+  // Content pips — one per chunk with trackable resources
+  const unitContentPipItems = chunks.map(c => {
+    const chunkResources = resourcesByChunk[c.id] ?? []
+    const trackable = chunkResources.filter(r => {
+      const t = r.type?.toLowerCase()
+      return t === 'video' || t === 'pdf'
+    })
+    if (trackable.length === 0) return null
+    const done = trackable.filter(r => completedResources?.[r.id]).length
+    return {
+      id: `content:${c.id}`,
+      label: `${c.title}: ${done}/${trackable.length}`,
+      percent: Math.round((done / trackable.length) * 100),
+    }
+  }).filter(Boolean)
 
   return (
     <div className="page">
@@ -407,8 +459,11 @@ export default function ChunkPage() {
             <span className="meta-badge">{chunks.length} {chunks.length === 1 ? 'chunk' : 'chunks'}</span>
             {totalResources > 0 && <span className="meta-badge">{totalResources} {totalResources === 1 ? 'resource' : 'resources'}</span>}
           </div>
-          {user && (unitQuizPipItems.length > 0 || unitTimelinePipItems.length > 0) && (
+          {user && (unitContentPipItems.length > 0 || unitQuizPipItems.length > 0 || unitTimelinePipItems.length > 0) && (
             <div className="page-mastery-pips">
+              {unitContentPipItems.length > 0 && (
+                <MasteryPipRow label="Content" items={unitContentPipItems} />
+              )}
               {unitQuizPipItems.length > 0 && (
                 <MasteryPipRow label="Quiz mastery" items={unitQuizPipItems} />
               )}
@@ -454,6 +509,7 @@ export default function ChunkPage() {
                 onMasteryRefresh={refresh}
                 completedResources={completedResources}
                 onToggleComplete={toggleComplete}
+                chunkHasTimeline={chunkTimelineSet.has(chunk.id)}
                 timelineBest={
                   // Pass only the timeline mastery relevant to this chunk
                   Object.fromEntries(
