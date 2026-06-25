@@ -144,6 +144,7 @@ function ResourceItem({ resource, navContext, quizBest, onMasteryRefresh, isComp
 }
 
 function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest, onMasteryRefresh, completedResources, onToggleComplete, chunkHasTimeline }) {
+  const { user } = useAuth()
   const [collapsed, setCollapsed] = useState(true)
   const [chunkTab, setChunkTab]   = useState('resources')
 
