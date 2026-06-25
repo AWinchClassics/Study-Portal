@@ -9,6 +9,7 @@ import PdfViewer from '../components/PdfViewer'
 import FlashcardTabContent from '../components/FlashcardTabContent'
 import TimelineTabContent from '../components/TimelineTabContent'
 import { useMastery, MasteryBadge, MasteryPipRow } from '../hooks/useMastery'
+import { useResourceProgress } from '../hooks/useResourceProgress'
 import { useAuth } from '../context/AuthContext'
 
 const SECTIONS = [
@@ -239,7 +240,7 @@ function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest, onMas
                     <ul className="chunk-resource-list">
                       {byPurpose[section.key].map(r => (
                         <li key={r.id}>
-                          <ResourceItem resource={r} navContext={navContext} quizBest={quizBest} onMasteryRefresh={onMasteryRefresh} />
+                          <ResourceItem resource={r} navContext={navContext} quizBest={quizBest} onMasteryRefresh={onMasteryRefresh} isCompleted={!!completedResources?.[r.id]} onToggleComplete={onToggleComplete} />
                         </li>
                       ))}
                     </ul>
@@ -250,7 +251,7 @@ function ChunkCard({ chunk, resources, navContext, quizBest, timelineBest, onMas
               <ul className="chunk-resource-list">
                 {resources.map(r => (
                   <li key={r.id}>
-                    <ResourceItem resource={r} navContext={navContext} quizBest={quizBest} onMasteryRefresh={onMasteryRefresh} />
+                    <ResourceItem resource={r} navContext={navContext} quizBest={quizBest} onMasteryRefresh={onMasteryRefresh} isCompleted={!!completedResources?.[r.id]} onToggleComplete={onToggleComplete} />
                   </li>
                 ))}
               </ul>
@@ -364,6 +365,12 @@ export default function ChunkPage() {
 
   // Re-fetch mastery when returning to this page (e.g. after completing a quiz)
   useEffect(() => { if (user) refresh() }, [location.key])
+
+  // Resource completion tracking
+  const allResourceIds = allResources.map(r => r.id)
+  const { completed: completedResources, toggleComplete } = useResourceProgress(
+    user ? allResourceIds : []
+  )
 
   if (loading) return <div className="page"><div className="loading-pulse">Loading chunks…</div></div>
   if (error)   return <div className="page"><p className="page-error">Error: {error}</p></div>
