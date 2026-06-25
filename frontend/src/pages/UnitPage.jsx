@@ -158,9 +158,13 @@ export default function UnitPage() {
   // Mastery: quiz scores + unit timeline keys
   const allQuizIds     = Object.values(unitResourceMap).flat().filter(r => r.resourceType === 'quiz').map(r => r.resourceId)
   const unitMasterKeys = units.map(u => `unit:${u.id}`)
+  // Also fetch chunk-level timeline keys so per-chunk tooltip shows timeline %
+  const allChunkIds    = Object.values(unitResourceMap).flat().map(r => r.chunkId)
+  const chunkMasterKeys = [...new Set(allChunkIds)].map(id => `chunk:${id}`)
+  const allTimelineKeys = [...unitMasterKeys, ...chunkMasterKeys]
   const { quizBest, timelineBest } = useMastery({
     resourceIds:        user && allQuizIds.length > 0 ? allQuizIds : [],
-    masterTimelineKeys: user && unitMasterKeys.length > 0 ? unitMasterKeys : [],
+    masterTimelineKeys: user && allTimelineKeys.length > 0 ? allTimelineKeys : [],
   })
 
   async function handleFlashcardTabOpen(tab = 'flashcards') {
@@ -256,8 +260,10 @@ export default function UnitPage() {
                 const quizScores = chunkQuizzes.map(r => quizBest?.[r.resourceId]?.bestPercent).filter(p => p != null)
                 const quizPct    = quizScores.length > 0 ? Math.round(quizScores.reduce((a,b) => a+b,0) / quizScores.length) : null
 
-                // Timeline %: from unit-level key (best effort)
-                const timelinePct = tlPct
+                // Timeline %: prefer chunk-level attempts, fall back to unit-level
+                const chunkTlModes = timelineBest?.[`chunk:${cid}`]
+                const chunkTlPct   = chunkTlModes ? Math.max(...Object.values(chunkTlModes).filter(v => v != null)) : null
+                const timelinePct  = chunkTlPct ?? tlPct
 
                 // Weighted score — only weight dimensions that exist for this chunk
                 const dimensions = []
