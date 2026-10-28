@@ -25,6 +25,7 @@ import TeacherRandomiserPage from './pages/teacher/TeacherRandomiserPage'
 import TeacherGlossaryPage  from './pages/teacher/TeacherGlossaryPage'
 import TeacherTimelinesPage from './pages/teacher/TeacherTimelinesPage'
 import TeacherSourcesPage  from './pages/teacher/TeacherSourcesPage'
+import TeacherActivitiesPage from './pages/teacher/TeacherActivitiesPage'
 
 function StudentLayout({ children }) {
   return (
@@ -49,6 +50,7 @@ function TeacherSection() {
         <Route path="/glossary"          element={<TeacherGlossaryPage />} />
         <Route path="/timelines"         element={<TeacherTimelinesPage />} />
         <Route path="/sources"           element={<TeacherSourcesPage />} />
+        <Route path="/activities"        element={<TeacherActivitiesPage />} />
       </Routes>
     </TeacherRoute>
   )

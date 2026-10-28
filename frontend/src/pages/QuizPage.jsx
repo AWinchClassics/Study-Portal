@@ -4,15 +4,20 @@ import { supabase } from '../supabase'
 import QuizRunner from '../components/QuizRunner'
 import Breadcrumb from '../components/Breadcrumb'
 import { useQuizAttempt } from '../hooks/useQuizAttempt'
+import ActivityRunner from '../activities/ActivityRunner'
+import { useActivityAttempt } from '../activities/useActivityAttempt'
+import { isActivityResource } from '../activities/types'
 
 export default function QuizPage() {
   const { resourceId } = useParams()
   const navigate = useNavigate()
   const location = useLocation()
   const { saveAttempt } = useQuizAttempt()
+  const { saveActivityAttempt } = useActivityAttempt()
 
   const [resource, setResource] = useState(null)
   const [questions, setQuestions] = useState(null)
+  const [activityItems, setActivityItems] = useState(null)
   const [loadError, setLoadError] = useState(null)
   const [completed, setCompleted] = useState(false)
   const [lastScore, setLastScore] = useState(null)
@@ -38,11 +43,30 @@ export default function QuizPage() {
 
       setResource(resourceData)
 
-      // 2. Fetch the quiz JSON from the resource's url field
-      if (!resourceData.url) {
-        setLoadError('This resource has no quiz file attached.')
+      // 2a. Activity-backed quiz (tasks stored in Supabase tables)
+      if (isActivityResource(resourceData)) {
+        const { data: items, error: itemsError } = await supabase
+          .from('activity_items')
+          .select('*, mc_options(*)')
+          .eq('resource_id', resourceId)
+          .order('order_index')
+
+        if (itemsError) {
+          setLoadError(`Could not load quiz: ${itemsError.message}`)
+          return
+        }
+        if (!items?.length) {
+          setLoadError('This quiz has no questions yet.')
+          return
+        }
+        setActivityItems(items.map(it => ({
+          ...it,
+          mc_options: [...(it.mc_options ?? [])].sort((a, b) => a.order_index - b.order_index),
+        })))
         return
       }
+
+      // 2b. Legacy: fetch the quiz JSON from the resource's url field
 
       try {
         const base = import.meta.env.PROD ? '/Study-Portal' : ''
@@ -70,6 +94,12 @@ export default function QuizPage() {
     await saveAttempt(resourceId, score, total)
   }
 
+  async function handleActivityComplete(result) {
+    setLastScore({ score: result.score, total: result.total })
+    setCompleted(true)
+    await saveActivityAttempt(resourceId, result)
+  }
+
   function handleExit() {
     if (unitId) {
       navigate(`/chunks/${unitId}`)
@@ -90,7 +120,7 @@ export default function QuizPage() {
     )
   }
 
-  if (!questions) {
+  if (!questions && !activityItems) {
     return (
       <div className="page">
         <div className="loading-pulse">Loading quiz…</div>
@@ -111,12 +141,21 @@ export default function QuizPage() {
     <div className="page quiz-page">
       <Breadcrumb items={breadcrumbItems} />
 
-      <QuizRunner
-        questions={questions}
-        title={resource?.title ?? 'Quiz'}
-        onComplete={handleComplete}
-        onExit={handleExit}
-      />
+      {activityItems ? (
+        <ActivityRunner
+          items={activityItems}
+          title={resource?.title ?? 'Quiz'}
+          onComplete={handleActivityComplete}
+          onExit={handleExit}
+        />
+      ) : (
+        <QuizRunner
+          questions={questions}
+          title={resource?.title ?? 'Quiz'}
+          onComplete={handleComplete}
+          onExit={handleExit}
+        />
+      )}
     </div>
   )
 }

@@ -6,6 +6,7 @@ const NAV_ITEMS = [
   { to: '/teacher',            label: 'Dashboard',  icon: '⊞', end: true },
   { to: '/teacher/courses',    label: 'Courses',    icon: '📚' },
   { to: '/teacher/resources',  label: 'Resources',  icon: '📦' },
+  { to: '/teacher/activities', label: 'Activities', icon: '✏️' },
   { to: '/teacher/glossary',   label: 'Glossary',   icon: '🃏' },
   { to: '/teacher/timelines',  label: 'Timelines',  icon: '📅' },
   { to: '/teacher/sources',    label: 'Sources',    icon: '📜' },
