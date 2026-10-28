@@ -2,9 +2,11 @@ import { useState, useEffect } from 'react'
 import { supabase } from '../../supabase'
 import { ConfirmButton } from '../../components/teacher/TeacherUI'
 import { useActivityItems } from '../useActivityItems'
-import { CHOICE_TYPES, TEMPLATE_TYPES, ITEM_TYPES } from '../types'
+import { CHOICE_TYPES, TEMPLATE_TYPES, ARRANGE_TYPES, ITEM_TYPES } from '../types'
+import { cleanArrangeConfig, defaultArrangeConfig } from '../arrange'
 import ChoiceEditor, { newChoiceDraft, validateChoiceDraft } from './ChoiceEditor'
 import TemplateEditor, { newTemplateDraft, validateTemplateDraft } from './TemplateEditor'
+import { MatchEditor, OrderEditor, newArrangeDraft, validateArrangeDraft } from './ArrangeEditors'
 
 /**
  * ActivityEditor - teacher authoring for one activity (a resources row).
@@ -19,18 +21,23 @@ function toDraft(item) {
   if (TEMPLATE_TYPES.includes(item.type)) {
     return { ...base, config: { template: '', ...(item.config ?? {}) } }
   }
+  if (ARRANGE_TYPES.includes(item.type)) {
+    return { ...base, config: { ...defaultArrangeConfig(item.type), ...(item.config ?? {}) } }
+  }
   return { ...base, options: item.mc_options.map(o => ({ option_text: o.option_text, is_correct: o.is_correct })) }
 }
 
 function newDraft(type) {
   if (CHOICE_TYPES.includes(type)) return newChoiceDraft(type)
   if (TEMPLATE_TYPES.includes(type)) return newTemplateDraft(type)
+  if (ARRANGE_TYPES.includes(type)) return newArrangeDraft(type)
   throw new Error(`Unknown type ${type}`)
 }
 
 function validate(d) {
   if (CHOICE_TYPES.includes(d.type)) return validateChoiceDraft(d)
   if (TEMPLATE_TYPES.includes(d.type)) return validateTemplateDraft(d)
+  if (ARRANGE_TYPES.includes(d.type)) return validateArrangeDraft(d)
   return ['Unsupported type']
 }
 
@@ -56,6 +63,8 @@ function ItemCard({ draft, index, count, errors, saving, dirty, onChange, onSave
       {TEMPLATE_TYPES.includes(draft.type) && (
         <TemplateEditor draft={draft} onChange={onChange} errors={errors} />
       )}
+      {draft.type === 'match' && <MatchEditor draft={draft} onChange={onChange} errors={errors} />}
+      {draft.type === 'order' && <OrderEditor draft={draft} onChange={onChange} errors={errors} />}
     </div>
   )
 }
@@ -103,6 +112,7 @@ export default function ActivityEditor({ resourceId, onStatus }) {
       }
       // Only template types send config, so choice-task saves never depend on the config column
       if (TEMPLATE_TYPES.includes(d.type)) row.config = d.config
+      if (ARRANGE_TYPES.includes(d.type)) row.config = cleanArrangeConfig(d.type, d.config)
       if (itemId) {
         const { error } = await supabase.from('activity_items').update(row).eq('id', itemId)
         if (error) throw error

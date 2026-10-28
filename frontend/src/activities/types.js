@@ -6,9 +6,13 @@
  * constraint on activity_items.type.
  */
 import { TEMPLATE_TYPES } from './template'
+import { ARRANGE_TYPES } from './arrange'
 
 export const CHOICE_TYPES = ['single', 'multi', 'tf']
-export { TEMPLATE_TYPES }
+export { TEMPLATE_TYPES, ARRANGE_TYPES }
+
+/** Types whose content lives in activity_items.config (not mc_options). */
+export const CONFIG_TYPES = [...TEMPLATE_TYPES, ...ARRANGE_TYPES]
 
 export const ITEM_TYPES = {
   single:   { label: 'Single choice',     icon: '◉', hint: 'Pick one correct answer' },
@@ -16,6 +20,8 @@ export const ITEM_TYPES = {
   tf:       { label: 'True / False',      icon: '⇄', hint: 'Decide if a statement is true' },
   cloze:    { label: 'Fill in the blank', icon: '▭', hint: 'Type the missing words' },
   dropdown: { label: 'Dropdown in text',  icon: '▾', hint: 'Choose the missing words from lists' },
+  match:    { label: 'Matching',          icon: '⇌', hint: 'Match items from two lists' },
+  order:    { label: 'Put in order',      icon: '↕', hint: 'Arrange items in the correct order' },
 }
 
 /** Marker stored in resources.url for activity-backed quizzes. */

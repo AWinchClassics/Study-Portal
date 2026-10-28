@@ -1,7 +1,10 @@
 import { useState, useMemo, useCallback, useRef, useEffect } from 'react'
 import ChoiceItem from './items/ChoiceItem'
 import TemplateItem from './items/TemplateItem'
-import { CHOICE_TYPES, TEMPLATE_TYPES, ITEM_TYPES } from './types'
+import MatchItem from './items/MatchItem'
+import OrderItem from './items/OrderItem'
+import { CHOICE_TYPES, TEMPLATE_TYPES, ARRANGE_TYPES, ITEM_TYPES } from './types'
+import { shuffle, shuffleDifferent, matchPool } from './arrange'
 import { parseTemplate } from './template'
 import { isItemCorrect, hasAnswer, describeAnswer, scoreRun } from './scoring'
 
@@ -20,15 +23,6 @@ import { isItemCorrect, hasAnswer, describeAnswer, scoreRun } from './scoring'
 
 const AUTO_ADVANCE_MS = 900
 
-function shuffle(arr) {
-  const a = [...arr]
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[a[i], a[j]] = [a[j], a[i]]
-  }
-  return a
-}
-
 function buildOrders(items) {
   const orders = {}
   items.forEach(it => {
@@ -38,6 +32,8 @@ function buildOrders(items) {
       return
     }
     if (TEMPLATE_TYPES.includes(it.type)) { orders[it.id] = null; return }
+    if (it.type === 'match') { orders[it.id] = shuffle(matchPool(it.config)); return }
+    if (it.type === 'order') { orders[it.id] = shuffleDifferent(it.config?.items ?? []); return }
     const ids = it.mc_options.map(o => o.id)
     // Keep true/false in authored order (True, then False); shuffle the rest
     orders[it.id] = it.type === 'tf' ? ids : shuffle(ids)
@@ -100,7 +96,11 @@ export default function ActivityRunner({ items, title, onComplete, onExit }) {
   }
 
   function handleCheck() {
-    if (hideFeedback) { advance(answers); return }
+    // An untouched ordering task is answered by the shuffled list on screen - commit it.
+    const resp = item.type === 'order' && !response.length ? orders[item.id] : response
+    const next = { ...answers, [item.id]: resp }
+    setAnswers(next)
+    if (hideFeedback) { advance(next); return }
     setChecked(true)
   }
 
@@ -109,6 +109,12 @@ export default function ActivityRunner({ items, title, onComplete, onExit }) {
   }
 
   function renderItem() {
+    if (item.type === 'match') {
+      return <MatchItem key={item.id} item={item} pool={orders[item.id]} selected={response} checked={checked} onChange={handleChange} />
+    }
+    if (item.type === 'order') {
+      return <OrderItem key={item.id} item={item} initial={orders[item.id]} selected={response} checked={checked} onChange={handleChange} />
+    }
     if (TEMPLATE_TYPES.includes(item.type)) {
       return (
         <TemplateItem
@@ -160,7 +166,7 @@ export default function ActivityRunner({ items, title, onComplete, onExit }) {
             {items.map((it, i) => {
               const r = result.responses[i]
               const { yours, correct } = describeAnswer(it, r.response)
-              const heading = it.prompt || (TEMPLATE_TYPES.includes(it.type) ? ITEM_TYPES[it.type]?.label : '')
+              const heading = it.prompt || ITEM_TYPES[it.type]?.label || ''
               return (
                 <div key={it.id} className={`qr-summary-item ${r.is_correct ? 'qr-correct' : 'qr-incorrect'}`}>
                   <div className="qr-summary-q"><span className="qr-summary-num">{i + 1}</span>{heading}</div>
@@ -190,6 +196,7 @@ export default function ActivityRunner({ items, title, onComplete, onExit }) {
   const instant = INSTANT_TYPES.includes(item.type)
   const canCheck = hasAnswer(item, response)
   const isTemplate = TEMPLATE_TYPES.includes(item.type)
+  const isArrange = ARRANGE_TYPES.includes(item.type)
   const autoAdvancing = checked && instant && !item.explanation
 
   return (
@@ -231,8 +238,8 @@ export default function ActivityRunner({ items, title, onComplete, onExit }) {
           <div className={`qr-feedback ${correct ? 'qr-feedback-correct' : 'qr-feedback-incorrect'}`}>
             {correct
               ? 'Correct!'
-              : isTemplate
-                ? 'Incorrect — the right answers are shown next to your answers above.'
+              : isTemplate || isArrange
+                ? 'Incorrect — the right answers are shown above.'
                 : 'Incorrect — the correct answer is highlighted above.'}
             {item.explanation && <div className="act-explanation">{item.explanation}</div>}
           </div>

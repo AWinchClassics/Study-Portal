@@ -5,6 +5,7 @@
  *   cloze / dropdown     -> array of strings, one per blank
  */
 import { TEMPLATE_TYPES, gradeTemplate, fillTemplate } from './template'
+import { ARRANGE_TYPES, gradeArrange } from './arrange'
 
 const CHOICE = ['single', 'multi', 'tf']
 
@@ -17,11 +18,14 @@ export function isItemCorrect(item, response) {
       && correct.every((id, i) => id === chosen[i])
   }
   if (TEMPLATE_TYPES.includes(item.type)) return gradeTemplate(item, response).allCorrect
+  if (ARRANGE_TYPES.includes(item.type)) return gradeArrange(item, response).allCorrect
   return false
 }
 
 /** Has the student entered anything for this task yet? */
 export function hasAnswer(item, response) {
+  if (item.type === 'order') return true // the shuffled list on screen already is an answer
+  if (item.type === 'match') return (response ?? []).some(v => String(v ?? '') !== '')
   if (TEMPLATE_TYPES.includes(item.type)) return (response ?? []).some(v => String(v ?? '').trim() !== '')
   return (response ?? []).length > 0
 }
@@ -33,6 +37,21 @@ export function describeAnswer(item, response) {
     return {
       yours: filled ? fillTemplate(item, b => `[${(response ?? [])[b.index]?.toString().trim() || '—'}]`) : 'Skipped',
       correct: fillTemplate(item, b => `[${b.kind === 'dropdown' ? b.correct : b.answers[0]}]`),
+    }
+  }
+  if (item.type === 'match') {
+    const pairs = item.config?.pairs ?? []
+    return {
+      yours: hasAnswer(item, response)
+        ? pairs.map((p, i) => `${p.left} → ${(response ?? [])[i] || '—'}`).join('; ')
+        : 'Skipped',
+      correct: pairs.map(p => `${p.left} → ${p.right}`).join('; '),
+    }
+  }
+  if (item.type === 'order') {
+    return {
+      yours: (response ?? []).length ? response.join(' → ') : 'Skipped',
+      correct: (item.config?.items ?? []).join(' → '),
     }
   }
   const byId = Object.fromEntries((item.mc_options ?? []).map(o => [o.id, o.option_text]))
@@ -54,6 +73,7 @@ export function scoreRun(items, responsesById) {
     if (correct) score += pts
     const row = { item_id: item.id, type: item.type, response, is_correct: correct }
     if (TEMPLATE_TYPES.includes(item.type)) row.blanks = gradeTemplate(item, response).blanks
+    if (ARRANGE_TYPES.includes(item.type)) row.flags = gradeArrange(item, response).flags
     return row
   })
   const percent = total > 0 ? Math.round((score / total) * 100) : 0
