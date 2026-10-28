@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback } from 'react'
+import { useState, useMemo, useCallback, useRef, useEffect } from 'react'
 import ChoiceItem from './items/ChoiceItem'
 import { CHOICE_TYPES, ITEM_TYPES } from './types'
 import { isItemCorrect, scoreRun } from './scoring'
@@ -8,9 +8,15 @@ import { isItemCorrect, scoreRun } from './scoring'
  * Same contract as QuizRunner: title, onComplete(result), onExit().
  * result = { score, total, percent, responses }
  *
- * Flow per task: answer -> "Check answer" -> feedback (+ explanation) -> "Next".
+ * Behaviour matches the original quiz runner where task types overlap:
+ *  - single / tf : click an answer -> instant feedback -> auto-advance
+ *                  (waits for "Next" instead if the task has an explanation)
+ *  - multi       : select options -> "Check answer" -> feedback -> "Next"
+ *  - settings    : shuffle question order, hide feedback (speed mode)
  * Task-type players live in ./items; add a case in renderItem() for new types.
  */
+
+const AUTO_ADVANCE_MS = 900
 
 function shuffle(arr) {
   const a = [...arr]
@@ -31,37 +37,63 @@ function buildOrders(items) {
   return orders
 }
 
+// Types that are checked the moment an answer is clicked
+const INSTANT_TYPES = ['single', 'tf']
+
 export default function ActivityRunner({ items, title, onComplete, onExit }) {
   const [run, setRun] = useState(0) // bump to restart
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const orders = useMemo(() => buildOrders(items), [items, run])
+  const [shuffleQ, setShuffleQ] = useState(false)
+  const [hideFeedback, setHideFeedback] = useState(false)
+  const [settingsOpen, setSettingsOpen] = useState(false)
 
-  const [index, setIndex]       = useState(0)
-  const [answers, setAnswers]   = useState({})   // item.id -> response
-  const [checked, setChecked]   = useState(false)
-  const [result, setResult]     = useState(null)
+  const orders = useMemo(() => buildOrders(items), [items, run]) // eslint-disable-line react-hooks/exhaustive-deps
+  const seq = useMemo(() => (shuffleQ ? shuffle(items) : items), [items, shuffleQ, run]) // eslint-disable-line react-hooks/exhaustive-deps
 
-  const total = items.length
-  const item  = items[index]
+  const [index, setIndex]     = useState(0)
+  const [answers, setAnswers] = useState({})   // item.id -> response
+  const [checked, setChecked] = useState(false)
+  const [result, setResult]   = useState(null)
+  const timer = useRef(null)
+
+  useEffect(() => () => clearTimeout(timer.current), [])
+
+  const total = seq.length
+  const item  = seq[index]
   const response = answers[item?.id] ?? []
 
   const restart = useCallback(() => {
+    clearTimeout(timer.current)
     setRun(r => r + 1); setIndex(0); setAnswers({}); setChecked(false); setResult(null)
   }, [])
 
-  function setResponse(val) {
-    setAnswers(a => ({ ...a, [item.id]: val }))
-  }
-
-  function handleNext() {
+  // Move on from the current task. nextAnswers is passed in so the final
+  // score never reads a stale state value.
+  function advance(nextAnswers) {
     if (index + 1 >= total) {
-      const r = scoreRun(items, answers)
+      const r = scoreRun(items, nextAnswers)
       setResult(r)
       onComplete?.(r)
     } else {
       setIndex(i => i + 1)
       setChecked(false)
     }
+  }
+
+  function handleChange(val) {
+    const next = { ...answers, [item.id]: val }
+    setAnswers(next)
+    if (!INSTANT_TYPES.includes(item.type)) return // multi waits for "Check answer"
+
+    if (hideFeedback) { advance(next); return }
+    setChecked(true)
+    if (!item.explanation) {
+      timer.current = setTimeout(() => advance(next), AUTO_ADVANCE_MS)
+    }
+  }
+
+  function handleCheck() {
+    if (hideFeedback) { advance(answers); return }
+    setChecked(true)
   }
 
   function renderItem() {
@@ -72,7 +104,7 @@ export default function ActivityRunner({ items, title, onComplete, onExit }) {
           optionOrder={orders[item.id]}
           selected={response}
           checked={checked}
-          onChange={setResponse}
+          onChange={handleChange}
         />
       )
     }
@@ -131,7 +163,9 @@ export default function ActivityRunner({ items, title, onComplete, onExit }) {
 
   // ── Question ───────────────────────────────────────────────
   const correct = checked && isItemCorrect(item, response)
+  const instant = INSTANT_TYPES.includes(item.type)
   const canCheck = response.length > 0
+  const autoAdvancing = checked && instant && !item.explanation
 
   return (
     <div className="qr-shell">
@@ -139,21 +173,38 @@ export default function ActivityRunner({ items, title, onComplete, onExit }) {
         <span className="qr-title">{title}</span>
         <div className="qr-header-right">
           <span className="qr-pill">Q {index + 1} / {total}</span>
+          <button className="qr-settings-btn" onClick={() => setSettingsOpen(o => !o)} aria-label="Quiz settings">⚙</button>
         </div>
       </div>
+
+      {settingsOpen && (
+        <div className="qr-settings-panel">
+          <label className="qr-toggle-label">
+            <input type="checkbox" checked={shuffleQ}
+              onChange={e => { setShuffleQ(e.target.checked); restart() }} />
+            Shuffle question order
+          </label>
+          <label className="qr-toggle-label">
+            <input type="checkbox" checked={hideFeedback}
+              onChange={e => setHideFeedback(e.target.checked)} />
+            Hide feedback (speed mode)
+          </label>
+        </div>
+      )}
+
       <div className="qr-progress">
         <div className="qr-progress-fill" style={{ width: `${(index / total) * 100}%` }} />
       </div>
 
       <div className="qr-body">
-        <span className="act-type-tag">{ITEM_TYPES[item.type]?.label}</span>
+        {item.type !== 'single' && <span className="act-type-tag">{ITEM_TYPES[item.type]?.label}</span>}
         <p className="qr-question">{item.prompt}</p>
 
         {renderItem()}
 
         {checked && (
           <div className={`qr-feedback ${correct ? 'qr-feedback-correct' : 'qr-feedback-incorrect'}`}>
-            {correct ? 'Correct!' : 'Not quite — the correct answer is highlighted above.'}
+            {correct ? 'Correct!' : 'Incorrect — the correct answer is highlighted above.'}
             {item.explanation && <div className="act-explanation">{item.explanation}</div>}
           </div>
         )}
@@ -161,16 +212,16 @@ export default function ActivityRunner({ items, title, onComplete, onExit }) {
         <div className="qr-actions">
           <button className="qr-btn qr-btn-ghost" onClick={onExit}>Exit</button>
           {!checked && (
-            <>
-              <button className="qr-btn qr-btn-secondary" onClick={() => { setChecked(true) }} disabled={!canCheck}
-                style={{ opacity: canCheck ? 1 : 0.5 }}>
-                Check answer
-              </button>
-              <button className="qr-btn qr-btn-ghost" onClick={handleNext}>Skip</button>
-            </>
+            <button className="qr-btn qr-btn-secondary" onClick={() => advance(answers)}>Skip</button>
           )}
-          {checked && (
-            <button className="qr-btn qr-btn-primary" onClick={handleNext}>
+          {!checked && !instant && (
+            <button className="qr-btn qr-btn-primary" onClick={handleCheck} disabled={!canCheck}
+              style={{ opacity: canCheck ? 1 : 0.5 }}>
+              Check answer
+            </button>
+          )}
+          {checked && !autoAdvancing && (
+            <button className="qr-btn qr-btn-primary" onClick={() => advance(answers)}>
               {index + 1 >= total ? 'Finish' : 'Next →'}
             </button>
           )}
