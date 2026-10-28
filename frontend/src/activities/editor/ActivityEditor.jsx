@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react'
 import { supabase } from '../../supabase'
 import { ConfirmButton } from '../../components/teacher/TeacherUI'
 import { useActivityItems } from '../useActivityItems'
-import { CHOICE_TYPES, ITEM_TYPES } from '../types'
+import { CHOICE_TYPES, TEMPLATE_TYPES, ITEM_TYPES } from '../types'
 import ChoiceEditor, { newChoiceDraft, validateChoiceDraft } from './ChoiceEditor'
+import TemplateEditor, { newTemplateDraft, validateTemplateDraft } from './TemplateEditor'
 
 /**
  * ActivityEditor - teacher authoring for one activity (a resources row).
@@ -11,20 +12,25 @@ import ChoiceEditor, { newChoiceDraft, validateChoiceDraft } from './ChoiceEdito
  */
 
 function toDraft(item) {
-  return {
+  const base = {
     id: item.id, type: item.type, prompt: item.prompt,
     explanation: item.explanation ?? '', points: item.points ?? 1,
-    options: item.mc_options.map(o => ({ option_text: o.option_text, is_correct: o.is_correct })),
   }
+  if (TEMPLATE_TYPES.includes(item.type)) {
+    return { ...base, config: { template: '', ...(item.config ?? {}) } }
+  }
+  return { ...base, options: item.mc_options.map(o => ({ option_text: o.option_text, is_correct: o.is_correct })) }
 }
 
 function newDraft(type) {
   if (CHOICE_TYPES.includes(type)) return newChoiceDraft(type)
+  if (TEMPLATE_TYPES.includes(type)) return newTemplateDraft(type)
   throw new Error(`Unknown type ${type}`)
 }
 
 function validate(d) {
   if (CHOICE_TYPES.includes(d.type)) return validateChoiceDraft(d)
+  if (TEMPLATE_TYPES.includes(d.type)) return validateTemplateDraft(d)
   return ['Unsupported type']
 }
 
@@ -46,6 +52,9 @@ function ItemCard({ draft, index, count, errors, saving, dirty, onChange, onSave
       </div>
       {CHOICE_TYPES.includes(draft.type) && (
         <ChoiceEditor draft={draft} onChange={onChange} errors={errors} />
+      )}
+      {TEMPLATE_TYPES.includes(draft.type) && (
+        <TemplateEditor draft={draft} onChange={onChange} errors={errors} />
       )}
     </div>
   )
@@ -92,6 +101,8 @@ export default function ActivityEditor({ resourceId, onStatus }) {
         resource_id: resourceId, type: d.type, prompt: d.prompt.trim(),
         explanation: d.explanation?.trim() || null, points: d.points ?? 1,
       }
+      // Only template types send config, so choice-task saves never depend on the config column
+      if (TEMPLATE_TYPES.includes(d.type)) row.config = d.config
       if (itemId) {
         const { error } = await supabase.from('activity_items').update(row).eq('id', itemId)
         if (error) throw error
@@ -104,13 +115,15 @@ export default function ActivityEditor({ resourceId, onStatus }) {
         if (error) throw error
         itemId = data.id
       }
-      const { error: optErr } = await supabase.from('mc_options').insert(
-        d.options.map((o, i) => ({
-          activity_item_id: itemId, option_text: o.option_text.trim(),
-          is_correct: o.is_correct, order_index: i,
-        }))
-      )
-      if (optErr) throw optErr
+      if (CHOICE_TYPES.includes(d.type)) {
+        const { error: optErr } = await supabase.from('mc_options').insert(
+          d.options.map((o, i) => ({
+            activity_item_id: itemId, option_text: o.option_text.trim(),
+            is_correct: o.is_correct, order_index: i,
+          }))
+        )
+        if (optErr) throw optErr
+      }
       onStatus?.({ type: 'success', msg: 'Task saved.' })
       await reload()
     } catch (e) {

@@ -1,7 +1,9 @@
 import { useState, useMemo, useCallback, useRef, useEffect } from 'react'
 import ChoiceItem from './items/ChoiceItem'
-import { CHOICE_TYPES, ITEM_TYPES } from './types'
-import { isItemCorrect, scoreRun } from './scoring'
+import TemplateItem from './items/TemplateItem'
+import { CHOICE_TYPES, TEMPLATE_TYPES, ITEM_TYPES } from './types'
+import { parseTemplate } from './template'
+import { isItemCorrect, hasAnswer, describeAnswer, scoreRun } from './scoring'
 
 /**
  * ActivityRunner - student-facing player for activity-backed quizzes.
@@ -30,6 +32,12 @@ function shuffle(arr) {
 function buildOrders(items) {
   const orders = {}
   items.forEach(it => {
+    if (it.type === 'dropdown') {
+      // one shuffled option list per blank, so the correct answer isn't always first
+      orders[it.id] = parseTemplate(it.config?.template, 'dropdown').blanks.map(b => shuffle(b.options))
+      return
+    }
+    if (TEMPLATE_TYPES.includes(it.type)) { orders[it.id] = null; return }
     const ids = it.mc_options.map(o => o.id)
     // Keep true/false in authored order (True, then False); shuffle the rest
     orders[it.id] = it.type === 'tf' ? ids : shuffle(ids)
@@ -96,7 +104,24 @@ export default function ActivityRunner({ items, title, onComplete, onExit }) {
     setChecked(true)
   }
 
+  function handleSubmit() {
+    if (!checked && hasAnswer(item, response)) handleCheck()
+  }
+
   function renderItem() {
+    if (TEMPLATE_TYPES.includes(item.type)) {
+      return (
+        <TemplateItem
+          key={item.id}
+          item={item}
+          orders={orders[item.id]}
+          selected={response}
+          checked={checked}
+          onChange={handleChange}
+          onSubmit={handleSubmit}
+        />
+      )
+    }
     if (CHOICE_TYPES.includes(item.type)) {
       return (
         <ChoiceItem
@@ -134,12 +159,11 @@ export default function ActivityRunner({ items, title, onComplete, onExit }) {
             <h3 className="qr-summary-heading">Answer review</h3>
             {items.map((it, i) => {
               const r = result.responses[i]
-              const byId = Object.fromEntries(it.mc_options.map(o => [o.id, o.option_text]))
-              const yours = r.response.length ? r.response.map(id => byId[id]).join(', ') : 'Skipped'
-              const correct = it.mc_options.filter(o => o.is_correct).map(o => o.option_text).join(', ')
+              const { yours, correct } = describeAnswer(it, r.response)
+              const heading = it.prompt || (TEMPLATE_TYPES.includes(it.type) ? ITEM_TYPES[it.type]?.label : '')
               return (
                 <div key={it.id} className={`qr-summary-item ${r.is_correct ? 'qr-correct' : 'qr-incorrect'}`}>
-                  <div className="qr-summary-q"><span className="qr-summary-num">{i + 1}</span>{it.prompt}</div>
+                  <div className="qr-summary-q"><span className="qr-summary-num">{i + 1}</span>{heading}</div>
                   <div className="qr-summary-answers">
                     <div className="qr-summary-row">
                       <span className="qr-summary-label">Your answer</span>
@@ -164,7 +188,8 @@ export default function ActivityRunner({ items, title, onComplete, onExit }) {
   // ── Question ───────────────────────────────────────────────
   const correct = checked && isItemCorrect(item, response)
   const instant = INSTANT_TYPES.includes(item.type)
-  const canCheck = response.length > 0
+  const canCheck = hasAnswer(item, response)
+  const isTemplate = TEMPLATE_TYPES.includes(item.type)
   const autoAdvancing = checked && instant && !item.explanation
 
   return (
@@ -198,13 +223,17 @@ export default function ActivityRunner({ items, title, onComplete, onExit }) {
 
       <div className="qr-body">
         {item.type !== 'single' && <span className="act-type-tag">{ITEM_TYPES[item.type]?.label}</span>}
-        <p className="qr-question">{item.prompt}</p>
+        {item.prompt && <p className="qr-question">{item.prompt}</p>}
 
         {renderItem()}
 
         {checked && (
           <div className={`qr-feedback ${correct ? 'qr-feedback-correct' : 'qr-feedback-incorrect'}`}>
-            {correct ? 'Correct!' : 'Incorrect — the correct answer is highlighted above.'}
+            {correct
+              ? 'Correct!'
+              : isTemplate
+                ? 'Incorrect — the right answers are shown next to your answers above.'
+                : 'Incorrect — the correct answer is highlighted above.'}
             {item.explanation && <div className="act-explanation">{item.explanation}</div>}
           </div>
         )}
