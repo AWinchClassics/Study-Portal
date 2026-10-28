@@ -9,6 +9,10 @@
  *                 poly:   points:[[x,y],...] }] }
  *               response: array of selected region ids. Correct = exactly the correct set.
  *
+ *   imagefind   config: same regions as imageclick (correct flag ignored). Each region's NAME is
+ *               shown as a prompt; the student taps where it is. Every region is a target.
+ *               response: array aligned to regions: the region id tapped for each prompt, '' if none.
+ *
  *   imagelabel  config: { image, mode:'drag'|'type', pins:[{ id, x, y, answer }],
  *                 distractors:[] (drag only), typo, caseSensitive (type only) }
  *               drag: answer = the label text.  type: answer = accepted answers, "a|b".
@@ -16,7 +20,7 @@
  */
 import { isBlankCorrect } from './template'
 
-export const IMAGE_TYPES = ['imageclick', 'imagelabel']
+export const IMAGE_TYPES = ['imageclick', 'imagelabel', 'imagefind']
 export const IMAGE_BUCKET = 'activity-images'
 
 const clean = s => String(s ?? '').trim()
@@ -26,7 +30,7 @@ let seq = 0
 export const newId = () => `${Date.now().toString(36)}${(seq++).toString(36)}${Math.random().toString(36).slice(2, 5)}`
 
 export function defaultImageConfig(type) {
-  return type === 'imageclick'
+  return type === 'imageclick' || type === 'imagefind'
     ? { image: null, regions: [] }
     : { image: null, mode: 'drag', pins: [], distractors: [], typo: true, caseSensitive: false }
 }
@@ -67,7 +71,7 @@ export function regionCentre(r) {
 
 export function cleanImageConfig(type, cfg) {
   const image = cfg?.image ? { url: cfg.image.url, w: cfg.image.w, h: cfg.image.h, alt: clean(cfg.image.alt) } : null
-  if (type === 'imageclick') {
+  if (type === 'imageclick' || type === 'imagefind') {
     return {
       image,
       regions: (cfg?.regions ?? []).map(r => {
@@ -92,17 +96,27 @@ export function validateImageConfig(type, raw) {
   const errs = []
   const cfg = cleanImageConfig(type, raw)
   if (!cfg.image?.url) { errs.push('Upload an image first.'); return errs }
+  if (type === 'imagefind') {
+    const names = cfg.regions.map(r => r.name)
+    if (cfg.regions.length < 2) errs.push('Draw at least two regions to find.')
+    if (names.some(n => !n)) errs.push('Give every region a name - it is the prompt students see.')
+    if (new Set(names).size !== names.length) errs.push('Region names must all be different.')
+  }
   if (type === 'imageclick') {
     const { regions } = cfg
     if (!regions.length) errs.push('Draw at least one region on the image.')
     if (!regions.some(r => r.correct)) errs.push('Mark at least one region as correct.')
     if (regions.some(r => !r.name)) errs.push('Give every region a name (shown in the answer review).')
+  }
+  if (type !== 'imagelabel') {
+    const regions = cfg.regions
     const bad = regions.some(r =>
       (r.shape === 'rect' && (r.w < 0.5 || r.h < 0.5)) ||
       (r.shape === 'circle' && (r.rx < 0.3 || r.ry < 0.3)) ||
       (r.shape === 'poly' && r.points.length < 3))
     if (bad) errs.push('One of the regions is too small - redraw or delete it.')
-  } else {
+  }
+  if (type === 'imagelabel') {
     const { pins, distractors, mode } = cfg
     if (pins.length < 1) errs.push('Place at least one pin on the image.')
     if (pins.some(p => !p.answer)) errs.push('Every pin needs an answer.')
@@ -122,6 +136,11 @@ export const acceptedAnswers = pin => String(pin.answer ?? '').split('|').map(cl
 /** Per-part grading. */
 export function gradeImage(item, response) {
   const cfg = item.config ?? {}
+  if (item.type === 'imagefind') {
+    const regions = cfg.regions ?? []
+    const flags = regions.map((r, i) => (response ?? [])[i] === r.id)
+    return { flags, allCorrect: regions.length > 0 && flags.every(Boolean) }
+  }
   if (item.type === 'imageclick') {
     const chosen = new Set(response ?? [])
     const regions = cfg.regions ?? []

@@ -73,7 +73,7 @@ function ItemCard({ draft, index, count, errors, saving, dirty, onChange, onSave
       {draft.type === 'match' && <MatchEditor draft={draft} onChange={onChange} errors={errors} />}
       {draft.type === 'order' && <OrderEditor draft={draft} onChange={onChange} errors={errors} />}
       {draft.type === 'categorise' && <CategoriseEditor draft={draft} onChange={onChange} errors={errors} />}
-      {draft.type === 'imageclick' && <ImageClickEditor draft={draft} onChange={onChange} errors={errors} />}
+      {(draft.type === 'imageclick' || draft.type === 'imagefind') && <ImageClickEditor draft={draft} onChange={onChange} errors={errors} />}
       {draft.type === 'imagelabel' && <ImageLabelEditor draft={draft} onChange={onChange} errors={errors} />}
     </div>
   )

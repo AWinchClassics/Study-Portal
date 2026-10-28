@@ -118,6 +118,7 @@ export function ImageClickEditor({ draft, onChange, errors }) {
   const [sel, setSel] = useState(null)
   const [preview, setPreview] = useState(null)     // region being drawn
   const [poly, setPoly] = useState(null)           // { points, cursor } while building a polygon
+  const find = draft.type === 'imagefind'
   const cfgRef = useRef(cfg); cfgRef.current = cfg
   const draftRef = useRef(draft); draftRef.current = draft
 
@@ -239,7 +240,7 @@ export function ImageClickEditor({ draft, onChange, errors }) {
 
   return (
     <Frame draft={draft} onChange={onChange} errors={errors}
-      placeholder="Instruction, e.g. Click on the Acropolis.">
+      placeholder={find ? 'Instruction, e.g. Tap where each place is on the map.' : 'Instruction, e.g. Click on the Acropolis.'}>
       <div className="act-tools">
         {TOOLS.map(([t, label]) => (
           <button key={t} type="button" className={`t-btn ${tool === t ? 't-btn-primary' : 't-btn-secondary'}`}
@@ -272,14 +273,16 @@ export function ImageClickEditor({ draft, onChange, errors }) {
               <span className="act-pin-num">{i + 1}</span>
               <input className="t-input" value={r.name} placeholder="Region name"
                 onChange={e => patchRegion(r.id, { name: e.target.value })} />
-              <label className="act-correct-toggle">
-                <input type="checkbox" checked={!!r.correct} onChange={e => patchRegion(r.id, { correct: e.target.checked })} /> Correct
-              </label>
+              {!find && (
+                <label className="act-correct-toggle">
+                  <input type="checkbox" checked={!!r.correct} onChange={e => patchRegion(r.id, { correct: e.target.checked })} /> Correct
+                </label>
+              )}
               <button type="button" className="t-btn t-btn-danger-ghost" title="Delete region"
                 onClick={ev => { ev.stopPropagation(); setRegions(regions.filter(x => x.id !== r.id)); if (sel === r.id) setSel(null) }}>✕</button>
             </div>
           ))}
-          <p className="act-img-hint">Tick “Correct” on every region students should select. Untick regions are decoys — students lose the mark if they pick one.</p>
+          <p className="act-img-hint">{find ? 'Each region name pops up as a prompt (in random order); students tap where it is. Name regions exactly as you want them shown.' : ''}{!find && 'Tick “Correct” on every region students should select. Untick regions are decoys — students lose the mark if they pick one.'}</p>
         </div>
       )}
     </Frame>

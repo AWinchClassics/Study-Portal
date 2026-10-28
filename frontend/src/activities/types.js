@@ -25,6 +25,7 @@ export const ITEM_TYPES = {
   order:    { label: 'Put in order',      icon: '↕', hint: 'Arrange items in the correct order' },
   categorise: { label: 'Categorise',      icon: '▤', hint: 'Sort items into categories' },
   imageclick: { label: 'Click on image',  icon: '⌖', hint: 'Click the correct part of an image or map' },
+  imagefind:  { label: 'Find on image',   icon: '🔎', hint: 'Labels pop up one by one - tap where each is' },
   imagelabel: { label: 'Label image',     icon: '📍', hint: 'Label parts of an image (drag or type)' },
 }
 

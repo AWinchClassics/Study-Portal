@@ -27,7 +27,7 @@ export function isItemCorrect(item, response) {
 /** Has the student entered anything for this task yet? */
 export function hasAnswer(item, response) {
   if (item.type === 'order') return true // the shuffled list on screen already is an answer
-  if (item.type === 'match' || item.type === 'categorise' || item.type === 'imagelabel') return (response ?? []).some(v => String(v ?? '').trim() !== '')
+  if (item.type === 'match' || item.type === 'categorise' || item.type === 'imagelabel' || item.type === 'imagefind') return (response ?? []).some(v => String(v ?? '').trim() !== '')
   if (TEMPLATE_TYPES.includes(item.type)) return (response ?? []).some(v => String(v ?? '').trim() !== '')
   return (response ?? []).length > 0
 }
@@ -59,6 +59,14 @@ export function describeAnswer(item, response) {
     return {
       yours: hasAnswer(item, response) ? group((it, i) => (response ?? [])[i]) : 'Skipped',
       correct: group(it => it.cat),
+    }
+  }
+  if (item.type === 'imagefind') {
+    const regions = item.config?.regions ?? []
+    const nameOf = id => regions.find(r => r.id === id)?.name
+    return {
+      yours: hasAnswer(item, response) ? regions.map((r, i) => `${r.name} → ${nameOf((response ?? [])[i]) || '—'}`).join('; ') : 'Skipped',
+      correct: regions.map(r => `${r.name} → ${r.name}`).join('; '),
     }
   }
   if (item.type === 'imageclick') {

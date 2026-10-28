@@ -6,6 +6,7 @@ import OrderItem from './items/OrderItem'
 import CategoriseItem from './items/CategoriseItem'
 import ImageClickItem from './items/ImageClickItem'
 import ImageLabelItem from './items/ImageLabelItem'
+import ImageFindItem from './items/ImageFindItem'
 import { IMAGE_TYPES } from './types'
 import { labelPool } from './image'
 import { CHOICE_TYPES, TEMPLATE_TYPES, ARRANGE_TYPES, ITEM_TYPES } from './types'
@@ -39,6 +40,7 @@ function buildOrders(items) {
     if (TEMPLATE_TYPES.includes(it.type)) { orders[it.id] = null; return }
     if (it.type === 'match') { orders[it.id] = shuffle(matchPool(it.config)); return }
     if (it.type === 'categorise') { orders[it.id] = shuffle(categoriseItems(it.config).map((_, i) => i)); return }
+    if (it.type === 'imagefind') { orders[it.id] = shuffle((it.config?.regions ?? []).map((_, i) => i)); return }
     if (it.type === 'imageclick') { orders[it.id] = null; return }
     if (it.type === 'imagelabel') { orders[it.id] = it.config?.mode === 'type' ? null : shuffle(labelPool(it.config)); return }
     if (it.type === 'order') { orders[it.id] = shuffleDifferent(it.config?.items ?? []); return }
@@ -117,6 +119,9 @@ export default function ActivityRunner({ items, title, onComplete, onExit }) {
   }
 
   function renderItem() {
+    if (item.type === 'imagefind') {
+      return <ImageFindItem key={item.id} item={item} order={orders[item.id]} selected={response} checked={checked} onChange={handleChange} />
+    }
     if (item.type === 'imageclick') {
       return <ImageClickItem key={item.id} item={item} selected={response} checked={checked} onChange={handleChange} />
     }
