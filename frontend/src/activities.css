@@ -177,3 +177,4 @@ body.act-dragging, body.act-dragging * { user-select: none; -webkit-user-select:
 .act-find-results { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; font-size: 14px; }
 .act-find-ok { color: #16a34a; font-weight: 600; }
 .act-find-bad { color: #dc2626; font-weight: 600; }
+.act-find-last { margin-left: auto; font-size: 14px; }

@@ -5,7 +5,7 @@ import { regionAt, gradeImage } from '../image'
 /**
  * Player for "find on image" tasks. Each region's name pops up as a prompt, one at a time
  * (random order); the student taps where it is. response = region id tapped per region index.
- * After checking: green = found, red = wrong spot (with the right one dashed).
+ * Feedback is instant: green = found, red = wrong spot (the right one dashed). Answers are locked once tapped.
  */
 export default function ImageFindItem({ item, order, selected, checked, onChange }) {
   const cfg = item.config ?? {}
@@ -25,22 +25,20 @@ export default function ImageFindItem({ item, order, selected, checked, onChange
     const next = [...value]; next[seq[step]] = r ? r.id : '-'
     onChange(next)
   }
-  function undo() {
-    if (checked || answered === 0) return
-    const last = [...seq].reverse().find(i => value[i])
-    const next = [...value]; next[last] = ''
-    onChange(next)
-  }
 
-  const shapes = regions.map((r, i) => {
-    let cls = ''
-    if (checked) {
-      const pickedHere = Object.values(value).includes(r.id)
-      cls = flags[i] ? 'act-region-ok' : 'act-region-missed'
-      if (!flags[i] && pickedHere) cls = 'act-region-bad'
-    }
-    return <RegionShape key={r.id} r={r} className={cls} />
+  // Instant feedback: every answered prompt is coloured straight away
+  const rank = { 'act-region-missed': 1, 'act-region-bad': 2, 'act-region-ok': 3 }
+  const cls = {}
+  const mark = (id, c) => { if (!cls[id] || rank[c] > rank[cls[id]]) cls[id] = c }
+  regions.forEach((r, i) => {
+    if (!value[i]) return
+    if (value[i] === r.id) mark(r.id, 'act-region-ok')
+    else { mark(r.id, 'act-region-missed'); if (value[i] !== '-') mark(value[i], 'act-region-bad') }
   })
+  const shapes = regions.map(r => <RegionShape key={r.id} r={r} className={cls[r.id] ?? ''} />)
+  const lastIdx = [...seq].reverse().find(i => value[i])
+  const lastOk = lastIdx !== undefined && value[lastIdx] === regions[lastIdx]?.id
+
   const nameOf = id => regions.find(r => r.id === id)?.name
 
   return (
@@ -50,15 +48,15 @@ export default function ImageFindItem({ item, order, selected, checked, onChange
           {step >= 0
             ? <><span className="act-find-count">{answered + 1} / {regions.length}</span> Tap: <strong>{regions[seq[step]]?.name}</strong></>
             : <>All placed - press Check answer.</>}
-          {answered > 0 && <button type="button" className="qr-btn qr-btn-ghost act-find-undo" onClick={undo}>↶ Undo</button>}
+          {lastIdx !== undefined && (
+            <span className={`act-find-last ${lastOk ? 'act-find-ok' : 'act-find-bad'}`}>
+              {lastOk ? '✓ Correct' : `✗ ${regions[lastIdx].name} is the dashed area`}
+            </span>
+          )}
         </div>
       )}
       <ImageStage image={cfg.image} stageRef={stage} shapes={shapes}
         className={checked || step < 0 ? '' : 'act-img-clickable'} onPointerUp={onPointerUp}>
-        {!checked && seq.filter(i => value[i] && value[i] !== '-').map(i => {
-          const r = regions.find(q => q.id === value[i])
-          return r ? <RegionBadge key={i} r={r} text={regions.findIndex(q => q.id === value[i]) >= 0 ? `${seq.indexOf(i) + 1}` : ''} /> : null
-        })}
         {checked && regions.map((r, i) => <RegionBadge key={r.id} r={r} text={r.name} className={flags[i] ? 'act-badge-ok' : 'act-badge-bad'} />)}
       </ImageStage>
       {checked && (
