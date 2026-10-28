@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { gradeMatch } from '../arrange'
+import { beginDrag, matchDropTarget } from '../dragKit'
 
 /**
  * Player UI for matching tasks: place each right-hand item against its left-hand item.
- * Works by tap/click AND drag-and-drop:
+ * Works by tap/click AND drag (mouse, pen and touch, via dragKit):
  *   - tap a chip, then tap a slot (or a slot, then a chip) to place it
  *   - tap a filled slot to send its chip back to the pool
- *   - on desktop, drag chips onto slots (or back to the pool)
+ *   - or drag a chip onto a slot (or back to the pool)
  *
  * Props:
  *   item      - activity_items row (config.pairs, config.distractors)
@@ -20,7 +21,8 @@ export default function MatchItem({ item, pool, selected, checked, onChange }) {
   const value = pairs.map((_, i) => selected[i] ?? '')
   const [chip, setChip] = useState(null)   // chip picked up, waiting for a slot
   const [slot, setSlot] = useState(null)   // slot picked, waiting for a chip
-  const [hover, setHover] = useState(null) // slot being dragged over
+  const [hover, setHover] = useState(null) // slot index (or 'pool') being dragged over
+  const [dragging, setDragging] = useState(null) // text of the chip being dragged
 
   const flags = checked ? gradeMatch(item, value).flags : []
   const placed = new Set(value.filter(Boolean))
@@ -49,7 +51,23 @@ export default function MatchItem({ item, pool, selected, checked, onChange }) {
     setSlot(s => (s === i ? null : i))
   }
 
-  const dragStart = text => e => { e.dataTransfer.setData('text/plain', text); e.dataTransfer.effectAllowed = 'move' }
+  // Press-and-drag a chip (from the pool or from a slot) onto a slot or back to the pool
+  const startDrag = text => e => {
+    if (checked) return
+    beginDrag(e, {
+      label: text,
+      onStart: () => { setChip(null); setSlot(null); setDragging(text) },
+      onMove: (_x, _y, el) => setHover(matchDropTarget(el)),
+      onEnd: ({ target, cancelled }) => {
+        setDragging(null); setHover(null)
+        if (cancelled) return
+        const dst = matchDropTarget(target)
+        if (dst === 'pool') returnToPool(text)
+        else if (typeof dst === 'number') place(dst, text)
+      },
+    })
+  }
+  const noMenu = e => e.preventDefault() // long-press on touch would open a context menu
 
   return (
     <div className="act-match">
@@ -59,6 +77,7 @@ export default function MatchItem({ item, pool, selected, checked, onChange }) {
           let cls = 'act-slot'
           if (filled) cls += ' act-slot-filled'
           if (slot === i || hover === i) cls += ' act-slot-active'
+          if (filled && dragging === filled) cls += ' act-dim'
           if (checked) cls += flags[i] ? ' act-slot-correct' : ' act-slot-wrong'
           return (
             <div className="act-match-row" key={i}>
@@ -68,12 +87,10 @@ export default function MatchItem({ item, pool, selected, checked, onChange }) {
                   type="button"
                   className={cls}
                   disabled={checked}
+                  data-slot={i}
                   onClick={() => clickSlot(i)}
-                  onDragOver={e => { if (!checked) { e.preventDefault(); setHover(i) } }}
-                  onDragLeave={() => setHover(h => (h === i ? null : h))}
-                  onDrop={e => { e.preventDefault(); const t = e.dataTransfer.getData('text/plain'); if (t) place(i, t) }}
-                  draggable={!!filled && !checked}
-                  onDragStart={filled ? dragStart(filled) : undefined}
+                  onPointerDown={filled ? startDrag(filled) : undefined}
+                  onContextMenu={noMenu}
                   aria-label={filled ? `${p.left}: ${filled}. Tap to remove.` : `Place an item for ${p.left}`}
                 >
                   {filled || <span className="act-slot-empty">Tap or drop here</span>}
@@ -85,21 +102,17 @@ export default function MatchItem({ item, pool, selected, checked, onChange }) {
         })}
       </div>
 
-      <div
-        className="act-pool"
-        onDragOver={e => { if (!checked) e.preventDefault() }}
-        onDrop={e => { e.preventDefault(); const t = e.dataTransfer.getData('text/plain'); if (t) returnToPool(t) }}
-      >
+      <div className={`act-pool ${hover === 'pool' ? 'act-pool-over' : ''}`} data-pool>
         {free.length === 0
           ? <span className="act-pool-empty">{checked ? '' : 'All items placed'}</span>
           : free.map(t => (
               <button
                 key={t}
                 type="button"
-                className={`act-pool-chip ${chip === t ? 'act-pool-chip-picked' : ''}`}
+                className={`act-pool-chip ${chip === t ? 'act-pool-chip-picked' : ''} ${dragging === t ? 'act-dim' : ''}`}
                 disabled={checked}
-                draggable={!checked}
-                onDragStart={dragStart(t)}
+                onPointerDown={startDrag(t)}
+                onContextMenu={noMenu}
                 onClick={() => clickChip(t)}
               >
                 {t}

@@ -1,9 +1,11 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { gradeOrder } from '../arrange'
+import { beginDrag } from '../dragKit'
 
 /**
  * Player UI for ordering tasks.
- * Drag rows to reorder (desktop) or use the ↑ / ↓ buttons (touch, keyboard).
+ * Drag rows to reorder (mouse, pen or touch - on touch, grab the ⋮⋮ handle so the page
+ * can still scroll), or use the ↑ / ↓ buttons.
  *
  * Props:
  *   item      - activity_items row (config.items holds the CORRECT order)
@@ -16,6 +18,7 @@ export default function OrderItem({ item, initial, selected, checked, onChange }
   const list = selected.length ? selected : initial
   const [dragFrom, setDragFrom] = useState(null)
   const [overIdx, setOverIdx] = useState(null)
+  const rows = useRef([])
   const flags = checked ? gradeOrder(item, list).flags : []
   const allRight = flags.length > 0 && flags.every(Boolean)
 
@@ -27,9 +30,34 @@ export default function OrderItem({ item, initial, selected, checked, onChange }
     onChange(next)
   }
 
+  // Which row is the pointer over? (clamped to the first/last row when above/below the list)
+  function rowAt(y) {
+    const rects = rows.current.map(el => el?.getBoundingClientRect())
+    if (!rects.length || !rects[0]) return 0
+    if (y <= rects[0].top) return 0
+    const hit = rects.findIndex(r => r && y >= r.top && y <= r.bottom)
+    return hit === -1 ? rects.length - 1 : hit
+  }
+
+  const startDrag = (i, text) => e => {
+    if (checked) return
+    if (e.target.closest('.act-order-btn')) return                       // let the arrow buttons work
+    if (e.pointerType === 'touch' && !e.target.closest('.act-order-grip')) return // touch: handle only, so the page scrolls
+    beginDrag(e, {
+      label: text,
+      onStart: () => setDragFrom(i),
+      onMove: (_x, y) => setOverIdx(rowAt(y)),
+      onEnd: ({ y, cancelled }) => {
+        const to = rowAt(y)
+        setDragFrom(null); setOverIdx(null)
+        if (!cancelled) move(i, to)
+      },
+    })
+  }
+
   return (
     <div className="act-order">
-      {!checked && <p className="act-hint">Drag to reorder, or use the arrows.</p>}
+      {!checked && <p className="act-hint">Drag the rows (or use the arrows) to put them in order.</p>}
       <ol className="act-order-list">
         {list.map((text, i) => {
           let cls = 'act-order-row'
@@ -39,12 +67,10 @@ export default function OrderItem({ item, initial, selected, checked, onChange }
           return (
             <li
               key={text}
+              ref={el => { rows.current[i] = el }}
               className={cls}
-              draggable={!checked}
-              onDragStart={e => { setDragFrom(i); e.dataTransfer.effectAllowed = 'move'; e.dataTransfer.setData('text/plain', text) }}
-              onDragOver={e => { if (!checked && dragFrom !== null) { e.preventDefault(); setOverIdx(i) } }}
-              onDrop={e => { e.preventDefault(); if (dragFrom !== null) move(dragFrom, i); setDragFrom(null); setOverIdx(null) }}
-              onDragEnd={() => { setDragFrom(null); setOverIdx(null) }}
+              onPointerDown={startDrag(i, text)}
+              onContextMenu={e => e.preventDefault()}
             >
               <span className="act-order-grip" aria-hidden="true">⋮⋮</span>
               <span className="act-order-num">{i + 1}</span>

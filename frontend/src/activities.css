@@ -85,3 +85,13 @@
 .act-bulk { display: flex; flex-direction: column; gap: 8px; width: 100%; }
 .act-order-correct .qr-option-icon { color: #16a34a; }
 .act-order-wrong .qr-option-icon { color: #dc2626; }
+
+/* ── Touch-capable dragging (dragKit) ── */
+.act-drag-ghost { position: fixed; left: 0; top: 0; z-index: 10000; pointer-events: none; transform: translate(-50%, -135%); padding: 8px 16px; max-width: 80vw; background: var(--bg); color: var(--text-h); border: 1.5px solid var(--accent); border-radius: 999px; box-shadow: var(--shadow-hover); font: 15px var(--sans); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+body.act-dragging, body.act-dragging * { user-select: none; -webkit-user-select: none; cursor: grabbing !important; }
+.act-pool-chip, .act-slot-filled { touch-action: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+.act-order-row { user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+.act-order-grip { touch-action: none; display: inline-flex; align-items: center; justify-content: center; align-self: stretch; min-width: 28px; margin: -10px 0 -10px -6px; cursor: grab; }
+.act-dim { opacity: .35; }
+.act-pool-over { border-color: var(--accent); background: var(--accent-bg); }
+.act-pool-chip, .act-slot, .act-order-btn, .act-order-grip, .act-order-row { -webkit-tap-highlight-color: transparent; }
