@@ -7,12 +7,13 @@
  */
 import { TEMPLATE_TYPES } from './template'
 import { ARRANGE_TYPES } from './arrange'
+import { IMAGE_TYPES } from './image'
 
 export const CHOICE_TYPES = ['single', 'multi', 'tf']
-export { TEMPLATE_TYPES, ARRANGE_TYPES }
+export { TEMPLATE_TYPES, ARRANGE_TYPES, IMAGE_TYPES }
 
 /** Types whose content lives in activity_items.config (not mc_options). */
-export const CONFIG_TYPES = [...TEMPLATE_TYPES, ...ARRANGE_TYPES]
+export const CONFIG_TYPES = [...TEMPLATE_TYPES, ...ARRANGE_TYPES, ...IMAGE_TYPES]
 
 export const ITEM_TYPES = {
   single:   { label: 'Single choice',     icon: '◉', hint: 'Pick one correct answer' },
@@ -23,6 +24,8 @@ export const ITEM_TYPES = {
   match:    { label: 'Matching',          icon: '⇌', hint: 'Match items from two lists' },
   order:    { label: 'Put in order',      icon: '↕', hint: 'Arrange items in the correct order' },
   categorise: { label: 'Categorise',      icon: '▤', hint: 'Sort items into categories' },
+  imageclick: { label: 'Click on image',  icon: '⌖', hint: 'Click the correct part of an image or map' },
+  imagelabel: { label: 'Label image',     icon: '📍', hint: 'Label parts of an image (drag or type)' },
 }
 
 /** Marker stored in resources.url for activity-backed quizzes. */

@@ -116,3 +116,11 @@ export function categoryDropTarget(el) {
   if (el?.closest?.('[data-pool]')) return 'pool'
   return null
 }
+
+/** Label-pin drop target: pin index, 'pool', or null. */
+export function pinDropTarget(el) {
+  const p = el?.closest?.('[data-pin]')
+  if (p) return Number(p.dataset.pin)
+  if (el?.closest?.('[data-pool]')) return 'pool'
+  return null
+}

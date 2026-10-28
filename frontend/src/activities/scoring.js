@@ -6,6 +6,7 @@
  */
 import { TEMPLATE_TYPES, gradeTemplate, fillTemplate } from './template'
 import { ARRANGE_TYPES, gradeArrange, categoriseItems } from './arrange'
+import { IMAGE_TYPES, gradeImage, acceptedAnswers } from './image'
 
 const CHOICE = ['single', 'multi', 'tf']
 
@@ -19,13 +20,14 @@ export function isItemCorrect(item, response) {
   }
   if (TEMPLATE_TYPES.includes(item.type)) return gradeTemplate(item, response).allCorrect
   if (ARRANGE_TYPES.includes(item.type)) return gradeArrange(item, response).allCorrect
+  if (IMAGE_TYPES.includes(item.type)) return gradeImage(item, response).allCorrect
   return false
 }
 
 /** Has the student entered anything for this task yet? */
 export function hasAnswer(item, response) {
   if (item.type === 'order') return true // the shuffled list on screen already is an answer
-  if (item.type === 'match' || item.type === 'categorise') return (response ?? []).some(v => String(v ?? '') !== '')
+  if (item.type === 'match' || item.type === 'categorise' || item.type === 'imagelabel') return (response ?? []).some(v => String(v ?? '').trim() !== '')
   if (TEMPLATE_TYPES.includes(item.type)) return (response ?? []).some(v => String(v ?? '').trim() !== '')
   return (response ?? []).length > 0
 }
@@ -59,6 +61,21 @@ export function describeAnswer(item, response) {
       correct: group(it => it.cat),
     }
   }
+  if (item.type === 'imageclick') {
+    const regions = item.config?.regions ?? []
+    const names = ids => regions.filter(r => ids.includes(r.id)).map(r => r.name).join(', ')
+    return {
+      yours: (response ?? []).length ? names(response) : 'Skipped',
+      correct: names(regions.filter(r => r.correct).map(r => r.id)),
+    }
+  }
+  if (item.type === 'imagelabel') {
+    const pins = item.config?.pins ?? []
+    return {
+      yours: hasAnswer(item, response) ? pins.map((_, i) => `${i + 1}. ${(response ?? [])[i] || '—'}`).join('; ') : 'Skipped',
+      correct: pins.map((p, i) => `${i + 1}. ${item.config?.mode === 'type' ? acceptedAnswers(p)[0] : p.answer}`).join('; '),
+    }
+  }
   if (item.type === 'order') {
     return {
       yours: (response ?? []).length ? response.join(' → ') : 'Skipped',
@@ -85,6 +102,7 @@ export function scoreRun(items, responsesById) {
     const row = { item_id: item.id, type: item.type, response, is_correct: correct }
     if (TEMPLATE_TYPES.includes(item.type)) row.blanks = gradeTemplate(item, response).blanks
     if (ARRANGE_TYPES.includes(item.type)) row.flags = gradeArrange(item, response).flags
+    if (IMAGE_TYPES.includes(item.type)) row.flags = gradeImage(item, response).flags
     return row
   })
   const percent = total > 0 ? Math.round((score / total) * 100) : 0

@@ -4,6 +4,10 @@ import TemplateItem from './items/TemplateItem'
 import MatchItem from './items/MatchItem'
 import OrderItem from './items/OrderItem'
 import CategoriseItem from './items/CategoriseItem'
+import ImageClickItem from './items/ImageClickItem'
+import ImageLabelItem from './items/ImageLabelItem'
+import { IMAGE_TYPES } from './types'
+import { labelPool } from './image'
 import { CHOICE_TYPES, TEMPLATE_TYPES, ARRANGE_TYPES, ITEM_TYPES } from './types'
 import { shuffle, shuffleDifferent, matchPool, categoriseItems } from './arrange'
 import { parseTemplate } from './template'
@@ -35,6 +39,8 @@ function buildOrders(items) {
     if (TEMPLATE_TYPES.includes(it.type)) { orders[it.id] = null; return }
     if (it.type === 'match') { orders[it.id] = shuffle(matchPool(it.config)); return }
     if (it.type === 'categorise') { orders[it.id] = shuffle(categoriseItems(it.config).map((_, i) => i)); return }
+    if (it.type === 'imageclick') { orders[it.id] = null; return }
+    if (it.type === 'imagelabel') { orders[it.id] = it.config?.mode === 'type' ? null : shuffle(labelPool(it.config)); return }
     if (it.type === 'order') { orders[it.id] = shuffleDifferent(it.config?.items ?? []); return }
     const ids = it.mc_options.map(o => o.id)
     // Keep true/false in authored order (True, then False); shuffle the rest
@@ -111,6 +117,12 @@ export default function ActivityRunner({ items, title, onComplete, onExit }) {
   }
 
   function renderItem() {
+    if (item.type === 'imageclick') {
+      return <ImageClickItem key={item.id} item={item} selected={response} checked={checked} onChange={handleChange} />
+    }
+    if (item.type === 'imagelabel') {
+      return <ImageLabelItem key={item.id} item={item} pool={orders[item.id]} selected={response} checked={checked} onChange={handleChange} onSubmit={handleSubmit} />
+    }
     if (item.type === 'match') {
       return <MatchItem key={item.id} item={item} pool={orders[item.id]} selected={response} checked={checked} onChange={handleChange} />
     }
@@ -201,7 +213,7 @@ export default function ActivityRunner({ items, title, onComplete, onExit }) {
   const instant = INSTANT_TYPES.includes(item.type)
   const canCheck = hasAnswer(item, response)
   const isTemplate = TEMPLATE_TYPES.includes(item.type)
-  const isArrange = ARRANGE_TYPES.includes(item.type)
+  const isArrange = ARRANGE_TYPES.includes(item.type) || IMAGE_TYPES.includes(item.type)
   const autoAdvancing = checked && instant && !item.explanation
 
   return (
