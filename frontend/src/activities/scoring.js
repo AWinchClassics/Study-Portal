@@ -5,7 +5,7 @@
  *   cloze / dropdown     -> array of strings, one per blank
  */
 import { TEMPLATE_TYPES, gradeTemplate, fillTemplate } from './template'
-import { ARRANGE_TYPES, gradeArrange } from './arrange'
+import { ARRANGE_TYPES, gradeArrange, categoriseItems } from './arrange'
 
 const CHOICE = ['single', 'multi', 'tf']
 
@@ -25,7 +25,7 @@ export function isItemCorrect(item, response) {
 /** Has the student entered anything for this task yet? */
 export function hasAnswer(item, response) {
   if (item.type === 'order') return true // the shuffled list on screen already is an answer
-  if (item.type === 'match') return (response ?? []).some(v => String(v ?? '') !== '')
+  if (item.type === 'match' || item.type === 'categorise') return (response ?? []).some(v => String(v ?? '') !== '')
   if (TEMPLATE_TYPES.includes(item.type)) return (response ?? []).some(v => String(v ?? '').trim() !== '')
   return (response ?? []).length > 0
 }
@@ -46,6 +46,17 @@ export function describeAnswer(item, response) {
         ? pairs.map((p, i) => `${p.left} → ${(response ?? [])[i] || '—'}`).join('; ')
         : 'Skipped',
       correct: pairs.map(p => `${p.left} → ${p.right}`).join('; '),
+    }
+  }
+  if (item.type === 'categorise') {
+    const all = categoriseItems(item.config)
+    const group = (nameOf) => (item.config?.categories ?? []).map(c => {
+      const here = all.map((it, i) => ({ it, i })).filter(({ it, i }) => nameOf(it, i) === c.name).map(({ it }) => it.text)
+      return `${c.name}: ${here.join(', ') || '—'}`
+    }).join('; ')
+    return {
+      yours: hasAnswer(item, response) ? group((it, i) => (response ?? [])[i]) : 'Skipped',
+      correct: group(it => it.cat),
     }
   }
   if (item.type === 'order') {

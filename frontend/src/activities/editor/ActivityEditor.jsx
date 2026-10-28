@@ -6,7 +6,7 @@ import { CHOICE_TYPES, TEMPLATE_TYPES, ARRANGE_TYPES, ITEM_TYPES } from '../type
 import { cleanArrangeConfig, defaultArrangeConfig } from '../arrange'
 import ChoiceEditor, { newChoiceDraft, validateChoiceDraft } from './ChoiceEditor'
 import TemplateEditor, { newTemplateDraft, validateTemplateDraft } from './TemplateEditor'
-import { MatchEditor, OrderEditor, newArrangeDraft, validateArrangeDraft } from './ArrangeEditors'
+import { MatchEditor, OrderEditor, CategoriseEditor, newArrangeDraft, validateArrangeDraft } from './ArrangeEditors'
 
 /**
  * ActivityEditor - teacher authoring for one activity (a resources row).
@@ -65,6 +65,7 @@ function ItemCard({ draft, index, count, errors, saving, dirty, onChange, onSave
       )}
       {draft.type === 'match' && <MatchEditor draft={draft} onChange={onChange} errors={errors} />}
       {draft.type === 'order' && <OrderEditor draft={draft} onChange={onChange} errors={errors} />}
+      {draft.type === 'categorise' && <CategoriseEditor draft={draft} onChange={onChange} errors={errors} />}
     </div>
   )
 }

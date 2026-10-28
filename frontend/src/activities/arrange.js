@@ -8,11 +8,15 @@
  *   order  config: { items: ["first", "second", ...] }   <- stored in the CORRECT order
  *          response: array of item texts in the order the student arranged them.
  *
- * Both are all-or-nothing per task; per-row/per-position flags are returned so the
+ *   categorise  config: { categories: [{ name, items: ["item", ...] }, ...] }
+ *          response: array aligned to categoriseItems(config) (categories in order, items in order)
+ *          holding the category NAME the student put each item in, or '' if unplaced.
+ *
+ * All are all-or-nothing per task; per-row/per-position flags are returned so the
  * player can show which parts were right and attempts can record them.
  */
 
-export const ARRANGE_TYPES = ['match', 'order']
+export const ARRANGE_TYPES = ['match', 'order', 'categorise']
 
 export function shuffle(arr) {
   const a = [...arr]
@@ -35,9 +39,15 @@ export function shuffleDifferent(arr) {
 const clean = s => String(s ?? '').trim()
 
 export function defaultArrangeConfig(type) {
-  return type === 'match'
-    ? { pairs: [{ left: '', right: '' }, { left: '', right: '' }, { left: '', right: '' }], distractors: [] }
-    : { items: ['', '', ''] }
+  if (type === 'match') return { pairs: [{ left: '', right: '' }, { left: '', right: '' }, { left: '', right: '' }], distractors: [] }
+  if (type === 'categorise') return { categories: [{ name: '', items: ['', ''] }, { name: '', items: ['', ''] }] }
+  return { items: ['', '', ''] }
+}
+
+/** Flat list of every item with its correct category: [{ text, cat, catIndex }], in authored order. */
+export function categoriseItems(cfg) {
+  return (cfg?.categories ?? []).flatMap((c, catIndex) =>
+    (c.items ?? []).filter(t => String(t ?? '').trim() !== '').map(text => ({ text: String(text).trim(), cat: c.name, catIndex })))
 }
 
 /** Trim everything and drop empty distractors, ready to save. */
@@ -46,6 +56,14 @@ export function cleanArrangeConfig(type, cfg) {
     return {
       pairs: (cfg?.pairs ?? []).map(p => ({ left: clean(p.left), right: clean(p.right) })),
       distractors: (cfg?.distractors ?? []).map(clean).filter(Boolean),
+    }
+  }
+  if (type === 'categorise') {
+    return {
+      categories: (cfg?.categories ?? []).map(c => ({
+        name: clean(c.name),
+        items: (c.items ?? []).map(clean).filter(Boolean),
+      })),
     }
   }
   return { items: (cfg?.items ?? []).map(clean) }
@@ -67,6 +85,13 @@ export function validateArrangeConfig(type, rawCfg) {
     if (distractors.some(d => rights.includes(d)) || dupes(distractors)) {
       errs.push('Extra options must be different from the right-hand items and from each other.')
     }
+  } else if (type === 'categorise') {
+    const { categories } = cfg
+    if (categories.length < 2) errs.push('Add at least two categories.')
+    if (categories.some(c => !c.name)) errs.push('Every category needs a name.')
+    if (dupes(categories.map(c => c.name))) errs.push('Category names must all be different.')
+    if (categories.some(c => c.items.length === 0)) errs.push('Every category needs at least one item.')
+    if (dupes(categories.flatMap(c => c.items))) errs.push('Each item can only appear once, in a single category.')
   } else {
     const { items } = cfg
     if (items.length < 2) errs.push('Add at least two items.')
@@ -89,8 +114,16 @@ export function gradeOrder(item, response) {
   return { flags, allCorrect: r.length === items.length && items.length > 0 && flags.every(Boolean) }
 }
 
+export function gradeCategorise(item, response) {
+  const all = categoriseItems(item.config)
+  const flags = all.map((it, i) => (response ?? [])[i] === it.cat)
+  return { flags, allCorrect: flags.length > 0 && flags.every(Boolean) }
+}
+
 export function gradeArrange(item, response) {
-  return item.type === 'match' ? gradeMatch(item, response) : gradeOrder(item, response)
+  if (item.type === 'match') return gradeMatch(item, response)
+  if (item.type === 'categorise') return gradeCategorise(item, response)
+  return gradeOrder(item, response)
 }
 
 /** Items shown in the pool for a match task: every right-hand text plus distractors. */

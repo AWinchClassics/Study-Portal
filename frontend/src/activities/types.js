@@ -22,6 +22,7 @@ export const ITEM_TYPES = {
   dropdown: { label: 'Dropdown in text',  icon: '▾', hint: 'Choose the missing words from lists' },
   match:    { label: 'Matching',          icon: '⇌', hint: 'Match items from two lists' },
   order:    { label: 'Put in order',      icon: '↕', hint: 'Arrange items in the correct order' },
+  categorise: { label: 'Categorise',      icon: '▤', hint: 'Sort items into categories' },
 }
 
 /** Marker stored in resources.url for activity-backed quizzes. */

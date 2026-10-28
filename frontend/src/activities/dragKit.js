@@ -108,3 +108,11 @@ export function matchDropTarget(el) {
   if (el?.closest?.('[data-pool]')) return 'pool'
   return null
 }
+
+/** Category drop target: category index, 'pool', or null. */
+export function categoryDropTarget(el) {
+  const c = el?.closest?.('[data-cat]')
+  if (c) return Number(c.dataset.cat)
+  if (el?.closest?.('[data-pool]')) return 'pool'
+  return null
+}

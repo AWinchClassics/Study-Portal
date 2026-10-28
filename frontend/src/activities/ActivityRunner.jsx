@@ -3,8 +3,9 @@ import ChoiceItem from './items/ChoiceItem'
 import TemplateItem from './items/TemplateItem'
 import MatchItem from './items/MatchItem'
 import OrderItem from './items/OrderItem'
+import CategoriseItem from './items/CategoriseItem'
 import { CHOICE_TYPES, TEMPLATE_TYPES, ARRANGE_TYPES, ITEM_TYPES } from './types'
-import { shuffle, shuffleDifferent, matchPool } from './arrange'
+import { shuffle, shuffleDifferent, matchPool, categoriseItems } from './arrange'
 import { parseTemplate } from './template'
 import { isItemCorrect, hasAnswer, describeAnswer, scoreRun } from './scoring'
 
@@ -33,6 +34,7 @@ function buildOrders(items) {
     }
     if (TEMPLATE_TYPES.includes(it.type)) { orders[it.id] = null; return }
     if (it.type === 'match') { orders[it.id] = shuffle(matchPool(it.config)); return }
+    if (it.type === 'categorise') { orders[it.id] = shuffle(categoriseItems(it.config).map((_, i) => i)); return }
     if (it.type === 'order') { orders[it.id] = shuffleDifferent(it.config?.items ?? []); return }
     const ids = it.mc_options.map(o => o.id)
     // Keep true/false in authored order (True, then False); shuffle the rest
@@ -111,6 +113,9 @@ export default function ActivityRunner({ items, title, onComplete, onExit }) {
   function renderItem() {
     if (item.type === 'match') {
       return <MatchItem key={item.id} item={item} pool={orders[item.id]} selected={response} checked={checked} onChange={handleChange} />
+    }
+    if (item.type === 'categorise') {
+      return <CategoriseItem key={item.id} item={item} order={orders[item.id]} selected={response} checked={checked} onChange={handleChange} />
     }
     if (item.type === 'order') {
       return <OrderItem key={item.id} item={item} initial={orders[item.id]} selected={response} checked={checked} onChange={handleChange} />

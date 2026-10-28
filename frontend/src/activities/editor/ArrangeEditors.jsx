@@ -40,7 +40,7 @@ function Shell({ draft, onChange, errors, children }) {
     <>
       <input
         className="t-input"
-        placeholder={draft.type === 'match' ? 'Instruction, e.g. Match each event to its date.' : 'Instruction, e.g. Put these events in chronological order.'}
+        placeholder={{ match: 'Instruction, e.g. Match each event to its date.', order: 'Instruction, e.g. Put these events in chronological order.', categorise: 'Instruction, e.g. Sort each cause into the correct category.' }[draft.type]}
         value={draft.prompt}
         onChange={e => onChange({ ...draft, prompt: e.target.value })}
       />
@@ -136,6 +136,42 @@ export function OrderEditor({ draft, onChange, errors }) {
           <BulkAdd label="Paste list…" placeholder={'One item per line, in the correct order:\nBattle of Marathon\nBattle of Thermopylae\nBattle of Salamis'}
             onAdd={lines => setItems([...cfg.items.filter(x => x.trim()), ...lines])} />
         </div>
+      </div>
+    </Shell>
+  )
+}
+
+export function CategoriseEditor({ draft, onChange, errors }) {
+  const cfg = draft.config
+  const setCats = categories => onChange({ ...draft, config: { ...cfg, categories } })
+  const setCat = (i, patch) => setCats(cfg.categories.map((c, j) => (j === i ? { ...c, ...patch } : c)))
+
+  return (
+    <Shell draft={draft} onChange={onChange} errors={errors}>
+      <p className="act-hint">Name each category and list its items, one per line. Students see all items shuffled together.</p>
+      <div className="act-cat-edit-grid">
+        {cfg.categories.map((c, i) => (
+          <div className="act-cat-edit" key={i}>
+            <div className="act-opt-row">
+              <input className="t-input" placeholder={`Category ${i + 1} name`} value={c.name}
+                onChange={e => setCat(i, { name: e.target.value })} />
+              {cfg.categories.length > 2 && (
+                <button type="button" className="t-btn t-btn-danger-ghost" title="Remove category"
+                  onClick={() => setCats(cfg.categories.filter((_, j) => j !== i))}>✕</button>
+              )}
+            </div>
+            <textarea
+              className="t-input act-textarea"
+              placeholder={'One item per line'}
+              value={(c.items ?? []).join('\n')}
+              onChange={e => setCat(i, { items: e.target.value.split('\n') })}
+            />
+          </div>
+        ))}
+      </div>
+      <div className="act-add-row">
+        <button type="button" className="t-btn t-btn-ghost"
+          onClick={() => setCats([...cfg.categories, { name: '', items: [''] }])}>+ Add category</button>
       </div>
     </Shell>
   )
